@@ -1,0 +1,23 @@
+# $FreeBSD: head/Mk/Uses/fuse.mk 411970 2016-03-27 01:23:25Z bapt $
+#
+# handle dependency on the fuse port
+#
+# Feature:	fuse
+# Usage:	USES=fuse
+# Valid ARGS:	does not require args
+#
+# MAINTAINER: portmgr@FreeBSD.org
+
+.if !defined(_INCLUDE_USES_FUSE_MK)
+_INCLUDE_USES_FUSE_MK=	yes
+
+.if !empty(fuse_ARGS)
+IGNORE=	USES=fuse does not require args
+.endif
+
+LIB_DEPENDS+=	libfuse.so:sysutils/fusefs-libs
+.if !exists(/sbin/mount_fusefs)
+RUN_DEPENDS+=	mount_fusefs:sysutils/fusefs-kmod
+.endif
+
+.endif
