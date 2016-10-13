@@ -9,7 +9,9 @@ bin/pypy3
 %%PYPY_DIR%%/include/README
 %%PYPY_DIR%%/include/abstract.h
 %%PYPY_DIR%%/include/boolobject.h
+%%PYPY_DIR%%/include/bytearrayobject.h
 %%PYPY_DIR%%/include/bytesobject.h
+%%PYPY_DIR%%/include/cStringIO.h
 %%PYPY_DIR%%/include/ceval.h
 %%PYPY_DIR%%/include/code.h
 %%PYPY_DIR%%/include/compile.h
@@ -1918,6 +1920,8 @@ bin/pypy3
 %%PYPY_DIR%%/lib_pypy/_pypy_irc_topic.py
 %%PYPY_DIR%%/lib_pypy/_pypy_testcapi.py
 %%PYPY_DIR%%/lib_pypy/_pypy_wait.py
+%%PYPY_DIR%%/lib_pypy/_pypy_winbase_build.py
+%%PYPY_DIR%%/lib_pypy/_pypy_winbase_cffi.py
 %%PYPY_DIR%%/lib_pypy/_resource_build.py
 %%PYPY_DIR%%/lib_pypy/_resource_cffi.%%PYPY_CFFI_VER%%.so
 %%PYPY_DIR%%/lib_pypy/_scproxy.py
@@ -2027,14 +2031,3 @@ bin/pypy3
 %%PYPY_DIR%%/lib_pypy/testcapi_long.h
 %%PYPY_DIR%%/lib_pypy/tputil.py
 %%PYPY_DIR%%/site-packages/README
-@dir %%PYPY_DIR%%/lib-python/3/__pycache__
-@dir %%PYPY_DIR%%/lib-python/3/collections/__pycache__
-@dir %%PYPY_DIR%%/lib-python/3/distutils/__pycache__
-@dir %%PYPY_DIR%%/lib-python/3/distutils/command/__pycache__
-@dir %%PYPY_DIR%%/lib-python/3/email/__pycache__
-@dir %%PYPY_DIR%%/lib-python/3/encodings/__pycache__
-@dir %%PYPY_DIR%%/lib-python/3/importlib/__pycache__
-@dir %%PYPY_DIR%%/lib_pypy/__pycache__
-@dir %%PYPY_DIR%%/lib_pypy/cffi/__pycache__
-@dir %%PYPY_DIR%%/lib_pypy/cffi/_pycparser/__pycache__
-@dir %%PYPY_DIR%%/lib_pypy/cffi/_pycparser/ply/__pycache__
