@@ -6,7 +6,7 @@
 #
 # Feature:	python
 # Usage:	USES=python or USES=python:args
-# Valid ARGS:	<version>, build, run, test
+# Valid ARGS:	<version>, <implementation>, build, run, test
 #
 # version 	If your port requires only some set of Python versions, you
 # 		can set this to [min]-[max] or min+ or -max or as an
@@ -21,6 +21,12 @@
 #			USES=python:2		# Use the Python 2 meta port
 #			USES=python		# Use the set default Python
 #						# version
+#
+# implementation If your port requires a specific Python implementation, you
+#		can specify this:
+#
+#			USES=python:cpython	# lang/python
+#			USES=python:pypy	# lang/pypy
 #
 # build		Indicates that Python is needed at build time and adds
 #		it to BUILD_DEPENDS.
@@ -128,7 +134,7 @@
 #
 # PYDISTUTILS_INSTALLARGS
 #			- Arguments to install with distutils.
-#			  default: -c -O1 --prefix=${PREFIX} --single-version-externally-managed --root=${STAGEDIR}
+#			  default: -c -O1 --prefix=${PYTHONPREFIX} --single-version-externally-managed --root=${STAGEDIR}
 #
 # PYDISTUTILS_EGGINFO
 #			- Canonical name for egg-info.
@@ -188,7 +194,7 @@
 #			  packages for different Python versions.
 #			  default: py${PYTHON_SUFFIX}-
 #
-# Using USES=python.mk also will add some useful entries to PLIST_SUB:
+# Using USES=python also will add some useful entries to PLIST_SUB:
 #
 #	PYTHON_INCLUDEDIR=${PYTHONPREFIX_INCLUDEDIR:S;${PREFIX}/;;}
 #	PYTHON_LIBDIR=${PYTHONPREFIX_LIBDIR:S;${PREFIX}/;;}
@@ -219,14 +225,6 @@
 .if !defined(_INCLUDE_USES_PYTHON_MK)
 _INCLUDE_USES_PYTHON_MK=	yes
 
-# What Python version and what Python interpreters are currently supported?
-# When adding a version, please keep the comment in
-# Mk/bsd.default-versions.mk in sync.
-_PYTHON_VERSIONS=		2.7 3.5 3.4 3.3	# preferred first
-_PYTHON_PORTBRANCH=		2.7		# ${_PYTHON_VERSIONS:[1]}
-_PYTHON_BASECMD=		${LOCALBASE}/bin/python
-_PYTHON_RELPORTDIR=		lang/python
-
 # Make each individual feature available as _PYTHON_FEATURE_<FEATURENAME>
 .for var in ${USE_PYTHON}
 _PYTHON_FEATURE_${var:tu}=	yes
@@ -250,6 +248,13 @@ _PYTHON_ARGS:=		${_PYTHON_ARGS:Nrun}
 _PYTHON_TEST_DEP=	yes
 _PYTHON_ARGS:=		${_PYTHON_ARGS:Ntest}
 .endif
+.undef _PYTHON_IMPL
+.for impl in cpython pypy
+.  if ${_PYTHON_ARGS:M${impl}}
+_PYTHON_IMPL+=		${impl}
+_PYTHON_ARGS:=		${_PYTHON_ARGS:N${impl}}
+.  endif
+.endfor
 
 # The port does not specify a build, run or test dependency, assume all are
 # required.
@@ -259,6 +264,20 @@ _PYTHON_BUILD_DEP=	yes
 _PYTHON_RUN_DEP=	yes
 _PYTHON_TEST_DEP=	yes
 .endif
+
+.for var in PYTHON_DEFAULT_VERSION PYTHON2_DEFAULT_VERSION PYTHON3_DEFAULT_VERSION PYTHON_DEFAULT PYTHON2_DEFAULT PYTHON3_DEFAULT PYTHON_VERSION _PYTHON_DEFAULT_VERSION
+.  if defined(${var})
+cleanvar:=	${${var}}
+.    if ${cleanvar:C/^([a-z]*).*/\1/} == ""
+cleanvar:=	cpython${cleanvar}
+.    endif
+cleanvar:=	${cleanvar:S/^python/cpython/}
+.    if ${cleanvar} != ${${var}}
+WARNING+=	"Converting ${var}=${${var}} to ${var}=${cleanvar}"
+${var}:=	${cleanvar}
+.    endif
+.  endif
+.endfor
 
 .if defined(PYTHON_DEFAULT_VERSION)
 WARNING+=	"PYTHON_DEFAULT_VERSION is defined, consider using DEFAULT_VERSIONS=python=${PYTHON_DEFAULT_VERSION:S/^python//} instead"
@@ -271,41 +290,41 @@ WARNING+=	"PYTHON3_DEFAULT_VERSION is defined, consider using DEFAULT_VERSIONS=p
 .endif
 
 .if exists(${LOCALBASE}/bin/python)
-.if !defined(_PYTHON_DEFAULT_VERSION)
+.  if !defined(_PYTHON_DEFAULT_VERSION)
 _PYTHON_DEFAULT_VERSION!=	(${LOCALBASE}/bin/python -c \
-		'import sys; print("%d.%d" % sys.version_info[:2])' 2> /dev/null \
-		|| ${ECHO_CMD} ${_PYTHON_PORTBRANCH}) | ${TAIL} -1
-.endif
+		'import platform, sys; print("%s%d.%d" % ((platform.python_implementation().lower(),) + sys.version_info[:2]))' 2> /dev/null \
+		|| ${ECHO_CMD} ${PYTHON_DEFAULT}) | ${TAIL} -1
+.  endif
 _EXPORTED_VARS+=	_PYTHON_DEFAULT_VERSION
-.if defined(PYTHON_DEFAULT) && (${PYTHON_DEFAULT} != ${_PYTHON_DEFAULT_VERSION})
+.  if defined(PYTHON_DEFAULT) && (${PYTHON_DEFAULT} != ${_PYTHON_DEFAULT_VERSION})
 WARNING+=	"Your requested default python version ${PYTHON_DEFAULT} is different from the installed default python interpreter version ${_PYTHON_DEFAULT_VERSION}"
-.endif
-PYTHON_DEFAULT_VERSION=		python${_PYTHON_DEFAULT_VERSION}
+.  endif
+PYTHON_DEFAULT_VERSION=		${_PYTHON_DEFAULT_VERSION}
 .else
-PYTHON_DEFAULT_VERSION=		python${PYTHON_DEFAULT}
+PYTHON_DEFAULT_VERSION=		${PYTHON_DEFAULT}
 .endif # exists(${LOCALBASE}/bin/python)
 
 # Is only a meta-port version defined?
-.if ${PYTHON_DEFAULT_VERSION} == "python2"
-PYTHON2_DEFAULT_VERSION?=	python${PYTHON2_DEFAULT}
-.elif ${PYTHON_DEFAULT_VERSION:R} == "python2"
+.if ${PYTHON_DEFAULT_VERSION:C/^[a-z]+//} == "2"
+PYTHON2_DEFAULT_VERSION?=	${PYTHON2_DEFAULT}
+.elif ${PYTHON_DEFAULT_VERSION:R:C/^[a-z]+//} == "2"
 PYTHON2_DEFAULT_VERSION=	${PYTHON_DEFAULT_VERSION}
 .else
-PYTHON2_DEFAULT_VERSION?=	python${PYTHON2_DEFAULT}
+PYTHON2_DEFAULT_VERSION?=	${PYTHON2_DEFAULT}
 .endif
-.if ${PYTHON_DEFAULT_VERSION} == "python3"
-PYTHON3_DEFAULT_VERSION?=	python${PYTHON3_DEFAULT}
-.elif ${PYTHON_DEFAULT_VERSION:R} == "python3"
+.if ${PYTHON_DEFAULT_VERSION:C/^[a-z]+//} == "3"
+PYTHON3_DEFAULT_VERSION?=	${PYTHON3_DEFAULT}
+.elif ${PYTHON_DEFAULT_VERSION:R:C/^[a-z]+//} == "3"
  PYTHON3_DEFAULT_VERSION=	${PYTHON_DEFAULT_VERSION}
 .else
-PYTHON3_DEFAULT_VERSION?=	python${PYTHON3_DEFAULT}
+PYTHON3_DEFAULT_VERSION?=	${PYTHON3_DEFAULT}
 .endif
 
 .if ${_PYTHON_ARGS} == "2"
-_PYTHON_ARGS=		${PYTHON2_DEFAULT_VERSION:S/^python//}
+_PYTHON_ARGS=		${PYTHON2_DEFAULT_VERSION:C/^[a-z]+//}
 _WANTS_META_PORT=	2
 .elif ${_PYTHON_ARGS} == "3"
-_PYTHON_ARGS=		${PYTHON3_DEFAULT_VERSION:S/^python//}
+_PYTHON_ARGS=		${PYTHON3_DEFAULT_VERSION:C/^[a-z]+//}
 _WANTS_META_PORT=	3
 .endif  # ${_PYTHON_ARGS} == "2"
 
@@ -325,10 +344,43 @@ _WANTS_META_PORT=	3
 # that maintainers know what they are doing and assume PYTHON_VERSION to be a
 # hint. Just warn maintainers, if the versions do not match
 # (_PYTHON_VERSION_NONSUPPORTED).
-_PYTHON_VERSION:=	${PYTHON_VERSION:S/^python//}
+_PYTHON_VERSION:=	${PYTHON_VERSION:C/^[a-z]+//}
+_PYTHON_VERSION_IMPL=	${PYTHON_VERSION:C/^([a-z]+).*/\1/}
+.  if defined(_PYTHON_IMPL) && ${_PYTHON_IMPL} != ${_PYTHON_VERSION_IMPL}
+IGNORE?=		"needs Python implementation ${_PYTHON_VERSION_IMPL}. But a port depending on this one specified ${_PYTHON_IMPL}"
+.  else
+_PYTHON_IMPL=		${_PYTHON_VERSION_IMPL}
+.  endif
 .else
-_PYTHON_VERSION:=	${PYTHON_DEFAULT_VERSION:S/^python//}
+_PYTHON_VERSION:=	${PYTHON_DEFAULT_VERSION:C/^[a-z]+//}
+_PYTHON_IMPL?=		${PYTHON_DEFAULT_VERSION:C/^([a-z]+).*/\1/}
 .endif # defined(PYTHON_VERSION)
+
+.if ${_PYTHON_IMPL} == cpython
+_PYTHON_BINNAME=	python
+_PYTHON_SHORTNAME=	py
+_PYTHON_VERSIONS=	2.7 3.5 3.4 3.3 # preferred first
+
+PYTHON_PORTSDIR=	lang/python${PYTHON_SUFFIX}
+PYTHON_CMD?=		${LOCALBASE}/bin/python${PYTHON_VER}
+
+PYTHON_INCLUDEDIR=	${PYTHONBASE}/include/python${_PYTHON_VERSION}${PYTHON_ABIVER}
+PYTHON_LIBDIR=		${PYTHONBASE}/lib/python${_PYTHON_VERSION}
+PYTHON_SITELIBDIR=	${PYTHON_LIBDIR}/site-packages
+.elif ${_PYTHON_IMPL} == pypy
+_PYTHON_BINNAME=	pypy
+_PYTHON_SHORTNAME=	pypy
+_PYTHON_VERSIONS=	2.7 3.3 # preferred first
+
+PYTHON_PORTSDIR=	lang/pypy${PYTHON_SUFFIX:C/(.).*/\1/:S/2//}
+PYTHON_CMD?=		${LOCALBASE}/bin/pypy${PYTHON_SUFFIX:C/(.).*/\1/:S/2//}
+
+PYTHON_INCLUDEDIR=	${PYTHONBASE}/include
+PYTHON_LIBDIR=		${PYTHONBASE}/bin
+PYTHON_SITELIBDIR=	${PYTHONBASE}/site-packages
+.else
+IGNORE?=		"needs an unsupported implementation '${_PYTHON_IMPL}' of Python (supported implementations: cpython, pypy)"
+.endif # ${_PYTHON_IMPL}
 
 # Validate Python version whether it meets the version restriction.
 _PYTHON_VERSION_CHECK:=		${_PYTHON_ARGS:C/^([1-9]\.[0-9])$/\1-\1/}
@@ -342,35 +394,49 @@ _PYTHON_VERSION_MAXIMUM:=	${_PYTHON_VERSION_MAXIMUM_TMP:M[1-9].[0-9]}
 _PYTHON_VERSION_NONSUPPORTED=	${_PYTHON_VERSION_MINIMUM} at least
 .elif !empty(_PYTHON_VERSION_MAXIMUM) && (${_PYTHON_VERSION} > ${_PYTHON_VERSION_MAXIMUM})
 _PYTHON_VERSION_NONSUPPORTED=	${_PYTHON_VERSION_MAXIMUM} at most
+.else
+.  undef _PYTHON_VERSION_SUPPORTED
+.  for supported_ver in ${_PYTHON_VERSIONS}
+.    if ${supported_ver} == ${_PYTHON_VERSIONS}
+_PYTHON_VERSION_SUPPORTED=	yes
+.    endif
+.  endfor
+.  if !defined(_PYTHON_VERSION_SUPPORTED)
+_PYTHON_VERSION_NONSUPPORTED=	${_PYTHON_VERSIONS} (unsupported)
+.  endif
+.  undef _PYTHON_VERSION_SUPPORTED
 .endif
 
 # If we have an unsupported version of Python, try another.
 .if defined(_PYTHON_VERSION_NONSUPPORTED)
-.if defined(PYTHON_VERSION) || defined(PYTHON_CMD)
+.  if defined(PYTHON_VERSION) || defined(PYTHON_CMD)
 _PV:=		${_PYTHON_VERSION}	# preserve the specified python version
 WARNING+=	"needs Python ${_PYTHON_VERSION_NONSUPPORTED}. But a port depending on this one specified ${_PV}"
-.endif # defined(PYTHON_VERSION) || defined(PYTHON_CMD)
-.undef _PYTHON_VERSION
-.for ver in ${PYTHON2_DEFAULT} ${PYTHON3_DEFAULT} ${_PYTHON_VERSIONS}
-__VER=		${ver}
-.if !defined(_PYTHON_VERSION) && \
+.  endif # defined(PYTHON_VERSION) || defined(PYTHON_CMD)
+.  undef _PYTHON_VERSION
+.  for ver in ${PYTHON_DEFAULT:C/^[a-z]+//} ${PYTHON2_DEFAULT:C/^[a-z]+//} ${PYTHON3_DEFAULT:C/^[a-z]+//} ${_PYTHON_VERSIONS}
+.    if !defined(_PYTHON_VERSION) && \
 	!(!empty(_PYTHON_VERSION_MINIMUM) && ( \
-		${__VER} < ${_PYTHON_VERSION_MINIMUM})) && \
+		${ver} < ${_PYTHON_VERSION_MINIMUM})) && \
 	!(!empty(_PYTHON_VERSION_MAXIMUM) && ( \
-		${__VER} > ${_PYTHON_VERSION_MAXIMUM}))
-_PYTHON_VERSION=	${ver}
-.endif
-.endfor
-.if !defined(_PYTHON_VERSION)
-IGNORE=		needs an unsupported version of Python
-.endif
+		${ver} > ${_PYTHON_VERSION_MAXIMUM}))
+.      for supported_ver in ${_PYTHON_VERSIONS}
+.        if !defined(_PYTHON_VERSION) && ${supported_ver} == ${ver}
+_PYTHON_VERSION:=	${ver}
+.        endif
+.      endfor
+.    endif
+.  endfor
+.  if !defined(_PYTHON_VERSION)
+IGNORE?=		"needs an unsupported version of Python"
+.  endif
 .endif	# defined(_PYTHON_VERSION_NONSUPPORTED)
 
 # Pass PYTHON_VERSION down the dependency chain. This ensures that
 # port A -> B -> C all will use the same python version and do not
 # try to find a different one, if the passed version fits into
 # the supported version range.
-PYTHON_VERSION?=	python${_PYTHON_VERSION}
+PYTHON_VERSION?=	${_PYTHON_IMPL}${_PYTHON_VERSION}
 .if !defined(PYTHON_NO_DEPENDS)
 DEPENDS_ARGS+=		PYTHON_VERSION=${PYTHON_VERSION}
 .endif
@@ -378,10 +444,10 @@ DEPENDS_ARGS+=		PYTHON_VERSION=${PYTHON_VERSION}
 # NOTE:
 #
 #  PYTHON_VERSION will hold whatever is passed down the dependency chain.
-#  If a user runs `make PYTHON_VERSION=python3.3, PYTHON_VERSION will be
-#  set to 'python3.3'. A port however may require a different version,
+#  If a user runs `make PYTHON_VERSION=cpython3.3, PYTHON_VERSION will be
+#  set to 'cpython3.3'. A port however may require a different version,
 #  which is stored (above) in _PYTHON_VERSION.
-#  Every python bit below hence should use python${_PYTHON_VERSION}, since
+#  Every python bit below hence should use ${_PYTHON_IMPL}${_PYTHON_VERSION}, since
 #  this is the value, the _port_ requires
 #
 
@@ -391,9 +457,9 @@ PYTHON_SUFFIX=		${_PYTHON_VERSION:S/.//g}
 PYTHON_MAJOR_VER=	${PYTHON_VER:R}
 PYTHON_REL=		# empty
 PYTHON_ABIVER=		# empty
-PYTHON_PORTSDIR=	${_PYTHON_RELPORTDIR}${PYTHON_SUFFIX}
+
 # Protect partial checkouts from Mk/Scripts/functions.sh:export_ports_env().
-.if !defined(_PORTS_ENV_CHECK) || exists(${PORTSDIR}/${PYTHON_PORTSDIR})
+.if (!defined(_PORTS_ENV_CHECK) || exists(${PORTSDIR}/${PYTHON_PORTSDIR}/Makefile.version)) && defined(PYTHON_PORTSDIR)
 .include "${PORTSDIR}/${PYTHON_PORTSDIR}/Makefile.version"
 .endif
 # Create a 4 integer version string, prefixing 0 to the last token if
@@ -403,7 +469,6 @@ PYTHON_PORTSDIR=	${_PYTHON_RELPORTDIR}${PYTHON_SUFFIX}
 PYTHON_REL=	${PYTHON_PORTVERSION:C/^([0-9]+\.[0-9]+\.[0-9]+).*/\1/:C/\.([0-9]+)$/.0\1/:C/\.0?([0-9][0-9])$/.\1/:S/.//g}
 
 # Might be overridden by calling ports
-PYTHON_CMD?=		${_PYTHON_BASECMD}${_PYTHON_VERSION}
 .if ${PYTHON_VER} != 2.7
 .if exists(${PYTHON_CMD}-config)
 PYTHON_ABIVER!=		${PYTHON_CMD}-config --abiflags
@@ -419,16 +484,14 @@ PYTHONBASE!=	(${PYTHON_CMD} -c 'import sys; print(sys.prefix)' \
 .endif
 _EXPORTED_VARS+=	PYTHONBASE
 
-PYTHON_INCLUDEDIR=	${PYTHONBASE}/include/python${_PYTHON_VERSION}${PYTHON_ABIVER}
-PYTHON_LIBDIR=		${PYTHONBASE}/lib/python${_PYTHON_VERSION}
 PYTHON_PLATFORM=	${OPSYS:tl}${OSREL:C/\.[0-9.]*//}
-PYTHON_SITELIBDIR=	${PYTHON_LIBDIR}/site-packages
-PYTHON_PKGNAMEPREFIX=	py${PYTHON_SUFFIX}-
-PYTHON_PKGNAMESUFFIX=	-py${PYTHON_SUFFIX}
+PYTHON_PKGNAMEPREFIX=	${_PYTHON_SHORTNAME}${PYTHON_SUFFIX}-
+PYTHON_PKGNAMESUFFIX=	-${_PYTHON_SHORTNAME}${PYTHON_SUFFIX}
 
-PYTHONPREFIX_INCLUDEDIR=	${PYTHON_INCLUDEDIR:S;${PYTHONBASE};${PREFIX};}
-PYTHONPREFIX_LIBDIR=		${PYTHON_LIBDIR:S;${PYTHONBASE};${PREFIX};}
-PYTHONPREFIX_SITELIBDIR=	${PYTHON_SITELIBDIR:S;${PYTHONBASE};${PREFIX};}
+PYTHONPREFIX=			${PYTHONBASE:S;${LOCALBASE};${PREFIX};}
+PYTHONPREFIX_INCLUDEDIR=	${PYTHON_INCLUDEDIR:S;${LOCALBASE};${PREFIX};}
+PYTHONPREFIX_LIBDIR=		${PYTHON_LIBDIR:S;${LOCALBASE};${PREFIX};}
+PYTHONPREFIX_SITELIBDIR=	${PYTHON_SITELIBDIR:S;${LOCALBASE};${PREFIX};}
 
 # Used for recording the installed files.
 _PYTHONPKGLIST=	${WRKDIR}/.PLIST.pymodtmp
@@ -448,7 +511,7 @@ _PYTHONPKGLIST=	${WRKDIR}/.PLIST.pymodtmp
 
 .if defined(_PYTHON_FEATURE_CONCURRENT)
 _USES_POST+=		uniquefiles:dirs
-.if ${PYTHON_VERSION} == ${PYTHON_DEFAULT_VERSION}
+.if ${_PYTHON_VERSION} == ${PYTHON_DEFAULT_VERSION}
 UNIQUE_DEFAULT_LINKS=	yes
 .else
 UNIQUE_DEFAULT_LINKS=	no
@@ -469,8 +532,8 @@ UNIQUE_FIND_SUFFIX_FILES=	\
 _CURRENTPORT:=	${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}
 .if defined(_PYTHON_FEATURE_DISTUTILS) && \
 	${_CURRENTPORT:S/${PYTHON_SUFFIX}$//} != ${PYTHON_PKGNAMEPREFIX}setuptools
-BUILD_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}setuptools${PYTHON_SUFFIX}>0:devel/py-setuptools${PYTHON_SUFFIX}
-RUN_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}setuptools${PYTHON_SUFFIX}>0:devel/py-setuptools${PYTHON_SUFFIX}
+BUILD_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}setuptools${PYTHON_SUFFIX}>0:devel/${_PYTHON_SHORTNAME}-setuptools${PYTHON_SUFFIX}
+RUN_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}setuptools${PYTHON_SUFFIX}>0:devel/${_PYTHON_SHORTNAME}-setuptools${PYTHON_SUFFIX}
 .endif
 
 # distutils support
@@ -481,7 +544,7 @@ PYDISTUTILS_SETUP?=	-c \
 	exec(compile(open(__file__, 'rb').read().replace(b'\\r\\n', b'\\n'), __file__, 'exec'))"
 PYDISTUTILS_CONFIGUREARGS?=	# empty
 PYDISTUTILS_BUILDARGS?=		# empty
-PYDISTUTILS_INSTALLARGS?=	-c -O1 --prefix=${PREFIX}
+PYDISTUTILS_INSTALLARGS?=	-c -O1 --prefix=${PYTHONPREFIX}
 .if defined(_PYTHON_FEATURE_DISTUTILS)
 . if !defined(PYDISTUTILS_INSTALLNOSINGLE)
 PYDISTUTILS_INSTALLARGS+=	--single-version-externally-managed
@@ -564,19 +627,19 @@ PYNUMPY=	${PYTHON_SITELIBDIR}/numpy/core/numeric.py:math/py-numpy
 .if defined(_PYTHON_BUILD_DEP)
 BUILD_DEPENDS+=	${PYTHON_CMD}:${PYTHON_PORTSDIR}
 .if defined(_WANTS_META_PORT)
-BUILD_DEPENDS+=	python${_WANTS_META_PORT}:${_PYTHON_RELPORTDIR}${_WANTS_META_PORT}
+BUILD_DEPENDS+=	python${_WANTS_META_PORT}:lang/python${_WANTS_META_PORT}}
 .endif
 .endif
 .if defined(_PYTHON_RUN_DEP)
 RUN_DEPENDS+=	${PYTHON_CMD}:${PYTHON_PORTSDIR}
 .if defined(_WANTS_META_PORT)
-RUN_DEPENDS+=	python${_WANTS_META_PORT}:${_PYTHON_RELPORTDIR}${_WANTS_META_PORT}
+RUN_DEPENDS+=	python${_WANTS_META_PORT}:lang/python${_WANTS_META_PORT}}
 .endif
 .endif
 .if defined(_PYTHON_TEST_DEP)
 TEST_DEPENDS+=	${PYTHON_CMD}:${PYTHON_PORTSDIR}
 .if defined(_WANTS_META_PORT)
-TEST_DEPENDS+=	python${_WANTS_META_PORT}:${_PYTHON_RELPORTDIR}${_WANTS_META_PORT}
+TEST_DEPENDS+=	python${_WANTS_META_PORT}:lang/python${_WANTS_META_PORT}}
 .endif
 .endif
 
@@ -593,7 +656,7 @@ PLIST_SUB+=	PYTHON_INCLUDEDIR=${PYTHONPREFIX_INCLUDEDIR:S;${PREFIX}/;;} \
 		PYTHON_PLATFORM=${PYTHON_PLATFORM} \
 		PYTHON_SITELIBDIR=${PYTHONPREFIX_SITELIBDIR:S;${PREFIX}/;;} \
 		PYTHON_VER=${PYTHON_VER} \
-		PYTHON_VERSION=python${_PYTHON_VERSION}
+		PYTHON_VERSION=${_PYTHON_IMPL}${_PYTHON_VERSION}
 
 _USES_POST+=	python
 .endif # _INCLUDE_USES_PYTHON_MK

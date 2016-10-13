@@ -19,7 +19,7 @@ USES=		gettext gmake libtool pathfix perl5 pkgconfig
 USE_LDCONFIG=	yes
 USE_PERL5=	build
 
-CONFIGURE_ENV=	PYTHON_VERSION=${PYTHON_VERSION:S;python;;} \
+CONFIGURE_ENV=	PYTHON_VERSION=${PYTHON_VER} \
 		pyexecdir=${PYTHON_SITELIBDIR} \
 		GMSGFMT="${LOCALBASE}/bin/msgfmt"
 CFLAGS+=	-I${LOCALBASE}/include

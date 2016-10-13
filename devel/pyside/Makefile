@@ -26,8 +26,7 @@ USE_QT4=	declarative designer gui help qmake_build \
 		phonon rcc_build script scripttools \
 		svg uic_build webkit
 
-PLIST_SUB=	PORTVERSION=${PORTVERSION} \
-		PYTHON_VERSION=${PYTHON_VERSION}
+PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
 USES=		cmake python:2 tar:bzip2
 USE_LDCONFIG=	yes

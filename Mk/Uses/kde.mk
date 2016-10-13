@@ -30,6 +30,8 @@
 .if !defined(_INCLUDE_USES_KDE_MK)
 _INCLUDE_USES_KDE_MK=	yes
 
+_USES_POST+=	kde
+
 _KDE_SUPPORTED=		4 5
 
 .  if empty(kde_ARGS)
@@ -160,20 +162,8 @@ PLIST_SUB+=		KDE_FRAMEWORKS_VERSION="${KDE_FRAMEWORKS_VERSION}"
 .  endif
 # ==============================================================================
 
-# === HANDLE PYTHON ============================================================
-# TODO: Keep in sync with cmake/modules/PythonMacros.cmake
-_PYTHON_SHORT_VER=	${PYTHON_VERSION:S/^python//:S/.//}
-.  if ${_PYTHON_SHORT_VER} > 31
-PLIST_SUB+=		PYCACHE="__pycache__/" \
-			PYC_SUFFIX=cpython-${_PYTHON_SHORT_VER}.pyc \
-			PYO_SUFFIX=cpython-${_PYTHON_SHORT_VER}.pyo
-.  else
-PLIST_SUB+=		PYCACHE="" \
-			PYC_SUFFIX=pyc \
-			PYO_SUFFIX=pyo
-.  endif
 # ==============================================================================
-_USE_KDE4_ALL=		baloo baloo-widgets baseapps kactivities kate kdelibs \
+_USE_KDE4_ALL=  	baloo baloo-widgets baseapps kactivities kate kdelibs \
 			kfilemetadata korundum libkcddb libkcompactdisc \
 			libkdcraw libkdeedu libkdegames libkexiv2 libkipi \
 			libkonq libksane marble nepomuk-core nepomuk-widgets \
@@ -618,5 +608,24 @@ RUN_DEPENDS+=		${${component}_DEPENDS}
 IGNORE=				cannot be installed: unknown USE_KDE component '${component}'
 .    endif # ${_USE_KDE_ALL:M${component}} != ""
 .  endfor
+
+.endif
+
+.if defined(_POSTMKINCLUDED) && !defined(_INCLUDE_USES_KDE_POST_MK)
+_INCLUDE_USES_KDE_POST_MK=	yes
+
+# === HANDLE PYTHON ============================================================
+# TODO: Keep in sync with cmake/modules/PythonMacros.cmake
+.if defined(PYTHON_SUFFIX)
+.  if ${PYTHON_SUFFIX} > 31
+PLIST_SUB+=		PYCACHE="__pycache__/" \
+			PYC_SUFFIX=cpython-${PYTHON_SUFFIX}.pyc \
+			PYO_SUFFIX=cpython-${PYTHON_SUFFIX}.pyo
+.  else
+PLIST_SUB+=		PYCACHE="" \
+			PYC_SUFFIX=pyc \
+			PYO_SUFFIX=pyo
+.  endif
+.endif
 
 .endif

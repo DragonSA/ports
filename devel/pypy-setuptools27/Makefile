@@ -3,7 +3,7 @@
 
 PKGNAMESUFFIX=	${PYTHON_SUFFIX}
 
-PYTHON_VERSION=	cpython2.7
+PYTHON_VERSION=	pypy2.7
 
 MASTERDIR=	${.CURDIR}/../py-setuptools
 

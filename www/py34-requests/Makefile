@@ -2,6 +2,6 @@
 
 MASTERDIR=	${.CURDIR}/../py-requests
 
-PYTHON_VERSION=	python3.4
+PYTHON_VERSION=	cpython3.4
 
 .include "${MASTERDIR}/Makefile"

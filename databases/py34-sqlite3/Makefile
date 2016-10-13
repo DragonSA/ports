@@ -2,6 +2,6 @@
 
 MASTERDIR=	${.CURDIR}/../py-sqlite3
 
-PYTHON_VERSION=	python3.4
+PYTHON_VERSION=	cpython3.4
 
 .include "${MASTERDIR}/Makefile"

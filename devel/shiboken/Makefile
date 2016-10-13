@@ -16,8 +16,7 @@ LICENSE_COMB=	multi
 LIB_DEPENDS=	libxml2.so:textproc/libxml2 \
 		libxslt.so:textproc/libxslt
 
-PLIST_SUB=	PORTVERSION=${PORTVERSION} \
-		PYTHON_VERSION=${PYTHON_VERSION}
+PLIST_SUB=	PORTVERSION=${PORTVERSION}
 
 USE_QT4=	corelib qmake_build qtestlib moc_build network \
 		uic_build rcc_build xml xmlpatterns

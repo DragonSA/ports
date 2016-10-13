@@ -2,6 +2,6 @@
 
 MASTERDIR=	${.CURDIR}/../py-tkinter
 
-PYTHON_VERSION=	python3.3
+PYTHON_VERSION=	cpython3.3
 
 .include "${MASTERDIR}/Makefile"

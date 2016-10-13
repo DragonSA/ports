@@ -3,7 +3,7 @@
 
 PKGNAMESUFFIX=	${PYTHON_SUFFIX}
 
-PYTHON_VERSION=	python3.5
+PYTHON_VERSION=	cpython3.5
 
 MASTERDIR=	${.CURDIR}/../py-setuptools
 

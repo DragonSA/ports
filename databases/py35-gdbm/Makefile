@@ -2,6 +2,6 @@
 
 MASTERDIR=	${.CURDIR}/../py-gdbm
 
-PYTHON_VERSION=	python3.5
+PYTHON_VERSION=	cpython3.5
 
 .include "${MASTERDIR}/Makefile"

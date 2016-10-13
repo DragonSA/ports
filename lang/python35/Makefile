@@ -25,7 +25,7 @@ CPE_VERSION=	${DISTVERSION}
 
 # Duplicate python.mk variables. TODO: Let lang/python?? ports use python.mk bits.
 PYTHON_VER=		${PYTHON_PORTVERSION:R}
-PYTHON_VERSION=		python${PYTHON_VER}
+PYTHON_VERSION=		cpython${PYTHON_VER}
 PYTHON_SUFFIX=		${PYTHON_VER:S/.//g}
 
 DISABLED_EXTENSIONS=	_sqlite3 _tkinter _gdbm
