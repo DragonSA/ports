@@ -2031,3 +2031,14 @@ bin/pypy3
 %%PYPY_DIR%%/lib_pypy/testcapi_long.h
 %%PYPY_DIR%%/lib_pypy/tputil.py
 %%PYPY_DIR%%/site-packages/README
+@dir %%PYPY_DIR%%/lib-python/3/__pycache__
+@dir %%PYPY_DIR%%/lib-python/3/collections/__pycache__
+@dir %%PYPY_DIR%%/lib-python/3/distutils/__pycache__
+@dir %%PYPY_DIR%%/lib-python/3/distutils/command/__pycache__
+@dir %%PYPY_DIR%%/lib-python/3/email/__pycache__
+@dir %%PYPY_DIR%%/lib-python/3/encodings/__pycache__
+@dir %%PYPY_DIR%%/lib-python/3/importlib/__pycache__
+@dir %%PYPY_DIR%%/lib_pypy/__pycache__
+@dir %%PYPY_DIR%%/lib_pypy/cffi/__pycache__
+@dir %%PYPY_DIR%%/lib_pypy/cffi/_pycparser/__pycache__
+@dir %%PYPY_DIR%%/lib_pypy/cffi/_pycparser/ply/__pycache__
