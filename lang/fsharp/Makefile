@@ -10,6 +10,7 @@ MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Functional and object-oriented language for the .NET platform
 
 LICENSE=	APACHE20
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	mono>=3.0:lang/mono \
 		referenceassemblies-pcl>=4.6-1:lang/referenceassemblies-pcl
@@ -56,5 +57,16 @@ post-extract:
 		--exclude package/ \
 		--exclude _rels/
 .endfor
+
+do-test:
+	${MKDIR} ${WRKDIR}/bin
+	echo "#!/bin/sh" > ${WRKDIR}/bin/fsharpc
+	echo 'exec ${LOCALBASE}/bin/mono ${WRKSRC}/lib/release/fsc.exe "$$@"' >> ${WRKDIR}/bin/fsharpc
+	${CHMOD} 0755 ${WRKDIR}/bin/fsharpc
+	(cd ${WRKSRC}/tests/fsharp/core; \
+		${ENV} \
+			PATH=${WRKDIR}/bin:${PATH} \
+			MONO_PATH=${WRKSRC}/lib/release \
+			./run-all.sh)
 
 .include <bsd.port.mk>
