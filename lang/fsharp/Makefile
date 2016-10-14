@@ -4,6 +4,7 @@
 PORTNAME=	fsharp
 PORTVERSION=	4.0.1.10
 CATEGORIES=	lang
+EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Functional and object-oriented language for the .NET platform
@@ -13,6 +14,7 @@ LICENSE=	APACHE20
 BUILD_DEPENDS=	mono>=3.0:lang/mono \
 		referenceassemblies-pcl>=4.6-1:lang/referenceassemblies-pcl
 RUN_DEPENDS=	mono>=3.0:lang/mono
+
 NUGET_DEPENDS=	FSharp.Compiler.Tools-4.0.1.3 \
 		FSharp.Data-2.2.5 \
 		FSharp.SRGen.Build.Tasks-3.0.0 \
@@ -29,7 +31,6 @@ GNU_CONFIGURE=	yes
 MAKE_JOBS_UNSAFE=	Build not parallelizable
 NO_ARCH=	yes
 
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 NUGET_PACKAGEDIR=	${WRKSRC}/packages
 
 .for depend in ${NUGET_DEPENDS}
@@ -48,7 +49,7 @@ NUGET_NUPKGS+=	${NUGET_NUPKGS_nuget_${depend:C/-.*$//:S/.//g}}
 
 post-extract:
 .for nupkg in ${NUGET_NUPKGS}
-	@mkdir -p ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/-/./}
+	@${MKDIR} ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/-/./}
 	@tar -xf ${DISTDIR}/${nupkg:C/:.*$//} -C ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/-/./} \
 		-s/%2B/\+/g \
 		--exclude '\[Content_Types\].xml' \
