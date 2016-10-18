@@ -1,8 +1,8 @@
 # Created by: b.f. <bf@FreeBSD.org>
-# $FreeBSD: head/math/R-cran-SuppDists/Makefile 421971 2016-09-13 02:28:28Z wen $
+# $FreeBSD: head/math/R-cran-SuppDists/Makefile 424113 2016-10-17 12:03:36Z wen $
 
 PORTNAME=	SuppDists
-DISTVERSION=	1.1-9.2
+DISTVERSION=	1.1-9.4
 CATEGORIES=	math
 MASTER_SITES=	CRAN \
 		http://r.research.att.com/benchmarks/:benchmark \

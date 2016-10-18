@@ -1,4 +1,4 @@
-# $FreeBSD: head/security/Makefile 423577 2016-10-09 08:57:49Z antoine $
+# $FreeBSD: head/security/Makefile 424119 2016-10-17 14:28:01Z tijl $
 #
 
     COMMENT = Security tools
@@ -49,6 +49,7 @@
     SUBDIR += bsdsfv
     SUBDIR += bsmtrace
     SUBDIR += bugs
+    SUBDIR += bzrtp
     SUBDIR += ca_root_nss
     SUBDIR += calife
     SUBDIR += cardpeek
@@ -297,7 +298,6 @@
     SUBDIR += libassuan
     SUBDIR += libbeid
     SUBDIR += libbf
-    SUBDIR += libbzrtp
     SUBDIR += libcryptui
     SUBDIR += libecc
     SUBDIR += libfprint
@@ -383,6 +383,7 @@
     SUBDIR += ncrypt
     SUBDIR += netpgp
     SUBDIR += nettle
+    SUBDIR += ngrok
     SUBDIR += nikto
     SUBDIR += nist-kat
     SUBDIR += nmap

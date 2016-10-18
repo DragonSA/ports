@@ -1,4 +1,4 @@
-# $FreeBSD: head/UIDs 421815 2016-09-11 11:43:36Z pi $
+# $FreeBSD: head/UIDs 424001 2016-10-15 05:09:11Z pi $
 # Please keep this file sorted by UID!
 # Please pick an empty slot when available and also consider base values from
 # /usr/src/etc/master.passwd
@@ -424,7 +424,7 @@ nomad:*:472:472::0:0:Nomad Daemon:/var/tmp/nomad:/usr/sbin/nologin
 # free: 475
 # free: 476
 # free: 477
-# free: 478
+prometheus:*:478:478::0:0:Prometheus Daemon:/var/tmp/prometheus:/usr/sbin/nologin
 # free: 479
 # free: 480
 # free: 481

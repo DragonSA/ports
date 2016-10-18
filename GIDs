@@ -1,4 +1,4 @@
-# $FreeBSD: head/GIDs 421815 2016-09-11 11:43:36Z pi $
+# $FreeBSD: head/GIDs 424001 2016-10-15 05:09:11Z pi $
 # Please keep this file sorted by GID!
 # Please pick an empty slot when available and also consider base values from
 # /usr/src/etc/group
@@ -419,7 +419,7 @@ nomad:*:472:
 # free: 475
 # free: 476
 # free: 477
-# free: 478
+prometheus:*:478:
 # free: 479
 # free: 480
 # free: 481

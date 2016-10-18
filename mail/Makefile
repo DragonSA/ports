@@ -1,4 +1,4 @@
-# $FreeBSD: head/mail/Makefile 423531 2016-10-08 18:17:02Z oliver $
+# $FreeBSD: head/mail/Makefile 424028 2016-10-15 21:14:53Z rene $
 #
 
     COMMENT = Electronic mail utilities
@@ -108,7 +108,6 @@
     SUBDIR += ecartis
     SUBDIR += elm
     SUBDIR += elmo
-    SUBDIR += elmo-devel
     SUBDIR += emailrelay
     SUBDIR += emil
     SUBDIR += enma

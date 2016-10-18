@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/bsd.default-versions.mk 423217 2016-10-03 18:15:45Z rene $
+# $FreeBSD: head/Mk/bsd.default-versions.mk 423986 2016-10-14 19:50:00Z antoine $
 #
 # MAINTAINER:	ports@FreeBSD.org
 #
@@ -66,7 +66,7 @@ PYTHON_DEFAULT?=	2.7
 # Possible values: 2.7
 PYTHON2_DEFAULT?=	2.7
 # Possible values: 3.3, 3.4, 3.5
-PYTHON3_DEFAULT?=	3.4
+PYTHON3_DEFAULT?=	3.5
 # Possible values: 2.0, 2.1, 2.2, 2.3
 RUBY_DEFAULT?=		2.2
 # Possible values: base, openssl, openssl-devel, libressl, libressl-devel

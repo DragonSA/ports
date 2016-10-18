@@ -1,4 +1,4 @@
-# $FreeBSD: head/misc/Makefile 422086 2016-09-13 20:58:26Z marino $
+# $FreeBSD: head/misc/Makefile 423991 2016-10-14 20:52:04Z rene $
 #
 
     COMMENT = Miscellaneous utilities
@@ -98,7 +98,6 @@
     SUBDIR += fortune-mod-ferengi_rules_of_acquisition
     SUBDIR += fortune-mod-futurama
     SUBDIR += fortune-mod-psalms
-    SUBDIR += fortune_strfile
     SUBDIR += fortuneit
     SUBDIR += fpc-chm
     SUBDIR += freebsd-doc-all

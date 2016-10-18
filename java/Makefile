@@ -1,4 +1,4 @@
-# $FreeBSD: head/java/Makefile 419237 2016-07-29 11:23:55Z vsevolod $
+# $FreeBSD: head/java/Makefile 423993 2016-10-14 21:07:02Z pi $
 #
 
     COMMENT = Java language support
@@ -34,6 +34,7 @@
     SUBDIR += intellij-fsnotifier
     SUBDIR += intellij-pty4j
     SUBDIR += intellij-pycharm
+    SUBDIR += intellij-ultimate
     SUBDIR += jad
     SUBDIR += jaf
     SUBDIR += jai

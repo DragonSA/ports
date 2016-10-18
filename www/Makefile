@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/Makefile 423899 2016-10-13 00:37:42Z allanjude $
+# $FreeBSD: head/www/Makefile 424006 2016-10-15 07:28:38Z romain $
 #
 
     COMMENT = Ports related to the World Wide Web
@@ -1736,6 +1736,7 @@
     SUBDIR += py-praw
     SUBDIR += py-prewikka
     SUBDIR += py-puppetboard
+    SUBDIR += py-puppetboard02
     SUBDIR += py-py-restclient
     SUBDIR += py-pySmartDL
     SUBDIR += py-pyjwt
@@ -2050,6 +2051,7 @@
     SUBDIR += rubygem-totoridipjp
     SUBDIR += rubygem-tumblr_client
     SUBDIR += rubygem-turbolinks
+    SUBDIR += rubygem-turbolinks-classic
     SUBDIR += rubygem-turbolinks-source
     SUBDIR += rubygem-typhoeus
     SUBDIR += rubygem-uglifier

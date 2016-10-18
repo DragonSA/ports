@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/Makefile 423877 2016-10-12 18:18:24Z bsam $
+# $FreeBSD: head/devel/Makefile 424140 2016-10-17 18:18:23Z novel $
 #
 
     COMMENT = Development utilities
@@ -96,6 +96,7 @@
     SUBDIR += arcanist
     SUBDIR += arduino
     SUBDIR += arduino-builder
+    SUBDIR += arduino-core
     SUBDIR += arduino-ctags
     SUBDIR += arduino-glcd
     SUBDIR += arduino-irremote
@@ -110,6 +111,7 @@
     SUBDIR += arm-none-eabi-gcc
     SUBDIR += arm-none-eabi-gcc492
     SUBDIR += arm-none-eabi-gdb
+    SUBDIR += arm-none-eabi-newlib
     SUBDIR += aros-sdk
     SUBDIR += art
     SUBDIR += artifactory
@@ -4132,6 +4134,7 @@
     SUBDIR += py-fabric
     SUBDIR += py-fake-factory
     SUBDIR += py-fam
+    SUBDIR += py-fasteners
     SUBDIR += py-fastimport
     SUBDIR += py-filemagic
     SUBDIR += py-fileutils
@@ -4158,6 +4161,7 @@
     SUBDIR += py-fusefs
     SUBDIR += py-future
     SUBDIR += py-futures
+    SUBDIR += py-futurist
     SUBDIR += py-game
     SUBDIR += py-game_sdl2
     SUBDIR += py-gamin
@@ -4402,6 +4406,7 @@
     SUBDIR += py-pytest-xdist
     SUBDIR += py-python-bugzilla
     SUBDIR += py-python-distutils-extra
+    SUBDIR += py-python-editor
     SUBDIR += py-python-gist
     SUBDIR += py-python-jenkins
     SUBDIR += py-python-magic
@@ -4462,6 +4467,7 @@
     SUBDIR += py-resolver
     SUBDIR += py-resourcepackage
     SUBDIR += py-responses
+    SUBDIR += py-retrying
     SUBDIR += py-riak_pb
     SUBDIR += py-rlcompleter2
     SUBDIR += py-robotframework

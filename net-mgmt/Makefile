@@ -1,4 +1,4 @@
-# $FreeBSD: head/net-mgmt/Makefile 423096 2016-10-01 23:34:12Z jbeich $
+# $FreeBSD: head/net-mgmt/Makefile 424001 2016-10-15 05:09:11Z pi $
 #
 
     COMMENT = Network management tools
@@ -271,6 +271,7 @@
     SUBDIR += pnp-icinga
     SUBDIR += pnp-icinga2
     SUBDIR += portmon
+    SUBDIR += prometheus
     SUBDIR += py-flowtools
     SUBDIR += py-ipcalc
     SUBDIR += py-ipy

@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/python.mk 419511 2016-08-03 12:09:37Z mat $
+# $FreeBSD: head/Mk/Uses/python.mk 423986 2016-10-14 19:50:00Z antoine $
 #
 # Provide support for Python related ports. This includes detecting Python
 # interpreters, ports providing package and modules for python as well as
@@ -222,7 +222,7 @@ _INCLUDE_USES_PYTHON_MK=	yes
 # What Python version and what Python interpreters are currently supported?
 # When adding a version, please keep the comment in
 # Mk/bsd.default-versions.mk in sync.
-_PYTHON_VERSIONS=		2.7 3.4 3.5 3.3	# preferred first
+_PYTHON_VERSIONS=		2.7 3.5 3.4 3.3	# preferred first
 _PYTHON_PORTBRANCH=		2.7		# ${_PYTHON_VERSIONS:[1]}
 _PYTHON_BASECMD=		${LOCALBASE}/bin/python
 _PYTHON_RELPORTDIR=		lang/python

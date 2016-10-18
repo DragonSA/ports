@@ -1,7 +1,7 @@
-# $FreeBSD: head/finance/kmymoney-kde4/Makefile 420774 2016-08-24 08:20:31Z tcberner $
+# $FreeBSD: head/finance/kmymoney-kde4/Makefile 424031 2016-10-15 21:24:05Z rakuco $
 
 PORTNAME=	kmymoney
-PORTVERSION=	4.7.2
+PORTVERSION=	4.8.0
 PORTREVISION=	1
 CATEGORIES=	finance kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTVERSION}/src
@@ -13,12 +13,16 @@ LICENSE=	GPLv2
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libboost_graph.so:devel/boost-libs \
-		libalkimia.so:finance/libalkimia
+		libalkimia.so:finance/libalkimia \
+		libgmp.so:math/gmp \
+		libgpgme.so:security/gpgme \
+		libassuan.so:security/libassuan \
+		libgpg-error.so:security/libgpg-error
 
 USES=		cmake kde:4 pkgconfig shared-mime-info shebangfix tar:xz
-USE_QT4=	gui dbus network phonon sql svg xml \
+USE_QT4=	corelib gui dbus declarative network phonon script sql svg xml \
 		qmake_build moc_build rcc_build uic_build
-USE_KDE=	automoc4 kdelibs pimlibs
+USE_KDE=	automoc4 kdelibs pimlibs soprano
 USE_LDCONFIG=	yes
 
 SHEBANG_FILES=	kmymoney/misc/financequote.pl
@@ -38,7 +42,8 @@ CALENDAR_CMAKE_ON=	-DENABLE_LIBICAL:BOOL=ON
 CALENDAR_CMAKE_OFF=	-DENABLE_LIBICAL:BOOL=OFF
 
 KBANKING_DESC=		Enable KBanking plugin
-KBANKING_LIB_DEPENDS=	libgwengui-qt4.so:devel/gwenhywfar-qt4 \
+KBANKING_LIB_DEPENDS=	libgwenhywfar.so:devel/gwenhywfar \
+			libgwengui-qt4.so:devel/gwenhywfar-qt4 \
 			libaqbanking.so:finance/aqbanking
 KBANKING_CMAKE_ON=	-DENABLE_KBANKING:BOOL=ON
 KBANKING_CMAKE_OFF=	-DENABLE_KBANKING:BOOL=OFF

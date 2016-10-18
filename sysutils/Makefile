@@ -1,4 +1,4 @@
-# $FreeBSD: head/sysutils/Makefile 423636 2016-10-10 04:40:10Z cperciva $
+# $FreeBSD: head/sysutils/Makefile 424002 2016-10-15 05:24:29Z pi $
 #
 
     COMMENT = System utilities
@@ -648,6 +648,7 @@
     SUBDIR += nfsping
     SUBDIR += nitrogen
     SUBDIR += no-login
+    SUBDIR += node_exporter
     SUBDIR += nomad
     SUBDIR += npadmin
     SUBDIR += nrg2iso

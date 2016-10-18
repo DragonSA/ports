@@ -1,4 +1,4 @@
-# $FreeBSD: head/databases/Makefile 423218 2016-10-03 18:19:04Z rene $
+# $FreeBSD: head/databases/Makefile 424006 2016-10-15 07:28:38Z romain $
 #
 
     COMMENT = Databases and related software
@@ -775,6 +775,7 @@
     SUBDIR += py-pymssql
     SUBDIR += py-pymysql
     SUBDIR += py-pypuppetdb
+    SUBDIR += py-pypuppetdb03
     SUBDIR += py-pytc
     SUBDIR += py-python-memcached
     SUBDIR += py-python-rrdtool

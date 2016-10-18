@@ -1,16 +1,15 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: head/science/R-cran-snow/Makefile 403100 2015-12-06 11:01:46Z tota $
+# $FreeBSD: head/science/R-cran-snow/Makefile 424040 2016-10-16 04:21:12Z tota $
 
 PORTNAME=	snow
-DISTVERSION=	0.4-1
+DISTVERSION=	0.4-2
 CATEGORIES=	science
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Support for simple parallel computing in R
 
-LICENSE=	GPLv2 GPLv3
-LICENSE_COMB=	dual
+LICENSE=	GPLv2+
 
 USES=	cran:auto-plist
 

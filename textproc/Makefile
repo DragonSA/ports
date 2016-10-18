@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/Makefile 423699 2016-10-10 20:13:18Z rm $
+# $FreeBSD: head/textproc/Makefile 424005 2016-10-15 07:18:19Z woodsb02 $
 #
 
     COMMENT = Text processing utilities (does not include desktop publishing)
@@ -323,6 +323,7 @@
     SUBDIR += ibus-m17n
     SUBDIR += ibus-qt
     SUBDIR += ibus-table
+    SUBDIR += icdiff
     SUBDIR += id-aspell
     SUBDIR += id-hyphen
     SUBDIR += idnits
