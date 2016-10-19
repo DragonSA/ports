@@ -18,12 +18,12 @@ include/shiboken/shibokenbuffer.h
 include/shiboken/shibokenmacros.h
 include/shiboken/threadstatesaver.h
 include/shiboken/typeresolver.h
-lib/cmake/Shiboken-%%PORTVERSION%%/ShibokenConfig-%%PYTHON_VERSION%%.cmake
+lib/cmake/Shiboken-%%PORTVERSION%%/ShibokenConfig-python%%PYTHON_VER%%.cmake
 lib/cmake/Shiboken-%%PORTVERSION%%/ShibokenConfig.cmake
 lib/cmake/Shiboken-%%PORTVERSION%%/ShibokenConfigVersion.cmake
-lib/libshiboken-%%PYTHON_VERSION%%.so
-lib/libshiboken-%%PYTHON_VERSION%%.so.1
-lib/libshiboken-%%PYTHON_VERSION%%.so.%%PORTVERSION%%
+lib/libshiboken-python%%PYTHON_VER%%.so
+lib/libshiboken-python%%PYTHON_VER%%.so.1
+lib/libshiboken-python%%PYTHON_VER%%.so.%%PORTVERSION%%
 libdata/pkgconfig/shiboken.pc
 %%PYTHON_SITELIBDIR%%/shiboken.so
 %%PORTDOCS%%%%DOCSDIR%%/.buildinfo

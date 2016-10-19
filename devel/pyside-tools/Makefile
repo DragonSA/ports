@@ -13,7 +13,7 @@ LICENSE=	BSD3CLAUSE GPLv2
 LICENSE_COMB=	multi
 
 BUILD_DEPENDS=	pyside${PYTHON_PKGNAMESUFFIX}>=1.0.9:devel/pyside
-LIB_DEPENDS=	libshiboken-${PYTHON_VERSION}.so:devel/shiboken
+LIB_DEPENDS=	libshiboken-python${PYTHON_VER}.so:devel/shiboken
 RUN_DEPENDS=	pyside${PYTHON_PKGNAMESUFFIX}>=1.0.9:devel/pyside
 
 USE_GITHUB=	yes

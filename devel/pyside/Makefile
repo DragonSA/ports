@@ -16,7 +16,7 @@ LICENSE=	LGPL21
 
 LIB_DEPENDS=	libapiextractor.so:devel/apiextractor \
 		libgenrunner.so:devel/generatorrunner \
-		libshiboken-${PYTHON_VERSION}.so:devel/shiboken
+		libshiboken-python${PYTHON_VER}.so:devel/shiboken
 
 CMAKE_ARGS+=	-DGL_H:FILEPATH="${LOCALBASE}/include/GL/gl.h" \
 		-DGL_INCLUDE_DIR:FILEPATH="${LOCALBASE}/include"
