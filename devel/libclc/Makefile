@@ -27,7 +27,7 @@ BROKEN_FreeBSD_9=	missing <system_error> header
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr/bin/python|${PYTHON_CMD}|g' \
-		-e 's|"python |"${PYTHON_VERSION} |g' \
+		-e 's|"python |"${PYTHON_CMD} |g' \
 		${WRKSRC}/build/ninja_syntax.py \
 		${WRKSRC}/configure.py
 
