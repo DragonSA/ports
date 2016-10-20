@@ -30,8 +30,6 @@ USE_GNOME=	intlhack pygobject3
 CONFIGURE_ARGS=	--without-udev-rules \
 		--without-systemdsystemunitdir
 
-PLIST_SUB=	PYTHON_VER=${PYTHON_VERSION:S/python//}
-
 SHEBANG_FILES=	*.py troubleshoot/*.py xml/validate.py
 
 PYDISTUTILS_PKGNAME=	cupshelpers
