@@ -99,8 +99,13 @@
 # PYTHON_CMD		- Python's command line file name, including the
 #			  version number (used for dependencies).
 #			  default:
-#				cpython:  ${PYTHONBASE}/bin/python${PYTHON_VER}
-#				pypy: ${LOCALBASE}/bin/pypy${PYTHON_VER:C/\..//:S/2//}
+#				cpython: ${PYTHONBASE}/bin/python${PYTHON_VER}
+#				pypy: ${LOCALBASE}/bin/pypy${PYTHON_MAJOR_VER:S/2//}
+#
+# PYTHON_LIB		- Python's library file name (used to link against)
+#			  default:
+#				cpython: ${PYTHONBASE}/lib/libpython${PYTHON_VER}.so
+#				pypy: ${PYTHON_LIBDIR}/libpypy-c.so
 #
 # PYSETUP		- Name of the setup script used by the distutils
 #			  package.
@@ -145,7 +150,10 @@
 # The following variables can be read by ports and must not be modified:
 #
 # PYTHONBASE		- The installation prefix of the chosen Python
-#			  interpreter, e.g. /usr/local
+#			  interpreter
+#			  default:
+#				cpython: ${LOCALBASE}
+#				pypy: ${LOCALBASE}/pypy-${PYPY_VER}
 #
 # PYTHON_PORTVERSION
 #			- Version number suitable for ${PORTVERSION}.
@@ -371,6 +379,7 @@ _PYTHON_VERSIONS=	2.7 3.5 3.4 3.3 # preferred first
 
 PYTHON_PORTSDIR=	lang/python${PYTHON_SUFFIX}
 PYTHON_CMD?=		${LOCALBASE}/bin/python${PYTHON_VER}
+PYTHON_LIB=		${PYTHONBASE}/lib/libpython${_PYTHON_VERSION}.so
 
 PYTHON_INCLUDEDIR=	${PYTHONBASE}/include/python${_PYTHON_VERSION}${PYTHON_ABIVER}
 PYTHON_LIBDIR=		${PYTHONBASE}/lib/python${_PYTHON_VERSION}
@@ -382,6 +391,7 @@ _PYTHON_VERSIONS=	2.7 3.3 # preferred first
 
 PYTHON_PORTSDIR=	lang/pypy${PYTHON_SUFFIX:C/(.).*/\1/:S/2//}
 PYTHON_CMD?=		${LOCALBASE}/bin/pypy${PYTHON_SUFFIX:C/(.).*/\1/:S/2//}
+PYTHON_LIB=		${PYTHON_LIBDIR}/libpypy-c.so
 
 PYTHON_INCLUDEDIR=	${PYTHONBASE}/include
 PYTHON_LIBDIR=		${PYTHONBASE}/bin
