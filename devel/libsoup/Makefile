@@ -20,7 +20,7 @@ PORTSCOUT=	limitw:1,even
 .if !defined(REFERENCE_PORT)
 
 USES+=		gettext gmake gnome libtool pathfix pkgconfig \
-		python:3:build sqlite:3 tar:xz
+		python:3:build shebangfix sqlite:3 tar:xz
 USE_GNOME=	glib20 intlhack introspection:build \
 		libxml2 referencehack
 USE_LDCONFIG=	yes
@@ -30,6 +30,7 @@ CONFIGURE_ARGS=	--disable-more-warnings \
 CPPFLAGS+=	-I${LOCALBASE}/include
 LIBS+=		-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
+SHEBANG_FILES=	${WRKSRC}/libsoup/tld-parser.py
 
 LIBVERSION=	1.7.0
 PLIST_SUB=	VERSION="2.4" LIBVERSION=${LIBVERSION}
@@ -45,8 +46,6 @@ CONFIGURE_ARGS+=--without-gnome
 post-patch:
 	@${REINPLACE_CMD} -e 's|-Wmissing-include-dirs||g' \
 		${WRKSRC}/configure
-	@${REINPLACE_CMD} -e 's|env python|env ${PYTHON_VERSION}|g' \
-		${WRKSRC}/libsoup/tld-parser.py
 	@${REINPLACE_CMD} -e 's|DATADIRNAME=lib|DATADIRNAME=share|g' \
 		${WRKSRC}/configure
 
