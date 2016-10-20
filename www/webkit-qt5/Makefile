@@ -56,14 +56,15 @@ BUILD_DEPENDS+=	${LOCALBASE}/bin/ld:devel/binutils
 .endif
 
 post-patch:
-	${REINPLACE_CMD} -e 's,python,${PYTHON_VERSION},g' \
-		-e 's,$$$${PYTHON},${PYTHON_VERSION},g' \
+	${REINPLACE_CMD} -e 's,python,${PYTHON_CMD},g' \
+		-e 's,$$$${PYTHON},${PYTHON_CMD},g' \
 		${WRKSRC}/Source/WebCore/DerivedSources.make \
 		${WRKSRC}/Source/WebCore/DerivedSources.pri \
 		${WRKSRC}/Source/WebKit2/DerivedSources.make \
 		${WRKSRC}/Source/WebKit2/DerivedSources.pri \
 		${WRKSRC}/Source/JavaScriptCore/DerivedSources.make \
-		${WRKSRC}/Source/JavaScriptCore/DerivedSources.pri \
+		${WRKSRC}/Source/JavaScriptCore/DerivedSources.pri
+	${REINPLACE_CMD} -e 's,python,,g' \
 		${WRKSRC}/Tools/qmake/mkspecs/features/configure.prf
 
 pre-configure:
