@@ -38,7 +38,7 @@ PLIST_SUB=	USERS=${USERS} \
 post-install:
 	@${MKDIR} ${STAGEDIR}${SEALIB}
 	(cd ${STAGEDIR}${PREFIX}/lib && \
-		${COPYTREE_SHARE} ${PYTHON_VERSION} ${STAGEDIR}${PREFIX}/${SEALIB})
-	${RM} -r ${STAGEDIR}${PREFIX}/lib/${PYTHON_VERSION}
+		${COPYTREE_SHARE} python${PYTHON_VER} ${STAGEDIR}${PREFIX}/${SEALIB})
+	${RM} -r ${STAGEDIR}${PREFIX}/lib/python${PYTHON_VER}
 
 .include <bsd.port.mk>
