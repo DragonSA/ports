@@ -57,7 +57,12 @@ post-patch:
 
 post-patch-PYTHON-on:
 	@${REINPLACE_CMD} -e \
-		'/PYTHONVERS/s|=.*|=${PYTHON_VERSION}|' ${WRKSRC}/configure
+		'/PYTHONVERS/s|=.*|=${PYTHON_CMD}|' ${WRKSRC}/configure
+	@${REINPLACE_CMD} \
+		-e '/mkdir -p $$$$ver;/d' \
+		-e 's|/\$$(libdir)/\$$\$$ver/site-packages|${PYTHON_SITELIBDIR}|g' \
+		-e 's|\$$\$$ver/||g' \
+			${WRKSRC}/Makefile.in
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/whiptail
