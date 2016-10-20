@@ -14,7 +14,7 @@
 %%PYTHON_SITELIBDIR%%/CXX/__init__.py
 %%PYTHON_SITELIBDIR%%/CXX/__init__.pyc
 %%PYTHON_SITELIBDIR%%/CXX/__init__.pyo
-share/%%PYTHON_VERSION%%/CXX/IndirectPythonInterface.cxx
-share/%%PYTHON_VERSION%%/CXX/cxx_extensions.cxx
-share/%%PYTHON_VERSION%%/CXX/cxxextensions.c
-share/%%PYTHON_VERSION%%/CXX/cxxsupport.cxx
+share/python%%PYTHON_VER%%/CXX/IndirectPythonInterface.cxx
+share/python%%PYTHON_VER%%/CXX/cxx_extensions.cxx
+share/python%%PYTHON_VER%%/CXX/cxxextensions.c
+share/python%%PYTHON_VER%%/CXX/cxxsupport.cxx
