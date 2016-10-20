@@ -23,43 +23,28 @@ BROKEN_mips64=		Fails to build: error: conflicting declaration typedef long int 
 
 OPTIONS_DEFINE=	PYTHON TCL DOCS
 OPTIONS_DEFAULT=	PYTHON
+OPTIONS_SUB=	yes
 
-.include <bsd.port.options.mk>
+PYTHON_CATEGORIES=	python
+PYTHON_CONFIGURE_WITH=	python=${PYTHON_INCLUDEDIR},${PYTHON_SITELIBDIR}
+PYTHON_USES=		python
 
-.if ${PORT_OPTIONS:MPYTHON}
-USES+=		python
-CONFIGURE_ARGS+=	--with-python=${LOCALBASE}
-CATEGORIES+=	python
-PLIST_SUB+=	WITH_PYTHON=""
-.else
-PLIST_SUB+=	WITH_PYTHON="@comment "
-.endif
-
-.if ${PORT_OPTIONS:MTCL}
-USES+=		tcl:85
-CATEGORIES+=	tcl
-CONFIGURE_ARGS+=--with-tcl=${TCL_INCLUDEDIR}
-CONFIGURE_ENV+=	TCL_LIBDIR=${TCL_LIBDIR}
-PLIST_SUB+=	TCL_V="${TCL_VER}"
-PLIST_SUB+=	WITH_TCL=""
-.else
-PLIST_SUB+=	WITH_TCL="@comment "
-.endif
+TCL_CATEGORIES=		tcl
+TCL_CONFIGURE_ENV=	TCL_LIBDIR=${TCL_LIBDIR}
+TCL_CONFIGURE_WITH=	tcl=${TCL_INCLUDEDIR}
+TCL_PLIST_SUB=		TCL_V="${TCL_VER}"
+TCL_USES=		tcl:85
 
 pre-patch:
 	${REINPLACE_CMD} -e "s=doc/==" ${WRKSRC}/../Metakit.html
 	${REINPLACE_CMD} -e "s|= tclsh|=${TCLSH}|" \
 		${WRKSRC}/../unix/Makefile.in
-	${REINPLACE_CMD} -e "s=python2.[0-9]=${PYTHON_VERSION}=" \
-		${WRKSRC}/../unix/Makefile.in ${WRKSRC}/../unix/configure
 
-post-build:
-.if ${PORT_OPTIONS:MPYTHON}
+post-build-PYTHON-on:
 	${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py \
 		${WRKSRC}/../python
 	${PYTHON_CMD} -O ${PYTHON_LIBDIR}/compileall.py \
 		${WRKSRC}/../python
-.endif
 
 pre-install:
 	@${MKDIR} ${STAGEDIR}${PYTHON_SITELIBDIR}
@@ -74,12 +59,12 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/../Metakit.html ${WRKSRC}/../CHANGES \
 		${WRKSRC}/../README ${STAGEDIR}${DOCSDIR}
 
-test:
+do-test:
 	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} test)
-.if ${PORT_OPTIONS:MTCL}
+
+do-test-TCL-on:
 	@(cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} ${MAKE_ARGS} test-tcl)
-.endif
 
 .include <bsd.port.mk>
