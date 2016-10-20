@@ -63,8 +63,8 @@ post-install:
 		${STAGEDIR}${PREFIX}/bin/ccnet-server \
 		${STAGEDIR}${PREFIX}/bin/ccnet-servtool
 	(cd ${STAGEDIR}${PREFIX}/lib && \
-		${COPYTREE_SHARE} ${PYTHON_VERSION} ${STAGEDIR}${PREFIX}/${SEALIB})
-	@${RM} -r ${STAGEDIR}${PREFIX}/lib/${PYTHON_VERSION}
+		${COPYTREE_SHARE} python${PYTHON_VER} ${STAGEDIR}${PREFIX}/${SEALIB})
+	@${RM} -r ${STAGEDIR}${PREFIX}/lib/python${PYTHON_VER}
 	${LN} -s ${PREFIX}/${SEABIN}/ccnet-server ${STAGEDIR}${PREFIX}/bin/
 
 .include <bsd.port.mk>
