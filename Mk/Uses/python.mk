@@ -42,7 +42,7 @@
 # Variables, which can be set by a user:
 #
 # PYTHON_VERSION	- The chosen Python interpreter including the version,
-#			  e.g. python2.7, python3.3, etc. This allows the user
+#			  e.g. cpython2.7, pypy3.3, etc. This allows the user
 #			  to override the currently chosen default version and
 #			  to install the port for a specific Python version.
 #			  It must not be set by a port.
@@ -98,7 +98,9 @@
 #
 # PYTHON_CMD		- Python's command line file name, including the
 #			  version number (used for dependencies).
-#			  default: ${PYTHONBASE}/bin/${PYTHON_VERSION}
+#			  default:
+#				cpython:  ${PYTHONBASE}/bin/python${PYTHON_VER}
+#				pypy: ${LOCALBASE}/bin/pypy${PYTHON_VER:C/\..//:S/2//}
 #
 # PYSETUP		- Name of the setup script used by the distutils
 #			  package.
@@ -167,22 +169,28 @@
 #			  interpreter, e.g. md
 #
 # PYTHON_INCLUDEDIR	- Location of the Python include files.
-#			  default: ${PYTHONBASE}/include/${PYTHON_VERSION}
+#			  default:
+#				cpython: ${PYTHONBASE}/include/python${PYTHON_VER}
+#				pypy: ${PYTHONBASE}/include
 #
 # PYTHON_LIBDIR		- Base of the python library tree
-#			  default: ${PYTHONBASE}/lib/${PYTHON_VERSION}
+#			  default:
+#				cpython: ${PYTHONBASE}/lib/python${PYTHON_VER}
+#				pypy: ${PYTHONBASE}/bin
 #
 # PYTHON_SITELIBDIR	- Location of the site-packages tree. Don't change,
 #			  unless you know what you do.
-#			  default: ${PYTHON_LIBDIR}/site-packages
+#			  default:
+#				cpython: ${PYTHON_LIBDIR}/site-packages
+#				pypy: ${PYTHONBASE}/site-packages
 #
 # There are PREFIX-clean variants of the PYTHON_*DIR variables above.
 # They are meant to be used by ports instead of the above variables, so the
 # ports respect ${PREFIX} (unless USE_PYTHON=pythonprefix is specified).
 #
-# PYTHONPREFIX_INCLUDEDIR	default: ${PREFIX}/include/${PYTHON_VERSION}
-# PYTHONPREFIX_LIBDIR		default: ${PREFIX}/lib/${PYTHON_VERSION}
-# PYTHONPREFIX_SITELIBDIR	default: ${PYTHONPREFIX_LIBDIR}/site-packages
+# PYTHONPREFIX_INCLUDEDIR
+# PYTHONPREFIX_LIBDIR
+# PYTHONPREFIX_SITELIBDIR
 #
 # PYTHON_PLATFORM	- Python's idea of the OS release.
 #			  This is faked with ${OPSYS} and ${OSREL} until we
