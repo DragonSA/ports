@@ -19,15 +19,15 @@
 -	     $(PYTHONHOME)/lib-dynload/time.so \
 -	     $(PYTHONHOME)/lib-dynload/_random.so
 +X11_INCLUDES = -I ${LOCALBASE}/include/
-+PYTHON_INCLUDES = -I ${LOCALBASE}/include/python$(PYTHON_VER)
++PYTHON_INCLUDES = -I ${PYTHON_INCLUDEDIR}
 +
 +SDLCFLAGS = $(shell ${SDL_CONFIG} --cflags)
 +SDLLIBS = $(shell ${SDL_CONFIG} --libs) -lSDL_image -lSDL_mixer
 +
 +GLLIBS = -lglut -lGLU -lGL -L${LOCALBASE}/lib
 +
-+PYTHONHOME = ${LOCALBASE}/lib/python$(PYTHON_VER)/
-+PYTHONLIBS = $(PYTHONHOME)/config/libpython$(PYTHON_VER).a -lutil -lpython${PYTHON_VER}
++PYTHONHOME = ${PYTHON_LIBDIR}
++PYTHONLIBS = $(PYTHONHOME)/config/libpython$(PYTHON_VER).a -lutil ${PYTHON_LIB}
  
  # change this, if the kodilib directory isn't parallel to the kiki directory
  

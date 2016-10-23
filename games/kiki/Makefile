@@ -17,7 +17,8 @@ USES=		compiler dos2unix gmake python
 USE_GL=		gl glu glut
 USE_SDL=	sdl mixer image
 DOS2UNIX_REGEX=	.*/(Makefile|.*\.cpp|.*\.h|.*\.i)$
-MAKE_ENV=	PYTHON_VER=${PYTHON_VERSION:C/^python//}
+MAKE_ENV=	PYTHON_INCLUDEDIR=${PYTHON_INCLUDEDIR} PYTHON_LIB=${PYTHON_LIB} \
+		PYTHON_LIBDIR=${PYTHON_LIBDIR} PYTHON_VER=${PYTHON_VER}
 CXXFLAGS+=	-include sys/limits.h -fpermissive
 
 WRKSRC=		${WRKDIR}/kiki
