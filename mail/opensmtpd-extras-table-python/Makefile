@@ -8,7 +8,8 @@ COMMENT=	Python table support for OpenSMTPD
 
 PLIST_FILES=	libexec/opensmtpd/table-python
 
-CONFIGURE_ARGS+=	--with-table-python --with-python-type=${PYTHON_VERSION}
+CONFIGURE_ARGS+=	--with-table-python --with-python=${LOCALBASE} \
+			--with-python-type=`basename ${PYTHON_CMD}`
 
 USES=		python:2 pkgconfig
 

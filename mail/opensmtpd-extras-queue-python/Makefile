@@ -8,7 +8,8 @@ COMMENT=		Python queue support for OpenSMTPD
 
 PLIST_FILES=		libexec/opensmtpd/queue-python
 
-CONFIGURE_ARGS+=	--with-queue-python --with-python-type=${PYTHON_VERSION}
+CONFIGURE_ARGS+=	--with-queue-python --with-python=${LOCALBASE} \
+			--with-python-type=`basename ${PYTHON_CMD}`
 
 USES=			python:2 pkgconfig
 

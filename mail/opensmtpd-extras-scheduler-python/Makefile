@@ -8,7 +8,8 @@ COMMENT=		Python scheduler support for OpenSMTPD
 
 PLIST_FILES=		libexec/opensmtpd/scheduler-python
 
-CONFIGURE_ARGS+=	--with-scheduler-python --with-python-type=${PYTHON_VERSION}
+CONFIGURE_ARGS+=	--with-scheduler-python --with-python=${LOCALBASE} \
+			--with-python-type=`basename ${PYTHON_CMD}`
 
 USES=			python:2 pkgconfig
 

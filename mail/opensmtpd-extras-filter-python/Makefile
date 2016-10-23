@@ -8,7 +8,8 @@ COMMENT=		Python-script filter support for OpenSMTPD
 
 PLIST_FILES=		libexec/opensmtpd/filter-python
 
-CONFIGURE_ARGS+=	--with-experimental-filter-python --with-python-type=${PYTHON_VERSION}
+CONFIGURE_ARGS+=	--with-experimental-filter-python --with-python=${LOCALBASE} \
+			--with-python-type=`basename ${PYTHON_CMD}`
 
 USES=			python:2 pkgconfig
 
