@@ -1,5 +1,5 @@
 # Created by: Gustau Perez i Querol <gustau.perez@gmail.com>
-# $FreeBSD: head/devel/pygobject3-common/Makefile 412346 2016-04-01 14:00:51Z mat $
+# $FreeBSD: head/devel/pygobject3-common/Makefile 424411 2016-10-21 12:51:40Z mat $
 
 PORTNAME=	gobject
 PORTVERSION=	3.18.2
@@ -69,7 +69,7 @@ PLIST_SUB+=	PYTVER=${PYTHON_VER:S/.//}
 .endif
 
 post-install:
-	@${RM} -rf ${STAGEDIR}${PREFIX}/include/pygobject-3.0 \
+	@${RM} -r ${STAGEDIR}${PREFIX}/include/pygobject-3.0 \
 		${STAGEDIR}${PREFIX}/libdata/pkgconfig/pygobject-3.0.pc
 .endif
 

@@ -1,5 +1,5 @@
 # Created by: Maurice Castro <maurice@serc.rmit.edu.au>
-# $FreeBSD: head/math/R/Makefile 422711 2016-09-24 11:06:57Z tijl $
+# $FreeBSD: head/math/R/Makefile 424427 2016-10-21 15:21:13Z mat $
 
 PORTNAME?=		R
 PORTVERSION=		3.3.1
@@ -35,7 +35,7 @@ CONFIGURE_ARGS=		--disable-java \
 GNU_CONFIGURE=		yes
 INSTALL_TARGET=		install-strip
 ONLY_FOR_ARCHS=		i386 amd64
-USES=			fortran iconv libtool localbase objc:compiler perl5 \
+USES=			fortran iconv libtool localbase objc:compiler pathfix perl5 \
 			readline
 USE_PERL5=		build
 
@@ -147,9 +147,6 @@ USE_LDCONFIG=		${PREFIX}/lib/R/lib
 .endif
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|(libdir)/pkgconfig|(prefix)/libdata/pkgconfig|g'\
-		${WRKSRC}/src/nmath/standalone/Makefile.in \
-		${WRKSRC}/src/unix/Makefile.in
 	@${REINPLACE_CMD} -e "s|/usr/local|${LOCALBASE}|g" \
 		${WRKSRC}/configure
 

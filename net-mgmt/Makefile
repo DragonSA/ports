@@ -1,4 +1,4 @@
-# $FreeBSD: head/net-mgmt/Makefile 424001 2016-10-15 05:09:11Z pi $
+# $FreeBSD: head/net-mgmt/Makefile 424381 2016-10-21 07:29:38Z rene $
 #
 
     COMMENT = Network management tools
@@ -258,7 +258,6 @@
     SUBDIR += pandorafms_server
     SUBDIR += percona-monitoring-plugins
     SUBDIR += pftabled
-    SUBDIR += php55-snmp
     SUBDIR += php56-snmp
     SUBDIR += php70-snmp
     SUBDIR += phpip

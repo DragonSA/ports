@@ -1,5 +1,5 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
-# $FreeBSD: head/graphics/s2tc/Makefile 412346 2016-04-01 14:00:51Z mat $
+# $FreeBSD: head/graphics/s2tc/Makefile 424427 2016-10-21 15:21:13Z mat $
 
 PORTNAME=	s2tc
 PORTVERSION=	1.0+20151228
@@ -24,7 +24,6 @@ GH_ACCOUNT=	divVerent
 GH_TAGNAME=	f6ec862
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
-PATHFIX_MAKEFILEIN=Makefile.am
 
 CPPFLAGS+=	-I${LOCALBASE}/include
 

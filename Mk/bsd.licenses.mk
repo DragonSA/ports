@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: head/Mk/bsd.licenses.mk 411569 2016-03-21 14:34:05Z tijl $
+# $FreeBSD: head/Mk/bsd.licenses.mk 424411 2016-10-21 12:51:40Z mat $
 
 # ** Please run changes to this file by eadler@ first **
 
@@ -616,12 +616,12 @@ ${_LICENSE_COOKIE}:
 		"$$(${CAT} ${_LICENSE_FILE})" 21 76
 
 .		elif ${_LICENSE_COMB} == "dual"
-	@${RM} -f ${_LICENSE_ASK_DATA}
+	@${RM} ${_LICENSE_ASK_DATA}
 .			for lic in ${_LICENSE_TO_ASK}
 	@${ECHO_CMD} "${lic}:${_LICENSE_FILE_${lic}}" >> ${_LICENSE_ASK_DATA}
 .			endfor
 	@menu_cmd="${DIALOG} --hline \"This port requires you to accept at least one license\" --menu \"License for ${PKGNAME} (dual)\" 21 70 15"; \
-	trap '${RM} -f $$tmpfile' EXIT INT TERM; \
+	trap '${RM} $$tmpfile' EXIT INT TERM; \
 	tmpfile=$$(mktemp -t portlicenses); \
 	for lic in ${_LICENSE_TO_ASK}; do \
 		menu_cmd="$${menu_cmd} VIEW_$${lic} \"View the license $${lic}\" USE_$${lic} \"Accept the license $${lic}\""; \
@@ -642,12 +642,12 @@ ${_LICENSE_COOKIE}:
 	done
 
 .		elif ${_LICENSE_COMB} == "multi"
-	@${RM} -f ${_LICENSE_ASK_DATA}
+	@${RM} ${_LICENSE_ASK_DATA}
 .			for lic in ${_LICENSE_TO_ASK}
 	@${ECHO_CMD} "${lic}:${_LICENSE_FILE_${lic}}" >> ${_LICENSE_ASK_DATA}
 .			endfor
 	@menu_cmd="${DIALOG} --hline \"This port requires you to accept all mentioned licenses\" --menu \"License for ${PKGNAME} (multi)\" 21 70 15"; \
-	trap '${RM} -f $$tmpfile' EXIT INT TERM; \
+	trap '${RM} $$tmpfile' EXIT INT TERM; \
 	tmpfile=$$(mktemp -t portlicenses); \
 	for lic in ${_LICENSE_TO_ASK}; do \
 		menu_cmd="$${menu_cmd} VIEW_$${lic} \"View the license $${lic}\""; \
@@ -693,12 +693,12 @@ ${_LICENSE_COOKIE}:
 	@${ECHO_MSG}
 	@exit 1
 .	endif
-	@${RM} -f ${_LICENSE_ASK_DATA}
+	@${RM} ${_LICENSE_ASK_DATA}
 .endif
 
 # Create report and catalog
 .if !defined(NO_LICENSES_INSTALL)
-	@${RM} -f ${_LICENSE_CATALOG_TMP} ${_LICENSE_REPORT_TMP}
+	@${RM} ${_LICENSE_CATALOG_TMP} ${_LICENSE_REPORT_TMP}
 .	if ${_LICENSE_COMB} == "single"
 # Catalog
 .		for var in _LICENSE _LICENSE_NAME _LICENSE_PERMS _LICENSE_GROUPS _LICENSE_DISTFILES

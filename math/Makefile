@@ -1,4 +1,4 @@
-# $FreeBSD: head/math/Makefile 424082 2016-10-16 21:43:06Z jrm $
+# $FreeBSD: head/math/Makefile 424381 2016-10-21 07:29:38Z rene $
 #
 
     COMMENT = Mathematics
@@ -563,8 +563,6 @@
     SUBDIR += pecl-stats
     SUBDIR += pecl-stats2
     SUBDIR += pecl-trader
-    SUBDIR += php55-bcmath
-    SUBDIR += php55-gmp
     SUBDIR += php56-bcmath
     SUBDIR += php56-gmp
     SUBDIR += php70-bcmath

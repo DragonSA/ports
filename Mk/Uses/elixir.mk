@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/elixir.mk 411970 2016-03-27 01:23:25Z bapt $
+# $FreeBSD: head/Mk/Uses/elixir.mk 424411 2016-10-21 12:51:40Z mat $
 #
 # Handle Elixir related ports
 #
@@ -81,10 +81,10 @@ do-build:
 	fi
 .endfor
 .endif
-	@${RM} -f ${WRKSRC}/mix.lock
+	@${RM} ${WRKSRC}/mix.lock
 	@cd ${WRKSRC} && ${MIX_COMPILE}
 .for app in ${MIX_EXTRA_APPS}
-	@${RM} -f ${WRKSRC}/${app}/mix.lock
+	@${RM} ${WRKSRC}/${app}/mix.lock
 	@cd ${WRKSRC}/${app} && ${MIX_COMPILE}
 .endfor
 .endif # .if !target(do-build)

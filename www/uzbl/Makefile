@@ -1,5 +1,5 @@
 # Created by: Klaus Aehlig <aehlig@linta.de>
-# $FreeBSD: head/www/uzbl/Makefile 412925 2016-04-10 12:17:04Z riggs $
+# $FreeBSD: head/www/uzbl/Makefile 424411 2016-10-21 12:51:40Z mat $
 
 PORTNAME=	uzbl
 PORTVERSION=	0.9.0
@@ -49,7 +49,7 @@ post-patch:
 		${WRKSRC}/bin/uzbl-tabbed
 
 post-build:
-	@${FIND} ${WRKSRC} \( -name "*.orig" -or -name "*.bak" \) -exec ${RM} -f {} \;
+	@${FIND} ${WRKSRC} \( -name "*.orig" -or -name "*.bak" \) -exec ${RM} {} \;
 
 post-install:
 .if ${PORT_OPTIONS:MDOCS}

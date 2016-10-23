@@ -1,4 +1,4 @@
-# $FreeBSD: head/net-mgmt/ccnet/Makefile 419886 2016-08-08 19:04:25Z pi $
+# $FreeBSD: head/net-mgmt/ccnet/Makefile 424427 2016-10-21 15:21:13Z mat $
 
 PORTNAME=	ccnet
 PORTVERSION=	6.0.0
@@ -29,7 +29,6 @@ USES=		autoreconf gettext libtool localbase pathfix pkgconfig \
 		python:-2.7 shebangfix ssl
 USE_LDCONFIG=	yes
 SHEBANG_FILES=	tools/*.py
-PATHFIX_MAKEFILEIN=	Makefile.am
 
 CONFIGURE_ENV=	SSL_CFLAGS="${OPENSSLINC}" SSL_LIBS="-L${OPENSSLLIB} -lssl -lcrypto"
 GNU_CONFIGURE=	yes
@@ -65,7 +64,7 @@ post-install:
 		${STAGEDIR}${PREFIX}/bin/ccnet-servtool
 	(cd ${STAGEDIR}${PREFIX}/lib && \
 		${COPYTREE_SHARE} ${PYTHON_VERSION} ${STAGEDIR}${PREFIX}/${SEALIB})
-	@${RM} -rf ${STAGEDIR}${PREFIX}/lib/${PYTHON_VERSION}
+	@${RM} -r ${STAGEDIR}${PREFIX}/lib/${PYTHON_VERSION}
 	${LN} -s ${PREFIX}/${SEABIN}/ccnet-server ${STAGEDIR}${PREFIX}/bin/
 
 .include <bsd.port.mk>

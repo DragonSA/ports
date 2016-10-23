@@ -1,5 +1,5 @@
 # Created by: Sahil Tandon <sahil@FreeBSD.org>
-# $FreeBSD: head/graphics/py-graphy/Makefile 422140 2016-09-14 15:59:34Z mat $
+# $FreeBSD: head/graphics/py-graphy/Makefile 424411 2016-10-21 12:51:40Z mat $
 
 PORTNAME=	graphy
 PORTVERSION=	1.0
@@ -30,7 +30,7 @@ post-patch:
 		${WRKSRC}/examples/*.py \
 		${WRKSRC}/${PORTNAME}/*.py
 	@${FIND} ${WRKSRC} -name '.svn' -or -name '*.bak' | \
-		${XARGS} ${RM} -rf
+		${XARGS} ${RM} -r
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${PYTHON_SITELIBDIR}/${PORTNAME}

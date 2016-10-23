@@ -1,4 +1,4 @@
-# $FreeBSD: head/misc/Makefile 423991 2016-10-14 20:52:04Z rene $
+# $FreeBSD: head/misc/Makefile 424381 2016-10-21 07:29:38Z rene $
 #
 
     COMMENT = Miscellaneous utilities
@@ -184,7 +184,6 @@
     SUBDIR += iso-codes
     SUBDIR += jargon
     SUBDIR += jbidwatcher
-    SUBDIR += jive
     SUBDIR += kbdscan
     SUBDIR += kcd
     SUBDIR += kde-thumbnailer-chm
@@ -361,7 +360,6 @@
     SUBDIR += pear-Text_Figlet
     SUBDIR += pecl-timezonedb
     SUBDIR += pfm
-    SUBDIR += php55-calendar
     SUBDIR += php56-calendar
     SUBDIR += php70-calendar
     SUBDIR += phraze

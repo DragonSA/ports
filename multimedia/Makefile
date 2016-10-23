@@ -1,4 +1,4 @@
-# $FreeBSD: head/multimedia/Makefile 423355 2016-10-05 17:34:01Z amdmi3 $
+# $FreeBSD: head/multimedia/Makefile 424259 2016-10-19 14:50:26Z tijl $
 #
 
     COMMENT = Multimedia software
@@ -219,6 +219,8 @@
     SUBDIR += libzen
     SUBDIR += linux-c6-libtheora
     SUBDIR += linux-c6-libv4l
+    SUBDIR += linux-c7-libtheora
+    SUBDIR += linux-c7-libv4l
     SUBDIR += linux-f10-libtheora
     SUBDIR += linux-f10-libv4l
     SUBDIR += linux-tsmuxer

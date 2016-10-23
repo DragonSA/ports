@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11-themes/Makefile 420491 2016-08-19 21:56:17Z pawel $
+# $FreeBSD: head/x11-themes/Makefile 424259 2016-10-19 14:50:26Z tijl $
 #
 
     COMMENT = X11 themes
@@ -125,6 +125,7 @@
     SUBDIR += kde4-windeco-dekorator
     SUBDIR += kdeartwork4
     SUBDIR += linux-c6-hicolor-icon-theme
+    SUBDIR += linux-c7-hicolor-icon-theme
     SUBDIR += linux-f10-hicolor-icon-theme
     SUBDIR += linux-f10-qtcurve-gtk2
     SUBDIR += linux-hicolor-icon-theme

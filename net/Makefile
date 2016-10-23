@@ -1,4 +1,4 @@
-# $FreeBSD: head/net/Makefile 424119 2016-10-17 14:28:01Z tijl $
+# $FreeBSD: head/net/Makefile 424511 2016-10-23 11:22:37Z rene $
 #
 
     COMMENT = Networking tools
@@ -108,7 +108,6 @@
     SUBDIR += dictd
     SUBDIR += dictd-database
     SUBDIR += dimes
-    SUBDIR += dosdetector
     SUBDIR += dpdk
     SUBDIR += dpinger
     SUBDIR += drawterm
@@ -378,6 +377,9 @@
     SUBDIR += linux-c6-avahi-libs
     SUBDIR += linux-c6-openldap
     SUBDIR += linux-c6-tcp_wrappers-libs
+    SUBDIR += linux-c7-avahi-libs
+    SUBDIR += linux-c7-openldap
+    SUBDIR += linux-c7-tcp_wrappers-libs
     SUBDIR += linux-f10-nss_ldap
     SUBDIR += linux-f10-openldap
     SUBDIR += linuxigd
@@ -894,7 +896,6 @@
     SUBDIR += pear-XML_RPC2
     SUBDIR += pecl-amqp
     SUBDIR += pecl-apn
-    SUBDIR += pecl-cvsclient
     SUBDIR += pecl-geoip
     SUBDIR += pecl-gupnp
     SUBDIR += pecl-ip2location
@@ -909,10 +910,6 @@
     SUBDIR += pen
     SUBDIR += pfinger
     SUBDIR += phamm
-    SUBDIR += php55-ldap
-    SUBDIR += php55-soap
-    SUBDIR += php55-sockets
-    SUBDIR += php55-xmlrpc
     SUBDIR += php56-ldap
     SUBDIR += php56-soap
     SUBDIR += php56-sockets

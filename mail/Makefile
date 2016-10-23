@@ -1,4 +1,4 @@
-# $FreeBSD: head/mail/Makefile 424028 2016-10-15 21:14:53Z rene $
+# $FreeBSD: head/mail/Makefile 424381 2016-10-21 07:29:38Z rene $
 #
 
     COMMENT = Electronic mail utilities
@@ -483,14 +483,12 @@
     SUBDIR += pear-Net_Cyrus
     SUBDIR += pear-Net_IMAP
     SUBDIR += pear-Net_LMTP
-    SUBDIR += pecl-esmtp
     SUBDIR += pecl-mailparse
     SUBDIR += pecl-pop3
     SUBDIR += perdition
     SUBDIR += pflogsumm
     SUBDIR += pfqueue
     SUBDIR += pgpsendmail
-    SUBDIR += php55-imap
     SUBDIR += php56-imap
     SUBDIR += php70-imap
     SUBDIR += phplist

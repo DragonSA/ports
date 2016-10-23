@@ -1,4 +1,4 @@
-# $FreeBSD: head/archivers/Makefile 422216 2016-09-15 16:40:17Z antoine $
+# $FreeBSD: head/archivers/Makefile 424381 2016-10-21 07:29:38Z rene $
 #
 
     COMMENT = Archivers
@@ -144,10 +144,6 @@
     SUBDIR += pecl-rar
     SUBDIR += pecl-snappy
     SUBDIR += php-horde_lz4
-    SUBDIR += php55-bz2
-    SUBDIR += php55-phar
-    SUBDIR += php55-zip
-    SUBDIR += php55-zlib
     SUBDIR += php56-bz2
     SUBDIR += php56-phar
     SUBDIR += php56-zip

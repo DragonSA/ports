@@ -1,4 +1,4 @@
-# $FreeBSD: head/GIDs 424001 2016-10-15 05:09:11Z pi $
+# $FreeBSD: head/GIDs 424402 2016-10-21 09:21:42Z ehaupt $
 # Please keep this file sorted by GID!
 # Please pick an empty slot when available and also consider base values from
 # /usr/src/etc/group
@@ -103,7 +103,7 @@ pootle:*:158:
 nocat:*:159:
 _ypldap:*:160:
 solr:*:161:
-# free: 162
+octoprint:*:162:
 # free: 163
 # free: 164
 # free: 165
@@ -131,7 +131,7 @@ dnslog:*:186:
 swift:*:187:
 netxms:*:188:
 leofs:*:189:
-# free: 190
+keystone:*:190:
 # free: 191
 moinmoin:*:192:
 cups:*:193:

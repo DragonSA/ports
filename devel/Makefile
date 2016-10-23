@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/Makefile 424140 2016-10-17 18:18:23Z novel $
+# $FreeBSD: head/devel/Makefile 424515 2016-10-23 11:49:22Z mva $
 #
 
     COMMENT = Development utilities
@@ -102,6 +102,8 @@
     SUBDIR += arduino-irremote
     SUBDIR += arduino-mk
     SUBDIR += arduino-sevseg
+    SUBDIR += arduino-tools
+    SUBDIR += arduino16
     SUBDIR += argouml
     SUBDIR += argp-standalone
     SUBDIR += argtable
@@ -606,7 +608,6 @@
     SUBDIR += funnelweb
     SUBDIR += gaa
     SUBDIR += gamin
-    SUBDIR += gaphor
     SUBDIR += gauche-readline
     SUBDIR += gaul
     SUBDIR += gazpacho
@@ -1169,6 +1170,7 @@
     SUBDIR += libassetml
     SUBDIR += libast
     SUBDIR += libastylej
+    SUBDIR += libastylej-arduino
     SUBDIR += libatomic_ops
     SUBDIR += libaura
     SUBDIR += libavl
@@ -1444,6 +1446,19 @@
     SUBDIR += linux-c6-nspr
     SUBDIR += linux-c6-qt47
     SUBDIR += linux-c6-sdl12
+    SUBDIR += linux-c7-dbus-glib
+    SUBDIR += linux-c7-dbus-libs
+    SUBDIR += linux-c7-devtools
+    SUBDIR += linux-c7-libgfortran
+    SUBDIR += linux-c7-libglade2
+    SUBDIR += linux-c7-libpciaccess
+    SUBDIR += linux-c7-libsigc++20
+    SUBDIR += linux-c7-libthai
+    SUBDIR += linux-c7-ncurses-base
+    SUBDIR += linux-c7-nspr
+    SUBDIR += linux-c7-qt
+    SUBDIR += linux-c7-sdl12
+    SUBDIR += linux-c7-sdl20
     SUBDIR += linux-f10-allegro
     SUBDIR += linux-f10-dbus-glib
     SUBDIR += linux-f10-dbus-libs
@@ -3761,16 +3776,12 @@
     SUBDIR += pear-pdepend-staticReflection
     SUBDIR += pear-phing
     SUBDIR += pecl-APCu
-    SUBDIR += pecl-automap
-    SUBDIR += pecl-bbcode
-    SUBDIR += pecl-bcompiler
     SUBDIR += pecl-dio
     SUBDIR += pecl-eio
     SUBDIR += pecl-ev
     SUBDIR += pecl-event
     SUBDIR += pecl-expect
     SUBDIR += pecl-gearman
-    SUBDIR += pecl-hidef
     SUBDIR += pecl-hrtime
     SUBDIR += pecl-htscanner
     SUBDIR += pecl-inotify
@@ -3782,14 +3793,11 @@
     SUBDIR += pecl-jsonnet
     SUBDIR += pecl-judy
     SUBDIR += pecl-libevent
-    SUBDIR += pecl-mcve
     SUBDIR += pecl-memoize
     SUBDIR += pecl-msgpack
     SUBDIR += pecl-ncurses
     SUBDIR += pecl-newt
-    SUBDIR += pecl-operator
     SUBDIR += pecl-params
-    SUBDIR += pecl-parsekit
     SUBDIR += pecl-propro
     SUBDIR += pecl-propro2
     SUBDIR += pecl-pthreads
@@ -3798,9 +3806,7 @@
     SUBDIR += pecl-raphf2
     SUBDIR += pecl-runkit
     SUBDIR += pecl-scream
-    SUBDIR += pecl-shape
     SUBDIR += pecl-spl_types
-    SUBDIR += pecl-spread
     SUBDIR += pecl-statgrab
     SUBDIR += pecl-strict
     SUBDIR += pecl-svn
@@ -3837,15 +3843,6 @@
     SUBDIR += php5-ice
     SUBDIR += php5-pinba
     SUBDIR += php5-thrift
-    SUBDIR += php55-gettext
-    SUBDIR += php55-json
-    SUBDIR += php55-pcntl
-    SUBDIR += php55-readline
-    SUBDIR += php55-shmop
-    SUBDIR += php55-sysvmsg
-    SUBDIR += php55-sysvsem
-    SUBDIR += php55-sysvshm
-    SUBDIR += php55-tokenizer
     SUBDIR += php56-gettext
     SUBDIR += php56-json
     SUBDIR += php56-pcntl
@@ -4039,6 +4036,7 @@
     SUBDIR += py-bluelet
     SUBDIR += py-boto
     SUBDIR += py-botocore
+    SUBDIR += py-cachetools
     SUBDIR += py-calendar
     SUBDIR += py-canonicaljson
     SUBDIR += py-capstone
@@ -4046,6 +4044,7 @@
     SUBDIR += py-celery
     SUBDIR += py-cffi
     SUBDIR += py-cfgparse
+    SUBDIR += py-chainmap
     SUBDIR += py-characteristic
     SUBDIR += py-check-manifest
     SUBDIR += py-cheetah
@@ -4207,6 +4206,7 @@
     SUBDIR += py-ipython_genutils
     SUBDIR += py-iso8601
     SUBDIR += py-isodate
+    SUBDIR += py-isort
     SUBDIR += py-iterpipes
     SUBDIR += py-itools
     SUBDIR += py-jaraco.classes
@@ -4237,6 +4237,7 @@
     SUBDIR += py-kayako
     SUBDIR += py-kazoo
     SUBDIR += py-keystoneauth1
+    SUBDIR += py-keystonemiddleware
     SUBDIR += py-kid
     SUBDIR += py-kitchen
     SUBDIR += py-kjbuckets
@@ -4314,10 +4315,20 @@
     SUBDIR += py-ordereddict
     SUBDIR += py-os-client-config
     SUBDIR += py-osc-lib
+    SUBDIR += py-oslo.cache
+    SUBDIR += py-oslo.concurrency
     SUBDIR += py-oslo.config
+    SUBDIR += py-oslo.context
+    SUBDIR += py-oslo.db
     SUBDIR += py-oslo.i18n
+    SUBDIR += py-oslo.log
+    SUBDIR += py-oslo.messaging
+    SUBDIR += py-oslo.middleware
+    SUBDIR += py-oslo.policy
     SUBDIR += py-oslo.serialization
+    SUBDIR += py-oslo.service
     SUBDIR += py-oslo.utils
+    SUBDIR += py-osprofiler
     SUBDIR += py-palm
     SUBDIR += py-parsedatetime
     SUBDIR += py-path.py
@@ -4335,6 +4346,7 @@
     SUBDIR += py-phply
     SUBDIR += py-phpserialize
     SUBDIR += py-pika
+    SUBDIR += py-pika-pool
     SUBDIR += py-pinocchio
     SUBDIR += py-pip
     SUBDIR += py-pkgconfig
@@ -4360,6 +4372,7 @@
     SUBDIR += py-py
     SUBDIR += py-pyasn1
     SUBDIR += py-pyasn1-modules
+    SUBDIR += py-pycadf
     SUBDIR += py-pycalendar
     SUBDIR += py-pycallgraph
     SUBDIR += py-pycerberus
@@ -4384,6 +4397,7 @@
     SUBDIR += py-pykde4
     SUBDIR += py-pykdeuic4
     SUBDIR += py-pyke
+    SUBDIR += py-pylru
     SUBDIR += py-pylru-cache
     SUBDIR += py-pymarc
     SUBDIR += py-pympler
@@ -4482,6 +4496,7 @@
     SUBDIR += py-rtree
     SUBDIR += py-ruledispatch
     SUBDIR += py-sanetime
+    SUBDIR += py-sarge
     SUBDIR += py-scripttest
     SUBDIR += py-sdl2
     SUBDIR += py-selection
@@ -4596,6 +4611,7 @@
     SUBDIR += py-virtualenv
     SUBDIR += py-virtualenv-clone
     SUBDIR += py-virtualenvwrapper
+    SUBDIR += py-voluptuous
     SUBDIR += py-warlock
     SUBDIR += py-watchdog
     SUBDIR += py-wcwidth

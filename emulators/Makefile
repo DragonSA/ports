@@ -1,4 +1,4 @@
-# $FreeBSD: head/emulators/Makefile 423989 2016-10-14 20:34:26Z asomers $
+# $FreeBSD: head/emulators/Makefile 424259 2016-10-19 14:50:26Z tijl $
 #
 
     COMMENT = Emulators for other operating systems
@@ -70,6 +70,7 @@
     SUBDIR += libdsk
     SUBDIR += libspectrum
     SUBDIR += linux-c6
+    SUBDIR += linux-c7
     SUBDIR += linux-f10
     SUBDIR += linux_base-c6
     SUBDIR += linux_base-c7

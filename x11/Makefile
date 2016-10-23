@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11/Makefile 421116 2016-08-30 15:06:18Z woodsb02 $
+# $FreeBSD: head/x11/Makefile 424259 2016-10-19 14:50:26Z tijl $
 #
 
     COMMENT = Ports to support the X window system
@@ -182,6 +182,8 @@
     SUBDIR += libxshmfence
     SUBDIR += linux-c6-pixman
     SUBDIR += linux-c6-xorg-libs
+    SUBDIR += linux-c7-pixman
+    SUBDIR += linux-c7-xorg-libs
     SUBDIR += linux-f10-xorg-libs
     SUBDIR += listres
     SUBDIR += lsw

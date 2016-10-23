@@ -1,4 +1,4 @@
-# $FreeBSD: head/editors/libreoffice4/Makefile 423591 2016-10-09 12:10:02Z jbeich $
+# $FreeBSD: head/editors/libreoffice4/Makefile 424411 2016-10-21 12:51:40Z mat $
 
 PORTNAME=	libreoffice
 PORTVERSION=	4.3.7
@@ -359,7 +359,7 @@ post-configure:
 
 do-install:
 	@cd ${WRKSRC} && ${MAKE_CMD} ${MAKE_ARGS} distro-pack-install
-	@${RM} -f ${PLISTD} ${PLISTF}
+	@${RM} ${PLISTD} ${PLISTF}
 	@cd ${STAGEDIR}${PREFIX} && ${FIND} -d lib/libreoffice -type d \
 	    -empty -exec ${ECHO_CMD} "@dir {}" \; >> ${PLISTD}
 	@cd ${STAGEDIR}${PREFIX} && ${FIND} -H -s bin etc lib man \

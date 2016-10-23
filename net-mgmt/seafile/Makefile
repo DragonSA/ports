@@ -1,4 +1,4 @@
-# $FreeBSD: head/net-mgmt/seafile/Makefile 421191 2016-08-31 20:43:07Z marino $
+# $FreeBSD: head/net-mgmt/seafile/Makefile 424427 2016-10-21 15:21:13Z mat $
 
 PORTNAME=	seafile
 PORTVERSION=	6.0.0
@@ -39,8 +39,6 @@ SHEBANG_FILES=	scripts/*.sh scripts/upgrade/*.sh  tests/*.py tests/basic/*.sh \
 GNU_CONFIGURE=	yes
 USE_LDCONFIG=	yes
 CONFIGURE_ENV=	SSL_CFLAGS="${OPENSSLINC}" SSL_LIBS="-L${OPENSSLLIB} -lssl -lcrypto"
-
-PATHFIX_MAKEFILEIN=	Makefile.am
 
 CONFIGURE_ARGS=	--enable-server
 INSTALL_TARGET=	install-strip
@@ -117,7 +115,7 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/seaf-cli-wrapper.sh ${STAGEDIR}${PREFIX}/bin/seaf-cli
 	(cd ${STAGEDIR}${PREFIX}/lib && \
 		${COPYTREE_SHARE} ${PYTHON_VERSION} ${STAGEDIR}${PREFIX}/${SEALIB})
-	@${RM} -rf ${STAGEDIR}${PREFIX}/lib/${PYTHON_VERSION} \
+	@${RM} -r ${STAGEDIR}${PREFIX}/lib/${PYTHON_VERSION} \
 		${WRKSRC}/scripts/seaf-cli-wrapper.sh \
 		${WRKSRC}/scripts/sqlite2mysql.[ps][yh] \
 		${WRKSRC}/scripts/setup-seafile.sh \

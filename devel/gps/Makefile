@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: head/devel/gps/Makefile 418247 2016-07-08 22:28:04Z marino $
+# $FreeBSD: head/devel/gps/Makefile 424411 2016-10-21 12:51:40Z mat $
 
 PORTNAME=	gps
 PORTVERSION=	2016
@@ -109,7 +109,7 @@ do-build:
 	${PYTHON_CMD} ${PYCOMPILE} ${WRKSRC}/share/support
 
 post-install:
-	${RM} -rf ${STAGEDIR}${PREFIX}/share/doc/gps/html/*/_sources
+	${RM} -r ${STAGEDIR}${PREFIX}/share/doc/gps/html/*/_sources
 	${INSTALL_SCRIPT} ${WRKDIR}/gps ${STAGEDIR}${PREFIX}/bin
 	echo "This is the GPS GPL Edition for the ${OPSYS} Ports Collection." \
 		> ${STAGEDIR}${PREFIX}/share/gps/about.txt

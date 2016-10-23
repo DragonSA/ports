@@ -1,4 +1,4 @@
-# $FreeBSD: head/audio/Makefile 423393 2016-10-05 22:50:25Z woodsb02 $
+# $FreeBSD: head/audio/Makefile 424259 2016-10-19 14:50:26Z tijl $
 #
 
     COMMENT = Audio tools
@@ -433,6 +433,20 @@
     SUBDIR += linux-c6-pulseaudio-libs
     SUBDIR += linux-c6-pulseaudio-utils
     SUBDIR += linux-c6-sdl_mixer
+    SUBDIR += linux-c7-alsa-lib
+    SUBDIR += linux-c7-alsa-plugins-oss
+    SUBDIR += linux-c7-alsa-plugins-pulseaudio
+    SUBDIR += linux-c7-alsa-utils
+    SUBDIR += linux-c7-audiofile
+    SUBDIR += linux-c7-esound
+    SUBDIR += linux-c7-flac
+    SUBDIR += linux-c7-libogg
+    SUBDIR += linux-c7-libsndfile
+    SUBDIR += linux-c7-libvorbis
+    SUBDIR += linux-c7-openal-soft
+    SUBDIR += linux-c7-pulseaudio-libs
+    SUBDIR += linux-c7-pulseaudio-utils
+    SUBDIR += linux-c7-sdl_mixer
     SUBDIR += linux-f10-alsa-lib
     SUBDIR += linux-f10-alsa-plugins-oss
     SUBDIR += linux-f10-arts

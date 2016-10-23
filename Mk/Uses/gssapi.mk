@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/gssapi.mk 420904 2016-08-26 08:42:27Z danfe $
+# $FreeBSD: head/Mk/Uses/gssapi.mk 424411 2016-10-21 12:51:40Z mat $
 #
 # handle dependency on Kerberos port
 #
@@ -187,7 +187,7 @@ debug-krb:
 	    ${GSSAPILIBS} ${GSSAPILDFLAGS} ${_DEBUG_KRB_RPATH} \
 	    /tmp/${.TARGET}.c && \
 	    ldd /tmp/${.TARGET}.x; \
-	    rm -f /tmp/${.TARGET}.x
+	    ${RM} /tmp/${.TARGET}.x
 	@echo "PREFIX: ${PREFIX}"
 	@echo "GSSAPIBASEDIR: ${GSSAPIBASEDIR}"
 	@echo "GSSAPIINCDIR: ${GSSAPIINCDIR}"

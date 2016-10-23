@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/perl5.mk 419511 2016-08-03 12:09:37Z mat $
+# $FreeBSD: head/Mk/Uses/perl5.mk 424411 2016-10-21 12:51:40Z mat $
 #
 # Provide support to use perl5
 #
@@ -308,7 +308,7 @@ fix-perl-things:
 # by mistake in their plists.  It is sometime compressed, so use a
 # shell glob for the removal.  Also, remove the directories that
 # contain it to not leave orphans directories around.
-	@${RM} -f ${STAGEDIR}${PREFIX}/lib/perl5/${PERL_VER}/${PERL_ARCH}/perllocal.pod* || :
+	@${RM} ${STAGEDIR}${PREFIX}/lib/perl5/${PERL_VER}/${PERL_ARCH}/perllocal.pod* || :
 	@${RMDIR} -p ${STAGEDIR}${PREFIX}/lib/perl5/${PERL_VER}/${PERL_ARCH} 2>/dev/null || :
 # Starting at ExtUtils::MakeMaker 7.06 and Perl 5.25.1, the base README.pod is
 # no longer manified into a README.3, as the README.pod is installed and can be

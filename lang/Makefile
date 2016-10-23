@@ -1,4 +1,4 @@
-# $FreeBSD: head/lang/Makefile 423021 2016-09-30 20:31:51Z rene $
+# $FreeBSD: head/lang/Makefile 424381 2016-10-21 07:29:38Z rene $
 #
 
     COMMENT = Programming languages
@@ -155,6 +155,7 @@
     SUBDIR += librep
     SUBDIR += libstdc++_stldoc_4.2.2
     SUBDIR += linux-c6-tcl85
+    SUBDIR += linux-c7-tcl85
     SUBDIR += linux-f10-libg2c
     SUBDIR += linux-f10-tcl85
     SUBDIR += linux-j
@@ -246,8 +247,6 @@
     SUBDIR += pharo
     SUBDIR += phc
     SUBDIR += php-mode.el
-    SUBDIR += php55
-    SUBDIR += php55-extensions
     SUBDIR += php56
     SUBDIR += php56-extensions
     SUBDIR += php70

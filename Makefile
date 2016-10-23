@@ -1,4 +1,4 @@
-# $FreeBSD: head/Makefile 413203 2016-04-13 11:28:57Z mat $
+# $FreeBSD: head/Makefile 424411 2016-10-21 12:51:40Z mat $
 #
 
 SUBDIR += accessibility
@@ -74,7 +74,7 @@ index:
 
 fetchindex: ${INDEXDIR}/${INDEXFILE}.bz2
 	@bunzip2 < ${INDEXDIR}/${INDEXFILE}.bz2 > ${INDEXDIR}/${INDEXFILE} && \
-	chmod a+r ${INDEXDIR}/${INDEXFILE} && ${RM} -f ${INDEXDIR}/${INDEXFILE}.bz2
+	chmod a+r ${INDEXDIR}/${INDEXFILE} && ${RM} ${INDEXDIR}/${INDEXFILE}.bz2
 
 ${INDEXDIR}/${INDEXFILE}.bz2: .PHONY
 	@${FETCHINDEX} ${INDEXDIR}/${INDEXFILE}.bz2 ${MASTER_SITE_INDEX}${INDEXFILE}.bz2

@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/kde.mk 420914 2016-08-26 12:43:57Z mat $
+# $FreeBSD: head/Mk/Uses/kde.mk 424182 2016-10-18 17:22:35Z tcberner $
 #
 # Provides support for KDE-based ports.
 #
@@ -15,6 +15,14 @@
 #		* foo_build	Add a build-time dependency (BUILD_DEPENDS)
 #		* foo_run	Add a run-time dependency (RUN_DEPENDS)
 #		* foo (default)	Add both dependencies on component <foo>
+#
+#
+# To simplify the ports, also:
+# CATEGORIES	If the port is part of one of the KDE Software distribution,
+#		it can add, in addition to 'kde' one of the following:
+#			kde-kde4: 		part of kde4 release
+#		this will then set default values for MASTER_SITES and DIST_SUBDIR
+#		as well as CPE_VENDOR and LICENSE.
 #
 # MAINTAINER:	kde@FreeBSD.org
 
@@ -70,6 +78,38 @@ KTP_BRANCH?=			stable
 # === INSTALLATION PREFIX ======================================================
 # Define installation prefix.
 KDE_PREFIX=	${LOCALBASE}
+# ==============================================================================
+
+# === _KDE_DIST HANDLING -- SETTING DEFAULT VALUES =============================
+# Doing MASTER_SITES magic based on the category of the port
+_KDE_CATEGORIES_SUPPORTED=	kde-kde4
+.  for cat in ${_KDE_CATEGORIES_SUPPORTED}
+.    if ${CATEGORIES:M${cat}}
+.      if !defined(_KDE_CATEGORY)
+_KDE_CATEGORY=	${cat}
+.      else
+IGNORE?=	cannot be installed: multiple kde-<...> categories specified via CATEGORIES=${CATEGORIES} #'
+.      endif
+.    endif
+.  endfor
+
+.  if defined(_KDE_CATEGORY)
+# KDE is normally licencensed LGPL 2.0.
+LICENSE?=		LGPL20
+
+# Set CPE Vendor Information
+#    As KDE_DIST is set we can assume it is port release by KDE and the vendor
+#    is therefore kde.
+CPE_VENDOR?=		kde
+
+.    if  ${_KDE_CATEGORY:Mkde-kde4}
+PORTVERSION?=		${KDE4_VERSION}
+MASTER_SITES?=		KDE/${KDE4_BRANCH}/${KDE4_VERSION}/src
+DIST_SUBDIR?=		KDE/${KDE4_VERSION}
+.    else
+IGNORE?=		unknown CATEGORY value '${_KDE_CATEGORY}' #'
+.    endif
+.  endif #defined(_KDE_CATEGORY)
 # ==============================================================================
 
 # ==== SETUP CMAKE ENVIRONMENT =================================================

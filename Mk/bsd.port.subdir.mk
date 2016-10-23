@@ -1,5 +1,5 @@
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
-# $FreeBSD: head/Mk/bsd.port.subdir.mk 412342 2016-04-01 13:18:17Z mat $
+# $FreeBSD: head/Mk/bsd.port.subdir.mk 424411 2016-10-21 12:51:40Z mat $
 #
 # The include file <bsd.port.subdir.mk> contains the default targets
 # for building ports subdirectories.
@@ -303,7 +303,7 @@ readmes: readme
 
 .if !target(readme)
 readme:
-	@${RM} -f README.html
+	@${RM} README.html
 	@${MAKE} README.html
 .endif
 
@@ -345,7 +345,7 @@ README.html:
 			-e '/%%SUBDIR%%/r$@.tmp2' \
 			-e '/%%SUBDIR%%/d' \
 		> $@
-	@${RM} -f $@.tmp $@.tmp2 $@.tmp3 $@.tmp4
+	@${RM} $@.tmp $@.tmp2 $@.tmp3 $@.tmp4
 
 # Pass in the cached invariant variables to child makes.
 .if !defined(NOPRECIOUSMAKEVARS)

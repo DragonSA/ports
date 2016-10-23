@@ -1,7 +1,7 @@
 # ex:ts=4
 #
 # $MBSDlabs: portmk/bsd.ocaml.mk,v 1.18 2006/08/06 18:47:23 stas Exp $
-# $FreeBSD: head/Mk/bsd.ocaml.mk 417004 2016-06-17 12:42:30Z mat $
+# $FreeBSD: head/Mk/bsd.ocaml.mk 424411 2016-10-21 12:51:40Z mat $
 #
 # bsd.ocaml.mk - Support for the Objective Caml language packages
 #
@@ -185,7 +185,7 @@ ocaml-ldconfig:
 _USES_install+=	745:ocaml-wash
 ocaml-wash:
 #	If ld.conf is empty
-	@${ECHO_CMD} "@postunexec if [ ! -s %D/${OCAML_LDCONF} ]; then ${RM} -f %D/${OCAML_LDCONF}; fi || true" >> ${TMPPLIST}
+	@${ECHO_CMD} "@postunexec if [ ! -s %D/${OCAML_LDCONF} ]; then ${RM} %D/${OCAML_LDCONF}; fi || true" >> ${TMPPLIST}
 . endif
 .endif
 

@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: head/science/openbabel/Makefile 413746 2016-04-21 16:43:14Z swills $
+# $FreeBSD: head/science/openbabel/Makefile 424339 2016-10-20 15:58:12Z rakuco $
 
 PORTNAME=	openbabel
 PORTVERSION=	2.3.2
@@ -7,7 +7,7 @@ PORTREVISION=	2
 CATEGORIES=	science
 MASTER_SITES=	SF
 
-MAINTAINER=	makc@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Chemistry file translation program
 
 BROKEN_powerpc64=	Does not build

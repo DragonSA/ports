@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11-toolkits/Makefile 422814 2016-09-27 13:43:25Z gblach $
+# $FreeBSD: head/x11-toolkits/Makefile 424259 2016-10-19 14:50:26Z tijl $
 #
 
     COMMENT = X11 toolkits
@@ -108,6 +108,11 @@
     SUBDIR += linux-c6-pango
     SUBDIR += linux-c6-qt47-x11
     SUBDIR += linux-c6-tk85
+    SUBDIR += linux-c7-gtk2
+    SUBDIR += linux-c7-openmotif
+    SUBDIR += linux-c7-pango
+    SUBDIR += linux-c7-qt-x11
+    SUBDIR += linux-c7-tk85
     SUBDIR += linux-f10-blt
     SUBDIR += linux-f10-gtk2
     SUBDIR += linux-f10-openmotif

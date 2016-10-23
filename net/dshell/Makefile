@@ -1,5 +1,5 @@
 # Created by: Nobutaka Mantani <nobutaka@FreeBSD.org>
-# $FreeBSD: head/net/dshell/Makefile 412348 2016-04-01 14:16:16Z mat $
+# $FreeBSD: head/net/dshell/Makefile 424411 2016-10-21 12:51:40Z mat $
 
 PORTNAME=	dshell
 PORTVERSION=	3.0.20150220
@@ -38,7 +38,7 @@ post-patch:
 .endfor
 
 post-build:
-	${RM} -rf ${WRKSRC}/lib/${PYTHON_VERSION}
+	${RM} -r ${WRKSRC}/lib/${PYTHON_VERSION}
 	${REINPLACE_CMD} -e 's|${WRKSRC}|${ETCDIR}|' ${WRKSRC}/dshell ${WRKSRC}/dshell-decode
 	${REINPLACE_CMD} -e 's|BINPATH=${WRKSRC}/bin|BINPATH=${PREFIX}/libexec/dshell|' \
 		-e 's|DSHELL=${WRKSRC}|DSHELL=${PYTHON_SITELIBDIR}|' \

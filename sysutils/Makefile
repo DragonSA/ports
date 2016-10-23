@@ -1,4 +1,4 @@
-# $FreeBSD: head/sysutils/Makefile 424002 2016-10-15 05:24:29Z pi $
+# $FreeBSD: head/sysutils/Makefile 424381 2016-10-21 07:29:38Z rene $
 #
 
     COMMENT = System utilities
@@ -783,8 +783,6 @@
     SUBDIR += pftables
     SUBDIR += pftop
     SUBDIR += phantom
-    SUBDIR += php55-fileinfo
-    SUBDIR += php55-posix
     SUBDIR += php56-fileinfo
     SUBDIR += php56-posix
     SUBDIR += php70-fileinfo
@@ -1130,6 +1128,7 @@
     SUBDIR += u-boot-pine64
     SUBDIR += u-boot-rpi
     SUBDIR += u-boot-rpi2
+    SUBDIR += u-boot-rpi3
     SUBDIR += u-boot-sinovoip-bpi-m3
     SUBDIR += u-boot-utilite
     SUBDIR += u-boot-wandboard

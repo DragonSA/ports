@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/libsearpc/Makefile 417778 2016-06-29 16:03:04Z pi $
+# $FreeBSD: head/devel/libsearpc/Makefile 424427 2016-10-21 15:21:13Z mat $
 
 PORTNAME=	libsearpc
 PORTVERSION=	3.0.7
@@ -20,7 +20,6 @@ GH_TAGNAME=	v3.0-latest
 
 USES=		autoreconf gettext libtool pathfix pkgconfig python:2
 USE_LDCONFIG=	yes
-PATHFIX_MAKEFILEIN=	Makefile.am
 
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
@@ -41,6 +40,6 @@ post-install:
 	@${MKDIR} ${STAGEDIR}${SEALIB}
 	(cd ${STAGEDIR}${PREFIX}/lib && \
 		${COPYTREE_SHARE} ${PYTHON_VERSION} ${STAGEDIR}${PREFIX}/${SEALIB})
-	${RM} -rf ${STAGEDIR}${PREFIX}/lib/${PYTHON_VERSION}
+	${RM} -r ${STAGEDIR}${PREFIX}/lib/${PYTHON_VERSION}
 
 .include <bsd.port.mk>

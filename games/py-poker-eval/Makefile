@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: head/games/py-poker-eval/Makefile 412346 2016-04-01 14:00:51Z mat $
+# $FreeBSD: head/games/py-poker-eval/Makefile 424427 2016-10-21 15:21:13Z mat $
 
 PORTNAME=	poker-eval
 PORTVERSION=	0.138
@@ -17,7 +17,7 @@ LICENSE_FILE=	${WRKSRC}/COPYING
 
 LIB_DEPENDS=	libpoker-eval.so:games/poker-eval
 
-USES=		autoreconf libtool pkgconfig python:2
+USES=		autoreconf libtool pathfix pkgconfig python:2
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	PYTHON=""
 

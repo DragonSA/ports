@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/bsd.default-versions.mk 423986 2016-10-14 19:50:00Z antoine $
+# $FreeBSD: head/Mk/bsd.default-versions.mk 424380 2016-10-21 07:16:25Z rene $
 #
 # MAINTAINER:	ports@FreeBSD.org
 #
@@ -59,7 +59,7 @@ PERL5_DEFAULT:=		${_PERL5_FROM_BIN:R}
 .endif
 # Possible values: 9.2, 9.3, 9.4, 9.5, 9.6
 PGSQL_DEFAULT?=		9.3
-# Possible values: 5.5, 5.6, 7.0
+# Possible values: 5.6, 7.0
 PHP_DEFAULT?=		5.6
 # Possible values: 2.7, 3.3, 3.4, 3.5
 PYTHON_DEFAULT?=	2.7

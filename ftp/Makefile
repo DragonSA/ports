@@ -1,4 +1,4 @@
-# $FreeBSD: head/ftp/Makefile 420469 2016-08-19 13:55:56Z amdmi3 $
+# $FreeBSD: head/ftp/Makefile 424381 2016-10-21 07:29:38Z rene $
 #
 
     COMMENT = FTP client and server utilities
@@ -40,6 +40,7 @@
     SUBDIR += lftp
     SUBDIR += libfilezilla
     SUBDIR += linux-c6-curl
+    SUBDIR += linux-c7-curl
     SUBDIR += linux-f10-curl
     SUBDIR += llnlxdir
     SUBDIR += llnlxftp
@@ -62,8 +63,6 @@
     SUBDIR += pavuk
     SUBDIR += pear-Net_FTP
     SUBDIR += pftpd
-    SUBDIR += php55-curl
-    SUBDIR += php55-ftp
     SUBDIR += php56-curl
     SUBDIR += php56-ftp
     SUBDIR += php70-curl

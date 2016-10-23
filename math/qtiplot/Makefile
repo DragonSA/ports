@@ -1,5 +1,5 @@
 # Created by: Jie Gao <gaoj@cpsc.ucalgary.ca>
-# $FreeBSD: head/math/qtiplot/Makefile 416904 2016-06-14 18:18:54Z pi $
+# $FreeBSD: head/math/qtiplot/Makefile 424339 2016-10-20 15:58:12Z rakuco $
 
 PORTNAME=	qtiplot
 DISTVERSION=	0.9.8.9
@@ -7,7 +7,7 @@ PORTREVISION=	10
 CATEGORIES=	math science
 MASTER_SITES=	BERLIOS http://soft.proindependent.com/src/
 
-MAINTAINER=	makc@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Data analysis and scientific plotting
 
 LIB_DEPENDS=	libgsl.so:math/gsl \

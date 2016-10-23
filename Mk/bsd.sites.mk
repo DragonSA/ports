@@ -20,7 +20,7 @@
 #
 # Note: all entries should terminate with a slash.
 #
-# $FreeBSD: head/Mk/bsd.sites.mk 422208 2016-09-15 15:33:48Z olivierd $
+# $FreeBSD: head/Mk/bsd.sites.mk 424259 2016-10-19 14:50:26Z tijl $
 #
 
 # Where to put distfiles that don't have any other master site
@@ -237,6 +237,12 @@ MASTER_SITE_CENTOS_LINUX+= \
 MASTER_SITE_EPEL+= \
 	http://dl.fedoraproject.org/pub/epel/6/${LINUX_ARCH}/ \
 	http://dl.fedoraproject.org/pub/epel/6/SRPMS/:SOURCE
+.endif
+
+.if !defined(IGNORE_MASTER_SITE_EPEL7)
+MASTER_SITE_EPEL7+= \
+	http://dl.fedoraproject.org/pub/epel/7/${LINUX_ARCH}/%SUBDIR%/ \
+	http://dl.fedoraproject.org/pub/epel/7/SRPMS/%SUBDIR%/:SOURCE
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_FEDORA_LINUX)
