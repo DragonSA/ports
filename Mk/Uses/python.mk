@@ -104,7 +104,7 @@
 #
 # PYTHON_LIB		- Python's library file name (used to link against)
 #			  default:
-#				cpython: ${PYTHONBASE}/lib/libpython${PYTHON_VER}.so
+#				cpython: ${PYTHONBASE}/lib/libpython${PYTHON_VER}${PYTHON_ABIVER}.so
 #				pypy: ${PYTHON_LIBDIR}/libpypy-c.so
 #
 # PYSETUP		- Name of the setup script used by the distutils
@@ -379,7 +379,7 @@ _PYTHON_VERSIONS=	2.7 3.5 3.4 3.3 # preferred first
 
 PYTHON_PORTSDIR=	lang/python${PYTHON_SUFFIX}
 PYTHON_CMD?=		${LOCALBASE}/bin/python${PYTHON_VER}
-PYTHON_LIB=		${PYTHONBASE}/lib/libpython${_PYTHON_VERSION}.so
+PYTHON_LIB=		${PYTHONBASE}/lib/libpython${_PYTHON_VERSION}${PYTHON_ABIVER}.so
 
 PYTHON_INCLUDEDIR=	${PYTHONBASE}/include/python${_PYTHON_VERSION}${PYTHON_ABIVER}
 PYTHON_LIBDIR=		${PYTHONBASE}/lib/python${_PYTHON_VERSION}
