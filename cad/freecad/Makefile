@@ -28,7 +28,7 @@ LIB_DEPENDS=	libexpat.so:textproc/expat2		\
 		libboost_thread.so:devel/boost-libs	\
 		libarea.so:devel/libarea		\
 		libmed.so:french/med			\
-		libshiboken-${PYTHON_VERSION}.so:devel/shiboken
+		libshiboken-python${PYTHON_VER}.so:devel/shiboken
 
 BROKEN_FreeBSD_9=	does not build on FreeBSD 9.x
 
