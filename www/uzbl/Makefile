@@ -28,7 +28,7 @@ GH_ACCOUNT=	uzbl
 
 OPTIONS_DEFINE=	DOCS
 
-MAKE_ENV+=	PYTHON=${PYTHON_VERSION}
+MAKE_ENV+=	PYTHON=${PYTHON_CMD}
 
 .include <bsd.port.options.mk>
 
