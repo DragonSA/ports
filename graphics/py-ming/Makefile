@@ -24,7 +24,7 @@ LIB_DEPENDS=	libfreetype.so:print/freetype2 \
 PORTSCOUT=	limit:^ming-
 
 CONFIGURE_ARGS=	--enable-python
-CONFIGURE_ENV=	PYTHON_LDFLAGS="-L${PYTHON_LIBDIR} -l${PYTHON_VERSION}${PYTHON_ABIVER}"
+CONFIGURE_ENV=	PYTHON_LDFLAGS="${PYTHON_LIB}"
 GNU_CONFIGURE=	yes
 USE_PYTHON=	autoplist concurrent distutils
 USES=		autoreconf libtool localbase:ldflags python
