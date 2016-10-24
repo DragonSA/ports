@@ -2,7 +2,7 @@
 # $FreeBSD: head/lang/fsharp/Makefile 420321 2016-08-17 07:43:05Z romain $
 
 PORTNAME=	fsharp
-PORTVERSION=	4.0.1.10
+PORTVERSION=	4.0.1.15
 CATEGORIES=	lang
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
