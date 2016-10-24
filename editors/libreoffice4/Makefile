@@ -113,8 +113,8 @@ CONFIGURE_ENV=		DMAKE=${LOCALBASE}/bin/dmake \
 			GPERF=${LOCALBASE}/bin/gperf \
 			OPENCOLLADA_CFLAGS="${COLLADA_CFLAGS}" \
 			OPENCOLLADA_LIBS="${COLLADA_LIBS}" \
-			PYTHON_CFLAGS="`${PYTHON_VERSION}-config --cflags`" \
-			PYTHON_LIBS="`${PYTHON_VERSION}-config --libs`"
+			PYTHON_CFLAGS="`${PYTHON_CMD}-config --cflags`" \
+			PYTHON_LIBS="`${PYTHON_CMD}-config --libs`"
 
 CONFIGURE_ARGS+=	--disable-dependency-tracking \
 			--disable-fetch-external \
