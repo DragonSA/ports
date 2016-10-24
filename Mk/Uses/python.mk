@@ -415,7 +415,7 @@ _PYTHON_VERSION_NONSUPPORTED=	${_PYTHON_VERSION_MAXIMUM} at most
 .else
 .  undef _PYTHON_VERSION_SUPPORTED
 .  for supported_ver in ${_PYTHON_VERSIONS}
-.    if ${supported_ver} == ${_PYTHON_VERSION}
+.    if ${_PYTHON_VERSION} == ${supported_ver}
 _PYTHON_VERSION_SUPPORTED=	yes
 .    endif
 .  endfor
@@ -435,11 +435,12 @@ WARNING+=	"needs Python ${_PYTHON_VERSION_NONSUPPORTED}. But a port depending on
 .  for ver in ${PYTHON_DEFAULT:C/^[a-z]+//} ${PYTHON2_DEFAULT:C/^[a-z]+//} ${PYTHON3_DEFAULT:C/^[a-z]+//} ${_PYTHON_VERSIONS}
 .    if !defined(_PYTHON_VERSION) && \
 	!(!empty(_PYTHON_VERSION_MINIMUM) && ( \
-		${ver} < ${_PYTHON_VERSION_MINIMUM})) && \
+		${_PYTHON_VERSION_MINIMUM} > ${ver})) && \
 	!(!empty(_PYTHON_VERSION_MAXIMUM) && ( \
-		${ver} > ${_PYTHON_VERSION_MAXIMUM}))
+		${_PYTHON_VERSION_MAXIMUM} < ${ver} ))
+_ver=			${ver}
 .      for supported_ver in ${_PYTHON_VERSIONS}
-.        if !defined(_PYTHON_VERSION) && ${supported_ver} == ${ver}
+.        if !defined(_PYTHON_VERSION) && ${_ver} == ${supported_ver}
 _PYTHON_VERSION:=	${ver}
 .        endif
 .      endfor
@@ -529,7 +530,7 @@ _PYTHONPKGLIST=	${WRKDIR}/.PLIST.pymodtmp
 
 .if defined(_PYTHON_FEATURE_CONCURRENT)
 _USES_POST+=		uniquefiles:dirs
-.if ${_PYTHON_IMPL}${_PYTHON_VERSION} == ${PYTHON_DEFAULT_VERSION}
+.if ${PYTHON_VERSION} == ${PYTHON_DEFAULT_VERSION}
 UNIQUE_DEFAULT_LINKS=	yes
 .else
 UNIQUE_DEFAULT_LINKS=	no
