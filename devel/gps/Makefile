@@ -33,7 +33,7 @@ USES=		ada:run gettext gmake perl5 pkgconfig python
 USE_XORG=	x11
 USE_PERL5=	build
 USE_GNOME=	glib20 pygobject3 gtk30 pango atk cairo gdkpixbuf2
-PYCOMPILE=	${PREFIX}/lib/${PYTHON_VERSION}/compileall.py
+PYCOMPILE=	${PYTHON_LIBDIR}/compileall.py
 AWKREVDATE=	'/Last Changed Date/ {print "\"s|unknown date|" $$4 "|\""}'
 GPSVER=		GPS_VERSION=${PORTVERSION}
 ALL_TARGET=	default
