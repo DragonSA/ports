@@ -72,7 +72,7 @@
 -    INCLUDEPATH += $$system($$PYTHON python-includepath.py)
 -    LIBS        += $$system($$PYTHON -c "\"from distutils import sysconfig; print '-lpython'+sysconfig.get_config_var('VERSION')\"")
 +    INCLUDEPATH += $$(PYTHON_INCLUDEDIR)
-+    LIBS        += -l$$(PYTHON_VERSION)
++    LIBS        += $$(PYTHON_LIB)
      LIBS        += -lm
      system(mkdir -p $${SIP_DIR})
 -    system($$system($$PYTHON python-sipcmd.py) -c $${SIP_DIR} src/scripting/qti.sip)
