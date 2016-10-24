@@ -44,7 +44,7 @@
  	CFLAGS  := $(CFLAGS_STLP) -DHAVE_SSTREAM $(CFLAGS)
  	LDFLAGS := $(LDFLAGS) $(LDFLAGS_STLP)
 -	LIBS    := $(LIBS) $(LIBS_STLP)
-+	LIBS    := $(LIBS) -L${PYTHONBASE}/lib -l${PYTHON_VERSION}
++	LIBS    := $(LIBS) ${PYTHON_LIB}
  endif
  
  ifeq ($(SAORI_NATIVE),yes)
@@ -53,7 +53,7 @@
  		CFLAGS_PYTHON = -I$(shell python -c "import sys; print sys.prefix+'/include/python'+sys.version[:3]")
  		CFLAGS  := $(CFLAGS_PYTHON) $(CFLAGS)
 -		LIBS    := $(LIBS) -lpython$(PYTHON_VER)
-+		LIBS    := $(LIBS) -L${PYTHONBASE}/lib -l${PYTHON_VERSION}
++		LIBS    := $(LIBS) ${PYTHON_LIB}
  	endif
  endif
  
