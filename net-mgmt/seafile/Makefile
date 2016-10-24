@@ -90,7 +90,7 @@ post-patch:
 .if ${OSVERSION} >= 1100097
 	${REINPLACE_CMD} 's/P_KTHREAD/P_KPROC/' ${WRKSRC}/lib/utils.c
 .endif
-	${REINPLACE_CMD} 's/python/${PYTHON_VERSION}/' \
+	${REINPLACE_CMD} 's|python|${PYTHON_CMD}|' \
 		${WRKSRC}/scripts/upgrade/regenerate_secret_key.sh
 	${REINPLACE_CMD} -e 's|^INSTALL.*|INSTALLPATH="${PREFIX}/${SEAFILE_SERVER}/seafile"|' \
 			${WRKSRC}/scripts/seaf-cli-wrapper.sh
@@ -114,8 +114,8 @@ post-install:
 	${INSTALL_SCRIPT} ${STAGEDIR}${PREFIX}/bin/seaf-cli ${STAGEDIR}${PREFIX}/${SEABIN}/seaf-cli.py
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/seaf-cli-wrapper.sh ${STAGEDIR}${PREFIX}/bin/seaf-cli
 	(cd ${STAGEDIR}${PREFIX}/lib && \
-		${COPYTREE_SHARE} ${PYTHON_VERSION} ${STAGEDIR}${PREFIX}/${SEALIB})
-	@${RM} -r ${STAGEDIR}${PREFIX}/lib/${PYTHON_VERSION} \
+		${COPYTREE_SHARE} python${PYTHON_VER} ${STAGEDIR}${PREFIX}/${SEALIB})
+	@${RM} -r ${STAGEDIR}${PREFIX}/lib/python${PYTHON_VER} \
 		${WRKSRC}/scripts/seaf-cli-wrapper.sh \
 		${WRKSRC}/scripts/sqlite2mysql.[ps][yh] \
 		${WRKSRC}/scripts/setup-seafile.sh \
