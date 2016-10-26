@@ -2,6 +2,7 @@
 # $FreeBSD: head/lang/pypy3/Makefile 419600 2016-08-04 08:43:36Z dbn $
 
 PORTNAME=	pypy3
+PORTREVISION=	1
 DISTVERSION=	5.5.0-alpha
 DISTNAME=	${PORTNAME}.3-v${DISTVERSION}-src
 
