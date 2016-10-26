@@ -71,7 +71,9 @@ MASTER_SITES+=	${MASTER_SITES_nuget_${depend:C/=.*$//:S/.//g:S/-//g}}
 NUGET_NUPKGS+=	${NUGET_NUPKGS_nuget_${depend:C/=.*$//:S/.//g:S/-//g}}
 .  endfor
 
-.  if !defined(EXTRACT_ONLY)
+# Prevent the nuget packages from being extracted (and poluting ${WRKDIR}, however
+# only bmake supports this.
+.  if !defined(EXTRACT_ONLY) && defined(.PARSEDIR)
 EXTRACT_ONLY=	${_DISTFILES:[0]:C/${NUGET_DISTFILES}//g}
 .  endif
 
