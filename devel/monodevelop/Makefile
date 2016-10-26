@@ -1,5 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: head/devel/monodevelop/Makefile 412346 2016-04-01 14:00:51Z mat $
+# $FreeBSD$
 
 PORTNAME=	monodevelop
 PORTVERSION=	6.1.1.15
@@ -9,7 +9,9 @@ MAINTAINER=	mono@FreeBSD.org
 COMMENT=	IDE for the .NET platform
 
 BUILD_DEPENDS=	mautil:devel/mono-addins \
-		fsharpc:lang/fsharp
+		fsharpc:lang/fsharp \
+		cmake:devel/cmake \
+		referenceassemblies-pcl>=0:lang/referenceassemblies-pcl
 LIB_DEPENDS=	libcurl.so:ftp/curl \
 		libssh2.so:security/libssh2
 RUN_DEPENDS=	${LOCALBASE}/lib/libgdiplus.a:x11-toolkits/libgdiplus \
@@ -61,10 +63,12 @@ MAKE_JOBS_UNSAFE=	Build parallelization not implemented
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTNAME}-${PORTVERSION}/main
 
 post-extract:
-.for tuple in ${GH_TUPLE:[2..-1]}
+.for tuple in ${GH_TUPLE}
+.  if ${PORTNAME} != ${tuple:C/([^:]*):([^:]*):([^:]*)/\2/}
 	@${RMDIR} ${WRKSRC}/external/${tuple:C/[^:]+:([^:]+):([^:]+):([^:]+)/\3/:S/_/-/g}
 	@${MV} ${WRKDIR}/${tuple:C/[^:]+:([^:]+):([^:]+):([^:]+)/\1-\2/} \
 		${WRKSRC}/external/${tuple:C/[^:]+:([^:]+):([^:]+):([^:]+)/\3/:S/_/-/g}
+.  endif
 .endfor
 	@${LN} -s ${NUGET_PACKAGEDIR} ${WRKSRC}/external/fsharpbinding/packages
 
