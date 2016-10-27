@@ -1,5 +1,5 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
-# $FreeBSD: head/sysutils/py-plumbum/Makefile 417758 2016-06-29 06:00:56Z dbn $
+# $FreeBSD: head/sysutils/py-plumbum/Makefile 424744 2016-10-27 06:10:53Z dbn $
 
 PORTNAME=	plumbum
 PORTVERSION=	1.6.2
@@ -16,7 +16,7 @@ TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest
 
 USES=		python
 USE_GITHUB=	yes
-USE_PYTHON=	distutils concurrent
+USE_PYTHON=	distutils concurrent py3kplist
 GH_ACCOUNT=	tomerfiliba
 
 do-test:
