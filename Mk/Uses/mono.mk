@@ -30,9 +30,7 @@
 .if !defined(_INCLUDE_USES_MONO_MK)
 _INCLUDE_USES_MONO_MK=	yes
 
-.if ${mono_ARGS} == nuget
-_MONO_NUGET=		yes
-.elif !empty(mono_ARGS)
+.if !empty(mono_ARGS:Nnuget)
 IGNORE=	USES=mono takes no arguments
 .endif
 
@@ -52,7 +50,7 @@ GACUTIL=${LOCALBASE}/bin/gacutil /root ${PREFIX}/lib/ /gacdir ${PREFIX}/lib
 GACUTIL_INSTALL=${GACUTIL} /i
 GACUTIL_INSTALL_PACKAGE=${GACUTIL} /i /package 1.0 /package 2.0
 
-.if defined(_MONO_NUGET)
+.if ${mono_ARGS:Mnuget}
 NUGET_PACKAGEDIR=	${WRKSRC}/packages
 
 .  for depend in ${NUGET_DEPENDS}
