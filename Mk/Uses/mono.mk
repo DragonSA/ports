@@ -31,7 +31,7 @@
 _INCLUDE_USES_MONO_MK=	yes
 
 .if !empty(mono_ARGS:Nnuget)
-IGNORE=	USES=mono takes no arguments
+IGNORE=	USES=mono only supports an optional nuget argument
 .endif
 
 # Set the location of the .wapi directory so we write to a location we
