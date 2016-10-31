@@ -20,7 +20,7 @@
 #
 # Note: all entries should terminate with a slash.
 #
-# $FreeBSD: head/Mk/bsd.sites.mk 424259 2016-10-19 14:50:26Z tijl $
+# $FreeBSD: head/Mk/bsd.sites.mk 424635 2016-10-25 17:04:38Z jrm $
 #
 
 # Where to put distfiles that don't have any other master site
@@ -115,6 +115,25 @@ MASTER_SITE_COMP_SOURCES+= \
 	http://ftp.funet.fi/pub/archive/comp.sources.%SUBDIR%/ \
 	http://ftp.sunet.se/pub/usenet/ftp.uu.net/comp.sources.%SUBDIR%/ \
 	http://ftp.fi.netbsd.org/pub/misc/archive/comp.sources.%SUBDIR%/
+.endif
+
+.if !defined(IGNORE_MASTER_SITE_CRAN)
+MASTER_SITE_CRAN+= \
+	https://cloud.r-project.org/%SUBDIR%/ \
+	https://stat.ethz.ch/CRAN/%SUBDIR%/ \
+	http://cran.utstat.utoronto.ca/%SUBDIR%/ \
+	https://cran.cnr.berkeley.edu/%SUBDIR%/ \
+	http://cran.csiro.au/%SUBDIR%/ \
+	https://mirrors.tuna.tsinghua.edu.cn/CRAN/%SUBDIR%/ \
+	http://camoruco.ing.uc.edu.ve/cran/%SUBDIR%/ \
+	https://mirror.las.iastate.edu/CRAN/%SUBDIR%/ \
+	https://cran.ma.imperial.ac.uk/%SUBDIR%/ \
+	https://cran.gis-lab.info/%SUBDIR%/ \
+	https://cran.ism.ac.jp/%SUBDIR%/
+.endif
+
+.if !defined(IGNORE_MASTER_SITE_CRAN_ARCHIVE)
+MASTER_SITE_CRAN_ARCHIVE+= ${MASTER_SITE_CRAN:S,$,Archive/${PORTNAME}/,}
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_DEBIAN)

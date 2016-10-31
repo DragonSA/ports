@@ -1,8 +1,7 @@
-# $FreeBSD: head/www/webkit-qt5/Makefile 422803 2016-09-27 07:08:19Z rakuco $
+# $FreeBSD: head/www/webkit-qt5/Makefile 424842 2016-10-28 13:43:14Z tcberner $
 
 PORTNAME=	webkit
 DISTVERSION=	${QT5_VERSION}
-PORTREVISION=	2
 CATEGORIES=	www
 MASTER_SITE_SUBDIR=	community_releases/${QT5_VERSION:R}/${QT5_VERSION}/
 PKGNAMEPREFIX=	qt5-

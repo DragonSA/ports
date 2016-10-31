@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/codespell/Makefile 376731 2015-01-10 23:15:27Z demon $
+# $FreeBSD: head/textproc/codespell/Makefile 424644 2016-10-25 19:09:14Z antoine $
 
 PORTNAME=	codespell
 PORTVERSION=	1.6
@@ -23,7 +23,7 @@ PORTEXAMPLES=	*
 SUB_FILES+=	pkg-message
 
 do-build:
-	${REINPLACE_CMD} 's|#!/usr/bin/env python3|#!${LOCALBASE}/bin/${PYTHON_VERSION}|' \
+	${REINPLACE_CMD} 's|#!/usr/bin/env python3|#!${PYTHON_CMD}|' \
 		${WRKSRC}/codespell.py
 
 do-install:

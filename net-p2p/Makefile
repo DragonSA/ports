@@ -1,4 +1,4 @@
-# $FreeBSD: head/net-p2p/Makefile 420360 2016-08-17 18:10:01Z pi $
+# $FreeBSD: head/net-p2p/Makefile 424719 2016-10-26 16:52:22Z rm $
 #
 
     COMMENT = Peer-to-peer network applications
@@ -19,6 +19,7 @@
     SUBDIR += ctorrent
     SUBDIR += dclib
     SUBDIR += deluge
+    SUBDIR += deluge-cli
     SUBDIR += digitalcoin
     SUBDIR += dogecoin
     SUBDIR += ed2k

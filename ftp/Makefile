@@ -1,4 +1,4 @@
-# $FreeBSD: head/ftp/Makefile 424381 2016-10-21 07:29:38Z rene $
+# $FreeBSD: head/ftp/Makefile 424784 2016-10-27 19:51:38Z antoine $
 #
 
     COMMENT = FTP client and server utilities
@@ -17,6 +17,7 @@
     SUBDIR += curl-hiphop
     SUBDIR += curlpp
     SUBDIR += dmachine
+    SUBDIR += fastdfs
     SUBDIR += filezilla
     SUBDIR += fmirror
     SUBDIR += fpc-libcurl
@@ -64,8 +65,10 @@
     SUBDIR += pear-Net_FTP
     SUBDIR += pftpd
     SUBDIR += php56-curl
+    SUBDIR += php56-fastdfs
     SUBDIR += php56-ftp
     SUBDIR += php70-curl
+    SUBDIR += php70-fastdfs
     SUBDIR += php70-ftp
     SUBDIR += phpwebftp
     SUBDIR += plasma-applet-ftpmonitor

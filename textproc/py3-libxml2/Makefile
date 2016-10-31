@@ -1,5 +1,5 @@
 # Created by: Alexander Nedotsukov <bland@FreeBSD.org>
-# $FreeBSD: head/textproc/py3-libxml2/Makefile 421031 2016-08-28 19:18:20Z kwm $
+# $FreeBSD: head/textproc/py3-libxml2/Makefile 424644 2016-10-25 19:09:14Z antoine $
 
 PORTREVISION=	0
 CATEGORIES=	textproc gnome python
@@ -18,8 +18,8 @@ USE_GNOME+=	libxml2
 USES=		python:3 gettext-runtime
 USE_PYTHON=	autoplist distutils
 
-CPPFLAGS+=	`${PYTHON_VERSION}-config --cflags`
-LDFLAGS+=	-L${LOCALBASE}/lib `${PYTHON_VERSION}-config --libs`
+CPPFLAGS+=	`${PYTHON_CMD}-config --cflags`
+LDFLAGS+=	-L${LOCALBASE}/lib `${PYTHON_CMD}-config --libs`
 CONFIGURE_ARGS=	--with-iconv=${ICONV_PREFIX} \
 		--with-html-dir=${PREFIX}/share/doc \
 		--with-html-subdir=${PORTNAME} \

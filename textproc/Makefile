@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/Makefile 424508 2016-10-23 09:51:34Z olgeni $
+# $FreeBSD: head/textproc/Makefile 424731 2016-10-26 19:17:17Z rm $
 #
 
     COMMENT = Text processing utilities (does not include desktop publishing)
@@ -396,6 +396,7 @@
     SUBDIR += libexttextcat
     SUBDIR += libflate
     SUBDIR += libfo
+    SUBDIR += libgepub
     SUBDIR += libguess
     SUBDIR += libkmfl
     SUBDIR += libkolabxml
@@ -1218,6 +1219,7 @@
     SUBDIR += py-bugzillatools
     SUBDIR += py-chardet
     SUBDIR += py-cloud_sptheme
+    SUBDIR += py-colorclass
     SUBDIR += py-creole
     SUBDIR += py-csvkit
     SUBDIR += py-dbfread
@@ -1301,6 +1303,7 @@
     SUBDIR += py-sphinxcontrib-httpdomain
     SUBDIR += py-sphinxcontrib-programoutput
     SUBDIR += py-syck
+    SUBDIR += py-terminaltables
     SUBDIR += py-texttable
     SUBDIR += py-tinycss
     SUBDIR += py-toronado

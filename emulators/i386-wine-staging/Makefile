@@ -1,5 +1,5 @@
 # Created by: Kris Moore <kmoore@FreeBSD.org>
-# $FreeBSD: head/emulators/i386-wine-staging/Makefile 410143 2016-03-04 18:08:41Z dbn $
+# $FreeBSD: head/emulators/i386-wine-staging/Makefile 424560 2016-10-24 10:18:50Z mat $
 
 COMMENT=	32bit Wine built with the Staging patchset for 64bit FreeBSD
 
@@ -8,7 +8,7 @@ SLAVE_PORT=	i386-wine-devel
 CONFLICTS_INSTALL=	i386-wine-[0-9]* wine-[0-9]* wine-staging-[0-9]* i386-wine-devel-[0-9]* wine-devel-[0-9]*
 
 OPTIONS_SLAVE=	STAGING
-OPTIONS_SET=	LIBXSLT MPG123 HAL V4L X11
+OPTIONS_DEFAULT=	LIBXSLT MPG123 HAL V4L X11
 
 SLAVEDIR=	${.CURDIR}/../i386-wine-devel
 PLIST=		${MASTERDIR}/pkg-plist

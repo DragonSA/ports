@@ -1,4 +1,4 @@
-# $FreeBSD: head/sysutils/Makefile 424381 2016-10-21 07:29:38Z rene $
+# $FreeBSD: head/sysutils/Makefile 424794 2016-10-27 21:21:12Z jbeich $
 #
 
     COMMENT = System utilities
@@ -330,6 +330,7 @@
     SUBDIR += fusefs-funionfs
     SUBDIR += fusefs-fusepak
     SUBDIR += fusefs-fusexmp_fh
+    SUBDIR += fusefs-gitfs
     SUBDIR += fusefs-gnome-vfs
     SUBDIR += fusefs-gstfs
     SUBDIR += fusefs-gunzip

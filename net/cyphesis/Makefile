@@ -1,5 +1,5 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: head/net/cyphesis/Makefile 412348 2016-04-01 14:16:16Z mat $
+# $FreeBSD: head/net/cyphesis/Makefile 424644 2016-10-25 19:09:14Z antoine $
 
 PORTNAME=	cyphesis
 PORTVERSION=	0.6.2
@@ -49,7 +49,7 @@ post-patch:
 		${REINPLACE_CMD} -e 's|$$(datadir)/cyphesis|${DATADIR}|g ; \
 		s|confbackupdir = .*|confbackupdir = ${DOCSDIR}/conf|g'
 	@${REINPLACE_CMD} -e 's|/bash|/sh|' ${WRKSRC}/scripts/extract_revision.sh
-	@${REINPLACE_CMD} -e '1s|python|${LOCALBASE}/bin/${PYTHON_VERSION}|' ${WRKSRC}/scripts/gen_buildid.py
+	@${REINPLACE_CMD} -e '1s|python|${PYTHON_CMD}|' ${WRKSRC}/scripts/gen_buildid.py
 	@${REINPLACE_CMD} -e 's/#ifdef __APPLE__/#if defined(__APPLE__) || defined(__FreeBSD__)/g; \
 		s/#ifndef __APPLE__/#if !defined(__APPLE__) \&\& !defined(__FreeBSD__)/g' \
 		${WRKSRC}/common/system.cpp \

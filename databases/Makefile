@@ -1,4 +1,4 @@
-# $FreeBSD: head/databases/Makefile 424381 2016-10-21 07:29:38Z rene $
+# $FreeBSD: head/databases/Makefile 424700 2016-10-26 13:54:34Z demon $
 #
 
     COMMENT = Databases and related software
@@ -796,7 +796,6 @@
     SUBDIR += py35-sqlite3
     SUBDIR += pydbx
     SUBDIR += pymongo
-    SUBDIR += pymongo28
     SUBDIR += pypy-gdbm
     SUBDIR += pypy-sqlite3
     SUBDIR += pyspatialite

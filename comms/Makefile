@@ -1,4 +1,4 @@
-# $FreeBSD: head/comms/Makefile 422306 2016-09-17 09:46:54Z rakuco $
+# $FreeBSD: head/comms/Makefile 424647 2016-10-25 19:37:33Z bsam $
 #
 
     COMMENT = Communication utilities
@@ -70,6 +70,7 @@
     SUBDIR += ibp
     SUBDIR += java-commapi
     SUBDIR += java-commapi-freebsd
+    SUBDIR += java-simple-serial-connector
     SUBDIR += jerm
     SUBDIR += jsdr
     SUBDIR += kb

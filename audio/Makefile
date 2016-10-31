@@ -1,4 +1,4 @@
-# $FreeBSD: head/audio/Makefile 424259 2016-10-19 14:50:26Z tijl $
+# $FreeBSD: head/audio/Makefile 424830 2016-10-28 13:03:39Z kwm $
 #
 
     COMMENT = Audio tools
@@ -794,6 +794,8 @@
     SUBDIR += vagalume
     SUBDIR += vamp-plugin-sdk
     SUBDIR += ventrilo-server
+    SUBDIR += virtual_oss
+    SUBDIR += virtual_oss_ctl
     SUBDIR += vitunes
     SUBDIR += vo-aacenc
     SUBDIR += vo-amrwbenc

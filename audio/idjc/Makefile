@@ -1,5 +1,5 @@
 # Created by: Sean Bruno <sbruno@freebsd.org>
-# $FreeBSD: head/audio/idjc/Makefile 415742 2016-05-23 20:35:01Z amdmi3 $
+# $FreeBSD: head/audio/idjc/Makefile 424644 2016-10-25 19:09:14Z antoine $
 
 PORTNAME=	idjc
 PORTVERSION=	0.8.16
@@ -47,7 +47,7 @@ DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-${PORTVERSION}
 pre-install:
 	${REINPLACE_CMD} 's|libvorbis.so.0|libvorbis.so|' \
 		${WRKSRC}/python/format.py
-	${REINPLACE_CMD} 's|#! /usr/local/bin/python2.72.7|#\!${LOCALBASE}/bin/${PYTHON_VERSION}|' \
+	${REINPLACE_CMD} 's|#! /usr/local/bin/python2.72.7|#\!${PYTHON_CMD}|' \
 		${WRKSRC}/idjc
 
 .include <bsd.port.mk>

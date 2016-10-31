@@ -1,4 +1,4 @@
-# $FreeBSD: head/games/Makefile 423738 2016-10-11 00:57:39Z amdmi3 $
+# $FreeBSD: head/games/Makefile 424643 2016-10-25 18:31:54Z amdmi3 $
 #
 
     COMMENT = Games and related software
@@ -355,6 +355,7 @@
     SUBDIR += gnomekiss
     SUBDIR += gnono
     SUBDIR += gnubg
+    SUBDIR += gnubik
     SUBDIR += gnuchess
     SUBDIR += gnudoku
     SUBDIR += gnugo
