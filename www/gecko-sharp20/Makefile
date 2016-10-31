@@ -1,5 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: head/www/gecko-sharp20/Makefile 367888 2014-09-10 20:50:31Z gerald $
+# $FreeBSD: head/www/gecko-sharp20/Makefile 424974 2016-10-31 06:58:31Z dbn $
 
 PORTNAME=	gecko-sharp
 PORTVERSION=	0.13
@@ -11,6 +11,10 @@ DISTNAME=	${PORTNAME}-2.0-${PORTVERSION}
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Mono bindings to embed Mozilla
+
+BROKEN=		Does not compile against recent mono
+DEPRECATED=	Broken, no upstream found and no release in 8 years
+EXPIRATION_DATE=2016-11-27
 
 USE_GNOME=	gtksharp20
 USES=		gmake mono pathfix pkgconfig gecko tar:bzip2
