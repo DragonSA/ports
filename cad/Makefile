@@ -1,4 +1,4 @@
-# $FreeBSD: head/cad/Makefile 421541 2016-09-08 12:17:38Z mat $
+# $FreeBSD: head/cad/Makefile 425853 2016-11-10 19:38:43Z hrs $
 #
 
     COMMENT = CAD tools
@@ -68,6 +68,7 @@
     SUBDIR += py-gdspy
     SUBDIR += py-lcapy
     SUBDIR += py-pycam
+    SUBDIR += python-gdsii
     SUBDIR += pythoncad
     SUBDIR += qcad
     SUBDIR += qelectrotech
@@ -78,6 +79,8 @@
     SUBDIR += rubygem-gdsii
     SUBDIR += sceptre
     SUBDIR += scotch
+    SUBDIR += solvespace
+    SUBDIR += sp2sp
     SUBDIR += spice
     SUBDIR += stepcode
     SUBDIR += sweethome3d

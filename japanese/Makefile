@@ -1,4 +1,4 @@
-# $FreeBSD: head/japanese/Makefile 423201 2016-10-03 15:40:32Z ume $
+# $FreeBSD: head/japanese/Makefile 426204 2016-11-16 00:43:30Z hrs $
 #
 
     COMMENT = Japanese support
@@ -195,6 +195,7 @@
     SUBDIR += nhocr
     SUBDIR += nkf
     SUBDIR += onew
+    SUBDIR += p5-2chproxy
     SUBDIR += p5-Date-Japanese-Era
     SUBDIR += p5-Date-Japanese-Holiday
     SUBDIR += p5-DateTime-Calendar-Japanese-Era

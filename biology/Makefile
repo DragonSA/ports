@@ -1,4 +1,4 @@
-# $FreeBSD: head/biology/Makefile 418057 2016-07-04 20:48:23Z rene $
+# $FreeBSD: head/biology/Makefile 426241 2016-11-16 14:52:53Z jrm $
 #
 
     COMMENT = Biology
@@ -55,6 +55,7 @@
     SUBDIR += muscle
     SUBDIR += ncbi-blast+
     SUBDIR += ncbi-toolkit
+    SUBDIR += njplot
     SUBDIR += p5-AcePerl
     SUBDIR += p5-Bio-ASN1-EntrezGene
     SUBDIR += p5-Bio-Das

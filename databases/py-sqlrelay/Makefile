@@ -1,5 +1,5 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: head/databases/py-sqlrelay/Makefile 382093 2015-03-24 13:30:42Z amdmi3 $
+# $FreeBSD: head/databases/py-sqlrelay/Makefile 426088 2016-11-14 06:49:45Z linimon $
 
 PORTNAME=	${SQLRELAY_PORTNAME}
 PORTVERSION=	${SQLRELAY_PORTVERSION}
@@ -24,6 +24,8 @@ INSTALL_WRKSRC=	${BUILD_WRKSRC}
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	${SQLRELAY_CONFIGURE_ARGS} \
 		--with-python-prefix="${LOCALBASE}"
+
+BROKEN_aarch64=		Fails to configure: machine aarch64-portbld not recognized
 
 .include "${.CURDIR}/../sqlrelay/Makefile.common"
 

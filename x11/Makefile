@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11/Makefile 424259 2016-10-19 14:50:26Z tijl $
+# $FreeBSD: head/x11/Makefile 426118 2016-11-14 16:12:56Z tcberner $
 #
 
     COMMENT = Ports to support the X window system
@@ -124,6 +124,16 @@
     SUBDIR += keyboardcast
     SUBDIR += keylaunch
     SUBDIR += keynav
+    SUBDIR += kf5-frameworkintegration
+    SUBDIR += kf5-frameworks
+    SUBDIR += kf5-kactivities
+    SUBDIR += kf5-kded
+    SUBDIR += kf5-kdelibs4support
+    SUBDIR += kf5-kglobalaccel
+    SUBDIR += kf5-kinit
+    SUBDIR += kf5-krunner
+    SUBDIR += kf5-kwindowsystem
+    SUBDIR += kf5-plasma-framework
     SUBDIR += kgamma
     SUBDIR += konsole
     SUBDIR += leechcraft

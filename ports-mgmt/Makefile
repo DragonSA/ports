@@ -1,9 +1,10 @@
-# $FreeBSD: head/ports-mgmt/Makefile 423733 2016-10-10 23:37:42Z cperciva $
+# $FreeBSD: head/ports-mgmt/Makefile 425111 2016-11-02 05:43:53Z swills $
 #
 
     COMMENT = Ports for managing, installing, and developing FreeBSD ports and packages
 
     SUBDIR += chucky
+    SUBDIR += create-rb-port
     SUBDIR += dialog4ports
     SUBDIR += dialog4ports-static
     SUBDIR += distilator

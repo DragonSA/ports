@@ -1,5 +1,5 @@
 # Created by: Alexander Churanov <churanov.port.maintainer@gmail.com>
-# $FreeBSD: head/devel/boost-libs/Makefile 422711 2016-09-24 11:06:57Z tijl $
+# $FreeBSD: head/devel/boost-libs/Makefile 426143 2016-11-15 05:24:26Z linimon $
 
 PORTNAME=	boost-libs
 PORTREVISION=	13
@@ -36,6 +36,8 @@ PLIST_SUB+=	COROUTINE="@comment " CONTEXT="@comment " \
 .else
 PLIST_SUB+=	COROUTINE="" CONTEXT="" LOCALE="" LOG=""
 .endif
+
+BROKEN_aarch64=		Fails to compile: multiple instances of error: platform not supported
 
 do-build:
 	@cd ${WRKSRC} && \

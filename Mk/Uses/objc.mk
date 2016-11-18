@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/objc.mk 411970 2016-03-27 01:23:25Z bapt $
+# $FreeBSD: head/Mk/Uses/objc.mk 425969 2016-11-12 17:42:52Z antoine $
 #
 # Objective C support
 #
@@ -48,8 +48,8 @@ ALT_COMPILER_TYPE=	gcc
 .endif
 
 # We do always need clang
-.if (${COMPILER_TYPE} == clang && ${COMPILER_VERSION} < 34) || ${COMPILER_TYPE} != clang
-.if ${ALT_COMPILER_TYPE} == clang && ${ALT_COMPILER_VERSION} >= 34
+.if ${COMPILER_TYPE} != clang
+.if ${ALT_COMPILER_TYPE} == clang
 CC=	/usr/bin/clang
 CPP=	/usr/bin/clang-cpp
 CXX=	/usr/bin/clang++

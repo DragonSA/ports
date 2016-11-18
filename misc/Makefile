@@ -1,4 +1,4 @@
-# $FreeBSD: head/misc/Makefile 424381 2016-10-21 07:29:38Z rene $
+# $FreeBSD: head/misc/Makefile 426009 2016-11-13 06:43:42Z novel $
 #
 
     COMMENT = Miscellaneous utilities
@@ -30,6 +30,7 @@
     SUBDIR += bottlerocket
     SUBDIR += boxes
     SUBDIR += brs
+    SUBDIR += bsod
     SUBDIR += buffer
     SUBDIR += cave
     SUBDIR += cdcollect
@@ -282,6 +283,7 @@
     SUBDIR += opencyc
     SUBDIR += openr2
     SUBDIR += orville-write
+    SUBDIR += osinfo-db
     SUBDIR += ossp-uuid
     SUBDIR += otter
     SUBDIR += p5-Acme-ButFirst
@@ -370,6 +372,7 @@
     SUBDIR += proxyper
     SUBDIR += pspresent
     SUBDIR += py-YABT
+    SUBDIR += py-glance
     SUBDIR += py-osd
     SUBDIR += py-pexpect
     SUBDIR += py-powerline-status

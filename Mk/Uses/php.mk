@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/php.mk 424411 2016-10-21 12:51:40Z mat $
+# $FreeBSD: head/Mk/Uses/php.mk 425222 2016-11-03 14:49:07Z mat $
 #
 # Support for PHP-based ports.
 #
@@ -188,7 +188,8 @@ RUN_DEPENDS+=	${PHPBASE}/include/php/main/php.h:${PHP_PORT}
 .  if  ${php_ARGS:Mmod} || (${php_ARGS:Mweb} && defined(PHP_VERSION) && ${PHP_SAPI:Mcgi} == "" && ${PHP_SAPI:Mfpm} == "")
 USE_APACHE_RUN=	22+
 .include "${PORTSDIR}/Mk/bsd.apache.mk"
-RUN_DEPENDS+=	${PHPBASE}/${APACHEMODDIR}/libphp5.so:${MOD_PHP_PORT}
+# libphpX.so only has the major version number in it, so remove the last digit of PHP_VER to get it.
+RUN_DEPENDS+=	${PHPBASE}/${APACHEMODDIR}/libphp${PHP_VER:C/.$//}.so:${MOD_PHP_PORT}
 .  endif
 
 PLIST_SUB+=	PHP_EXT_DIR=${PHP_EXT_DIR}

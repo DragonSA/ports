@@ -1,4 +1,4 @@
-# $FreeBSD: head/science/Makefile 418057 2016-07-04 20:48:23Z rene $
+# $FreeBSD: head/science/Makefile 426038 2016-11-13 12:32:46Z thierry $
 #
 
     COMMENT = Scientific ports
@@ -61,6 +61,7 @@
     SUBDIR += harminv
     SUBDIR += hdf
     SUBDIR += hdf5
+    SUBDIR += hdf5-18
     SUBDIR += hs-bio
     SUBDIR += isaac-cfd
     SUBDIR += jstrack
@@ -179,6 +180,7 @@
     SUBDIR += step
     SUBDIR += svmlight
     SUBDIR += szip
+    SUBDIR += tfel
     SUBDIR += udunits
     SUBDIR += v_sim
     SUBDIR += veusz

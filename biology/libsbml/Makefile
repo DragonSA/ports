@@ -1,5 +1,5 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: head/biology/libsbml/Makefile 413410 2016-04-16 01:54:15Z mi $
+# $FreeBSD: head/biology/libsbml/Makefile 425174 2016-11-02 22:45:14Z mat $
 
 PORTNAME=	libsbml
 PORTVERSION=	5.13.0
@@ -46,8 +46,7 @@ post-patch:
 
 post-install-EXAMPLES-on:
 	${MKDIR} ${STAGEDIR}${EXAMPLESDIR}
-	@${TAR} -C ${WRKSRC}/examples --exclude "*Makefile*" -cf - . | \
-		${TAR} -C ${STAGEDIR}${EXAMPLESDIR} --unlink -xf -
-	@${CHMOD} -R a+rX ${STAGEDIR}${EXAMPLESDIR}
+	cd ${WRKSRC}/examples && ${COPYTREE_SHARE} . \
+		${STAGEDIR}${EXAMPLESDIR} '! -name *Makefile*'
 
 .include <bsd.port.mk>

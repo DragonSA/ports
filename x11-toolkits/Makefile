@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11-toolkits/Makefile 424259 2016-10-19 14:50:26Z tijl $
+# $FreeBSD: head/x11-toolkits/Makefile 426118 2016-11-14 16:12:56Z tcberner $
 #
 
     COMMENT = X11 toolkits
@@ -82,6 +82,17 @@
     SUBDIR += irrlicht
     SUBDIR += itk
     SUBDIR += iwidgets
+    SUBDIR += kf5-attica
+    SUBDIR += kf5-kcompletion
+    SUBDIR += kf5-kconfigwidgets
+    SUBDIR += kf5-kdesignerplugin
+    SUBDIR += kf5-kguiaddons
+    SUBDIR += kf5-kitemviews
+    SUBDIR += kf5-kjobwidgets
+    SUBDIR += kf5-ktextwidgets
+    SUBDIR += kf5-kwidgetsaddons
+    SUBDIR += kf5-kxmlgui
+    SUBDIR += kirigami
     SUBDIR += lesstif
     SUBDIR += libXaw
     SUBDIR += libXmu
@@ -206,8 +217,6 @@
     SUBDIR += py-sexy
     SUBDIR += py-tkinter
     SUBDIR += py-tktreectrl
-    SUBDIR += py-traitsbackendwx
-    SUBDIR += py-traitsgui
     SUBDIR += py-vte
     SUBDIR += py-wax
     SUBDIR += py-wxPython-common

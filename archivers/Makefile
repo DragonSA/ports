@@ -1,4 +1,4 @@
-# $FreeBSD: head/archivers/Makefile 424381 2016-10-21 07:29:38Z rene $
+# $FreeBSD: head/archivers/Makefile 426118 2016-11-14 16:12:56Z tcberner $
 #
 
     COMMENT = Archivers
@@ -48,6 +48,7 @@
     SUBDIR += innoextract
     SUBDIR += javatar
     SUBDIR += jzlib
+    SUBDIR += kf5-karchive
     SUBDIR += kzip
     SUBDIR += laszip
     SUBDIR += lbrate
@@ -182,7 +183,6 @@
     SUBDIR += rpm2cpio
     SUBDIR += rpm4
     SUBDIR += ruby-lha
-    SUBDIR += ruby-zip
     SUBDIR += rubygem-archive-tar-minitar
     SUBDIR += rubygem-archive-zip
     SUBDIR += rubygem-bzip2-ruby

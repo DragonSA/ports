@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: head/lang/perl5.20/Makefile 420220 2016-08-15 09:33:39Z mat $
+# $FreeBSD: head/lang/perl5.20/Makefile 425226 2016-11-03 14:59:21Z mat $
 
 PORTNAME=	perl
 PORTVERSION=	${PERL_VERSION}
@@ -15,6 +15,9 @@ LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 LICENSE_FILE_ART10=	${WRKSRC}/Artistic
 LICENSE_FILE_GPLv1=	${WRKSRC}/Copying
+
+DEPRECATED=	Unsupported, please upgrade to a more recent version of Perl
+EXPIRATION_DATE=2017-06-30
 
 TEST_TARGET=	test_harness
 TEST_ENV=	${MAKE_ENV} TEST_JOBS=${MAKE_JOBS_NUMBER} \

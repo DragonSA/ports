@@ -1,4 +1,4 @@
-# $FreeBSD: head/print/Makefile 424259 2016-10-19 14:50:26Z tijl $
+# $FreeBSD: head/print/Makefile 425389 2016-11-05 13:25:50Z tijl $
 #
 
     COMMENT = Desktop publishing
@@ -126,6 +126,7 @@
     SUBDIR += lilypond-devel
     SUBDIR += linux-c6-cups-libs
     SUBDIR += linux-c7-cups-libs
+    SUBDIR += linux-c7-harfbuzz
     SUBDIR += linux-f10-cups-libs
     SUBDIR += lout
     SUBDIR += lpr-wrapper

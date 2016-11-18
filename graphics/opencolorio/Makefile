@@ -1,5 +1,5 @@
 # Created by: Shane Ambler <FreeBSD@Shaneware.biz>
-# $FreeBSD: head/graphics/opencolorio/Makefile 413746 2016-04-21 16:43:14Z swills $
+# $FreeBSD: head/graphics/opencolorio/Makefile 426197 2016-11-16 00:33:58Z linimon $
 
 PORTNAME=	opencolorio
 PORTVERSION=	1.0.9
@@ -10,8 +10,6 @@ MAINTAINER?=	FreeBSD@Shaneware.biz
 COMMENT?=	Complete color management solution
 
 LICENSE=	BSD3CLAUSE
-
-BROKEN_powerpc64=	Does not build
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	imageworks
@@ -36,6 +34,12 @@ SHEBANG_FILES=	share/sphinx/ExtractRstFromSourceCPP.py \
 #.else
 #CMAKE_ARGS+=	-DOCIO_USE_SSE:BOOL=OFF
 #.endif
+
+BROKEN_aarch64=		Does not compile: error: use of undeclared identifier __builtin_ia32_emms
+BROKEN_armv6=		Does not compile: error: use of undeclared identifier __builtin_ia32_emms
+BROKEN_mips64=		Does not compile: error: unrecognized command line option -msse2
+BROKEN_powerpc64=	Does not build
+BROKEN_sparc64=		Does not compile: error: unrecognized command line option -msse2
 
 .include <bsd.port.options.mk>
 

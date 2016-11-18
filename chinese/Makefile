@@ -1,4 +1,4 @@
-# $FreeBSD: head/chinese/Makefile 405224 2016-01-04 09:04:29Z miwi $
+# $FreeBSD: head/chinese/Makefile 425594 2016-11-07 06:18:47Z delphij $
 #
 
     COMMENT = Chinese support
@@ -31,6 +31,7 @@
     SUBDIR += enscript
     SUBDIR += eric6
     SUBDIR += eterm
+    SUBDIR += fandol
     SUBDIR += fcitx
     SUBDIR += fcitx-chewing
     SUBDIR += fcitx-cloudpinyin

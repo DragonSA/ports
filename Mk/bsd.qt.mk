@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: head/Mk/bsd.qt.mk 424842 2016-10-28 13:43:14Z tcberner $
+# $FreeBSD: head/Mk/bsd.qt.mk 425364 2016-11-04 22:56:40Z tcberner $
 #
 # Port variables:
 # USE_QT*			- List of Qt modules to depend on, with optional '_build'
@@ -61,9 +61,6 @@ MASTER_SITES=	${MASTER_SITE_QT}
 # because of bsd.options.mk).
 #PKGNAMEPREFIX?=	${_QT_RELNAME}-
 DISTINFO_FILE?=	${.CURDIR:H:H}/devel/${_QT_RELNAME}/distinfo
-
-# Can go after a while.
-CONFLICTS_BUILD=qt-3.* qt-copy-3.*
 
 LICENSE?=		LGPL21
 

@@ -1,4 +1,4 @@
-# $FreeBSD: head/lang/Makefile 424381 2016-10-21 07:29:38Z rene $
+# $FreeBSD: head/lang/Makefile 426118 2016-11-14 16:12:56Z tcberner $
 #
 
     COMMENT = Programming languages
@@ -145,6 +145,7 @@
     SUBDIR += js_of_ocaml
     SUBDIR += jython
     SUBDIR += kawa
+    SUBDIR += kf5-kross
     SUBDIR += kturtle
     SUBDIR += lafontaine
     SUBDIR += lci

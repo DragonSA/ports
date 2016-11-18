@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/bsd.options.desc.mk 422673 2016-09-23 13:14:43Z jbeich $
+# $FreeBSD: head/Mk/bsd.options.desc.mk 425274 2016-11-03 21:47:46Z tijl $
 #
 # READ BEFORE EDITING:
 # - Please keep descriptions sorted alphabetically by variable name.
@@ -356,7 +356,6 @@ NOTIFY_DESC?=		Desktop notification support
 NSS_DESC?=		SSL/TLS support via NSS
 NTLM_DESC?=		NTLM authentication support
 NUMPY_DESC?=		NumPy mathematical computing support
-NVIDIA_GL_DESC?=	libGL support via nvidia-driver
 OBJC_DESC?=		Objective-C language support
 ODBC_DESC?=		ODBC database backend
 ODF_DESC?=		Open Document Format (ODF) file support

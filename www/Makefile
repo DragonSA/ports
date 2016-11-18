@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/Makefile 424967 2016-10-30 23:42:36Z nivit $
+# $FreeBSD: head/www/Makefile 426118 2016-11-14 16:12:56Z tcberner $
 #
 
     COMMENT = Ports related to the World Wide Web
@@ -310,7 +310,6 @@
     SUBDIR += httpsqs
     SUBDIR += httptunnel
     SUBDIR += httrack
-    SUBDIR += hydra
     SUBDIR += hypermail
     SUBDIR += igal2
     SUBDIR += ikiwiki
@@ -337,6 +336,10 @@
     SUBDIR += kannel-sqlbox
     SUBDIR += kcgi
     SUBDIR += kdewebdev4
+    SUBDIR += kf5-kdewebkit
+    SUBDIR += kf5-khtml
+    SUBDIR += kf5-kjs
+    SUBDIR += kf5-kjsembed
     SUBDIR += kohana
     SUBDIR += kpartsplugin
     SUBDIR += kplaylist
@@ -369,8 +372,10 @@
     SUBDIR += links-hacked
     SUBDIR += links1
     SUBDIR += linux-c6-flashplugin11
+    SUBDIR += linux-c6-flashplugin24
     SUBDIR += linux-c6-qt47-webkit
     SUBDIR += linux-c7-flashplugin11
+    SUBDIR += linux-c7-flashplugin24
     SUBDIR += linux-c7-qtwebkit
     SUBDIR += linux-f10-flashplugin11
     SUBDIR += linux-firefox
@@ -1382,6 +1387,7 @@
     SUBDIR += pear-Horde_Http
     SUBDIR += pear-Horde_Routes
     SUBDIR += pear-Horde_Service_Facebook
+    SUBDIR += pear-Horde_Service_Gravatar
     SUBDIR += pear-Horde_Service_Twitter
     SUBDIR += pear-Horde_Service_UrlShortener
     SUBDIR += pear-Horde_Service_Weather
@@ -1397,7 +1403,6 @@
     SUBDIR += pear-Services_GeoNames
     SUBDIR += pear-Services_Google
     SUBDIR += pear-Services_OpenSearch
-    SUBDIR += pear-Services_SharedBook
     SUBDIR += pear-Services_ShortURL
     SUBDIR += pear-Services_TinyURL
     SUBDIR += pear-Services_TwitPic
@@ -1557,7 +1562,6 @@
     SUBDIR += py-django-picklefield
     SUBDIR += py-django-pipeline
     SUBDIR += py-django-pipeline13
-    SUBDIR += py-django-piston
     SUBDIR += py-django-post_office
     SUBDIR += py-django-profiles
     SUBDIR += py-django-recaptcha

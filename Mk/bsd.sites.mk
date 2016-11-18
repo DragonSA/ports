@@ -20,7 +20,7 @@
 #
 # Note: all entries should terminate with a slash.
 #
-# $FreeBSD: head/Mk/bsd.sites.mk 424635 2016-10-25 17:04:38Z jrm $
+# $FreeBSD: head/Mk/bsd.sites.mk 426314 2016-11-18 08:51:14Z amdmi3 $
 #
 
 # Where to put distfiles that don't have any other master site
@@ -1084,8 +1084,8 @@ MASTER_SITE_SAVANNAH+= \
 # Updated:	2013-03-25
 .if !defined(IGNORE_MASTER_SITE_SOURCEFORGE)
 MASTER_SITE_SOURCEFORGE+= http://downloads.sourceforge.net/project/%SUBDIR%/
-.for mirror in heanet sunet iweb switch freefr garr aarnet jaist master \
-	nchc ncu internode waix hivelocity superb-dca3 ufpr tenet \
+.for mirror in heanet iweb freefr jaist master \
+	nchc ncu internode waix superb-dca3 ufpr tenet \
 	netcologne ignum kent
 MASTER_SITE_SOURCEFORGE+= \
 	http://${mirror}.dl.sourceforge.net/project/%SUBDIR%/

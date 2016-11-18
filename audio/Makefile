@@ -1,4 +1,4 @@
-# $FreeBSD: head/audio/Makefile 424830 2016-10-28 13:03:39Z kwm $
+# $FreeBSD: head/audio/Makefile 425024 2016-10-31 20:40:43Z jbeich $
 #
 
     COMMENT = Audio tools
@@ -478,6 +478,7 @@
     SUBDIR += lollypop
     SUBDIR += lpac
     SUBDIR += lua51-mpd
+    SUBDIR += lv2
     SUBDIR += lv2core
     SUBDIR += lxmusic
     SUBDIR += mac

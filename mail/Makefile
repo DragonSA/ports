@@ -1,4 +1,4 @@
-# $FreeBSD: head/mail/Makefile 424381 2016-10-21 07:29:38Z rene $
+# $FreeBSD: head/mail/Makefile 426021 2016-11-13 10:03:39Z rakuco $
 #
 
     COMMENT = Electronic mail utilities
@@ -723,7 +723,6 @@
     SUBDIR += tmda
     SUBDIR += tpop3d
     SUBDIR += trojita
-    SUBDIR += trojita-qt4
     SUBDIR += tumgreyspf
     SUBDIR += up-imapproxy
     SUBDIR += usendmail

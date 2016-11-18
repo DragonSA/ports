@@ -1,8 +1,8 @@
 # Created by: Xin LI <delphij@FreeBSD.org>
-# $FreeBSD: head/devel/hgsvn/Makefile 412346 2016-04-01 14:00:51Z mat $
+# $FreeBSD: head/devel/hgsvn/Makefile 425192 2016-11-03 06:53:09Z delphij $
 
 PORTNAME=	hgsvn
-PORTVERSION=	0.3.15
+PORTVERSION=	0.5.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -15,7 +15,7 @@ LICENSE=	GPLv3
 RUN_DEPENDS=	svn:devel/subversion \
 		hg:devel/mercurial
 
-USES=		python zip
+USES=		python
 USE_PYTHON=	distutils autoplist
 PLIST_SUB=	VERSION=${PORTVERSION} PYVER=${PYTHON_VERSION:S/python//}
 

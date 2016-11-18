@@ -1,8 +1,9 @@
 # Created by: Stefan Ehmann <shoesoft@gmx.net>
-# $FreeBSD: head/devel/ice/Makefile 423875 2016-10-12 17:23:57Z grembo $
+# $FreeBSD: head/devel/ice/Makefile 426170 2016-11-15 14:52:35Z grembo $
 
 PORTNAME=		Ice
 PORTVERSION=		3.6.3
+PORTREVISION=		1
 DISTVERSIONPREFIX=	v
 CATEGORIES=		devel
 
@@ -50,9 +51,6 @@ CFLAGS+=		-ftemplate-depth-128 -fPIC -DPIC -Wall -D_REENTRANT -I${LOCALBASE}/inc
 .if !${PORT_OPTIONS:MDEBUG}
 CFLAGS+=		-DNDEBUG
 .endif
-
-BROKEN_ia64=		Does not compile on ${ARCH}
-BROKEN_sparc64=		Does not compile on ${ARCH}
 
 .if ((${ARCH} != i386) && (${ARCH} != powerpc))
 MAKE_ENV+=		LP64=yes

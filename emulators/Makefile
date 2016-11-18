@@ -1,4 +1,4 @@
-# $FreeBSD: head/emulators/Makefile 424259 2016-10-19 14:50:26Z tijl $
+# $FreeBSD: head/emulators/Makefile 425599 2016-11-07 10:12:59Z matthew $
 #
 
     COMMENT = Emulators for other operating systems
@@ -171,6 +171,7 @@
     SUBDIR += wine-mono
     SUBDIR += wine-mono-devel
     SUBDIR += wine-staging
+    SUBDIR += winetricks
     SUBDIR += wxmupen64plus
     SUBDIR += x48
     SUBDIR += x49gp

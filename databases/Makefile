@@ -1,4 +1,4 @@
-# $FreeBSD: head/databases/Makefile 424700 2016-10-26 13:54:34Z demon $
+# $FreeBSD: head/databases/Makefile 426123 2016-11-14 16:26:27Z cmt $
 #
 
     COMMENT = Databases and related software
@@ -630,6 +630,7 @@
     SUBDIR += postgis20
     SUBDIR += postgis21
     SUBDIR += postgis22
+    SUBDIR += postgis23
     SUBDIR += postgresql-jdbc
     SUBDIR += postgresql-libpgeasy
     SUBDIR += postgresql-libpqxx

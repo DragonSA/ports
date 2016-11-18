@@ -1,4 +1,4 @@
-# $FreeBSD: head/ftp/Makefile 424784 2016-10-27 19:51:38Z antoine $
+# $FreeBSD: head/ftp/Makefile 425765 2016-11-08 21:28:07Z rene $
 #
 
     COMMENT = FTP client and server utilities
@@ -14,7 +14,6 @@
     SUBDIR += cftp
     SUBDIR += cmdftp
     SUBDIR += curl
-    SUBDIR += curl-hiphop
     SUBDIR += curlpp
     SUBDIR += dmachine
     SUBDIR += fastdfs
@@ -87,6 +86,7 @@
     SUBDIR += rubygem-curb
     SUBDIR += scythia
     SUBDIR += smbftpd
+    SUBDIR += spegla
     SUBDIR += tftp-hpa
     SUBDIR += tnftp
     SUBDIR += tnftpd
