@@ -1,12 +1,12 @@
 # Created by: Boris Samorodov <bsam@FreeBSD.org>
-# $FreeBSD: head/devel/eric6/Makefile.inc 423622 2016-10-09 18:47:21Z dbn $
+# $FreeBSD: head/devel/eric6/Makefile.inc 426333 2016-11-18 18:49:55Z dbn $
 #
 # This is a set of Makefile macros which allow to build the core and
 # localized language packages for devel/eric6:
 # french/eric6, german/eric6, russian/eric6
 
 PORTNAME=	eric6
-PORTVERSION=	6.1.10
+PORTVERSION=	6.1.11
 MASTER_SITES=	SF/eric-ide/${PORTNAME}/stable/${PORTVERSION}
 DISTNAME?=	${PORTNAME}-i18n-${I18N_LANG}-${PORTVERSION}
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTVERSION}
@@ -22,7 +22,7 @@ I18N_LANG?=	ru
 INSTALL_CMD?=	install-i18n.py -p ${STAGEDIR}
 MAKE_ENV+=	"HOME=${WRKDIR}"
 
-USES+=		python:2
+USES+=		python
 NO_BUILD=	yes
 PLIST_FILES?=	%%DATADIR%%/i18n/${PORTNAME}_${I18N_LANG}.qm
 EXTRA_PATCHES?=	${.CURDIR}/../../devel/eric6/files/extra-patch-install-i18n.py
@@ -31,10 +31,18 @@ EXTRA_PATCHES?=	${.CURDIR}/../../devel/eric6/files/extra-patch-install-i18n.py
 NO_ARCH=	yes
 .endif
 
+.include <bsd.port.pre.mk>
+
+.if ${PYTHON_VER} <= 2.7
+PLIST_SUB+=	PYTHON2=
+.else
+PLIST_SUB+=	PYTHON2="@comment "
+.endif
+
 do-install:
 	@(cd ${WRKSRC}; \
 	${SETENV} ${MAKE_ENV} ${PYTHON_CMD} ${INSTALL_CMD})
 
 DESCR=		${.CURDIR}/../../devel/eric6/pkg-descr
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>

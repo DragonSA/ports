@@ -1,5 +1,5 @@
 # Created by: Boris Samorodov <bsam@FreeBSD.org>
-# $FreeBSD: head/devel/eric6/Makefile 420509 2016-08-20 12:56:27Z dbn $
+# $FreeBSD: head/devel/eric6/Makefile 426333 2016-11-18 18:49:55Z dbn $
 
 CATEGORIES=	devel python
 DISTNAME=	${PORTNAME}-${PORTVERSION}
@@ -34,6 +34,9 @@ MASTERPORT=
 PORTDATA=	*
 PORTDOCS=	*
 PORTEXAMPLES=	*
+
+post-patch:
+	${RM} ${WRKSRC}/eric/i18n/*.qm ${WRKSRC}/eric/i18n/*.ts
 
 do-configure:
 	${SED}  -e 's,PYTHON_SITELIBDIR,${PYTHON_SITELIBDIR},' \
