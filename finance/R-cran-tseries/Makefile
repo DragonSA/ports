@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: head/finance/R-cran-tseries/Makefile 417138 2016-06-20 04:32:29Z dbn $
+# $FreeBSD: head/finance/R-cran-tseries/Makefile 426364 2016-11-19 12:57:24Z dbn $
 
 PORTNAME=	tseries
 DISTVERSION=	0.10-35
@@ -18,6 +18,6 @@ BUILD_DEPENDS=	R-cran-quadprog>0:math/R-cran-quadprog \
 RUN_DEPENDS=	R-cran-quadprog>0:math/R-cran-quadprog \
 		R-cran-zoo>0:math/R-cran-zoo
 
-USES=		cran:compiles
+USES=		cran:auto-plist,compiles
 
 .include <bsd.port.mk>

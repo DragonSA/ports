@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: head/finance/R-cran-timeSeries/Makefile 412346 2016-04-01 14:00:51Z mat $
+# $FreeBSD: head/finance/R-cran-timeSeries/Makefile 426364 2016-11-19 12:57:24Z dbn $
 
 PORTNAME=	timeSeries
 PORTVERSION=	3022.101.2
@@ -17,6 +17,6 @@ TEST_DEPENDS=	R-cran-RUnit>=0:devel/R-cran-RUnit \
 		R-cran-xts>=0:math/R-cran-xts \
 		R-cran-PerformanceAnalytics>=0:finance/R-cran-PerformanceAnalytics
 
-USES=	cran
+USES=		cran:auto-plist
 
 .include <bsd.port.mk>
