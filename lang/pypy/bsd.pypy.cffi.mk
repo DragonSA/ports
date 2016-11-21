@@ -1,4 +1,4 @@
-# $FreeBSD: head/lang/pypy/bsd.pypy.cffi.mk 421529 2016-09-08 04:40:28Z dbn $
+# $FreeBSD: head/lang/pypy/bsd.pypy.cffi.mk 426562 2016-11-20 07:12:44Z dbn $
 
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTFILES=
@@ -10,7 +10,7 @@ PLIST_FILES=	%%PYPY_DIR%%/lib_pypy/${CFFI_MODULE}_cffi.%%PYPY_CFFI_VER%%.so
 
 CFFI_MODULE?=	_${PORTNAME}
 
-PYTHON_PORTVERSION?=	5.4.1
+PYTHON_PORTVERSION?=	5.6.0
 PYTHON_PKGNAMEPREFIX=	pypy-
 PYTHON_CMD=	${LOCALBASE}/bin/pypy
 

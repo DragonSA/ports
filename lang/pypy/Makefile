@@ -1,9 +1,8 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: head/lang/pypy/Makefile 423294 2016-10-04 19:45:51Z marino $
+# $FreeBSD: head/lang/pypy/Makefile 426562 2016-11-20 07:12:44Z dbn $
 
 PORTNAME?=	pypy
-DISTVERSION?=	5.4.1	# Also update bsd.pypy.cffi.mk
-PORTREVISION?=	1
+DISTVERSION?=	5.6.0	# Also update bsd.pypy.cffi.mk
 CATEGORIES=	lang python
 MASTER_SITES=	https://bitbucket.org/pypy/pypy/downloads/ http://buildbot.pypy.org/mirror/
 DISTNAME?=	${PORTNAME}2-v${PORTVERSION}-src
