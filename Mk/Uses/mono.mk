@@ -54,7 +54,7 @@ GACUTIL_INSTALL=${GACUTIL} /i
 GACUTIL_INSTALL_PACKAGE=${GACUTIL} /i /package 1.0 /package 2.0
 
 .if ${mono_ARGS:Mnuget}
-NUGET_PACKAGEDIR=	${WRKSRC}/packages
+NUGET_PACKAGEDIR?=	${WRKSRC}/packages
 
 .  for depend in ${NUGET_DEPENDS}
 id=		${depend:C/=.*$//}
