@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: head/lang/pypy/Makefile 426562 2016-11-20 07:12:44Z dbn $
+# $FreeBSD: head/lang/pypy/Makefile 426824 2016-11-22 13:31:47Z dbn $
 
 PORTNAME?=	pypy
 DISTVERSION?=	5.6.0	# Also update bsd.pypy.cffi.mk
@@ -60,10 +60,6 @@ PLIST=		${.CURDIR}/pkg-plist
 
 .include "${MASTERDIR}/bsd.pypy.mk"
 .include <bsd.port.pre.mk>
-
-.if ${SSL_DEFAULT:Mlibressl*}
-IGNORE=	Detected LibreSSL which is interpreted as unsupported OpenSSL > v1.1
-.endif
 
 .if ${ARCH} == "i386" || ${ARCH} == "armv6"
 PYPY_BITS=	32
