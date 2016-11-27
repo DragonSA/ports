@@ -1,4 +1,4 @@
-# $FreeBSD: head/deskutils/Makefile 418889 2016-07-21 18:47:55Z kmoore $
+# $FreeBSD: head/deskutils/Makefile 426977 2016-11-23 20:51:48Z rene $
 #
 
     COMMENT = Things that used to be on the desktop before computers were invented
@@ -261,7 +261,6 @@
     SUBDIR += xchm
     SUBDIR += xfce4-generic-slider
     SUBDIR += xfce4-notes-plugin
-    SUBDIR += xfce4-notification-daemon
     SUBDIR += xfce4-notifyd
     SUBDIR += xfce4-tumbler
     SUBDIR += xfce4-volumed

@@ -1,4 +1,4 @@
-# $FreeBSD: head/archivers/Makefile 426118 2016-11-14 16:12:56Z tcberner $
+# $FreeBSD: head/archivers/Makefile 427029 2016-11-24 15:34:11Z sunpoet $
 #
 
     COMMENT = Archivers
@@ -11,7 +11,6 @@
     SUBDIR += ark
     SUBDIR += atool
     SUBDIR += bicom
-    SUBDIR += brotli
     SUBDIR += bzip
     SUBDIR += bzip2
     SUBDIR += cabextract
@@ -162,6 +161,7 @@
     SUBDIR += pxz
     SUBDIR += py-attic
     SUBDIR += py-borgbackup
+    SUBDIR += py-brotli
     SUBDIR += py-bz2file
     SUBDIR += py-libarchive-c
     SUBDIR += py-librtfcomp

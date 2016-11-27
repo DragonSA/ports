@@ -1,4 +1,4 @@
-# $FreeBSD: head/games/Makefile 426238 2016-11-16 13:19:06Z pawel $
+# $FreeBSD: head/games/Makefile 426728 2016-11-21 15:24:34Z amdmi3 $
 #
 
     COMMENT = Games and related software
@@ -52,6 +52,7 @@
     SUBDIR += assaultcube
     SUBDIR += asteroid
     SUBDIR += asteroids3d
+    SUBDIR += asylum
     SUBDIR += atanks
     SUBDIR += atomix
     SUBDIR += atr3d

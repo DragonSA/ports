@@ -1,4 +1,4 @@
-# $FreeBSD: head/sysutils/Makefile 426216 2016-11-16 07:13:27Z acm $
+# $FreeBSD: head/sysutils/Makefile 426907 2016-11-23 12:44:38Z bapt $
 #
 
     COMMENT = System utilities
@@ -393,7 +393,6 @@
     SUBDIR += gnome-system-monitor
     SUBDIR += gnome_subr
     SUBDIR += goaccess
-    SUBDIR += gosa
     SUBDIR += gpart
     SUBDIR += gpte
     SUBDIR += graffer
@@ -1117,6 +1116,7 @@
     SUBDIR += tren
     SUBDIR += ts
     SUBDIR += tss
+    SUBDIR += ttyd
     SUBDIR += tty-clock
     SUBDIR += ttyload
     SUBDIR += tuptime

@@ -1,4 +1,4 @@
-# $FreeBSD: head/audio/Makefile 425024 2016-10-31 20:40:43Z jbeich $
+# $FreeBSD: head/audio/Makefile 426607 2016-11-20 17:32:49Z ehaupt $
 #
 
     COMMENT = Audio tools
@@ -709,6 +709,7 @@
     SUBDIR += sfront
     SUBDIR += shairplay
     SUBDIR += shairport
+    SUBDIR += shairport-sync
     SUBDIR += shntool
     SUBDIR += shorten
     SUBDIR += shout

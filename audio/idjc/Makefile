@@ -1,8 +1,9 @@
 # Created by: Sean Bruno <sbruno@freebsd.org>
-# $FreeBSD: head/audio/idjc/Makefile 424644 2016-10-25 19:09:14Z antoine $
+# $FreeBSD: head/audio/idjc/Makefile 426876 2016-11-22 22:03:29Z antoine $
 
 PORTNAME=	idjc
 PORTVERSION=	0.8.16
+PORTREVISION=	1
 CATEGORIES=	audio python
 MASTER_SITES=	SF/idjc/idjc/0.8
 
@@ -44,6 +45,10 @@ BROKEN_powerpc64=	Does not build
 PLIST_SUB+=		PORTVERSION="${PORTVERSION}"
 
 DOCSDIR=	${PREFIX}/share/doc/${PORTNAME}-${PORTVERSION}
+
+post-patch:
+	${REINPLACE_CMD} 's,PYTHON=python,PYTHON=${PYTHON_CMD},' ${WRKSRC}/py-compile
+
 pre-install:
 	${REINPLACE_CMD} 's|libvorbis.so.0|libvorbis.so|' \
 		${WRKSRC}/python/format.py

@@ -1,4 +1,4 @@
-# $FreeBSD: head/graphics/Makefile 426118 2016-11-14 16:12:56Z tcberner $
+# $FreeBSD: head/graphics/Makefile 426692 2016-11-21 06:42:03Z olivierd $
 #
 
     COMMENT = Graphics tools and libraries
@@ -579,6 +579,8 @@
     SUBDIR += luminance-qt5
     SUBDIR += luxrender
     SUBDIR += luxrender14
+    SUBDIR += lximage-qt
+    SUBDIR += lximageqt-l10n
     SUBDIR += mahotas
     SUBDIR += maim
     SUBDIR += makehuman
@@ -772,6 +774,7 @@
     SUBDIR += phototonic
     SUBDIR += php-facedetect
     SUBDIR += php-gdal
+    SUBDIR += php-geos
     SUBDIR += php-libpuzzle
     SUBDIR += php-magickwand
     SUBDIR += php5-ffmpeg
@@ -801,6 +804,7 @@
     SUBDIR += pngrewrite
     SUBDIR += pngwriter
     SUBDIR += podofo
+    SUBDIR += polyclipping
     SUBDIR += poppler
     SUBDIR += poppler-data
     SUBDIR += poppler-glib

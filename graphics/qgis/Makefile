@@ -1,5 +1,5 @@
 # Created by: Laurent Courty
-# $FreeBSD: head/graphics/qgis/Makefile 424866 2016-10-28 17:13:24Z jbeich $
+# $FreeBSD: head/graphics/qgis/Makefile 426869 2016-11-22 21:56:37Z antoine $
 
 PORTNAME=	qgis
 DISTVERSIONPREFIX=	final-
@@ -11,7 +11,8 @@ COMMENT=	Geographical Information System (GIS) data viewer
 
 LICENSE=	GPLv2
 
-BUILD_DEPENDS=	txt2tags:textproc/txt2tags
+BUILD_DEPENDS=	txt2tags:textproc/txt2tags \
+		python:lang/python
 LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libgdal.so:graphics/gdal \
 		libgeos.so:graphics/geos \

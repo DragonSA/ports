@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/Makefile 426118 2016-11-14 16:12:56Z tcberner $
+# $FreeBSD: head/www/Makefile 427215 2016-11-27 10:08:11Z rene $
 #
 
     COMMENT = Ports related to the World Wide Web
@@ -120,6 +120,7 @@
     SUBDIR += drraw
     SUBDIR += drupal7
     SUBDIR += drupal7-wysiwyg
+    SUBDIR += drupal8
     SUBDIR += drush
     SUBDIR += dtse
     SUBDIR += dummyflash
@@ -190,7 +191,6 @@
     SUBDIR += gallery3
     SUBDIR += gatling
     SUBDIR += gecko-mediaplayer
-    SUBDIR += gecko-sharp20
     SUBDIR += geeklog
     SUBDIR += geeknote
     SUBDIR += geneweb
@@ -199,6 +199,7 @@
     SUBDIR += get_flash_videos
     SUBDIR += getleft
     SUBDIR += gist
+    SUBDIR += gitea
     SUBDIR += gitlab
     SUBDIR += gitlab-workhorse
     SUBDIR += glassfish
@@ -542,6 +543,8 @@
     SUBDIR += node
     SUBDIR += node012
     SUBDIR += node4
+    SUBDIR += node6
+    SUBDIR += node7
     SUBDIR += nostromo
     SUBDIR += npapi-vlc
     SUBDIR += npapi-xine
@@ -549,6 +552,7 @@
     SUBDIR += npm
     SUBDIR += npm012
     SUBDIR += npm2
+    SUBDIR += npm3
     SUBDIR += nspluginwrapper
     SUBDIR += obhttpd
     SUBDIR += ocaml-net
@@ -1258,6 +1262,7 @@
     SUBDIR += p5-WWW-DHL
     SUBDIR += p5-WWW-Dilbert
     SUBDIR += p5-WWW-Facebook-API
+    SUBDIR += p5-WWW-Form-UrlEncoded
     SUBDIR += p5-WWW-FreeProxy
     SUBDIR += p5-WWW-GitHub-Gist
     SUBDIR += p5-WWW-Google-Calculator

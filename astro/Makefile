@@ -1,4 +1,4 @@
-# $FreeBSD: head/astro/Makefile 423561 2016-10-09 01:22:59Z jbeich $
+# $FreeBSD: head/astro/Makefile 426943 2016-11-23 16:43:27Z amdmi3 $
 #
 
     COMMENT = Astronomical ports
@@ -34,6 +34,7 @@
     SUBDIR += libgal
     SUBDIR += libkgeomap
     SUBDIR += libnova
+    SUBDIR += libosmium
     SUBDIR += libosmpbf
     SUBDIR += luna
     SUBDIR += marble
@@ -45,7 +46,6 @@
     SUBDIR += nightfall
     SUBDIR += opencpn
     SUBDIR += openuniverse
-    SUBDIR += osmium
     SUBDIR += osmosis
     SUBDIR += p5-Astro
     SUBDIR += p5-Astro-ADS

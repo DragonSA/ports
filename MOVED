@@ -1,7 +1,7 @@
 #
 # MOVED -- A list of (recently) moved or removed ports
 #
-# $FreeBSD: head/MOVED 426271 2016-11-16 23:25:09Z joerg $
+# $FreeBSD: head/MOVED 427215 2016-11-27 10:08:11Z rene $
 #
 # Each entry consists of a single line containing the following four
 # fields in the order named, separated with the pipe (`|') character:
@@ -8804,3 +8804,11 @@ security/erlang-p1tls|security/erlang-fast_tls|2016-11-11|Project was renamed
 mail/trojita-qt4|mail/trojita|2016-11-13|Qt4 support was dropped, use mail/trojita instead
 devel/extra-cmake-modules|devel/kf5-extra-cmake-modules|2016-11-14|Renamed to match other KF5 port
 net/vnc||2016-11-14|Has expired: Distfiles no longer available.
+sysutils/gosa||2016-11-20|Has expired: this version of gosa cannot be fixed (requires PHP < 5.4)
+security/krb5-112||2016-11-20|Has expired: EOL twelve months after release of krb5-1.14
+astro/osmium|astro/libosmium|2016-11-23|Rename according to upstream
+deskutils/xfce4-notification-daemon|deskutils/xfce4-notifyd|2016-11-23|Has expired: No longer supported by upstream, replaced with deskutils/xfce4-notifyd
+archivers/brotli|archivers/py-brotli|2016-11-24|Brotli is a python module
+textproc/clucene-qt5||2016-11-25|Reintegrated into devel/qt5-help
+devel/go-shellwords||2016-11-26|Integrated into textproc/fzf build procedure
+www/gecko-sharp20||2016-11-27|Has expired: Broken, no upstream found and no release in 8 years

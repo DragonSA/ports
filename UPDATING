@@ -5,7 +5,32 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
-20161116
+20161126:
+  AFFECTS: Users of security/gpgme-*
+  AUTHOR: jhale@FreeBSD.org
+
+  Gpgme has been updated to 1.8.0.
+  With it comes the removal of libgpgme-pthread.so in favor of using
+  libgpgme.so itself as the thread-safe library. Ports that may have
+  linked to -lgpgme-pthread will now just link to -lgpgme. PORTREVISION
+  has been bumped on all ports with a dependency on security/gpgme.
+
+  The Python module provided by security/py-gpgme has been renamed
+  from pyme3 to gpg, as well.
+
+  Portmaster users:
+      portmaster -r gpgme
+  Portupgrade users:
+      portupgrade -fr security/gpgme
+
+20161121:
+  AFFECTS: Users of graphics/tiff
+  AUTHOR: antoine@FreeBSD.org
+
+  The tiff port was updated to 4.0.7.
+  The following tools are removed from this release: bmp2tiff, gif2tiff, ras2tiff, rgb2ycbcr and thumbnail.
+
+20161116:
   AFFECTS: Users of sysutils/bareos-*
   AUTHOR: rand@iteris.com
 
@@ -13875,4 +13900,4 @@ or
   'nobody' by default.  Make sure any existing configuration files are
   readable by that user.
 
-$FreeBSD: head/UPDATING 426218 2016-11-16 07:34:03Z acm $
+$FreeBSD: head/UPDATING 427185 2016-11-26 23:41:16Z jhale $

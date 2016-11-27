@@ -1,9 +1,9 @@
 # Created by: Oliver Lehmann <oliver@FreeBSD.org>
-# $FreeBSD: head/net/cyphesis/Makefile 424644 2016-10-25 19:09:14Z antoine $
+# $FreeBSD: head/net/cyphesis/Makefile 426908 2016-11-23 12:45:46Z jbeich $
 
 PORTNAME=	cyphesis
 PORTVERSION=	0.6.2
-PORTREVISION=	6
+PORTREVISION=	7
 CATEGORIES=	net
 MASTER_SITES=	SF/worldforge/${PORTNAME}%20%28server%29/${PORTVERSION}
 

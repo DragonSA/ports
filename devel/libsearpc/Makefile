@@ -1,22 +1,21 @@
-# $FreeBSD: head/devel/libsearpc/Makefile 424427 2016-10-21 15:21:13Z mat $
+# $FreeBSD: head/devel/libsearpc/Makefile 426371 2016-11-19 13:42:44Z pi $
 
 PORTNAME=	libsearpc
-PORTVERSION=	3.0.7
-PORTREVISION=	1
+PORTVERSION=	3.1.0
 CATEGORIES=	devel
 
 MAINTAINER=	ultima1252@gmail.com
 COMMENT=	Simple RPC framework based on GObject System in C
 
-LICENSE=	LGPL3
-LICENSE_FILE=	${WRKSRC}/COPYING
+LICENSE=	APACHE20
+LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 LIB_DEPENDS=	libjansson.so:devel/jansson \
 		libgobject-2.0.so:devel/glib20
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	haiwen
-GH_TAGNAME=	v3.0-latest
+GH_TAGNAME=	v3.1-latest
 
 USES=		autoreconf gettext libtool pathfix pkgconfig python:2
 USE_LDCONFIG=	yes

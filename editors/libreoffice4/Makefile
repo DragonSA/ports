@@ -1,8 +1,8 @@
-# $FreeBSD: head/editors/libreoffice4/Makefile 424411 2016-10-21 12:51:40Z mat $
+# $FreeBSD: head/editors/libreoffice4/Makefile 426908 2016-11-23 12:45:46Z jbeich $
 
 PORTNAME=	libreoffice
 PORTVERSION=	4.3.7
-PORTREVISION=	8
+PORTREVISION=	10
 CATEGORIES=	editors
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${PORTVERSION}/ \
 		http://dev-www.libreoffice.org/extern/:ext \

@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11/Makefile 426118 2016-11-14 16:12:56Z tcberner $
+# $FreeBSD: head/x11/Makefile 426375 2016-11-19 14:19:07Z olivierd $
 #
 
     COMMENT = Ports to support the X window system
@@ -171,7 +171,9 @@
     SUBDIR += libexo
     SUBDIR += libfakekey
     SUBDIR += libfm
+    SUBDIR += libfmqt-l10n
     SUBDIR += libfm-extra
+    SUBDIR += libfm-qt
     SUBDIR += libgnome
     SUBDIR += libgnome-reference
     SUBDIR += libgnomekbd

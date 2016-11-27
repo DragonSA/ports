@@ -1,4 +1,4 @@
-# $FreeBSD: head/lang/Makefile 426118 2016-11-14 16:12:56Z tcberner $
+# $FreeBSD: head/lang/Makefile 426722 2016-11-21 14:36:51Z kwm $
 #
 
     COMMENT = Programming languages
@@ -184,6 +184,7 @@
     SUBDIR += nawk
     SUBDIR += nbc
     SUBDIR += nbfc
+    SUBDIR += neko
     SUBDIR += nesasm
     SUBDIR += newlisp
     SUBDIR += newlisp-devel
@@ -255,6 +256,7 @@
     SUBDIR += php_doc
     SUBDIR += picoc
     SUBDIR += pike78
+    SUBDIR += pocl
     SUBDIR += polyml
     SUBDIR += ptoc
     SUBDIR += pure

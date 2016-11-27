@@ -1,4 +1,4 @@
-# $FreeBSD: head/net/Makefile 426132 2016-11-14 19:13:00Z rene $
+# $FreeBSD: head/net/Makefile 426773 2016-11-22 00:12:09Z shurd $
 #
 
     COMMENT = Networking tools
@@ -53,6 +53,7 @@
     SUBDIR += bird6
     SUBDIR += bittwist
     SUBDIR += bmon
+    SUBDIR += bnxt-kmod
     SUBDIR += boclient
     SUBDIR += boinc-client
     SUBDIR += boinc_curses
@@ -498,6 +499,7 @@
     SUBDIR += openldap24-sasl-client
     SUBDIR += openldap24-server
     SUBDIR += openmpi
+    SUBDIR += openmpi2
     SUBDIR += openmq
     SUBDIR += openmq-client
     SUBDIR += openntpd
@@ -1266,6 +1268,7 @@
     SUBDIR += socketpipe
     SUBDIR += socketw
     SUBDIR += sofia-sip
+    SUBDIR += softethervpn
     SUBDIR += spideroak
     SUBDIR += splatd
     SUBDIR += spoofer

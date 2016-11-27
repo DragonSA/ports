@@ -1,9 +1,9 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: head/lang/mono/Makefile 426124 2016-11-14 16:33:15Z tj $
+# $FreeBSD: head/lang/mono/Makefile 426566 2016-11-20 09:38:08Z gerald $
 
 PORTNAME=	mono
 PORTVERSION=	4.6.1.5
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/
 

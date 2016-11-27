@@ -1,4 +1,4 @@
-# $FreeBSD: head/security/Makefile 426118 2016-11-14 16:12:56Z tcberner $
+# $FreeBSD: head/security/Makefile 426577 2016-11-20 12:38:39Z rene $
 #
 
     COMMENT = Security tools
@@ -286,7 +286,6 @@
     SUBDIR += kpcli
     SUBDIR += kqoauth
     SUBDIR += krb5
-    SUBDIR += krb5-112
     SUBDIR += krb5-113
     SUBDIR += krb5-114
     SUBDIR += krb5-appl

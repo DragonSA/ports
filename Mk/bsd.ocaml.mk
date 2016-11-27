@@ -1,7 +1,7 @@
 # ex:ts=4
 #
 # $MBSDlabs: portmk/bsd.ocaml.mk,v 1.18 2006/08/06 18:47:23 stas Exp $
-# $FreeBSD: head/Mk/bsd.ocaml.mk 424411 2016-10-21 12:51:40Z mat $
+# $FreeBSD: head/Mk/bsd.ocaml.mk 426575 2016-11-20 12:35:57Z bapt $
 #
 # bsd.ocaml.mk - Support for the Objective Caml language packages
 #
@@ -143,7 +143,7 @@ ocaml-findlib:
 	@${FIND} ${STAGEDIR}${PREFIX}/${OCAML_SITELIBDIR}/${DIR}/ -type f -print | ${SED} -e \
 		's,^${STAGEDIR}${PREFIX}/,,' >> ${TMPPLIST}
 .   endif
-	@${ECHO_CMD} "@unexec ${OCAMLFIND} remove ${DIR} 2>/dev/null" \
+	@${ECHO_CMD} "@postunexec ${OCAMLFIND} remove ${DIR} 2>/dev/null" \
 		>> ${TMPPLIST}
 .  endfor
 . endif
