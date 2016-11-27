@@ -1,4 +1,4 @@
-# $FreeBSD: head/audio/Makefile 426607 2016-11-20 17:32:49Z ehaupt $
+# $FreeBSD: head/audio/Makefile 427247 2016-11-27 17:00:08Z dbn $
 #
 
     COMMENT = Audio tools
@@ -378,6 +378,7 @@
     SUBDIR += libgig
     SUBDIR += libgme
     SUBDIR += libgpod
+    SUBDIR += libgpod-sharp
     SUBDIR += libgroove
     SUBDIR += libid3tag
     SUBDIR += libkcddb
