@@ -1,5 +1,5 @@
 # Created by: Yukihiro Nakai <nakai@FreeBSD.org>
-# $FreeBSD: head/lang/mono/Makefile 427247 2016-11-27 17:00:08Z dbn $
+# $FreeBSD: head/lang/mono/Makefile 427470 2016-12-01 05:02:33Z dbn $
 
 PORTNAME=	mono
 PORTVERSION=	4.6.2.7
@@ -37,7 +37,7 @@ MAKE_ENV=	MONO_SHARED_DIR="${MONO_SHARED_DIR}" \
 		LC_ALL=C TZ=UTC
 
 ONLY_FOR_ARCHS=	i386 amd64 powerpc
-PORTSCOUT=	^\d+\.\d+.[1-9]\d*
+PORTSCOUT=	limit:^\d+\.\d+\.[1-9]\d*
 
 .include <bsd.port.pre.mk>
 

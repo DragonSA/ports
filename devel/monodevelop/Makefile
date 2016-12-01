@@ -1,5 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: head/devel/monodevelop/Makefile 427247 2016-11-27 17:00:08Z dbn $
+# $FreeBSD: head/devel/monodevelop/Makefile 427470 2016-12-01 05:02:33Z dbn $
 
 PORTNAME=	monodevelop
 PORTVERSION=	6.1.2.44
@@ -64,7 +64,7 @@ INSTALLS_ICONS=	yes
 INSTALL_TARGET=	install-strip
 MAKE_JOBS_UNSAFE=	Build parallelization not implemented
 WRKSRC=		${WRKDIR}/${PORTNAME}-${PORTNAME}-${PORTVERSION}/main
-PORTSCOUT=	^\d+\.\d+.[1-9]\d*
+PORTSCOUT=	limit:^\d+\.\d+\.[1-9]\d*
 
 post-extract:
 .for tuple in ${GH_TUPLE}
