@@ -29,7 +29,7 @@ USE_GITHUB=	yes
 GH_PROJECT=	${PORTNAME:tu}
 
 USES=		bison cmake cpe desktop-file-utils execinfo fortran \
-		gmake python:2 sqlite
+		gmake python:2 shebangfix sqlite
 USE_QT4=	corelib designer gui linguist_build moc_build network \
 		qmake_build rcc_build script sql svg testlib uic_build xml \
 		webkit
@@ -116,6 +116,18 @@ SERVER_CMAKE_OFF=	-DWITH_SERVER:BOOL=FALSE
 
 INSTALLS_ICONS=		yes
 
+SHEBANG_FILES=	${WRKSRC}/python/ext-libs/pygments/util.py \
+		${WRKSRC}/python/ext-libs/pytz/tzfile.py \
+		${WRKSRC}/scripts/generate_test_mask_image.py \
+		${WRKSRC}/scripts/random_vector.py \
+		${WRKSRC}/scripts/widgets_tree.py \
+		${WRKSRC}/src/plugins/grass/qgis_grass_test.py \
+		${WRKSRC}/src/plugins/grass/scripts/qgis.v.kernel.rast.py \
+		${WRKSRC}/src/plugins/grass/scripts/v.out.ogr.pg.py \
+		${WRKSRC}/src/plugins/grass/scripts/qgis.v.upgrade.py \
+		${WRKSRC}/src/plugins/grass/scripts/r.external.all.py \
+		${WRKSRC}/src/plugins/grass/scripts/db.connect-login.pg.py
+
 .include <bsd.port.options.mk>
 
 .if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1000033
@@ -150,18 +162,6 @@ post-patch:
 		${WRKSRC}/debian/${PORTNAME}.desktop
 	@${REINPLACE_CMD} -e 's|Icon=qgis|Icon=qgis-icon|' \
 		${WRKSRC}/debian/${PORTNAME}.desktop
-	@${REINPLACE_CMD} -e 's|env python|env ${PYTHON_VERSION}|g' \
-		${WRKSRC}/python/ext-libs/pygments/util.py \
-		${WRKSRC}/python/ext-libs/pytz/tzfile.py \
-		${WRKSRC}/scripts/generate_test_mask_image.py \
-		${WRKSRC}/scripts/random_vector.py \
-		${WRKSRC}/scripts/widgets_tree.py \
-		${WRKSRC}/src/plugins/grass/qgis_grass_test.py \
-		${WRKSRC}/src/plugins/grass/scripts/qgis.v.kernel.rast.py \
-		${WRKSRC}/src/plugins/grass/scripts/v.out.ogr.pg.py \
-		${WRKSRC}/src/plugins/grass/scripts/qgis.v.upgrade.py \
-		${WRKSRC}/src/plugins/grass/scripts/r.external.all.py \
-		${WRKSRC}/src/plugins/grass/scripts/db.connect-login.pg.py
 
 post-install:
 	${RM} ${STAGEDIR}${DATADIR}/python/pygments/util.py.bak
