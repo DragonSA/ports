@@ -31,7 +31,6 @@ MAKE_ENV+=	PYTHONUSERBASE=${STAGEDIR}${PYTHONBASE}
 #LDFLAGS+=	-shared
 VERSION=	4.00
 
-.include <bsd.port.pre.mk>
 pre-configure:
 	@${CP} ${FILESDIR}/wspr.sh.in ${WRKSRC}
 
@@ -63,8 +62,4 @@ do-fetch:
 .endif
 .endif
 
-.if defined(PACKAGE_BUILDING) && ${PYTHON_VER} != ${PYTHON_DEFAULT}
-IGNORE=	you have python ${PYTHON_DEFAULT} set as the default, and this needs ${PYTHON_VER}
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
