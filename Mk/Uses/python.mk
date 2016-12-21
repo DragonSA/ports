@@ -184,7 +184,7 @@
 # PYTHON_LIBDIR		- Base of the python library tree
 #			  default:
 #				cpython: ${PYTHONBASE}/lib/python${PYTHON_VER}
-#				pypy: ${PYTHONBASE}/bin
+#				pypy: ${PYTHONBASE}/lib-python/${PYTHON_VER}
 #
 # PYTHON_SITELIBDIR	- Location of the site-packages tree. Don't change,
 #			  unless you know what you do.
@@ -394,7 +394,7 @@ PYTHON_CMD?=		${LOCALBASE}/bin/pypy${PYTHON_SUFFIX:C/(.).*/\1/:S/2//}
 PYTHON_LIB=		${PYTHON_LIBDIR}/libpypy-c.so
 
 PYTHON_INCLUDEDIR=	${PYTHONBASE}/include
-PYTHON_LIBDIR=		${PYTHONBASE}/bin
+PYTHON_LIBDIR=		${PYTHONBASE}/lib-python/${PYTHON_VER}
 PYTHON_SITELIBDIR=	${PYTHONBASE}/site-packages
 .else
 IGNORE?=		"needs an unsupported implementation '${_PYTHON_IMPL}' of Python (supported implementations: cpython, pypy)"
