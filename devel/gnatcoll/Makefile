@@ -23,7 +23,7 @@ GH_ACCOUNT=	AdaCore
 GH_PROJECT=	gprbuild:libgpr
 GH_TAGNAME=	858f72c a2e9066:libgpr
 
-PYCOMPILE=	${PREFIX}/lib/${PYTHON_VERSION}/compileall.py
+PYCOMPILE=	${PYTHON_LIBDIR}/compileall.py
 GNU_CONFIGURE=	yes
 ALL_TARGET=	all
 PORTDOCS=	*
