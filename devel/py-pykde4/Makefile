@@ -21,8 +21,7 @@ USE_QT4=	corelib dbus designer_build gui network xml \
 		qmake_build moc_build uic_build rcc_build
 
 CMAKE_ARGS+=	-DWITH_PolkitQt:BOOL=FALSE \
-		-DENABLE_PYTHON=ON \
-		-DPYTHON_INCLUDE_DIR:PATH=${WRKDIR}/include/${PYTHON_VERSION}
+		-DPYTHON_INCLUDE_DIR:PATH=${WRKDIR}/include/python${PYTHON_VER}
 
 SUB_FILES=	kdebindings4.pth
 SUB_LIST=	PYTHONPREFIX_SITELIBDIR=${PYTHONPREFIX_SITELIBDIR}
