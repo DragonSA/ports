@@ -80,7 +80,7 @@ do-build:
 		${PYSETUP} build)
 
 do-install:
-	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/${PYTHON_VERSION}/site-packages \
+	@${MKDIR} ${STAGEDIR}${PYTHON_SITELIBDIR} \
 		${STAGEDIR}${PREFIX}/share/icons/hicolor \
 		${STAGEDIR}${PREFIX}/share/applications \
 		${STAGEDIR}${PREFIX}/share/desktop-directories \
