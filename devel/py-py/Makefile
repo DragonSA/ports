@@ -1,5 +1,5 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: head/devel/py-py/Makefile 412346 2016-04-01 14:00:51Z mat $
+# $FreeBSD: head/devel/py-py/Makefile 428485 2016-12-13 13:59:13Z jbeich $
 
 PORTNAME=	py
 PORTVERSION=	1.4.31
@@ -15,7 +15,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 TEST_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pytest>0:devel/py-pytest
 
-USES=		python
+USES+=		python
 USE_PYTHON=	autoplist distutils
 
 NO_ARCH=	yes

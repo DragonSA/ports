@@ -1,4 +1,4 @@
-# $FreeBSD: head/net-mgmt/Makefile 424381 2016-10-21 07:29:38Z rene $
+# $FreeBSD: head/net-mgmt/Makefile 428308 2016-12-10 17:05:29Z pi $
 #
 
     COMMENT = Network management tools
@@ -144,6 +144,7 @@
     SUBDIR += nagiosgraph
     SUBDIR += nagiosql
     SUBDIR += nagircbot
+    SUBDIR += nagnu
     SUBDIR += nagstamon
     SUBDIR += nagtail
     SUBDIR += nagvis
@@ -284,7 +285,6 @@
     SUBDIR += py-yapsnmp
     SUBDIR += qkismet
     SUBDIR += rackmonkey
-    SUBDIR += rancid
     SUBDIR += rancid3
     SUBDIR += rate
     SUBDIR += rcpd

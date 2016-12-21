@@ -1,5 +1,5 @@
 # Created by: Ville Eerola <ve@sci.fi>
-# $FreeBSD: head/mail/fetchmail/Makefile 417187 2016-06-21 06:14:41Z brnrd $
+# $FreeBSD: head/mail/fetchmail/Makefile 427552 2016-12-02 11:58:21Z mat $
 
 PORTNAME=	fetchmail
 PORTVERSION=	6.3.26
@@ -79,7 +79,7 @@ post-patch:
 post-build:
 	@${MAKE_CMD} -C ${WRKSRC} check
 
-post-stage:
+post-install:
 	${INSTALL} -d ${STAGEDIR}/var/run/fetchmail
 	${INSTALL_DATA} ${FILESDIR}/fetchmailrc.sample \
 		${STAGEDIR}${PREFIX}/etc/fetchmailrc.sample
@@ -92,4 +92,10 @@ post-install-X11-off:
 	${INSTALL_SCRIPT} ${WRKDIR}/fetchmailconf ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/fetchmailconf.py ${STAGEDIR}${PREFIX}/libexec
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${SSL_DEFAULT:Mopenssl-devel}
+BROKEN=		Does not build with openssl-devel
+.endif
+
+.include <bsd.port.post.mk>

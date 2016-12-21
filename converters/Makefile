@@ -1,4 +1,4 @@
-# $FreeBSD: head/converters/Makefile 424732 2016-10-26 19:43:41Z feld $
+# $FreeBSD: head/converters/Makefile 428155 2016-12-08 20:21:38Z rene $
 #
 
     COMMENT = Character code converters
@@ -149,7 +149,6 @@
     SUBDIR += py-better-bencode
     SUBDIR += py-bsdconv
     SUBDIR += py-iconv
-    SUBDIR += py-pisa
     SUBDIR += py-rencode
     SUBDIR += py-unidecode
     SUBDIR += py-zfec

@@ -1,4 +1,4 @@
-# $FreeBSD: head/sysutils/Makefile 426907 2016-11-23 12:44:38Z bapt $
+# $FreeBSD: head/sysutils/Makefile 428695 2016-12-16 20:21:16Z robak $
 #
 
     COMMENT = System utilities
@@ -163,6 +163,7 @@
     SUBDIR += clsync
     SUBDIR += cluster-glue
     SUBDIR += cmdwatch
+    SUBDIR += cmocka
     SUBDIR += cmockery2
     SUBDIR += cmogstored
     SUBDIR += cmospwd
@@ -453,6 +454,7 @@
     SUBDIR += intel-qcu
     SUBDIR += iocage
     SUBDIR += iocage-devel
+    SUBDIR += iocell
     SUBDIR += iogen
     SUBDIR += iograph
     SUBDIR += iohyve
@@ -595,6 +597,7 @@
     SUBDIR += memtest86
     SUBDIR += memtest86+
     SUBDIR += metalog
+    SUBDIR += metricbeat
     SUBDIR += mfid
     SUBDIR += mgeupsd
     SUBDIR += minimunin
@@ -1116,8 +1119,8 @@
     SUBDIR += tren
     SUBDIR += ts
     SUBDIR += tss
-    SUBDIR += ttyd
     SUBDIR += tty-clock
+    SUBDIR += ttyd
     SUBDIR += ttyload
     SUBDIR += tuptime
     SUBDIR += tw_cli

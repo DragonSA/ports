@@ -1,7 +1,7 @@
 #
 # MOVED -- A list of (recently) moved or removed ports
 #
-# $FreeBSD: head/MOVED 427215 2016-11-27 10:08:11Z rene $
+# $FreeBSD: head/MOVED 428980 2016-12-20 09:01:36Z woodsb02 $
 #
 # Each entry consists of a single line containing the following four
 # fields in the order named, separated with the pipe (`|') character:
@@ -6953,8 +6953,6 @@ databases/msql||2014-09-07|Has expired: Not staged and BROKEN
 multimedia/pvr250||2014-09-07|Has expired: Not staged and BROKEN
 multimedia/pvrxxx||2014-09-07|Has expired: Not staged and BROKEN
 textproc/py-4suite-xml||2014-09-07|Has expired: Not staged
-games/alienarena||2014-09-07|Has expired: Not staged
-games/alienarena-data||2014-09-07|Useless with alienarena removed
 net/libexosip2-legacy|net/libexosip2|2014-09-07|Has expired: Superseded by net/libexosip2
 net/libosip|net/libosip2|2014-09-07|Has expired: Superseded by net/libosip2
 lang/caml-light||2014-09-07|Not staged
@@ -6985,7 +6983,6 @@ net/cvsup||2014-09-09|Cascade removal (lang/ezm3)
 dns/posadis||2014-09-09|Not staged
 net/etherboot||2014-09-09|Not staged
 games/linux-savage||2014-09-09|Not staged
-lang/neko||2014-09-09|Not staged
 lang/ifc||2014-09-09|Not staged
 japanese/rskkserv||2014-09-09|Not staged
 graphics/passepartout||2014-09-09|Not staged
@@ -8054,7 +8051,6 @@ graphics/pinta||2015-12-30|Has expired: Broken for more than 6 months
 games/kanatest||2015-12-30|Has expired: Broken for more than 6 months
 editors/bless||2015-12-30|Has expired: Broken for more than 6 months
 security/burpsuite||2015-12-30|Has expired: Broken for more than 6 months
-net/remmina-plugin-rdp||2015-12-30|Has expired: Broken for more than 6 months
 dns/bind10|dns/bundy|2015-12-31|Has expired: Is not developed any more, use dns/bundy
 lang/perl5.16||2015-12-31|Has expired: Unsupported, please upgrade to a more recent version of Perl
 devel/py-distutils-extra|devel/py-python-distutils-extra|2015-12-31|Renamed to match upstream naming
@@ -8796,14 +8792,14 @@ net/remmina-plugin-i18n||2016-11-08|Plugin translations removed upstream in GH c
 net/p5-Net-Ping||2016-11-08|Has expired: This or newer version included in all supported versions of perl
 ftp/curl-hiphop||2016-11-08|Has expired: useful only for removed hiphop-php
 textproc/rubygem-string-scrub||2016-11-08|Has expired: needed only for EOL versions of Ruby
-cad/py-gdsii|cad/python-gdsii|2016-11-10|Renamed
 textproc/erlang-p1xml|textproc/erlang-fast_xml|2016-11-08|Project was renamed
+cad/py-gdsii|cad/python-gdsii|2016-11-10|Renamed
 devel/py-pydasm|devel/py-capstone|2016-11-11|Has expired: No more upstream and known bugs, use devel/py-capstone instead
 devel/libdasm|devel/capstone3|2016-11-11|Has expired: No more upstream and known bugs, use devel/capstone3 instead
 security/erlang-p1tls|security/erlang-fast_tls|2016-11-11|Project was renamed
 mail/trojita-qt4|mail/trojita|2016-11-13|Qt4 support was dropped, use mail/trojita instead
 devel/extra-cmake-modules|devel/kf5-extra-cmake-modules|2016-11-14|Renamed to match other KF5 port
-net/vnc||2016-11-14|Has expired: Distfiles no longer available.
+net/vnc||2016-11-14|Has expired: Distfiles no longer available
 sysutils/gosa||2016-11-20|Has expired: this version of gosa cannot be fixed (requires PHP < 5.4)
 security/krb5-112||2016-11-20|Has expired: EOL twelve months after release of krb5-1.14
 astro/osmium|astro/libosmium|2016-11-23|Rename according to upstream
@@ -8812,3 +8808,41 @@ archivers/brotli|archivers/py-brotli|2016-11-24|Brotli is a python module
 textproc/clucene-qt5||2016-11-25|Reintegrated into devel/qt5-help
 devel/go-shellwords||2016-11-26|Integrated into textproc/fzf build procedure
 www/gecko-sharp20||2016-11-27|Has expired: Broken, no upstream found and no release in 8 years
+net-mgmt/rancid|net-mgmt/rancid3|2016-11-27|Has expired: Not supported upstream. Please upgrade to net-mgmt/rancid3
+x11-servers/mga_hal||2016-11-28|Support for MGA_HAL feature was removed from xf86-video-mga in 2011
+audio/lv2core|audio/lv2|2016-11-30|Has expired: Superseded by audio/lv2
+java/jakarta-struts||2016-12-01|Has expired: Port is unmaintained and has known security vulnerabilites
+www/rubygem-url-mount|www/rubygem-url_mount|2016-12-03|Rename to match our rubygems naming
+editors/focuswriter-qt4|editors/focuswriter|2016-12-03|Qt4 support was dropped, use editors/focuswriter instead
+graphics/gtkdps||2016-12-04|Has expired: No more upstream. Not used in the ports tree
+security/gsfv||2016-12-04|Has expired: No more upstream
+misc/grun||2016-12-04|Has expired: No more upstream
+devel/py-argparse||2016-12-04|Has expired: Part of Python standard library for Python >= 2.7 and >= 3.2
+www/node7|www/node|2016-12-07|www/node is now www/node7
+databases/py-sqlalchemy06|databases/py-sqlalchemy10|2016-12-08|Has expired: Upstream has declared this version EoL: please migrate to databases/py-sqlalchemy10
+print/py-reportlab2|print/py-reportlab|2016-12-08|Has expired: no longer supported - use reportlab 3.x (py-reportlab) instead
+devel/py-itools||2016-12-08|Has expired: Depends on broken and expired py-reportlab2
+graphics/py-aafigure||2016-12-08|Has expired: Depends on broken and expired py-reportlab2
+converters/py-pisa||2016-12-08|Has expired: Deprecated upstream, depends on broken and expired py-reportlab2
+graphics/ocrfeeder||2016-12-08|Has expired: Depends on broken and expired py-reportlab2
+devel/libcppformat|devel/libfmt|2016-12-08|Project was renamed
+databases/py35-mysqlclient|databases/py3-mysqlclient|2016-12-10|Moved to match existing naming convention
+databases/py35-psycopg2|databases/py3-psycopg2|2016-12-10|Moved to match existing naming convention
+www/linux-f10-flashplugin11|www/linux-flashplayer|2016-12-13|Removed upstream
+www/linux-c6-flashplugin11|www/linux-flashplayer|2016-12-13|Removed upstream
+www/linux-c7-flashplugin11|www/linux-flashplayer|2016-12-13|Removed upstream
+net/py-ceilometerclient|net/py-python-ceilometerclient|2016-12-17|Rename to match pypi name
+net/py-cinderclient|net/py-python-cinderclient|2016-12-17|Rename to match pypi name
+net/py-designateclient|net/py-python-designateclient|2016-12-17|Rename to match pypi name
+net/py-glanceclient|net/py-python-glanceclient|2016-12-17|Rename to match pypi name
+net/py-heatclient|net/py-python-heatclient|2016-12-17|Rename to match pypi name
+net/py-keystoneclient|net/py-python-keystoneclient|2016-12-17|Rename to match pypi name
+net/py-neutronclient|net/py-python-neutronclient|2016-12-17|Rename to match pypi name
+net/py-novaclient|net/py-python-novaclient|2016-12-17|Rename to match pypi name
+net/py-openstackclient|net/py-python-openstackclient|2016-12-17|Rename to match pypi name
+www/py-django-openstack-auth|www/py-django_openstack_auth|2016-12-18|Rename to match pypi name
+www/linux-c6-flashplugin24|www/linux-flashplayer|2016-12-18|Renamed to match upstream
+www/linux-c7-flashplugin24|www/linux-flashplayer|2016-12-18|Renamed to match upstream
+biology/p5-bioperl|biology/p5-BioPerl|2016-12-18|Rename to match upstream naming
+biology/p5-bioperl-run|biology/p5-BioPerl-Run|2016-12-18|Rename to match upstream naming
+databases/py-swiftclient|databases/py-python-swiftclient|2016-12-18|Rename to match pypi name

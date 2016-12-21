@@ -1,9 +1,9 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
-# $FreeBSD: head/multimedia/py-ffmpeg/Makefile 425603 2016-11-07 10:48:17Z jbeich $
+# $FreeBSD: head/multimedia/py-ffmpeg/Makefile 428352 2016-12-11 15:22:47Z jbeich $
 
 PORTNAME=	ffmpeg
 PORTVERSION=	1.2.4
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	multimedia python
 MASTER_SITES=	GH LOCAL/dbn/${PORTNAME}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}

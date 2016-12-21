@@ -1,4 +1,4 @@
-# $FreeBSD: head/security/Makefile 426577 2016-11-20 12:38:39Z rene $
+# $FreeBSD: head/security/Makefile 428696 2016-12-16 20:30:31Z mandree $
 #
 
     COMMENT = Security tools
@@ -115,6 +115,7 @@
     SUBDIR += doas
     SUBDIR += doorman
     SUBDIR += doscan
+    SUBDIR += dotdotpwn
     SUBDIR += dradis
     SUBDIR += dropbear
     SUBDIR += dsniff
@@ -187,7 +188,6 @@
     SUBDIR += greenbone-security-assistant
     SUBDIR += gringotts
     SUBDIR += gsasl
-    SUBDIR += gsfv
     SUBDIR += gss
     SUBDIR += gstreamer1-plugins-dtls
     SUBDIR += gtk-knocker
@@ -288,6 +288,7 @@
     SUBDIR += krb5
     SUBDIR += krb5-113
     SUBDIR += krb5-114
+    SUBDIR += krb5-115
     SUBDIR += krb5-appl
     SUBDIR += kripp
     SUBDIR += kstart
@@ -603,6 +604,7 @@
     SUBDIR += p5-Dancer-Plugin-Passphrase
     SUBDIR += p5-Dancer2-Plugin-Auth-Extensible
     SUBDIR += p5-Dancer2-Plugin-Auth-Extensible-Provider-DBIC
+    SUBDIR += p5-Dancer2-Plugin-Auth-Extensible-Provider-Database
     SUBDIR += p5-Dancer2-Plugin-Auth-Extensible-Provider-IMAP
     SUBDIR += p5-Dancer2-Plugin-Auth-Extensible-Provider-Usergroup
     SUBDIR += p5-Dancer2-Plugin-Passphrase
@@ -820,6 +822,7 @@
     SUBDIR += pulledpork
     SUBDIR += pure-sfv
     SUBDIR += putty
+    SUBDIR += putty-nogtk
     SUBDIR += pvk
     SUBDIR += pwauth
     SUBDIR += pwman

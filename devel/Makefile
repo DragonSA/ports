@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/Makefile 427230 2016-11-27 12:26:41Z novel $
+# $FreeBSD: head/devel/Makefile 428845 2016-12-18 11:36:26Z novel $
 #
 
     COMMENT = Development utilities
@@ -11,6 +11,7 @@
     SUBDIR += R-cran-BH
     SUBDIR += R-cran-Defaults
     SUBDIR += R-cran-Hmisc
+    SUBDIR += R-cran-ModelMetrics
     SUBDIR += R-cran-R6
     SUBDIR += R-cran-RUnit
     SUBDIR += R-cran-Rcpp
@@ -44,6 +45,7 @@
     SUBDIR += R-cran-reshape
     SUBDIR += R-cran-reshape2
     SUBDIR += R-cran-rngtools
+    SUBDIR += R-cran-rprojroot
     SUBDIR += R-cran-rstudioapi
     SUBDIR += R-cran-sourcetools
     SUBDIR += R-cran-tibble
@@ -157,6 +159,7 @@
     SUBDIR += b2
     SUBDIR += babeltrace
     SUBDIR += bam
+    SUBDIR += bazel
     SUBDIR += bbfreeze
     SUBDIR += bbfreeze-loader
     SUBDIR += bcc
@@ -516,6 +519,7 @@
     SUBDIR += erlang-jobs
     SUBDIR += erlang-jsx
     SUBDIR += erlang-jsxd
+    SUBDIR += erlang-katana
     SUBDIR += erlang-lager
     SUBDIR += erlang-lager_syslog
     SUBDIR += erlang-meck
@@ -746,7 +750,9 @@
     SUBDIR += go-codec
     SUBDIR += go-faker
     SUBDIR += go-form
+    SUBDIR += go-glide
     SUBDIR += go-go.uuid
+    SUBDIR += go-gocode
     SUBDIR += go-goregen
     SUBDIR += go-hashicorp-logutils
     SUBDIR += go-json-rest
@@ -1225,7 +1231,6 @@
     SUBDIR += libconcurrent
     SUBDIR += libconfig
     SUBDIR += libconfuse
-    SUBDIR += libcppformat
     SUBDIR += libcrossguid
     SUBDIR += libcutl
     SUBDIR += libcwd
@@ -1274,6 +1279,7 @@
     SUBDIR += libffi
     SUBDIR += libfirm
     SUBDIR += libflatarray
+    SUBDIR += libfmt
     SUBDIR += libfortuna
     SUBDIR += libfreefare
     SUBDIR += libfsntfs
@@ -1564,6 +1570,7 @@
     SUBDIR += luajava
     SUBDIR += lutok
     SUBDIR += lwp
+    SUBDIR += lxqt-build-tools
     SUBDIR += m17n-db
     SUBDIR += m17n-docs
     SUBDIR += m17n-lib
@@ -3214,6 +3221,7 @@
     SUBDIR += p5-Sub-Name
     SUBDIR += p5-Sub-Override
     SUBDIR += p5-Sub-Prototype
+    SUBDIR += p5-Sub-Quote
     SUBDIR += p5-Sub-Signatures
     SUBDIR += p5-Sub-Uplevel
     SUBDIR += p5-Sub-WrapPackages
@@ -3980,6 +3988,7 @@
     SUBDIR += py-MultiMapping
     SUBDIR += py-PEAK-Rules
     SUBDIR += py-Persistence
+    SUBDIR += py-Pint
     SUBDIR += py-Products.ATContentTypes
     SUBDIR += py-Products.ATReferenceBrowserWidget
     SUBDIR += py-Products.Archetypes
@@ -4030,6 +4039,34 @@
     SUBDIR += py-TGScheduler
     SUBDIR += py-ToscaWidgets
     SUBDIR += py-TurboJinja
+    SUBDIR += py-XStatic
+    SUBDIR += py-XStatic-Angular
+    SUBDIR += py-XStatic-Angular-Bootstrap
+    SUBDIR += py-XStatic-Angular-FileUpload
+    SUBDIR += py-XStatic-Angular-Gettext
+    SUBDIR += py-XStatic-Angular-Schema-Form
+    SUBDIR += py-XStatic-Angular-lrdragndrop
+    SUBDIR += py-XStatic-Bootstrap-Datepicker
+    SUBDIR += py-XStatic-Bootstrap-SCSS
+    SUBDIR += py-XStatic-D3
+    SUBDIR += py-XStatic-Font-Awesome
+    SUBDIR += py-XStatic-Hogan
+    SUBDIR += py-XStatic-JQuery-Migrate
+    SUBDIR += py-XStatic-JQuery.TableSorter
+    SUBDIR += py-XStatic-JQuery.quicksearch
+    SUBDIR += py-XStatic-JSEncrypt
+    SUBDIR += py-XStatic-Jasmine
+    SUBDIR += py-XStatic-Rickshaw
+    SUBDIR += py-XStatic-Spin
+    SUBDIR += py-XStatic-bootswatch
+    SUBDIR += py-XStatic-jQuery
+    SUBDIR += py-XStatic-jquery-ui
+    SUBDIR += py-XStatic-mdi
+    SUBDIR += py-XStatic-objectpath
+    SUBDIR += py-XStatic-roboto-fontface
+    SUBDIR += py-XStatic-smart-table
+    SUBDIR += py-XStatic-term.js
+    SUBDIR += py-XStatic-tv4
     SUBDIR += py-ZopeUndo
     SUBDIR += py-adb
     SUBDIR += py-akismet
@@ -4048,7 +4085,6 @@
     SUBDIR += py-archetypes.schemaextender
     SUBDIR += py-argcomplete
     SUBDIR += py-argh
-    SUBDIR += py-argparse
     SUBDIR += py-args
     SUBDIR += py-arrow
     SUBDIR += py-aspects
@@ -4125,6 +4161,7 @@
     SUBDIR += py-country
     SUBDIR += py-cov-core
     SUBDIR += py-coverage
+    SUBDIR += py-crank
     SUBDIR += py-crcmod
     SUBDIR += py-ctags
     SUBDIR += py-cuisine
@@ -4259,7 +4296,6 @@
     SUBDIR += py-isodate
     SUBDIR += py-isort
     SUBDIR += py-iterpipes
-    SUBDIR += py-itools
     SUBDIR += py-jaraco.classes
     SUBDIR += py-jaraco.functools
     SUBDIR += py-jaraco.itertools
@@ -4472,12 +4508,14 @@
     SUBDIR += py-pyte
     SUBDIR += py-pytemplate
     SUBDIR += py-pytest
+    SUBDIR += py-pytest-asyncio
     SUBDIR += py-pytest-cache
     SUBDIR += py-pytest-capturelog
     SUBDIR += py-pytest-django
     SUBDIR += py-pytest-localserver
     SUBDIR += py-pytest-runner
     SUBDIR += py-pytest-timeout
+    SUBDIR += py-pytest-tornado
     SUBDIR += py-pytest-xdist
     SUBDIR += py-python-bugzilla
     SUBDIR += py-python-distutils-extra
@@ -4495,6 +4533,7 @@
     SUBDIR += py-pytvmaze
     SUBDIR += py-pytz
     SUBDIR += py-pyutil
+    SUBDIR += py-pyvalid
     SUBDIR += py-pyvisa
     SUBDIR += py-pyvisa-py
     SUBDIR += py-pyxml2obj
@@ -4710,11 +4749,11 @@
     SUBDIR += py-z3c.formwidget.query
     SUBDIR += py-z3c.zcmlhook
     SUBDIR += py-zExceptions
-    SUBDIR += py-zkpython
     SUBDIR += py-zLOG
     SUBDIR += py-zc.buildout
     SUBDIR += py-zclockfile
     SUBDIR += py-zconfig
+    SUBDIR += py-zkpython
     SUBDIR += py-zope.annotation
     SUBDIR += py-zope.app.applicationcontrol
     SUBDIR += py-zope.app.appsetup
@@ -4795,9 +4834,12 @@
     SUBDIR += py3-gobject3
     SUBDIR += py3-jsonschema
     SUBDIR += py3-libpeas
+    SUBDIR += py3-lxml
     SUBDIR += py3-nose
+    SUBDIR += py3-py
     SUBDIR += py3-pyicu
     SUBDIR += py3-pylru-cache
+    SUBDIR += py3-pytest
     SUBDIR += py3-python-magic
     SUBDIR += py3-pytz
     SUBDIR += py3-threema-msgapi
@@ -4981,6 +5023,7 @@
     SUBDIR += rubygem-aws-sdk-core
     SUBDIR += rubygem-aws-sdk-resources
     SUBDIR += rubygem-aws-sdk-v1
+    SUBDIR += rubygem-aws-sigv4
     SUBDIR += rubygem-axiom-types
     SUBDIR += rubygem-backports
     SUBDIR += rubygem-bacon
@@ -5110,8 +5153,8 @@
     SUBDIR += rubygem-formatador
     SUBDIR += rubygem-forwardable-extended
     SUBDIR += rubygem-gdata
-    SUBDIR += rubygem-gem_plugin
     SUBDIR += rubygem-gem-compare
+    SUBDIR += rubygem-gem_plugin
     SUBDIR += rubygem-gemcutter
     SUBDIR += rubygem-gemnasium-gitlab-service
     SUBDIR += rubygem-gemnasium-parser
@@ -5220,6 +5263,8 @@
     SUBDIR += rubygem-multi_test
     SUBDIR += rubygem-murmurhash3
     SUBDIR += rubygem-mustache
+    SUBDIR += rubygem-mustermann
+    SUBDIR += rubygem-mustermann-grape
     SUBDIR += rubygem-mutter
     SUBDIR += rubygem-naught
     SUBDIR += rubygem-needle
@@ -5402,6 +5447,7 @@
     SUBDIR += rubygem-tins
     SUBDIR += rubygem-titlecase
     SUBDIR += rubygem-toml
+    SUBDIR += rubygem-tool
     SUBDIR += rubygem-transaction-simple
     SUBDIR += rubygem-travis
     SUBDIR += rubygem-treetop

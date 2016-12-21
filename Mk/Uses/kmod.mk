@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/kmod.mk 394503 2015-08-17 13:31:25Z mat $
+# $FreeBSD: head/Mk/Uses/kmod.mk 428429 2016-12-12 20:53:11Z rene $
 #
 # Handles common items for kernel module ports.
 #
@@ -34,13 +34,23 @@ MAKE_ENV+=	KMODDIR="${KMODDIR}" SYSDIR="${SRC_BASE}/sys" NO_XREF=yes
 PLIST_FILES+=	"@kld ${KMODDIR}"
 
 STRIP_CMD+=	--strip-debug # do not strip kernel symbols
+KERN_DEBUGDIR?=	${DEBUGDIR}
 .endif
 
 .if defined(_POSTMKINCLUDED) && !defined(_INCLUDE_USES_KMOD_POST_MK)
 _INCLUDE_USES_KMOD_POST_MK=	yes
 
 _USES_install+=	290:${STAGEDIR}${KMODDIR}
+.if !empty(KERN_DEBUGDIR)
+_USES_install+=	291:${STAGEDIR}${KERN_DEBUGDIR}${KMODDIR}
+.endif
+
 ${STAGEDIR}${KMODDIR}:
 	@${MKDIR} ${.TARGET}
+
+.if !empty(KERN_DEBUGDIR)
+${STAGEDIR}${KERN_DEBUGDIR}${KMODDIR}:
+	@${MKDIR} ${.TARGET}
+.endif
 
 .endif

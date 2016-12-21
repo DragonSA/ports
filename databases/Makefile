@@ -1,4 +1,4 @@
-# $FreeBSD: head/databases/Makefile 427026 2016-11-24 15:33:57Z sunpoet $
+# $FreeBSD: head/databases/Makefile 428897 2016-12-19 01:18:40Z wen $
 #
 
     COMMENT = Databases and related software
@@ -556,9 +556,9 @@
     SUBDIR += percona56-server
     SUBDIR += pg_activity
     SUBDIR += pg_citus
+    SUBDIR += pg_qualstats
     SUBDIR += pg_reorg
     SUBDIR += pg_rman
-    SUBDIR += pg_qualstats
     SUBDIR += pg_stat_kcache
     SUBDIR += pg_statsinfo
     SUBDIR += pgaccess
@@ -611,6 +611,8 @@
     SUBDIR += php56-sybase_ct
     SUBDIR += php70-dba
     SUBDIR += php70-interbase
+    SUBDIR += php70-memcache
+    SUBDIR += php70-memcached
     SUBDIR += php70-mysqli
     SUBDIR += php70-odbc
     SUBDIR += php70-pdo
@@ -762,6 +764,7 @@
     SUBDIR += py-python-memcached
     SUBDIR += py-python-rrdtool
     SUBDIR += py-python-sql
+    SUBDIR += py-python-swiftclient
     SUBDIR += py-qt4-sql
     SUBDIR += py-qt5-sql
     SUBDIR += py-queries
@@ -771,7 +774,6 @@
     SUBDIR += py-rrdtool_lgpl
     SUBDIR += py-south
     SUBDIR += py-sqlalchemy-migrate
-    SUBDIR += py-sqlalchemy06
     SUBDIR += py-sqlalchemy07
     SUBDIR += py-sqlalchemy08
     SUBDIR += py-sqlalchemy09
@@ -781,15 +783,17 @@
     SUBDIR += py-sqlite3dbm
     SUBDIR += py-sqlobject
     SUBDIR += py-sqlparse
+    SUBDIR += py-sqlparse01
     SUBDIR += py-sqlrelay
     SUBDIR += py-swift
-    SUBDIR += py-swiftclient
     SUBDIR += py-sybase
     SUBDIR += py-tarantool
     SUBDIR += py-umemcache
     SUBDIR += py-unqlite
     SUBDIR += py-whisper
     SUBDIR += py3-bsddb3
+    SUBDIR += py3-mysqlclient
+    SUBDIR += py3-psycopg2
     SUBDIR += py33-gdbm
     SUBDIR += py33-sqlite3
     SUBDIR += py34-gdbm

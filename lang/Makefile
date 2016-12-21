@@ -1,4 +1,4 @@
-# $FreeBSD: head/lang/Makefile 426722 2016-11-21 14:36:51Z kwm $
+# $FreeBSD: head/lang/Makefile 428982 2016-12-20 09:30:25Z lwhsu $
 #
 
     COMMENT = Programming languages
@@ -143,6 +143,7 @@
     SUBDIR += jimtcl
     SUBDIR += jruby
     SUBDIR += js_of_ocaml
+    SUBDIR += julia
     SUBDIR += jython
     SUBDIR += kawa
     SUBDIR += kf5-kross

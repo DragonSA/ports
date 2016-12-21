@@ -1,4 +1,4 @@
-# $FreeBSD: head/math/Makefile 425097 2016-11-01 22:25:00Z rene $
+# $FreeBSD: head/math/Makefile 428705 2016-12-17 06:52:40Z tota $
 #
 
     COMMENT = Mathematics
@@ -26,6 +26,7 @@
     SUBDIR += R-cran-VGAM
     SUBDIR += R-cran-Zelig
     SUBDIR += R-cran-assertthat
+    SUBDIR += R-cran-backports
     SUBDIR += R-cran-bdsmatrix
     SUBDIR += R-cran-car
     SUBDIR += R-cran-coda
@@ -434,6 +435,7 @@
     SUBDIR += p5-Math-BigInt
     SUBDIR += p5-Math-BigInt-FastCalc
     SUBDIR += p5-Math-BigInt-GMP
+    SUBDIR += p5-Math-BigInt-Lite
     SUBDIR += p5-Math-BigInt-Pari
     SUBDIR += p5-Math-BigRat
     SUBDIR += p5-Math-CDF

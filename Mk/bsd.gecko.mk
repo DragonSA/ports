@@ -4,7 +4,7 @@
 # Date created:		12 Nov 2005
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: head/Mk/bsd.gecko.mk 425281 2016-11-04 00:29:00Z jbeich $
+# $FreeBSD: head/Mk/bsd.gecko.mk 427743 2016-12-03 22:24:36Z jbeich $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -104,6 +104,10 @@ CPPFLAGS+=	-D_GLIBCXX_USE_C99 -D_GLIBCXX_USE_C99_MATH_TR1 \
 USES+=		compiler:c++11-lang
 .endif
 
+.if ${MOZILLA_VER:R:R} >= 50
+USE_XORG+=	xcb
+.endif
+
 MOZILLA_SUFX?=	none
 MOZSRC?=	${WRKSRC}
 WRKSRC?=	${WRKDIR}/mozilla
@@ -179,7 +183,7 @@ harfbuzz_LIB_DEPENDS=	libharfbuzz.so:print/harfbuzz
 harfbuzz_MOZ_OPTIONS=	--with-system-harfbuzz
 .endif
 
-hunspell_LIB_DEPENDS=	libhunspell-1.3.so:textproc/hunspell
+hunspell_LIB_DEPENDS=	libhunspell-1.5.so:textproc/hunspell
 hunspell_MOZ_OPTIONS=	--enable-system-hunspell
 
 icu_LIB_DEPENDS=		libicui18n.so:devel/icu

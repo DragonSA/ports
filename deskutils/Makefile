@@ -1,4 +1,4 @@
-# $FreeBSD: head/deskutils/Makefile 426977 2016-11-23 20:51:48Z rene $
+# $FreeBSD: head/deskutils/Makefile 428675 2016-12-16 13:07:26Z ehaupt $
 #
 
     COMMENT = Things that used to be on the desktop before computers were invented
@@ -94,6 +94,7 @@
     SUBDIR += gnote
     SUBDIR += gnotime
     SUBDIR += gnustep-wrapper
+    SUBDIR += go-for-it
     SUBDIR += gourmet
     SUBDIR += griffith
     SUBDIR += growl-for-linux

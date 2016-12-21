@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/Makefile 427215 2016-11-27 10:08:11Z rene $
+# $FreeBSD: head/www/Makefile 428952 2016-12-19 16:39:06Z novel $
 #
 
     COMMENT = Ports related to the World Wide Web
@@ -168,6 +168,7 @@
     SUBDIR += firefox-esr
     SUBDIR += firefox-esr-i18n
     SUBDIR += firefox-i18n
+    SUBDIR += flashplayer
     SUBDIR += flat-frog
     SUBDIR += flickcurl
     SUBDIR += flood
@@ -358,6 +359,7 @@
     SUBDIR += libhubbub
     SUBDIR += libjwt
     SUBDIR += libmicrohttpd
+    SUBDIR += libnghttp2
     SUBDIR += libsocialweb
     SUBDIR += libwww
     SUBDIR += libxul
@@ -372,14 +374,10 @@
     SUBDIR += links
     SUBDIR += links-hacked
     SUBDIR += links1
-    SUBDIR += linux-c6-flashplugin11
-    SUBDIR += linux-c6-flashplugin24
     SUBDIR += linux-c6-qt47-webkit
-    SUBDIR += linux-c7-flashplugin11
-    SUBDIR += linux-c7-flashplugin24
     SUBDIR += linux-c7-qtwebkit
-    SUBDIR += linux-f10-flashplugin11
     SUBDIR += linux-firefox
+    SUBDIR += linux-flashplayer
     SUBDIR += linux-opera
     SUBDIR += linux-seamonkey
     SUBDIR += lionwiki
@@ -401,6 +399,7 @@
     SUBDIR += mediawiki123
     SUBDIR += mediawiki126
     SUBDIR += mediawiki127
+    SUBDIR += mediawiki128
     SUBDIR += mergelog
     SUBDIR += mgstat
     SUBDIR += mhonarc
@@ -519,6 +518,7 @@
     SUBDIR += moodle29
     SUBDIR += moodle30
     SUBDIR += moodle31
+    SUBDIR += moodle32
     SUBDIR += mozplugger
     SUBDIR += multisort
     SUBDIR += multiwatch
@@ -539,12 +539,14 @@
     SUBDIR += nghttp2
     SUBDIR += nginx
     SUBDIR += nginx-devel
+    SUBDIR += nginx-full
+    SUBDIR += nginx-lite
+    SUBDIR += nginx-naxsi
     SUBDIR += nibbleblog
     SUBDIR += node
     SUBDIR += node012
     SUBDIR += node4
     SUBDIR += node6
-    SUBDIR += node7
     SUBDIR += nostromo
     SUBDIR += npapi-vlc
     SUBDIR += npapi-xine
@@ -1484,6 +1486,7 @@
     SUBDIR += py-Products.CMFPlone
     SUBDIR += py-Products.PloneLDAP
     SUBDIR += py-Products.TinyMCE
+    SUBDIR += py-Tenjin
     SUBDIR += py-WebError
     SUBDIR += py-WebFlash
     SUBDIR += py-WebTest
@@ -1523,6 +1526,7 @@
     SUBDIR += py-django-appmedia
     SUBDIR += py-django-assets
     SUBDIR += py-django-auth-ldap
+    SUBDIR += py-django-babel
     SUBDIR += py-django-bitfield
     SUBDIR += py-django-bootstrap-form
     SUBDIR += py-django-caching-app-plugins
@@ -1569,6 +1573,7 @@
     SUBDIR += py-django-pipeline13
     SUBDIR += py-django-post_office
     SUBDIR += py-django-profiles
+    SUBDIR += py-django-pyscss
     SUBDIR += py-django-recaptcha
     SUBDIR += py-django-redis
     SUBDIR += py-django-registration
@@ -1599,6 +1604,7 @@
     SUBDIR += py-django18
     SUBDIR += py-django19
     SUBDIR += py-django_compressor
+    SUBDIR += py-django_openstack_auth
     SUBDIR += py-django_polymorphic
     SUBDIR += py-djangorestframework
     SUBDIR += py-djangorestframework-csv
@@ -1647,6 +1653,7 @@
     SUBDIR += py-graphite-web
     SUBDIR += py-grequests
     SUBDIR += py-gunicorn
+    SUBDIR += py-horizon
     SUBDIR += py-html
     SUBDIR += py-html5lib
     SUBDIR += py-http-parser
@@ -1795,7 +1802,6 @@
     SUBDIR += py-splinter
     SUBDIR += py-spyne
     SUBDIR += py-surl
-    SUBDIR += py-Tenjin
     SUBDIR += py-textile
     SUBDIR += py-tgwebservices
     SUBDIR += py-tmdb3
@@ -2017,6 +2023,7 @@
     SUBDIR += rubygem-rack-protection
     SUBDIR += rubygem-rack-ssl
     SUBDIR += rubygem-rack-test
+    SUBDIR += rubygem-rack14
     SUBDIR += rubygem-rack15
     SUBDIR += rubygem-rack16
     SUBDIR += rubygem-rails
@@ -2070,8 +2077,8 @@
     SUBDIR += rubygem-underscore-rails
     SUBDIR += rubygem-unicorn
     SUBDIR += rubygem-unicorn-worker-killer
-    SUBDIR += rubygem-url-mount
     SUBDIR += rubygem-url_escape
+    SUBDIR += rubygem-url_mount
     SUBDIR += rubygem-wasabi
     SUBDIR += rubygem-webkit-gtk
     SUBDIR += rubygem-webkit-gtk2

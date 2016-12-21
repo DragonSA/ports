@@ -1,4 +1,4 @@
-# $FreeBSD: head/chinese/Makefile 425594 2016-11-07 06:18:47Z delphij $
+# $FreeBSD: head/chinese/Makefile 428730 2016-12-17 12:53:14Z sunpoet $
 #
 
     COMMENT = Chinese support
@@ -96,6 +96,7 @@
     SUBDIR += p5-cconv
     SUBDIR += pcmanx
     SUBDIR += php-cconv
+    SUBDIR += php-opencc
     SUBDIR += phpbb-tw
     SUBDIR += phpbb3-tw
     SUBDIR += py-cconv

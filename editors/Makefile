@@ -1,4 +1,4 @@
-# $FreeBSD: head/editors/Makefile 426719 2016-11-21 13:59:41Z mat $
+# $FreeBSD: head/editors/Makefile 428666 2016-12-16 09:48:54Z ehaupt $
 #
 
     COMMENT = Editors
@@ -55,7 +55,6 @@
     SUBDIR += fileobj
     SUBDIR += flim
     SUBDIR += focuswriter
-    SUBDIR += focuswriter-qt4
     SUBDIR += fpc-ide
     SUBDIR += fte
     SUBDIR += fxite
@@ -70,6 +69,7 @@
     SUBDIR += heme
     SUBDIR += hexcurse
     SUBDIR += hexedit
+    SUBDIR += hexer
     SUBDIR += hexpert
     SUBDIR += hnb
     SUBDIR += hte

@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/php.mk 425222 2016-11-03 14:49:07Z mat $
+# $FreeBSD: head/Mk/Uses/php.mk 427334 2016-11-28 17:22:29Z rakuco $
 #
 # Support for PHP-based ports.
 #
@@ -244,7 +244,7 @@ do-install:
 			${STAGEDIR}${PREFIX}/include/php/ext/${PHP_MODNAME}/${header}
 .    endfor
 	@${RM} ${STAGEDIR}${PREFIX}/include/php/ext/${PHP_MODNAME}/config.h
-	@${GREP} "#define \(COMPILE\|HAVE\|USE\)_" ${WRKSRC}/config.h \
+	@${EGREP} "#define (COMPILE|HAVE|USE)_" ${WRKSRC}/config.h \
 		> ${STAGEDIR}${PREFIX}/include/php/ext/${PHP_MODNAME}/config.h
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/php
 .    if ${php_ARGS:Mzend}

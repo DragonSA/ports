@@ -1,4 +1,4 @@
-# $FreeBSD: head/games/Makefile 426728 2016-11-21 15:24:34Z amdmi3 $
+# $FreeBSD: head/games/Makefile 428545 2016-12-14 04:48:47Z acm $
 #
 
     COMMENT = Games and related software
@@ -32,6 +32,8 @@
     SUBDIR += alephone-data
     SUBDIR += alephone-scenarios
     SUBDIR += alex4
+    SUBDIR += alienarena
+    SUBDIR += alienarena-data
     SUBDIR += alienblaster
     SUBDIR += alienwave
     SUBDIR += allacrost
@@ -48,6 +50,7 @@
     SUBDIR += armagetron
     SUBDIR += arx-libertatis
     SUBDIR += asc
+    SUBDIR += ascii-invaders
     SUBDIR += asciiquarium
     SUBDIR += assaultcube
     SUBDIR += asteroid
@@ -520,6 +523,7 @@
     SUBDIR += libfov
     SUBDIR += libgames-support
     SUBDIR += libggz
+    SUBDIR += libgnome-games-support
     SUBDIR += libkdegames
     SUBDIR += libkmahjongg
     SUBDIR += liblcf

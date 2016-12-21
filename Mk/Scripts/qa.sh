@@ -1,6 +1,6 @@
 #!/bin/sh
 # MAINTAINER: portmgr@FreeBSD.org
-# $FreeBSD: head/Mk/Scripts/qa.sh 426118 2016-11-14 16:12:56Z tcberner $
+# $FreeBSD: head/Mk/Scripts/qa.sh 428207 2016-12-09 14:24:07Z mat $
 
 if [ -z "${STAGEDIR}" -o -z "${PREFIX}" -o -z "${LOCALBASE}" ]; then
 	echo "STAGEDIR, PREFIX, LOCALBASE required in environment." >&2
@@ -107,15 +107,19 @@ shebang() {
 baselibs() {
 	local rc
 	local found_openssl
+	local file
 	[ "${PKGBASE}" = "pkg" -o "${PKGBASE}" = "pkg-devel" ] && return
 	while read f; do
 		case ${f} in
+		File:\ .*)
+			file=${f#File: .}
+			;;
 		*NEEDED*\[libarchive.so.[56]])
-			err "Bad linking on ${f##* } please add USES=libarchive"
+			err "Bad linking on ${f##* } for ${file} please add USES=libarchive"
 			rc=1
 			;;
 		*NEEDED*\[libedit.so.7])
-			err "Bad linking on ${f##* } please add USES=libedit"
+			err "Bad linking on ${f##* } for ${file} please add USES=libedit"
 			rc=1
 			;;
 		*NEEDED*\[libcrypto.so.*]|*NEEDED*\[libssl.so.*])
@@ -708,7 +712,7 @@ proxydeps() {
 }
 
 sonames() {
-	[ -n "${BUNDLE_LIBS}" ] && return 0
+	[ ! -d ${STAGEDIR}${PREFIX}/lib -o -n "${BUNDLE_LIBS}" ] && return 0
 	while read f; do
 		# No results presents a blank line from heredoc.
 		[ -z "${f}" ] && continue

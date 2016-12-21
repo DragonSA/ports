@@ -1,4 +1,4 @@
-# $FreeBSD: head/print/Makefile 425389 2016-11-05 13:25:50Z tijl $
+# $FreeBSD: head/print/Makefile 428155 2016-12-08 20:21:38Z rene $
 #
 
     COMMENT = Desktop publishing
@@ -202,7 +202,6 @@
     SUBDIR += py-relatorio
     SUBDIR += py-reportlab
     SUBDIR += py-reportlab1
-    SUBDIR += py-reportlab2
     SUBDIR += py-rtf
     SUBDIR += py-trml2pdf
     SUBDIR += qpdf

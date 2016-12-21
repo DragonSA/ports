@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11-toolkits/Makefile 426990 2016-11-24 06:14:01Z pi $
+# $FreeBSD: head/x11-toolkits/Makefile 427333 2016-11-28 17:03:39Z tcberner $
 #
 
     COMMENT = X11 toolkits
@@ -233,6 +233,7 @@
     SUBDIR += qt4-gui
     SUBDIR += qt4pas
     SUBDIR += qt5-canvas3d
+    SUBDIR += qt5-charts
     SUBDIR += qt5-declarative
     SUBDIR += qt5-gui
     SUBDIR += qt5-quick

@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/Mk/Scripts/checksum.sh 417111 2016-06-19 11:25:35Z mat $
+# $FreeBSD: head/Mk/Scripts/checksum.sh 428888 2016-12-18 21:43:24Z bapt $
 #
 # MAINTAINER: portmgr@FreeBSD.org
 
@@ -88,6 +88,6 @@ if [ -f "${dp_DISTINFO_FILE}" ]; then
 		exit 1
 	fi
 elif [ -n "${@}" ]; then
-	${dp_ECHO_MSG} "=> No checksum file (${DISTINFO_FILE})."
+	${dp_ECHO_MSG} "=> No checksum file (${dp_DISTINFO_FILE})."
 	exit 1
 fi

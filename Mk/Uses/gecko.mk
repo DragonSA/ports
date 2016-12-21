@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/gecko.mk 425099 2016-11-02 01:42:30Z jbeich $
+# $FreeBSD: head/Mk/Uses/gecko.mk 428671 2016-12-16 10:57:33Z jbeich $
 #
 # Handle dependency of different gecko based applications
 #
@@ -51,8 +51,8 @@ _GECKO_INSTALLED_VER:=	${_GECKO_INSTALLED_VER:M[0-9][0-9]*:C/([0-9][0-9]).*/\1/g
 
 .elif ${gecko_ARGS:Mseamonkey}
 
-_GECKO_DEFAULT_VERSION=	40
-_GECKO_VERSIONS=		40
+_GECKO_DEFAULT_VERSION=	46
+_GECKO_VERSIONS=		46
 _GECKO_TYPE=	seamonkey
 
 .if exists(${LOCALBASE}/bin/seamonkey)
@@ -61,7 +61,7 @@ _GECKO_INSTALLED_VER:=	${_GECKO_INSTALLED_VER:M[0-9]*:C/[0-9].([0-9][0-9]).*/\1/
 .endif
 
 # Dependence lines for different Seamonkey versions
-40_DEPENDS=		${LOCALBASE}/lib/seamonkey/seamonkey:www/seamonkey
+46_DEPENDS=		${LOCALBASE}/lib/seamonkey/seamonkey:www/seamonkey
 
 .elif ${gecko_ARGS:Mthunderbird}
 

@@ -1,8 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: head/finance/R-cran-plm/Makefile 412346 2016-04-01 14:00:51Z mat $
+# $FreeBSD: head/finance/R-cran-plm/Makefile 428700 2016-12-17 05:15:19Z tota $
 
 PORTNAME=	plm
-DISTVERSION=	1.5-12
+DISTVERSION=	1.6-5
 CATEGORIES=	finance
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
@@ -11,12 +11,14 @@ COMMENT=	Linear Models for Panel Data
 
 LICENSE=	GPLv2+
 
-RUN_DEPENDS=	R-cran-Formula>=0.2.0:math/R-cran-Formula \
+CRAN_DEPENDS=	R-cran-Formula>=0.2.0:math/R-cran-Formula \
 		R-cran-bdsmatrix>0:math/R-cran-bdsmatrix \
 		R-cran-zoo>0:math/R-cran-zoo \
 		R-cran-sandwich>0:math/R-cran-sandwich \
 		R-cran-car>0:math/R-cran-car \
 		R-cran-lmtest>0:finance/R-cran-lmtest
+BUILD_DEPENDS=	${CRAN_DEPENDS}
+RUN_DEPENDS=	${CRAN_DEPENDS}
 
 USES=	cran:auto-plist
 

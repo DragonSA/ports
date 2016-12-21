@@ -1,8 +1,8 @@
-# $FreeBSD: head/security/libpwquality/Makefile 424617 2016-10-25 12:15:20Z antoine $
+# $FreeBSD: head/security/libpwquality/Makefile 428152 2016-12-08 19:52:19Z tijl $
 
 PORTNAME=	libpwquality
 PORTVERSION=	1.2.4
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	https://fedorahosted.org/releases/l/i/libpwquality/
 

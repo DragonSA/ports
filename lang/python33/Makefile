@@ -1,8 +1,8 @@
-# $FreeBSD: head/lang/python33/Makefile 424427 2016-10-21 15:21:13Z mat $
+# $FreeBSD: head/lang/python33/Makefile 427246 2016-11-27 16:52:25Z brnrd $
 
 PORTNAME=	python33
 PORTVERSION=	${PYTHON_PORTVERSION}
-PORTREVISION=	5
+PORTREVISION=	6
 CATEGORIES=	lang python ipv6
 MASTER_SITES=	PYTHON/ftp/python/${PORTVERSION}
 DISTNAME=	Python-${PORTVERSION}

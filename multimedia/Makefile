@@ -1,4 +1,4 @@
-# $FreeBSD: head/multimedia/Makefile 426118 2016-11-14 16:12:56Z tcberner $
+# $FreeBSD: head/multimedia/Makefile 428104 2016-12-08 06:28:33Z pi $
 #
 
     COMMENT = Multimedia software
@@ -454,5 +454,6 @@
     SUBDIR += xvid
     SUBDIR += yamdi
     SUBDIR += zoneminder
+    SUBDIR += zoneminder-h264
 
 .include <bsd.port.subdir.mk>

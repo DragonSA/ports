@@ -1,4 +1,4 @@
-# $FreeBSD: head/emulators/Makefile 425599 2016-11-07 10:12:59Z matthew $
+# $FreeBSD: head/emulators/Makefile 428964 2016-12-19 23:07:25Z antoine $
 #
 
     COMMENT = Emulators for other operating systems
@@ -115,6 +115,8 @@
     SUBDIR += ppsspp-qt4
     SUBDIR += ppsspp-qt5
     SUBDIR += py-gns3-converter
+    SUBDIR += py-nova
+    SUBDIR += py-unicorn
     SUBDIR += q4wine
     SUBDIR += qemu
     SUBDIR += qemu-cheri
@@ -147,6 +149,7 @@
     SUBDIR += tuxnes
     SUBDIR += uae
     SUBDIR += ucon64
+    SUBDIR += unicorn
     SUBDIR += vba
     SUBDIR += vboxtool
     SUBDIR += vgb-bin

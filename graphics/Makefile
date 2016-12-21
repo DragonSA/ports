@@ -1,4 +1,4 @@
-# $FreeBSD: head/graphics/Makefile 426692 2016-11-21 06:42:03Z olivierd $
+# $FreeBSD: head/graphics/Makefile 428946 2016-12-19 15:56:24Z tcberner $
 #
 
     COMMENT = Graphics tools and libraries
@@ -98,6 +98,7 @@
     SUBDIR += cluttermm
     SUBDIR += code-eli
     SUBDIR += cogl
+    SUBDIR += colmap
     SUBDIR += colord
     SUBDIR += colord-gtk
     SUBDIR += comical
@@ -321,7 +322,6 @@
     SUBDIR += gtimelapse
     SUBDIR += gtk-update-icon-cache
     SUBDIR += gtkam
-    SUBDIR += gtkdps
     SUBDIR += gts
     SUBDIR += guilib
     SUBDIR += gwenview-kde4
@@ -396,6 +396,7 @@
     SUBDIR += kdegraphics4-thumbnailers
     SUBDIR += kf5-kimageformats
     SUBDIR += kf5-kplotting
+    SUBDIR += kf5-prison
     SUBDIR += kiconedit
     SUBDIR += kipi-plugin-acquireimages
     SUBDIR += kipi-plugin-advancedslideshow
@@ -618,7 +619,6 @@
     SUBDIR += ocaml-lablgl
     SUBDIR += ocrad
     SUBDIR += ocre
-    SUBDIR += ocrfeeder
     SUBDIR += ocropus
     SUBDIR += ogre3d
     SUBDIR += okular
@@ -770,6 +770,7 @@
     SUBDIR += pfstools
     SUBDIR += pgplot
     SUBDIR += pho
+    SUBDIR += photivo
     SUBDIR += photopc
     SUBDIR += phototonic
     SUBDIR += php-facedetect
@@ -831,7 +832,6 @@
     SUBDIR += py-PyOpenGL-accelerate
     SUBDIR += py-PyX
     SUBDIR += py-PyX12
-    SUBDIR += py-aafigure
     SUBDIR += py-actdiag
     SUBDIR += py-blockdiag
     SUBDIR += py-blockdiagcontrib-cisco
@@ -859,6 +859,7 @@
     SUBDIR += py-imageio
     SUBDIR += py-imagesize
     SUBDIR += py-imgurpython
+    SUBDIR += py-leather
     SUBDIR += py-mayavi
     SUBDIR += py-mcomix
     SUBDIR += py-ming
@@ -1011,6 +1012,7 @@
     SUBDIR += smillaenlarger
     SUBDIR += springgraph
     SUBDIR += squish
+    SUBDIR += ssocr
     SUBDIR += sswf
     SUBDIR += stamp
     SUBDIR += structuresynth

@@ -1,4 +1,4 @@
-# $FreeBSD: head/editors/libreoffice/Makefile 426579 2016-11-20 12:45:36Z bapt $
+# $FreeBSD: head/editors/libreoffice/Makefile 428889 2016-12-18 22:06:50Z tcberner $
 
 .include "${.CURDIR}/Makefile.common"
 
@@ -54,7 +54,7 @@ LIB_DEPENDS=	libapr-1.so:devel/apr1 \
 		libnss3.so:security/nss \
 		libclucene-core.so:textproc/clucene \
 		libexpat.so:textproc/expat2 \
-		libhunspell-1.3.so:textproc/hunspell \
+		libhunspell-1.5.so:textproc/hunspell \
 		libhyphen.so:textproc/hyphen \
 		libabw-0.1.so:textproc/libabw \
 		libe-book-0.1.so:textproc/libe-book \
@@ -174,7 +174,7 @@ JAVA_VARS=	JAVA_BUILD=yes
 
 KDE4_CONFIGURE_ENABLE=	kde4
 KDE4_CONFIGURE_ENV=	KDE4DIR="${KDE_PREFIX}" \
-			QT4DIR="${QT_PREFIX}" \
+			QT4DIR="${PREFIX}" \
 			QT4INC="${QT_INCDIR}" \
 			QT4LIB="${QT_LIBDIR}"
 KDE4_USES=	kde:4

@@ -1,4 +1,4 @@
-# $FreeBSD: head/GIDs 427077 2016-11-25 06:11:01Z araujo $
+# $FreeBSD: head/GIDs 428952 2016-12-19 16:39:06Z novel $
 # Please keep this file sorted by GID!
 # Please pick an empty slot when available and also consider base values from
 # /usr/src/etc/group
@@ -137,9 +137,9 @@ moinmoin:*:192:
 cups:*:193:
 saned:*:194:
 radns:*:195:
-# free: 196
-# free: 197
-# free: 198
+nova:*:196:
+dq:*:197:
+horizon:*:198:
 mcserver:*:199:
 sympa:*:200:
 privoxy:*:201:

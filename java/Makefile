@@ -1,4 +1,4 @@
-# $FreeBSD: head/java/Makefile 423993 2016-10-14 21:07:02Z pi $
+# $FreeBSD: head/java/Makefile 427532 2016-12-01 23:36:56Z rene $
 #
 
     COMMENT = Java language support
@@ -52,7 +52,6 @@
     SUBDIR += jakarta-commons-primitives
     SUBDIR += jakarta-oro
     SUBDIR += jakarta-regexp
-    SUBDIR += jakarta-struts
     SUBDIR += jamvm
     SUBDIR += jasmin
     SUBDIR += java-checkstyle

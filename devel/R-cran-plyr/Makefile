@@ -1,5 +1,5 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: head/devel/R-cran-plyr/Makefile 416632 2016-06-09 21:07:17Z tota $
+# $FreeBSD: head/devel/R-cran-plyr/Makefile 427552 2016-12-02 11:58:21Z mat $
 
 PORTNAME=	plyr
 PORTVERSION=	1.8.4
@@ -19,7 +19,7 @@ RUN_DEPENDS=	R-cran-Rcpp>=0.11.0:devel/R-cran-Rcpp
 
 USES=	cran:auto-plist
 
-post-stage:
+post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/R/library/plyr/libs/plyr.so
 
 .include <bsd.port.mk>

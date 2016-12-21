@@ -1,5 +1,5 @@
 # Created by: Gleb Kurtsou <gleb@FreeBSD.org>
-# $FreeBSD: head/sysutils/pefs-kmod/Makefile 419226 2016-07-28 17:27:00Z kmoore $
+# $FreeBSD: head/sysutils/pefs-kmod/Makefile 427305 2016-11-28 13:42:25Z amdmi3 $
 
 PORTNAME=	pefs
 DISTVERSION=	2016-06-11
@@ -28,7 +28,7 @@ PLIST_FILES=	sbin/pefs \
 		lib/pam_pefs.so \
 		man/man8/pam_pefs.8.gz \
 		man/man8/pefs.8.gz \
-		/${KMODDIR}/pefs.ko
+		${KMODDIR}/pefs.ko
 
 .include <bsd.port.options.mk>
 

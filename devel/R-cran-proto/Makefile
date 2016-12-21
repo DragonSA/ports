@@ -1,9 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: head/devel/R-cran-proto/Makefile 367888 2014-09-10 20:50:31Z gerald $
+# $FreeBSD: head/devel/R-cran-proto/Makefile 427746 2016-12-03 23:28:49Z tota $
 
 PORTNAME=	proto
-DISTVERSION=	0.3-10
-PORTREVISION=	7
+DISTVERSION=	1.0.0
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 

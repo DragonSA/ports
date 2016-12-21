@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: head/math/R-cran-coda/Makefile 399889 2015-10-21 06:14:06Z wen $
+# $FreeBSD: head/math/R-cran-coda/Makefile 428462 2016-12-13 03:09:16Z wen $
 
 PORTNAME=	coda
-DISTVERSION=	0.18-1
+DISTVERSION=	0.19-1
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 

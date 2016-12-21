@@ -1,5 +1,5 @@
 # Created by: Andy Pavlo
-# $FreeBSD: head/sysutils/condor/Makefile 426908 2016-11-23 12:45:46Z jbeich $
+# $FreeBSD: head/sysutils/condor/Makefile 428340 2016-12-11 08:25:56Z antoine $
 #
 # Note: Make sure there are no older versions of HTCondor installed during
 #       build.  The build system may pick up incompatible headers and libs.
@@ -28,7 +28,7 @@ LIB_DEPENDS+=	libkrb5support.so:security/krb5 \
 WRKSRC=		${WRKDIR}/condor-${PORTVERSION}
 USE_LDCONFIG=	yes
 # Does not build with Python 3
-USES=		cmake cpe gmake perl5 pgsql python:2 shebangfix ssl
+USES=		cmake cpe perl5 pgsql python:2 shebangfix ssl
 CPE_VENDOR=	condor_project
 SHEBANG_FILES=	src/condor_scripts/condor_qsub \
 		src/condor_gridmanager/remote_gahp \

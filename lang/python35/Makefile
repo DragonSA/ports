@@ -1,5 +1,5 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: head/lang/python35/Makefile 424427 2016-10-21 15:21:13Z mat $
+# $FreeBSD: head/lang/python35/Makefile 427389 2016-11-29 18:46:21Z mat $
 
 PORTNAME=	python
 DISTVERSION=	${PYTHON_PORTVERSION}
@@ -129,4 +129,10 @@ post-install:
 	for i in ${STAGEDIR}${PREFIX}/lib/python${PYTHON_VER}/lib-dynload/*.so; do \
 		${STRIP_CMD} $$i; done								# Strip shared extensions
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+.if ${SSL_DEFAULT:Mopenssl-devel}
+BROKEN=		Does not build with openssl-devel
+.endif
+
+.include <bsd.port.post.mk>

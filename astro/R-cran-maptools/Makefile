@@ -1,8 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: head/astro/R-cran-maptools/Makefile 412344 2016-04-01 13:29:15Z mat $
+# $FreeBSD: head/astro/R-cran-maptools/Makefile 427952 2016-12-06 12:32:35Z tota $
 
 PORTNAME=	maptools
-DISTVERSION=	0.8-39
+DISTVERSION=	0.8-40
 CATEGORIES=	astro
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
@@ -11,8 +11,10 @@ COMMENT=	Tools for reading and handling spatial objects
 
 LICENSE=	GPLv2+
 
-RUN_DEPENDS=	R-cran-sp>=1.0.11:math/R-cran-sp
+CRAN_DEPENDS=	R-cran-sp>=1.0.11:math/R-cran-sp
+BUILD_DEPENDS=	${CRAN_DEPENDS}
+RUN_DEPENDS=	${CRAN_DEPENDS}
 
-USES=	cran:auto-plist
+USES=	cran:auto-plist,compiles
 
 .include <bsd.port.mk>

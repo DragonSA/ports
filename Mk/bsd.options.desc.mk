@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/bsd.options.desc.mk 426780 2016-11-22 06:54:59Z sunpoet $
+# $FreeBSD: head/Mk/bsd.options.desc.mk 428895 2016-12-19 01:08:21Z jbeich $
 #
 # READ BEFORE EDITING:
 # - Please keep descriptions sorted alphabetically by variable name.
@@ -438,6 +438,7 @@ SNMP_DESC?=		SNMP network protocol support
 SOCKS_DESC?=		SOCKS proxy support
 SOUND_DESC?=		Sound (audio) support
 SOUNDTOUCH_DESC?=	Sound processing support via SoundTouch
+SOXR_DESC?=		SoX resampler support via libsoxr
 SPANDSP_DESC?=		SpanDSP faxing support
 SPATIALITE_DESC?=	SpatiaLite support
 SPDY_DESC?=		SPDY network protocol support

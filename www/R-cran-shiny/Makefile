@@ -1,8 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: head/www/R-cran-shiny/Makefile 423668 2016-10-10 15:00:22Z tota $
+# $FreeBSD: head/www/R-cran-shiny/Makefile 427756 2016-12-04 07:07:00Z tota $
 
 PORTNAME=	shiny
-PORTVERSION=	0.14.1
+PORTVERSION=	0.14.2
 CATEGORIES=	www
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
