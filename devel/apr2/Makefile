@@ -110,8 +110,8 @@ post-patch:
 	${REINPLACE_CMD} -e 's|%%OSVERSION%%|${OSVERSION}|g' ${WRKSRC}/build/apr_hints.m4
 	${REINPLACE_CMD} -e '1s|${SETENV} python|${PYTHON_CMD}|' \
 		${WRKSRC}/build/gen-build.py
-	${REINPLACE_CMD} -e 's|PrintPath python|PrintPath ${PYTHON_VERSION}|' \
-		-e 's|python -c|${PYTHON_VERSION} -c|' \
+	${REINPLACE_CMD} -e 's|`build/PrintPath python`|"${PYTHON_CMD}"|' \
+		-e 's|python -c|${PYTHON_CMD} -c|' \
 		${WRKSRC}/build/buildcheck.sh
 
 pre-configure:
