@@ -30,6 +30,7 @@ OPTIONS_DEFINE=		FRIBIDI CURL GDAL GEOS KML POSTGIS PHP PERL PYTHON \
 			WMS WFS WCS FASTCGI DEBUG CAIRO CAIRO_SVG \
 			CLIENT_WMS CLIENT_WFS
 OPTIONS_DEFAULT=	FRIBIDI GDAL GEOS CLIENT_WMS CLIENT_WFS KML CAIRO_SVG
+OPTIONS_SUB=		yes
 CAIRO_SVG_DESC=		Cairo SVG parser support
 GDAL_DESC=		GDAL library support
 FRIBIDI_DESC=		Fribidi library support
@@ -38,145 +39,68 @@ WMS_DESC=		WMS Server support
 WFS_DESC=		WFS Server support
 WCS_DESC=		WCS Server support
 
-.include <bsd.port.options.mk>
+PYTHON_USES=			python:-2.7
+PYTHON_BUILD_DEPENDS=		swig2.0:devel/swig20
+PYTHON_CMAKE_BOOL=		WITH_PYTHON
+PYTHON_VARS=			MAP_EGG=MapScript-${PORTVERSION}-py${PYTHON_VER}
+PYTHON_PLIST_SUB=		MAP_EGG=${MAP_EGG}
 
-.if ${PORT_OPTIONS:MPYTHON}
-USES+=			python:2
-BUILD_DEPENDS+=		swig2.0:devel/swig20
-CMAKE_ARGS+=		-DWITH_PYTHON=yes
-PLIST_SUB+=		PYTHON=""
-MAP_EGG=		MapScript-${PORTVERSION}-${PYTHON_VERSION:S/thon//}
-PLIST_SUB+=		MAP_EGG=${MAP_EGG}
-.else
-PLIST_SUB+=		PYTHON="@comment "
-.endif
+CAIRO_LIB_DEPENDS=		libcairo.so:graphics/cairo \
+				libexpat.so:textproc/expat2
+CAIRO_CMAKE_BOOL=		WITH_CAIRO
 
-.if ${PORT_OPTIONS:MCAIRO}
-LIB_DEPENDS+=		libcairo.so:graphics/cairo \
-			libexpat.so:textproc/expat2
-CMAKE_ARGS+=		-DWITH_CAIRO=1
-.else
-CMAKE_ARGS+=		-DWITH_CAIRO=0
-.endif
+FRIBIDI_LIB_DEPENDS=		libfribidi.so:converters/fribidi
+FRIBIDI_CMAKE_BOOL=		WITH_FRIBIDI
 
-.if ${PORT_OPTIONS:MFRIBIDI}
-LIB_DEPENDS+=		libfribidi.so:converters/fribidi
-CMAKE_ARGS+=		-DWITH_FRIBIDI=1
-.else
-CMAKE_ARGS+=		-DWITH_FRIBIDI=0
-.endif
+CAIRO_SVG_LIB_DEPENDS=		libsvg-cairo.so:graphics/libsvg-cairo
+CAIRO_SVG_CMAKE_ARGS=		WITH_SVGCAIRO
+CAIRO_SVG_USES=			pkgconfig
+CAIRO_SVG_IMPLIES=		CAIRO
 
-.if ${PORT_OPTIONS:MCAIRO_SVG}
-LIB_DEPENDS+=		libcairo.so:graphics/cairo \
-			libsvg-cairo.so:graphics/libsvg-cairo \
-			libexpat.so:textproc/expat2
-CMAKE_ARGS+=		-DWITH_SVGCAIRO=1 -DWITH_CAIRO=1
-USES+=			pkgconfig
-.else
-CMAKE_ARGS+=		-DWITH_SVGCAIRO=0
-.endif
+KML_LIB_DEPENDS=		libxml2.so:textproc/libxml2
+KML_CMAKE_BOOL=			WITH_KML
 
-.if ${PORT_OPTIONS:MKML}
-LIB_DEPENDS+=		libxml2.so:textproc/libxml2
-CMAKE_ARGS+=		-DWITH_KML=1
-.else
-CMAKE_ARGS+=		-DWITH_KML=0
-.endif
+WMS_CMAKE_BOOL=			WITH_WMS
 
-.if ${PORT_OPTIONS:MWMS}
-CMAKE_ARGS+=		-DWITH_WMS=1
-.else
-CMAKE_ARGS+=		-DWITH_WMS=0
-.endif
+WFS_CMAKE_BOOL=			WITH_WFS
 
-.if ${PORT_OPTIONS:MWFS}
-CMAKE_ARGS+=		-DWITH_WFS=1
-.else
-CMAKE_ARGS+=		-DWITH_WFS=0
-.endif
+WCS_CMAKE_BOOL=			WITH_WCS
 
-.if ${PORT_OPTIONS:MWCS}
-CMAKE_ARGS+=		-DWITH_WCS=1
-.else
-CMAKE_ARGS+=		-DWITH_WCS=0
-.endif
+GDAL_USES=			iconv
+GDAL_LIB_DEPENDS=		libgdal.so:graphics/gdal
+GDAL_CMAKE_BOOL=		WITH_GDAL
 
-.if ${PORT_OPTIONS:MGDAL}
-USES+=			iconv
-LIB_DEPENDS+=		libgdal.so:graphics/gdal
-CMAKE_ARGS+=		-DWITH_GDAL=1
-.else
-CMAKE_ARGS+=		-DWITH_GDAL=0
-.endif
+GEOS_LIB_DEPENDS=		libgeos.so:graphics/geos
+GEOS_CMAKE_BOOL=		WITH_GEOS
 
-.if ${PORT_OPTIONS:MGEOS}
-LIB_DEPENDS+=		libgeos.so:graphics/geos
-CMAKE_ARGS+=		-DWITH_GEOS=1
-.else
-CMAKE_ARGS+=		-DWITH_GEOS=0
-.endif
+POSTGIS_USES=			pgsql
+POSTGIS_CMAKE_ARGS=		WITH_POSTGIS
 
-.if ${PORT_OPTIONS:MPOSTGIS}
-USES+=			pgsql
-CMAKE_ARGS+=		-DWITH_POSTGIS=1
-.else
-CMAKE_ARGS+=		-DWITH_POSTGIS=0
-.endif
+PHP_USES=			php:build
+PHP_VARS=			IGNORE_WITH_PHP=70
+PHP_CMAKE_BOOL=			WITH_PHP
 
-.if ${PORT_OPTIONS:MPHP}
-USES+=			php:build
-IGNORE_WITH_PHP=	70
-CMAKE_ARGS+=		-DWITH_PHP=1
-PLIST_SUB+=		PHP=""
-.else
-CMAKE_ARGS+=		-DWITH_PHP=0
-PLIST_SUB+=		PHP="@comment "
-.endif
+PERL_USES=			perl5
+PERL_BUILD_DEPENDS=		${LOCALBASE}/bin/swig2.0:devel/swig20
+PERL_CMAKE_BOOL=		WITH_PERL
 
-.if ${PORT_OPTIONS:MPERL}
-USES+=		perl5
-BUILD_DEPENDS=	${LOCALBASE}/bin/swig2.0:devel/swig20
-CMAKE_ARGS+=	-DWITH_PERL=1
-PLIST_SUB+=	PERL=""
-.else
-CMAKE_ARGS+=	-DWITH_PERL=0
-PLIST_SUB+=	PERL="@comment "
-.endif
+CURL_LIB_DEPENDS=		libcurl.so:ftp/curl
+CURL_CMAKE_BOOL=		WITH_CURL
 
-.if ${PORT_OPTIONS:MCURL}
-LIB_DEPENDS+=		libcurl.so:ftp/curl
-CMAKE_ARGS+=		-DWITH_CURL=1
-.else
-CMAKE_ARGS+=		-DWITH_CURL=0
-.endif
+FASTCGI_BUILD_DEPENDS=		${LOCALBASE}/bin/cgi-fcgi:www/fcgi
+FASTCGI_CMAKE_BOOL=		WITH_FCGI
 
-.if ${PORT_OPTIONS:MFASTCGI}
-BUILD_DEPENDS+=		${LOCALBASE}/bin/cgi-fcgi:www/fcgi
-CMAKE_ARGS+=		-DWITH_FCGI=1
-.else
-CMAKE_ARGS+=		-DWITH_FCGI=0
-.endif
+DEBUG_CMAKE_ON=			-DCMAKE_BUILD_TYPE=Debug
+DEBUG_CMAKE_OFF=		-DCMAKE_BUILD_TYPE=Release
 
-.if ${PORT_OPTIONS:MDEBUG}
-CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Debug
-.else
-CMAKE_ARGS+=		-DCMAKE_BUILD_TYPE=Release
-.endif
+CLIENT_WMS_CMAKE_BOOL=		WITH_CLIENT_WMS
+CLIENT_WMS_IMPLIES=		CURL GDAL
+
+CLIENT_WFS_CMAKE_BOOL=		WITH_CLIENT_WFS
+CLIENT_WFS_IMPLIES=		CURL GDAL
 
 PROG_FILES=		legend scalebar shp2img shptree shptreetst shptreevis \
 			sortshp msencrypt tile4ms mapserv
-
-.if ${PORT_OPTIONS:MCLIENT_WMS}
-LIB_DEPENDS+=		libcurl.so:ftp/curl
-LIB_DEPENDS+=		libgdal.so:graphics/gdal
-CMAKE_ARGS+=		-DWITH_CURL=1 -DWITH_GDAL=1 -DWITH_CLIENT_WMS=1
-.endif
-
-.if ${PORT_OPTIONS:MCLIENT_WFS}
-LIB_DEPENDS+=		libcurl.so:ftp/curl
-LIB_DEPENDS+=		libgdal.so:graphics/gdal
-CMAKE_ARGS+=		-DWITH_CURL=1 -DWITH_GDAL=1 -DWITH_CLIENT_WFS=1
-.endif
 
 do-install:
 .for f in ${PROG_FILES}
