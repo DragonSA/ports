@@ -17,7 +17,6 @@ RUN_DEPENDS=	svn:devel/subversion \
 
 USES=		python
 USE_PYTHON=	distutils autoplist
-PLIST_SUB=	VERSION=${PORTVERSION} PYVER=${PYTHON_VERSION:S/python//}
 
 NO_ARCH=	YES
 
