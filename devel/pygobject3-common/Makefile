@@ -65,7 +65,7 @@ RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/pycairo.pc:graphics/py-cairo
 USES+=		python:3
 BUILD_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/py3cairo.pc:graphics/py3-cairo
 RUN_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/py3cairo.pc:graphics/py3-cairo
-PLIST_SUB+=	PYTVER=${PYTHON_VER:S/.//}
+PLIST_SUB+=	PYTVER=${PYTHON_SUFFIX}
 .endif
 
 post-install:
