@@ -35,7 +35,7 @@ do-extract:
 
 post-patch:
 	${PERL} -i -p \
-		-e 's,"2\.4" "2\.3" "2\.2" "2\.1",${PYTHON_VERSION:S/^python//},g;' \
+		-e 's,"2\.4" "2\.3" "2\.2" "2\.1",${PYTHON_VER},g;' \
 			${WRKSRC}/configure
 
 post-install:
