@@ -15,6 +15,8 @@ LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN=		Unfetchable (google code has gone away)
+DEPRECATED=	Abandoned software: no update since 2010 and no upstream
+EXPIRATION_DATE=2016-12-31
 
 USES=		python:run tar:bzip2
 
@@ -26,7 +28,7 @@ NO_BUILD=	yes
 OPTIONS_DEFINE=	DOCS EXAMPLES
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|python2.4|${PYTHON_VERSION}|' \
+	@${REINPLACE_CMD} -e 's|python2.4|${PYTHON_CMD}|' \
 		${WRKSRC}/examples/*.py \
 		${WRKSRC}/${PORTNAME}/*.py
 	@${FIND} ${WRKSRC} -name '.svn' -or -name '*.bak' | \
