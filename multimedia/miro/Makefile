@@ -37,7 +37,8 @@ USE_GNOME=	gconf2 gtk20
 USE_GSTREAMER=	python gconf
 USES=		gettext gmake pkgconfig desktop-file-utils python shared-mime-info shebangfix
 SHEBANG_FILES=	resources/testdata/7digital-replies/generate.py \
-		resources/testdata/echonest-replies/generate.py
+		resources/testdata/echonest-replies/generate.py \
+		${BUILD_WRKSRC}/miro.real
 USE_PYTHON=	distutils
 USE_LDCONFIG=	yes
 INSTALLS_ICONS=	yes
@@ -54,10 +55,6 @@ post-patch:
 		's|%%LOCALBASE%%|${LOCALBASE}|g ; \
 		 s|%%PREFIX%%|${PREFIX}|g ; \
 		 s|%%MANPREFIX%%|${MANPREFIX}|g' \
-		${BUILD_WRKSRC}/${file}
-.endfor
-.for file in miro.real
-	${REINPLACE_CMD} -e 's|python2.4|${PYTHON_VERSION}|g' \
 		${BUILD_WRKSRC}/${file}
 .endfor
 .for file in run.sh
