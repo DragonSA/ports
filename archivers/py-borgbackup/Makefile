@@ -33,13 +33,7 @@ USE_PYTHON=	autoplist distutils
 WITH_OPENSSL_PORT=yes
 .endif
 
-.include <bsd.port.pre.mk>
-
-.if defined(PACKAGE_BUILDING) && ${PYTHON_VER} != ${PYTHON_DEFAULT}
-IGNORE=	you have python ${PYTHON_DEFAULT} set as the default, and this needs ${PYTHON_VER}
-.endif
-
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/borg/*.so
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
