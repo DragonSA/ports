@@ -707,4 +707,22 @@ do-install:
 	@(cd ${INSTALL_WRKSRC}; ${SETENV} ${MAKE_ENV} ${PYTHON_CMD} ${PYDISTUTILS_SETUP} ${PYDISTUTILS_INSTALL_TARGET} ${PYDISTUTILS_INSTALLARGS})
 .endif
 .endif # defined(_PYTHON_FEATURE_DISTUTILS)
+
+.if defined(PACKAGE_BUILDING) && ${PYTHON_DEFAULT} != ${PYTHON_VERSION} && !defined(_PYTHON_RECURSIVE)
+_PYTHON_ORIGINS=	${BUILD_DEPENDS:C/.*://g} ${RUN_DEPENDS:C/.*://g}
+_PYTHON_ORIGINS:=	${_PYTHON_ORIGINS:O}
+_PYTHON_ORIGINS_UNIQ=
+. for origin in ${_PYTHON_ORIGINS}
+.  if !defined(IGNORE)
+.   if empty(_PYTHON_ORIGINS_UNIQ:M${origin})
+_PYTHON_ORIGINS_UNIQ+=	${origin}
+python_version!=	${MAKE} -C ${PORTSDIR}/${origin} -V PYTHON_VERSION -D _PYTHON_RECURSIVE
+.    if !empty(python_version) && ${PYTHON_VERSION} != ${python_version}
+IGNORE=		you have ${PYTHON_DEFAULT} set as the default, and this needs ${PYTHON_VERSION}
+.    endif
+.   endif
+.  endif
+. endfor
+.endif
+
 .endif # defined(_POSTMKINCLUDED) && !defined(_INCLUDE_USES_PYTHON_POST_MK)
