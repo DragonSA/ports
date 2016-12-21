@@ -42,8 +42,6 @@ PLIST_SUB=	VERSION=${VERSION}
 
 OPTIONS_DEFINE=	DOCS
 
-.include <bsd.port.pre.mk>
-
 .if defined(BOOTSTRAP) || defined(SVN_FETCH)
 #portlint freaks over this but it's only for dev. so ignore.
 FETCH_DEPENDS+=	svn:devel/subversion
@@ -102,8 +100,4 @@ post-install-DOCS-on:
 	${INSTALL_DATA} ${WRKSRC}/${d} ${STAGEDIR}${DOCSDIR}
 .endfor
 
-.if defined(PACKAGE_BUILDING) && ${PYTHON_VERSION} != ${PYTHON_DEFAULT}
-IGNORE=	you have python ${PYTHON_DEFAULT} set as the default, and this needs ${PYTHON_VERSION}
-.endif
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
