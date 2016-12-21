@@ -30,12 +30,6 @@ PYDISTUTILS_BUILDPATH=${BUILD_WRKSRC}/build/lib.${OPSYS:tl}-${UNAMER}-${ARCH}-${
 WITH_OPENSSL_PORT=	yes
 .endif
 
-.include <bsd.port.pre.mk>
-
-.if defined(PACKAGE_BUILDING) && ${PYTHON_VER} != ${PYTHON_DEFAULT}
-IGNORE=	you have python ${PYTHON_DEFAULT} set as the default, and this needs ${PYTHON_VER}
-.endif
-
 regression-test: build
 	${SETENV} PYTHONPATH="${PYDISTUTILS_BUILDPATH}:${PYTHONPATH}" \
 	  ${PYTHON_CMD} -m attic.testsuite.run
@@ -43,4 +37,4 @@ regression-test: build
 post-install:
 	${STRIP_CMD} ${STRIP_FILES:S,^,${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/attic/,}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
