@@ -76,11 +76,7 @@ PLIST_SUB=	USERS=${USERS} \
 
 SUB_FILES=	pkg-message
 
-SUB_LIST+=	USERS=${USERS} \
-		GROUPS=${GROUPS} \
-		SEAFILE_SERVER=${SEAFILE_SERVER} \
-		HAIWENDIR=${HAIWENDIR} \
-		PYTHON=${PYTHON_VERSION}
+SUB_LIST=	SEAFILE_SERVER=${SEAFILE_SERVER}
 
 do-patch:
 	echo "${WRKSRC}..."
@@ -91,8 +87,8 @@ do-patch:
 	${REINPLACE_CMD} -e 's|##FIX_WWWDIR##|${PREFIX}/${HAIWENDIR}|' ${WRKSRC}/*.template
 	${REINPLACE_CMD} -e 's|##FIX_SEALIB##|${PREFIX}/${SEALIB}|' ${WRKSRC}/*.template
 	${REINPLACE_CMD} -e 's|##FIX_SITEPACKAGEDIR##|${PREFIX}/${SITEPACKAGEDIR}|' ${WRKSRC}/*.template
-	${REINPLACE_CMD} -e 's|##PYTHON_VERSION##|${PYTHON_VERSION}|g' ${WRKSRC}/*.template
-	${REINPLACE_CMD} -e 's|##FIX_LOCALBASE##|${LOCALBASE}|' ${WRKSRC}/*.template
+	${REINPLACE_CMD} -e 's|##PYTHON_VER##|${PYTHON_VER}|g' ${WRKSRC}/*.template
+	${REINPLACE_CMD} -e 's|##PYTHON_SITELIBDIR##|${PYTHON_SITELIBDIR}|' ${WRKSRC}/*.template
 	${FIND} ${WRKSRC} -name "*.bak" -exec ${RM} {} \;
 	${FIND} ${WRKSRC} -name "*.orig" -exec ${RM} {} \;
 	(cd ${WRKSRC}; (for file in run-seahub.sh.template \
