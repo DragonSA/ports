@@ -12,11 +12,6 @@ OPTIONS_DEFINE=	DEBUG OPTIMIZED_CFLAGS
 
 .include "${.CURDIR}/../boost-all/compiled.mk"
 
-MAKE_ENV+=	PYTHON_ROOT="${LOCALBASE}"\
-		PYTHON_VERSION="${PYTHON_VERSION}"\
-		PYTHON_INCLUDES="${PYTHON_INCLUDEDIR}"\
-		PYTHON_LIB_PATH="${PYTHON_LIBDIR}"
-
 LIB_DEPENDS+=	libboost_thread.so:devel/boost-libs
 MAKE_ARGS+=	--with-python
 ALL_TARGET=	stage
