@@ -40,7 +40,7 @@ PYTHON_LIB_DEPENDS=	libboost_python.so:devel/boost-python-libs
 PYTHON_RUN_DEPENDS=	${PYNUMPY} \
 			${PYTHON_PKGNAMEPREFIX}sip>0:devel/py-sip
 PYTHON_CMAKE_ON=	-DENABLE_PYTHON=ON \
-			-DPYTHON_INCLUDE_DIR:PATH=${WRKDIR}/include/${PYTHON_VERSION}
+			-DPYTHON_INCLUDE_DIR:PATH=${WRKDIR}/include/python${PYTHON_VER}
 PYTHON_CMAKE_OFF=	-DENABLE_PYTHON=OFF
 
 post-patch:
@@ -51,12 +51,12 @@ post-patch:
 		's|share/man|man|' ${WRKSRC}/doc/CMakeLists.txt
 
 pre-configure-PYTHON-on:
-	@${MKDIR} ${WRKDIR}/include/${PYTHON_VERSION}
+	@${MKDIR} ${WRKDIR}/include/python${PYTHON_VER}
 	@${FIND} ${PYTHON_INCLUDEDIR} ! -name "pyport.h" -type f \
 		-maxdepth 1 | ${XARGS} -J % ${LN} -sf % \
-		${WRKDIR}/include/${PYTHON_VERSION}
+		${WRKDIR}/include/python${PYTHON_VER}
 	@${SED} -e 's|^#ifdef _PY_PORT_CTYPE_UTF8_ISSUE|#if 0|' \
 		${PYTHON_INCLUDEDIR}/pyport.h > \
-		${WRKDIR}/include/${PYTHON_VERSION}/pyport.h
+		${WRKDIR}/include/python${PYTHON_VER}/pyport.h
 
 .include <bsd.port.mk>
