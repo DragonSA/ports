@@ -1,11 +1,10 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: head/audio/libofa/Makefile 422530 2016-09-20 17:58:41Z marino $
+# $FreeBSD: head/audio/libofa/Makefile 429142 2016-12-22 05:31:22Z dbn $
 
 PORTNAME=	libofa
 PORTVERSION=	0.9.3
 PORTREVISION=	10
 CATEGORIES=	audio
-MASTER_SITES=	http://pkgs.fedoraproject.org/repo/pkgs/libofa/libofa-0.9.3.tar.gz/51507d2c4b432bd2755f48d58471696e/
 
 MAINTAINER=	jhale@FreeBSD.org
 COMMENT=	The Open Fingerprint Architecture Library
@@ -20,6 +19,10 @@ LICENSE_PERMS_APL1=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 LIB_DEPENDS=	libfftw3.so:math/fftw3 \
 		libexpat.so:textproc/expat2 \
 		libcurl.so:ftp/curl
+
+USE_GITHUB=	yes
+GH_ACCOUNT=	tanob
+GH_TAGNAME=	b75e45e
 
 PROJECTHOST=	musicip-libofa
 USES=		dos2unix libtool pathfix
