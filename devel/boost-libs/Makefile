@@ -47,7 +47,6 @@ post-install:
 	@${REINPLACE_CMD} \
 		-e "s|%%LOCALBASE%%|${LOCALBASE}|g" \
 		-e "s|%%PYTHON_INCLUDEDIR%%|${PYTHON_INCLUDEDIR}|g" \
-		-e "s|%%PYTHON_LIBDIR%%|${PYTHON_LIBDIR}|g" \
-		-e "s|%%PYTHON_VERSION%%|${PYTHON_VERSION}|g" ${PKGMESSAGE}
+		-e "s|%%PYTHON_LIB%%|${PYTHON_LIB}|g" ${PKGMESSAGE}
 
 .include <bsd.port.mk>

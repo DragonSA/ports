@@ -5,4 +5,4 @@ Compiler options:
    -I%%PYTHON_INCLUDEDIR%% -I%%LOCALBASE%%/include
 
 Linker options:
-   -L%%PYTHON_LIBDIR%% -L%%LOCALBASE%%/lib -lboost_python -l%%PYTHON_VERSION%%
+   -L%%LOCALBASE%%/lib -lboost_python %%PYTHON_LIB%%
