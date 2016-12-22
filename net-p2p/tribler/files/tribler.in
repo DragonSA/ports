@@ -8,4 +8,4 @@ echo "Starting Tribler..."
 STATEDIR="$HOME/.Tribler"
 [ ! -d $STATEDIR ] && mkdir -p $STATEDIR
 cd $_TRIBLERPATH
-exec %%PYTHON_VERSION%% -O Tribler/Main/tribler.py "$@" > $STATEDIR/tribler.log 2>&1
+exec %%PYTHON_CMD%% -O Tribler/Main/tribler.py "$@" > $STATEDIR/tribler.log 2>&1
