@@ -1,8 +1,9 @@
 # Created by: Stephen Montgomery-Smith <stephen@math.missouri.edu>
-# $FreeBSD: head/science/vmd/Makefile 430880 2017-01-08 17:36:15Z dbn $
+# $FreeBSD: head/science/vmd/Makefile 430911 2017-01-09 05:53:51Z dbn $
 
 PORTNAME=	vmd
 DISTVERSION=	1.9.3
+PORTREVISION=	1
 CATEGORIES=	science graphics python tcl tk
 MASTER_SITES=	http://jedi.ks.uiuc.edu/~johns/raytracer/files/0.99b6/:tachyon \
 		http://www.photonlimited.com/~johns/tachyon/files/0.99b6/:tachyon \
@@ -19,12 +20,12 @@ LICENSE=	VMD BSD3CLAUSE STRIDE
 LICENSE_COMB=	multi
 
 BUILD_DEPENDS=	makedepend:devel/makedepend \
-		${PYNUMERIC}
+		${NUMPY}
 LIB_DEPENDS=	libtcl85.so:lang/tcl85 \
 		libtk85.so:x11-toolkits/tk85 \
 		libfltk.so:x11-toolkits/fltk \
 		libnetcdf.so:science/netcdf
-RUN_DEPENDS=	${PYNUMERIC}
+RUN_DEPENDS=	${NUMPY}
 
 LICENSE_FILE_VMD=	${WRKSRC}/LICENSE
 LICENSE_PERMS_VMD=	auto-accept
