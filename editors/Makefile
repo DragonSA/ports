@@ -1,4 +1,4 @@
-# $FreeBSD: head/editors/Makefile 428666 2016-12-16 09:48:54Z ehaupt $
+# $FreeBSD: head/editors/Makefile 430266 2017-01-01 17:54:02Z jkim $
 #
 
     COMMENT = Editors
@@ -191,6 +191,7 @@
     SUBDIR += libreoffice-ug
     SUBDIR += libreoffice-uz
     SUBDIR += libreoffice-ve
+    SUBDIR += libreoffice-vec
     SUBDIR += libreoffice-xh
     SUBDIR += libreoffice-zu
     SUBDIR += libreoffice4
@@ -256,6 +257,7 @@
     SUBDIR += vile
     SUBDIR += vim
     SUBDIR += vim-lite
+    SUBDIR += web-mode
     SUBDIR += with-editor
     SUBDIR += wordgrinder
     SUBDIR += xcoral

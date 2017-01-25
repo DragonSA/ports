@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11-themes/Makefile 426118 2016-11-14 16:12:56Z tcberner $
+# $FreeBSD: head/x11-themes/Makefile 430144 2016-12-31 17:25:05Z rene $
 #
 
     COMMENT = X11 themes
@@ -130,8 +130,6 @@
     SUBDIR += kf5-oxygen-icons5
     SUBDIR += linux-c6-hicolor-icon-theme
     SUBDIR += linux-c7-hicolor-icon-theme
-    SUBDIR += linux-f10-hicolor-icon-theme
-    SUBDIR += linux-f10-qtcurve-gtk2
     SUBDIR += linux-hicolor-icon-theme
     SUBDIR += lxappearance
     SUBDIR += lxde-icon-theme

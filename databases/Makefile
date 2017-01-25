@@ -1,4 +1,4 @@
-# $FreeBSD: head/databases/Makefile 428897 2016-12-19 01:18:40Z wen $
+# $FreeBSD: head/databases/Makefile 432364 2017-01-24 17:41:14Z sunpoet $
 #
 
     COMMENT = Databases and related software
@@ -173,7 +173,6 @@
     SUBDIR += libzdb
     SUBDIR += linux-c6-sqlite3
     SUBDIR += linux-c7-sqlite3
-    SUBDIR += linux-f10-sqlite3
     SUBDIR += linux-oracle-instantclient-basic
     SUBDIR += linux-oracle-instantclient-sdk
     SUBDIR += linux-oracle-instantclient-sqlplus
@@ -186,6 +185,7 @@
     SUBDIR += luasql-postgres
     SUBDIR += luasql-sqlite3
     SUBDIR += mantis
+    SUBDIR += mariadb-connector-c
     SUBDIR += mariadb100-client
     SUBDIR += mariadb100-server
     SUBDIR += mariadb101-client
@@ -224,8 +224,11 @@
     SUBDIR += mysql56-server
     SUBDIR += mysql57-client
     SUBDIR += mysql57-server
+    SUBDIR += mysql80-client
+    SUBDIR += mysql80-server
     SUBDIR += mysqlbackup
     SUBDIR += mysqlbigram
+    SUBDIR += mysqldump-secure
     SUBDIR += mysqldumper
     SUBDIR += mysqlidxchk
     SUBDIR += mysqlreport
@@ -380,6 +383,7 @@
     SUBDIR += p5-DBIx-Dump
     SUBDIR += p5-DBIx-Ease
     SUBDIR += p5-DBIx-HA
+    SUBDIR += p5-DBIx-Handler
     SUBDIR += p5-DBIx-Inspector
     SUBDIR += p5-DBIx-Introspector
     SUBDIR += p5-DBIx-Log4perl
@@ -554,6 +558,9 @@
     SUBDIR += percona55-server
     SUBDIR += percona56-client
     SUBDIR += percona56-server
+    SUBDIR += percona57-client
+    SUBDIR += percona57-pam-for-mysql
+    SUBDIR += percona57-server
     SUBDIR += pg_activity
     SUBDIR += pg_citus
     SUBDIR += pg_qualstats
@@ -625,6 +632,20 @@
     SUBDIR += php70-pgsql
     SUBDIR += php70-redis
     SUBDIR += php70-sqlite3
+    SUBDIR += php71-dba
+    SUBDIR += php71-interbase
+    SUBDIR += php71-memcache
+    SUBDIR += php71-mysqli
+    SUBDIR += php71-odbc
+    SUBDIR += php71-pdo
+    SUBDIR += php71-pdo_dblib
+    SUBDIR += php71-pdo_firebird
+    SUBDIR += php71-pdo_mysql
+    SUBDIR += php71-pdo_odbc
+    SUBDIR += php71-pdo_pgsql
+    SUBDIR += php71-pdo_sqlite
+    SUBDIR += php71-pgsql
+    SUBDIR += php71-sqlite3
     SUBDIR += phpminiadmin
     SUBDIR += phpmyadmin
     SUBDIR += phppgadmin
@@ -708,6 +729,7 @@
     SUBDIR += py-MySQLdb56
     SUBDIR += py-PyGreSQL
     SUBDIR += py-Pyrseas
+    SUBDIR += py-agate-sql
     SUBDIR += py-alembic
     SUBDIR += py-apsw
     SUBDIR += py-bsddb
@@ -719,6 +741,7 @@
     SUBDIR += py-dbf
     SUBDIR += py-dbutils
     SUBDIR += py-django-transaction-hooks
+    SUBDIR += py-fakeredis
     SUBDIR += py-fdb
     SUBDIR += py-firebirdsql
     SUBDIR += py-flask-sqlalchemy
@@ -774,7 +797,6 @@
     SUBDIR += py-rrdtool_lgpl
     SUBDIR += py-south
     SUBDIR += py-sqlalchemy-migrate
-    SUBDIR += py-sqlalchemy07
     SUBDIR += py-sqlalchemy08
     SUBDIR += py-sqlalchemy09
     SUBDIR += py-sqlalchemy10
@@ -800,6 +822,8 @@
     SUBDIR += py34-sqlite3
     SUBDIR += py35-gdbm
     SUBDIR += py35-sqlite3
+    SUBDIR += py36-gdbm
+    SUBDIR += py36-sqlite3
     SUBDIR += pydbx
     SUBDIR += pymongo
     SUBDIR += pypy-gdbm
@@ -847,15 +871,14 @@
     SUBDIR += ruby-rdbc1
     SUBDIR += ruby-sybct
     SUBDIR += ruby-tokyocabinet
-    SUBDIR += rubygem-activemodel
     SUBDIR += rubygem-activemodel4
-    SUBDIR += rubygem-activerecord
+    SUBDIR += rubygem-activemodel5
     SUBDIR += rubygem-activerecord-import
     SUBDIR += rubygem-activerecord-jdbc-adapter
     SUBDIR += rubygem-activerecord-jdbcmysql-adapter
-    SUBDIR += rubygem-activerecord-mysql-adapter
     SUBDIR += rubygem-activerecord-session_store
     SUBDIR += rubygem-activerecord4
+    SUBDIR += rubygem-activerecord5
     SUBDIR += rubygem-after_commit_queue
     SUBDIR += rubygem-amalgalite
     SUBDIR += rubygem-arel
@@ -874,12 +897,10 @@
     SUBDIR += rubygem-dbd-pg
     SUBDIR += rubygem-dbd-sqlite3
     SUBDIR += rubygem-dbi
-    SUBDIR += rubygem-dm-active_model
     SUBDIR += rubygem-dm-aggregates
     SUBDIR += rubygem-dm-chunked_query
     SUBDIR += rubygem-dm-constraints
     SUBDIR += rubygem-dm-core
-    SUBDIR += rubygem-dm-devise
     SUBDIR += rubygem-dm-do-adapter
     SUBDIR += rubygem-dm-migrations
     SUBDIR += rubygem-dm-mysql-adapter
@@ -887,7 +908,6 @@
     SUBDIR += rubygem-dm-pager
     SUBDIR += rubygem-dm-paperclip
     SUBDIR += rubygem-dm-postgres-adapter
-    SUBDIR += rubygem-dm-rails
     SUBDIR += rubygem-dm-serializer
     SUBDIR += rubygem-dm-timestamps
     SUBDIR += rubygem-dm-transactions
@@ -915,8 +935,8 @@
     SUBDIR += rubygem-rbase
     SUBDIR += rubygem-redis
     SUBDIR += rubygem-redis-actionpack
+    SUBDIR += rubygem-redis-actionpack4
     SUBDIR += rubygem-redis-namespace
-    SUBDIR += rubygem-rubyrep
     SUBDIR += rubygem-seed-fu
     SUBDIR += rubygem-sqlite3
     SUBDIR += rubygem-sqlite3-ruby

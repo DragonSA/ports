@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/bsd.options.mk 427018 2016-11-24 14:45:58Z mat $
+# $FreeBSD: head/Mk/bsd.options.mk 430773 2017-01-07 09:01:02Z antoine $
 #
 # These variables are used in port makefiles to define the options for a port.
 #
@@ -198,10 +198,6 @@ PORT_OPTIONS+=	EXAMPLES
 OPTIONS_WARNINGS+=		"NOPORTEXAMPLES"
 WITHOUT+=			EXAMPLES
 OPTIONS_WARNINGS_UNSET+=	EXAMPLES
-.endif
-
-.if defined(DEVELOPER)
-PORT_OPTIONS+=	TEST
 .endif
 
 PORT_OPTIONS+=	IPV6

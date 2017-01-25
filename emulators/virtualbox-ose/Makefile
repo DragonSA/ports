@@ -1,8 +1,9 @@
 # Created by: Bernhard Froehlich <decke@bluelife.at>
-# $FreeBSD: head/emulators/virtualbox-ose/Makefile 427059 2016-11-24 20:37:08Z jkim $
+# $FreeBSD: head/emulators/virtualbox-ose/Makefile 432083 2017-01-21 21:47:21Z matthew $
 
 PORTNAME=	virtualbox-ose
-PORTVERSION=	5.1.10
+PORTVERSION=	5.1.14
+PORTREVISION=	1
 CATEGORIES=	emulators
 MASTER_SITES=	http://download.virtualbox.org/virtualbox/${PORTVERSION}/
 DISTFILES=	VirtualBox-${PORTVERSION}${EXTRACT_SUFX} ${GUESTADDITIONS}
@@ -169,6 +170,8 @@ VBOX_PROGS+=	VirtualBox
 VBOX_UTILS+=	VBoxTestOGL
 VBOX_WITH_QT=	1
 .if ${PORT_OPTIONS:MQT4}
+EXTRA_PATCHES+=	${PATCHDIR}/extrapatch-src_VBox_Frontends_VirtualBox_src_net_UIDownloaderAdditions.cpp \
+		${PATCHDIR}/extrapatch-src_VBox_Frontends_VirtualBox_src_net_UIDownloaderExtensionPack.cpp
 CONFIGURE_ARGS+=	--enable-qt4
 USE_QT4=	corelib gui linguist_build moc_build network opengl
 USE_QT4+=	rcc_build uic_build

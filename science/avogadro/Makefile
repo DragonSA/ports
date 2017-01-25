@@ -1,9 +1,9 @@
 # Created by: Troels Kofoed Jacobsen <tkjacobsen@gmail.com>
-# $FreeBSD: head/science/avogadro/Makefile 426908 2016-11-23 12:45:46Z jbeich $
+# $FreeBSD: head/science/avogadro/Makefile 430692 2017-01-06 08:45:03Z jbeich $
 
 PORTNAME=	avogadro
 PORTVERSION=	1.1.1
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	science
 MASTER_SITES=	SF
 

@@ -1,7 +1,7 @@
 # -*- tab-width: 4; -*-
 # ex: ts=4
 #
-# $FreeBSD: head/Mk/bsd.ldap.mk 420904 2016-08-26 08:42:27Z danfe $
+# $FreeBSD: head/Mk/bsd.ldap.mk 430899 2017-01-08 21:20:57Z adamw $
 #
 
 .if defined(_POSTMKINCLUDED) && !defined(Ldap_Post_Include)
@@ -24,7 +24,8 @@ Database_Include_MAINTAINER=		ports@FreeBSD.org
 # WANT_OPENLDAP_VER
 #				- Maintainer can set an arbitrary version of OpenLDAP by using it.
 # WANT_OPENLDAP_SASL
-#				- If set, this port depends on SASL enabled OpenLDAP client.
+#				- User-defined variable to depend upon SASL-enabled OpenLDAP
+#				  client. Must NOT be set in a port Makefile.
 # IGNORE_OPENLDAP_OPENLDAP
 #				- This variable can be defined if the ports doesn't support
 #				  one or more version of OpenLDAP.

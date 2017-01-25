@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/pear.mk 424411 2016-10-21 12:51:40Z mat $
+# $FreeBSD: head/Mk/Uses/pear.mk 429613 2016-12-27 13:17:59Z amdmi3 $
 #
 # Use the PHP Extension and Application Repository
 #
@@ -16,9 +16,7 @@ _USES_POST+=	pear
 IGNORE+=	USES=pear takes not arguments
 .endif
 
-MASTER_SITES?=	http://pear.php.net/get/ \
-		http://us.pear.php.net/get/ \
-		http://de.pear.php.net/get/
+MASTER_SITES?=	http://pear.php.net/get/
 
 EXTRACT_SUFX?=	.tgz
 DIST_SUBDIR?=	PEAR

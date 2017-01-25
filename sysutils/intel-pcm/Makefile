@@ -1,5 +1,5 @@
 # Created by: Adrian Chadd
-# $FreeBSD: head/sysutils/intel-pcm/Makefile 423941 2016-10-14 00:03:37Z imp $
+# $FreeBSD: head/sysutils/intel-pcm/Makefile 430235 2017-01-01 03:45:12Z sunpoet $
 
 PORTNAME=	intel-pcm
 PORTVERSION=	2.11
@@ -18,8 +18,6 @@ ONLY_FOR_ARCHS=	i386 amd64
 
 WRKSRC=		${WRKDIR}/IntelPerformanceCounterMonitor-V${PORTVERSION}
 MAKE_ARGS=	CXX="${CXX}" LIB=-lpthread
-
-BROKEN_FreeBSD_9=	Does not build
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/*.x ${STAGEDIR}${PREFIX}/sbin

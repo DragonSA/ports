@@ -1,4 +1,4 @@
-# $FreeBSD: head/print/Makefile 428155 2016-12-08 20:21:38Z rene $
+# $FreeBSD: head/print/Makefile 430144 2016-12-31 17:25:05Z rene $
 #
 
     COMMENT = Desktop publishing
@@ -127,7 +127,6 @@
     SUBDIR += linux-c6-cups-libs
     SUBDIR += linux-c7-cups-libs
     SUBDIR += linux-c7-harfbuzz
-    SUBDIR += linux-f10-cups-libs
     SUBDIR += lout
     SUBDIR += lpr-wrapper
     SUBDIR += lprps

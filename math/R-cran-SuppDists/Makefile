@@ -1,5 +1,5 @@
 # Created by: b.f. <bf@FreeBSD.org>
-# $FreeBSD: head/math/R-cran-SuppDists/Makefile 424113 2016-10-17 12:03:36Z wen $
+# $FreeBSD: head/math/R-cran-SuppDists/Makefile 430816 2017-01-07 17:04:18Z antoine $
 
 PORTNAME=	SuppDists
 DISTVERSION=	1.1-9.4
@@ -17,6 +17,8 @@ COMMENT=	Supplementary distributions and RNG for R
 LICENSE=		GPLv2
 
 BROKEN=		fails to build
+DEPRECATED=	Broken for more than 6 months
+EXPIRATION_DATE=	2017-02-08
 
 BENCHMARK_SCRIPT=	R-benchmark-25.R
 USES=	cran:auto-plist

@@ -1,9 +1,9 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: head/multimedia/miro/Makefile 428352 2016-12-11 15:22:47Z jbeich $
+# $FreeBSD: head/multimedia/miro/Makefile 431796 2017-01-18 13:20:31Z tijl $
 
 PORTNAME=	miro
 PORTVERSION=	6.0
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	multimedia
 MASTER_SITES=	ftp://ftp.osuosl.org/pub/pculture.org/miro/src/ \
 		http://ftp.osuosl.org/pub/pculture.org/miro/src/
@@ -67,7 +67,7 @@ post-patch:
 
 .if defined(MAINTAINER_MODE)
 regression-test:	install
-	LANG=C LC_ALL=C ${PREFIX}/bin/miro --unittest
+	${PREFIX}/bin/miro --unittest
 .endif
 
 .include <bsd.port.post.mk>

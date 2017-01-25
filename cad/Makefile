@@ -1,4 +1,4 @@
-# $FreeBSD: head/cad/Makefile 425853 2016-11-10 19:38:43Z hrs $
+# $FreeBSD: head/cad/Makefile 429524 2016-12-26 14:29:06Z amdmi3 $
 #
 
     COMMENT = CAD tools
@@ -49,6 +49,7 @@
     SUBDIR += layouteditor
     SUBDIR += ldraw
     SUBDIR += leocad
+    SUBDIR += libopencad
     SUBDIR += librecad
     SUBDIR += linux-eagle5
     SUBDIR += linuxcnc-devel

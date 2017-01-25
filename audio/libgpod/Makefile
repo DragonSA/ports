@@ -1,5 +1,5 @@
 # Created by: Devon Ryan <dpryan@dpryan.com>
-# $FreeBSD: head/audio/libgpod/Makefile 427247 2016-11-27 17:00:08Z dbn $
+# $FreeBSD: head/audio/libgpod/Makefile 430669 2017-01-05 22:58:02Z jbeich $
 
 PORTNAME=	libgpod
 PORTVERSION=	0.8.3
@@ -33,7 +33,6 @@ OPTIONS_SUB=	yes
 IMOBILE_DESC=	Apple iPhone/iPod Touch support
 
 IMOBILE_LIB_DEPENDS=	libimobiledevice.so:comms/libimobiledevice
-IMOBILE_CONFIGURE_ENV=	LIBUSB_CFLAGS=" " LIBUSB_LIBS="-lusb"
 IMOBILE_CONFIGURE_WITH=	libimobiledevice
 
 MONO_USE=		GNOME=gtksharp20

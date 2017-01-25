@@ -1,5 +1,5 @@
 # Created by: Boris Samorodov <bsam@FreeBSD.org>
-# $FreeBSD: head/devel/eric6/Makefile.inc 426333 2016-11-18 18:49:55Z dbn $
+# $FreeBSD: head/devel/eric6/Makefile.inc 431402 2017-01-13 16:54:55Z mat $
 #
 # This is a set of Makefile macros which allow to build the core and
 # localized language packages for devel/eric6:
@@ -16,7 +16,7 @@ COMMENT=	Full featured Python and Ruby editor and IDE based on Qt
 
 LICENSE=	GPLv3
 
-RUN_DEPENDS?=	${PREFIX}/bin/eric6:devel/eric6
+RUN_DEPENDS?=	${LOCALBASE}/bin/eric6:devel/eric6
 
 I18N_LANG?=	ru
 INSTALL_CMD?=	install-i18n.py -p ${STAGEDIR}

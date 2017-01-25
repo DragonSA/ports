@@ -1,5 +1,5 @@
 # Created by: Stefan Ehmann <shoesoft@gmx.net>
-# $FreeBSD: head/devel/ice/Makefile 426170 2016-11-15 14:52:35Z grembo $
+# $FreeBSD: head/devel/ice/Makefile 430490 2017-01-03 18:12:13Z mat $
 
 PORTNAME=		Ice
 PORTVERSION=		3.6.3
@@ -35,8 +35,6 @@ USES+=			python:build
 BUILD_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}passlib>0:security/py-passlib
 .endif
 
-WRKSRC=			${WRKDIR}/ice-${PORTVERSION}
-
 USES+=			bdb:5
 INVALID_BDB_VER=	48 6
 USE_LDCONFIG=		yes
@@ -44,7 +42,7 @@ BUILD_WRKSRC?=		${WRKSRC}/cpp
 INSTALL_WRKSRC?=	${WRKSRC}/cpp
 USE_GITHUB=		yes
 GH_ACCOUNT=		zeroc-ice
-
+GH_PROJECT=		ice
 
 CFLAGS+=		-ftemplate-depth-128 -fPIC -DPIC -Wall -D_REENTRANT -I${LOCALBASE}/include
 

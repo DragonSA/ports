@@ -1,4 +1,4 @@
-# $FreeBSD: head/deskutils/Makefile 428675 2016-12-16 13:07:26Z ehaupt $
+# $FreeBSD: head/deskutils/Makefile 429278 2016-12-23 17:35:50Z matthew $
 #
 
     COMMENT = Things that used to be on the desktop before computers were invented
@@ -165,6 +165,7 @@
     SUBDIR += osynctool
     SUBDIR += owncloudclient
     SUBDIR += p5-Data-ICal
+    SUBDIR += p5-Data-ICal-DateTime
     SUBDIR += p5-Goo
     SUBDIR += p5-ZConf-BGSet
     SUBDIR += p5-ZConf-Runner

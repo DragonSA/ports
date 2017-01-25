@@ -1,4 +1,4 @@
-# $FreeBSD: head/lang/Makefile 428982 2016-12-20 09:30:25Z lwhsu $
+# $FreeBSD: head/lang/Makefile 432337 2017-01-24 13:47:48Z tz $
 #
 
     COMMENT = Programming languages
@@ -40,6 +40,7 @@
     SUBDIR += clang36
     SUBDIR += clang37
     SUBDIR += clang38
+    SUBDIR += cling
     SUBDIR += clojure
     SUBDIR += clojure-mode.el
     SUBDIR += clover
@@ -158,8 +159,6 @@
     SUBDIR += libstdc++_stldoc_4.2.2
     SUBDIR += linux-c6-tcl85
     SUBDIR += linux-c7-tcl85
-    SUBDIR += linux-f10-libg2c
-    SUBDIR += linux-f10-tcl85
     SUBDIR += linux-j
     SUBDIR += lua-ada
     SUBDIR += lua51
@@ -240,7 +239,6 @@
     SUBDIR += pcc
     SUBDIR += pecl-perl
     SUBDIR += perl5-devel
-    SUBDIR += perl5.18
     SUBDIR += perl5.20
     SUBDIR += perl5.22
     SUBDIR += perl5.24
@@ -254,6 +252,8 @@
     SUBDIR += php56-extensions
     SUBDIR += php70
     SUBDIR += php70-extensions
+    SUBDIR += php71
+    SUBDIR += php71-extensions
     SUBDIR += php_doc
     SUBDIR += picoc
     SUBDIR += pike78
@@ -280,6 +280,7 @@
     SUBDIR += python33
     SUBDIR += python34
     SUBDIR += python35
+    SUBDIR += python36
     SUBDIR += qore
     SUBDIR += qscheme
     SUBDIR += qt5-qml
@@ -297,6 +298,7 @@
     SUBDIR += ruby21
     SUBDIR += ruby22
     SUBDIR += ruby23
+    SUBDIR += ruby24
     SUBDIR += runawk
     SUBDIR += rust
     SUBDIR += rust-nightly

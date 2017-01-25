@@ -2,7 +2,7 @@
 #
 # Created by: Gabor Kovesdan <gabor@FreeBSD.org>
 #
-# $FreeBSD: head/Mk/bsd.commands.mk 427523 2016-12-01 21:29:04Z swills $
+# $FreeBSD: head/Mk/bsd.commands.mk 431796 2017-01-18 13:20:31Z tijl $
 #
 # DO NOT COMMIT CHANGES TO THIS FILE BY YOURSELF, EVEN IF YOU DID NOT GET
 # A RESPONSE FROM THE MAINTAINER(S) WITHIN A REASONABLE TIMEFRAME! ALL
@@ -88,7 +88,7 @@ SU_CMD?=		/usr/bin/su root -c
 SYSCTL?=		/sbin/sysctl
 TAIL?=			/usr/bin/tail
 TEST?=			test	# Shell builtin
-TR?=			LANG=C /usr/bin/tr
+TR?=			/usr/bin/tr
 TRUE?=			true	# Shell builtin
 UMOUNT?=		/sbin/umount
 UNAME?=			/usr/bin/uname

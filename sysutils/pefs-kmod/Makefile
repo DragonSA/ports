@@ -1,8 +1,8 @@
 # Created by: Gleb Kurtsou <gleb@FreeBSD.org>
-# $FreeBSD: head/sysutils/pefs-kmod/Makefile 427305 2016-11-28 13:42:25Z amdmi3 $
+# $FreeBSD: head/sysutils/pefs-kmod/Makefile 429928 2016-12-29 16:31:36Z kmoore $
 
 PORTNAME=	pefs
-DISTVERSION=	2016-06-11
+DISTVERSION=	2016-11-27
 CATEGORIES=	sysutils
 MASTER_SITES=	LOCAL/gleb
 PKGNAMESUFFIX=	-kmod
@@ -12,6 +12,7 @@ COMMENT=	PEFS kernel level stacked cryptographic filesystem
 
 LICENSE=	BSD2CLAUSE
 
+MAKE_JOBS_UNSAFE=yes
 MAKE_ENV=	BINDIR="${PREFIX}/sbin" MANDIR="${MANPREFIX}/man/man" \
 		NO_MANCOMPRESS=
 

@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: head/science/openbabel/Makefile 424339 2016-10-20 15:58:12Z rakuco $
+# $FreeBSD: head/science/openbabel/Makefile 432091 2017-01-21 23:12:18Z jbeich $
 
 PORTNAME=	openbabel
 PORTVERSION=	2.3.2
@@ -16,6 +16,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/eigen3/Eigen/Eigen:math/eigen3
 
 CONFLICTS_INSTALL=	babel-*
 
+USE_CXXSTD=	gnu++98
 USE_GNOME=	libxml2
 USES=		cmake:outsource
 CMAKE_ARGS=	-DBUILD_GUI=off

@@ -1,5 +1,5 @@
 # Created by: Maurice Castro <maurice@serc.rmit.edu.au>
-# $FreeBSD: head/math/R/Makefile 428057 2016-12-07 13:24:56Z gerald $
+# $FreeBSD: head/math/R/Makefile 430752 2017-01-06 21:38:11Z antoine $
 
 PORTNAME=		R
 PORTVERSION=		3.3.2
@@ -18,6 +18,7 @@ LIB_DEPENDS=		libcurl.so:ftp/curl \
 CONFIGURE_ARGS=		--disable-java \
 			--with-readline \
 			rdocdir=${DOCSDIR}
+CONFIGURE_ENV=		r_cv_header_zlib_h=yes
 GNU_CONFIGURE=		yes
 INSTALL_TARGET=		install-strip
 ONLY_FOR_ARCHS=		i386 amd64

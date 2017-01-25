@@ -1,8 +1,8 @@
-# $FreeBSD: head/multimedia/mplayer2/Makefile 428352 2016-12-11 15:22:47Z jbeich $
+# $FreeBSD: head/multimedia/mplayer2/Makefile 429961 2016-12-30 08:08:19Z jbeich $
 
 PORTNAME=	mplayer2
 PORTVERSION=	${MPLAYER2_PORT_VERSION}
-PORTREVISION=	25
+PORTREVISION=	26
 CATEGORIES=	multimedia audio
 MASTER_SITES=	LOCAL/gblach/
 

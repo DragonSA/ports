@@ -1,4 +1,4 @@
-# $FreeBSD: head/java/Makefile 427532 2016-12-01 23:36:56Z rene $
+# $FreeBSD: head/java/Makefile 431140 2017-01-10 22:59:58Z olgeni $
 #
 
     COMMENT = Java language support
@@ -34,6 +34,7 @@
     SUBDIR += intellij-fsnotifier
     SUBDIR += intellij-pty4j
     SUBDIR += intellij-pycharm
+    SUBDIR += intellij-rubymine
     SUBDIR += intellij-ultimate
     SUBDIR += jad
     SUBDIR += jaf
@@ -122,7 +123,7 @@
     SUBDIR += trove4j
     SUBDIR += veditor
     SUBDIR += visualvm
-    SUBDIR += wildfly100
+    SUBDIR += wildfly10
     SUBDIR += wildfly90
     SUBDIR += xdoclet
 

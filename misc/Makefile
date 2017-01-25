@@ -1,4 +1,4 @@
-# $FreeBSD: head/misc/Makefile 427777 2016-12-04 12:26:26Z rene $
+# $FreeBSD: head/misc/Makefile 432336 2017-01-24 12:56:45Z tz $
 #
 
     COMMENT = Miscellaneous utilities
@@ -363,6 +363,7 @@
     SUBDIR += pfm
     SUBDIR += php56-calendar
     SUBDIR += php70-calendar
+    SUBDIR += php71-calendar
     SUBDIR += phraze
     SUBDIR += pinfo
     SUBDIR += pipe
@@ -371,6 +372,9 @@
     SUBDIR += proxyper
     SUBDIR += pspresent
     SUBDIR += py-YABT
+    SUBDIR += py-cinder
+    SUBDIR += py-crudini
+    SUBDIR += py-fuzzy
     SUBDIR += py-glance
     SUBDIR += py-osd
     SUBDIR += py-pexpect

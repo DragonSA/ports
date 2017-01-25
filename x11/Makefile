@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11/Makefile 428375 2016-12-11 19:16:52Z sunpoet $
+# $FreeBSD: head/x11/Makefile 432395 2017-01-24 21:49:05Z olivierd $
 #
 
     COMMENT = Ports to support the X window system
@@ -192,11 +192,12 @@
     SUBDIR += libxkbui
     SUBDIR += libxklavier
     SUBDIR += libxshmfence
+    SUBDIR += lightdm
+    SUBDIR += lightdm-gtk-greeter
     SUBDIR += linux-c6-pixman
     SUBDIR += linux-c6-xorg-libs
     SUBDIR += linux-c7-pixman
     SUBDIR += linux-c7-xorg-libs
-    SUBDIR += linux-f10-xorg-libs
     SUBDIR += listres
     SUBDIR += lsw
     SUBDIR += luit
@@ -204,8 +205,10 @@
     SUBDIR += lumina-i18n
     SUBDIR += lupe
     SUBDIR += lxde-meta
+    SUBDIR += lxhotkey
     SUBDIR += lxmenu-data
     SUBDIR += lxpanel
+    SUBDIR += lxqt-l10n
     SUBDIR += lxrandr
     SUBDIR += mate
     SUBDIR += mate-applets

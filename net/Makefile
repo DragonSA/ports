@@ -1,4 +1,4 @@
-# $FreeBSD: head/net/Makefile 428980 2016-12-20 09:01:36Z woodsb02 $
+# $FreeBSD: head/net/Makefile 432409 2017-01-25 00:34:08Z lifanov $
 #
 
     COMMENT = Networking tools
@@ -88,7 +88,6 @@
     SUBDIR += ctrace
     SUBDIR += cvsup-static
     SUBDIR += cvsync
-    SUBDIR += cyphesis
     SUBDIR += czmq
     SUBDIR += daemonlogger
     SUBDIR += dante
@@ -119,6 +118,7 @@
     SUBDIR += dshell
     SUBDIR += dtcp
     SUBDIR += dtcpclient
+    SUBDIR += dual-dhclient
     SUBDIR += e169-stats
     SUBDIR += easysoap
     SUBDIR += echoping
@@ -131,6 +131,7 @@
     SUBDIR += etrace
     SUBDIR += exabgp
     SUBDIR += exaddos
+    SUBDIR += fb
     SUBDIR += findmtu
     SUBDIR += flowgrep
     SUBDIR += fonulator
@@ -153,6 +154,7 @@
     SUBDIR += fspd
     SUBDIR += fsplib
     SUBDIR += g2ipmsg
+    SUBDIR += gdrive
     SUBDIR += geoclue
     SUBDIR += geocode-glib
     SUBDIR += geoipupdate
@@ -172,6 +174,7 @@
     SUBDIR += gnu-dico
     SUBDIR += gnu-radius
     SUBDIR += go-amqp
+    SUBDIR += go-bapu
     SUBDIR += go-cs
     SUBDIR += go-geoip
     SUBDIR += go-httppath
@@ -186,7 +189,6 @@
     SUBDIR += googlecl
     SUBDIR += gopher
     SUBDIR += gotthard
-    SUBDIR += gpxe
     SUBDIR += gq
     SUBDIR += grdesktop
     SUBDIR += grilo
@@ -249,7 +251,6 @@
     SUBDIR += iaxmodem
     SUBDIR += icmpinfo
     SUBDIR += icpld
-    SUBDIR += iet
     SUBDIR += ifdepd
     SUBDIR += iffinder
     SUBDIR += ifstat
@@ -362,7 +363,7 @@
     SUBDIR += librdkafka
     SUBDIR += librouteros
     SUBDIR += librsync
-    SUBDIR += librsync1
+    SUBDIR += librsync2
     SUBDIR += libsocket++
     SUBDIR += libsocketcpp
     SUBDIR += libsrtp
@@ -385,8 +386,6 @@
     SUBDIR += linux-c7-avahi-libs
     SUBDIR += linux-c7-openldap
     SUBDIR += linux-c7-tcp_wrappers-libs
-    SUBDIR += linux-f10-nss_ldap
-    SUBDIR += linux-f10-openldap
     SUBDIR += linuxigd
     SUBDIR += liveMedia
     SUBDIR += lla
@@ -468,6 +467,7 @@
     SUBDIR += nos-ttb
     SUBDIR += nph
     SUBDIR += ns3
+    SUBDIR += nsq
     SUBDIR += nss-pam-ldapd
     SUBDIR += nss-pam-ldapd-sasl
     SUBDIR += nss_ldap
@@ -506,7 +506,6 @@
     SUBDIR += openmq-client
     SUBDIR += openntpd
     SUBDIR += opennx
-    SUBDIR += openospfd
     SUBDIR += openpgm
     SUBDIR += openradius
     SUBDIR += opensips
@@ -924,6 +923,9 @@
     SUBDIR += php70-soap
     SUBDIR += php70-sockets
     SUBDIR += php70-xmlrpc
+    SUBDIR += php71-soap
+    SUBDIR += php71-sockets
+    SUBDIR += php71-xmlrpc
     SUBDIR += phpldapadmin
     SUBDIR += pim6-tools
     SUBDIR += pim6dd
@@ -972,6 +974,7 @@
     SUBDIR += py-gspread
     SUBDIR += py-gspreadsheet
     SUBDIR += py-haproxy-log-analysis
+    SUBDIR += py-httpstat
     SUBDIR += py-impacket
     SUBDIR += py-ipaddress
     SUBDIR += py-iplib
@@ -1012,6 +1015,7 @@
     SUBDIR += py-pypcap
     SUBDIR += py-pysendfile
     SUBDIR += py-pyshark
+    SUBDIR += py-pysimplesoap
     SUBDIR += py-pysmb
     SUBDIR += py-pysocks
     SUBDIR += py-pystun
@@ -1040,13 +1044,13 @@
     SUBDIR += py-ripe.atlas.tools
     SUBDIR += py-s3cmd
     SUBDIR += py-s3transfer
-    SUBDIR += py-simplesoap
     SUBDIR += py-smbpasswd
     SUBDIR += py-soappy
     SUBDIR += py-socketio-client
     SUBDIR += py-speedtest-cli
     SUBDIR += py-sshuttle
     SUBDIR += py-suds
+    SUBDIR += py-suds-jurko
     SUBDIR += py-terminado
     SUBDIR += py-tofu
     SUBDIR += py-tweepy
@@ -1209,6 +1213,7 @@
     SUBDIR += rubygem-ruby-openid
     SUBDIR += rubygem-ruby-yadis
     SUBDIR += rubygem-rubyntlm
+    SUBDIR += rubygem-rubyntlm05
     SUBDIR += rubygem-rubytter
     SUBDIR += rubygem-rudy
     SUBDIR += rubygem-rye
@@ -1223,7 +1228,6 @@
     SUBDIR += rubygem-uri-redis
     SUBDIR += rubygem-whois
     SUBDIR += rude
-    SUBDIR += rwhoisd
     SUBDIR += samba-libsmbclient
     SUBDIR += samba-nmblookup
     SUBDIR += samba-smbclient

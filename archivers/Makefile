@@ -1,4 +1,4 @@
-# $FreeBSD: head/archivers/Makefile 427029 2016-11-24 15:34:11Z sunpoet $
+# $FreeBSD: head/archivers/Makefile 432336 2017-01-24 12:56:45Z tz $
 #
 
     COMMENT = Archivers
@@ -69,11 +69,11 @@
     SUBDIR += librtfcomp
     SUBDIR += libunrar
     SUBDIR += libunrar4
+    SUBDIR += libunrar5
     SUBDIR += libzip
-    SUBDIR += linux-f10-ucl
-    SUBDIR += linux-f10-upx
     SUBDIR += lrzip
     SUBDIR += lua-lzlib
+    SUBDIR += lua51-zlib
     SUBDIR += lzfse
     SUBDIR += lzip
     SUBDIR += lzlib
@@ -152,6 +152,10 @@
     SUBDIR += php70-phar
     SUBDIR += php70-zip
     SUBDIR += php70-zlib
+    SUBDIR += php71-bz2
+    SUBDIR += php71-phar
+    SUBDIR += php71-zip
+    SUBDIR += php71-zlib
     SUBDIR += pigz
     SUBDIR += pixz
     SUBDIR += plzip
@@ -160,6 +164,7 @@
     SUBDIR += ppunpack
     SUBDIR += pxz
     SUBDIR += py-attic
+    SUBDIR += py-backports.lzma
     SUBDIR += py-borgbackup
     SUBDIR += py-brotli
     SUBDIR += py-bz2file
@@ -204,7 +209,6 @@
     SUBDIR += stuffit
     SUBDIR += szip
     SUBDIR += tardy
-    SUBDIR += tclmkziplib
     SUBDIR += thunar-archive-plugin
     SUBDIR += torrentzip
     SUBDIR += ucl

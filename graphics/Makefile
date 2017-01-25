@@ -1,4 +1,4 @@
-# $FreeBSD: head/graphics/Makefile 428946 2016-12-19 15:56:24Z tcberner $
+# $FreeBSD: head/graphics/Makefile 432336 2017-01-24 12:56:45Z tz $
 #
 
     COMMENT = Graphics tools and libraries
@@ -131,6 +131,7 @@
     SUBDIR += devil
     SUBDIR += dia
     SUBDIR += diacanvas2
+    SUBDIR += diffpdf
     SUBDIR += digikam-kde4
     SUBDIR += digikam-kde4-doc
     SUBDIR += digikam-kde4-l10n
@@ -201,6 +202,7 @@
     SUBDIR += frei0r-plugins
     SUBDIR += frei0r-plugins-gavl
     SUBDIR += frei0r-plugins-opencv
+    SUBDIR += frogr
     SUBDIR += ftgl
     SUBDIR += fujiplay
     SUBDIR += fusefs-gphotofs
@@ -560,19 +562,6 @@
     SUBDIR += linux-c7-sdl_image
     SUBDIR += linux-c7-sdl_ttf
     SUBDIR += linux-c7-tiff
-    SUBDIR += linux-f10-cairo
-    SUBDIR += linux-f10-dri
-    SUBDIR += linux-f10-gdk-pixbuf
-    SUBDIR += linux-f10-glew
-    SUBDIR += linux-f10-imlib
-    SUBDIR += linux-f10-jpeg
-    SUBDIR += linux-f10-libGLU
-    SUBDIR += linux-f10-libmng
-    SUBDIR += linux-f10-png
-    SUBDIR += linux-f10-sdl_image
-    SUBDIR += linux-f10-sdl_ttf
-    SUBDIR += linux-f10-tiff
-    SUBDIR += linux-f10-ungif
     SUBDIR += llpp
     SUBDIR += lprof-devel
     SUBDIR += lua-gd
@@ -600,6 +589,7 @@
     SUBDIR += mirage
     SUBDIR += mitsuba
     SUBDIR += mmrecover
+    SUBDIR += movit
     SUBDIR += mozjpeg
     SUBDIR += mscgen
     SUBDIR += mtpaint
@@ -783,6 +773,8 @@
     SUBDIR += php56-gd
     SUBDIR += php70-exif
     SUBDIR += php70-gd
+    SUBDIR += php71-exif
+    SUBDIR += php71-gd
     SUBDIR += phplot
     SUBDIR += picpuz
     SUBDIR += piddle
@@ -929,6 +921,7 @@
     SUBDIR += raster3d
     SUBDIR += rawstudio
     SUBDIR += rawtherapee
+    SUBDIR += rawtherapee-devel
     SUBDIR += rayshade
     SUBDIR += reallyslick
     SUBDIR += recoverjpeg

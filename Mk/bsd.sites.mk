@@ -20,7 +20,7 @@
 #
 # Note: all entries should terminate with a slash.
 #
-# $FreeBSD: head/Mk/bsd.sites.mk 428492 2016-12-13 14:57:04Z mat $
+# $FreeBSD: head/Mk/bsd.sites.mk 431059 2017-01-10 02:52:51Z adamw $
 #
 
 # Where to put distfiles that don't have any other master site
@@ -205,45 +205,24 @@ MASTER_SITE_ECLIPSE+= \
 .if !defined(IGNORE_MASTER_SITE_EXIM)
 MASTER_SITE_EXIM+= \
 	ftp://ftp.exim.org/pub/exim/%SUBDIR%/ \
-	ftp://exim.inode.at/exim/%SUBDIR%/ \
-	ftp://exim-ftp.itsoft.at/exim/exim/%SUBDIR%/ \
-	http://exim-ftp.itsoft.at/exim/%SUBDIR%/ \
-	ftp://ftp.easynet.be/exim/exim/%SUBDIR%/ \
-	ftp://mirror.kn.vutbr.cz/pub/ftp.exim.org/exim/%SUBDIR%/ \
-	http://exim.mirror.fr/exim/%SUBDIR%/ \
-	http://mirrors.zerg.biz/exim/exim/%SUBDIR%/ \
+	ftp://mirror.easyname.at/exim-ftp/%SUBDIR%/ \
 	http://dl.ambiweb.de/mirrors/ftp.exim.org/exim/%SUBDIR%/ \
 	ftp://exim.noris.de/exim/%SUBDIR%/ \
 	ftp://ftp.bytemine.net/exim/exim/%SUBDIR%/ \
-	ftp://exim.mirror.iphh.net/ftp/exim/%SUBDIR%/ \
-	http://exim.mirror.iphh.net/ftp/exim/%SUBDIR%/ \
-	ftp://ftp.fu-berlin.de/unix/mail/exim/%SUBDIR%/ \
-	http://exim-ftp.octet.hu/exim/%SUBDIR%/ \
 	ftp://ftp.heanet.ie/pub/exim/%SUBDIR%/ \
 	http://ftp.heanet.ie/pub/exim/%SUBDIR%/ \
 	http://washitake.com/mail/exim/mirror/exim/%SUBDIR%/ \
-	ftp://ftp.tin.org/pub/mail/exim/%SUBDIR%/ \
-	http://exim.psshee.com/ftp/exim/%SUBDIR%/ \
-	ftp://mirror.hostfuss.com/exim/ftp/exim/%SUBDIR%/ \
-	http://mirror.hostfuss.com/exim/ftp/exim/%SUBDIR%/ \
-	ftp://ftp.nl.uu.net/pub/unix/mail/exim/exim/%SUBDIR%/ \
+	ftp://ftp.kaist.ac.kr/exim/%SUBDIR%/ \
+	http://ftp.kaist.ac.kr/exim/%SUBDIR%/ \
 	ftp://sunsite.uio.no/pub/mail/exim/exim/%SUBDIR%/ \
-	http://piotrkosoft.net/pub/mirrors/ftp.exim.org/exim/%SUBDIR%/ \
-	ftp://ftp.piotrkosoft.net/pub/mirrors/ftp.exim.org/exim/%SUBDIR%/ \
 	ftp://sunsite.icm.edu.pl/pub/unix/mail/exim/exim/%SUBDIR%/ \
 	http://sunsite.icm.edu.pl/pub/unix/mail/exim/exim/%SUBDIR%/ \
-	ftp://ftp.is.co.za/networking/mail/mta/exim/ftp/exim/%SUBDIR%/ \
 	ftp://mirrors.dominios.pt/pub/ftp.exim.org/exim/%SUBDIR%/ \
 	ftp://mirror.switch.ch/mirror/exim/exim/%SUBDIR%/ \
 	http://mirror.switch.ch/ftp/mirror/exim/exim/%SUBDIR%/ \
-	ftp://ftp.reaper.org/pub/exim/exim/%SUBDIR%/ \
-	ftp://sunsite.cnlab-switch.ch/mirror/exim/exim/%SUBDIR%/ \
-	ftp://ftp.demon.co.uk/pub/mirrors/exim/%SUBDIR%/ \
-	ftp://mirror.tje.me.uk/pub/mirrors/ftp.exim.org/exim/%SUBDIR%/ \
-	http://mirror.tje.me.uk/pub/mirrors/ftp.exim.org/exim/%SUBDIR%/ \
-	ftp://ftp.fsckit.net/pub/exim/exim/%SUBDIR%/ \
-	ftp://idcnetwork.org/pub/exim/exim/%SUBDIR%/ \
-	http://ftp.exim.llorien.org/exim/%SUBDIR%/
+	ftp://ftp.mirrorservice.org/sites/ftp.exim.org/pub/%SUBDIR%/ \
+	http://exim.telcom.net.ua/ftp/%SUBDIR/ \
+	ftp://idcnetwork.org/pub/exim/exim/%SUBDIR%/
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_CENTOS_LINUX)
@@ -635,7 +614,7 @@ MASTER_SITE_GNU+= \
 
 .if !defined(IGNORE_MASTER_SITE_GNUPG)
 MASTER_SITE_GNUPG+= \
-	http://artfiles.org/gnupg.org/%SUBDIR%/ \
+	https://gnupg.org/ftp/gcrypt/%SUBDIR%/ \
 	http://ftp.heanet.ie/mirrors/ftp.gnupg.org/gcrypt/%SUBDIR%/ \
 	ftp://ftp.sunet.se/pub/security/gnupg/%SUBDIR%/ \
 	ftp://ftp.franken.de/pub/crypt/mirror/ftp.gnupg.org/gcrypt/%SUBDIR%/ \
@@ -645,6 +624,7 @@ MASTER_SITE_GNUPG+= \
 	ftp://ftp.freenet.de/pub/ftp.gnupg.org/gcrypt/%SUBDIR%/ \
 	ftp://ftp.crysys.hu/pub/gnupg/%SUBDIR%/ \
 	http://www.mirrorservice.org/sites/ftp.gnupg.org/gcrypt/%SUBDIR%/ \
+	http://artfiles.org/gnupg.org/%SUBDIR%/ \
 	ftp://ftp.gnupg.org/gcrypt/%SUBDIR%/ \
 	http://mirror.tje.me.uk/pub/mirrors/ftp.gnupg.org/%SUBDIR%/
 .endif

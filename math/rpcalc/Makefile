@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: head/math/rpcalc/Makefile 425750 2016-11-08 15:51:11Z jhale $
+# $FreeBSD: head/math/rpcalc/Makefile 430839 2017-01-07 21:42:28Z sunpoet $
 
 PORTNAME=	rpcalc
 PORTVERSION=	0.7.1
@@ -35,15 +35,6 @@ do-install:
 	(cd ${STAGEDIR}${DOCSDIR} && ${RM} INSTALL LICENSE)
 
 .include <bsd.port.pre.mk>
-
-.if ${PYTHON_REL} < 3500
-PYOEXTENSION=	pyo
-.else
-PYOEXTENSION=	opt-1.pyc
-.endif
-
-PLIST_SUB+=	PYTHON_SUFFIX="${PYTHON_SUFFIX}" \
-		PYOEXTENSION="${PYOEXTENSION}"
 
 .if defined(PACKAGE_BUILDING) && ${PYTHON_VER} != ${PYTHON_DEFAULT}
 IGNORE=	you have python ${PYTHON_DEFAULT} set as the default, and this needs ${PYTHON_VER}

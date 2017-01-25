@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/fuse.mk 411970 2016-03-27 01:23:25Z bapt $
+# $FreeBSD: head/Mk/Uses/fuse.mk 431541 2017-01-15 09:52:47Z rene $
 #
 # handle dependency on the fuse port
 #
@@ -16,8 +16,5 @@ IGNORE=	USES=fuse does not require args
 .endif
 
 LIB_DEPENDS+=	libfuse.so:sysutils/fusefs-libs
-.if !exists(/sbin/mount_fusefs)
-RUN_DEPENDS+=	mount_fusefs:sysutils/fusefs-kmod
-.endif
 
 .endif

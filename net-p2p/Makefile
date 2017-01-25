@@ -1,4 +1,4 @@
-# $FreeBSD: head/net-p2p/Makefile 424719 2016-10-26 16:52:22Z rm $
+# $FreeBSD: head/net-p2p/Makefile 429561 2016-12-26 18:14:23Z feld $
 #
 
     COMMENT = Peer-to-peer network applications
@@ -13,6 +13,7 @@
     SUBDIR += bnbt
     SUBDIR += btpd
     SUBDIR += btsync
+    SUBDIR += couchpotato
     SUBDIR += cpuminer
     SUBDIR += createtorrent
     SUBDIR += ctcs

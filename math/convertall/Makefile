@@ -1,5 +1,5 @@
 # Created by: Michael Johnson <ahze@ahze.net>
-# $FreeBSD: head/math/convertall/Makefile 425749 2016-11-08 15:47:49Z jhale $
+# $FreeBSD: head/math/convertall/Makefile 430839 2017-01-07 21:42:28Z sunpoet $
 
 PORTNAME=	convertall
 PORTVERSION=	0.6.1
@@ -40,15 +40,6 @@ do-install:
 	(cd ${STAGEDIR}${DOCSDIR} && ${RM} INSTALL LICENSE)
 
 .include <bsd.port.pre.mk>
-
-.if ${PYTHON_REL} < 3500
-PYOEXTENSION=	pyo
-.else
-PYOEXTENSION=	opt-1.pyc
-.endif
-
-PLIST_SUB+=	PYTHON_SUFFIX="${PYTHON_SUFFIX}" \
-		PYOEXTENSION="${PYOEXTENSION}"
 
 .if defined(PACKAGE_BUILDING) && ${PYTHON_VER} != ${PYTHON_DEFAULT}
 IGNORE=	you have python ${PYTHON_DEFAULT} set as the default, and this needs ${PYTHON_VER}

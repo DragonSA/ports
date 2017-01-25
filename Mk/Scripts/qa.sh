@@ -1,6 +1,6 @@
 #!/bin/sh
 # MAINTAINER: portmgr@FreeBSD.org
-# $FreeBSD: head/Mk/Scripts/qa.sh 428207 2016-12-09 14:24:07Z mat $
+# $FreeBSD: head/Mk/Scripts/qa.sh 431881 2017-01-19 15:06:38Z mat $
 
 if [ -z "${STAGEDIR}" -o -z "${PREFIX}" -o -z "${LOCALBASE}" ]; then
 	echo "STAGEDIR, PREFIX, LOCALBASE required in environment." >&2
@@ -737,6 +737,20 @@ sonames() {
 	EOT
 }
 
+perlcore_port_module_mapping() {
+	case "$1" in
+		Net)
+			echo "Net::Config"
+			;;
+		libwww)
+			echo "LWP"
+			;;
+		*)
+			echo "$1" | sed -e 's/-/::/g'
+			;;
+	esac
+}
+
 perlcore() {
 	local portname version module gotsome
 	[ -x "${LOCALBASE}/bin/corelist" ] || return 0
@@ -744,7 +758,7 @@ perlcore() {
 		portname=$(expr "${dep}" : ".*/p5-\(.*\)")
 		if [ -n "${portname}" ]; then
 			gotsome=1
-			module=$(echo ${portname}|sed -e 's/-/::/g')
+			module=$(perlcore_port_module_mapping "${portname}")
 			version=$(expr "${dep}" : ".*>=*\([^:<]*\)")
 
 			while read l; do

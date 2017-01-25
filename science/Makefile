@@ -1,4 +1,4 @@
-# $FreeBSD: head/science/Makefile 426038 2016-11-13 12:32:46Z thierry $
+# $FreeBSD: head/science/Makefile 430225 2017-01-01 01:47:21Z sunpoet $
 #
 
     COMMENT = Scientific ports
@@ -68,6 +68,7 @@
     SUBDIR += kalzium
     SUBDIR += kst2
     SUBDIR += lamprop
+    SUBDIR += libaec
     SUBDIR += libctl
     SUBDIR += libghemical
     SUBDIR += libint

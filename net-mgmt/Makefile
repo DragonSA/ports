@@ -1,4 +1,4 @@
-# $FreeBSD: head/net-mgmt/Makefile 428308 2016-12-10 17:05:29Z pi $
+# $FreeBSD: head/net-mgmt/Makefile 432336 2017-01-24 12:56:45Z tz $
 #
 
     COMMENT = Network management tools
@@ -27,7 +27,8 @@
     SUBDIR += bwm-ng
     SUBDIR += cacti
     SUBDIR += cacti-spine
-    SUBDIR += ccnet
+    SUBDIR += ccnet-client
+    SUBDIR += ccnet-server
     SUBDIR += cdpd
     SUBDIR += cdpr
     SUBDIR += cdpsnarf
@@ -54,6 +55,7 @@
     SUBDIR += dhcdrop
     SUBDIR += dhcp_probe
     SUBDIR += disco
+    SUBDIR += dnsmap
     SUBDIR += docsis
     SUBDIR += driftnet
     SUBDIR += ehnt
@@ -261,6 +263,7 @@
     SUBDIR += pftabled
     SUBDIR += php56-snmp
     SUBDIR += php70-snmp
+    SUBDIR += php71-snmp
     SUBDIR += phpip
     SUBDIR += phpipam
     SUBDIR += phpweathermap
@@ -298,13 +301,17 @@
     SUBDIR += routers2-extras
     SUBDIR += rrdbot
     SUBDIR += rubygem-blimpy
+    SUBDIR += rubygem-oxidized
+    SUBDIR += rubygem-oxidized-script
+    SUBDIR += rubygem-oxidized-web
     SUBDIR += rubygem-snmp
     SUBDIR += rubygem-visage-app
     SUBDIR += sblim-wbemcli
     SUBDIR += scli
     SUBDIR += sdig
-    SUBDIR += seafile
+    SUBDIR += seafile-client
     SUBDIR += seafile-gui
+    SUBDIR += seafile-server
     SUBDIR += send
     SUBDIR += sendip
     SUBDIR += sipcalc
@@ -328,7 +335,6 @@
     SUBDIR += telegraf
     SUBDIR += tornova
     SUBDIR += torrus
-    SUBDIR += unifi4
     SUBDIR += unifi5
     SUBDIR += victorops-nagios
     SUBDIR += vidalia

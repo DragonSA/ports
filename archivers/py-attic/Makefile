@@ -1,5 +1,5 @@
 # Created by: Thomas Hurst <tom@hur.st>
-# $FreeBSD: head/archivers/py-attic/Makefile 418011 2016-07-04 10:01:09Z mat $
+# $FreeBSD: head/archivers/py-attic/Makefile 430454 2017-01-03 11:01:05Z mat $
 
 PORTNAME=	attic
 PORTVERSION=	0.16
@@ -23,12 +23,6 @@ USE_OPENSSL=	yes
 
 STRIP_FILES=	hashindex.so platform_freebsd.so chunker.so crypto.so
 PYDISTUTILS_BUILDPATH=${BUILD_WRKSRC}/build/lib.${OPSYS:tl}-${UNAMER}-${ARCH}-${PYTHON_VER}
-
-.include <bsd.port.options.mk>
-
-.if ${OSVERSION} < 1000015
-WITH_OPENSSL_PORT=	yes
-.endif
 
 .include <bsd.port.pre.mk>
 

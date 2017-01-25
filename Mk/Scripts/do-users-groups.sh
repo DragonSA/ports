@@ -1,5 +1,5 @@
 #!/bin/sh
-# $FreeBSD: head/Mk/Scripts/do-users-groups.sh 425039 2016-11-01 00:33:36Z antoine $
+# $FreeBSD: head/Mk/Scripts/do-users-groups.sh 430441 2017-01-03 07:24:49Z rene $
 #
 # MAINTAINER: portmgr@FreeBSD.org
 
@@ -28,7 +28,7 @@ error() {
 rm -f "${dp_UG_INSTALL}" "${dp_UG_DEINSTALL}" || :
 
 # Before FreeBSD 10.2, PW did not have -R support.
-if [ "${dp_OPSYS}" = FreeBSD ] && [ "${dp_OSVERSION}" -ge 1002000 ]; then
+if [ "${dp_OPSYS}" = FreeBSD ] ; then
 	cat >> "${dp_UG_INSTALL}" <<-eot
 	if [ -n "\${PKG_ROOTDIR}" ] && [ "\${PKG_ROOTDIR}" != "/" ]; then
 	  PW="${dp_PW} -R \${PKG_ROOTDIR}"

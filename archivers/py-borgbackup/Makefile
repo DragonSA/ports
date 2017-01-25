@@ -1,8 +1,8 @@
 # Created by: José García Juanino <jjuanino@gmail.com>
-# $FreeBSD: head/archivers/py-borgbackup/Makefile 427420 2016-11-30 11:31:17Z cpm $
+# $FreeBSD: head/archivers/py-borgbackup/Makefile 430454 2017-01-03 11:01:05Z mat $
 
 PORTNAME=	borgbackup
-PORTVERSION=	1.0.8
+PORTVERSION=	1.0.9
 CATEGORIES=	archivers python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -25,13 +25,6 @@ FUSE_RUN_DEPENDS=	${PYTHONPREFIX_SITELIBDIR}/llfuse.so:devel/py-llfuse
 
 USES=		python:3.4+ ssl
 USE_PYTHON=	autoplist distutils
-
-.include <bsd.port.options.mk>
-
-# borg requires openssl>=1.0.0
-.if ${OSVERSION} < 1000015
-WITH_OPENSSL_PORT=yes
-.endif
 
 .include <bsd.port.pre.mk>
 

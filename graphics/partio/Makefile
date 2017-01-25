@@ -1,10 +1,11 @@
-# $FreeBSD: head/graphics/partio/Makefile 412346 2016-04-01 14:00:51Z mat $
+# $FreeBSD: head/graphics/partio/Makefile 432169 2017-01-22 22:27:54Z rene $
 
 PORTNAME=	partio
 PORTVERSION=	1.1.0.20150221
+PORTREVISION=	2
 CATEGORIES=	graphics math
 
-MAINTAINER=	mva@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	C++ library for manipulating animation particle formats
 
 LICENSE=	BSD3CLAUSE

@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: head/Mk/bsd.licenses.db.mk 421995 2016-09-13 12:24:51Z amdmi3 $
+# $FreeBSD: head/Mk/bsd.licenses.db.mk 430772 2017-01-07 07:55:39Z antoine $
 
 # ** Please run changes to this file by eadler@ first **
 
@@ -387,7 +387,7 @@ _LICENSE_GROUPS_RUBY=	FSF
 
 _LICENSE_NAME_NONE=	No license specified
 _LICENSE_GROUPS_NONE=	# empty
-_LICENSE_PERMS_NONE=	auto-accept
+_LICENSE_PERMS_NONE=	# empty
 
 _LICENSE_NAME_ZLIB=		zlib License
 _LICENSE_GROUPS_ZLIB=	GPL FSF OSI

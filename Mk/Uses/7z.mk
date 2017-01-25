@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/7z.mk 411856 2016-03-25 15:38:56Z jbeich $
+# $FreeBSD: head/Mk/Uses/7z.mk 430441 2017-01-03 07:24:49Z rene $
 #
 # Extract 7-Zip archives
 #
@@ -21,11 +21,6 @@ P7ZIP_WRKDIR?=		${EXTRACT_WRKDIR}
 
 .if !empty(7z_ARGS:Np7zip:Npartial)
 IGNORE=			USES=7z has invalid arguments: ${7z_ARGS:Np7zip:Npartial}
-.endif
-
-.if ! ${7z_ARGS:Mp7zip} && (${OPSYS} == FreeBSD && ${OSVERSION} < 1000009)
-# libarchive lacks 7zip reader, fallback to P7ZIP_CMD
-7z_ARGS+=		p7zip
 .endif
 
 .if ${7z_ARGS:Mp7zip}

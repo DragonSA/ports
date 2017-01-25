@@ -1,4 +1,4 @@
-# $FreeBSD: head/audio/Makefile 427460 2016-11-30 21:15:29Z rene $
+# $FreeBSD: head/audio/Makefile 431540 2017-01-15 09:48:22Z rene $
 #
 
     COMMENT = Audio tools
@@ -26,6 +26,7 @@
     SUBDIR += ample
     SUBDIR += aqualung
     SUBDIR += ardour
+    SUBDIR += ardour5
     SUBDIR += ario
     SUBDIR += arss
     SUBDIR += ascd
@@ -42,7 +43,6 @@
     SUBDIR += audiere
     SUBDIR += audiotag
     SUBDIR += aumix
-    SUBDIR += aureal-kmod
     SUBDIR += autocd
     SUBDIR += autotalent
     SUBDIR += autozen
@@ -416,6 +416,7 @@
     SUBDIR += libvorbis
     SUBDIR += libworkman
     SUBDIR += libxmp
+    SUBDIR += lilv
     SUBDIR += lingot
     SUBDIR += linux-c6-alsa-lib
     SUBDIR += linux-c6-alsa-plugins-oss
@@ -448,20 +449,6 @@
     SUBDIR += linux-c7-pulseaudio-libs
     SUBDIR += linux-c7-pulseaudio-utils
     SUBDIR += linux-c7-sdl_mixer
-    SUBDIR += linux-f10-alsa-lib
-    SUBDIR += linux-f10-alsa-plugins-oss
-    SUBDIR += linux-f10-arts
-    SUBDIR += linux-f10-esound
-    SUBDIR += linux-f10-freealut
-    SUBDIR += linux-f10-libaudiofile
-    SUBDIR += linux-f10-libogg
-    SUBDIR += linux-f10-libvorbis
-    SUBDIR += linux-f10-mikmod
-    SUBDIR += linux-f10-nas-libs
-    SUBDIR += linux-f10-openal
-    SUBDIR += linux-f10-openal-soft
-    SUBDIR += linux-f10-pulseaudio-libs
-    SUBDIR += linux-f10-sdl_mixer
     SUBDIR += linux-genpuid
     SUBDIR += linux-laudio
     SUBDIR += linux-mbrola
@@ -557,6 +544,7 @@
     SUBDIR += normalize
     SUBDIR += nosefart
     SUBDIR += nspmod
+    SUBDIR += nuvolaplayer
     SUBDIR += ocp
     SUBDIR += ogg2mp3
     SUBDIR += openal
@@ -739,6 +727,7 @@
     SUBDIR += soundtracker
     SUBDIR += sox
     SUBDIR += specimen
+    SUBDIR += spectrogram
     SUBDIR += speex
     SUBDIR += speexdsp
     SUBDIR += spek
@@ -751,9 +740,11 @@
     SUBDIR += splay
     SUBDIR += splaytk
     SUBDIR += squash
+    SUBDIR += sratom
     SUBDIR += streamripper
     SUBDIR += streamtranscoder
     SUBDIR += stymulator
+    SUBDIR += suil
     SUBDIR += sweep
     SUBDIR += swhplugins
     SUBDIR += taglib
@@ -845,7 +836,6 @@
     SUBDIR += xmms-mailnotify
     SUBDIR += xmms-nas
     SUBDIR += xmms-nsf
-    SUBDIR += xmms-openspc
     SUBDIR += xmms-sapplug
     SUBDIR += xmms-scrobbler
     SUBDIR += xmms-sexypsf

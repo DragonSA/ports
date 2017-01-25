@@ -1,4 +1,4 @@
-# $FreeBSD: head/emulators/Makefile 428964 2016-12-19 23:07:25Z antoine $
+# $FreeBSD: head/emulators/Makefile 431540 2017-01-15 09:48:22Z rene $
 #
 
     COMMENT = Emulators for other operating systems
@@ -27,7 +27,6 @@
     SUBDIR += dgen-sdl
     SUBDIR += dolphin-emu
     SUBDIR += dosbox
-    SUBDIR += doscmd
     SUBDIR += dtcyber
     SUBDIR += dynagen
     SUBDIR += dynagui
@@ -71,10 +70,8 @@
     SUBDIR += libspectrum
     SUBDIR += linux-c6
     SUBDIR += linux-c7
-    SUBDIR += linux-f10
     SUBDIR += linux_base-c6
     SUBDIR += linux_base-c7
-    SUBDIR += linux_base-f10
     SUBDIR += lisaem
     SUBDIR += loemu
     SUBDIR += m2000
@@ -124,6 +121,7 @@
     SUBDIR += qemu-cheri128m
     SUBDIR += qemu-devel
     SUBDIR += qemu-launcher
+    SUBDIR += qemu-riscv
     SUBDIR += qemu-sbruno
     SUBDIR += qemu-user-static
     SUBDIR += qemu-utils

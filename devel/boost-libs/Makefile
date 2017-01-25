@@ -1,10 +1,12 @@
 # Created by: Alexander Churanov <churanov.port.maintainer@gmail.com>
-# $FreeBSD: head/devel/boost-libs/Makefile 426988 2016-11-24 02:30:37Z jbeich $
+# $FreeBSD: head/devel/boost-libs/Makefile 430767 2017-01-07 06:24:44Z jbeich $
 
 PORTNAME=	boost-libs
 PORTREVISION=	1
 
 COMMENT=	Free portable C++ libraries (without Boost.Python)
+
+BROKEN_sparc64=	https://github.com/boostorg/context/commit/f2ef6326b6ed
 
 BUILD_DEPENDS+=	bjam:devel/boost-jam
 

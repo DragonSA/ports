@@ -1,4 +1,4 @@
-# $FreeBSD: head/games/Makefile 428545 2016-12-14 04:48:47Z acm $
+# $FreeBSD: head/games/Makefile 431884 2017-01-19 15:50:48Z lifanov $
 #
 
     COMMENT = Games and related software
@@ -217,7 +217,6 @@
     SUBDIR += dopewars
     SUBDIR += drcreep
     SUBDIR += drm
-    SUBDIR += dsnake
     SUBDIR += duckmaze
     SUBDIR += duel
     SUBDIR += dunelegacy
@@ -590,6 +589,7 @@
     SUBDIR += maitretarot
     SUBDIR += manaplus
     SUBDIR += mangband
+    SUBDIR += mari0
     SUBDIR += marsnomercy
     SUBDIR += masterserver
     SUBDIR += maxr
@@ -836,6 +836,7 @@
     SUBDIR += railroad-rampage
     SUBDIR += redeclipse
     SUBDIR += redeclipse-data
+    SUBDIR += redorblack
     SUBDIR += reminiscence
     SUBDIR += rescue
     SUBDIR += residualvm

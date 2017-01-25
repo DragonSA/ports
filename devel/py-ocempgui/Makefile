@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: head/devel/py-ocempgui/Makefile 412346 2016-04-01 14:00:51Z mat $
+# $FreeBSD: head/devel/py-ocempgui/Makefile 432169 2017-01-22 22:27:54Z rene $
 
 PORTNAME=	ocempgui
 PORTVERSION=	0.2.9
@@ -9,7 +9,7 @@ MASTER_SITES=	SF/ocemp/${PORTNAME}/${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 DISTNAME=	OcempGUI-${PORTVERSION}
 
-MAINTAINER=	mva@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	GUI toolkit in python
 
 LICENSE=	BSD2CLAUSE

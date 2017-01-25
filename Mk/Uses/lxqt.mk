@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/lxqt.mk 428424 2016-12-12 17:45:01Z olivierd $
+# $FreeBSD: head/Mk/Uses/lxqt.mk 431551 2017-01-15 12:02:29Z olivierd $
 #
 # This file contains some variable definitions that are supposed to make your
 # life easier, when dealing with ports related to the LXQt Desktop Environment.
@@ -24,6 +24,7 @@ IGNORE=	Incorrect 'USES+=lxqt:${lxqt_ARGS} takes no arguments
 .endif
 
 MASTER_SITE_LXQT+= \
+	https://github.com/lxde/%SUBDIR%/releases/download/${PORTVERSION}/ \
 	http://downloads.lxqt.org/%SUBDIR%/${PORTVERSION}/
 MASTER_SITE_LXQT_SUBDIR=	lxqt
 

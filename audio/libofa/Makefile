@@ -1,5 +1,5 @@
 # Created by: Alexander Botero-Lowry <alex@foxybanana.com>
-# $FreeBSD: head/audio/libofa/Makefile 429142 2016-12-22 05:31:22Z dbn $
+# $FreeBSD: head/audio/libofa/Makefile 429527 2016-12-26 14:33:04Z mat $
 
 PORTNAME=	libofa
 PORTVERSION=	0.9.3
@@ -7,7 +7,7 @@ PORTREVISION=	10
 CATEGORIES=	audio
 
 MAINTAINER=	jhale@FreeBSD.org
-COMMENT=	The Open Fingerprint Architecture Library
+COMMENT=	Open Fingerprint Architecture Library
 
 LICENSE=		APL1 GPLv2
 LICENSE_COMB=		dual
@@ -20,15 +20,15 @@ LIB_DEPENDS=	libfftw3.so:math/fftw3 \
 		libexpat.so:textproc/expat2 \
 		libcurl.so:ftp/curl
 
+DEPRECATED=	MusicDNS service has been discontinued
+EXPIRATION_DATE=	2017-03-01
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	tanob
 GH_TAGNAME=	b75e45e
 
-PROJECTHOST=	musicip-libofa
-USES=		dos2unix libtool pathfix
+USES=		dos2unix libtool localbase pathfix
 GNU_CONFIGURE=	yes
-CPPFLAGS+=	-I${LOCALBASE}/include
-LDFLAGS+=	-L${LOCALBASE}/lib
 USE_LDCONFIG=	yes
 INSTALL_TARGET=	install-strip
 
