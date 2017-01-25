@@ -1,23 +1,24 @@
 # Created by: Adrian Chadd
-# $FreeBSD: head/sysutils/intel-pcm/Makefile 430235 2017-01-01 03:45:12Z sunpoet $
+# $FreeBSD: head/sysutils/intel-pcm/Makefile 432423 2017-01-25 15:46:41Z dbn $
 
 PORTNAME=	intel-pcm
-PORTVERSION=	2.11
+PORTVERSION=	2.11.1
 CATEGORIES=	sysutils
-MASTER_SITES=	LOCAL/imp
-DISTNAME=	IntelPerformanceCounterMonitor-V${PORTVERSION}
 
 MAINTAINER=	imp@FreeBSD.org
-COMMENT=	Intel PCM toolkit
+COMMENT=	Process Count Monitor (PCM) for Intel processors
 
 LICENSE=	BSD3CLAUSE
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
-USES=		compiler:c++11-lib gmake tar:xz
+USES=		gmake
 
 ONLY_FOR_ARCHS=	i386 amd64
 
-WRKSRC=		${WRKDIR}/IntelPerformanceCounterMonitor-V${PORTVERSION}
-MAKE_ARGS=	CXX="${CXX}" LIB=-lpthread
+USE_GITHUB=	yes
+GH_ACCOUNT=	opcm
+GH_PROJECT=	pcm
+GH_TAGNAME=	5581ad7
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/*.x ${STAGEDIR}${PREFIX}/sbin
