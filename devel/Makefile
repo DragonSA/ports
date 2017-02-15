@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/Makefile 432404 2017-01-24 23:27:25Z bapt $
+# $FreeBSD: head/devel/Makefile 432468 2017-01-26 06:18:29Z dbn $
 #
 
     COMMENT = Development utilities
@@ -4392,6 +4392,7 @@
     SUBDIR += py-mwlib.rl
     SUBDIR += py-mx-experimental
     SUBDIR += py-mygpoclient
+    SUBDIR += py-mypy
     SUBDIR += py-nagioscheck
     SUBDIR += py-natsort
     SUBDIR += py-natural
@@ -4721,6 +4722,7 @@
     SUBDIR += py-twistedFlow
     SUBDIR += py-twistedRunner
     SUBDIR += py-txaio
+    SUBDIR += py-typed-asp
     SUBDIR += py-typing
     SUBDIR += py-tzlocal
     SUBDIR += py-ua_parser
