@@ -5,6 +5,152 @@ they are unavoidable.
 You should get into the habit of checking this file for changes each time
 you update your ports collection, before attempting any port upgrades.
 
+20170220:
+  AFFECTS: sysutils/filebeat sysutils/metricbeat sysutils/packetbeat
+  AUTHOR: girgen@FreeBSD.org
+
+  The three elasticsearch beats ports have merged into one single port
+  systuils/beats that installs all of the above and some more. The reason is to
+  make the port more maintainable and also that the new heartbeat beat would
+  conflict with sysutils/heartbeat.
+
+20170220:
+  AFFECTS: devel/libevent2
+  AUTHOR: jbeich@FreeBSD.org
+
+  libevent2 has been renamed back to libevent as the default version.
+  If you manage out of tree ports make sure to run the following:
+
+    # pkg set -n libevent2:libevent
+    # pkg set -o devel/libevent2:devel/libevent
+
+20170218:
+  AFFECTS: users of Qt 4 and Qt 5
+  AUTHOR: kde@FreeBSD.org
+
+  Following what is already done in Qt 5, the Qt 4 ports no longer install
+  their binaries into ${LOCALBASE}/bin (which is "/usr/local/bin" in most
+  cases). Additionally, the "-qt4" suffix has been dropped from the file names
+  of the binaries that had it, such as "qmake-qt4".
+
+  The new misc/qtchooser port is now used to choose whether a Qt 4 or Qt 5
+  version of a binary such as "moc", "qmake" or "designer" will be used. By
+  default, the Qt 5 versions are preferred, but that can be changed by setting
+  the QT_SELECT environment variable to "qt4".
+
+  qtchooser also allows one to seamlessly use other Qt installations for those
+  binaries, which is particularly beneficial to people working on Qt itself or
+  who need their own checkouts.
+
+  See qtchooser(1) for more information on how to configure qtchooser.
+
+20170213:
+  AFFECTS: users of www/node*
+  AUTHOR: bradleythughes@fastmail.fm
+
+  The BUNDLED_SSL option is now enabled by default on FreeBSD 10, since
+  Node.js requires OpenSSL 1.0.2, and FreeBSD 10 is shipped with 1.0.1.
+
+20170213:
+  AFFECTS: users of graphics/libGL, graphics/libEGL, graphics/libglesv2
+  AUTHOR: kwm@FreeBSD.org
+
+  The workaround for handling conflicting libraries between the
+  nvidia-driver, libGL, libEGL and libglesv2 ports was removed. If the
+  nvidia-driver port is updated before the other ports, it will remove
+  the libraries of said ports. This is a side effect of how the workaround
+  worked. If this happens reinstalling the affected port is enough.
+
+  pkg users can run: pkg install -f libGL libEGL libglesv2
+
+20170211:
+  AFFECTS: users of x11-server/xorg-server
+  AUTHOR: rezny@FreeBSD.org
+
+  Xorg server has been updated to 1.18.4 and autodetection has changed.
+  The order in which drivers are now attempted is:
+    1) vendor/model specific driver according to PCI IDs
+    2) generic modesetting driver which requires a drm driver with KMS
+    3) scfb, the generic framebuffer driver
+    4) vesa (only if arch is x86)
+
+  This should minimize the need for xorg.conf files. It is recommended to
+  load the correct KMS driver (i915kms.ko or radeonkms.ko) via rc.conf,
+  i.e. kld_list="i915kms.ko", to ensure correct functionality. Although
+  the vendor drivers may attempt to load the correct drm driver, which
+  does not always work, the modesetting driver assumes the required KMS
+  driver is already loaded and will fail if there is none. The modesetting
+  driver is now recommended as an alternative to the Intel driver; the
+  performance is comparable and stability is better with modesetting. The
+  ATI driver continues to offer better performance than modesetting.
+
+20170203:
+  AFFECTS: users of security/libressl-devel
+  AUTHOR: brnrd@FreeBSD.org
+
+  The version 2.5.1 bumps the libcrypto, libssl and libtls shared library
+  versions. You will have to rebuild all packages that depend on
+  libressl-devel. Check the 20160811 libressl entry for more detailed
+  guidance on rebuilding.
+
+20170202:
+  AFFECTS: users of www/uwsgi
+  AUTHOR: feld@FreeBSD.org
+
+  The previous disruptive changes to uwsgi for security have been remediated
+  through creation of a dedicated uwsgi user/group and utilizing the
+  uwsgi feature to set socket ownership. The uwsgi daemon by default now
+  has the following properties:
+
+  * Process runs as uwsgi user and group (UID/GID 165)
+  * Socket mode is 660, still protecting unauthorized access from "other"
+  * Socket ownership is www:www, restoring compatibility
+
+20170130:
+  AFFECTS: users of devel/ice, devel/py-ice, devel/php5-ice
+  AUTHOR: grembo@FreeBSD.org
+
+  Since __WORDSIZE as defined by <stdint.h> always reports 32 when using
+  C++98/03 (unless __STDC_LIMIT_MACROS is set explictly), Ice 3.6.3 used
+  "long long" for Int64 instead of "long" on 64-bit platforms by mistake.
+  A workaround has been added in version 3.6.3_2 of these three ports,
+  requiring to upgrade all of them at the same time and to rebuild all
+  custom code that links against them.
+
+20170129:
+  AFFECTS: users of multimedia/motion
+  AUTHOR: jhale@FreeBSD.org
+
+  Version 3.x expected the configuration files to reside in:
+	${LOCALBASE}/etc
+  Version 4.x expects the configuration files to reside in:
+	${LOCALBASE}/etc/motion
+  This was unfortunately overlooked when the port was updated to 4.x, but it
+  has now been fixed to install the default configuration file in the new
+  location. The rc script now checks for motion.conf in the new location.
+
+  While you may be able to simply copy your old motion.conf to the new location,
+  it is recommended to review ${LOCALBASE}/etc/motion/motion.conf and make
+  changes to it based on your old ${LOCALBASE}/etc/motion.conf as some options
+  have been added and removed.
+
+  Further, if you use motion with multiple cameras and have
+  ${LOCALBASE}/etc/thread[0-9].conf files, they should be moved to
+  ${LOCALBASE}/etc/motion as well. These files are deprecated and should be
+  renamed to camera[0-9].conf and in motion.conf, lines like:
+	thread /usr/local/etc/thread1.conf
+  Should be converted to:
+	camera /usr/local/etc/motion/camera1.conf
+
+20170127:
+  AFFECTS: users of www/uwsgi
+  AUTHOR: feld@FreeBSD.org
+
+  The default socket mode for uwsgi as 777 is a severe security concern.
+  This has been remediated by changing the rc script to default to 600.
+  The mode is configurable with rc.conf values: uwsgi_socket_mode="600"
+  or for a profile named "www", uwsgi_www_socket_mode="600".
+
 20170121:
   AFFECTS: users of security/tinc
   AUTHOR: dinoex@FreeBSD.org
@@ -420,7 +566,7 @@ you update your ports collection, before attempting any port upgrades.
 
 20161029:
   AFFECTS: users of irc/quassel
-  AUTHOR: woodsb02@freebsd.org
+  AUTHOR: woodsb02@FreeBSD.org
 
   Quassel is now split into two ports / packages; one for providing
   the server backend (irc/quassel-core), and one for providing the
@@ -430,7 +576,7 @@ you update your ports collection, before attempting any port upgrades.
 
 20161028:
   AFFECTS: users of security/openssl and security/openssl-devel
-  AUTHOR: brnrd@freebsd.org
+  AUTHOR: brnrd@FreeBSD.org
 
   The shared library versions of OpenSSL have been bumped to avoid
   issues with ports' and base's OpenSSL not being binary compatible.
@@ -14098,4 +14244,4 @@ or
   'nobody' by default.  Make sure any existing configuration files are
   readable by that user.
 
-$FreeBSD: head/UPDATING 432067 2017-01-21 17:40:57Z dinoex $
+$FreeBSD: head/UPDATING 434496 2017-02-21 01:27:07Z girgen $

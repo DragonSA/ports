@@ -1,4 +1,4 @@
-# $FreeBSD: head/security/Makefile 432355 2017-01-24 16:25:15Z dvl $
+# $FreeBSD: head/security/Makefile 434441 2017-02-20 11:02:46Z wg $
 #
 
     COMMENT = Security tools
@@ -36,6 +36,7 @@
     SUBDIR += bcrypt
     SUBDIR += bcwipe
     SUBDIR += bdc
+    SUBDIR += bdes
     SUBDIR += bearssl
     SUBDIR += beecrypt
     SUBDIR += belier
@@ -163,6 +164,7 @@
     SUBDIR += gag
     SUBDIR += gcipher
     SUBDIR += gcr
+    SUBDIR += git-crypt
     SUBDIR += gnome-gpg
     SUBDIR += gnome-keyring
     SUBDIR += gnome-keyring-sharp
@@ -346,7 +348,6 @@
     SUBDIR += linux-c6-libtasn1
     SUBDIR += linux-c6-nss
     SUBDIR += linux-c6-openssl
-    SUBDIR += linux-c6-openssl-compat
     SUBDIR += linux-c7-cyrus-sasl2
     SUBDIR += linux-c7-gnutls
     SUBDIR += linux-c7-libgcrypt
@@ -355,11 +356,11 @@
     SUBDIR += linux-c7-libtasn1
     SUBDIR += linux-c7-nss
     SUBDIR += linux-c7-openssl
-    SUBDIR += linux-c7-openssl-compat
     SUBDIR += lockdown
     SUBDIR += log2timeline
     SUBDIR += logcheck
     SUBDIR += luasec
+    SUBDIR += luasec-51
     SUBDIR += lynis
     SUBDIR += mac-robber
     SUBDIR += maia
@@ -380,6 +381,7 @@
     SUBDIR += mhash
     SUBDIR += mindterm-binary
     SUBDIR += monkeysphere
+    SUBDIR += morphis
     SUBDIR += munge
     SUBDIR += mussh
     SUBDIR += nacl
@@ -931,6 +933,7 @@
     SUBDIR += py-tuf
     SUBDIR += py-twistedConch
     SUBDIR += py-twofish
+    SUBDIR += py-virustotal-api
     SUBDIR += py-volatility
     SUBDIR += py-vulndb
     SUBDIR += py-xmlsec
@@ -988,9 +991,6 @@
     SUBDIR += rkhunter
     SUBDIR += rndpassw
     SUBDIR += ruby-camellia
-    SUBDIR += ruby-hmac
-    SUBDIR += ruby-password
-    SUBDIR += ruby-tcpwrap
     SUBDIR += rubygem-airbrussh
     SUBDIR += rubygem-attr_encrypted
     SUBDIR += rubygem-bcrypt
@@ -1111,6 +1111,7 @@
     SUBDIR += srm
     SUBDIR += ssdeep
     SUBDIR += ssh-multiadd
+    SUBDIR += ssh-vault
     SUBDIR += ssh_askpass_gtk2
     SUBDIR += sshblock
     SUBDIR += sshguard

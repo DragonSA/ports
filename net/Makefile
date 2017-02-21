@@ -1,4 +1,4 @@
-# $FreeBSD: head/net/Makefile 432409 2017-01-25 00:34:08Z lifanov $
+# $FreeBSD: head/net/Makefile 434480 2017-02-20 18:00:18Z rene $
 #
 
     COMMENT = Networking tools
@@ -392,6 +392,7 @@
     SUBDIR += ltm
     SUBDIR += lualdap
     SUBDIR += luasocket
+    SUBDIR += luasocket-51
     SUBDIR += lvwimax
     SUBDIR += mDNSResponder
     SUBDIR += macchanger
@@ -464,7 +465,6 @@
     SUBDIR += nmsg
     SUBDIR += nocatsplash
     SUBDIR += norm
-    SUBDIR += nos-ttb
     SUBDIR += nph
     SUBDIR += ns3
     SUBDIR += nsq
@@ -923,6 +923,7 @@
     SUBDIR += php70-soap
     SUBDIR += php70-sockets
     SUBDIR += php70-xmlrpc
+    SUBDIR += php71-ldap
     SUBDIR += php71-soap
     SUBDIR += php71-sockets
     SUBDIR += php71-xmlrpc
@@ -1122,10 +1123,6 @@
     SUBDIR += rtpbreak
     SUBDIR += rtpproxy
     SUBDIR += rtptools
-    SUBDIR += ruby-dict
-    SUBDIR += ruby-icmp
-    SUBDIR += ruby-tcpsocketpipe
-    SUBDIR += ruby-tserver
     SUBDIR += rubygem-amazon-ec2
     SUBDIR += rubygem-amq-protocol
     SUBDIR += rubygem-amqp

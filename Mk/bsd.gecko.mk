@@ -4,7 +4,7 @@
 # Date created:		12 Nov 2005
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: head/Mk/bsd.gecko.mk 431737 2017-01-17 12:44:42Z jbeich $
+# $FreeBSD: head/Mk/bsd.gecko.mk 434427 2017-02-20 02:57:04Z jbeich $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -169,7 +169,7 @@ cairo_LIB_DEPENDS=	libcairo.so:graphics/cairo
 cairo_MOZ_OPTIONS=	--enable-system-cairo
 .endif
 
-event_LIB_DEPENDS=	libevent.so:devel/libevent2
+event_LIB_DEPENDS=	libevent.so:devel/libevent
 event_MOZ_OPTIONS=	--with-system-libevent
 
 ffi_LIB_DEPENDS=	libffi.so:devel/libffi

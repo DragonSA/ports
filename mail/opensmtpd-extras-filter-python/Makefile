@@ -1,8 +1,8 @@
 # Created by: fluffy
-# $FreeBSD: head/mail/opensmtpd-extras-filter-python/Makefile 417368 2016-06-23 12:00:36Z fluffy $
+# $FreeBSD: head/mail/opensmtpd-extras-filter-python/Makefile 434427 2017-02-20 02:57:04Z jbeich $
 
 PKGNAMESUFFIX=		-filter-python
-PORTREVISION=		0
+PORTREVISION=		2
 
 COMMENT=		Python-script filter support for OpenSMTPD
 

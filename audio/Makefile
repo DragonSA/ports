@@ -1,4 +1,4 @@
-# $FreeBSD: head/audio/Makefile 431540 2017-01-15 09:48:22Z rene $
+# $FreeBSD: head/audio/Makefile 434203 2017-02-16 10:23:40Z tobik $
 #
 
     COMMENT = Audio tools
@@ -286,6 +286,7 @@
     SUBDIR += gstreamer1-plugins-pulse
     SUBDIR += gstreamer1-plugins-shout2
     SUBDIR += gstreamer1-plugins-sidplay
+    SUBDIR += gstreamer1-plugins-sndio
     SUBDIR += gstreamer1-plugins-soundtouch
     SUBDIR += gstreamer1-plugins-speex
     SUBDIR += gstreamer1-plugins-taglib
@@ -422,8 +423,6 @@
     SUBDIR += linux-c6-alsa-plugins-oss
     SUBDIR += linux-c6-alsa-plugins-pulseaudio
     SUBDIR += linux-c6-alsa-utils
-    SUBDIR += linux-c6-arts
-    SUBDIR += linux-c6-esound
     SUBDIR += linux-c6-flac
     SUBDIR += linux-c6-libaudiofile
     SUBDIR += linux-c6-libogg
@@ -440,7 +439,6 @@
     SUBDIR += linux-c7-alsa-plugins-pulseaudio
     SUBDIR += linux-c7-alsa-utils
     SUBDIR += linux-c7-audiofile
-    SUBDIR += linux-c7-esound
     SUBDIR += linux-c7-flac
     SUBDIR += linux-c7-libogg
     SUBDIR += linux-c7-libsndfile
@@ -678,8 +676,6 @@
     SUBDIR += rplay
     SUBDIR += rsynth
     SUBDIR += rubberband
-    SUBDIR += ruby-audiofile
-    SUBDIR += ruby-mp3tag
     SUBDIR += ruby-smf
     SUBDIR += ruby-taglib
     SUBDIR += ruby-xmms2
@@ -857,6 +853,7 @@
     SUBDIR += xwave
     SUBDIR += yell
     SUBDIR += zinf
+    SUBDIR += zita-resampler
     SUBDIR += zynaddsubfx
 
 .include <bsd.port.subdir.mk>

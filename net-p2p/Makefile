@@ -1,4 +1,4 @@
-# $FreeBSD: head/net-p2p/Makefile 429561 2016-12-26 18:14:23Z feld $
+# $FreeBSD: head/net-p2p/Makefile 433665 2017-02-08 18:52:24Z rene $
 #
 
     COMMENT = Peer-to-peer network applications
@@ -21,7 +21,6 @@
     SUBDIR += dclib
     SUBDIR += deluge
     SUBDIR += deluge-cli
-    SUBDIR += digitalcoin
     SUBDIR += dogecoin
     SUBDIR += ed2k
     SUBDIR += edonkey-tool-hash

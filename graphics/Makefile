@@ -1,4 +1,4 @@
-# $FreeBSD: head/graphics/Makefile 432336 2017-01-24 12:56:45Z tz $
+# $FreeBSD: head/graphics/Makefile 433886 2017-02-11 16:00:33Z bapt $
 #
 
     COMMENT = Graphics tools and libraries
@@ -227,6 +227,7 @@
     SUBDIR += geomorph
     SUBDIR += geomview
     SUBDIR += geos
+    SUBDIR += geos35
     SUBDIR += geoserver
     SUBDIR += gexiv2
     SUBDIR += giblib
@@ -338,7 +339,6 @@
     SUBDIR += hs-dia-base
     SUBDIR += hs-dia-functions
     SUBDIR += hs-svgcairo
-    SUBDIR += hsetroot
     SUBDIR += hugin
     SUBDIR += icat
     SUBDIR += icc-profiles-basiccolor
@@ -932,9 +932,6 @@
     SUBDIR += rigsofrods-pagedgeometry
     SUBDIR += ristretto
     SUBDIR += ruby-gd
-    SUBDIR += ruby-image_size
-    SUBDIR += ruby-imlib2
-    SUBDIR += ruby-svg
     SUBDIR += rubygem-cairo
     SUBDIR += rubygem-captcha
     SUBDIR += rubygem-chunky_png
@@ -1054,6 +1051,8 @@
     SUBDIR += vp
     SUBDIR += waffle
     SUBDIR += waifu2x-converter-cpp
+    SUBDIR += wayland
+    SUBDIR += wayland-protocols
     SUBDIR += webp
     SUBDIR += wings
     SUBDIR += wmicons

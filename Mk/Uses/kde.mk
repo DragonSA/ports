@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/kde.mk 430451 2017-01-03 10:06:56Z tcberner $
+# $FreeBSD: head/Mk/Uses/kde.mk 434381 2017-02-18 19:56:12Z tcberner $
 #
 # Provides support for KDE and KF5-based ports.
 #
@@ -65,7 +65,7 @@ KDE4_APPLICATIONS_VERSION?=	15.04.3
 KDE4_BRANCH?=			stable
 
 # Current KDE desktop.
-KDE_FRAMEWORKS_VERSION?=	5.29.0
+KDE_FRAMEWORKS_VERSION?=	5.31.0
 KDE_FRAMEWORKS_BRANCH?= 	stable
 
 # Current KDE applications.
@@ -211,9 +211,9 @@ _USE_KDE4_ALL+=		akonadi attica automoc4 ontologies qimageblitz soprano \
 _USE_FRAMEWORKS_TIER1=	apidox archive attica5 breeze-icons codecs config \
 			coreaddons dbusaddons dnssd i18n idletime itemmodels \
 			itemviews oxygen-icons5 plotting prison solid sonnet \
-			syntaxhighlighting threadweaver widgetsaddons windowsystem
+			syntaxhighlighting threadweaver wayland widgetsaddons \
+			windowsystem
 # NOT LISTED TIER1: modemmanagerqt networkmanagerqt (not applicable)
-# NOT LISTED TIER1: wayland (needs graphics/wayland)
 
 _USE_FRAMEWORKS_TIER2=	auth completion crash doctools filemetadata5 \
 			kimageformats jobwidgets notifications package \
@@ -237,7 +237,7 @@ _USE_FRAMEWORKS_PORTING=js jsembed kdelibs4support khtml mediaplayer kross
 # These are weird items: not officially released as Frameworks, but
 # required by them (and from KDE).
 #  - kirigami https://dot.kde.org/2016/03/30/kde-proudly-presents-kirigami-ui
-_USE_FRAMEWORKS_EXTRA=	kirigami
+_USE_FRAMEWORKS_EXTRA=	kirigami kirigami2
 
 _USE_FRAMEWORKS_ALL=	ecm \
 			${_USE_FRAMEWORKS_TIER1} \
@@ -511,8 +511,11 @@ kimageformats_TYPE=	run
 kio_PORT=		devel/kf5-kio
 kio_LIB=		libKF5KIOCore.so
 
-kirigami_PATH=		${QT_QMLDIR}/org/kde/kirigami/libkirigamiplugin.so
 kirigami_PORT=		x11-toolkits/kirigami
+kirigami_PATH=		${QT_QMLDIR}/org/kde/kirigami/libkirigamiplugin.so
+
+kirigami2_PORT=		x11-toolkits/kirigami2
+kirigami2_PATH=		${QT_QMLDIR}/org/kde/kirigami.2/libkirigamiplugin.so
 
 kross_PORT=		lang/kf5-kross
 kross_LIB=		libKF5KrossCore.so
@@ -583,6 +586,9 @@ unitconversion_LIB=	libKF5UnitConversion.so
 
 wallet_PORT=		sysutils/kf5-kwallet
 wallet_LIB=		libKF5Wallet.so
+
+wayland_PORT=		x11/kf5-kwayland
+wayland_LIB=		libKF5WaylandClient.so
 
 widgetsaddons_PORT=	x11-toolkits/kf5-kwidgetsaddons
 widgetsaddons_LIB=	libKF5WidgetsAddons.so

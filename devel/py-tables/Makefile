@@ -1,9 +1,9 @@
 # Created by: ijliao@FreeBSD.org
-# $FreeBSD: head/devel/py-tables/Makefile 428057 2016-12-07 13:24:56Z gerald $
+# $FreeBSD: head/devel/py-tables/Makefile 434075 2017-02-14 10:52:20Z demon $
 
 PORTNAME=	tables
 PORTVERSION=	3.2.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -22,7 +22,7 @@ LIB_DEPENDS=	libhdf5.so:science/hdf5 \
 RUN_DEPENDS:=	${BUILD_DEPENDS}
 
 USES=		fortran python
-USE_PYTHON=	autoplist distutils
+USE_PYTHON=	autoplist concurrent distutils
 
 PORTEXAMPLES=	*
 

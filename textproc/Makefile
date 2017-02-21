@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/Makefile 432336 2017-01-24 12:56:45Z tz $
+# $FreeBSD: head/textproc/Makefile 434391 2017-02-18 22:28:49Z antoine $
 #
 
     COMMENT = Text processing utilities (does not include desktop publishing)
@@ -80,7 +80,6 @@
     SUBDIR += cl-ppcre-sbcl
     SUBDIR += clit
     SUBDIR += clucene
-    SUBDIR += clucene-qt4
     SUBDIR += cmark
     SUBDIR += coccigrep
     SUBDIR += code2html
@@ -460,6 +459,7 @@
     SUBDIR += lttoolbox
     SUBDIR += ltxml
     SUBDIR += luaexpat
+    SUBDIR += luaexpat-51
     SUBDIR += lucene
     SUBDIR += lucene4
     SUBDIR += lucene5
@@ -1271,6 +1271,7 @@
     SUBDIR += py-libxml2
     SUBDIR += py-libxslt
     SUBDIR += py-ltxml
+    SUBDIR += py-m2r
     SUBDIR += py-mako
     SUBDIR += py-markdown
     SUBDIR += py-markdown2
@@ -1324,6 +1325,7 @@
     SUBDIR += py-sphinx_wikipedia
     SUBDIR += py-sphinxcontrib-adadomain
     SUBDIR += py-sphinxcontrib-bitbucket
+    SUBDIR += py-sphinxcontrib-fulltoc
     SUBDIR += py-sphinxcontrib-httpdomain
     SUBDIR += py-sphinxcontrib-programoutput
     SUBDIR += py-syck
@@ -1366,6 +1368,7 @@
     SUBDIR += qprint
     SUBDIR += qrcodegen
     SUBDIR += qstardict
+    SUBDIR += qt4-clucene
     SUBDIR += qt4-xml
     SUBDIR += qt4-xmlpatterns
     SUBDIR += qt4-xmlpatterns-tool
@@ -1407,18 +1410,12 @@
     SUBDIR += ruby-deplate
     SUBDIR += ruby-escape
     SUBDIR += ruby-format
-    SUBDIR += ruby-htmlrepair
-    SUBDIR += ruby-htmlsplit
     SUBDIR += ruby-htree
     SUBDIR += ruby-rd-mode.el
     SUBDIR += ruby-rdtool
-    SUBDIR += ruby-rss
-    SUBDIR += ruby-rss.alt
     SUBDIR += ruby-rttool
     SUBDIR += ruby-sary
-    SUBDIR += ruby-xml-configfile
     SUBDIR += ruby-xmlparser
-    SUBDIR += ruby-xmlscan
     SUBDIR += rubygem-actionpack-xml_parser
     SUBDIR += rubygem-actionpack-xml_parser1
     SUBDIR += rubygem-albino
@@ -1514,6 +1511,7 @@
     SUBDIR += rubygem-ri_cal
     SUBDIR += rubygem-rich
     SUBDIR += rubygem-rmmseg-cpp
+    SUBDIR += rubygem-ronn
     SUBDIR += rubygem-rouge
     SUBDIR += rubygem-rouge1
     SUBDIR += rubygem-rttool

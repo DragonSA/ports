@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/ada.mk 415931 2016-05-27 09:54:47Z marino $
+# $FreeBSD: head/Mk/Uses/ada.mk 434195 2017-02-15 21:33:11Z rene $
 #
 # Establish Ada-capable compiler as a build dependency
 # To change default compiler, define ADA_DEFAULT in make.conf to 5
@@ -7,7 +7,7 @@
 # Usage:        USES=ada
 # Valid ARGS:   5, 6, run
 #
-# MAINTAINER: marino@FreeBSD.org
+# MAINTAINER: freebsd.contact@marino.st
 
 .if !defined(_INCLUDE_USES_ADA_MK)
 _INCLUDE_USES_ADA_MK=    yes

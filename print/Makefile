@@ -1,4 +1,4 @@
-# $FreeBSD: head/print/Makefile 430144 2016-12-31 17:25:05Z rene $
+# $FreeBSD: head/print/Makefile 433942 2017-02-12 13:50:25Z olivierd $
 #
 
     COMMENT = Desktop publishing
@@ -197,6 +197,7 @@
     SUBDIR += py-preppy
     SUBDIR += py-pycups
     SUBDIR += py-pyscript
+    SUBDIR += py-python-ly
     SUBDIR += py-qt5-printsupport
     SUBDIR += py-relatorio
     SUBDIR += py-reportlab

@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/bsd.wx.mk 411970 2016-03-27 01:23:25Z bapt $
+# $FreeBSD: head/Mk/bsd.wx.mk 433963 2017-02-12 20:39:55Z rene $
 #
 # bsd.wx.mk - Support for wxWidgets based ports.
 #
@@ -91,7 +91,7 @@
 #	USE_WX_NOT=	2.8
 #
 
-WX_Include_MAINTAINER=	alepulver@FreeBSD.org
+WX_Include_MAINTAINER=	ports@FreeBSD.org
 
 #
 # Global definitions.

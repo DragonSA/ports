@@ -1,5 +1,5 @@
 # Created by: mat
-# $FreeBSD: head/lang/perl5.24/Makefile 431796 2017-01-18 13:20:31Z tijl $
+# $FreeBSD: head/lang/perl5.24/Makefile 432911 2017-01-31 11:32:22Z mat $
 
 PORTNAME=	perl
 DISTVERSION=	${PERL_VERSION}
@@ -15,6 +15,10 @@ LICENSE=	ART10 GPLv1
 LICENSE_COMB=	dual
 LICENSE_FILE_ART10=	${WRKSRC}/Artistic
 LICENSE_FILE_GPLv1=	${WRKSRC}/Copying
+
+# Uncomment when the default Perl is switched to 5.26
+#DEPRECATED=	Support end three years after .0 release, please upgrade to a more recent version of Perl
+#EXPIRATION_DATE=2019-05-09
 
 TEST_TARGET=	test_harness
 TEST_ENV=	${MAKE_ENV} TEST_JOBS=${MAKE_JOBS_NUMBER} \

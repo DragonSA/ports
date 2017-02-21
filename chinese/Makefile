@@ -1,4 +1,4 @@
-# $FreeBSD: head/chinese/Makefile 428730 2016-12-17 12:53:14Z sunpoet $
+# $FreeBSD: head/chinese/Makefile 433978 2017-02-13 07:17:41Z kevlo $
 #
 
     COMMENT = Chinese support
@@ -72,7 +72,6 @@
     SUBDIR += lunar
     SUBDIR += moettf
     SUBDIR += muni
-    SUBDIR += mutt
     SUBDIR += oicq
     SUBDIR += opencc
     SUBDIR += opendesktop-fonts

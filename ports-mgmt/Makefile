@@ -1,4 +1,4 @@
-# $FreeBSD: head/ports-mgmt/Makefile 425111 2016-11-02 05:43:53Z swills $
+# $FreeBSD: head/ports-mgmt/Makefile 432868 2017-01-30 21:07:01Z pawel $
 #
 
     COMMENT = Ports for managing, installing, and developing FreeBSD ports and packages
@@ -52,6 +52,7 @@
     SUBDIR += portlint
     SUBDIR += portmaster
     SUBDIR += portrac
+    SUBDIR += ports-tools
     SUBDIR += portscout
     SUBDIR += portsearch
     SUBDIR += portshaker

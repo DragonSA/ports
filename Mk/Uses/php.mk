@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/php.mk 432321 2017-01-24 11:31:30Z tz $
+# $FreeBSD: head/Mk/Uses/php.mk 434414 2017-02-19 20:25:58Z sunpoet $
 #
 # Support for PHP-based ports.
 #
@@ -139,6 +139,7 @@ PHP_EXT_INC?=	""
 .  if defined(IGNORE_WITH_PHP)
 .    for VER in ${IGNORE_WITH_PHP}
 .      if ${PHP_VER} == "${VER}"
+_IGNORE_PHP_SET=
 IGNORE=		cannot be installed: doesn't work with lang/php${PHP_VER} port\
 		(doesn't support PHP ${IGNORE_WITH_PHP:C/^([57])/\1./})
 .      endif
@@ -292,7 +293,7 @@ add-plist-phpext:
 _USE_PHP_ALL=	bcmath bitset bz2 calendar ctype curl dba dom \
 		enchant exif fileinfo filter ftp gd gettext gmp \
 		hash iconv igbinary imap interbase intl json ldap mbstring mcrypt \
-		memcache mysqli odbc opcache \
+		memcache memcached mysqli odbc opcache \
 		openssl pcntl pcre pdf pdo pdo_dblib pdo_firebird pdo_mysql \
 		pdo_odbc pdo_pgsql pdo_sqlite phar pgsql posix \
 		pspell radius readline recode redis session shmop simplexml snmp soap\
@@ -338,7 +339,16 @@ json_DEPENDS=	devel/php${PHP_VER}-json
 ldap_DEPENDS=	net/php${PHP_VER}-ldap
 mbstring_DEPENDS=	converters/php${PHP_VER}-mbstring
 mcrypt_DEPENDS=	security/php${PHP_VER}-mcrypt
+.    if ${PHP_VER} >= 70
+memcache_DEPENDS=	databases/php${PHP_VER}-memcache
+.    else
 memcache_DEPENDS=	databases/pecl-memcache
+.    endif
+.    if ${PHP_VER} >= 70
+memcached_DEPENDS=	databases/pecl-memcached
+.    else
+memcached_DEPENDS=	databases/pecl-memcached2
+.    endif
 mssql_DEPENDS=	databases/php${PHP_VER}-mssql
 mysql_DEPENDS=	databases/php${PHP_VER}-mysql
 mysqli_DEPENDS=	databases/php${PHP_VER}-mysqli
@@ -363,7 +373,7 @@ pspell_DEPENDS=	textproc/php${PHP_VER}-pspell
 radius_DEPENDS=	net/pecl-radius
 readline_DEPENDS=	devel/php${PHP_VER}-readline
 recode_DEPENDS=	converters/php${PHP_VER}-recode
-redis_DEPENDS=	databases/php${PHP_VER}-redis
+redis_DEPENDS=	databases/pecl-redis
 session_DEPENDS=www/php${PHP_VER}-session
 shmop_DEPENDS=	devel/php${PHP_VER}-shmop
 simplexml_DEPENDS=	textproc/php${PHP_VER}-simplexml
@@ -398,7 +408,7 @@ BUILD_DEPENDS+=	${PHPBASE}/lib/php/${PHP_EXT_DIR}/${extension:S/:build//}.so:${$
 RUN_DEPENDS+=	${PHPBASE}/lib/php/${PHP_EXT_DIR}/${extension:S/:build//}.so:${${extension:S/:build//}_DEPENDS}
 .        endif
 .      else
-.        if ${ext:tl} != "yes"
+.        if ${ext:tl} != "yes" && !defined(_IGNORE_PHP_SET)
 check-makevars::
 			@${ECHO_CMD} "Unknown extension ${extension:S/:build//} for PHP ${PHP_VER}."
 			@${FALSE}

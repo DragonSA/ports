@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/alias.mk 420670 2016-08-23 12:33:13Z marino $
+# $FreeBSD: head/Mk/Uses/alias.mk 434195 2017-02-15 21:33:11Z rene $
 #
 # Add __FreeBSD__ definition to CFLAGS
 # Used by DPorts when masquerading as FreeBSD allows port to build without
@@ -8,7 +8,7 @@
 # Usage:        USES=alias or USES=alias:ARGS
 # Valid ARGS:   9 (default), 10, 11
 #
-# MAINTAINER:	marino@FreeBSD.org
+# MAINTAINER:	freebsd.contact@marino.st
 
 .if !defined(_INCLUDE_USES_ALIAS_MK)
 _INCLUDE_USES_ALIAS_MK=    yes

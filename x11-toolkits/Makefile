@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11-toolkits/Makefile 431189 2017-01-11 15:45:03Z swills $
+# $FreeBSD: head/x11-toolkits/Makefile 434381 2017-02-18 19:56:12Z tcberner $
 #
 
     COMMENT = X11 toolkits
@@ -94,6 +94,7 @@
     SUBDIR += kf5-kwidgetsaddons
     SUBDIR += kf5-kxmlgui
     SUBDIR += kirigami
+    SUBDIR += kirigami2
     SUBDIR += lesstif
     SUBDIR += libXaw
     SUBDIR += libXmu
@@ -230,12 +231,16 @@
     SUBDIR += qt4pas
     SUBDIR += qt5-canvas3d
     SUBDIR += qt5-charts
+    SUBDIR += qt5-datavis3d
     SUBDIR += qt5-declarative
+    SUBDIR += qt5-declarative-render2d
+    SUBDIR += qt5-gamepad
     SUBDIR += qt5-gui
     SUBDIR += qt5-quick
     SUBDIR += qt5-quickcontrols
     SUBDIR += qt5-quickcontrols2
     SUBDIR += qt5-uiplugin
+    SUBDIR += qt5-virtualkeyboard
     SUBDIR += qt5-widgets
     SUBDIR += qtermwidget
     SUBDIR += qwt5
@@ -282,6 +287,7 @@
     SUBDIR += vte290
     SUBDIR += vte3
     SUBDIR += vtkfox
+    SUBDIR += wlc
     SUBDIR += wmapp
     SUBDIR += wxgtk28
     SUBDIR += wxgtk28-common

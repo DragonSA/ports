@@ -1,4 +1,4 @@
-# $FreeBSD: head/misc/Makefile 432336 2017-01-24 12:56:45Z tz $
+# $FreeBSD: head/misc/Makefile 434380 2017-02-18 19:48:05Z tcberner $
 #
 
     COMMENT = Miscellaneous utilities
@@ -404,6 +404,7 @@
     SUBDIR += qt5-examples
     SUBDIR += qt5-l10n
     SUBDIR += qt5ct
+    SUBDIR += qtchooser
     SUBDIR += raspberrypi-userland
     SUBDIR += raspbsd-led
     SUBDIR += ree
@@ -453,7 +454,6 @@
     SUBDIR += termatrix
     SUBDIR += terraform
     SUBDIR += teseq
-    SUBDIR += teslams
     SUBDIR += timediff
     SUBDIR += tkcron
     SUBDIR += tkinfo

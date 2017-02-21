@@ -1,4 +1,4 @@
-# $FreeBSD: head/net-mgmt/Makefile 432336 2017-01-24 12:56:45Z tz $
+# $FreeBSD: head/net-mgmt/Makefile 433737 2017-02-09 15:00:42Z brd $
 #
 
     COMMENT = Network management tools
@@ -87,6 +87,7 @@
     SUBDIR += icmpmonitor
     SUBDIR += icmpquery
     SUBDIR += iftop
+    SUBDIR += intel-snap
     SUBDIR += iog
     SUBDIR += ipacctd
     SUBDIR += ipaudit
@@ -157,6 +158,7 @@
     SUBDIR += nedi
     SUBDIR += nefu
     SUBDIR += net-snmp
+    SUBDIR += netdata
     SUBDIR += netdisco
     SUBDIR += netdisco-mibs
     SUBDIR += netdot
@@ -173,6 +175,7 @@
     SUBDIR += netspoc
     SUBDIR += netustad
     SUBDIR += netwag
+    SUBDIR += networkmgr
     SUBDIR += netwox
     SUBDIR += netxms
     SUBDIR += nfdump

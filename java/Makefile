@@ -1,4 +1,4 @@
-# $FreeBSD: head/java/Makefile 431140 2017-01-10 22:59:58Z olgeni $
+# $FreeBSD: head/java/Makefile 433585 2017-02-07 20:15:56Z rene $
 #
 
     COMMENT = Java language support
@@ -65,9 +65,6 @@
     SUBDIR += javamail
     SUBDIR += javavmwrapper
     SUBDIR += jaxen
-    SUBDIR += jboss7
-    SUBDIR += jboss71
-    SUBDIR += jboss72
     SUBDIR += jcalendar
     SUBDIR += jcckit
     SUBDIR += jcommon

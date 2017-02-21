@@ -18,10 +18,10 @@
 #
 
 #
-# $FreeBSD: head/Mk/bsd.sdl.mk 411970 2016-03-27 01:23:25Z bapt $
+# $FreeBSD: head/Mk/bsd.sdl.mk 433963 2017-02-12 20:39:55Z rene $
 #
 
-SDL_Include_MAINTAINER=		mva@FreeBSD.org
+SDL_Include_MAINTAINER=		ports@FreeBSD.org
 
 #
 # These are the current supported SDL1.2 modules

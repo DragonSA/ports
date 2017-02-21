@@ -1,11 +1,11 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: head/devel/gnatcoll/Makefile 416739 2016-06-11 18:41:54Z marino $
+# $FreeBSD: head/devel/gnatcoll/Makefile 434195 2017-02-15 21:33:11Z rene $
 
 PORTNAME=	gnatcoll
 PORTVERSION=	2016	# branch: gpl-for-gps-2016
 CATEGORIES=	devel
 
-MAINTAINER=	marino@FreeBSD.org
+MAINTAINER=	freebsd.contact@marino.st
 COMMENT=	GNAT Component Collection from Adacore
 
 LICENSE=	GPLv3

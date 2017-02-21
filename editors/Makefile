@@ -1,4 +1,4 @@
-# $FreeBSD: head/editors/Makefile 430266 2017-01-01 17:54:02Z jkim $
+# $FreeBSD: head/editors/Makefile 432633 2017-01-28 16:29:20Z joerg $
 #
 
     COMMENT = Editors
@@ -14,6 +14,7 @@
     SUBDIR += biew
     SUBDIR += bitedit
     SUBDIR += boiling-egg
+    SUBDIR += bpatch
     SUBDIR += bvi
     SUBDIR += calligra
     SUBDIR += calligra-l10n

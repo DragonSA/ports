@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11/Makefile 432395 2017-01-24 21:49:05Z olivierd $
+# $FreeBSD: head/x11/Makefile 432934 2017-01-31 16:29:42Z danfe $
 #
 
     COMMENT = Ports to support the X window system
@@ -101,6 +101,7 @@
     SUBDIR += hs-X11
     SUBDIR += hs-X11-xft
     SUBDIR += hs-xmobar
+    SUBDIR += hsetroot
     SUBDIR += i3lock
     SUBDIR += i3status
     SUBDIR += iceauth
@@ -132,6 +133,7 @@
     SUBDIR += kf5-kglobalaccel
     SUBDIR += kf5-kinit
     SUBDIR += kf5-krunner
+    SUBDIR += kf5-kwayland
     SUBDIR += kf5-kwindowsystem
     SUBDIR += kf5-plasma-framework
     SUBDIR += kgamma
@@ -178,11 +180,13 @@
     SUBDIR += libgnome-reference
     SUBDIR += libgnomekbd
     SUBDIR += libgnomemm26
+    SUBDIR += libinput
     SUBDIR += libkonq
     SUBDIR += libmatekbd
     SUBDIR += liboldX
     SUBDIR += libsx
     SUBDIR += libsynaptics
+    SUBDIR += libwacom
     SUBDIR += libxcb
     SUBDIR += libxdg-basedir
     SUBDIR += libxfce4menu
@@ -275,7 +279,6 @@
     SUBDIR += roxterm
     SUBDIR += rsibreak-kde4
     SUBDIR += rstart
-    SUBDIR += ruby-X11
     SUBDIR += rubygem-gnome2
     SUBDIR += rxvt
     SUBDIR += rxvt-unicode

@@ -1,4 +1,4 @@
-# $FreeBSD: head/lang/Makefile 432337 2017-01-24 13:47:48Z tz $
+# $FreeBSD: head/lang/Makefile 434138 2017-02-14 20:27:25Z rene $
 #
 
     COMMENT = Programming languages
@@ -110,6 +110,9 @@
     SUBDIR += ghc
     SUBDIR += gjs
     SUBDIR += gnat_util
+    SUBDIR += gnatcross-aarch64
+    SUBDIR += gnatcross-binutils-aarch64
+    SUBDIR += gnatcross-sysroot-aarch64
     SUBDIR += gnatdroid-armv7
     SUBDIR += gnatdroid-binutils
     SUBDIR += gnatdroid-binutils-x86
@@ -153,7 +156,6 @@
     SUBDIR += lci
     SUBDIR += lfe
     SUBDIR += libhx
-    SUBDIR += libjit
     SUBDIR += libobjc2
     SUBDIR += librep
     SUBDIR += libstdc++_stldoc_4.2.2
@@ -262,6 +264,7 @@
     SUBDIR += ptoc
     SUBDIR += pure
     SUBDIR += py-clojure
+    SUBDIR += py-hy
     SUBDIR += py-mx-base
     SUBDIR += py-prolog
     SUBDIR += py-qt5-qml

@@ -1,4 +1,4 @@
-# $FreeBSD: head/GIDs 431474 2017-01-14 16:25:23Z novel $
+# $FreeBSD: head/GIDs 434012 2017-02-13 18:05:34Z krion $
 # Please keep this file sorted by GID!
 # Please pick an empty slot when available and also consider base values from
 # /usr/src/etc/group
@@ -106,7 +106,7 @@ solr:*:161:
 octoprint:*:162:
 _iked:*:163:
 lightdm:*:164:
-# free: 165
+uwsgi:*:165:
 # free: 166
 # free: 167
 # free: 168
@@ -243,7 +243,7 @@ ntopng:*:288:
 # free: 299
 backuppc:*:300:
 # free: 301
-# free: 302
+netdata:*:302:
 # free: 303
 # free: 304
 # free: 305
@@ -790,7 +790,7 @@ subsonic:*:844:
 sogod:*:846:
 domoticz:*:847:
 graylog:*:848:
-# free: 849
+chronyd:*:849:
 # free: 850
 # free: 851
 # free: 852

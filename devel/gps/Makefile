@@ -1,5 +1,5 @@
 # Created by: John Marino <marino@FreeBSD.org>
-# $FreeBSD: head/devel/gps/Makefile 424411 2016-10-21 12:51:40Z mat $
+# $FreeBSD: head/devel/gps/Makefile 434195 2017-02-15 21:33:11Z rene $
 
 PORTNAME=	gps
 PORTVERSION=	2016
@@ -9,7 +9,7 @@ MASTER_SITES=	http://downloads.dragonlace.net/src/
 DISTNAME=	gps-gpl-${PORTVERSION}-src
 PKGNAMESUFFIX=	-ide
 
-MAINTAINER=	marino@FreeBSD.org
+MAINTAINER=	freebsd.contact@marino.st
 COMMENT=	GNAT Programming Studio - IDE for Ada and many other languages
 
 LICENSE=	GPLv3

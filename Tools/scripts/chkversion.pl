@@ -28,9 +28,9 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 # THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# $FreeBSD: head/Tools/scripts/chkversion.pl 358817 2014-06-22 17:53:44Z adamw $
+# $FreeBSD: head/Tools/scripts/chkversion.pl 433964 2017-02-12 20:43:04Z rene $
 #
-# MAINTAINER=   erwin@FreeBSD.org
+# MAINTAINER=   portmgr@FreeBSD.org
 #
 # PORTVERSION and PKGORIGIN auditing script
 #
@@ -127,7 +127,6 @@ foreach (qw(ARCH OPSYS OSREL OSVERSION UID)) {
     my @cachedenv = readfrom $portsdir, $make, "-V$_";
     $ENV{$_} = $cachedenv[0];
 }
-$ENV{WITH_OPENSSL_BASE} = 'yes';
 
 my %pkgname;
 my %pkgorigin;

@@ -1,4 +1,4 @@
-# $FreeBSD: head/biology/Makefile 428942 2016-12-19 15:54:39Z sunpoet $
+# $FreeBSD: head/biology/Makefile 433348 2017-02-05 04:26:56Z sunpoet $
 #
 
     COMMENT = Biology
@@ -88,6 +88,7 @@
     SUBDIR += python-nexus
     SUBDIR += recombine
     SUBDIR += ruby-bio
+    SUBDIR += rubygem-bio
     SUBDIR += samtools
     SUBDIR += seaview
     SUBDIR += seqan

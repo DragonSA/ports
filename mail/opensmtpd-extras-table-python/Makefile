@@ -1,8 +1,8 @@
 # Created by: gahr
-# $FreeBSD: head/mail/opensmtpd-extras-table-python/Makefile 417124 2016-06-19 15:51:49Z fluffy $
+# $FreeBSD: head/mail/opensmtpd-extras-table-python/Makefile 434427 2017-02-20 02:57:04Z jbeich $
 
 PKGNAMESUFFIX=	-table-python
-PORTREVISION=	0
+PORTREVISION=	2
 
 COMMENT=	Python table support for OpenSMTPD
 

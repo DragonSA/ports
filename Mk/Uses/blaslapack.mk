@@ -1,10 +1,10 @@
-# $FreeBSD: head/Mk/Uses/blaslapack.mk 411970 2016-03-27 01:23:25Z bapt $
+# $FreeBSD: head/Mk/Uses/blaslapack.mk 434263 2017-02-17 03:10:55Z jbeich $
 #
 # Handle dependencies on Blas / Lapack
 #
 # Feature:	blaslapack
 # Usage:	USES=blaslapack or USES=blaslapack:ARGS
-# Valid ARGS:	atlas netlib gotoblas openblas (default)
+# Valid ARGS:	atlas gotoblas netlib (default) openblas
 #
 # Provides:	BLASLIB and LAPACKLIB
 #

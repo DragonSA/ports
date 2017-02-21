@@ -1,4 +1,4 @@
-# $FreeBSD: head/math/Makefile 432389 2017-01-24 21:01:25Z marino $
+# $FreeBSD: head/math/Makefile 433665 2017-02-08 18:52:24Z rene $
 #
 
     COMMENT = Mathematics
@@ -22,7 +22,6 @@
     SUBDIR += R-cran-RcppEigen
     SUBDIR += R-cran-Rmpfr
     SUBDIR += R-cran-SparseM
-    SUBDIR += R-cran-SuppDists
     SUBDIR += R-cran-VGAM
     SUBDIR += R-cran-Zelig
     SUBDIR += R-cran-assertthat
@@ -259,6 +258,7 @@
     SUBDIR += librsb
     SUBDIR += libtommath
     SUBDIR += libtsnnls
+    SUBDIR += libxls
     SUBDIR += linpack
     SUBDIR += lll_spect
     SUBDIR += lp_solve
@@ -654,7 +654,6 @@
     SUBDIR += rpcalc
     SUBDIR += rpy
     SUBDIR += rpy2
-    SUBDIR += ruby-algebra
     SUBDIR += rubygem-algebra
     SUBDIR += rubygem-expression_parser
     SUBDIR += rubygem-fftw3
@@ -666,6 +665,7 @@
     SUBDIR += saga
     SUBDIR += sage
     SUBDIR += sc
+    SUBDIR += sc-im
     SUBDIR += scalapack
     SUBDIR += scilab
     SUBDIR += scilab-toolbox-sivp

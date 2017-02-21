@@ -1,4 +1,4 @@
-# $FreeBSD: head/converters/Makefile 432336 2017-01-24 12:56:45Z tz $
+# $FreeBSD: head/converters/Makefile 432620 2017-01-28 11:18:44Z rene $
 #
 
     COMMENT = Character code converters
@@ -157,7 +157,6 @@
     SUBDIR += py-zfec
     SUBDIR += rcctools
     SUBDIR += recode
-    SUBDIR += ruby-dump.rb
     SUBDIR += rubygem-base32
     SUBDIR += rubygem-bsdconv
     SUBDIR += shftool

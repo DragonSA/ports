@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/Makefile 432336 2017-01-24 12:56:45Z tz $
+# $FreeBSD: head/www/Makefile 434469 2017-02-20 15:16:06Z sunpoet $
 #
 
     COMMENT = Ports related to the World Wide Web
@@ -56,6 +56,7 @@
     SUBDIR += bolt
     SUBDIR += bookmarkbridge
     SUBDIR += bozohttpd
+    SUBDIR += butterfly
     SUBDIR += c-icap
     SUBDIR += c-icap-modules
     SUBDIR += cadaver
@@ -207,6 +208,8 @@
     SUBDIR += glpi
     SUBDIR += gnome-user-share
     SUBDIR += gnome-web-photo
+    SUBDIR += go-fasthttp
+    SUBDIR += go-www
     SUBDIR += gohugo
     SUBDIR += google-appengine
     SUBDIR += google-sitemapgen
@@ -218,6 +221,7 @@
     SUBDIR += grafana
     SUBDIR += grafana2
     SUBDIR += grafana3
+    SUBDIR += grafana4
     SUBDIR += grails
     SUBDIR += graylog-web-interface
     SUBDIR += gregarius
@@ -409,6 +413,7 @@
     SUBDIR += mini_httpd
     SUBDIR += miniminiweb
     SUBDIR += minio
+    SUBDIR += minio-client
     SUBDIR += mitmproxy
     SUBDIR += mkapachepw
     SUBDIR += mknmz-wwwoffle
@@ -481,6 +486,7 @@
     SUBDIR += mod_perl2
     SUBDIR += mod_php56
     SUBDIR += mod_php70
+    SUBDIR += mod_php71
     SUBDIR += mod_proctitle
     SUBDIR += mod_proxy_html
     SUBDIR += mod_proxy_uwsgi
@@ -1451,6 +1457,7 @@
     SUBDIR += pecl-swish
     SUBDIR += pecl-twig
     SUBDIR += pecl-yaf
+    SUBDIR += pecl-yaf2
     SUBDIR += pecl-yar
     SUBDIR += perlbal
     SUBDIR += pglogd
@@ -1682,6 +1689,7 @@
     SUBDIR += py-jonpy
     SUBDIR += py-jswebkit
     SUBDIR += py-kallithea
+    SUBDIR += py-libsass
     SUBDIR += py-mechanize
     SUBDIR += py-meld
     SUBDIR += py-meld3
@@ -1864,6 +1872,8 @@
     SUBDIR += pyweblib
     SUBDIR += qdecoder
     SUBDIR += qooxdoo
+    SUBDIR += qt4-webkit
+    SUBDIR += qt5-webkit
     SUBDIR += qt5-webchannel
     SUBDIR += qt5-websockets
     SUBDIR += quickie
@@ -1901,12 +1911,10 @@
     SUBDIR += rssroll
     SUBDIR += rsstail
     SUBDIR += rsstool
-    SUBDIR += rt40
     SUBDIR += rt42
     SUBDIR += rt44
     SUBDIR += rtv
     SUBDIR += ruby-aws
-    SUBDIR += ruby-google
     SUBDIR += rubygem-ace-rails-ap
     SUBDIR += rubygem-actioncable5
     SUBDIR += rubygem-actionpack4
@@ -1997,6 +2005,9 @@
     SUBDIR += rubygem-jsobfu
     SUBDIR += rubygem-jwt
     SUBDIR += rubygem-kaminari
+    SUBDIR += rubygem-kaminari-actionview
+    SUBDIR += rubygem-kaminari-activerecord
+    SUBDIR += rubygem-kaminari-core
     SUBDIR += rubygem-kaminari-rails4
     SUBDIR += rubygem-kensa
     SUBDIR += rubygem-layout_yullio_generator
@@ -2183,7 +2194,6 @@
     SUBDIR += tidy-lib
     SUBDIR += tikiwiki
     SUBDIR += tinymce
-    SUBDIR += tinymce3
     SUBDIR += tinyproxy
     SUBDIR += tinytinyhttpd
     SUBDIR += tivoka
@@ -2332,8 +2342,6 @@
     SUBDIR += webinject
     SUBDIR += webkit-gtk2
     SUBDIR += webkit-gtk3
-    SUBDIR += webkit-qt4
-    SUBDIR += webkit-qt5
     SUBDIR += webkit-sharp
     SUBDIR += webkit2-gtk3
     SUBDIR += weblint

@@ -1,4 +1,4 @@
-# $FreeBSD: head/archivers/Makefile 432336 2017-01-24 12:56:45Z tz $
+# $FreeBSD: head/archivers/Makefile 434468 2017-02-20 15:15:48Z sunpoet $
 #
 
     COMMENT = Archivers
@@ -22,6 +22,7 @@
     SUBDIR += dzip
     SUBDIR += ecm
     SUBDIR += engrampa
+    SUBDIR += erlang-snappy
     SUBDIR += fastjar
     SUBDIR += file-roller
     SUBDIR += fpc-bzip2
@@ -31,6 +32,7 @@
     SUBDIR += gcab
     SUBDIR += gcpio
     SUBDIR += gnome-autoar
+    SUBDIR += go-compress
     SUBDIR += grzip
     SUBDIR += gtar
     SUBDIR += gzip
@@ -187,10 +189,10 @@
     SUBDIR += rox-archive
     SUBDIR += rpm2cpio
     SUBDIR += rpm4
-    SUBDIR += ruby-lha
     SUBDIR += rubygem-archive-tar-minitar
     SUBDIR += rubygem-archive-zip
     SUBDIR += rubygem-bzip2-ruby
+    SUBDIR += rubygem-fpm
     SUBDIR += rubygem-libarchive
     SUBDIR += rubygem-minitar
     SUBDIR += rubygem-ruby-xz

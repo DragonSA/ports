@@ -1,4 +1,4 @@
-# $FreeBSD: head/editors/libreoffice4/Makefile 431796 2017-01-18 13:20:31Z tijl $
+# $FreeBSD: head/editors/libreoffice4/Makefile 433666 2017-02-08 19:13:39Z jkim $
 
 PORTNAME=	libreoffice
 PORTVERSION=	4.3.7
@@ -77,6 +77,9 @@ RUN_DEPENDS=	${LOCALBASE}/share/fonts/Caladea/Caladea-Bold.ttf:x11-fonts/crosext
 		${LOCALBASE}/share/fonts/GentiumBasic/GenBasI.ttf:x11-fonts/gentium-basic \
 		${LOCALBASE}/share/fonts/Liberation/LiberationMono-Bold.ttf:x11-fonts/liberation-fonts-ttf \
 		${LOCALBASE}/share/fonts/LinLibertineG/LinLibertine_DR_G.ttf:x11-fonts/linuxlibertine-g
+
+DEPRECATED=	Deprecated by upstream
+EXPIRATION_DATE=	2017-03-31
 
 CONFLICTS_INSTALL=	libreoffice-5.*
 ONLY_FOR_ARCHS=	amd64 i386

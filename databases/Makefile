@@ -1,4 +1,4 @@
-# $FreeBSD: head/databases/Makefile 432364 2017-01-24 17:41:14Z sunpoet $
+# $FreeBSD: head/databases/Makefile 434314 2017-02-17 20:49:22Z pi $
 #
 
     COMMENT = Databases and related software
@@ -428,6 +428,7 @@
     SUBDIR += p5-Data-Page
     SUBDIR += p5-Data-Pageset
     SUBDIR += p5-Exception-Class-DBI
+    SUBDIR += p5-File-Locate
     SUBDIR += p5-GDBM
     SUBDIR += p5-Genezzo
     SUBDIR += p5-GitDDL
@@ -547,9 +548,11 @@
     SUBDIR += pecl-leveldb
     SUBDIR += pecl-memcache
     SUBDIR += pecl-memcached
+    SUBDIR += pecl-memcached2
     SUBDIR += pecl-mongo
     SUBDIR += pecl-mongodb
     SUBDIR += pecl-pdo_user
+    SUBDIR += pecl-redis
     SUBDIR += pecl-rrd
     SUBDIR += pecl-tokyo_tyrant
     SUBDIR += percona-pam-for-mysql
@@ -613,7 +616,6 @@
     SUBDIR += php56-pdo_pgsql
     SUBDIR += php56-pdo_sqlite
     SUBDIR += php56-pgsql
-    SUBDIR += php56-redis
     SUBDIR += php56-sqlite3
     SUBDIR += php56-sybase_ct
     SUBDIR += php70-dba
@@ -630,7 +632,6 @@
     SUBDIR += php70-pdo_pgsql
     SUBDIR += php70-pdo_sqlite
     SUBDIR += php70-pgsql
-    SUBDIR += php70-redis
     SUBDIR += php70-sqlite3
     SUBDIR += php71-dba
     SUBDIR += php71-interbase
@@ -862,14 +863,10 @@
     SUBDIR += rrdtool
     SUBDIR += rrdtool12
     SUBDIR += ruby-bdb
-    SUBDIR += ruby-cdb
     SUBDIR += ruby-gdbm
     SUBDIR += ruby-mysql
-    SUBDIR += ruby-o_dbm
     SUBDIR += ruby-odbc
     SUBDIR += ruby-qdbm
-    SUBDIR += ruby-rdbc1
-    SUBDIR += ruby-sybct
     SUBDIR += ruby-tokyocabinet
     SUBDIR += rubygem-activemodel4
     SUBDIR += rubygem-activemodel5
@@ -883,8 +880,6 @@
     SUBDIR += rubygem-amalgalite
     SUBDIR += rubygem-arel
     SUBDIR += rubygem-arel-helpers
-    SUBDIR += rubygem-arel3
-    SUBDIR += rubygem-arel5
     SUBDIR += rubygem-arel6
     SUBDIR += rubygem-awesome_nested_set
     SUBDIR += rubygem-bdb1

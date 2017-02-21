@@ -1,4 +1,4 @@
-# $FreeBSD: head/sysutils/Makefile 432336 2017-01-24 12:56:45Z tz $
+# $FreeBSD: head/sysutils/Makefile 434496 2017-02-21 01:27:07Z girgen $
 #
 
     COMMENT = System utilities
@@ -91,6 +91,7 @@
     SUBDIR += bchunk
     SUBDIR += beadm
     SUBDIR += beadm-devel
+    SUBDIR += beats 
     SUBDIR += bhyve-firmware
     SUBDIR += bhyve-rc
     SUBDIR += biosfont
@@ -289,7 +290,6 @@
     SUBDIR += fetchlog
     SUBDIR += ffs2recov
     SUBDIR += file
-    SUBDIR += filebeat
     SUBDIR += filedupe
     SUBDIR += filelight-kde4
     SUBDIR += fileprune
@@ -323,6 +323,7 @@
     SUBDIR += froxlor
     SUBDIR += fsbackup
     SUBDIR += fsc
+    SUBDIR += fsearch
     SUBDIR += fstyp
     SUBDIR += fswatch-mon
     SUBDIR += ftwin
@@ -554,6 +555,8 @@
     SUBDIR += lr
     SUBDIR += lsof
     SUBDIR += ltrace
+    SUBDIR += lttng-tools
+    SUBDIR += lttng-ust
     SUBDIR += luckybackup
     SUBDIR += lxinput
     SUBDIR += lxsplit
@@ -598,7 +601,6 @@
     SUBDIR += memtest86
     SUBDIR += memtest86+
     SUBDIR += metalog
-    SUBDIR += metricbeat
     SUBDIR += mfid
     SUBDIR += mgeupsd
     SUBDIR += minimunin
@@ -642,6 +644,7 @@
     SUBDIR += mtxorbd
     SUBDIR += multitail
     SUBDIR += munin-common
+    SUBDIR += munin-contrib
     SUBDIR += munin-master
     SUBDIR += munin-node
     SUBDIR += muse
@@ -749,7 +752,6 @@
     SUBDIR += p5-arclog
     SUBDIR += p5-reslog
     SUBDIR += packer
-    SUBDIR += packetbeat
     SUBDIR += pacman
     SUBDIR += paicc
     SUBDIR += paladin
@@ -762,6 +764,7 @@
     SUBDIR += pax-utils
     SUBDIR += pbi-manager
     SUBDIR += pbimaker
+    SUBDIR += pcapfix
     SUBDIR += pcbsd-appweb
     SUBDIR += pcbsd-libsh
     SUBDIR += pcbsd-syscache
@@ -831,7 +834,6 @@
     SUBDIR += ptools
     SUBDIR += puppet-lint
     SUBDIR += puppet-mode.el
-    SUBDIR += puppet37
     SUBDIR += puppet38
     SUBDIR += puppet4
     SUBDIR += puppetserver
@@ -932,7 +934,6 @@
     SUBDIR += rsyncrypto
     SUBDIR += rsyslog8
     SUBDIR += rtty
-    SUBDIR += ruby-quota
     SUBDIR += rubygem-SyslogLogger
     SUBDIR += rubygem-backup
     SUBDIR += rubygem-bosh-gen
@@ -1010,6 +1011,7 @@
     SUBDIR += s6-rc
     SUBDIR += safe-rm
     SUBDIR += safecat
+    SUBDIR += safecopy
     SUBDIR += samefile
     SUBDIR += samesame
     SUBDIR += sample
