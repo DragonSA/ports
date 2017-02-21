@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/Makefile 434467 2017-02-20 15:15:08Z sunpoet $
+# $FreeBSD: head/devel/Makefile 434504 2017-02-21 06:10:11Z dbn $
 #
 
     COMMENT = Development utilities
@@ -4410,6 +4410,7 @@
     SUBDIR += py-mwlib.rl
     SUBDIR += py-mx-experimental
     SUBDIR += py-mygpoclient
+    SUBDIR += py-mypy
     SUBDIR += py-nagioscheck
     SUBDIR += py-natsort
     SUBDIR += py-natural
