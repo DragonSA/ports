@@ -1,8 +1,8 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
-# $FreeBSD: head/devel/py-typed-ast/Makefile 434190 2017-02-15 19:14:52Z dbn $
+# $FreeBSD: head/devel/py-typed-ast/Makefile 434502 2017-02-21 05:52:09Z dbn $
 
 PORTNAME=	typed-ast
-PORTVERSION=	1.0.0
+PORTVERSION=	1.0.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
