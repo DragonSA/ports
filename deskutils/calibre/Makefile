@@ -1,8 +1,9 @@
 # Created by: stas
-# $FreeBSD: head/deskutils/calibre/Makefile 433959 2017-02-12 18:55:59Z madpilot $
+# $FreeBSD: head/deskutils/calibre/Makefile 436801 2017-03-24 08:08:02Z madpilot $
 
 PORTNAME=	calibre
-PORTVERSION=	2.79.1
+PORTVERSION=	2.82.0
+PORTREVISION=	1
 CATEGORIES=	deskutils python
 MASTER_SITES=	http://download.calibre-ebook.com/${PORTVERSION}/
 
@@ -11,8 +12,7 @@ COMMENT=	Ebook management application
 
 LICENSE=	GPLv3
 
-LIB_DEPENDS=	libMagickWand-6.so:graphics/ImageMagick \
-		libfontconfig.so:x11-fonts/fontconfig \
+LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 		libpoppler-qt5.so:graphics/poppler-qt5 \
 		libwmflite.so:graphics/libwmf \
 		libchm.so:misc/chmlib \

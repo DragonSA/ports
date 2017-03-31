@@ -1,4 +1,4 @@
-# $FreeBSD: head/japanese/Makefile 432620 2017-01-28 11:18:44Z rene $
+# $FreeBSD: head/japanese/Makefile 435180 2017-03-01 17:50:09Z rene $
 #
 
     COMMENT = Japanese support
@@ -237,7 +237,6 @@
     SUBDIR += quit
     SUBDIR += roget-fpw
     SUBDIR += rogue_s
-    SUBDIR += ruby-eb
     SUBDIR += ruby-romkan
     SUBDIR += ruby-uconv
     SUBDIR += rubygem-jpmobile-ipaddresses
@@ -302,7 +301,6 @@
     SUBDIR += xshodou
     SUBDIR += xtr
     SUBDIR += xv
-    SUBDIR += xyaku
     SUBDIR += yasou-fpw
     SUBDIR += yc.el
     SUBDIR += zinnia

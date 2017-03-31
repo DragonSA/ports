@@ -1,5 +1,5 @@
 # Created by: Klaus Aehlig <aehlig@linta.de>
-# $FreeBSD: head/www/uzbl/Makefile 429420 2016-12-25 13:22:23Z amdmi3 $
+# $FreeBSD: head/www/uzbl/Makefile 436290 2017-03-16 19:23:48Z antoine $
 
 PORTNAME=	uzbl
 PORTVERSION=	0.9.1
@@ -12,7 +12,7 @@ COMMENT=	Web interface tools which adhere to the unix philosophy
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools${PYTHON_SUFFIX}>0:devel/py-setuptools${PYTHON_SUFFIX}
+BUILD_DEPENDS=	${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/${PYTHON_PKGNAMEPREFIX}setuptools
 LIB_DEPENDS=	libwebkitgtk-1.0.so:www/webkit-gtk2 \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2  \

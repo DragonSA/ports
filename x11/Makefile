@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11/Makefile 432934 2017-01-31 16:29:42Z danfe $
+# $FreeBSD: head/x11/Makefile 436420 2017-03-18 15:42:22Z danfe $
 #
 
     COMMENT = Ports to support the X window system
@@ -45,6 +45,7 @@
     SUBDIR += deskpaint
     SUBDIR += dgs
     SUBDIR += dmenu
+    SUBDIR += dmenu2
     SUBDIR += dmxproto
     SUBDIR += docker-tray
     SUBDIR += dri2proto
@@ -249,6 +250,7 @@
     SUBDIR += p5-X11-XCB
     SUBDIR += p5-X11-Xlib
     SUBDIR += p5-XTerm-Conf
+    SUBDIR += pipeglade
     SUBDIR += pixman
     SUBDIR += plasma-scriptengine-python
     SUBDIR += plasma-scriptengine-ruby
@@ -277,7 +279,7 @@
     SUBDIR += rox-wallpaper
     SUBDIR += roxbg
     SUBDIR += roxterm
-    SUBDIR += rsibreak-kde4
+    SUBDIR += rsibreak
     SUBDIR += rstart
     SUBDIR += rubygem-gnome2
     SUBDIR += rxvt

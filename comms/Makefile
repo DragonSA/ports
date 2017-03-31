@@ -1,4 +1,4 @@
-# $FreeBSD: head/comms/Makefile 430482 2017-01-03 16:37:20Z db $
+# $FreeBSD: head/comms/Makefile 436814 2017-03-24 14:01:49Z db $
 #
 
     COMMENT = Communication utilities
@@ -31,6 +31,7 @@
     SUBDIR += deforaos-phone
     SUBDIR += dfu-programmer
     SUBDIR += dfu-util
+    SUBDIR += direwolf
     SUBDIR += dump1090
     SUBDIR += ebook2cw
     SUBDIR += ebook2cwgui
@@ -101,6 +102,7 @@
     SUBDIR += minicom
     SUBDIR += mlan3
     SUBDIR += morse
+    SUBDIR += multimon-ng
     SUBDIR += nasawash
     SUBDIR += ncid
     SUBDIR += nec2c
@@ -154,6 +156,7 @@
     SUBDIR += rtl-sdr
     SUBDIR += rubygem-callsign
     SUBDIR += rubygem-ruby-termios
+    SUBDIR += rubygem-serialport
     SUBDIR += rxtx
     SUBDIR += scmxx
     SUBDIR += sdr-wspr

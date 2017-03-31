@@ -1,4 +1,4 @@
-# $FreeBSD: head/net-p2p/Makefile 433665 2017-02-08 18:52:24Z rene $
+# $FreeBSD: head/net-p2p/Makefile 437071 2017-03-27 18:27:12Z rene $
 #
 
     COMMENT = Peer-to-peer network applications
@@ -33,8 +33,6 @@
     SUBDIR += frost
     SUBDIR += gkremldk
     SUBDIR += gnewtellium
-    SUBDIR += gnunet
-    SUBDIR += gnunet-gtk
     SUBDIR += go-ethereum
     SUBDIR += gtk-gnutella
     SUBDIR += gtorrentviewer
@@ -76,6 +74,7 @@
     SUBDIR += py-vertex
     SUBDIR += qbittorrent
     SUBDIR += qbittorrent-nox11
+    SUBDIR += radarr
     SUBDIR += retroshare
     SUBDIR += rtgui
     SUBDIR += rtorrent

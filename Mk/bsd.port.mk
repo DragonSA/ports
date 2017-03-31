@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: head/Mk/bsd.port.mk 433456 2017-02-05 21:20:24Z tijl $
+# $FreeBSD: head/Mk/bsd.port.mk 437197 2017-03-29 13:11:26Z mat $
 #	$NetBSD: $
 #
 #	bsd.port.mk - 940820 Jordan K. Hubbard.
@@ -1347,10 +1347,6 @@ PKGCOMPATDIR?=		${LOCALBASE}/lib/compat/pkg
 .include "${PORTSDIR}/Mk/bsd.local.mk"
 .endif
 
-.if defined(USE_OPENSSL)
-USES+=	ssl
-.endif
-
 .if defined(USE_EMACS)
 .include "${PORTSDIR}/Mk/bsd.emacs.mk"
 .endif
@@ -1576,7 +1572,7 @@ CONFIGURE_ENV+=	PKG_CONFIG_SYSROOT_DIR="${CROSS_SYSROOT}"
 .endif
 
 WRKDIR?=		${WRKDIRPREFIX}${.CURDIR}/work
-.if !defined(IGNORE_MASTER_SITE_GITHUB) && defined(USE_GITHUB)
+.if !defined(IGNORE_MASTER_SITE_GITHUB) && defined(USE_GITHUB) && empty(USE_GITHUB:Mnodefault)
 WRKSRC?=		${WRKDIR}/${GH_PROJECT}-${GH_TAGNAME_EXTRACT}
 .endif
 # If the distname is not extracting into a specific subdirectory, have the
@@ -1763,10 +1759,6 @@ MAKE_ENV+=	${b}="${${b}}"
 
 .if defined(USE_RC_SUBR)
 SUB_FILES+=	${USE_RC_SUBR}
-.endif
-
-.if defined(USE_RCORDER)
-SUB_FILES+=	${USE_RCORDER}
 .endif
 
 .if defined(USE_LDCONFIG) && ${USE_LDCONFIG:tl} == "yes"
@@ -2007,7 +1999,9 @@ BUILD_FAIL_MESSAGE+=	Try to set MAKE_JOBS_UNSAFE=yes and rebuild before reportin
 
 .include "${PORTSDIR}/Mk/bsd.ccache.mk"
 
+.if !make(makesum)
 FETCH_ENV?=		SSL_NO_VERIFY_PEER=1 SSL_NO_VERIFY_HOSTNAME=1
+.endif
 FETCH_BINARY?=	/usr/bin/fetch
 FETCH_ARGS?=	-Fpr
 FETCH_REGET?=	1
@@ -2081,7 +2075,7 @@ _SHAREMODE?=	0644
 # A few aliases for *-install targets
 INSTALL_PROGRAM=	${INSTALL} ${COPY} ${STRIP} -m ${BINMODE}
 INSTALL_KLD=	${INSTALL} ${COPY} -m ${BINMODE}
-INSTALL_LIB=	${INSTALL} ${COPY} ${STRIP} -m ${SHAREMODE}
+INSTALL_LIB=	${INSTALL} ${COPY} ${STRIP} -m ${_SHAREMODE}
 INSTALL_SCRIPT=	${INSTALL} ${COPY} -m ${BINMODE}
 INSTALL_DATA=	${INSTALL} ${COPY} -m ${_SHAREMODE}
 INSTALL_MAN=	${INSTALL} ${COPY} -m ${MANMODE}
@@ -2103,7 +2097,7 @@ COPYTREE_BIN=	${SH} -c '(${FIND} -Ed $$0 $$2 | ${CPIO} -dumpl $$1 >/dev/null 2>&
 												 -o -type f -exec ${SH} -c '\''cd '\''$$1'\'' && chmod ${BINMODE} "$$@"'\'' -- . {} + \)' --
 COPYTREE_SHARE=	${SH} -c '(${FIND} -Ed $$0 $$2 | ${CPIO} -dumpl $$1 >/dev/null 2>&1) && \
 						   ${FIND} -Ed $$0 $$2 \(   -type d -exec ${SH} -c '\''cd '\''$$1'\'' && chmod 755 "$$@"'\'' -- . {} + \
-												 -o -type f -exec ${SH} -c '\''cd '\''$$1'\'' && chmod ${SHAREMODE} "$$@"'\'' -- . {} + \)' --
+												 -o -type f -exec ${SH} -c '\''cd '\''$$1'\'' && chmod ${_SHAREMODE} "$$@"'\'' -- . {} + \)' --
 
 # The user can override the NO_PACKAGE by specifying this from
 # the make command line
@@ -2561,6 +2555,9 @@ SET_LATE_CONFIGURE_ARGS= \
 	fi ; \
 	if [ ! -z "`${CONFIGURE_CMD} --help 2>&1 | ${GREP} -- '--disable-silent-rules'`" ]; then \
 	    _LATE_CONFIGURE_ARGS="$${_LATE_CONFIGURE_ARGS} --disable-silent-rules" ; \
+	fi ; \
+	if [ ! -z "`${CONFIGURE_CMD} --help 2>&1 | ${GREP} -- '--enable-jobserver\[.*\#\]'`" ]; then \
+	    _LATE_CONFIGURE_ARGS="$${_LATE_CONFIGURE_ARGS} --enable-jobserver=${MAKE_JOBS_NUMBER}" ; \
 	fi ; \
 	if [ ! -z "`${CONFIGURE_CMD} --help 2>&1 | ${GREP} -- '--infodir'`" ]; then \
 	    _LATE_CONFIGURE_ARGS="$${_LATE_CONFIGURE_ARGS} --infodir=${GNU_CONFIGURE_PREFIX}/${INFO_PATH}/${INFO_SUBDIR}" ; \
@@ -4694,7 +4691,11 @@ _check-config: pre-check-config
 .endfor
 .for single in ${OPTIONS_WRONG_SINGLE}
 	@${ECHO_MSG} "====> You must select one and only one option from the ${single} single"
+.if defined(OPTIONS_WRONG_SINGLE_${single})
 	@${ECHO_MSG} "=====> Only one of these must be defined: ${OPTIONS_WRONG_SINGLE_${single}}"
+.else
+	@${ECHO_MSG} "=====> No option was selected (and one must be)"
+.endif
 .endfor
 .for radio in ${OPTIONS_WRONG_RADIO}
 	@${ECHO_MSG} "====> You cannot select multiple options from the ${radio} radio"

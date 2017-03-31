@@ -1,7 +1,7 @@
-# $FreeBSD: head/www/seahub/Makefile 432378 2017-01-24 19:38:02Z lifanov $
+# $FreeBSD: head/www/seahub/Makefile 435555 2017-03-06 16:21:35Z lifanov $
 
 PORTNAME=	seahub
-PORTVERSION=	6.0.7
+PORTVERSION=	6.0.8
 DISTVERSIONPREFIX=	v
 DISTVERSIONSUFFIX=	-pro
 CATEGORIES=	www

@@ -1,4 +1,4 @@
-# $FreeBSD: head/archivers/Makefile 434468 2017-02-20 15:15:48Z sunpoet $
+# $FreeBSD: head/archivers/Makefile 436490 2017-03-19 12:58:36Z rene $
 #
 
     COMMENT = Archivers
@@ -70,7 +70,6 @@
     SUBDIR += libpar2
     SUBDIR += librtfcomp
     SUBDIR += libunrar
-    SUBDIR += libunrar4
     SUBDIR += libunrar5
     SUBDIR += libzip
     SUBDIR += lrzip
@@ -83,7 +82,6 @@
     SUBDIR += lzmalib
     SUBDIR += lzo2
     SUBDIR += lzop
-    SUBDIR += macutils
     SUBDIR += makeself
     SUBDIR += mar
     SUBDIR += minizip

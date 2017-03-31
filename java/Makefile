@@ -1,4 +1,4 @@
-# $FreeBSD: head/java/Makefile 433585 2017-02-07 20:15:56Z rene $
+# $FreeBSD: head/java/Makefile 435047 2017-02-28 11:59:59Z rene $
 #
 
     COMMENT = Java language support
@@ -70,8 +70,6 @@
     SUBDIR += jcommon
     SUBDIR += jd-gui
     SUBDIR += jdbcpool
-    SUBDIR += jdk16-doc
-    SUBDIR += jdk7-doc
     SUBDIR += jdk8-doc
     SUBDIR += jdom
     SUBDIR += jflex

@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/lxqt.mk 431551 2017-01-15 12:02:29Z olivierd $
+# $FreeBSD: head/Mk/Uses/lxqt.mk 436496 2017-03-19 14:08:10Z rene $
 #
 # This file contains some variable definitions that are supposed to make your
 # life easier, when dealing with ports related to the LXQt Desktop Environment.
@@ -14,7 +14,7 @@
 # lxqt		- LXQt core library
 # qtxdg		- Qt implementation of freedesktop.org xdg specs
 #
-# MAINTAINER: olivierd@FreeBSD.org
+# MAINTAINER: ports@FreeBSD.org
 
 .if !defined(_INCLUDE_USES_LXQT_MK)
 _INCLUDE_USES_LXQT_MK=	yes
@@ -62,7 +62,7 @@ qtxdg_LIB_DEPENDS=	libQt5Xdg.so:devel/libqtxdg
 # First, expand all USE_LXQT_REQ recursively.
 .for comp in ${_USE_LXQT_ALL}
 . for subcomp in ${${comp}_USE_LXQT_REQ}
-${comp}_USE_LXQT_REQ+=	${${comp}_USE_LXQR_REQ}
+${comp}_USE_LXQT_REQ+=	${${subcomp}_USE_LXQT_REQ}
 . endfor
 .endfor
 

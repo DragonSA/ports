@@ -1,5 +1,5 @@
 # Created by: Ville Eerola <ve@sci.fi>
-# $FreeBSD: head/mail/fetchmail/Makefile 427552 2016-12-02 11:58:21Z mat $
+# $FreeBSD: head/mail/fetchmail/Makefile 436247 2017-03-15 14:45:30Z mat $
 
 PORTNAME=	fetchmail
 PORTVERSION=	6.3.26
@@ -19,14 +19,13 @@ RUN_DEPENDS=	${LOCALBASE}/share/certs/ca-root-nss.crt:security/ca_root_nss
 USERS=		${PORTNAME}
 GROUPS=		${USERS}
 
-USES=		cpe gmake shebangfix tar:xz
+USES=		cpe gmake shebangfix tar:xz ssl
 SHEBANG_FILES=	fetchmailconf.py
 
 USE_RC_SUBR=	fetchmail
 SUB_FILES=	pkg-message
 
 GNU_CONFIGURE=	yes
-USE_OPENSSL=	yes
 CONFIGURE_ARGS=	--enable-opie --enable-RPA --enable-SDPS \
 		--without-hesiod --enable-fallback=no \
 		--with-ssl=${OPENSSLBASE}

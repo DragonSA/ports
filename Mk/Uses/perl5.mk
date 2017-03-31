@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/perl5.mk 432933 2017-01-31 16:25:48Z mat $
+# $FreeBSD: head/Mk/Uses/perl5.mk 436665 2017-03-21 23:46:20Z mat $
 #
 # Provide support to use perl5
 #
@@ -114,7 +114,10 @@ SITE_MAN1?=	${PREFIX}/${SITE_MAN1_REL}
 
 PERL5?=		${LOCALBASE}/bin/perl${PERL_VERSION}
 PERL?=		${LOCALBASE}/bin/perl
-CONFIGURE_ENV+=	ac_cv_path_PERL=${PERL} ac_cv_path_PERL_PATH=${PERL}
+CONFIGURE_ENV+=	ac_cv_path_PERL=${PERL} ac_cv_path_PERL_PATH=${PERL} \
+		PERL_USE_UNSAFE_INC=1
+
+MAKE_ENV+=	PERL_USE_UNSAFE_INC=1
 
 QA_ENV+=	SITE_ARCH_REL=${SITE_ARCH_REL} LIBPERL=libperl.so.${PERL_VER}
 

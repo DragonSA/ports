@@ -1,4 +1,4 @@
-# $FreeBSD: head/net-mgmt/Makefile 433737 2017-02-09 15:00:42Z brd $
+# $FreeBSD: head/net-mgmt/Makefile 437221 2017-03-29 18:16:46Z swills $
 #
 
     COMMENT = Network management tools
@@ -83,6 +83,10 @@
     SUBDIR += icinga-core
     SUBDIR += icinga2
     SUBDIR += icingaweb2
+    SUBDIR += icingaweb2-module-businessprocess
+    SUBDIR += icingaweb2-module-cube
+    SUBDIR += icingaweb2-module-director
+    SUBDIR += icingaweb2-module-generictts
     SUBDIR += icli
     SUBDIR += icmpmonitor
     SUBDIR += icmpquery
@@ -151,7 +155,6 @@
     SUBDIR += nagstamon
     SUBDIR += nagtail
     SUBDIR += nagvis
-    SUBDIR += nat
     SUBDIR += nbtscan
     SUBDIR += ndoutils
     SUBDIR += ndpmon
@@ -315,6 +318,7 @@
     SUBDIR += seafile-client
     SUBDIR += seafile-gui
     SUBDIR += seafile-server
+    SUBDIR += semaphore
     SUBDIR += send
     SUBDIR += sendip
     SUBDIR += sipcalc

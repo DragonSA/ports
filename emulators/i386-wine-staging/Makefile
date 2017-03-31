@@ -1,7 +1,7 @@
 # Created by: Kris Moore <kmoore@FreeBSD.org>
-# $FreeBSD: head/emulators/i386-wine-staging/Makefile 428906 2016-12-19 04:34:49Z dbn $
+# $FreeBSD: head/emulators/i386-wine-staging/Makefile 434857 2017-02-26 11:07:02Z gerald $
 
-COMMENT=	32bit Wine built with the Staging patchset for 64bit FreeBSD
+COMMENT=	32-bit Wine built with the Staging patchset for 64-bit FreeBSD
 
 SLAVE_PORT=	i386-wine-devel
 

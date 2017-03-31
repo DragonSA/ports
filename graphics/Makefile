@@ -1,4 +1,4 @@
-# $FreeBSD: head/graphics/Makefile 433886 2017-02-11 16:00:33Z bapt $
+# $FreeBSD: head/graphics/Makefile 436655 2017-03-21 21:03:48Z tobik $
 #
 
     COMMENT = Graphics tools and libraries
@@ -63,6 +63,7 @@
     SUBDIR += autotrace
     SUBDIR += aview
     SUBDIR += ayam
+    SUBDIR += azpainter
     SUBDIR += backfract
     SUBDIR += barbecue
     SUBDIR += barcode
@@ -77,6 +78,7 @@
     SUBDIR += burplex
     SUBDIR += c-a-i-r
     SUBDIR += cadubi
+    SUBDIR += caffe
     SUBDIR += cairo
     SUBDIR += cairo-reference
     SUBDIR += cairomm
@@ -107,6 +109,7 @@
     SUBDIR += converseen
     SUBDIR += copperspice
     SUBDIR += cosmoplayer
+    SUBDIR += cptutils
     SUBDIR += crw
     SUBDIR += cthumb
     SUBDIR += cuneiform
@@ -326,6 +329,7 @@
     SUBDIR += gtk-update-icon-cache
     SUBDIR += gtkam
     SUBDIR += gts
+    SUBDIR += guetzli
     SUBDIR += guilib
     SUBDIR += gwenview-kde4
     SUBDIR += gx
@@ -868,6 +872,7 @@
     SUBDIR += py-poppler
     SUBDIR += py-poppler-qt4
     SUBDIR += py-pycha
+    SUBDIR += py-pycollada
     SUBDIR += py-pydot
     SUBDIR += py-pygal
     SUBDIR += py-pyganim
@@ -880,6 +885,7 @@
     SUBDIR += py-qt5-svg
     SUBDIR += py-rabbyt
     SUBDIR += py-sane
+    SUBDIR += py-scikit-image
     SUBDIR += py-seqdiag
     SUBDIR += py-sorl-thumbnail
     SUBDIR += py-soya3d
@@ -889,6 +895,7 @@
     SUBDIR += py-wand
     SUBDIR += py-webcolors
     SUBDIR += py3-cairo
+    SUBDIR += py3-imagesize
     SUBDIR += py3-pillow
     SUBDIR += py3-pygraphviz
     SUBDIR += pygts
@@ -946,6 +953,7 @@
     SUBDIR += rubygem-gd2
     SUBDIR += rubygem-gdk_pixbuf2
     SUBDIR += rubygem-gemojione
+    SUBDIR += rubygem-gemojione2
     SUBDIR += rubygem-geokit
     SUBDIR += rubygem-gitlab_emoji
     SUBDIR += rubygem-goocanvas
@@ -1027,6 +1035,7 @@
     SUBDIR += tilecache
     SUBDIR += tiled
     SUBDIR += timeless
+    SUBDIR += timg
     SUBDIR += tintfu
     SUBDIR += tinyows
     SUBDIR += tkpng

@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/python.mk 430839 2017-01-07 21:42:28Z sunpoet $
+# $FreeBSD: head/Mk/Uses/python.mk 436290 2017-03-16 19:23:48Z antoine $
 #
 # Provide support for Python related ports. This includes detecting Python
 # interpreters, ports providing package and modules for python as well as
@@ -481,9 +481,9 @@ UNIQUE_FIND_SUFFIX_FILES=	\
 
 _CURRENTPORT:=	${PKGNAMEPREFIX}${PORTNAME}${PKGNAMESUFFIX}
 .if defined(_PYTHON_FEATURE_DISTUTILS) && \
-	${_CURRENTPORT:S/${PYTHON_SUFFIX}$//} != ${PYTHON_PKGNAMEPREFIX}setuptools
-BUILD_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}setuptools${PYTHON_SUFFIX}>0:devel/py-setuptools${PYTHON_SUFFIX}
-RUN_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}setuptools${PYTHON_SUFFIX}>0:devel/py-setuptools${PYTHON_SUFFIX}
+	${_CURRENTPORT} != ${PYTHON_PKGNAMEPREFIX}setuptools
+BUILD_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/${PYTHON_PKGNAMEPREFIX}setuptools
+RUN_DEPENDS+=		${PYTHON_PKGNAMEPREFIX}setuptools>0:devel/${PYTHON_PKGNAMEPREFIX}setuptools
 .endif
 
 # distutils support

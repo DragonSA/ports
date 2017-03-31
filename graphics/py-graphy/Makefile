@@ -1,5 +1,5 @@
 # Created by: Sahil Tandon <sahil@FreeBSD.org>
-# $FreeBSD: head/graphics/py-graphy/Makefile 424411 2016-10-21 12:51:40Z mat $
+# $FreeBSD: head/graphics/py-graphy/Makefile 435349 2017-03-03 16:00:19Z mat $
 
 PORTNAME=	graphy
 PORTVERSION=	1.0
@@ -15,6 +15,8 @@ LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BROKEN=		Unfetchable (google code has gone away)
+DEPRECATED=	Unfetchable for more than six months (google code has gone away)
+EXPIRATION_DATE=	2017-04-30
 
 USES=		python:run tar:bzip2
 

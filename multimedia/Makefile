@@ -1,4 +1,4 @@
-# $FreeBSD: head/multimedia/Makefile 430144 2016-12-31 17:25:05Z rene $
+# $FreeBSD: head/multimedia/Makefile 436891 2017-03-25 10:01:27Z rene $
 #
 
     COMMENT = Multimedia software
@@ -260,7 +260,6 @@
     SUBDIR += mpgtx
     SUBDIR += mplayer
     SUBDIR += mplayer-skins
-    SUBDIR += mplayer2
     SUBDIR += mplex
     SUBDIR += mps-youtube
     SUBDIR += mpv

@@ -1,4 +1,4 @@
-# $FreeBSD: head/ftp/Makefile 432508 2017-01-26 14:38:32Z sunpoet $
+# $FreeBSD: head/ftp/Makefile 437072 2017-03-27 18:28:57Z rene $
 #
 
     COMMENT = FTP client and server utilities
@@ -7,7 +7,6 @@
     SUBDIR += R-cran-curl
     SUBDIR += atftp
     SUBDIR += axel
-    SUBDIR += bareftp
     SUBDIR += bbftp
     SUBDIR += bftpd
     SUBDIR += bsdftpd-ssl

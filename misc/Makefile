@@ -1,4 +1,4 @@
-# $FreeBSD: head/misc/Makefile 434380 2017-02-18 19:48:05Z tcberner $
+# $FreeBSD: head/misc/Makefile 436318 2017-03-17 07:41:25Z araujo $
 #
 
     COMMENT = Miscellaneous utilities
@@ -312,7 +312,6 @@
     SUBDIR += p5-File-Sort
     SUBDIR += p5-Geo-Cache
     SUBDIR += p5-Geo-Coder-Bing
-    SUBDIR += p5-Geo-Coder-Geocoder-US
     SUBDIR += p5-Geo-Coder-Google
     SUBDIR += p5-Geo-Coder-Googlev3
     SUBDIR += p5-Geo-Coder-Many
@@ -392,6 +391,7 @@
     SUBDIR += py-spdx-lookup
     SUBDIR += py-tqdm
     SUBDIR += py-yolk
+    SUBDIR += py3-tqdm
     SUBDIR += pylize
     SUBDIR += qbrew
     SUBDIR += qlas

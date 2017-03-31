@@ -1,4 +1,4 @@
-# $FreeBSD: head/UIDs 434012 2017-02-13 18:05:34Z krion $
+# $FreeBSD: head/UIDs 437280 2017-03-30 10:55:14Z mmokhi $
 # Please keep this file sorted by UID!
 # Please pick an empty slot when available and also consider base values from
 # /usr/src/etc/master.passwd
@@ -112,8 +112,8 @@ octoprint:*:162:162::0:0:OctoPrint Daemon:/usr/local/octoprint:/usr/sbin/nologin
 _iked:*:163:163::0:0:IKEv2 Daemon:/var/empty:/usr/sbin/nologin
 lightdm:*:164:164::0:0:Light Display Manager:/var/lib/lightdm-data:/usr/sbin/nologin
 uwsgi:*:165:165::0:0:uwsgi Daemon:/nonexistent:/usr/sbin/nologin
-# free: 166
-# free: 167
+yule:*:166:166::0:0:Samhain Daemon:/nonexistent:/usr/sbin/nologin
+ceph:*:167:167::0:0:Ceph Daemons:/var/lib/ceph:/usr/sbin/nologin
 # free: 168
 # free: 169
 tile38:*:170:170::0:0:Tile38 User:/var/db/tile38:/usr/sbin/nologin
@@ -298,7 +298,7 @@ openfire:*:342:342::0:0:Openfire IM Daemon:/nonexistent:/usr/sbin/nologin
 # free: 349
 _sabnzbd:*:350:350::0:0:sabnzb Daemon:/nonexistent:/usr/sbin/nologin
 sonarr:*:351:65534::0:0:Sonarr PVR:/nonexistent:/usr/sbin/nologin
-# free: 352
+radarr:*:352:65534::0:0:Radarr Daemon:/nonexistent:/usr/sbin/nologin
 _iodined:*:353:353::0:0:Iodine Daemon:/nonexistent:/usr/sbin/nologin
 # free: 354
 # free: 355
@@ -419,7 +419,7 @@ consul:*:469:469::0:0:Consul Daemon:/var/tmp/consul:/usr/sbin/nologin
 serf:*:470:470::0:0:Serf Daemon:/nonexistent:/usr/sbin/nologin
 vault:*:471:471::0:0:Vault Daemon:/nonexistent:/usr/sbin/nologin
 nomad:*:472:472::0:0:Nomad Daemon:/var/tmp/nomad:/usr/sbin/nologin
-# free: 473
+minio:*:473:473::0:0:Minio Daemon:/var/tmp/minio:/usr/sbin/nologin
 # free: 474
 # free: 475
 # free: 476
@@ -746,7 +746,7 @@ zetacoin:*:780:780::0:0:ZetaCoin Daemon:/nonexistent:/usr/sbin/nologin
 # free: 797
 # free: 798
 # free: 799
-# free: 800
+clickhouse:*:800:800::0:0:ClickHouse Daemon:/var/db/clickhouse:/usr/sbin/nologin
 # free: 801
 # free: 802
 # free: 803

@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/bsd.options.desc.mk 431298 2017-01-12 20:02:08Z sunpoet $
+# $FreeBSD: head/Mk/bsd.options.desc.mk 435254 2017-03-02 17:32:09Z lifanov $
 #
 # READ BEFORE EDITING:
 # - Please keep descriptions sorted alphabetically by variable name.
@@ -314,6 +314,7 @@ MANPAGES_DESC?=		Build and/or install manual pages
 MAPSERVER_DESC?=	Mapserver support
 MATE_DESC?=		MATE desktop environment support
 MATROSKA_DESC?=		Matroska container format support
+MBEDTLS_DESC?=		SSL/TLS support via mbed TLS
 MDNSRESPONDER_DESC?=	Zeroconf support via mDNSResponder
 METALINK_DESC?=		Metalink support
 MIKMOD_DESC?=		MOD audio format support

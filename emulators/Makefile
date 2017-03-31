@@ -1,4 +1,4 @@
-# $FreeBSD: head/emulators/Makefile 433560 2017-02-07 15:33:04Z lwhsu $
+# $FreeBSD: head/emulators/Makefile 435358 2017-03-03 18:53:58Z rene $
 #
 
     COMMENT = Emulators for other operating systems
@@ -54,7 +54,6 @@
     SUBDIR += hercules
     SUBDIR += higan
     SUBDIR += hugo
-    SUBDIR += hyperv-is
     SUBDIR += i386-wine
     SUBDIR += i386-wine-devel
     SUBDIR += i386-wine-staging

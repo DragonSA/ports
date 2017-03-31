@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11-toolkits/Makefile 434381 2017-02-18 19:56:12Z tcberner $
+# $FreeBSD: head/x11-toolkits/Makefile 435066 2017-02-28 14:58:33Z sunpoet $
 #
 
     COMMENT = X11 toolkits
@@ -145,7 +145,7 @@
     SUBDIR += p5-Gnome2-Canvas
     SUBDIR += p5-Gnome2-VFS
     SUBDIR += p5-Gnome2-Wnck
-    SUBDIR += p5-Gtk
+    SUBDIR += p5-Gtk-Perl
     SUBDIR += p5-Gtk2
     SUBDIR += p5-Gtk2-Chmod
     SUBDIR += p5-Gtk2-Ex-Dialogs

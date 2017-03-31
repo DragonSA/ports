@@ -1,4 +1,4 @@
-# $FreeBSD: head/databases/Makefile 434314 2017-02-17 20:49:22Z pi $
+# $FreeBSD: head/databases/Makefile 437226 2017-03-29 19:43:57Z rene $
 #
 
     COMMENT = Databases and related software
@@ -33,6 +33,7 @@
     SUBDIR += cdb
     SUBDIR += cego
     SUBDIR += cegobridge
+    SUBDIR += clickhouse
     SUBDIR += couchdb
     SUBDIR += courier-authlib-mysql
     SUBDIR += courier-authlib-pgsql
@@ -120,10 +121,7 @@
     SUBDIR += jakarta-commons-dbutils
     SUBDIR += jasperreports
     SUBDIR += jdb
-    SUBDIR += jdbc-oracle10g
     SUBDIR += jdbc-oracle11g
-    SUBDIR += jdbc-oracle8i
-    SUBDIR += jdbc-oracle9i
     SUBDIR += jdbm2
     SUBDIR += jlog
     SUBDIR += jrobin
@@ -226,6 +224,7 @@
     SUBDIR += mysql57-server
     SUBDIR += mysql80-client
     SUBDIR += mysql80-server
+    SUBDIR += mysqlwsrep56-server
     SUBDIR += mysqlbackup
     SUBDIR += mysqlbigram
     SUBDIR += mysqldump-secure
@@ -249,8 +248,6 @@
     SUBDIR += openark-kit
     SUBDIR += opendbx
     SUBDIR += opentsdb
-    SUBDIR += oracle7-client
-    SUBDIR += oracle8-client
     SUBDIR += p5-Amazon-SimpleDB
     SUBDIR += p5-Amon2-DBI
     SUBDIR += p5-AnyEvent-BDB
@@ -313,7 +310,6 @@
     SUBDIR += p5-DBD-Mock
     SUBDIR += p5-DBD-Multi
     SUBDIR += p5-DBD-ODBC
-    SUBDIR += p5-DBD-Oracle
     SUBDIR += p5-DBD-Pg
     SUBDIR += p5-DBD-PgLite
     SUBDIR += p5-DBD-PgPP
@@ -386,6 +382,7 @@
     SUBDIR += p5-DBIx-Handler
     SUBDIR += p5-DBIx-Inspector
     SUBDIR += p5-DBIx-Introspector
+    SUBDIR += p5-DBIx-Lite
     SUBDIR += p5-DBIx-Log4perl
     SUBDIR += p5-DBIx-MySQLSequence
     SUBDIR += p5-DBIx-NoSQL
@@ -489,6 +486,7 @@
     SUBDIR += p5-Search-Namazu
     SUBDIR += p5-Search-Xapian
     SUBDIR += p5-Search-Xapian10
+    SUBDIR += p5-Store-CouchDB
     SUBDIR += p5-T2
     SUBDIR += p5-Tangram
     SUBDIR += p5-Template-DBI
@@ -543,6 +541,7 @@
     SUBDIR += pear-Structures_DataGrid_DataSource_PDO
     SUBDIR += pear-XML_Query2XML
     SUBDIR += pecl-chdb
+    SUBDIR += pecl-couchbase
     SUBDIR += pecl-dbase
     SUBDIR += pecl-drizzle
     SUBDIR += pecl-leveldb
@@ -647,6 +646,7 @@
     SUBDIR += php71-pdo_sqlite
     SUBDIR += php71-pgsql
     SUBDIR += php71-sqlite3
+    SUBDIR += phpliteadmin
     SUBDIR += phpminiadmin
     SUBDIR += phpmyadmin
     SUBDIR += phppgadmin
@@ -798,8 +798,6 @@
     SUBDIR += py-rrdtool_lgpl
     SUBDIR += py-south
     SUBDIR += py-sqlalchemy-migrate
-    SUBDIR += py-sqlalchemy08
-    SUBDIR += py-sqlalchemy09
     SUBDIR += py-sqlalchemy10
     SUBDIR += py-sqlalchemy11
     SUBDIR += py-sqlite3
@@ -881,6 +879,7 @@
     SUBDIR += rubygem-arel
     SUBDIR += rubygem-arel-helpers
     SUBDIR += rubygem-arel6
+    SUBDIR += rubygem-arel7
     SUBDIR += rubygem-awesome_nested_set
     SUBDIR += rubygem-bdb1
     SUBDIR += rubygem-bigrecord
@@ -961,6 +960,7 @@
     SUBDIR += sqlite3
     SUBDIR += sqlitebrowser
     SUBDIR += sqlitebrowser-qt5
+    SUBDIR += sqliteconvert
     SUBDIR += sqliteman
     SUBDIR += sqlitemanager
     SUBDIR += sqliteodbc
@@ -997,7 +997,6 @@
     SUBDIR += xapian-core
     SUBDIR += xapian-core10
     SUBDIR += xtrabackup
-    SUBDIR += yasql
     SUBDIR += zodb3
 
 .include <bsd.port.subdir.mk>

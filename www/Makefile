@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/Makefile 434469 2017-02-20 15:16:06Z sunpoet $
+# $FreeBSD: head/www/Makefile 437225 2017-03-29 19:31:53Z rezny $
 #
 
     COMMENT = Ports related to the World Wide Web
@@ -179,6 +179,7 @@
     SUBDIR += formication
     SUBDIR += foswiki
     SUBDIR += fpc-fastcgi
+    SUBDIR += fpc-googleapi
     SUBDIR += fpc-httpd22
     SUBDIR += fpc-httpd24
     SUBDIR += free-sa-devel
@@ -193,6 +194,7 @@
     SUBDIR += gallery3
     SUBDIR += gatling
     SUBDIR += gecko-mediaplayer
+    SUBDIR += geckodriver
     SUBDIR += geeklog
     SUBDIR += geeknote
     SUBDIR += geneweb
@@ -223,7 +225,6 @@
     SUBDIR += grafana3
     SUBDIR += grafana4
     SUBDIR += grails
-    SUBDIR += graylog-web-interface
     SUBDIR += gregarius
     SUBDIR += groupoffice
     SUBDIR += grr
@@ -550,7 +551,6 @@
     SUBDIR += nginx-naxsi
     SUBDIR += nibbleblog
     SUBDIR += node
-    SUBDIR += node012
     SUBDIR += node4
     SUBDIR += node6
     SUBDIR += nostromo
@@ -558,7 +558,6 @@
     SUBDIR += npapi-xine
     SUBDIR += npc
     SUBDIR += npm
-    SUBDIR += npm012
     SUBDIR += npm2
     SUBDIR += npm3
     SUBDIR += nspluginwrapper
@@ -580,7 +579,6 @@
     SUBDIR += nuvolaplayer-youtube
     SUBDIR += obhttpd
     SUBDIR += ocaml-net
-    SUBDIR += offline-npm
     SUBDIR += opencart
     SUBDIR += openxmldir
     SUBDIR += opera
@@ -1056,6 +1054,7 @@
     SUBDIR += p5-Image-Delivery
     SUBDIR += p5-Interchange6
     SUBDIR += p5-JE
+    SUBDIR += p5-JSON-API
     SUBDIR += p5-Jemplate
     SUBDIR += p5-Jifty
     SUBDIR += p5-Kwiki
@@ -1459,6 +1458,7 @@
     SUBDIR += pecl-yaf
     SUBDIR += pecl-yaf2
     SUBDIR += pecl-yar
+    SUBDIR += pecl-yar1
     SUBDIR += perlbal
     SUBDIR += pglogd
     SUBDIR += phalcon
@@ -1504,9 +1504,7 @@
     SUBDIR += publicfile
     SUBDIR += punbb
     SUBDIR += pwebstats
-    SUBDIR += py-GinGin
     SUBDIR += py-HTMLgen
-    SUBDIR += py-Lightbox
     SUBDIR += py-MechanicalSoup
     SUBDIR += py-Products.CMFPlone
     SUBDIR += py-Products.PloneLDAP
@@ -1659,6 +1657,7 @@
     SUBDIR += py-flask-restful
     SUBDIR += py-flask-restplus
     SUBDIR += py-flask-restplus08
+    SUBDIR += py-flask-socketio
     SUBDIR += py-flask-sockets
     SUBDIR += py-flask-uploads
     SUBDIR += py-flask-wtf
@@ -1817,7 +1816,6 @@
     SUBDIR += py-routes
     SUBDIR += py-scgi
     SUBDIR += py-scrapy
-    SUBDIR += py-scriptaculous
     SUBDIR += py-seafdav
     SUBDIR += py-seafobj
     SUBDIR += py-searx
@@ -1831,11 +1829,9 @@
     SUBDIR += py-spyne
     SUBDIR += py-surl
     SUBDIR += py-textile
-    SUBDIR += py-tgwebservices
     SUBDIR += py-tmdb3
     SUBDIR += py-tornado
     SUBDIR += py-trello
-    SUBDIR += py-turbogears
     SUBDIR += py-turbogears2
     SUBDIR += py-tvdb_api
     SUBDIR += py-twistedWeb
@@ -1924,6 +1920,7 @@
     SUBDIR += rubygem-acts-as-taggable-on3
     SUBDIR += rubygem-acts_as_taggable
     SUBDIR += rubygem-addressable
+    SUBDIR += rubygem-adsf
     SUBDIR += rubygem-akami
     SUBDIR += rubygem-amazon-ecs
     SUBDIR += rubygem-anemone
@@ -1944,6 +1941,7 @@
     SUBDIR += rubygem-d3_rails-rails4
     SUBDIR += rubygem-dashing
     SUBDIR += rubygem-davclient
+    SUBDIR += rubygem-deckar01-task_list
     SUBDIR += rubygem-domainatrix
     SUBDIR += rubygem-dropzonejs-rails
     SUBDIR += rubygem-em-http-request
@@ -1966,8 +1964,11 @@
     SUBDIR += rubygem-gitlab-flowdock-git-hook
     SUBDIR += rubygem-gitlab-gollum-lib
     SUBDIR += rubygem-gitlab-grack
+    SUBDIR += rubygem-gitlab-turbolinks-classic
+    SUBDIR += rubygem-gollum
     SUBDIR += rubygem-gollum-grit_adapter
     SUBDIR += rubygem-gollum-lib
+    SUBDIR += rubygem-gollum-lib-gitlab
     SUBDIR += rubygem-gollum-rugged_adapter
     SUBDIR += rubygem-gon
     SUBDIR += rubygem-gon-rails4
@@ -1990,13 +1991,14 @@
     SUBDIR += rubygem-httparty
     SUBDIR += rubygem-httpclient
     SUBDIR += rubygem-httpi
+    SUBDIR += rubygem-hurley
     SUBDIR += rubygem-innate
     SUBDIR += rubygem-jekyll
     SUBDIR += rubygem-jekyll-watch
     SUBDIR += rubygem-journey
     SUBDIR += rubygem-jquery-atwho-rails
     SUBDIR += rubygem-jquery-atwho-rails-rails4
-    SUBDIR += rubygem-jquery-rails4
+    SUBDIR += rubygem-jquery-rails
     SUBDIR += rubygem-jquery-scrollto-rails
     SUBDIR += rubygem-jquery-turbolinks
     SUBDIR += rubygem-jquery-ui-rails-rails4
@@ -2010,13 +2012,13 @@
     SUBDIR += rubygem-kaminari-core
     SUBDIR += rubygem-kaminari-rails4
     SUBDIR += rubygem-kensa
+    SUBDIR += rubygem-kubeclient
     SUBDIR += rubygem-layout_yullio_generator
     SUBDIR += rubygem-less
     SUBDIR += rubygem-lighthouse-api
     SUBDIR += rubygem-link_header
     SUBDIR += rubygem-maruku
     SUBDIR += rubygem-mechanize
-    SUBDIR += rubygem-mechanize26
     SUBDIR += rubygem-merb-assets
     SUBDIR += rubygem-merb-core
     SUBDIR += rubygem-merb-haml
@@ -2027,9 +2029,8 @@
     SUBDIR += rubygem-nanoc
     SUBDIR += rubygem-nested_form
     SUBDIR += rubygem-net-http-digest_auth
-    SUBDIR += rubygem-net-http-digest_auth11
     SUBDIR += rubygem-net-http-persistent
-    SUBDIR += rubygem-net-http-persistent25
+    SUBDIR += rubygem-net-http-persistent2
     SUBDIR += rubygem-net-http-pipeline
     SUBDIR += rubygem-nicovideo
     SUBDIR += rubygem-ntlm-http
@@ -2048,9 +2049,9 @@
     SUBDIR += rubygem-rack-mount
     SUBDIR += rubygem-rack-openid
     SUBDIR += rubygem-rack-protection
+    SUBDIR += rubygem-rack-proxy
     SUBDIR += rubygem-rack-ssl
     SUBDIR += rubygem-rack-test
-    SUBDIR += rubygem-rack14
     SUBDIR += rubygem-rack15
     SUBDIR += rubygem-rack16
     SUBDIR += rubygem-rails4
@@ -2063,6 +2064,7 @@
     SUBDIR += rubygem-rdf
     SUBDIR += rubygem-redcloth
     SUBDIR += rubygem-redis-rack
+    SUBDIR += rubygem-redis-rack1
     SUBDIR += rubygem-redis-rails
     SUBDIR += rubygem-redmine_acts_as_taggable_on
     SUBDIR += rubygem-responders
@@ -2081,6 +2083,7 @@
     SUBDIR += rubygem-sawyer
     SUBDIR += rubygem-scrapi
     SUBDIR += rubygem-select2-rails
+    SUBDIR += rubygem-select2-rails3
     SUBDIR += rubygem-selenium-webdriver
     SUBDIR += rubygem-semantic-ui-sass
     SUBDIR += rubygem-simple-rss
@@ -2109,6 +2112,7 @@
     SUBDIR += rubygem-webkit-gtk
     SUBDIR += rubygem-webkit-gtk2
     SUBDIR += rubygem-webmock
+    SUBDIR += rubygem-webpack-rails
     SUBDIR += rubygem-webrobots
     SUBDIR += rubygem-websocket
     SUBDIR += rubygem-websocket-driver
@@ -2203,6 +2207,7 @@
     SUBDIR += tomcat6
     SUBDIR += tomcat7
     SUBDIR += tomcat8
+    SUBDIR += tomcat85
     SUBDIR += tomee
     SUBDIR += trac
     SUBDIR += trac-OhlohWidgetsMacro
@@ -2356,7 +2361,6 @@
     SUBDIR += webtrees
     SUBDIR += wgetpaste
     SUBDIR += wikicalc
-    SUBDIR += wml
     SUBDIR += woof
     SUBDIR += wordpress
     SUBDIR += wsdlpull

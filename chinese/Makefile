@@ -1,4 +1,4 @@
-# $FreeBSD: head/chinese/Makefile 433978 2017-02-13 07:17:41Z kevlo $
+# $FreeBSD: head/chinese/Makefile 436330 2017-03-17 09:32:50Z vanilla $
 #
 
     COMMENT = Chinese support
@@ -57,7 +57,6 @@
     SUBDIR += ibus-libpinyin
     SUBDIR += ibus-pinyin
     SUBDIR += ibus-table-chinese
-    SUBDIR += irssi
     SUBDIR += jis2gb
     SUBDIR += kcfonts
     SUBDIR += kde4-l10n-zh_CN

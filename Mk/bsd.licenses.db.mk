@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: head/Mk/bsd.licenses.db.mk 430772 2017-01-07 07:55:39Z antoine $
+# $FreeBSD: head/Mk/bsd.licenses.db.mk 435394 2017-03-04 13:48:15Z sunpoet $
 
 # ** Please run changes to this file by eadler@ first **
 
@@ -399,8 +399,6 @@ _LICENSE_GROUPS_ZPL21=	GPL OSI
 
 .for lic in ${_LICENSE_LIST}
 .	if !defined(_LICENSE_PERMS_${lic})
-# note that space before = is needed to correctly handle licenses
-# ending with a plus sign
-_LICENSE_PERMS_${lic} =	${_LICENSE_PERMS_DEFAULT}
+_LICENSE_PERMS_${lic}=	${_LICENSE_PERMS_DEFAULT}
 .	endif
 .endfor

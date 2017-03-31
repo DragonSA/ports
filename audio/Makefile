@@ -1,4 +1,4 @@
-# $FreeBSD: head/audio/Makefile 434203 2017-02-16 10:23:40Z tobik $
+# $FreeBSD: head/audio/Makefile 436552 2017-03-20 16:25:23Z tobik $
 #
 
     COMMENT = Audio tools
@@ -15,6 +15,7 @@
     SUBDIR += adplay
     SUBDIR += afsp
     SUBDIR += aften
+    SUBDIR += alac
     SUBDIR += alienwah
     SUBDIR += alsa-lib
     SUBDIR += alsa-plugins
@@ -97,6 +98,7 @@
     SUBDIR += deadbeef-musical-spectrum-plugin
     SUBDIR += deadbeef-playback-status-plugin
     SUBDIR += deadbeef-quick-search-plugin
+    SUBDIR += deadbeef-spectrogram-plugin
     SUBDIR += deadbeef-vu-meter-plugin
     SUBDIR += deadbeef-waveform-seekbar-plugin
     SUBDIR += decibel-audio-player
@@ -399,7 +401,6 @@
     SUBDIR += libmusicbrainz5
     SUBDIR += libnjb
     SUBDIR += libnoise
-    SUBDIR += libofa
     SUBDIR += libogg
     SUBDIR += liboggz
     SUBDIR += libopenspc
@@ -667,6 +668,7 @@
     SUBDIR += rem
     SUBDIR += resid
     SUBDIR += rexima
+    SUBDIR += rezound
     SUBDIR += rhythmbox
     SUBDIR += rio500
     SUBDIR += rioutil
@@ -714,6 +716,7 @@
     SUBDIR += sndio
     SUBDIR += solfege
     SUBDIR += sonata
+    SUBDIR += sonic-visualiser
     SUBDIR += sooperlooper
     SUBDIR += sound-juicer
     SUBDIR += soundconverter
@@ -741,6 +744,7 @@
     SUBDIR += streamtranscoder
     SUBDIR += stymulator
     SUBDIR += suil
+    SUBDIR += supercollider
     SUBDIR += sweep
     SUBDIR += swhplugins
     SUBDIR += taglib

@@ -1,4 +1,4 @@
-# $FreeBSD: head/deskutils/Makefile 434212 2017-02-16 14:25:46Z tobik $
+# $FreeBSD: head/deskutils/Makefile 437071 2017-03-27 18:27:12Z rene $
 #
 
     COMMENT = Things that used to be on the desktop before computers were invented
@@ -72,7 +72,6 @@
     SUBDIR += gnome-screenshot
     SUBDIR += gnome-search-tool
     SUBDIR += gnome-shell-extension-audio-output-switcher
-    SUBDIR += gnome-shell-extension-backslide
     SUBDIR += gnome-shell-extension-coverflow
     SUBDIR += gnome-shell-extension-dashtodock
     SUBDIR += gnome-shell-extension-filesmenu

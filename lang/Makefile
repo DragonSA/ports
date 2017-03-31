@@ -1,4 +1,4 @@
-# $FreeBSD: head/lang/Makefile 434138 2017-02-14 20:27:25Z rene $
+# $FreeBSD: head/lang/Makefile 437330 2017-03-30 21:36:17Z sunpoet $
 #
 
     COMMENT = Programming languages
@@ -50,6 +50,7 @@
     SUBDIR += cparser
     SUBDIR += csharp-mode.el
     SUBDIR += cython
+    SUBDIR += cython3
     SUBDIR += diveintopython
     SUBDIR += dlv
     SUBDIR += dmd1
@@ -154,6 +155,7 @@
     SUBDIR += kturtle
     SUBDIR += lafontaine
     SUBDIR += lci
+    SUBDIR += ldc
     SUBDIR += lfe
     SUBDIR += libhx
     SUBDIR += libobjc2
@@ -183,6 +185,7 @@
     SUBDIR += mosml
     SUBDIR += mtasc
     SUBDIR += munger
+    SUBDIR += myrddin
     SUBDIR += nawk
     SUBDIR += nbc
     SUBDIR += nbfc
@@ -204,6 +207,7 @@
     SUBDIR += ohugs
     SUBDIR += onyx
     SUBDIR += oo2c
+    SUBDIR += opencoarrays
     SUBDIR += opendylan
     SUBDIR += p2c
     SUBDIR += p5-Data-JavaScript
@@ -216,6 +220,7 @@
     SUBDIR += p5-JavaScript-Squish
     SUBDIR += p5-JavaScript-Value-Escape
     SUBDIR += p5-List-MoreUtils
+    SUBDIR += p5-List-MoreUtils-XS
     SUBDIR += p5-Marpa
     SUBDIR += p5-Marpa-PP
     SUBDIR += p5-Marpa-XS

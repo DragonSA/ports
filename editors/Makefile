@@ -1,4 +1,4 @@
-# $FreeBSD: head/editors/Makefile 432633 2017-01-28 16:29:20Z joerg $
+# $FreeBSD: head/editors/Makefile 436480 2017-03-19 09:21:01Z danfe $
 #
 
     COMMENT = Editors
@@ -53,6 +53,7 @@
     SUBDIR += emacs
     SUBDIR += emacs-devel
     SUBDIR += emacs-nox11
+    SUBDIR += encryptpad
     SUBDIR += fileobj
     SUBDIR += flim
     SUBDIR += focuswriter
@@ -201,6 +202,7 @@
     SUBDIR += madedit
     SUBDIR += manedit
     SUBDIR += mg
+    SUBDIR += micro
     SUBDIR += mined
     SUBDIR += morla
     SUBDIR += mousepad

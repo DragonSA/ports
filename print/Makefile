@@ -1,4 +1,4 @@
-# $FreeBSD: head/print/Makefile 433942 2017-02-12 13:50:25Z olivierd $
+# $FreeBSD: head/print/Makefile 437071 2017-03-27 18:27:12Z rene $
 #
 
     COMMENT = Desktop publishing
@@ -6,7 +6,6 @@
     SUBDIR += R-cran-knitr
     SUBDIR += a2pdf
     SUBDIR += a2ps
-    SUBDIR += abc2mtex
     SUBDIR += abcm2ps
     SUBDIR += adobe-cmaps
     SUBDIR += afm
@@ -138,7 +137,6 @@
     SUBDIR += mp-a4
     SUBDIR += mp-letter
     SUBDIR += mpage
-    SUBDIR += musixtex
     SUBDIR += muttprint
     SUBDIR += nenscript
     SUBDIR += okc321
@@ -225,6 +223,7 @@
     SUBDIR += rubygem-prawn-layout
     SUBDIR += rubygem-prawn-security
     SUBDIR += rubygem-prawn-svg
+    SUBDIR += rubygem-prawn_shapes
     SUBDIR += rubygem-rbpdf
     SUBDIR += rubygem-rbpdf-font
     SUBDIR += rubygem-ttfunk

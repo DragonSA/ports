@@ -1,5 +1,5 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
-# $FreeBSD: head/emulators/i386-wine/Makefile.inc 434045 2017-02-13 19:24:56Z dbn $
+# $FreeBSD: head/emulators/i386-wine/Makefile.inc 434857 2017-02-26 11:07:02Z gerald $
 
 PORTNAME=	wine
 PORTVERSION=	2.0
@@ -12,7 +12,7 @@ EXTRACT_SUFX=	.txz
 DIST_SUBDIR=	freebsd:${OSREL:C/\..*//}:x86:64
 
 MAINTAINER=	dbn@FreeBSD.org
-COMMENT?=	32bit Microsoft Windows compatibility environment for 64bit FreeBSD
+COMMENT?=	32-bit Microsoft Windows compatibility environment for 64-bit FreeBSD
 
 LICENSE=        LGPL21 LGPL3
 LICENSE_COMB=   dual
