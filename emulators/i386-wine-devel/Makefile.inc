@@ -1,8 +1,8 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
-# $FreeBSD: head/emulators/i386-wine-devel/Makefile.inc 434857 2017-02-26 11:07:02Z gerald $
+# $FreeBSD: head/emulators/i386-wine-devel/Makefile.inc 437525 2017-04-02 05:39:01Z dbn $
 
 PORTNAME=	wine
-PORTVERSION=	2.1
+PORTVERSION=	2.4
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	LOCAL/dbn/repos/wine/${DIST_SUBDIR}/
@@ -43,7 +43,7 @@ USES=		tar:xz desktop-file-utils
 BUNDLE_LIBS=	yes
 
 GECKO_RUN_DEPENDS=	${DATADIR}/gecko/wine_gecko-2.47-x86.msi:emulators/wine-gecko-devel
-MONO_RUN_DEPENDS=	${DATADIR}/mono/wine-mono-4.6.4.msi:emulators/wine-mono-devel
+MONO_RUN_DEPENDS=	${DATADIR}/mono/wine-mono-4.7.0.msi:emulators/wine-mono-devel
 
 # Included for OPSYS and OSVERSION
 .include <bsd.port.pre.mk>
