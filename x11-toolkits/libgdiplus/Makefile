@@ -1,5 +1,5 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
-# $FreeBSD: head/x11-toolkits/libgdiplus/Makefile 428990 2016-12-20 14:30:33Z dbn $
+# $FreeBSD: head/x11-toolkits/libgdiplus/Makefile 438077 2017-04-09 08:07:00Z dbn $
 
 PORTNAME=	libgdiplus
 PORTVERSION=	4.2
@@ -25,11 +25,18 @@ GNU_CONFIGURE=	yes
 USES=		cpe gettext-runtime gmake jpeg libtool:keepla pathfix pkgconfig
 USE_GNOME=	glib20
 USE_LDCONFIG=	yes
-USE_XORG=	x11 xrender
 CPPFLAGS+=	-I${LOCALBASE}/include
 LDFLAGS+=	-L${LOCALBASE}/lib
 INSTALL_TARGET=	install-strip
 CPE_VENDOR=	mono-project
+
+OPTIONS_DEFINE=	X11
+OPTIONS_DEFAULT=X11
+
+X11_USE=	XORG=x11,xrender
+X11_CONFIGURE_OFF=	--without-x11
+X11_EXTRA_PATCHES_OFF=	${PATCHDIR}/extrapatch-nox11
+X11_USES_OFF=	autoreconf
 
 PLIST_FILES=	lib/libgdiplus.a \
 		lib/libgdiplus.la \
