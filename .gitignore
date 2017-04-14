@@ -3,6 +3,7 @@
 /packages
 /*/*/work
 /INDEX-[0-9]*
+svn-commit.tmp
 *~
 *.rej
 *.orig
