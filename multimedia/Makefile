@@ -1,4 +1,4 @@
-# $FreeBSD: head/multimedia/Makefile 436891 2017-03-25 10:01:27Z rene $
+# $FreeBSD: head/multimedia/Makefile 438205 2017-04-10 19:42:55Z jrm $
 #
 
     COMMENT = Multimedia software
@@ -210,8 +210,10 @@
     SUBDIR += libv4l
     SUBDIR += libva
     SUBDIR += libva-intel-driver
+    SUBDIR += libva-utils
     SUBDIR += libva-vdpau-driver
     SUBDIR += libvdpau
+    SUBDIR += libvdpau-va-gl
     SUBDIR += libvpx
     SUBDIR += libx264
     SUBDIR += libxine
@@ -352,6 +354,7 @@
     SUBDIR += qt5-phonon4-designerplugin
     SUBDIR += qt5-phonon4-gstreamer
     SUBDIR += qt5-phonon4-vlc
+    SUBDIR += QtAV
     SUBDIR += quark
     SUBDIR += quodlibet
     SUBDIR += quvi
@@ -362,9 +365,11 @@
     SUBDIR += replex
     SUBDIR += rox-videothumbnail
     SUBDIR += rtmpdump
+    SUBDIR += rubygem-av
     SUBDIR += rubygem-clutter-gstreamer
     SUBDIR += rubygem-flvtool2
     SUBDIR += rubygem-gstreamer
+    SUBDIR += rubygem-paperclip-av-transcoder
     SUBDIR += sabbu
     SUBDIR += schroedinger
     SUBDIR += shotcut

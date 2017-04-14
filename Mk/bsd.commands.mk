@@ -2,7 +2,7 @@
 #
 # Created by: Gabor Kovesdan <gabor@FreeBSD.org>
 #
-# $FreeBSD: head/Mk/bsd.commands.mk 431796 2017-01-18 13:20:31Z tijl $
+# $FreeBSD: head/Mk/bsd.commands.mk 438265 2017-04-11 14:22:41Z amdmi3 $
 #
 # DO NOT COMMIT CHANGES TO THIS FILE BY YOURSELF, EVEN IF YOU DID NOT GET
 # A RESPONSE FROM THE MAINTAINER(S) WITHIN A REASONABLE TIMEFRAME! ALL
@@ -42,6 +42,7 @@ FILE?=			/usr/bin/file
 FIND?=			/usr/bin/find
 FLEX?=			/usr/bin/flex
 FMT?=			/usr/bin/fmt
+FMT_80?=		${FMT} 75 79
 GMAKE?=			gmake
 GREP?=			/usr/bin/grep
 GUNZIP_CMD?=		/usr/bin/gunzip -f

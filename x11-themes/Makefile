@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11-themes/Makefile 437071 2017-03-27 18:27:12Z rene $
+# $FreeBSD: head/x11-themes/Makefile 437672 2017-04-03 19:37:12Z antoine $
 #
 
     COMMENT = X11 themes
@@ -111,7 +111,6 @@
     SUBDIR += kde-icons-nuvola
     SUBDIR += kde-icons-umicons
     SUBDIR += kde4-base-artwork
-    SUBDIR += kde4-icons-oxygen
     SUBDIR += kde4-style-bespin
     SUBDIR += kde4-style-nitrogen
     SUBDIR += kde4-style-oxygen-transparent

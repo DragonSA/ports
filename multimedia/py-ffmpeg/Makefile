@@ -1,5 +1,5 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
-# $FreeBSD: head/multimedia/py-ffmpeg/Makefile 428352 2016-12-11 15:22:47Z jbeich $
+# $FreeBSD: head/multimedia/py-ffmpeg/Makefile 438214 2017-04-10 21:49:02Z mat $
 
 PORTNAME=	ffmpeg
 PORTVERSION=	1.2.4
@@ -7,8 +7,6 @@ PORTREVISION=	5
 CATEGORIES=	multimedia python
 MASTER_SITES=	GH LOCAL/dbn/${PORTNAME}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
-# Should not be setting DISTNAME, USE_GITHUB already sets a very nice and unique distname.
-DISTNAME=	${PORTNAME}-android-${PORTVERSION}
 
 MAINTAINER=	dbn@FreeBSD.org
 COMMENT=	Python bindings for FFmpeg

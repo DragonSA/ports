@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/Makefile 436912 2017-03-25 18:08:50Z mat $
+# $FreeBSD: head/textproc/Makefile 438191 2017-04-10 17:11:46Z rene $
 #
 
     COMMENT = Text processing utilities (does not include desktop publishing)
@@ -219,13 +219,13 @@
     SUBDIR += gnome-doc-utils
     SUBDIR += gnome-spell
     SUBDIR += gnugrep
-    SUBDIR += go-text
     SUBDIR += go.text
     SUBDIR += goldendict
     SUBDIR += google-ctemplate
     SUBDIR += google-translate-cli
     SUBDIR += gpp
     SUBDIR += grap
+    SUBDIR += greple
     SUBDIR += grc-aspell
     SUBDIR += groff
     SUBDIR += groonga
@@ -372,8 +372,8 @@
     SUBDIR += kibana43
     SUBDIR += kibana44
     SUBDIR += kibana45
-    SUBDIR += kibana50
-    SUBDIR += kibana50-x-pack
+    SUBDIR += kibana5
+    SUBDIR += kibana5-x-pack
     SUBDIR += kiss-templates
     SUBDIR += kmfl-european-latin
     SUBDIR += kmfl-khmer
@@ -1122,7 +1122,6 @@
     SUBDIR += p5-XML-XPath
     SUBDIR += p5-XML-XPathEngine
     SUBDIR += p5-XML-XQL
-    SUBDIR += p5-XML-XSH
     SUBDIR += p5-XML-XSLT
     SUBDIR += p5-XML-XUpdate-LibXML
     SUBDIR += p5-YAML
@@ -1592,6 +1591,7 @@
     SUBDIR += scss
     SUBDIR += sdcv
     SUBDIR += sdf
+    SUBDIR += sdif
     SUBDIR += sdocbook-xml
     SUBDIR += sdom
     SUBDIR += senna
@@ -1687,6 +1687,7 @@
     SUBDIR += uim-m17nlib
     SUBDIR += uim-qt4
     SUBDIR += uml2svg
+    SUBDIR += uncle
     SUBDIR += uncrustify
     SUBDIR += uni2ascii
     SUBDIR += unoconv

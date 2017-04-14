@@ -1,9 +1,9 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
-# $FreeBSD: head/x11-toolkits/py-kivy/Makefile 424560 2016-10-24 10:18:50Z mat $
+# $FreeBSD: head/x11-toolkits/py-kivy/Makefile 438490 2017-04-14 05:30:25Z jbeich $
 
 PORTNAME=	kivy
 PORTVERSION=	1.9.1
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11-toolkits python
 MASTER_SITES=	GH LOCAL/dbn/${PORTNAME}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -60,7 +60,7 @@ GSTREAMER_MAKE_ENV_OFF=	USE_GSTREAMER=0
 GSTREAMER_LIB_DEPENDS=	libgstreamer-1.0.so:multimedia/gstreamer1
 GSTREAMER_RUN_DEPENDS=	${PYTHON_SITELIBDIR}/pygst.py:multimedia/py-gstreamer
 GSTREAMER_USES=		pkgconfig
-OPENCV_RUN_DEPENDS=	${PYTHON_SITELIBDIR}/cv.py:graphics/py-opencv2
+OPENCV_RUN_DEPENDS=	${PYTHON_SITELIBDIR}/cv.py:graphics/py-opencv
 PIL_DESC=		Text and window rendering support via Pillow
 PIL_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pillow>0:graphics/py-pillow
 PYGAME_DESC=		Window, text and image rendering support via PyGame

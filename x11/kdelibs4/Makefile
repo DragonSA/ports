@@ -1,9 +1,9 @@
 # Created by: arved@FreeBSD.org
-# $FreeBSD: head/x11/kdelibs4/Makefile 437020 2017-03-27 10:49:43Z rakuco $
+# $FreeBSD: head/x11/kdelibs4/Makefile 437622 2017-04-03 12:28:59Z rakuco $
 
 PORTNAME=	kdelibs
 PORTVERSION=	${KDE4_KDELIBS_VERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	x11 kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -33,7 +33,7 @@ RUN_DEPENDS=	${LOCALBASE}/share/icons/hicolor/index.theme:misc/hicolor-icon-them
 USES=		cmake:outsource fam gettext grantlee:4 jpeg kde:4 perl5 \
 		shared-mime-info shebangfix tar:xz ssl
 USE_GNOME=	libxml2 libxslt
-USE_KDE=	oxygen-icons4 \
+USE_KDE=	oxygen-icons5 \
 		attica automoc4 ontologies soprano strigi
 USE_QT4=	corelib dbus declarative designer_build gui \
 		network opengl phonon qt3support \

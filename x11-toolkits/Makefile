@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11-toolkits/Makefile 435066 2017-02-28 14:58:33Z sunpoet $
+# $FreeBSD: head/x11-toolkits/Makefile 437594 2017-04-03 07:14:33Z bapt $
 #
 
     COMMENT = X11 toolkits
@@ -22,8 +22,6 @@
     SUBDIR += fpc-xforms
     SUBDIR += fxscintilla
     SUBDIR += gai
-    SUBDIR += gal2
-    SUBDIR += gal2-reference
     SUBDIR += gdl
     SUBDIR += girara
     SUBDIR += gnocl
@@ -107,7 +105,6 @@
     SUBDIR += libgnomeui
     SUBDIR += libgnomeui-reference
     SUBDIR += libgnomeuimm26
-    SUBDIR += libgtksourceviewmm
     SUBDIR += libsexy
     SUBDIR += libsexymm
     SUBDIR += libunique3
@@ -284,7 +281,6 @@
     SUBDIR += viewklass
     SUBDIR += vte
     SUBDIR += vte-reference
-    SUBDIR += vte290
     SUBDIR += vte3
     SUBDIR += vtkfox
     SUBDIR += wlc

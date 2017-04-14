@@ -1,4 +1,4 @@
-# $FreeBSD: head/deskutils/Makefile 437071 2017-03-27 18:27:12Z rene $
+# $FreeBSD: head/deskutils/Makefile 437486 2017-04-01 21:20:01Z bapt $
 #
 
     COMMENT = Things that used to be on the desktop before computers were invented
@@ -57,14 +57,12 @@
     SUBDIR += genius
     SUBDIR += gkrellm-reminder2
     SUBDIR += glabels
-    SUBDIR += gnome-blog
     SUBDIR += gnome-calendar
     SUBDIR += gnome-characters
     SUBDIR += gnome-clocks
     SUBDIR += gnome-contacts
     SUBDIR += gnome-dictionary
     SUBDIR += gnome-documents
-    SUBDIR += gnome-epub-thumbnailer
     SUBDIR += gnome-font-viewer
     SUBDIR += gnome-initial-setup
     SUBDIR += gnome-maps
@@ -123,7 +121,7 @@
     SUBDIR += jjclient
     SUBDIR += jlj
     SUBDIR += kcharselect
-    SUBDIR += kchmviewer-kde4
+    SUBDIR += kchmviewer
     SUBDIR += kdeconnect
     SUBDIR += kdepim4
     SUBDIR += kdepim4-runtime

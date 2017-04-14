@@ -1,4 +1,4 @@
-# $FreeBSD: head/java/Makefile 435047 2017-02-28 11:59:59Z rene $
+# $FreeBSD: head/java/Makefile 437452 2017-04-01 17:58:59Z jmd $
 #
 
     COMMENT = Java language support
@@ -90,6 +90,7 @@
     SUBDIR += junit
     SUBDIR += jxgrabkey
     SUBDIR += langspec
+    SUBDIR += lightweight-java-profiler
     SUBDIR += linux-oracle-jdk18
     SUBDIR += linux-oracle-jre18
     SUBDIR += mmake

@@ -1,4 +1,4 @@
-# $FreeBSD: head/archivers/Makefile 436490 2017-03-19 12:58:36Z rene $
+# $FreeBSD: head/archivers/Makefile 437751 2017-04-04 20:01:16Z sunpoet $
 #
 
     COMMENT = Archivers
@@ -31,7 +31,6 @@
     SUBDIR += freeze
     SUBDIR += gcab
     SUBDIR += gcpio
-    SUBDIR += gnome-autoar
     SUBDIR += go-compress
     SUBDIR += grzip
     SUBDIR += gtar
@@ -142,8 +141,8 @@
     SUBDIR += pecl-lzf
     SUBDIR += pecl-phk
     SUBDIR += pecl-rar
-    SUBDIR += pecl-snappy
     SUBDIR += php-horde_lz4
+    SUBDIR += php-snappy
     SUBDIR += php56-bz2
     SUBDIR += php56-phar
     SUBDIR += php56-zip

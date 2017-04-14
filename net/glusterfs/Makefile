@@ -1,8 +1,8 @@
-# $FreeBSD: head/net/glusterfs/Makefile 436247 2017-03-15 14:45:30Z mat $
+# $FreeBSD: head/net/glusterfs/Makefile 437439 2017-04-01 15:23:30Z gerald $
 
 PORTNAME=	glusterfs
 PORTVERSION=	3.9.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://bits.gluster.org/pub/gluster/glusterfs/src/
 

@@ -1,4 +1,4 @@
-# $FreeBSD: head/sysutils/Makefile 437240 2017-03-29 21:05:42Z swills $
+# $FreeBSD: head/sysutils/Makefile 438212 2017-04-10 21:15:37Z lifanov $
 #
 
     COMMENT = System utilities
@@ -461,8 +461,6 @@
     SUBDIR += intel-nvmupdate
     SUBDIR += intel-pcm
     SUBDIR += intel-qcu
-    SUBDIR += iocage
-    SUBDIR += iocage-devel
     SUBDIR += iocell
     SUBDIR += iogen
     SUBDIR += iograph
@@ -480,7 +478,6 @@
     SUBDIR += istatserver
     SUBDIR += jadm
     SUBDIR += jail-primer
-    SUBDIR += jail2
     SUBDIR += jailadmin
     SUBDIR += jailctl
     SUBDIR += jaildaemon
@@ -712,6 +709,7 @@
     SUBDIR += p5-Filesys-Statvfs
     SUBDIR += p5-Fuse
     SUBDIR += p5-Fuse-Simple
+    SUBDIR += p5-Giovanni
     SUBDIR += p5-Iterator-File
     SUBDIR += p5-Lchown
     SUBDIR += p5-Linux-Cpuinfo
@@ -845,7 +843,6 @@
     SUBDIR += ptools
     SUBDIR += puppet-lint
     SUBDIR += puppet-mode.el
-    SUBDIR += puppet38
     SUBDIR += puppet4
     SUBDIR += puppetserver
     SUBDIR += pv
@@ -863,6 +860,7 @@
     SUBDIR += py-diffoscope
     SUBDIR += py-dirsync
     SUBDIR += py-dlipower
+    SUBDIR += py-docker
     SUBDIR += py-drmaa
     SUBDIR += py-execnet
     SUBDIR += py-ezjailremote

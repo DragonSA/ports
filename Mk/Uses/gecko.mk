@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/gecko.mk 436673 2017-03-22 01:46:19Z jbeich $
+# $FreeBSD: head/Mk/Uses/gecko.mk 438316 2017-04-11 21:25:36Z jbeich $
 #
 # Handle dependency of different gecko based applications
 #
@@ -36,13 +36,13 @@ RUN_DEPENDS+=	libxul>=45:www/libxul
 
 .elif ${gecko_ARGS:Mfirefox}
 
-_GECKO_DEFAULT_VERSION=	45
-_GECKO_VERSIONS=		45 52
+_GECKO_DEFAULT_VERSION=	52
+_GECKO_VERSIONS=		52 53
 _GECKO_TYPE=	firefox
 
 # Dependence lines for different Firefox versions
-45_DEPENDS=		${LOCALBASE}/lib/firefox/firefox:www/firefox-esr
-52_DEPENDS=		${LOCALBASE}/lib/firefox/firefox:www/firefox
+52_DEPENDS=		${LOCALBASE}/lib/firefox/firefox:www/firefox-esr
+53_DEPENDS=		${LOCALBASE}/lib/firefox/firefox:www/firefox
 
 .if exists(${LOCALBASE}/bin/firefox)
 _GECKO_INSTALLED_VER!=	${LOCALBASE}/bin/firefox --version 2>/dev/null

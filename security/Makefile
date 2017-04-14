@@ -1,4 +1,4 @@
-# $FreeBSD: head/security/Makefile 436897 2017-03-25 11:44:37Z bapt $
+# $FreeBSD: head/security/Makefile 438208 2017-04-10 20:36:34Z lifanov $
 #
 
     COMMENT = Security tools
@@ -9,6 +9,7 @@
     SUBDIR += R-cran-ROAuth
     SUBDIR += R-cran-digest
     SUBDIR += R-cran-openssl
+    SUBDIR += acmetool
     SUBDIR += acme-client
     SUBDIR += aescrypt
     SUBDIR += aespipe
@@ -435,8 +436,6 @@
     SUBDIR += openvpn-auth-radius
     SUBDIR += openvpn-devel
     SUBDIR += openvpn-mbedtls
-    SUBDIR += openvpn23
-    SUBDIR += openvpn23-polarssl
     SUBDIR += ophcrack
     SUBDIR += orthrus
     SUBDIR += osiris
@@ -843,6 +842,7 @@
     SUBDIR += py-acme
     SUBDIR += py-acme-tiny
     SUBDIR += py-artifacts
+    SUBDIR += py-backports.ssl_match_hostname
     SUBDIR += py-bcrypt
     SUBDIR += py-borg.localrole
     SUBDIR += py-cerealizer
@@ -857,6 +857,7 @@
     SUBDIR += py-dfdatetime
     SUBDIR += py-dfvfs
     SUBDIR += py-dfwinreg
+    SUBDIR += py-docker-pycreds
     SUBDIR += py-ecdsa
     SUBDIR += py-ed25519ll
     SUBDIR += py-fail2ban

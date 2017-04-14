@@ -1,4 +1,4 @@
-# $FreeBSD: head/graphics/Makefile 436655 2017-03-21 21:03:48Z tobik $
+# $FreeBSD: head/graphics/Makefile 438490 2017-04-14 05:30:25Z jbeich $
 #
 
     COMMENT = Graphics tools and libraries
@@ -284,7 +284,6 @@
     SUBDIR += gocr
     SUBDIR += goocanvas
     SUBDIR += goocanvas2
-    SUBDIR += goocanvasmm
     SUBDIR += goocanvasmm2
     SUBDIR += goom
     SUBDIR += gource
@@ -292,6 +291,7 @@
     SUBDIR += gphoto2
     SUBDIR += gpicview
     SUBDIR += gpsmanshp
+    SUBDIR += gpu-firmware-kmod
     SUBDIR += gracula
     SUBDIR += grads
     SUBDIR += grafx2
@@ -620,9 +620,9 @@
     SUBDIR += opencolorio
     SUBDIR += opencolorio-tools
     SUBDIR += opencsg
-    SUBDIR += opencv2
-    SUBDIR += opencv2-core
-    SUBDIR += opencv2-java
+    SUBDIR += opencv
+    SUBDIR += opencv-core
+    SUBDIR += opencv-java
     SUBDIR += opendx
     SUBDIR += opengl-man
     SUBDIR += opengtl
@@ -641,6 +641,7 @@
     SUBDIR += osgearth
     SUBDIR += oyranos
     SUBDIR += p5-Acme-Steganography-Image-Png
+    SUBDIR += p5-Alien-Gimp
     SUBDIR += p5-Barcode-ZBar
     SUBDIR += p5-CAD-Drawing
     SUBDIR += p5-CAD-Drawing-Template
@@ -861,7 +862,7 @@
     SUBDIR += py-ming
     SUBDIR += py-nwdiag
     SUBDIR += py-opencolorio
-    SUBDIR += py-opencv2
+    SUBDIR += py-opencv
     SUBDIR += py-openexr
     SUBDIR += py-openimageio
     SUBDIR += py-paint

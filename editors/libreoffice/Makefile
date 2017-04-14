@@ -1,8 +1,8 @@
-# $FreeBSD: head/editors/libreoffice/Makefile 437081 2017-03-27 20:14:16Z jkim $
+# $FreeBSD: head/editors/libreoffice/Makefile 437755 2017-04-04 20:38:43Z bapt $
 
 .include "${.CURDIR}/Makefile.common"
 
-PORTREVISION=	0
+PORTREVISION=	2
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${PORTVERSION}/ \
 		http://dev-www.libreoffice.org/src/:src \
 		http://dev-www.libreoffice.org/extern/:ext
@@ -103,7 +103,7 @@ WANT_GNOME=	yes
 
 OPTIONS_DEFINE=	CUPS GNOME GTK2 GTK3 JAVA KDE4 MMEDIA PGSQL SDK SYSTRAY \
 		TEST VERBOSE WEBDAV
-OPTIONS_DEFAULT=	CUPS GTK2
+OPTIONS_DEFAULT=	CUPS GTK2 MMEDIA
 
 GTK3_DESC=	GTK+ 3 GUI toolkit support (experimental)
 JAVA_DESC=	Add Java support (XML filters, macros)

@@ -1,4 +1,4 @@
-# $FreeBSD: head/emulators/Makefile 435358 2017-03-03 18:53:58Z rene $
+# $FreeBSD: head/emulators/Makefile 437353 2017-03-31 13:10:02Z jbeich $
 #
 
     COMMENT = Emulators for other operating systems
@@ -108,7 +108,6 @@
     SUBDIR += pipelight
     SUBDIR += playonbsd
     SUBDIR += ppsspp
-    SUBDIR += ppsspp-qt4
     SUBDIR += ppsspp-qt5
     SUBDIR += py-gns3-converter
     SUBDIR += py-nova

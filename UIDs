@@ -1,4 +1,4 @@
-# $FreeBSD: head/UIDs 437280 2017-03-30 10:55:14Z mmokhi $
+# $FreeBSD: head/UIDs 437923 2017-04-07 13:46:28Z swills $
 # Please keep this file sorted by UID!
 # Please pick an empty slot when available and also consider base values from
 # /usr/src/etc/master.passwd
@@ -420,7 +420,7 @@ serf:*:470:470::0:0:Serf Daemon:/nonexistent:/usr/sbin/nologin
 vault:*:471:471::0:0:Vault Daemon:/nonexistent:/usr/sbin/nologin
 nomad:*:472:472::0:0:Nomad Daemon:/var/tmp/nomad:/usr/sbin/nologin
 minio:*:473:473::0:0:Minio Daemon:/var/tmp/minio:/usr/sbin/nologin
-# free: 474
+gitlab-runner:*:474:474::0:0:GitLab Runner Daemon:/var/tmp/minio:/usr/sbin/nologin
 # free: 475
 # free: 476
 # free: 477

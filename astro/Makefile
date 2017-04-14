@@ -1,4 +1,4 @@
-# $FreeBSD: head/astro/Makefile 426943 2016-11-23 16:43:27Z amdmi3 $
+# $FreeBSD: head/astro/Makefile 437603 2017-04-03 08:40:33Z wen $
 #
 
     COMMENT = Astronomical ports
@@ -49,6 +49,7 @@
     SUBDIR += osmosis
     SUBDIR += p5-Astro
     SUBDIR += p5-Astro-ADS
+    SUBDIR += p5-Astro-App-Satpass2
     SUBDIR += p5-Astro-Catalog
     SUBDIR += p5-Astro-Constants
     SUBDIR += p5-Astro-Coords

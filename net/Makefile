@@ -1,4 +1,4 @@
-# $FreeBSD: head/net/Makefile 437280 2017-03-30 10:55:14Z mmokhi $
+# $FreeBSD: head/net/Makefile 438446 2017-04-13 14:31:05Z feld $
 #
 
     COMMENT = Networking tools
@@ -572,6 +572,7 @@
     SUBDIR += p5-MaxMind-DB-Writer
     SUBDIR += p5-Net
     SUBDIR += p5-Net-AMQP
+    SUBDIR += p5-Net-AMQP-RabbitMQ
     SUBDIR += p5-Net-APNS
     SUBDIR += p5-Net-APNs-Extended
     SUBDIR += p5-Net-ARP
@@ -675,6 +676,7 @@
     SUBDIR += p5-Net-NBsocket
     SUBDIR += p5-Net-NIS
     SUBDIR += p5-Net-NIS-Listgroup
+    SUBDIR += p5-Net-NTP
     SUBDIR += p5-Net-Nessus-XMLRPC
     SUBDIR += p5-Net-Nmsg
     SUBDIR += p5-Net-OAuth
@@ -991,6 +993,7 @@
     SUBDIR += py-libnet
     SUBDIR += py-magic-wormhole
     SUBDIR += py-matrix-synapse
+    SUBDIR += py-matrix-synapse-ldap3
     SUBDIR += py-maxminddb
     SUBDIR += py-miniupnpc
     SUBDIR += py-msrplib
@@ -1052,6 +1055,7 @@
     SUBDIR += py-socketio-client
     SUBDIR += py-speedtest-cli
     SUBDIR += py-sshuttle
+    SUBDIR += py-stomp.py
     SUBDIR += py-suds
     SUBDIR += py-suds-jurko
     SUBDIR += py-terminado
@@ -1216,6 +1220,7 @@
     SUBDIR += rubygem-ruby-growl
     SUBDIR += rubygem-ruby-openid
     SUBDIR += rubygem-ruby-yadis
+    SUBDIR += rubygem-ruby_smb
     SUBDIR += rubygem-rubyntlm
     SUBDIR += rubygem-rubyntlm05
     SUBDIR += rubygem-rubytter

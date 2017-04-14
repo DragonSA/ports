@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/linux.mk 432953 2017-01-31 20:32:46Z tijl $
+# $FreeBSD: head/Mk/Uses/linux.mk 437366 2017-03-31 15:17:42Z mat $
 #
 # Ports Linux compatibility framework
 #
@@ -295,7 +295,6 @@ EXTRACT_ONLY?=		${DISTFILES_${LINUX_ARCH:S/x86_64/amd64/}:C/:[^:]+$//}
 .endif
 .if !empty(SRC_DISTFILES) && (make(makesum) || defined(PACKAGE_BUILDING))
 DISTFILES+=		${SRC_DISTFILES}
-ALWAYS_KEEP_DISTFILES=	yes
 .endif
 
 # This triggers on amd64 with DEFAULT_VERSIONS+=linux=c6 (i386 Linux) and

@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11/Makefile 436420 2017-03-18 15:42:22Z danfe $
+# $FreeBSD: head/x11/Makefile 438191 2017-04-10 17:11:46Z rene $
 #
 
     COMMENT = Ports to support the X window system
@@ -33,6 +33,7 @@
     SUBDIR += cinnamon-session
     SUBDIR += cl-clx
     SUBDIR += compositeproto
+    SUBDIR += controllermap
     SUBDIR += cool-retro-term
     SUBDIR += damageproto
     SUBDIR += decurs
@@ -207,7 +208,6 @@
     SUBDIR += lsw
     SUBDIR += luit
     SUBDIR += lumina
-    SUBDIR += lumina-i18n
     SUBDIR += lupe
     SUBDIR += lxde-meta
     SUBDIR += lxhotkey

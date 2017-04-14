@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/ssl.mk 421556 2016-09-08 14:13:01Z mat $
+# $FreeBSD: head/Mk/Uses/ssl.mk 438453 2017-04-13 16:52:09Z mat $
 #
 # Handle dependency on *ssl ports.
 #
@@ -64,24 +64,6 @@ check-depends::
 	@${FALSE}
 .  endif
 
-# OpenSSL in the base system may not include IDEA for patent licensing reasons.
-.  if defined(MAKE_IDEA) && !defined(OPENSSL_IDEA)
-OPENSSL_IDEA=		${MAKE_IDEA}
-.  else
-OPENSSL_IDEA?=		NO
-.  endif
-
-.  if ${OPENSSL_IDEA} == "NO"
-# XXX This is a hack to work around the fact that /etc/make.conf clobbers
-#     our CFLAGS. It might not be enough for all future ports.
-.    if defined(HAS_CONFIGURE)
-CFLAGS+=		-DNO_IDEA
-.    else
-OPENSSL_CFLAGS+=	-DNO_IDEA
-.    endif
-MAKE_ARGS+=		OPENSSL_CFLAGS="${OPENSSL_CFLAGS}"
-.  endif
-
 .else # ${SSL_DEFAULT} != base
 
 OPENSSLBASE=		${LOCALBASE}
@@ -93,6 +75,26 @@ OPENSSL_PORT=		security/${SSL_DEFAULT}
 
 .  if !defined(OPENSSL_SHLIBVER)
 .error You are using an unsupported SSL provider ${SSL_DEFAULT}
+.  endif
+
+.  if defined(BROKEN_OPENSSL) && ${BROKEN_OPENSSL:M${SSL_DEFAULT}}
+.    if defined(BROKEN_OPENSSL_REASON_${SSL_DEFAULT})
+BROKEN=	${BROKEN_OPENSSL_REASON_${SSL_DEFAULT}}
+.    elif defined(BROKEN_OPENSSL_REASON)
+BROKEN=	${BROKEN_OPENSSL_REASON}
+.    else
+BROKEN=	does not build with DEFAULT_VERSIONS+=ssl=${SSL_DEFAULT}
+.    endif
+.  endif
+
+.  if defined(IGNORE_OPENSSL) && ${IGNORE_OPENSSL:M${SSL_DEFAULT}}
+.    if defined(IGNORE_OPENSSL_REASON_${SSL_DEFAULT})
+IGNORE=	${IGNORE_OPENSSL_REASON_${SSL_DEFAULT}}
+.    elif defined(IGNORE_OPENSSL_REASON)
+IGNORE=	${IGNORE_OPENSSL_REASON}
+.    else
+IGNORE=	not compatible DEFAULT_VERSIONS+=ssl=${SSL_DEFAULT}
+.    endif
 .  endif
 
 OPENSSLDIR?=		${OPENSSLBASE}/openssl

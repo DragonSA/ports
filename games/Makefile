@@ -1,4 +1,4 @@
-# $FreeBSD: head/games/Makefile 437129 2017-03-28 13:49:55Z amdmi3 $
+# $FreeBSD: head/games/Makefile 438478 2017-04-13 20:03:56Z amdmi3 $
 #
 
     COMMENT = Games and related software
@@ -13,6 +13,7 @@
     SUBDIR += 4stattack
     SUBDIR += 54321
     SUBDIR += 7kaa
+    SUBDIR += 90secondportraits
     SUBDIR += CaribbeanStud
     SUBDIR += HeroesOfMightAndMagic
     SUBDIR += KnightCap
@@ -77,6 +78,7 @@
     SUBDIR += battalion
     SUBDIR += battletanks
     SUBDIR += belooted
+    SUBDIR += billardgl
     SUBDIR += biloba
     SUBDIR += biniax2
     SUBDIR += biorythm

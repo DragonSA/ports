@@ -1,4 +1,4 @@
-# $FreeBSD: head/audio/Makefile 436552 2017-03-20 16:25:23Z tobik $
+# $FreeBSD: head/audio/Makefile 438383 2017-04-12 16:30:34Z ehaupt $
 #
 
     COMMENT = Audio tools
@@ -214,8 +214,6 @@
     SUBDIR += gmtp
     SUBDIR += gmusicbrowser
     SUBDIR += gnaural
-    SUBDIR += gnome-audio
-    SUBDIR += gnome-media
     SUBDIR += gnome-music
     SUBDIR += gnomoradio
     SUBDIR += gnormalize
@@ -619,6 +617,7 @@
     SUBDIR += portaudio
     SUBDIR += praat
     SUBDIR += pragha
+    SUBDIR += protracker
     SUBDIR += puddletag
     SUBDIR += pulseaudio
     SUBDIR += pulseaudio-module-sndio
@@ -688,7 +687,7 @@
     SUBDIR += s3mod
     SUBDIR += sayonara
     SUBDIR += sbagen
-    SUBDIR += schism
+    SUBDIR += schismtracker
     SUBDIR += scrobbler
     SUBDIR += sdl2_mixer
     SUBDIR += sdl_mixer

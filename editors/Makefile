@@ -1,4 +1,4 @@
-# $FreeBSD: head/editors/Makefile 436480 2017-03-19 09:21:01Z danfe $
+# $FreeBSD: head/editors/Makefile 438324 2017-04-12 02:27:26Z shaun $
 #
 
     COMMENT = Editors
@@ -196,7 +196,6 @@
     SUBDIR += libreoffice-vec
     SUBDIR += libreoffice-xh
     SUBDIR += libreoffice-zu
-    SUBDIR += libreoffice4
     SUBDIR += linux-sublime
     SUBDIR += linux-sublime3
     SUBDIR += madedit
@@ -228,6 +227,7 @@
     SUBDIR += poedit
     SUBDIR += psgml
     SUBDIR += puff
+    SUBDIR += py-editorconfig
     SUBDIR += py-room
     SUBDIR += rox-edit
     SUBDIR += scite
