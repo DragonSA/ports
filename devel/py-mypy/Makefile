@@ -1,8 +1,8 @@
 # Created by: Florian Limberger <flo@snakeoilproductions.net>
-# $FreeBSD: head/devel/py-mypy/Makefile 434504 2017-02-21 06:10:11Z dbn $
+# $FreeBSD: head/devel/py-mypy/Makefile 438497 2017-04-14 07:53:55Z dbn $
 
 PORTNAME=	mypy
-PORTVERSION=	0.471
+PORTVERSION=	0.501
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -14,7 +14,7 @@ LICENSE=	MIT PSFL
 LICENSE_COMB=	multi
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}typed-ast>=0.6.3:devel/py-typed-ast
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}typed-ast>=1.0.0:devel/py-typed-ast
 
 NO_ARCH=	yes
 USES=		python:3.3+
