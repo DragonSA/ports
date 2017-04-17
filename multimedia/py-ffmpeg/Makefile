@@ -1,5 +1,5 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
-# $FreeBSD: head/multimedia/py-ffmpeg/Makefile 438514 2017-04-14 14:17:25Z dbn $
+# $FreeBSD: head/multimedia/py-ffmpeg/Makefile 438742 2017-04-17 18:50:58Z dbn $
 
 PORTNAME=	ffmpeg
 PORTVERSION=	1.2.4
@@ -18,7 +18,7 @@ BUILD_DEPENDS=	cython:lang/cython
 LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg
 
 DEPRECATED=	Depreciated upstream in favour of ffpyplayer
-EXPIRATION_DATE=2017-06-31
+EXPIRATION_DATE=2017-06-30
 
 MAKE_ENV=	FFMPEG_LIBRARIES="SDL SDL_mixer" FFMPEG_LIBRARY_DIRS=${LOCALBASE}/lib \
 		FFMPEG_INCLUDES=${LOCALBASE}/include/SDL FFMPEG_ROOT=${LOCALBASE}
