@@ -4,8 +4,6 @@
 PORTNAME=	mono
 PORTVERSION=	4.8.1.0
 CATEGORIES=	lang
-DISTFILES=	monolite-${MONOLITE_VERSION}-latest.tar.gz:monolite
-MASTER_SITES=	http://download.mono-project.com/monolite/:monolite
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Open source implementation of .NET Development Framework
@@ -17,6 +15,12 @@ BUILD_DEPENDS=	p5-XML-Parser>=0:textproc/p5-XML-Parser \
 		bash:shells/bash
 LIB_DEPENDS=	libinotify.so:devel/libinotify
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pillow>=0:graphics/py-pillow
+
+OPTIONS_DEFINE=	MONOLITE
+OPTIONS_DEFAULT=MONOLITE
+MONOLITE_DESC=	Use monolite to bootstrap mcs (otherwise use installed mcs)
+MONOLITE_DISTFILES=	monolite-${MONOLITE_VERSION}-latest.tar.gz:monolite
+MONOLITE_MASTER_SITES=	http://download.mono-project.com/monolite/:monolite
 
 MONOLITE_VERSION=	156
 USE_GITHUB=	yes
@@ -54,7 +58,12 @@ TEST_WRKSRC=	${WRKSRC}/mono/tests
 ONLY_FOR_ARCHS=	i386 amd64 armv6 powerpc
 PORTSCOUT=	limit:^\d+\.\d+\.[1-9]\d*
 
-post-extract:
+LOCALBASE?=	/usr/local
+.if !exists(${LOCALBASE}/bin/mcs)
+OPTIONS_SLAVE=	MONOLITE
+.endif
+
+post-extract-MONOLITE-on:
 	${MKDIR} ${WRKSRC}/mcs/class/lib
 	${MV} ${WRKDIR}/monolite-${MONOLITE_VERSION}-latest ${WRKSRC}/mcs/class/lib/monolite
 
