@@ -4,7 +4,8 @@
 PORTNAME=	mono
 PORTVERSION=	4.8.1.0
 CATEGORIES=	lang
-MASTER_SITES=	http://download.mono-project.com/sources/${PORTNAME}/
+DISTFILES=	monolite-${MONOLITE_VERSION}-latest.tar.gz:monolite
+MASTER_SITES=	http://download.mono-project.com/monolite/:monolite
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Open source implementation of .NET Development Framework
@@ -15,44 +16,60 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BUILD_DEPENDS=	p5-XML-Parser>=0:textproc/p5-XML-Parser \
 		bash:shells/bash
 LIB_DEPENDS=	libinotify.so:devel/libinotify
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pillow>=0:graphics/py-pillow
 
-USES=		bison compiler:c11 cpe gettext gmake iconv libtool pathfix \
-		perl5 python:run shebangfix tar:bzip2
+MONOLITE_VERSION=	156
+USE_GITHUB=	yes
+GH_TAGNAME=	${PORTNAME}-${PORTVERSION}
+GH_TUPLE=	mono:Lucene.Net.Light:85978b7:1/external/Lucene.Net.Light \
+		mono:Newtonsoft.Json:471c3e0:2/external/Newtonsoft.Json \
+		mono:NuGet.BuildTasks:04bdab5:3/external/nuget-buildtasks \
+		mono:aspnetwebstack:e77b12e:4/external/aspnetwebstack \
+		mono:buildtools:9b6ee86:5/external/buildtools \
+		mono:cecil:2b39856:6/external/cecil \
+		mono:cecil:33d50b8:7/external/cecil-legacy \
+		mono:ikdasm:e4deabf:8/external/ikdasm \
+		mono:ikvm-fork:367864e:9/external/ikvm \
+		mono:reference-assemblies:6c77197:10/external/binary-reference-assemblies \
+		mono:rx:b29a4b0:11/external/rx
+
+USES=		autoreconf bison compiler:c11 cpe gettext gmake iconv libtool pathfix \
+		perl5 python shebangfix tar:bzip2
 USE_GNOME=	glib20
 USE_PERL5=	build
 GNU_CONFIGURE=	yes
+SHEBANG_FILES=	${WRKSRC}/scripts/mono-heapviz
 USE_LDCONFIG=	yes
-WRKSRC=		${WRKDIR}/mono-${PORTVERSION:R}
-SHEBANG_FILES=	scripts/mono-heapviz
 
 CONFIGURE_ARGS=	--disable-dtrace
 CONFIGURE_ENV=	ac_cv_header_sys_inotify_h=no
 
-# Set location for .wapi creation.
-MONO_SHARED_DIR=${WRKDIR}
-
-MAKE_ENV=	MONO_SHARED_DIR="${MONO_SHARED_DIR}" \
+MAKE_ENV=	MONO_SHARED_DIR="${WRKDIR}" \
 		INSTALL_STRIP_FLAG="${STRIP}" \
 		TZ=UTC
 
-ONLY_FOR_ARCHS=	i386 amd64 powerpc
+TEST_TARGET=	check
+TEST_WRKSRC=	${WRKSRC}/mono/tests
+
+ONLY_FOR_ARCHS=	i386 amd64 armv6 powerpc
 PORTSCOUT=	limit:^\d+\.\d+\.[1-9]\d*
 
+post-extract:
+	${MKDIR} ${WRKSRC}/mcs/class/lib
+	${MV} ${WRKDIR}/monolite-${MONOLITE_VERSION}-latest ${WRKSRC}/mcs/class/lib/monolite
+
 post-patch:
-	@${REINPLACE_CMD} -e 's|^#!/bin/bash|#!/usr/bin/env bash|g' \
+	${REINPLACE_CMD} -e 's|^#!/bin/bash|#!/usr/bin/env bash|g' \
 		${WRKSRC}/scripts/mono-find-provides.in \
 		${WRKSRC}/scripts/mono-find-requires.in \
 		${WRKSRC}/scripts/mono-test-install
-	@${FIND} ${WRKSRC} -name '*.sh' | ${XARGS} ${REINPLACE_CMD} \
+	${FIND} ${WRKSRC} -name '*.sh' | ${XARGS} ${REINPLACE_CMD} \
 		-e 's|^#!/bin/bash|#!/bin/sh|g'
-	@${REINPLACE_CMD} 's/isinf (1)/isinf (1.0)/g' ${WRKSRC}/configure
+	${SED} 's/tarball/${PORTVERSION}/' ${WRKSRC}/mono/mini/Makefile.am.in \
+		> ${WRKSRC}/mono/mini/Makefile.am
 
 post-configure:
-	@${REINPLACE_CMD} -e 's|share\/man|man|g' \
+	${REINPLACE_CMD} -e 's|share\/man|man|g' \
 		${WRKSRC}/mcs/jay/Makefile
-
-do-test:
-	@(cd ${WRKSRC}/mono/tests && ${SETENV} ${MAKE_ENV} ${MAKE_CMD} \
-		${MAKE_FLAGS} Makefile ${MAKE_ARGS} check)
 
 .include <bsd.port.mk>
