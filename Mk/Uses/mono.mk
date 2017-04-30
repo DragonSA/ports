@@ -87,7 +87,7 @@ nuget-extract:
 
 makenuget: patch
 	@${FIND} ${WRKSRC} -name packages.config | \
-		${XARGS} ${SED} -nE 's|.*<package id="([^"]+)" version="([^"]+)"[^/]*/>.*|\1-\2|gp' | \
+		${XARGS} ${SED} -nE 's|.*<package id="([^"]+)" version="([^"]+)"[^/]*/>.*|\1=\2|gp' | \
 		${SORT} -u | \
 		${SED} \
 			-e '1s|^|NUGET_DEPENDS=	|' \
