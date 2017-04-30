@@ -76,7 +76,7 @@ _USES_extract+=	600:nuget-extract
 nuget-extract:
 .  for nupkg in ${NUGET_NUPKGS}
 	@${MKDIR} ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/=/./}
-	@${LN} -s ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/=/./} ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:C/=.*//}
+	@${LN} -fs ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/=/./} ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:C/=.*//}
 	@tar -xf ${DISTDIR}/${nupkg:C/:.*$//} -C ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/=/./} \
 		-s/%2B/\+/g -s/%2B/\+/g -s/%2B/\+/g \
 		--exclude '\[Content_Types\].xml' \
