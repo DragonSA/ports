@@ -1,4 +1,4 @@
-# $FreeBSD: head/mail/Makefile 437071 2017-03-27 18:27:12Z rene $
+# $FreeBSD: head/mail/Makefile 439826 2017-04-30 15:47:51Z ler $
 #
 
     COMMENT = Electronic mail utilities
@@ -152,7 +152,6 @@
     SUBDIR += gmime26
     SUBDIR += gmime26-sharp
     SUBDIR += gnarwl
-    SUBDIR += gnome-gmail-notifier
     SUBDIR += gnubiff
     SUBDIR += gnumail
     SUBDIR += gotmail
@@ -613,6 +612,7 @@
     SUBDIR += rss2email3
     SUBDIR += rubygem-actionmailer4
     SUBDIR += rubygem-actionmailer5
+    SUBDIR += rubygem-actionmailer50
     SUBDIR += rubygem-email_reply_parser
     SUBDIR += rubygem-email_reply_parser-discourse
     SUBDIR += rubygem-email_reply_trimmer

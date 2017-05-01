@@ -1,4 +1,4 @@
-# $FreeBSD: head/emulators/Makefile 437353 2017-03-31 13:10:02Z jbeich $
+# $FreeBSD: head/emulators/Makefile 439436 2017-04-26 09:10:00Z danfe $
 #
 
     COMMENT = Emulators for other operating systems
@@ -8,6 +8,7 @@
     SUBDIR += advancemenu
     SUBDIR += advancemess
     SUBDIR += aftp
+    SUBDIR += almostti
     SUBDIR += aqemu
     SUBDIR += atari800
     SUBDIR += bfe

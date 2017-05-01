@@ -10,6 +10,11 @@ in the release notes and/or placed into UPDATING.
 
 All ports committers are allowed to commit to this file.
 
+20170417:
+AUTHOR:	kwm@FreeBSD.org
+
+  New USES: meson, to handle properly the meson building system.
+  
 20170313:
 AUTHOR: tijl@FreeBSD.org
 
@@ -3335,4 +3340,4 @@ POSSIBILITY OF SUCH DAMAGE.
 Contact portmgr@FreeBSD.org if you have any questions about your use of
 this document.
 
-$FreeBSD: head/CHANGES 436086 2017-03-13 16:10:59Z tijl $
+$FreeBSD: head/CHANGES 438747 2017-04-17 18:55:56Z kwm $

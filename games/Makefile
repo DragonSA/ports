@@ -1,4 +1,4 @@
-# $FreeBSD: head/games/Makefile 438478 2017-04-13 20:03:56Z amdmi3 $
+# $FreeBSD: head/games/Makefile 439826 2017-04-30 15:47:51Z ler $
 #
 
     COMMENT = Games and related software
@@ -78,6 +78,7 @@
     SUBDIR += battalion
     SUBDIR += battletanks
     SUBDIR += belooted
+    SUBDIR += beret
     SUBDIR += billardgl
     SUBDIR += biloba
     SUBDIR += biniax2
@@ -199,7 +200,6 @@
     SUBDIR += dangerdeep
     SUBDIR += dangerdeep-data
     SUBDIR += darkplaces
-    SUBDIR += dcross
     SUBDIR += defendguin
     SUBDIR += dhewm3
     SUBDIR += diameter
@@ -412,7 +412,6 @@
     SUBDIR += heroes
     SUBDIR += hex-a-hop
     SUBDIR += hexalate
-    SUBDIR += hexglass
     SUBDIR += hexxagon
     SUBDIR += highmoon
     SUBDIR += hinversi
@@ -525,7 +524,6 @@
     SUBDIR += lgeneral
     SUBDIR += lianliankan
     SUBDIR += libdungeonmaker
-    SUBDIR += libfov
     SUBDIR += libgames-support
     SUBDIR += libggz
     SUBDIR += libgnome-games-support
@@ -578,7 +576,6 @@
     SUBDIR += lmpc
     SUBDIR += lolcat
     SUBDIR += lordsawar
-    SUBDIR += lostfeathers
     SUBDIR += lpairs
     SUBDIR += lskat
     SUBDIR += ltris
@@ -852,7 +849,6 @@
     SUBDIR += rfksay
     SUBDIR += ri-li
     SUBDIR += rnd_jue
-    SUBDIR += robocalypto
     SUBDIR += robocode
     SUBDIR += robocode-naval
     SUBDIR += robotfindskitten

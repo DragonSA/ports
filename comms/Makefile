@@ -1,4 +1,4 @@
-# $FreeBSD: head/comms/Makefile 436814 2017-03-24 14:01:49Z db $
+# $FreeBSD: head/comms/Makefile 439826 2017-04-30 15:47:51Z ler $
 #
 
     COMMENT = Communication utilities
@@ -39,7 +39,6 @@
     SUBDIR += efax
     SUBDIR += efax-gtk
     SUBDIR += ems-flasher
-    SUBDIR += esmska
     SUBDIR += fl_moxgen
     SUBDIR += fldigi
     SUBDIR += fllog

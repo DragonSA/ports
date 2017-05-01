@@ -1,4 +1,4 @@
-# $FreeBSD: head/japanese/Makefile 435180 2017-03-01 17:50:09Z rene $
+# $FreeBSD: head/japanese/Makefile 439826 2017-04-30 15:47:51Z ler $
 #
 
     COMMENT = Japanese support
@@ -192,7 +192,6 @@
     SUBDIR += ng-canna
     SUBDIR += ng-devel
     SUBDIR += ngraph-fonts
-    SUBDIR += nhocr
     SUBDIR += nkf
     SUBDIR += onew
     SUBDIR += p5-2chproxy

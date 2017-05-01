@@ -1,9 +1,9 @@
 # Created by: Maurice Castro <maurice@serc.rmit.edu.au>
-# $FreeBSD: head/math/R/Makefile 437439 2017-04-01 15:23:30Z gerald $
+# $FreeBSD: head/math/R/Makefile 439181 2017-04-22 15:47:09Z jrm $
 
 PORTNAME=		R
-PORTVERSION=		3.3.3
-PORTREVISION=		1
+PORTVERSION=		3.4.0
+PORTREVISION=		0
 CATEGORIES=		math lang
 MASTER_SITES=		CRAN/src/base/R-${PORTVERSION:C|\..*||}
 
@@ -19,7 +19,6 @@ BUILD_DEPENDS=		texi2any:print/texinfo
 CONFIGURE_ARGS=		--disable-java \
 			--with-readline \
 			rdocdir=${DOCSDIR}
-CONFIGURE_ENV=		r_cv_header_zlib_h=yes
 GNU_CONFIGURE=		yes
 INSTALL_TARGET=		install-strip
 ONLY_FOR_ARCHS=		i386 amd64

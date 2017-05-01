@@ -1,8 +1,9 @@
 # Created by: Olivier Duchateau
-# $FreeBSD: head/audio/lollypop/Makefile 436494 2017-03-19 14:02:23Z rene $
+# $FreeBSD: head/audio/lollypop/Makefile 439367 2017-04-25 08:20:30Z riggs $
 
 PORTNAME=	lollypop
 PORTVERSION=	0.9.15
+PORTREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	https://github.com/gnumdk/${PORTNAME}/releases/download/${PORTVERSION}/
 

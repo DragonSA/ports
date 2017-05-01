@@ -1,6 +1,6 @@
-#!/usr/bin/env perl -w
+#!/usr/bin/env perl
 
-# $FreeBSD: head/Tools/scripts/bump_revision.pl 413101 2016-04-12 06:31:59Z mandree $
+# $FreeBSD: head/Tools/scripts/bump_revision.pl 439336 2017-04-24 17:27:58Z ehaupt $
 
 #
 # MAINTAINER=	gerald@FreeBSD.org
@@ -8,6 +8,7 @@
 
 use Getopt::Std;
 use strict;
+use warnings;
 use Cwd;
 use Data::Dumper;
 use File::Basename;

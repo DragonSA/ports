@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/shebangfix.mk 424566 2016-10-24 14:16:23Z mat $
+# $FreeBSD: head/Mk/Uses/shebangfix.mk 438940 2017-04-20 11:45:44Z amdmi3 $
 #
 # Replace #! interpreters in scripts by what we actually have.
 #
@@ -62,6 +62,7 @@ ${lang}_CMD?= ${LOCALBASE}/bin/${lang}
 ${lang}_OLD_CMD+= "/usr/bin/env ${lang}"
 ${lang}_OLD_CMD+= /bin/${lang}
 ${lang}_OLD_CMD+= /usr/bin/${lang}
+${lang}_OLD_CMD+= /usr/local/bin/${lang}
 .endfor
 
 .for lang in ${SHEBANG_LANG}

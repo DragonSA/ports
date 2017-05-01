@@ -1,4 +1,4 @@
-# $FreeBSD: head/GIDs 437923 2017-04-07 13:46:28Z swills $
+# $FreeBSD: head/GIDs 439381 2017-04-25 13:10:30Z garga $
 # Please keep this file sorted by GID!
 # Please pick an empty slot when available and also consider base values from
 # /usr/src/etc/group
@@ -836,7 +836,7 @@ chronyd:*:849:
 # free: 892
 # free: 893
 # free: 894
-# free: 895
+snmptt:*:895:
 istat:*:896:
 znc:*:897:
 ufdb:*:898:

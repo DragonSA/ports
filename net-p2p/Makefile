@@ -1,4 +1,4 @@
-# $FreeBSD: head/net-p2p/Makefile 437071 2017-03-27 18:27:12Z rene $
+# $FreeBSD: head/net-p2p/Makefile 439826 2017-04-30 15:47:51Z ler $
 #
 
     COMMENT = Peer-to-peer network applications
@@ -76,7 +76,6 @@
     SUBDIR += qbittorrent-nox11
     SUBDIR += radarr
     SUBDIR += retroshare
-    SUBDIR += rtgui
     SUBDIR += rtorrent
     SUBDIR += shx
     SUBDIR += sonarr
@@ -92,7 +91,6 @@
     SUBDIR += tribler
     SUBDIR += twister
     SUBDIR += uhub
-    SUBDIR += unworkable
     SUBDIR += valknut
     SUBDIR += verlihub
     SUBDIR += verlihub-plugins

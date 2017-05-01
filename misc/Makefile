@@ -1,4 +1,4 @@
-# $FreeBSD: head/misc/Makefile 436318 2017-03-17 07:41:25Z araujo $
+# $FreeBSD: head/misc/Makefile 439840 2017-04-30 20:15:08Z ler $
 #
 
     COMMENT = Miscellaneous utilities
@@ -414,6 +414,7 @@
     SUBDIR += rpl
     SUBDIR += rtfm
     SUBDIR += rubygem-dotenv
+    SUBDIR += rubygem-dotenv-rails
     SUBDIR += rubygem-iesd
     SUBDIR += rubygem-mime-types
     SUBDIR += rubygem-mime-types-data
@@ -452,7 +453,6 @@
     SUBDIR += tellico-kde4
     SUBDIR += tempcontrol
     SUBDIR += termatrix
-    SUBDIR += terraform
     SUBDIR += teseq
     SUBDIR += timediff
     SUBDIR += tkcron
@@ -502,7 +502,6 @@
     SUBDIR += xless
     SUBDIR += xosd
     SUBDIR += xpns
-    SUBDIR += xsw
     SUBDIR += xtail
     SUBDIR += xtar
     SUBDIR += xtypo

@@ -1,8 +1,9 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: head/misc/kde4-l10n/Makefile 420774 2016-08-24 08:20:31Z tcberner $
+# $FreeBSD: head/misc/kde4-l10n/Makefile 439367 2017-04-25 08:20:30Z riggs $
 
 PORTNAME=	kde-l10n
 PORTVERSION=	${KDE4_VERSION}
+PORTREVISION=	1
 CATEGORIES=	misc kde
 
 MAINTAINER=	kde@FreeBSD.org

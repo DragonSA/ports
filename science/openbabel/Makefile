@@ -1,5 +1,5 @@
 # Created by: ijliao
-# $FreeBSD: head/science/openbabel/Makefile 432091 2017-01-21 23:12:18Z jbeich $
+# $FreeBSD: head/science/openbabel/Makefile 439789 2017-04-30 04:35:10Z linimon $
 
 PORTNAME=	openbabel
 PORTVERSION=	2.3.2
@@ -10,9 +10,9 @@ MASTER_SITES=	SF
 MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Chemistry file translation program
 
-BROKEN_powerpc64=	Does not build
-
 BUILD_DEPENDS=	${LOCALBASE}/include/eigen3/Eigen/Eigen:math/eigen3
+
+BROKEN_powerpc64=	Does not build: relocation truncated to fit: R_PPC64_TOC16_DS
 
 CONFLICTS_INSTALL=	babel-*
 

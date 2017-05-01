@@ -1,5 +1,5 @@
 # Created by: Stefan Ehmann <shoesoft@gmx.net>
-# $FreeBSD: head/devel/ice/Makefile 432888 2017-01-30 22:29:23Z grembo $
+# $FreeBSD: head/devel/ice/Makefile 439542 2017-04-27 12:14:40Z mat $
 
 PORTNAME=		Ice
 PORTVERSION=		3.6.3
@@ -13,6 +13,8 @@ COMMENT=		Modern alternative to object middleware such as CORBA/COM/DCOM/COM+
 LICENSE=		GPLv2
 
 SLAVE_PORT?=		no
+
+MAKE_JOBS_UNSAFE=	yes
 
 .if ${SLAVE_PORT} == "no"
 LIB_DEPENDS=		libexpat.so:textproc/expat2 \

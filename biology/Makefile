@@ -1,4 +1,4 @@
-# $FreeBSD: head/biology/Makefile 433348 2017-02-05 04:26:56Z sunpoet $
+# $FreeBSD: head/biology/Makefile 439826 2017-04-30 15:47:51Z ler $
 #
 
     COMMENT = Biology
@@ -103,7 +103,6 @@
     SUBDIR += t_coffee
     SUBDIR += tinker
     SUBDIR += treepuzzle
-    SUBDIR += treeviewx
     SUBDIR += trimmomatic
     SUBDIR += ugene
     SUBDIR += vcftools

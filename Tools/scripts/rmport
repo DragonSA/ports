@@ -33,7 +33,7 @@
 # Chris Rees <crees@FreeBSD.org>
 # Rene Ladan <rene@FreeBSD.org>
 #
-# $FreeBSD: head/Tools/scripts/rmport 415400 2016-05-17 17:53:11Z rene $
+# $FreeBSD: head/Tools/scripts/rmport 439833 2017-04-30 17:45:31Z ler $
 #
 # MAINTAINER=	crees@FreeBSD.org
 #
@@ -109,7 +109,7 @@ find_expired()
 	EXPVAR=EXPIRATION_DATE
 
 	find -H ${PORTSDIR} -mindepth 3 -maxdepth 3 -name "Makefile*" \
-		|xargs grep -H ${EXPVAR} \
+		|xargs grep -H  "^[^#]*${EXPVAR}"  \
 		|sed -E "s|${PORTSDIR}/?([^/]+/[^/]+)/Makefile:${EXPVAR}=[[:space:]]*([0-9-]{10})$|\2 \1|g" \
 		|perl -ne "if ((substr(\$_, 0, 10) cmp '${TODAY}') <= 0) { print(\$_); }" \
 		|while read expdate catport ; do \

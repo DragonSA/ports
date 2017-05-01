@@ -1,4 +1,4 @@
-# $FreeBSD: head/lang/Makefile 437430 2017-04-01 11:18:28Z bapt $
+# $FreeBSD: head/lang/Makefile 439826 2017-04-30 15:47:51Z ler $
 #
 
     COMMENT = Programming languages
@@ -105,6 +105,7 @@
     SUBDIR += gcc6-aux
     SUBDIR += gcc6-devel
     SUBDIR += gcc7-devel
+    SUBDIR += gcc8-devel
     SUBDIR += gcl
     SUBDIR += gforth
     SUBDIR += ghc
@@ -202,7 +203,6 @@
     SUBDIR += ocaml
     SUBDIR += ocaml-autoconf
     SUBDIR += ocaml-nox11
-    SUBDIR += ofc
     SUBDIR += ohugs
     SUBDIR += onyx
     SUBDIR += oo2c

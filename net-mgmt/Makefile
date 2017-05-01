@@ -1,4 +1,4 @@
-# $FreeBSD: head/net-mgmt/Makefile 437221 2017-03-29 18:16:46Z swills $
+# $FreeBSD: head/net-mgmt/Makefile 439846 2017-04-30 21:26:19Z ler $
 #
 
     COMMENT = Network management tools
@@ -66,7 +66,6 @@
     SUBDIR += fetchconfig
     SUBDIR += flow-extract
     SUBDIR += flow-tools
-    SUBDIR += flow-tools-ng
     SUBDIR += flowd
     SUBDIR += flowviewer
     SUBDIR += fprobe
@@ -281,7 +280,6 @@
     SUBDIR += pnp-icinga2
     SUBDIR += portmon
     SUBDIR += prometheus
-    SUBDIR += py-flowtools
     SUBDIR += py-ipcalc
     SUBDIR += py-ipy
     SUBDIR += py-pyang

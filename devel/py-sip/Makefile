@@ -1,5 +1,5 @@
 # Created by: nbm
-# $FreeBSD: head/devel/py-sip/Makefile 403662 2015-12-13 12:45:25Z rakuco $
+# $FreeBSD: head/devel/py-sip/Makefile 439794 2017-04-30 10:07:23Z tcberner $
 
 PORTNAME=	sip
 PORTVERSION=	${SIP_VERSION}
@@ -39,5 +39,7 @@ post-install:
 	${PYTHON_CMD} -O ${PYTHON_LIBDIR}/compileall.py \
 		-f -d ${PYTHONPREFIX_SITELIBDIR} \
 		${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}
+	${STRIP_CMD} ${STAGEDIR}/${PREFIX}/bin/sip 
+	${STRIP_CMD} ${STAGEDIR}/${PYTHON_SITELIBDIR}/sip.so
 
 .include <bsd.port.mk>

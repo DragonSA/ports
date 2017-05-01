@@ -2,7 +2,7 @@
 #
 # Created by: Gabor Kovesdan <gabor@FreeBSD.org>
 #
-# $FreeBSD: head/Mk/bsd.commands.mk 438265 2017-04-11 14:22:41Z amdmi3 $
+# $FreeBSD: head/Mk/bsd.commands.mk 438938 2017-04-20 11:13:32Z mat $
 #
 # DO NOT COMMIT CHANGES TO THIS FILE BY YOURSELF, EVEN IF YOU DID NOT GET
 # A RESPONSE FROM THE MAINTAINER(S) WITHIN A REASONABLE TIMEFRAME! ALL
@@ -75,6 +75,7 @@ PS_CMD?=		/bin/ps
 PW?=			/usr/sbin/pw
 READELF?=		/usr/bin/readelf
 REALPATH?=		/bin/realpath
+RLN?=			${INSTALL} -l rs
 RM?=			/bin/rm -f
 RMDIR?=			/bin/rmdir
 SED?=			/usr/bin/sed

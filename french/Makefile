@@ -1,4 +1,4 @@
-# $FreeBSD: head/french/Makefile 418057 2016-07-04 20:48:23Z rene $
+# $FreeBSD: head/french/Makefile 439030 2017-04-21 08:50:21Z miwi $
 #
 
     COMMENT = French support
@@ -22,5 +22,6 @@
     SUBDIR += php_doc
     SUBDIR += trytond28_account_fr
     SUBDIR += verbiste
+    SUBDIR += wordpress
 
 .include <bsd.port.subdir.mk>

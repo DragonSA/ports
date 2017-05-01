@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/bsd.options.desc.mk 435254 2017-03-02 17:32:09Z lifanov $
+# $FreeBSD: head/Mk/bsd.options.desc.mk 439454 2017-04-26 14:14:44Z danfe $
 #
 # READ BEFORE EDITING:
 # - Please keep descriptions sorted alphabetically by variable name.
@@ -423,6 +423,7 @@ REDIS_DESC?=		Redis key-value store database support
 REGEX_DESC?=		Regular expression support
 RESIN3_DESC?=		Resin 3.x support
 RTMP_DESC?=		RTMP protocol support via librtmp
+RTMPDUMP_DESC?=		RTMP protocol support via rtmpdump
 RUBY_DESC?=		Ruby bindings or support
 SAMPLERATE_DESC?=	Sample rate conversion support
 SANE_DESC?=		SANE API scanner support
@@ -487,7 +488,8 @@ UDUNITS_DESC?=		Unidata units library (udunits) support
 UDUNITS2_DESC?=		Unidata units library (udunits) support
 UNICODE_DESC?=		Unicode support
 UNIXODBC_DESC?=		ODBC backend via unixODBC
-UNZIP_DESC?=		UnZip compression support
+UNRAR_DESC?=		RAR decompression support
+UNZIP_DESC?=		Zip decompression support
 UPNP_DESC?=		UPnP protocol support
 UTF16_DESC?=		Unicode UTF-16 encoding support
 UTF8_DESC?=		Unicode UTF-8 encoding support

@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/perl5.mk 436665 2017-03-21 23:46:20Z mat $
+# $FreeBSD: head/Mk/Uses/perl5.mk 439373 2017-04-25 11:28:49Z mat $
 #
 # Provide support to use perl5
 #
@@ -321,9 +321,9 @@ TEST_TARGET?=	test
 TEST_WRKSRC?=	${BUILD_WRKSRC}
 do-test:
 .    if ${USE_PERL5:Mmodbuild*}
-	cd ${TEST_WRKSRC}/ && ${SETENV} ${TEST_ENV} ${PERL5} ${PL_BUILD} ${TEST_TARGET} ${TEST_ARGS}
+	@cd ${TEST_WRKSRC}/ && ${SETENV} ${TEST_ENV} ${PERL5} ${PL_BUILD} ${TEST_TARGET} ${TEST_ARGS}
 .    elif ${USE_PERL5:Mconfigure}
-	cd ${TEST_WRKSRC}/ && ${SETENV} ${TEST_ENV} ${MAKE_CMD} ${TEST_ARGS} ${TEST_TARGET}
+	@cd ${TEST_WRKSRC}/ && ${SETENV} ${TEST_ENV} ${MAKE_CMD} ${TEST_ARGS} ${TEST_TARGET}
 .    endif # USE_PERL5:Mmodbuild*
 .  endif # do-test
 .endif # defined(_POSTMKINCLUDED)

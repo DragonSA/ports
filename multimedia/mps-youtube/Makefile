@@ -1,12 +1,11 @@
 # Created by: Nicola Vitale <nivit@FreeBSD.org>
-# $FreeBSD: head/multimedia/mps-youtube/Makefile 428352 2016-12-11 15:22:47Z jbeich $
+# $FreeBSD: head/multimedia/mps-youtube/Makefile 439367 2017-04-25 08:20:30Z riggs $
 
 PORTNAME=	mps-youtube
-PORTVERSION=	0.2.6
+PORTVERSION=	0.2.7.1
 PORTREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	CHEESESHOP
-DISTFILES=	${PORTNAME}-${PORTVERSION}-2.tar.gz
 
 MAINTAINER=	nivit@FreeBSD.org
 COMMENT=	Terminal based YouTube jukebox with playlist management

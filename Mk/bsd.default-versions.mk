@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/bsd.default-versions.mk 437437 2017-04-01 15:03:21Z gerald $
+# $FreeBSD: head/Mk/bsd.default-versions.mk 439592 2017-04-28 02:18:54Z miwi $
 #
 # MAINTAINER:	ports@FreeBSD.org
 #
@@ -80,7 +80,7 @@ PYTHON_DEFAULT?=	2.7
 # Possible values: 2.7
 PYTHON2_DEFAULT?=	2.7
 # Possible values: 3.3, 3.4, 3.5, 3.6
-PYTHON3_DEFAULT?=	3.5
+PYTHON3_DEFAULT?=	3.6
 # Possible values: 2.1, 2.2, 2.3, 2.4
 RUBY_DEFAULT?=		2.3
 # Possible values: 4.2, 4.3, 4.4, 4.5, 4.6

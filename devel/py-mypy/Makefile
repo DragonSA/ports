@@ -1,8 +1,9 @@
 # Created by: Florian Limberger <flo@snakeoilproductions.net>
-# $FreeBSD: head/devel/py-mypy/Makefile 438497 2017-04-14 07:53:55Z dbn $
+# $FreeBSD: head/devel/py-mypy/Makefile 438732 2017-04-17 16:17:55Z miwi $
 
 PORTNAME=	mypy
 PORTVERSION=	0.501
+PORTREVISION=	1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -17,8 +18,9 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}typed-ast>=1.0.0:devel/py-typed-ast
 
 NO_ARCH=	yes
-USES=		python:3.3+
+USES=		python:3.3+ shebangfix
 USE_PYTHON=	autoplist distutils
+SHEBANG_FILES=	typeshed/tests/pytype_test.py		
 
 .include <bsd.port.pre.mk>
 

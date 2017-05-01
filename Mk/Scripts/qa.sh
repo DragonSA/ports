@@ -1,6 +1,6 @@
 #!/bin/sh
 # MAINTAINER: portmgr@FreeBSD.org
-# $FreeBSD: head/Mk/Scripts/qa.sh 438176 2017-04-10 15:21:25Z amdmi3 $
+# $FreeBSD: head/Mk/Scripts/qa.sh 439032 2017-04-21 08:56:32Z amdmi3 $
 
 if [ -z "${STAGEDIR}" -o -z "${PREFIX}" -o -z "${LOCALBASE}" ]; then
 	echo "STAGEDIR, PREFIX, LOCALBASE required in environment." >&2
@@ -45,6 +45,9 @@ shebangonefile() {
 	badinterp=""
 	case "${interp}" in
 	"") ;;
+	/bin/rc)
+		# whitelist some interpreters
+		;;
 	${LOCALBASE}/bin/python|${PREFIX}/bin/python)
 		badinterp="${interp}"
 		;;

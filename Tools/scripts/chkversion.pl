@@ -1,4 +1,4 @@
-#!/usr/bin/env perl -w
+#!/usr/bin/env perl
 #
 # Copyright (c) 2004 Oliver Eikemeier. All rights reserved.
 #
@@ -28,7 +28,7 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 # THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# $FreeBSD: head/Tools/scripts/chkversion.pl 433964 2017-02-12 20:43:04Z rene $
+# $FreeBSD: head/Tools/scripts/chkversion.pl 439336 2017-04-24 17:27:58Z ehaupt $
 #
 # MAINTAINER=   portmgr@FreeBSD.org
 #
@@ -66,6 +66,7 @@
 
 require 5.005;
 use strict;
+use warnings;
 use POSIX;
 use File::Find;
 use Cwd 'abs_path';

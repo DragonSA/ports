@@ -1,8 +1,9 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
-# $FreeBSD: head/lang/pypy3/Makefile 438508 2017-04-14 12:37:51Z dbn $
+# $FreeBSD: head/lang/pypy3/Makefile 439409 2017-04-25 17:41:23Z miwi $
 
 PORTNAME=	pypy3
 DISTVERSION=	5.7.1
+PORTREVISION=	1
 DISTNAME=	${PORTNAME}-v${DISTVERSION}-src
 
 MASTERDIR=	${.CURDIR}/../pypy

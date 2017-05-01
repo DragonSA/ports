@@ -1,6 +1,6 @@
-#!/usr/bin/env perl -w
+#!/usr/bin/env perl
 
-# $FreeBSD: head/Tools/scripts/mark_safe.pl 437233 2017-03-29 20:33:05Z rene $
+# $FreeBSD: head/Tools/scripts/mark_safe.pl 439336 2017-04-24 17:27:58Z ehaupt $
 #
 # MAINTAINER=   ports@FreeBSD.org
 # all committers may commit to this file without approval
@@ -27,7 +27,7 @@ local $SIG{__DIE__}  = \&Carp::confess;
 local $SIG{__WARN__} = \&Carp::cluck;
 
 ### version
-our $VERSION = do { my @r = (q$FreeBSD: head/Tools/scripts/mark_safe.pl 437233 2017-03-29 20:33:05Z rene $ =~ /\d+/g); sprintf "%d." . "%02d" x $#r, @r };
+our $VERSION = do { my @r = (q$FreeBSD: head/Tools/scripts/mark_safe.pl 439336 2017-04-24 17:27:58Z ehaupt $ =~ /\d+/g); sprintf "%d." . "%02d" x $#r, @r };
 
 ### globals
 # cmdline options (standard) with defaults
