@@ -1,5 +1,5 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: head/lang/pypy/Makefile 438508 2017-04-14 12:37:51Z dbn $
+# $FreeBSD: head/lang/pypy/Makefile 439901 2017-05-01 18:00:57Z dbn $
 
 PORTNAME?=	pypy
 DISTVERSION?=	5.7.1	# Also update bsd.pypy.cffi.mk
@@ -109,6 +109,9 @@ PYPY_BITS=	64
 .endif
 PLIST_SUB+=	PYPY_BITS="${PYPY_BITS}"
 
+post-extract:
+	${FIND} ${WRKSRC} -name '*.swn' -delete
+
 pre-build:
 	if [ ! -f ${BUILD_WRKSRC}/Makefile ]; then \
 		${RM} -r ${WRKDIR}/build; \
@@ -156,7 +159,7 @@ pkg-plist: stage
 		-e '/\/$$/d' \
 			${WRKDIR}/.plist-files-gen
 	${ECHO} bin/${PORTNAME} > ${WRKDIR}/pkg-plist
-	${SORT} ${WRKDIR}/.plist-files-gen | ${GREP} -v '\.swn$$\|\.orig' >> ${WRKDIR}/pkg-plist
+	${SORT} ${WRKDIR}/.plist-files-gen | ${GREP} -v '\.orig' >> ${WRKDIR}/pkg-plist
 	${CP} ${WRKDIR}/pkg-plist ${.CURDIR}/pkg-plist
 
 .include <bsd.port.post.mk>
