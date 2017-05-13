@@ -52,8 +52,8 @@ USES=		autoreconf bison compiler:c11 cpe gettext gmake iconv libtool pathfix \
 USE_GNOME=	glib20
 USE_PERL5=	build
 GNU_CONFIGURE=	yes
-SHEBANG_FILES=	${WRKSRC}/scripts/mono-heapviz
 USE_LDCONFIG=	yes
+SHEBANG_FILES=	scripts/mono-heapviz
 
 CONFIGURE_ARGS=	--disable-dtrace
 CONFIGURE_ENV=	ac_cv_header_sys_inotify_h=no
