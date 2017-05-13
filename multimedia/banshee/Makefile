@@ -1,4 +1,4 @@
-# $FreeBSD: head/multimedia/banshee/Makefile 427247 2016-11-27 17:00:08Z dbn $
+# $FreeBSD: head/multimedia/banshee/Makefile 440759 2017-05-13 07:48:27Z dbn $
 
 PORTNAME=	banshee
 PORTVERSION=	2.6.2
@@ -56,7 +56,7 @@ CONFIGURE_ARGS=	--with-vendor-build-id=FreeBSD\ BSD\#\ Project --disable-gio-har
 CONFIGURE_ENV=	ac_cv_path_MCS=${LOCALBASE}/bin/mcs
 CPPFLAGS+=	-I${LOCALBASE}/include
 LIBS+=		-L${LOCALBASE}/lib
-PORTSCOUT=	skipv=2.9.1
+PORTSCOUT=	ignore:1
 
 # Need absolute path for build/icon-install-theme.
 INSTALL=	/usr/bin/install

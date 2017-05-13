@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/mono.mk 427247 2016-11-27 17:00:08Z dbn $
+# $FreeBSD: head/Mk/Uses/mono.mk 440759 2017-05-13 07:48:27Z dbn $
 #
 # mono (c#) support
 #
@@ -76,18 +76,20 @@ _USES_extract+=	600:nuget-extract
 nuget-extract:
 .  for nupkg in ${NUGET_NUPKGS}
 	@${MKDIR} ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/=/./}
+	@${RM} -f ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:C/=.*//}
 	@${LN} -s ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/=/./} ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:C/=.*//}
 	@tar -xf ${DISTDIR}/${nupkg:C/:.*$//} -C ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/=/./} \
 		-s/%2B/\+/g -s/%2B/\+/g -s/%2B/\+/g \
 		--exclude '\[Content_Types\].xml' \
 		--exclude package/ \
 		--exclude _rels/
+	@${CP} ${DISTDIR}/${nupkg:C/:.*$//} ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/=/./}/${nupkg:C/^.*://:S/=/./}.nupkg
 .  endfor
 .endif
 
 makenuget: patch
 	@${FIND} ${WRKSRC} -name packages.config | \
-		${XARGS} ${SED} -nE 's|.*<package id="([^"]+)" version="([^"]+)"[^/]*/>.*|\1-\2|gp' | \
+		${XARGS} ${SED} -nE 's|.*<package id="([^"]+)" version="([^"]+)"[^/]*/>.*|\1=\2|gp' | \
 		${SORT} -u | \
 		${SED} \
 			-e '1s|^|NUGET_DEPENDS=	|' \
