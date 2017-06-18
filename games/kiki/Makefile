@@ -1,9 +1,9 @@
 # Created by: Dmitry Marakasov <amdmi3@amdmi3.ru>
-# $FreeBSD: head/games/kiki/Makefile 412346 2016-04-01 14:00:51Z mat $
+# $FreeBSD: head/games/kiki/Makefile 441503 2017-05-23 05:03:14Z rezny $
 
 PORTNAME=	kiki
 PORTVERSION=	1.0.2
-PORTREVISION=	18
+PORTREVISION=	19
 CATEGORIES=	games
 MASTER_SITES=	SF/${PORTNAME}/${PORTNAME}-src/${PORTVERSION}
 EXTRACT_SUFX=	-src.tgz

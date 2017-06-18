@@ -1,4 +1,4 @@
-# $FreeBSD: head/security/Makefile 439899 2017-05-01 14:45:00Z matthew $
+# $FreeBSD: head/security/Makefile 443432 2017-06-12 10:30:09Z tz $
 #
 
     COMMENT = Security tools
@@ -9,8 +9,9 @@
     SUBDIR += R-cran-ROAuth
     SUBDIR += R-cran-digest
     SUBDIR += R-cran-openssl
-    SUBDIR += acmetool
     SUBDIR += acme-client
+    SUBDIR += acme.sh
+    SUBDIR += acmetool
     SUBDIR += aescrypt
     SUBDIR += aespipe
     SUBDIR += afl
@@ -547,7 +548,6 @@
     SUBDIR += p5-Crypt-OpenSSL-Random
     SUBDIR += p5-Crypt-OpenSSL-X509
     SUBDIR += p5-Crypt-PBKDF2
-    SUBDIR += p5-Crypt-PGPSimple
     SUBDIR += p5-Crypt-PKCS10
     SUBDIR += p5-Crypt-PWSafe3
     SUBDIR += p5-Crypt-PassGen
@@ -771,9 +771,9 @@
     SUBDIR += pecl-pam
     SUBDIR += pecl-scrypt
     SUBDIR += pecl-ssh2
+    SUBDIR += pecl-ssh2-0
     SUBDIR += pev
     SUBDIR += pft
-    SUBDIR += pgp
     SUBDIR += pgpdump
     SUBDIR += pgpgpg
     SUBDIR += pgpin
@@ -849,6 +849,7 @@
     SUBDIR += py-cpe
     SUBDIR += py-cracklib
     SUBDIR += py-cryptkit
+    SUBDIR += py-cryptlib_py
     SUBDIR += py-cryptography
     SUBDIR += py-cybox
     SUBDIR += py-dfdatetime
@@ -860,8 +861,10 @@
     SUBDIR += py-fail2ban
     SUBDIR += py-fchksum
     SUBDIR += py-flask-httpauth
+    SUBDIR += py-gixy
     SUBDIR += py-gnupg
     SUBDIR += py-gnutls
+    SUBDIR += py-google-auth
     SUBDIR += py-gpgme
     SUBDIR += py-gpsoauth
     SUBDIR += py-halberd
@@ -958,7 +961,10 @@
     SUBDIR += py-zope.securitypolicy
     SUBDIR += py-zope.session
     SUBDIR += py-zxcvbn-python
+    SUBDIR += py3-certifi
+    SUBDIR += py3-cryptography
     SUBDIR += py3-libnacl
+    SUBDIR += py3-openssl
     SUBDIR += py3-pycrypto
     SUBDIR += qtkeychain-qt4
     SUBDIR += qtkeychain-qt5
@@ -1002,9 +1008,12 @@
     SUBDIR += rubygem-bcrypt-ruby
     SUBDIR += rubygem-devise-two-factor
     SUBDIR += rubygem-devise-two-factor-rails5
+    SUBDIR += rubygem-devise-two-factor-rails50
     SUBDIR += rubygem-digest-crc
     SUBDIR += rubygem-doorkeeper
+    SUBDIR += rubygem-doorkeeper-openid_connect
     SUBDIR += rubygem-doorkeeper-rails5
+    SUBDIR += rubygem-doorkeeper-rails50
     SUBDIR += rubygem-encryptor
     SUBDIR += rubygem-ezcrypto
     SUBDIR += rubygem-googleauth
@@ -1040,6 +1049,7 @@
     SUBDIR += rubygem-openssl-ccm
     SUBDIR += rubygem-openvas-omp
     SUBDIR += rubygem-origami
+    SUBDIR += rubygem-pundit
     SUBDIR += rubygem-pyu-ruby-sasl
     SUBDIR += rubygem-rack-oauth2
     SUBDIR += rubygem-razorback-scriptNugget
@@ -1067,6 +1077,7 @@
     SUBDIR += rubygem-ruby-rc4
     SUBDIR += rubygem-ruby-saml
     SUBDIR += rubygem-scrypt
+    SUBDIR += rubygem-securecompare
     SUBDIR += rubygem-signet
     SUBDIR += rubygem-six
     SUBDIR += rubygem-sshkey

@@ -3,7 +3,7 @@
 #
 # Created by: Akinori MUSHA <knu@FreeBSD.org>
 #
-# $FreeBSD: head/Mk/bsd.ruby.mk 439890 2017-05-01 12:47:25Z sunpoet $
+# $FreeBSD: head/Mk/bsd.ruby.mk 442730 2017-06-06 00:28:56Z bdrewery $
 #
 
 .if !defined(Ruby_Include)
@@ -15,7 +15,7 @@ Ruby_Include_MAINTAINER=	ruby@FreeBSD.org
 # [variables that a user may define]
 #
 # RUBY_VER		- (See below)
-# RUBY_DEFAULT_VER	- Set to (e.g.) "2.1" if you want to refer to "ruby21"
+# RUBY_DEFAULT_VER	- Set to (e.g.) "2.4" if you want to refer to "ruby24"
 #			  just as "ruby".
 # RUBY_ARCH		- (See below)
 #
@@ -150,17 +150,7 @@ RUBY?=			${LOCALBASE}/bin/${RUBY_NAME}
 .if defined(RUBY_VER)
 # When adding a version, please keep the comment in
 # Mk/bsd.default-versions.mk in sync.
-. if ${RUBY_VER} == 2.1
-#
-# Ruby 2.1
-#
-RUBY_RELVERSION=	2.1.10
-RUBY_PORTREVISION=	1
-RUBY_PORTEPOCH=		1
-RUBY_PATCHLEVEL=	0
-RUBY21=			""	# PLIST_SUB helpers
-
-. elif ${RUBY_VER} == 2.2
+. if ${RUBY_VER} == 2.2
 #
 # Ruby 2.2
 #
@@ -196,14 +186,13 @@ RUBY24=			""	# PLIST_SUB helpers
 #
 # Other versions
 #
-IGNORE=	Only ruby 2.1, 2.2, 2.3 and 2.4 are supported
+IGNORE=	Only ruby 2.2, 2.3 and 2.4 are supported
 _INVALID_RUBY_VER=	1
 . endif
 .endif # defined(RUBY_VER)
 
 .if !defined(_INVALID_RUBY_VER)
 
-RUBY21?=		"@comment "
 RUBY22?=		"@comment "
 RUBY23?=		"@comment "
 RUBY24?=		"@comment "
@@ -267,7 +256,9 @@ RUBY_SHLIBVER?=		${RUBY_VER:S/.//}
 
 RUBY_CONFIGURE_ARGS+=	--program-prefix=""
 
-DEPENDS_ARGS+=		RUBY_VER="${RUBY_VER}"
+.if ${RUBY_VER} != ${RUBY_DEFAULT_VER}
+DEPENDS_ARGS+=		RUBY_VER=${RUBY_VER}
+.endif
 
 RUBY_CONFIGURE_ARGS+=	--program-suffix="${RUBY_SUFFIX}"
 
@@ -319,7 +310,6 @@ PLIST_SUB+=		${PLIST_RUBY_DIRS:C,DIR="(${LOCALBASE}|${PREFIX})/,DIR=",} \
 			RUBY_SUFFIX="${RUBY_SUFFIX}" \
 			RUBY_NAME="${RUBY_NAME}" \
 			RUBY_DEFAULT_SUFFIX="${RUBY_DEFAULT_SUFFIX}" \
-			RUBY21=${RUBY21} \
 			RUBY22=${RUBY22} \
 			RUBY23=${RUBY23} \
 			RUBY24=${RUBY24}

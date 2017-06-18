@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: head/Mk/bsd.qt.mk 434380 2017-02-18 19:48:05Z tcberner $
+# $FreeBSD: head/Mk/bsd.qt.mk 442740 2017-06-06 05:00:56Z tcberner $
 #
 # Port variables:
 # USE_QT*			- List of Qt modules to depend on, with optional '_build'
@@ -147,7 +147,9 @@ CONFIGURE_ARGS+=-nomake examples -nomake tests \
 .  if ${ARCH} == i386 && empty(MACHINE_CPU:Msse2)
 CONFIGURE_ARGS+=-no-sse2
 .  endif
-
+# Work around a bug in current binutils, where the gold linker creates
+# duplicate symbols. See pr 218187. Disable the gold-linker for Qt5 ports.
+CONFIGURE_ARGS+=	-no-use-gold-linker
 . endif
 
 . if defined(WANT_QT_DEBUG) || defined(WITH_DEBUG)
@@ -173,6 +175,8 @@ CONFIGURE_ARGS+=-verbose
 .  if ${_QT_VERSION:M4*}
 _EXTRA_PATCHES_QT4=	${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-src-corelib-global-qglobal.h \
 					${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-libtool
+# Patch in proper name for armv6 architecture: https://gcc.gnu.org/ml/gcc-patches/2015-06/msg01679.html 
+_EXTRA_PATCHES_QT4+=	${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-armv6
 .  else
 _EXTRA_PATCHES_QT5=	${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_features_create__cmake.prf \
 					${.CURDIR:H:H}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_features_qt__module.prf

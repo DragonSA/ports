@@ -1,5 +1,5 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
-# $FreeBSD: head/graphics/s2tc/Makefile 424427 2016-10-21 15:21:13Z mat $
+# $FreeBSD: head/graphics/s2tc/Makefile 440699 2017-05-12 18:46:53Z rezny $
 
 PORTNAME=	s2tc
 PORTVERSION=	1.0+20151228
@@ -11,7 +11,7 @@ COMMENT=	Subset of a well-known texture compression scheme
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-BUILD_DEPENDS=	libGL>=9.1.7:graphics/libGL
+BUILD_DEPENDS=	mesa-libs>=0:graphics/mesa-libs
 TEST_DEPENDS=	convert:graphics/ImageMagick \
 		nvcompress:graphics/nvidia-texture-tools \
 		wget:ftp/wget

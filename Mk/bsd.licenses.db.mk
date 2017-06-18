@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: head/Mk/bsd.licenses.db.mk 437358 2017-03-31 14:09:31Z mat $
+# $FreeBSD: head/Mk/bsd.licenses.db.mk 440557 2017-05-10 12:47:37Z mat $
 
 # ** Please run changes to this file by eadler@ first **
 
@@ -41,7 +41,7 @@ Licenses_db_Include_MAINTAINER=         portmgr@FreeBSD.org
 
 _LICENSE_LIST= 	BSL CDDL CPAL-1.0 ClArtistic EPL GFDL GMGPL \
 				ISCL MIT MPL NCSA OFL10 OFL11 OWL OpenSSL PD PSFL PostgreSQL \
-				RUBY ZLIB ZPL21
+				RUBY WTFPL1 WTFPL ZLIB ZPL21
 
 # GNU family
 _LICENSE_LIST+= AGPLv3 GPLv1 GPLv2 GPLv3 GPLv3RLE LGPL20 LGPL21 LGPL3
@@ -388,6 +388,12 @@ _LICENSE_GROUPS_RUBY=	FSF
 _LICENSE_NAME_NONE=	No license specified
 _LICENSE_GROUPS_NONE=	# empty
 _LICENSE_PERMS_NONE=	none
+
+_LICENSE_NAME_WTFPL1=	Do What the Fuck You Want To Public License version 1
+_LICENSE_GROUPS_WTFPL1=	GPL FSF COPYFREE
+
+_LICENSE_NAME_WTFPL=	Do What the Fuck You Want To Public License version 2
+_LICENSE_GROUPS_WTFPL=	GPL FSF COPYFREE
 
 _LICENSE_NAME_ZLIB=		zlib License
 _LICENSE_GROUPS_ZLIB=	GPL FSF OSI

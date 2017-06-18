@@ -1,8 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: head/devel/R-cran-gdata/Makefile 412346 2016-04-01 14:00:51Z mat $
+# $FreeBSD: head/devel/R-cran-gdata/Makefile 443414 2017-06-12 03:48:19Z tota $
 
 PORTNAME=	gdata
-PORTVERSION=	2.17.0
+PORTVERSION=	2.18.0
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 

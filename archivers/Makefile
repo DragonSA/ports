@@ -1,4 +1,4 @@
-# $FreeBSD: head/archivers/Makefile 437751 2017-04-04 20:01:16Z sunpoet $
+# $FreeBSD: head/archivers/Makefile 443410 2017-06-11 21:03:58Z kwm $
 #
 
     COMMENT = Archivers
@@ -31,6 +31,7 @@
     SUBDIR += freeze
     SUBDIR += gcab
     SUBDIR += gcpio
+    SUBDIR += gnome-autoar
     SUBDIR += go-compress
     SUBDIR += grzip
     SUBDIR += gtar
@@ -173,6 +174,7 @@
     SUBDIR += py-lzma
     SUBDIR += py-pyliblzma
     SUBDIR += py-python-lhafile
+    SUBDIR += py-python-lzo
     SUBDIR += py-python-snappy
     SUBDIR += py-rarfile
     SUBDIR += py-rcssmin
@@ -192,6 +194,7 @@
     SUBDIR += rubygem-fpm
     SUBDIR += rubygem-libarchive
     SUBDIR += rubygem-minitar
+    SUBDIR += rubygem-minitar-cli
     SUBDIR += rubygem-ruby-xz
     SUBDIR += rubygem-rubyzip
     SUBDIR += rubygem-rubyzip2

@@ -1,7 +1,7 @@
 #-*- tab-width: 4; -*-
 # ex:ts=4
 #
-# $FreeBSD: head/Mk/bsd.port.mk 439485 2017-04-26 19:04:30Z ak $
+# $FreeBSD: head/Mk/bsd.port.mk 443599 2017-06-14 20:18:38Z tcberner $
 #	$NetBSD: $
 #
 #	bsd.port.mk - 940820 Jordan K. Hubbard.
@@ -483,7 +483,7 @@ FreeBSD_MAINTAINER=	portmgr@FreeBSD.org
 #				  going locally to each port).
 #				  Default: ${PORTSDIR}/packages
 # WRKDIRPREFIX	- The place to root the temporary working directory
-#				  hierarchy.
+#				  hierarchy. This path must *not* end in '/'.
 #				  Default: none
 # WRKDIR		- A temporary working directory that gets *clobbered* on clean
 #				  Default: ${WRKDIRPREFIX}${.CURDIR}/work
@@ -1763,20 +1763,19 @@ IGNORE=			has USE_LDCONFIG32 set to yes, which is not correct
 
 PKG_IGNORE_DEPENDS?=		'this_port_does_not_exist'
 
-_GL_gbm_LIB_DEPENDS=		libgbm.so:graphics/gbm
-_GL_glesv2_BUILD_DEPENDS=		libglesv2>0:graphics/libglesv2
-_GL_glesv2_RUN_DEPENDS=		libglesv2>0:graphics/libglesv2
-_GL_egl_BUILD_DEPENDS=		libEGL>0:graphics/libEGL
-_GL_egl_RUN_DEPENDS=		libEGL>0:graphics/libEGL
-_GL_gl_BUILD_DEPENDS=		libGL>0:graphics/libGL
-_GL_gl_RUN_DEPENDS=		libGL>0:graphics/libGL
-_GL_gl_USE_XORG=		glproto dri2proto
+_GL_gbm_LIB_DEPENDS=		libgbm.so:graphics/mesa-libs
+_GL_glesv2_BUILD_DEPENDS=	${LOCALBASE}/lib/libGLESv2.so:graphics/mesa-libs
+_GL_glesv2_RUN_DEPENDS=		${LOCALBASE}/lib/libGLESv2.so:graphics/mesa-libs
+_GL_egl_BUILD_DEPENDS=		${LOCALBASE}/lib/libEGL.so:graphics/mesa-libs
+_GL_egl_RUN_DEPENDS=		${LOCALBASE}/lib/libEGL.so:graphics/mesa-libs
+_GL_gl_BUILD_DEPENDS=		${LOCALBASE}/lib/libGL.so:graphics/mesa-libs
+_GL_gl_RUN_DEPENDS=			${LOCALBASE}/lib/libGL.so:graphics/mesa-libs
+_GL_gl_USE_XORG=			glproto dri2proto dri3proto
 _GL_glew_LIB_DEPENDS=		libGLEW.so:graphics/glew
 _GL_glu_LIB_DEPENDS=		libGLU.so:graphics/libGLU
-_GL_glu_USE_XORG=		glproto dri2proto
+_GL_glu_USE_XORG=			glproto dri2proto dri3proto
 _GL_glw_LIB_DEPENDS=		libGLw.so:graphics/libGLw
 _GL_glut_LIB_DEPENDS=		libglut.so:graphics/freeglut
-
 .if defined(USE_GL)
 . if ${USE_GL:tl} == "yes"
 USE_GL=		glu
@@ -2498,6 +2497,7 @@ check-categories:
 PKGREPOSITORYSUBDIR?=	All
 PKGREPOSITORY?=		${PACKAGES}/${PKGREPOSITORYSUBDIR}
 .if exists(${PACKAGES})
+PACKAGES:=	${PACKAGES:S/:/\:/g}
 _HAVE_PACKAGES=	yes
 PKGFILE?=		${PKGREPOSITORY}/${PKGNAME}${PKG_SUFX}
 .else
@@ -3421,6 +3421,19 @@ install-ldconfig-file:
 .        endif
 .      endif
 .    endif
+.  endif
+.endif
+
+.if !defined(USE_LINUX_PREFIX)
+.  if !target(fixup-lib-pkgconfig)
+fixup-lib-pkgconfig:
+	@if [ -d ${STAGEDIR}${PREFIX}/lib/pkgconfig ]; then \
+		if [ -z "$$(${FIND} ${STAGEDIR}${PREFIX}/lib/pkgconfig -maxdepth 0 -empty)" ]; then \
+			${MKDIR} ${STAGEDIR}${PREFIX}/libdata/pkgconfig; \
+			${MV} ${STAGEDIR}${PREFIX}/lib/pkgconfig/* ${STAGEDIR}${PREFIX}/libdata/pkgconfig; \
+		fi; \
+		${RMDIR} ${STAGEDIR}${PREFIX}/lib/pkgconfig; \
+	fi
 .  endif
 .endif
 
@@ -5176,7 +5189,7 @@ _STAGE_DEP=		build
 _STAGE_SEQ=		050:stage-message 100:stage-dir 150:run-depends \
 				151:lib-depends 200:apply-slist 300:pre-install \
 				400:generate-plist 450:pre-su-install 475:create-users-groups \
-				500:do-install 550:kmod-post-install 700:post-install \
+				500:do-install 550:kmod-post-install 600:fixup-lib-pkgconfig 700:post-install \
 				750:post-install-script 800:post-stage 850:compress-man \
 				860:install-rc-script 870:install-ldconfig-file \
 				880:install-license 890:install-desktop-entries \

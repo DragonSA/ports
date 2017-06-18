@@ -1,4 +1,4 @@
-# $FreeBSD: head/net/glusterfs/Makefile 437439 2017-04-01 15:23:30Z gerald $
+# $FreeBSD: head/net/glusterfs/Makefile 442914 2017-06-08 10:36:43Z mat $
 
 PORTNAME=	glusterfs
 PORTVERSION=	3.9.0
@@ -18,6 +18,8 @@ USE_GCC=	any
 
 USES=		bison gettext libtool pkgconfig python readline shebangfix \
 		sqlite ssl
+
+BROKEN_SSL=	libressl
 
 SHEBANG_FILES=	extras/ganesha/scripts/create-export-ganesha.sh \
 		extras/ganesha/scripts/dbus-send.sh \

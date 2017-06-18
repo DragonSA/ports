@@ -1,5 +1,5 @@
 # Created by: Boris B. Samorodov <bsam@ipt.ru>
-# $FreeBSD: head/devel/py-ice/Makefile 423875 2016-10-12 17:23:57Z grembo $
+# $FreeBSD: head/devel/py-ice/Makefile 441429 2017-05-21 21:55:08Z linimon $
 
 CATEGORIES=	devel python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -11,6 +11,8 @@ LICENSE=	GPLv2
 
 BUILD_DEPENDS=	mcpp:devel/mcpp
 LIB_DEPENDS=	libIce.so.${LIB_VRS}:devel/ice
+
+BROKEN_powerpc64=	fails to compile: gmake: Ice_BuiltinSequences_ice.py: Segmentation fault (core dumped)
 
 USES=		python shebangfix
 USE_PYTHON=	py3kplist

@@ -1,4 +1,4 @@
-# $FreeBSD: head/databases/Makefile 439897 2017-05-01 13:42:41Z jrm $
+# $FreeBSD: head/databases/Makefile 443772 2017-06-17 13:44:51Z rakuco $
 #
 
     COMMENT = Databases and related software
@@ -124,6 +124,8 @@
     SUBDIR += jrobin
     SUBDIR += jrrd
     SUBDIR += kbibtex
+    SUBDIR += kdb
+    SUBDIR += kexi
     SUBDIR += kyotocabinet
     SUBDIR += kyototycoon
     SUBDIR += ldb
@@ -177,6 +179,8 @@
     SUBDIR += mariadb100-server
     SUBDIR += mariadb101-client
     SUBDIR += mariadb101-server
+    SUBDIR += mariadb102-client
+    SUBDIR += mariadb102-server
     SUBDIR += mariadb55-client
     SUBDIR += mariadb55-server
     SUBDIR += mdbtools
@@ -189,6 +193,7 @@
     SUBDIR += mongodb32
     SUBDIR += mongodb32-tools
     SUBDIR += mongodb34
+    SUBDIR += mongodb34-rocks
     SUBDIR += mongodb34-tools
     SUBDIR += mrtg-mysql-load
     SUBDIR += mtools-mongodb
@@ -215,7 +220,6 @@
     SUBDIR += mysql57-server
     SUBDIR += mysql80-client
     SUBDIR += mysql80-server
-    SUBDIR += mysqlwsrep56-server
     SUBDIR += mysqlbackup
     SUBDIR += mysqlbigram
     SUBDIR += mysqldump-secure
@@ -226,6 +230,7 @@
     SUBDIR += mysqlsniffer
     SUBDIR += mysqltcl
     SUBDIR += mysqltuner
+    SUBDIR += mysqlwsrep56-server
     SUBDIR += mytop
     SUBDIR += nagios-check_mongodb
     SUBDIR += nagios-check_postgres_replication
@@ -239,6 +244,8 @@
     SUBDIR += openark-kit
     SUBDIR += opendbx
     SUBDIR += opentsdb
+    SUBDIR += ora2pg
+    SUBDIR += oracle8-client
     SUBDIR += p5-Amazon-SimpleDB
     SUBDIR += p5-Amon2-DBI
     SUBDIR += p5-AnyEvent-BDB
@@ -301,6 +308,7 @@
     SUBDIR += p5-DBD-Mock
     SUBDIR += p5-DBD-Multi
     SUBDIR += p5-DBD-ODBC
+    SUBDIR += p5-DBD-Oracle
     SUBDIR += p5-DBD-Pg
     SUBDIR += p5-DBD-PgLite
     SUBDIR += p5-DBD-PgPP
@@ -578,6 +586,8 @@
     SUBDIR += pgpool-II
     SUBDIR += pgpool-II-30
     SUBDIR += pgpool-II-33
+    SUBDIR += pgpool-II-35
+    SUBDIR += pgpool-II-36
     SUBDIR += pgpoolAdmin
     SUBDIR += pgreplay
     SUBDIR += pgrouting
@@ -645,6 +655,7 @@
     SUBDIR += postgis21
     SUBDIR += postgis22
     SUBDIR += postgis23
+    SUBDIR += postgresql-cstore_fdw
     SUBDIR += postgresql-jdbc
     SUBDIR += postgresql-libpgeasy
     SUBDIR += postgresql-libpqxx
@@ -844,6 +855,7 @@
     SUBDIR += redigo
     SUBDIR += redis
     SUBDIR += redis-devel
+    SUBDIR += retcl
     SUBDIR += riak
     SUBDIR += riak2
     SUBDIR += rocksdb
@@ -860,6 +872,7 @@
     SUBDIR += ruby-tokyocabinet
     SUBDIR += ruby-xapian
     SUBDIR += rubygem-active_record_query_trace
+    SUBDIR += rubygem-activemodel-serializers-xml
     SUBDIR += rubygem-activemodel4
     SUBDIR += rubygem-activemodel5
     SUBDIR += rubygem-activemodel50
@@ -910,6 +923,7 @@
     SUBDIR += rubygem-familia
     SUBDIR += rubygem-globalid
     SUBDIR += rubygem-globalid-rails5
+    SUBDIR += rubygem-globalid-rails50
     SUBDIR += rubygem-her
     SUBDIR += rubygem-hiredis
     SUBDIR += rubygem-jdbc-mysql
@@ -924,11 +938,13 @@
     SUBDIR += rubygem-pg_array_parser
     SUBDIR += rubygem-pghero
     SUBDIR += rubygem-pghero-rails5
+    SUBDIR += rubygem-pghero-rails50
     SUBDIR += rubygem-postgres_ext
     SUBDIR += rubygem-rbase
     SUBDIR += rubygem-redis
     SUBDIR += rubygem-redis-actionpack
     SUBDIR += rubygem-redis-actionpack-rails5
+    SUBDIR += rubygem-redis-actionpack-rails50
     SUBDIR += rubygem-redis-namespace
     SUBDIR += rubygem-seed-fu
     SUBDIR += rubygem-sqlite3

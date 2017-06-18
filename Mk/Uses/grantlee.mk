@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/grantlee.mk 439801 2017-04-30 11:07:42Z tcberner $
+# $FreeBSD: head/Mk/Uses/grantlee.mk 439961 2017-05-02 17:25:16Z tcberner $
 #
 # Handle dependency on grantlee
 #
@@ -73,7 +73,7 @@ PLIST_SUB+=	GRANTLEE_VERSION_FULL=${GRANTLEE_VERSION} \
 .  if defined(WITH_DEBUG)
 PLIST_SUB+=	GRANTLEE_DEBUG_SUFFIX=d
 .  else
-PLIST_SUB+=	GRANTLEE_DEBUG_SUFFIX=
+PLIST_SUB+=	GRANTLEE_DEBUG_SUFFIX=""
 .  endif
 
 .endif

@@ -1,4 +1,4 @@
-# $FreeBSD: head/deskutils/Makefile 439827 2017-04-30 16:06:18Z ler $
+# $FreeBSD: head/deskutils/Makefile 441270 2017-05-19 20:43:09Z rene $
 #
 
     COMMENT = Things that used to be on the desktop before computers were invented
@@ -154,7 +154,6 @@
     SUBDIR += notecase
     SUBDIR += notification-daemon
     SUBDIR += notify-osd
-    SUBDIR += openproj
     SUBDIR += orage
     SUBDIR += osmo
     SUBDIR += osynctool

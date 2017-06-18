@@ -1,8 +1,9 @@
 # Created by: Martin Wilke <miwi@FreeBSD.org>
-# $FreeBSD: head/multimedia/phonon-gstreamer/Makefile 421340 2016-09-04 14:30:13Z rakuco $
+# $FreeBSD: head/multimedia/phonon-gstreamer/Makefile 441503 2017-05-23 05:03:14Z rezny $
 
 PORTNAME=	phonon
 PORTVERSION=	4.9.0
+PORTREVISION=	1
 CATEGORIES=	multimedia kde
 MASTER_SITES=	KDE/stable/${PORTNAME}/${PORTNAME}-backend${PKGNAMESUFFIX}/${PORTVERSION}
 PKGNAMESUFFIX=	-gstreamer

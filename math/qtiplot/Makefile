@@ -1,9 +1,9 @@
 # Created by: Jie Gao <gaoj@cpsc.ucalgary.ca>
-# $FreeBSD: head/math/qtiplot/Makefile 424339 2016-10-20 15:58:12Z rakuco $
+# $FreeBSD: head/math/qtiplot/Makefile 441503 2017-05-23 05:03:14Z rezny $
 
 PORTNAME=	qtiplot
 DISTVERSION=	0.9.8.9
-PORTREVISION=	10
+PORTREVISION=	12
 CATEGORIES=	math science
 MASTER_SITES=	BERLIOS http://soft.proindependent.com/src/
 

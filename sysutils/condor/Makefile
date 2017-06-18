@@ -1,12 +1,12 @@
 # Created by: Andy Pavlo
-# $FreeBSD: head/sysutils/condor/Makefile 438123 2017-04-10 00:27:48Z linimon $
+# $FreeBSD: head/sysutils/condor/Makefile 441046 2017-05-16 18:49:15Z tcberner $
 #
 # Note: Make sure there are no older versions of HTCondor installed during
 #       build.  The build system may pick up incompatible headers and libs.
 
 PORTNAME=	condor
 PORTVERSION=	8.4.9
-PORTREVISION=	2
+PORTREVISION=	4
 CATEGORIES=	sysutils net
 MASTER_SITES=	http://www.acadix.biz/Ports/distfiles/
 DISTNAME=	condor_src-${PORTVERSION}-all-all
@@ -32,7 +32,8 @@ SHEBANG_FILES=	src/condor_scripts/condor_qsub \
 		src/condor_gridmanager/remote_gahp \
 		src/condor_examples/condor_limits_wrapper.sh \
 		src/condor_examples/condor_schedd.init \
-		src/condor_starter.V6.1/condor_ssh_to_job_shell_setup
+		src/condor_starter.V6.1/condor_ssh_to_job_shell_setup \
+		src/condor_job_router/condor_router_history
 
 WANT_PGSQL=	server
 CXXFLAGS+=	-I${LOCALBASE}/include -fPIC

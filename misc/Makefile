@@ -1,4 +1,4 @@
-# $FreeBSD: head/misc/Makefile 439840 2017-04-30 20:15:08Z ler $
+# $FreeBSD: head/misc/Makefile 442944 2017-06-08 17:25:47Z des $
 #
 
     COMMENT = Miscellaneous utilities
@@ -45,6 +45,7 @@
     SUBDIR += colortail
     SUBDIR += colwide
     SUBDIR += compat10x
+    SUBDIR += compat11x
     SUBDIR += compat4x
     SUBDIR += compat5x
     SUBDIR += compat6x
@@ -176,6 +177,7 @@
     SUBDIR += hotkeys
     SUBDIR += hulgalugha
     SUBDIR += imerge
+    SUBDIR += img2xterm
     SUBDIR += ini_file_manager
     SUBDIR += inplace
     SUBDIR += ipa_conv
@@ -382,6 +384,7 @@
     SUBDIR += py-progressbar231
     SUBDIR += py-pyfiglet
     SUBDIR += py-pyprind
+    SUBDIR += py-python-geohash
     SUBDIR += py-qt4-demo
     SUBDIR += py-qt4-doc
     SUBDIR += py-qt5-demo
@@ -391,6 +394,7 @@
     SUBDIR += py-spdx-lookup
     SUBDIR += py-tqdm
     SUBDIR += py-yolk
+    SUBDIR += py3-pexpect
     SUBDIR += py3-tqdm
     SUBDIR += pylize
     SUBDIR += qbrew
@@ -415,6 +419,8 @@
     SUBDIR += rtfm
     SUBDIR += rubygem-dotenv
     SUBDIR += rubygem-dotenv-rails
+    SUBDIR += rubygem-dotenv-rails-rails5
+    SUBDIR += rubygem-dotenv-rails-rails50
     SUBDIR += rubygem-iesd
     SUBDIR += rubygem-mime-types
     SUBDIR += rubygem-mime-types-data

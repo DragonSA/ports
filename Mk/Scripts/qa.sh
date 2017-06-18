@@ -1,6 +1,6 @@
 #!/bin/sh
 # MAINTAINER: portmgr@FreeBSD.org
-# $FreeBSD: head/Mk/Scripts/qa.sh 439032 2017-04-21 08:56:32Z amdmi3 $
+# $FreeBSD: head/Mk/Scripts/qa.sh 440699 2017-05-12 18:46:53Z rezny $
 
 if [ -z "${STAGEDIR}" -o -z "${PREFIX}" -o -z "${LOCALBASE}" ]; then
 	echo "STAGEDIR, PREFIX, LOCALBASE required in environment." >&2
@@ -537,13 +537,13 @@ proxydeps_suggest_uses() {
 	elif echo ${pkg} | grep -E '/sdl2_(gfx|image|mixer|net|ttf)$' > /dev/null; then
 		warn "you need USE_SDL+=$(echo ${pkg} | sed -E 's|.*/sdl2_||')2"
 	# gl-related
-	elif [ ${pkg} = 'graphics/libGL' ]; then
+	elif expr ${lib_file} : "${LOCALBASE}/lib/libGL.so.*$" > /dev/null; then
 		warn "you need USE_GL+=gl"
-	elif [ ${pkg} = 'graphics/gbm' ]; then
+	elif expr ${lib_file} : "${LOCALBASE}/lib/libgbm.so.*$" > /dev/null; then
 		warn "you need USE_GL+=gbm"
-	elif [ ${pkg} = 'graphics/libglesv2' ]; then
+	elif expr ${lib_file} : "${LOCALBASE}/lib/libGLESv2.so.*$" > /dev/null; then
 		warn "you need USE_GL+=glesv2"
-	elif [ ${pkg} = 'graphics/libEGL' ]; then
+	elif expr ${lib_file} : "${LOCALBASE}/lib/libEGL.so.*$" > /dev/null; then
 		warn "you need USE_GL+=egl"
 	elif [ ${pkg} = 'graphics/glew' ]; then
 		warn "you need USE_GL+=glew"
@@ -596,7 +596,7 @@ proxydeps_suggest_uses() {
 		warn "you need USES+=gnustep and USE_GNUSTEP+=gui"
 	# iconv
 	elif [ ${pkg} = "converters/libiconv" ]; then
-		warn "you need USES+=iconv"
+		warn "you need USES+=iconv, USES+=iconv:wchar_t, or USES+=iconv:translit depending on needs"
 	# jpeg
 	elif [ ${pkg} = "graphics/jpeg" -o ${pkg} = "graphics/jpeg-turbo" ]; then
 		warn "you need USES+=jpeg"

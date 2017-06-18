@@ -1,5 +1,5 @@
 # Created by: Brendan Molloy <brendan+freebsd@bbqsrc.net>
-# $FreeBSD: head/ports-mgmt/py-pytoport/Makefile 416366 2016-06-04 15:48:55Z antoine $
+# $FreeBSD: head/ports-mgmt/py-pytoport/Makefile 442592 2017-06-04 21:49:48Z bdrewery $
 
 PORTNAME=	pytoport
 PORTVERSION=	0.4.1
@@ -25,7 +25,8 @@ USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.pre.mk>
 
-.if defined(PACKAGE_BUILDING) && ${PYTHON_VER} != ${PYTHON_DEFAULT}
+.if defined(PACKAGE_BUILDING) && !defined(PACKAGE_BUILDING_FLAVORS) && \
+    ${PYTHON_VER} != ${PYTHON_DEFAULT}
 IGNORE=	you have python ${PYTHON_DEFAULT} set as the default, and this needs ${PYTHON_VER}
 .endif
 

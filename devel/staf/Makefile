@@ -1,5 +1,5 @@
 # Created by: Sergey Kozlov <kozlov.sergey.404@gmail.com>
-# $FreeBSD: head/devel/staf/Makefile 418767 2016-07-19 11:04:13Z mat $
+# $FreeBSD: head/devel/staf/Makefile 442708 2017-06-05 23:25:11Z sunpoet $
 
 PORTNAME=	staf
 PORTVERSION=	3.4.23
@@ -108,9 +108,7 @@ STAF_VAR_DIR?=	/var/db/STAF
 .include <bsd.port.pre.mk>
 
 .if ${PORT_OPTIONS:MPERL}
-.if ${PERL_LEVEL} >= 502200
 BROKEN=	Perl >= 5.22 is not supported
-.endif
 
 .for i in ${STAF_PERL_VERSIONS}
 .if ${PERL_V} != ${i}

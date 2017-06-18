@@ -7,7 +7,7 @@
 #
 # !!! Here be dragons !!! (yeah, here as well...)
 #
-# $FreeBSD: head/Mk/bsd.xorg.mk 433863 2017-02-11 14:17:58Z rezny $
+# $FreeBSD: head/Mk/bsd.xorg.mk 440699 2017-05-12 18:46:53Z rezny $
 #
 
 .if !defined(_POSTMKINCLUDED) && !defined(Xorg_Pre_Include)
@@ -97,7 +97,7 @@ USES+=	pathfix
 CONFIGURE_ARGS+=	--with-xkb-path=${LOCALBASE}/share/X11/xkb \
 					--with-fontrootdir=${LOCALBASE}/share/fonts
 
-LIB_PC_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/dri
+LIB_PC_DEPENDS+=	${LOCALBASE}/libdata/pkgconfig/dri.pc:graphics/mesa-dri
 USE_XORG+=	fontutil:build
 . endif
 

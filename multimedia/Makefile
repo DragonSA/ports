@@ -1,9 +1,10 @@
-# $FreeBSD: head/multimedia/Makefile 439826 2017-04-30 15:47:51Z ler $
+# $FreeBSD: head/multimedia/Makefile 442586 2017-06-04 20:29:37Z sunpoet $
 #
 
     COMMENT = Multimedia software
 
     SUBDIR += 2mandvd
+    SUBDIR += QtAV
     SUBDIR += ab25
     SUBDIR += abby
     SUBDIR += acidrip
@@ -318,6 +319,7 @@
     SUBDIR += py-cec
     SUBDIR += py-enzyme
     SUBDIR += py-ffmpeg
+    SUBDIR += py-flvlib
     SUBDIR += py-gstreamer
     SUBDIR += py-gstreamer1
     SUBDIR += py-guessit
@@ -351,7 +353,6 @@
     SUBDIR += qt5-phonon4-designerplugin
     SUBDIR += qt5-phonon4-gstreamer
     SUBDIR += qt5-phonon4-vlc
-    SUBDIR += QtAV
     SUBDIR += quark
     SUBDIR += quodlibet
     SUBDIR += quvi
@@ -367,6 +368,7 @@
     SUBDIR += rubygem-flvtool2
     SUBDIR += rubygem-gstreamer
     SUBDIR += rubygem-paperclip-av-transcoder
+    SUBDIR += rubygem-paperclip-av-transcoder-rails50
     SUBDIR += sabbu
     SUBDIR += schroedinger
     SUBDIR += shotcut

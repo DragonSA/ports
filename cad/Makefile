@@ -1,4 +1,4 @@
-# $FreeBSD: head/cad/Makefile 429524 2016-12-26 14:29:06Z amdmi3 $
+# $FreeBSD: head/cad/Makefile 439964 2017-05-02 18:50:35Z danfe $
 #
 
     COMMENT = CAD tools
@@ -92,5 +92,6 @@
     SUBDIR += verilog-mode.el
     SUBDIR += xcircuit
     SUBDIR += z88
+    SUBDIR += zcad
 
 .include <bsd.port.subdir.mk>

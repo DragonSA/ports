@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/linux.mk 437366 2017-03-31 15:17:42Z mat $
+# $FreeBSD: head/Mk/Uses/linux.mk 441768 2017-05-26 10:26:39Z tijl $
 #
 # Ports Linux compatibility framework
 #
@@ -37,7 +37,7 @@ linux_ARGS=		${LINUX_DEFAULT:S/_64//}
 .endif
 
 .if ${linux_ARGS} == c6
-LINUX_DIST_VER?=	6.8
+LINUX_DIST_VER?=	6.9
 .if ${ARCH} == amd64 && ${LINUX_DEFAULT} != c6
 LINUX_ARCH=		x86_64
 .elif ${ARCH} == amd64 || ${ARCH} == i386

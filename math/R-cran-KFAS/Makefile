@@ -1,8 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: head/math/R-cran-KFAS/Makefile 429317 2016-12-24 09:12:10Z tota $
+# $FreeBSD: head/math/R-cran-KFAS/Makefile 443415 2017-06-12 03:55:25Z tota $
 
 PORTNAME=	KFAS
-PORTVERSION=	1.2.5
+PORTVERSION=	1.2.8
 CATEGORIES=	math
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 

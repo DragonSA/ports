@@ -1,4 +1,4 @@
-# $FreeBSD: head/sysutils/Makefile 439826 2017-04-30 15:47:51Z ler $
+# $FreeBSD: head/sysutils/Makefile 443510 2017-06-13 16:29:40Z ultima $
 #
 
     COMMENT = System utilities
@@ -64,8 +64,8 @@
     SUBDIR += b43-fwcutter
     SUBDIR += backupchecker
     SUBDIR += backuppc
-    SUBDIR += backuppc4
     SUBDIR += backuppc-devel
+    SUBDIR += backuppc4
     SUBDIR += bacula-bat
     SUBDIR += bacula-client
     SUBDIR += bacula-client-static
@@ -104,7 +104,6 @@
     SUBDIR += boxbackup-devel
     SUBDIR += brasero
     SUBDIR += bsd-splash-changer
-    SUBDIR += bsdadminscripts
     SUBDIR += bsdconfig
     SUBDIR += bsdcrashtar
     SUBDIR += bsdhwmon
@@ -137,12 +136,13 @@
     SUBDIR += cdrtools-devel
     SUBDIR += cfengine
     SUBDIR += cfengine-masterfiles
+    SUBDIR += cfengine-masterfiles310
     SUBDIR += cfengine-masterfiles36
     SUBDIR += cfengine-masterfiles37
     SUBDIR += cfengine-masterfiles38
     SUBDIR += cfengine-masterfiles39
-    SUBDIR += cfengine-masterfiles310
     SUBDIR += cfengine22
+    SUBDIR += cfengine310
     SUBDIR += cfengine32
     SUBDIR += cfengine33
     SUBDIR += cfengine34
@@ -151,7 +151,6 @@
     SUBDIR += cfengine37
     SUBDIR += cfengine38
     SUBDIR += cfengine39
-    SUBDIR += cfengine310
     SUBDIR += chgrep
     SUBDIR += chyves
     SUBDIR += cinnamon-control-center
@@ -410,7 +409,6 @@
     SUBDIR += graid5
     SUBDIR += graveman
     SUBDIR += graylog
-    SUBDIR += grok
     SUBDIR += grub2
     SUBDIR += grub2-bhyve
     SUBDIR += grub2-efi
@@ -619,6 +617,7 @@
     SUBDIR += mksunbootcd
     SUBDIR += mmc-utils
     SUBDIR += mnrpes
+    SUBDIR += modman
     SUBDIR += modules
     SUBDIR += mog
     SUBDIR += monit
@@ -669,6 +668,7 @@
     SUBDIR += nfcutils
     SUBDIR += nfsping
     SUBDIR += nitrogen
+    SUBDIR += ndmpd
     SUBDIR += no-login
     SUBDIR += node_exporter
     SUBDIR += nomad
@@ -850,6 +850,7 @@
     SUBDIR += pwd_unmkdb
     SUBDIR += pwgen
     SUBDIR += pwsafe
+    SUBDIR += pxattr
     SUBDIR += py-XenAPI
     SUBDIR += py-analyzemft
     SUBDIR += py-bcfg2
@@ -867,6 +868,7 @@
     SUBDIR += py-filelike
     SUBDIR += py-freenas.cli
     SUBDIR += py-glances
+    SUBDIR += py-gmailfs-fuse
     SUBDIR += py-halite
     SUBDIR += py-honcho
     SUBDIR += py-iocage
@@ -890,6 +892,7 @@
     SUBDIR += py-ranger
     SUBDIR += py-salt
     SUBDIR += py-scandir
+    SUBDIR += py-scriptine
     SUBDIR += py-shutilwhich
     SUBDIR += py-stdiff
     SUBDIR += py-supervisor
@@ -897,8 +900,11 @@
     SUBDIR += py-uptime
     SUBDIR += py-zdaemon
     SUBDIR += py-zfs
-    SUBDIR += pydf
+    SUBDIR += py3-execnet
     SUBDIR += py3-iocage
+    SUBDIR += py3-pkginfo
+    SUBDIR += py3-ptyprocess
+    SUBDIR += pydf
     SUBDIR += qchroot
     SUBDIR += qjail
     SUBDIR += qjail2
@@ -1208,6 +1214,7 @@
     SUBDIR += utcount
     SUBDIR += vagrant
     SUBDIR += vbetool
+    SUBDIR += vchanger
     SUBDIR += vcp
     SUBDIR += videogen
     SUBDIR += vii

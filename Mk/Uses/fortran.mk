@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/fortran.mk 419511 2016-08-03 12:09:37Z mat $
+# $FreeBSD: head/Mk/Uses/fortran.mk 439929 2017-05-02 05:40:53Z gerald $
 #
 # Fortran support
 #
@@ -17,13 +17,8 @@ fortran_ARGS=	gcc
 
 .if ${fortran_ARGS} == gcc
 _GCC_VER=	${GCC_DEFAULT:S/.//}
-.if ${GCC_DEFAULT} == ${LANG_GCC_IS}
-BUILD_DEPENDS+=	gfortran${_GCC_VER}:lang/gcc
-RUN_DEPENDS+=	gfortran${_GCC_VER}:lang/gcc
-.else
 BUILD_DEPENDS+=	gfortran${_GCC_VER}:lang/gcc${_GCC_VER}
 RUN_DEPENDS+=	gfortran${_GCC_VER}:lang/gcc${_GCC_VER}
-.endif
 USE_BINUTILS=	yes
 F77=		gfortran${_GCC_VER}
 FC=		gfortran${_GCC_VER}

@@ -1,5 +1,5 @@
 # Created by: Thomas Hurst <tom@hur.st>
-# $FreeBSD: head/archivers/py-attic/Makefile 436247 2017-03-15 14:45:30Z mat $
+# $FreeBSD: head/archivers/py-attic/Makefile 442592 2017-06-04 21:49:48Z bdrewery $
 
 PORTNAME=	attic
 PORTVERSION=	0.16
@@ -25,7 +25,8 @@ PYDISTUTILS_BUILDPATH=${BUILD_WRKSRC}/build/lib.${OPSYS:tl}-${UNAMER}-${ARCH}-${
 
 .include <bsd.port.pre.mk>
 
-.if defined(PACKAGE_BUILDING) && ${PYTHON_VER} != ${PYTHON_DEFAULT}
+.if defined(PACKAGE_BUILDING) && !defined(PACKAGE_BUILDING_FLAVORS) && \
+    ${PYTHON_VER} != ${PYTHON_DEFAULT}
 IGNORE=	you have python ${PYTHON_DEFAULT} set as the default, and this needs ${PYTHON_VER}
 .endif
 

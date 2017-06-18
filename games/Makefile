@@ -1,4 +1,4 @@
-# $FreeBSD: head/games/Makefile 439826 2017-04-30 15:47:51Z ler $
+# $FreeBSD: head/games/Makefile 443680 2017-06-16 09:20:07Z amdmi3 $
 #
 
     COMMENT = Games and related software
@@ -17,6 +17,7 @@
     SUBDIR += CaribbeanStud
     SUBDIR += HeroesOfMightAndMagic
     SUBDIR += KnightCap
+    SUBDIR += OpenTomb
     SUBDIR += abbayedesmorts
     SUBDIR += abe
     SUBDIR += abuse_sdl
@@ -64,6 +65,7 @@
     SUBDIR += atr3d
     SUBDIR += atris
     SUBDIR += atris-sounds
+    SUBDIR += auralquiz
     SUBDIR += avanor
     SUBDIR += avoision
     SUBDIR += awale
@@ -377,6 +379,7 @@
     SUBDIR += gnushogi
     SUBDIR += gnustep-ladder
     SUBDIR += gnustep-sudoku
+    SUBDIR += gogrepo
     SUBDIR += golddig
     SUBDIR += goldencheetah
     SUBDIR += golly
@@ -436,8 +439,6 @@
     SUBDIR += instead
     SUBDIR += interlogic
     SUBDIR += ioquake3
-    SUBDIR += ioquake3-devel
-    SUBDIR += ioquake3-devel-server
     SUBDIR += ioquake3-server
     SUBDIR += iortcw
     SUBDIR += iourbanterror
@@ -683,6 +684,10 @@
     SUBDIR += openarena-server
     SUBDIR += openastromenace
     SUBDIR += openbor
+    SUBDIR += openbor3482
+    SUBDIR += openbor3711
+    SUBDIR += openbor3979
+    SUBDIR += openbor4432
     SUBDIR += openbubbles
     SUBDIR += opencity
     SUBDIR += openclonk
@@ -737,6 +742,7 @@
     SUBDIR += pengpong
     SUBDIR += penguin-command
     SUBDIR += pengupop
+    SUBDIR += pentobi
     SUBDIR += phalanx
     SUBDIR += phlipple
     SUBDIR += picmi

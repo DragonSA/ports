@@ -20,7 +20,7 @@
 #
 # Note: all entries should terminate with a slash.
 #
-# $FreeBSD: head/Mk/bsd.sites.mk 438550 2017-04-14 23:16:16Z sunpoet $
+# $FreeBSD: head/Mk/bsd.sites.mk 443400 2017-06-11 17:25:12Z rakuco $
 #
 
 # Where to put distfiles that don't have any other master site
@@ -710,7 +710,7 @@ MASTER_SITE_ISC+= \
 # Updated:	2012-10-26
 .if !defined(IGNORE_MASTER_SITE_KDE)
 MASTER_SITE_KDE+= \
-	http://download.kde.org/%SUBDIR%/ \
+	https://download.kde.org/%SUBDIR%/ \
 	ftp://ftp.gtlib.gatech.edu/pub/kde/%SUBDIR%/ \
 	ftp://ftp.informatik.hu-berlin.de/pub/Mirrors/ftp.kde.org/%SUBDIR%/ \
 	http://ftp.gtlib.gatech.edu/pub/kde/%SUBDIR%/ \

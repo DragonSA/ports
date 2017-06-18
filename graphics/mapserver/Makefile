@@ -1,8 +1,8 @@
 # Created by: Douglas K. Rand <rand@meridian-enviro.com>
-# $FreeBSD: head/graphics/mapserver/Makefile 432007 2017-01-21 01:15:23Z wen $
+# $FreeBSD: head/graphics/mapserver/Makefile 441556 2017-05-24 00:45:17Z wen $
 
 PORTNAME=		mapserver
-PORTVERSION=		7.0.4
+PORTVERSION=		7.0.5
 CATEGORIES=		graphics www geography
 MASTER_SITES=		http://download.osgeo.org/mapserver/
 
@@ -187,7 +187,7 @@ do-install:
 .endfor
 	${INSTALL_PROGRAM} ${BUILD_WRKSRC}/libmapserver.so.${PORTVERSION} ${STAGEDIR}${PREFIX}/lib
 
-	@${LN} -sf libmapserver.so.7.0.4 ${STAGEDIR}${PREFIX}/lib/libmapserver.so.2
+	@${LN} -sf libmapserver.so.7.0.5 ${STAGEDIR}${PREFIX}/lib/libmapserver.so.2
 	@${LN} -sf libmapserver.so.2 ${STAGEDIR}${PREFIX}/lib/libmapserver.so
 
 do-install-PHP-on:

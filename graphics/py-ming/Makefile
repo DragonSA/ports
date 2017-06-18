@@ -1,10 +1,9 @@
 # Created by: Akinori MUSHA aka knu <knu@idaemons.org>
-# $FreeBSD: head/graphics/py-ming/Makefile 423014 2016-09-30 19:24:30Z tijl $
+# $FreeBSD: head/graphics/py-ming/Makefile 440422 2017-05-08 12:44:03Z sunpoet $
 
 PORTNAME=	ming
 DISTVERSIONPREFIX=	${PORTNAME}-
-DISTVERSION=	0_4_7
-PORTREVISION=	1
+DISTVERSION=	0_4_8
 CATEGORIES=	graphics python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 

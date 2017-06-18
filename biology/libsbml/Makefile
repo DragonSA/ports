@@ -1,8 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: head/biology/libsbml/Makefile 425174 2016-11-02 22:45:14Z mat $
+# $FreeBSD: head/biology/libsbml/Makefile 441126 2017-05-18 02:22:18Z wen $
 
 PORTNAME=	libsbml
-PORTVERSION=	5.13.0
+PORTVERSION=	5.15.0
 CATEGORIES=	biology devel
 MASTER_SITES=	SF/sbml/${PORTNAME}/${PORTVERSION}/stable
 DISTNAME=	libSBML-${PORTVERSION}-core-src

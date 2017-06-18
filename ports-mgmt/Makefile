@@ -1,8 +1,10 @@
-# $FreeBSD: head/ports-mgmt/Makefile 432868 2017-01-30 21:07:01Z pawel $
+# $FreeBSD: head/ports-mgmt/Makefile 441068 2017-05-17 09:24:24Z kami $
 #
 
     COMMENT = Ports for managing, installing, and developing FreeBSD ports and packages
 
+    SUBDIR += bsdadminscripts
+    SUBDIR += bsdadminscripts2
     SUBDIR += chucky
     SUBDIR += create-rb-port
     SUBDIR += dialog4ports

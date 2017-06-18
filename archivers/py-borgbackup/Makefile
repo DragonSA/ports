@@ -1,5 +1,5 @@
 # Created by: José García Juanino <jjuanino@gmail.com>
-# $FreeBSD: head/archivers/py-borgbackup/Makefile 434205 2017-02-16 11:10:14Z amdmi3 $
+# $FreeBSD: head/archivers/py-borgbackup/Makefile 442592 2017-06-04 21:49:48Z bdrewery $
 
 PORTNAME=	borgbackup
 PORTVERSION=	1.0.10
@@ -28,7 +28,8 @@ USE_PYTHON=	autoplist distutils
 
 .include <bsd.port.pre.mk>
 
-.if defined(PACKAGE_BUILDING) && ${PYTHON_VER} != ${PYTHON_DEFAULT}
+.if defined(PACKAGE_BUILDING) && !defined(PACKAGE_BUILDING_FLAVORS) && \
+    ${PYTHON_VER} != ${PYTHON_DEFAULT}
 IGNORE=	you have python ${PYTHON_DEFAULT} set as the default, and this needs ${PYTHON_VER}
 .endif
 

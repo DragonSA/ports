@@ -1,4 +1,4 @@
-# $FreeBSD: head/emulators/Makefile 439436 2017-04-26 09:10:00Z danfe $
+# $FreeBSD: head/emulators/Makefile 443667 2017-06-16 04:11:43Z ultima $
 #
 
     COMMENT = Emulators for other operating systems
@@ -85,6 +85,7 @@
     SUBDIR += mupen64plus-core
     SUBDIR += mupen64plus-input-sdl
     SUBDIR += mupen64plus-plugins
+    SUBDIR += mupen64plus-qt
     SUBDIR += mupen64plus-rsp-cxd4
     SUBDIR += mupen64plus-rsp-hle
     SUBDIR += mupen64plus-rsp-z64

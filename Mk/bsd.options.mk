@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/bsd.options.mk 438752 2017-04-17 20:24:46Z kwm $
+# $FreeBSD: head/Mk/bsd.options.mk 443024 2017-06-09 18:12:54Z kwm $
 #
 # These variables are used in port makefiles to define the options for a port.
 #
@@ -123,6 +123,13 @@
 # ${opt}_MESON_FALSE		Will add to MESON_ARGS:
 #				Option enabled	-D${content}=false
 #				Option disabled	-D${content}=true
+#
+# ${opt}_MESON_YES		Will add to MESON_ARGS:
+#				Option enabled  -D${content}=yes
+#				Option disabled -D${content}=no
+# ${opt}_MESON_NO		Will add to MESON_ARGS:
+#				Option enabled  -D${content}=no
+#				Option disabled -D${content}=yes
 #
 # ${opt}_IMPLIES		When opt is enabled, options named in IMPLIES will
 #				get enabled too.
@@ -539,6 +546,12 @@ MESON_ARGS+=		${${opt}_MESON_TRUE:C/.*/-D&=true/}
 .    if defined(${opt}_MESON_FALSE)
 MESON_ARGS+=		${${opt}_MESON_FALSE:C/.*/-D&=false/}
 .    endif
+.    if defined(${opt}_MESON_YES)
+MESON_ARGS+=		${${opt}_MESON_YES:C/.*/-D&=yes/}
+.    endif
+.    if defined(${opt}_MESON_NO)
+MESON_ARGS+=		${${opt}_MESON_NO:C/.*/-D&=no/}
+.    endif
 .    for configure in CONFIGURE CMAKE MESON QMAKE
 .      if defined(${opt}_${configure}_ON)
 ${configure}_ARGS+=	${${opt}_${configure}_ON}
@@ -594,6 +607,12 @@ MESON_ARGS+=		${${opt}_MESON_TRUE:C/.*/-D&=false/}
 .    endif
 .    if defined(${opt}_MESON_FALSE)
 MESON_ARGS+=            ${${opt}_MESON_FALSE:C/.*/-D&=true/}
+.    endif
+.    if defined(${opt}_MESON_YES)
+MESON_ARGS+=		${${opt}_MESON_YES:C/.*/-D&=no/}
+.    endif
+.    if defined(${opt}_MESON_NO)
+MESON_ARGS+=		${${opt}_MESON_NO:C/.*/-D&=yes/}
 .    endif
 .    for configure in CONFIGURE CMAKE MESON QMAKE
 .      if defined(${opt}_${configure}_OFF)

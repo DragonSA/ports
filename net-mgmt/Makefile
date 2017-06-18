@@ -1,4 +1,4 @@
-# $FreeBSD: head/net-mgmt/Makefile 439846 2017-04-30 21:26:19Z ler $
+# $FreeBSD: head/net-mgmt/Makefile 442733 2017-06-06 01:10:34Z dbaio $
 #
 
     COMMENT = Network management tools
@@ -27,6 +27,8 @@
     SUBDIR += bwm-ng
     SUBDIR += cacti
     SUBDIR += cacti-spine
+    SUBDIR += cacti88
+    SUBDIR += cacti88-spine
     SUBDIR += ccnet-client
     SUBDIR += ccnet-server
     SUBDIR += cdpd
@@ -97,6 +99,7 @@
     SUBDIR += ipcad
     SUBDIR += ipcalc
     SUBDIR += ipplan
+    SUBDIR += iprange
     SUBDIR += ipv6calc
     SUBDIR += ipv6gen
     SUBDIR += ipv6mon
@@ -109,6 +112,7 @@
     SUBDIR += lanmap
     SUBDIR += lg
     SUBDIR += librenms
+    SUBDIR += librenms-agent
     SUBDIR += libsmi
     SUBDIR += lldpd
     SUBDIR += mbrowse
@@ -290,6 +294,7 @@
     SUBDIR += py-snmp4-mibs
     SUBDIR += py-snmp_passpersist
     SUBDIR += py-yapsnmp
+    SUBDIR += py3-dnsdiag
     SUBDIR += qkismet
     SUBDIR += rackmonkey
     SUBDIR += rancid3
@@ -360,10 +365,6 @@
     SUBDIR += zabbix22-frontend
     SUBDIR += zabbix22-proxy
     SUBDIR += zabbix22-server
-    SUBDIR += zabbix24-agent
-    SUBDIR += zabbix24-frontend
-    SUBDIR += zabbix24-proxy
-    SUBDIR += zabbix24-server
     SUBDIR += zabbix3-agent
     SUBDIR += zabbix3-frontend
     SUBDIR += zabbix3-proxy

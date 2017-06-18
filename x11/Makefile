@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11/Makefile 439826 2017-04-30 15:47:51Z ler $
+# $FreeBSD: head/x11/Makefile 442055 2017-05-30 09:44:52Z danfe $
 #
 
     COMMENT = Ports to support the X window system
@@ -99,6 +99,7 @@
     SUBDIR += gtkchtheme
     SUBDIR += gtkterm2
     SUBDIR += guake
+    SUBDIR += gxkb
     SUBDIR += hs-X11
     SUBDIR += hs-X11-xft
     SUBDIR += hs-xmobar
@@ -425,6 +426,7 @@
     SUBDIR += xkbcomp
     SUBDIR += xkbctrl
     SUBDIR += xkbevd
+    SUBDIR += xkbind
     SUBDIR += xkbprint
     SUBDIR += xkbset
     SUBDIR += xkbutils

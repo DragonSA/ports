@@ -1,8 +1,9 @@
 # Created by: Klaus Aehlig <aehlig@linta.de>
-# $FreeBSD: head/www/uzbl/Makefile 436290 2017-03-16 19:23:48Z antoine $
+# $FreeBSD: head/www/uzbl/Makefile 440091 2017-05-04 05:26:24Z tcberner $
 
 PORTNAME=	uzbl
 PORTVERSION=	0.9.1
+PORTREVISION=	1
 DISTVERSIONPREFIX=v
 CATEGORIES=	www
 
@@ -21,7 +22,7 @@ RUN_DEPENDS=	socat:net/socat \
 		dmenu:x11/dmenu \
 		${PYTHON_PKGNAMEPREFIX}configparser>0:devel/py-configparser
 
-USES=		gmake pkgconfig python:2 desktop-file-utils gettext-runtime
+USES=		gmake pkgconfig python:2 desktop-file-utils gettext-runtime shebangfix
 USE_XORG=	x11
 USE_GNOME=	gtk20 pygtk2 cairo
 USE_LDCONFIG=	yes
@@ -29,6 +30,10 @@ INSTALLS_ICONS=	yes
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	uzbl
+
+SHEBANG_FILES=	examples/data/scripts/auth.py \
+		examples/data/scripts/scheme.py \
+		examples/data/scripts/uzblcat
 
 MAKE_ENV=	PYTHON=${PYTHON_VERSION} \
 		MANDIR=${STAGEDIR}${MANPREFIX}/man

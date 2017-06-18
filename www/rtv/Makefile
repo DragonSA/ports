@@ -1,11 +1,11 @@
-# $FreeBSD: head/www/rtv/Makefile 438595 2017-04-15 19:39:04Z ler $
+# $FreeBSD: head/www/rtv/Makefile 440442 2017-05-08 17:21:49Z dbaio $
 
 PORTNAME=	rtv
 PORTVERSION=	1.15.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 
-MAINTAINER=	dbaio@bsd.com.br
+MAINTAINER=	dbaio@FreeBSD.org
 COMMENT=	Commandline client for reddit
 
 LICENSE=	MIT

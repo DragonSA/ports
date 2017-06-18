@@ -1,8 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: head/databases/R-cran-RMySQL/Makefile 414840 2016-05-09 12:20:28Z tota $
+# $FreeBSD: head/databases/R-cran-RMySQL/Makefile 440300 2017-05-07 05:17:47Z tota $
 
 PORTNAME=	RMySQL
-DISTVERSION=	0.10.9
+DISTVERSION=	0.10.11
 CATEGORIES=	databases
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
@@ -11,9 +11,11 @@ COMMENT=	R interface to the MySQL database
 
 LICENSE=	GPLv2
 
-RUN_DEPENDS=	R-cran-DBI>=0.4:databases/R-cran-DBI
+CRAN_DEPENDS=	R-cran-DBI>=0.4:databases/R-cran-DBI
+BUILD_DEPENDS=	${CRAN_DEPENDS}
+RUN_DEPENDS=	${CRAN_DEPENDS}
 
-USES=	cran:auto-plist mysql
+USES=	cran:auto-plist,compiles mysql
 
 post-patch:
 	@${REINPLACE_CMD} -e '/bin\//s|bash|sh|' ${WRKSRC}/configure

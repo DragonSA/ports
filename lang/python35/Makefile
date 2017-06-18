@@ -1,9 +1,9 @@
 # Created by: Kubilay Kocak <koobs@FreeBSD.org>
-# $FreeBSD: head/lang/python35/Makefile 438647 2017-04-16 11:08:39Z sunpoet $
+# $FreeBSD: head/lang/python35/Makefile 442759 2017-06-06 12:56:47Z koobs $
 
 PORTNAME=	python
 PORTVERSION=	${PYTHON_PORTVERSION}
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	lang python ipv6
 MASTER_SITES=	PYTHON/ftp/python/${PYTHON_PORTVERSION}
 PKGNAMESUFFIX=	${PYTHON_SUFFIX}
@@ -136,5 +136,7 @@ post-install:
 .endif
 	for i in ${STAGEDIR}${PREFIX}/lib/python${PYTHON_VER}/lib-dynload/*.so; do \
 		${STRIP_CMD} $$i; done								# Strip shared extensions
+	${INSTALL_DATA} ${WRKSRC}/Tools/gdb/libpython.py \
+		${STAGEDIR}${PREFIX}/lib/libpython${PYTHON_VER}${ABIFLAGS}.so.1.0-gdb.py
 
 .include <bsd.port.mk>

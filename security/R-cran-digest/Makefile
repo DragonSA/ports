@@ -1,16 +1,16 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: head/security/R-cran-digest/Makefile 419604 2016-08-04 09:33:27Z tota $
+# $FreeBSD: head/security/R-cran-digest/Makefile 440034 2017-05-03 19:58:51Z tota $
 
 PORTNAME=	digest
-PORTVERSION=	0.6.10
+PORTVERSION=	0.6.12
 CATEGORIES=	security
 DISTNAME=	${PORTNAME}_${PORTVERSION}
 
 MAINTAINER=	tota@FreeBSD.org
 COMMENT=	Create cryptographic hash digests of R objects
 
-LICENSE=	GPLv2
+LICENSE=	GPLv2+
 
-USES=	cran:auto-plist
+USES=	cran:auto-plist,compiles
 
 .include <bsd.port.mk>

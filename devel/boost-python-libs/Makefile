@@ -1,10 +1,10 @@
 # Created by: Alexander Churanov <churanov.port.maintainer@gmail.com>
-# $FreeBSD: head/devel/boost-python-libs/Makefile 426908 2016-11-23 12:45:46Z jbeich $
+# $FreeBSD: head/devel/boost-python-libs/Makefile 442853 2017-06-07 17:11:30Z kwm $
 
-PORTNAME=	boost-python-libs
-COMMENT=	Framework for interfacing Python and C++
+PORTNAME?=	boost-python-libs
+COMMENT?=	Framework for interfacing Python 2 and C++
 
-USES+=		python
+USES?=		python:2.7
 
 OPTIONS_DEFINE=	DEBUG OPTIMIZED_CFLAGS
 
@@ -43,6 +43,6 @@ post-install:
 		-e "s|%%PYTHON_INCLUDEDIR%%|${PYTHON_INCLUDEDIR}|g" \
 		-e "s|%%PYTHON_LIBDIR%%|${PYTHON_LIBDIR}|g" \
 		-e "s|%%PYTHON_VERSION%%|${PYTHON_VERSION}|g" ${PKGMESSAGE}
-	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libboost_python.so.${PORTVERSION}
+	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/lib/libboost_python*.so.${PORTVERSION}
 
 .include <bsd.port.mk>

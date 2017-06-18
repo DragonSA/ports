@@ -1,4 +1,4 @@
-# $FreeBSD: head/lang/Makefile 439826 2017-04-30 15:47:51Z ler $
+# $FreeBSD: head/lang/Makefile 443040 2017-06-09 20:08:54Z kwm $
 #
 
     COMMENT = Programming languages
@@ -37,7 +37,6 @@
     SUBDIR += clang33
     SUBDIR += clang34
     SUBDIR += clang35
-    SUBDIR += clang36
     SUBDIR += clang38
     SUBDIR += cling
     SUBDIR += clojure
@@ -245,9 +244,9 @@
     SUBDIR += pcc
     SUBDIR += pecl-perl
     SUBDIR += perl5-devel
-    SUBDIR += perl5.20
     SUBDIR += perl5.22
     SUBDIR += perl5.24
+    SUBDIR += perl5.26
     SUBDIR += petite-chez
     SUBDIR += pfe
     SUBDIR += phantomjs
@@ -302,7 +301,6 @@
     SUBDIR += rexx-wrapper
     SUBDIR += rhino
     SUBDIR += rubinius
-    SUBDIR += ruby21
     SUBDIR += ruby22
     SUBDIR += ruby23
     SUBDIR += ruby24
@@ -335,6 +333,7 @@
     SUBDIR += spidermonkey170
     SUBDIR += spidermonkey185
     SUBDIR += spidermonkey24
+    SUBDIR += spidermonkey38
     SUBDIR += spl
     SUBDIR += squeak
     SUBDIR += squirrel

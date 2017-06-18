@@ -1,4 +1,4 @@
-# $FreeBSD: head/mail/rss2email3/Makefile 412348 2016-04-01 14:16:16Z mat $
+# $FreeBSD: head/mail/rss2email3/Makefile 442592 2017-06-04 21:49:48Z bdrewery $
 
 PORTNAME=	rss2email
 PORTVERSION=	3.8
@@ -35,7 +35,8 @@ post-install:
 
 .include <bsd.port.pre.mk>
 
-.if defined(PACKAGE_BUILDING) && ${PYTHON_VER} != ${PYTHON_DEFAULT}
+.if defined(PACKAGE_BUILDING) && !defined(PACKAGE_BUILDING_FLAVORS) && \
+    ${PYTHON_VER} != ${PYTHON_DEFAULT}
 IGNORE=	you have python ${PYTHON_DEFAULT} set as the default, and this needs ${PYTHON_VER}
 .endif
 

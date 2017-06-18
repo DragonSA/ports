@@ -1,4 +1,4 @@
-# $FreeBSD: head/print/Makefile 439629 2017-04-28 20:24:38Z sunpoet $
+# $FreeBSD: head/print/Makefile 442589 2017-06-04 21:00:48Z cmt $
 #
 
     COMMENT = Desktop publishing
@@ -82,10 +82,6 @@
     SUBDIR += gsview
     SUBDIR += gtklp
     SUBDIR += gutenprint
-    SUBDIR += gutenprint-base
-    SUBDIR += gutenprint-cups
-    SUBDIR += gutenprint-foomatic
-    SUBDIR += gutenprint-ijs
     SUBDIR += gv
     SUBDIR += harfbuzz
     SUBDIR += harfbuzz-icu
@@ -192,6 +188,7 @@
     SUBDIR += py-fonttools
     SUBDIR += py-fpdf
     SUBDIR += py-pdf
+    SUBDIR += py-pdf2
     SUBDIR += py-pollyreports
     SUBDIR += py-preppy
     SUBDIR += py-pycups

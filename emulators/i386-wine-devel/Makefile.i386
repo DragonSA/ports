@@ -1,5 +1,5 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
-# $FreeBSD: head/emulators/i386-wine-devel/Makefile.i386 439197 2017-04-23 05:56:28Z dbn $
+# $FreeBSD: head/emulators/i386-wine-devel/Makefile.i386 440699 2017-05-12 18:46:53Z rezny $
 
 PKGNAMEPREFIX=	i386-
 
@@ -12,7 +12,7 @@ MASTERDIR=	${SLAVEDIR}/../wine-devel
 PKGINSTALL=	${SLAVEDIR}/files/pkg-install
 PKGDEINSTALL=	${PKGINSTALL}
 
-RUN_DEPENDS=	dri>0:graphics/dri
+RUN_DEPENDS=	mesa-dri>0:graphics/mesa-dri
 
 CONFLICTS_INSTALL?=	wine-[0-9]* wine-staging-[0-9]* wine-devel-[0-9]* \
 			i386-wine-[0-9]* i386-wine-staging-[0-9]*

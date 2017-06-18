@@ -1,4 +1,4 @@
-# $FreeBSD: head/net-p2p/Makefile 439826 2017-04-30 15:47:51Z ler $
+# $FreeBSD: head/net-p2p/Makefile 442260 2017-05-31 19:25:55Z danfe $
 #
 
     COMMENT = Peer-to-peer network applications
@@ -80,6 +80,7 @@
     SUBDIR += shx
     SUBDIR += sonarr
     SUBDIR += squall
+    SUBDIR += torrent-file-editor
     SUBDIR += torrentcheck
     SUBDIR += torrentsniff
     SUBDIR += transmission

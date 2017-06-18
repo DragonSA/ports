@@ -1,4 +1,4 @@
-# $FreeBSD: head/irc/Makefile 439826 2017-04-30 15:47:51Z ler $
+# $FreeBSD: head/irc/Makefile 442126 2017-05-30 21:10:24Z rakuco $
 #
 
     COMMENT = Internet Relay Chat utilities
@@ -57,7 +57,7 @@
     SUBDIR += irssi-xmpp
     SUBDIR += irssistats
     SUBDIR += keitairc2
-    SUBDIR += konversation-kde4
+    SUBDIR += konversation
     SUBDIR += kvirc
     SUBDIR += kvirc-qt4
     SUBDIR += libircclient

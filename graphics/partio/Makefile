@@ -1,8 +1,8 @@
-# $FreeBSD: head/graphics/partio/Makefile 432169 2017-01-22 22:27:54Z rene $
+# $FreeBSD: head/graphics/partio/Makefile 442692 2017-06-05 23:02:26Z rakuco $
 
 PORTNAME=	partio
 PORTVERSION=	1.1.0.20150221
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	graphics math
 
 MAINTAINER=	ports@FreeBSD.org
@@ -46,7 +46,7 @@ post-patch:
 
 .if ${PORT_OPTIONS:MDOCS}
 post-build:
-	@(cd ${BUILD_WRKSRC}; make doc)
+	@(cd ${BUILD_WRKSRC}; ${MAKE_CMD} doc)
 .endif
 
 .include <bsd.port.mk>

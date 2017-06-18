@@ -1,8 +1,8 @@
-# $FreeBSD: head/devel/libsearpc/Makefile 435563 2017-03-06 18:30:10Z lifanov $
+# $FreeBSD: head/devel/libsearpc/Makefile 441787 2017-05-26 15:02:08Z lifanov $
 
 PORTNAME=	libsearpc
-PORTVERSION=	3.1.0
-PORTREVISION=	1
+PORTVERSION=	3.0.8
+PORTEPOCH=	1
 CATEGORIES=	devel
 
 MAINTAINER=	ultima1252@gmail.com
@@ -16,7 +16,7 @@ LIB_DEPENDS=	libjansson.so:devel/jansson \
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	haiwen
-GH_TAGNAME=	v3.1-latest
+GH_TAGNAME=	12a0126
 
 USES=		autoreconf gettext libtool pathfix pkgconfig python:2
 USE_LDCONFIG=	yes

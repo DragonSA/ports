@@ -1,4 +1,4 @@
-# $FreeBSD: head/audio/Makefile 439826 2017-04-30 15:47:51Z ler $
+# $FreeBSD: head/audio/Makefile 442616 2017-06-05 13:00:21Z cpm $
 #
 
     COMMENT = Audio tools
@@ -47,6 +47,7 @@
     SUBDIR += autocd
     SUBDIR += autotalent
     SUBDIR += autozen
+    SUBDIR += aylet
     SUBDIR += baresip
     SUBDIR += baudline
     SUBDIR += bcg729
@@ -258,6 +259,7 @@
     SUBDIR += gstreamer-plugins-shout2
     SUBDIR += gstreamer-plugins-sidplay
     SUBDIR += gstreamer-plugins-sndfile
+    SUBDIR += gstreamer-plugins-sndio
     SUBDIR += gstreamer-plugins-soundtouch
     SUBDIR += gstreamer-plugins-spc
     SUBDIR += gstreamer-plugins-speex
@@ -514,6 +516,7 @@
     SUBDIR += mpdas
     SUBDIR += mpdbrowser
     SUBDIR += mpdcon
+    SUBDIR += mpdscribble
     SUBDIR += mpg123
     SUBDIR += mpg123.el
     SUBDIR += mpg321
@@ -627,6 +630,7 @@
     SUBDIR += py-eyed3
     SUBDIR += py-fmoo-audiotools
     SUBDIR += py-gmusicapi
+    SUBDIR += py-hsaudiotag
     SUBDIR += py-id3
     SUBDIR += py-karaoke
     SUBDIR += py-mad
@@ -643,6 +647,7 @@
     SUBDIR += py-pyliblo
     SUBDIR += py-shout
     SUBDIR += py-soundcloud
+    SUBDIR += py-soundscrape
     SUBDIR += py-speechrecognition
     SUBDIR += py-speex
     SUBDIR += py-tagpy
@@ -777,7 +782,6 @@
     SUBDIR += tuxguitar
     SUBDIR += twolame
     SUBDIR += uade
-    SUBDIR += ufmcontrol-i18n
     SUBDIR += umix
     SUBDIR += umodplayer
     SUBDIR += umurmur

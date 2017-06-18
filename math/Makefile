@@ -1,4 +1,4 @@
-# $FreeBSD: head/math/Makefile 439826 2017-04-30 15:47:51Z ler $
+# $FreeBSD: head/math/Makefile 442495 2017-06-03 14:18:18Z cpm $
 #
 
     COMMENT = Mathematics
@@ -22,6 +22,7 @@
     SUBDIR += R-cran-RcppArmadillo
     SUBDIR += R-cran-RcppEigen
     SUBDIR += R-cran-Rmpfr
+    SUBDIR += R-cran-Rsolnp
     SUBDIR += R-cran-SparseM
     SUBDIR += R-cran-VGAM
     SUBDIR += R-cran-Zelig
@@ -33,6 +34,7 @@
     SUBDIR += R-cran-deldir
     SUBDIR += R-cran-dlmodeler
     SUBDIR += R-cran-dplyr
+    SUBDIR += R-cran-expm
     SUBDIR += R-cran-forecast
     SUBDIR += R-cran-fracdiff
     SUBDIR += R-cran-geepack
@@ -61,6 +63,7 @@
     SUBDIR += R-cran-pbkrtest
     SUBDIR += R-cran-psych
     SUBDIR += R-cran-quadprog
+    SUBDIR += R-cran-qualityTools
     SUBDIR += R-cran-quantreg
     SUBDIR += R-cran-rgenoud
     SUBDIR += R-cran-sandwich
@@ -100,6 +103,7 @@
     SUBDIR += biggles
     SUBDIR += blacs
     SUBDIR += blas
+    SUBDIR += blis
     SUBDIR += blitz++
     SUBDIR += blocksolve95
     SUBDIR += bsdnt
@@ -117,6 +121,7 @@
     SUBDIR += clarence
     SUBDIR += clasp
     SUBDIR += clblas
+    SUBDIR += clblast
     SUBDIR += clfft
     SUBDIR += clipper
     SUBDIR += cln
@@ -708,6 +713,7 @@
     SUBDIR += ump
     SUBDIR += units
     SUBDIR += unuran
+    SUBDIR += viennacl
     SUBDIR += vowpal_wabbit
     SUBDIR += vtk5
     SUBDIR += vtk5-data

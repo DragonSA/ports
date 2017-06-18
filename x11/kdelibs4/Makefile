@@ -1,9 +1,9 @@
 # Created by: arved@FreeBSD.org
-# $FreeBSD: head/x11/kdelibs4/Makefile 439367 2017-04-25 08:20:30Z riggs $
+# $FreeBSD: head/x11/kdelibs4/Makefile 440556 2017-05-10 12:03:58Z tcberner $
 
 PORTNAME=	kdelibs
 PORTVERSION=	${KDE4_KDELIBS_VERSION}
-PORTREVISION=	3
+PORTREVISION=	4
 CATEGORIES=	x11 kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org

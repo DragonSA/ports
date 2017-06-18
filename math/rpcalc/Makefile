@@ -1,5 +1,5 @@
 # Created by: Edwin Groothuis <edwin@mavetju.org>
-# $FreeBSD: head/math/rpcalc/Makefile 430839 2017-01-07 21:42:28Z sunpoet $
+# $FreeBSD: head/math/rpcalc/Makefile 442592 2017-06-04 21:49:48Z bdrewery $
 
 PORTNAME=	rpcalc
 PORTVERSION=	0.7.1
@@ -36,7 +36,8 @@ do-install:
 
 .include <bsd.port.pre.mk>
 
-.if defined(PACKAGE_BUILDING) && ${PYTHON_VER} != ${PYTHON_DEFAULT}
+.if defined(PACKAGE_BUILDING) && !defined(PACKAGE_BUILDING_FLAVORS) && \
+    ${PYTHON_VER} != ${PYTHON_DEFAULT}
 IGNORE=	you have python ${PYTHON_DEFAULT} set as the default, and this needs ${PYTHON_VER}
 .endif
 

@@ -1,4 +1,4 @@
-# $FreeBSD: head/biology/Makefile 439826 2017-04-30 15:47:51Z ler $
+# $FreeBSD: head/biology/Makefile 440232 2017-05-06 06:07:03Z miwi $
 #
 
     COMMENT = Biology
@@ -83,6 +83,8 @@
     SUBDIR += psi88
     SUBDIR += py-biom-format
     SUBDIR += py-biopython
+    SUBDIR += py-bx-python
+    SUBDIR += py-pysam
     SUBDIR += pycogent
     SUBDIR += pyfasta
     SUBDIR += python-nexus

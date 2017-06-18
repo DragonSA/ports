@@ -1,8 +1,9 @@
-# $FreeBSD: head/games/openra/Makefile 439144 2017-04-22 09:52:33Z jbeich $
+# $FreeBSD: head/games/openra/Makefile 443384 2017-06-11 12:33:36Z jbeich $
 
 PORTNAME=	openra
-PORTVERSION=	20170421
+PORTVERSION=	20170527
 DISTVERSIONPREFIX=	release-
+PORTREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	https://github.com/${GH_ACCOUNT}/SDL2-CS/releases/download/20161223/:SDL2_CS \
 		https://github.com/${GH_ACCOUNT}/OpenAL-CS/releases/download/20151227/:OpenAL_CS \
