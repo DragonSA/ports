@@ -1,4 +1,4 @@
-# $FreeBSD: head/databases/Makefile 443772 2017-06-17 13:44:51Z rakuco $
+# $FreeBSD: head/databases/Makefile 444170 2017-06-23 09:02:17Z tz $
 #
 
     COMMENT = Databases and related software
@@ -540,6 +540,7 @@
     SUBDIR += pear-Structures_DataGrid_DataSource_MDB2
     SUBDIR += pear-Structures_DataGrid_DataSource_PDO
     SUBDIR += pear-XML_Query2XML
+    SUBDIR += pecl-cassandra
     SUBDIR += pecl-chdb
     SUBDIR += pecl-couchbase
     SUBDIR += pecl-dbase
@@ -660,6 +661,7 @@
     SUBDIR += postgresql-libpgeasy
     SUBDIR += postgresql-libpqxx
     SUBDIR += postgresql-libpqxx3
+    SUBDIR += postgresql-mysql_fdw
     SUBDIR += postgresql-odbc
     SUBDIR += postgresql-plproxy
     SUBDIR += postgresql-plruby

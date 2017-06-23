@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/Makefile 443803 2017-06-18 05:51:14Z sunpoet $
+# $FreeBSD: head/www/Makefile 444023 2017-06-21 09:30:16Z jbeich $
 #
 
     COMMENT = Ports related to the World Wide Web
@@ -1645,7 +1645,6 @@
     SUBDIR += py-flask-principal
     SUBDIR += py-flask-restful
     SUBDIR += py-flask-restplus
-    SUBDIR += py-flask-restplus08
     SUBDIR += py-flask-socketio
     SUBDIR += py-flask-sockets
     SUBDIR += py-flask-uploads

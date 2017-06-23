@@ -1,4 +1,4 @@
-# $FreeBSD: head/emulators/Makefile 443667 2017-06-16 04:11:43Z ultima $
+# $FreeBSD: head/emulators/Makefile 443906 2017-06-19 20:47:00Z jbeich $
 #
 
     COMMENT = Emulators for other operating systems
@@ -131,6 +131,7 @@
     SUBDIR += raine
     SUBDIR += riscv-fesvr
     SUBDIR += riscv-isa-sim
+    SUBDIR += rpcs3
     SUBDIR += rtc
     SUBDIR += rubygem-fission
     SUBDIR += simh

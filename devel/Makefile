@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/Makefile 443715 2017-06-16 17:28:05Z amdmi3 $
+# $FreeBSD: head/devel/Makefile 444040 2017-06-21 16:39:39Z tobik $
 #
 
     COMMENT = Development utilities
@@ -182,6 +182,7 @@
     SUBDIR += bglibs
     SUBDIR += bicyclerepair
     SUBDIR += bin86
+    SUBDIR += bingrep
     SUBDIR += binutils
     SUBDIR += bison
     SUBDIR += bisoncpp
@@ -2683,6 +2684,7 @@
     SUBDIR += p5-List-Objects-WithUtils
     SUBDIR += p5-List-Permutor
     SUBDIR += p5-List-PowerSet
+    SUBDIR += p5-List-Regexp
     SUBDIR += p5-List-Rotation-Cycle
     SUBDIR += p5-List-SomeUtils
     SUBDIR += p5-List-SomeUtils-XS
@@ -4176,6 +4178,7 @@
     SUBDIR += py-bluelet
     SUBDIR += py-boto
     SUBDIR += py-botocore
+    SUBDIR += py-bsd
     SUBDIR += py-cached-property
     SUBDIR += py-cachetools
     SUBDIR += py-calendar

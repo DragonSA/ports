@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/Makefile 443772 2017-06-17 13:44:51Z rakuco $
+# $FreeBSD: head/textproc/Makefile 444035 2017-06-21 16:23:52Z tobik $
 #
 
     COMMENT = Text processing utilities (does not include desktop publishing)
@@ -1417,6 +1417,7 @@
     SUBDIR += resume
     SUBDIR += resume-extensions
     SUBDIR += rfcdiff
+    SUBDIR += ripgrep
     SUBDIR += ripole
     SUBDIR += rl
     SUBDIR += rman
@@ -1641,6 +1642,7 @@
     SUBDIR += sr-hunspell
     SUBDIR += srilm
     SUBDIR += ss-hunspell
+    SUBDIR += ssddiff
     SUBDIR += stardict-dict-fa_IR
     SUBDIR += stardict-dictd_mova
     SUBDIR += stardict-quick

@@ -1,7 +1,7 @@
 #
 # MOVED -- A list of (recently) moved or removed ports
 #
-# $FreeBSD: head/MOVED 443773 2017-06-17 14:10:23Z rakuco $
+# $FreeBSD: head/MOVED 444023 2017-06-21 09:30:16Z jbeich $
 #
 # Each entry consists of a single line containing the following four
 # fields in the order named, separated with the pipe (`|') character:
@@ -8407,7 +8407,6 @@ lang/stalin||2016-07-04|Has expired: Broken for more than 6 months
 french/eric4||2016-07-04|Has expired: Depends on expiring devel/eric4
 textproc/exslt||2016-07-04|Has expired: Broken for more than 6 months
 textproc/xt||2016-07-04|Has expired: Broken for more than 6 months
-textproc/ssddiff||2016-07-04|Has expired: Broken for more than 6 months
 textproc/xslint||2016-07-04|Has expired: Broken for more than 6 months
 textproc/cbedic||2016-07-04|Has expired: Broken for more than 6 months
 textproc/tralics||2016-07-04|Has expired: Broken for more than 6 months
@@ -9440,3 +9439,4 @@ editors/calligra-l10n-sk||2017-06-12|Merged with editors/calligra
 editors/calligra-l10n-sv||2017-06-12|Merged with editors/calligra
 editors/calligra-l10n-tr||2017-06-12|Merged with editors/calligra
 editors/calligra-l10n||2017-06-12|Merged with editors/calligra
+www/py-flask-restplus08||2017-06-21|Obsolete and not depended on anymore
