@@ -1,4 +1,4 @@
-# $FreeBSD: head/deskutils/Makefile 441270 2017-05-19 20:43:09Z rene $
+# $FreeBSD: head/deskutils/Makefile 447548 2017-08-08 17:21:45Z tcberner $
 #
 
     COMMENT = Things that used to be on the desktop before computers were invented
@@ -20,7 +20,6 @@
     SUBDIR += cal
     SUBDIR += calcurse
     SUBDIR += calibre
-    SUBDIR += california
     SUBDIR += cartotheque
     SUBDIR += cdcat
     SUBDIR += charmap
@@ -115,6 +114,7 @@
     SUBDIR += horde-nag
     SUBDIR += hot-babe
     SUBDIR += howm
+    SUBDIR += hs-fdo-notify
     SUBDIR += ical
     SUBDIR += ithought
     SUBDIR += jjclient
@@ -226,10 +226,12 @@
     SUBDIR += tagutils
     SUBDIR += taskcoach
     SUBDIR += taskd
+    SUBDIR += tasksh
     SUBDIR += taskwarrior
     SUBDIR += teapot
     SUBDIR += tel
     SUBDIR += thinkingrock
+    SUBDIR += timewarrior
     SUBDIR += tine20
     SUBDIR += tnote
     SUBDIR += todo

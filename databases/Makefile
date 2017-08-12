@@ -1,4 +1,4 @@
-# $FreeBSD: head/databases/Makefile 444170 2017-06-23 09:02:17Z tz $
+# $FreeBSD: head/databases/Makefile 447749 2017-08-11 09:26:25Z pi $
 #
 
     COMMENT = Databases and related software
@@ -97,7 +97,8 @@
     SUBDIR += gomdb
     SUBDIR += gosqlite3
     SUBDIR += gqlplus
-    SUBDIR += grass
+    SUBDIR += grass6
+    SUBDIR += grass7
     SUBDIR += gtksql
     SUBDIR += hamsterdb
     SUBDIR += hashtypes
@@ -231,6 +232,7 @@
     SUBDIR += mysqltcl
     SUBDIR += mysqltuner
     SUBDIR += mysqlwsrep56-server
+    SUBDIR += mysqlwsrep57-server
     SUBDIR += mytop
     SUBDIR += nagios-check_mongodb
     SUBDIR += nagios-check_postgres_replication
@@ -566,8 +568,11 @@
     SUBDIR += percona57-server
     SUBDIR += pg_activity
     SUBDIR += pg_citus
+    SUBDIR += pg_dirtyread
+    SUBDIR += pg_partman
     SUBDIR += pg_qualstats
     SUBDIR += pg_reorg
+    SUBDIR += pg_repack
     SUBDIR += pg_rman
     SUBDIR += pg_stat_kcache
     SUBDIR += pg_statsinfo
@@ -579,17 +584,16 @@
     SUBDIR += pgbouncer
     SUBDIR += pgdbf
     SUBDIR += pgespresso
+    SUBDIR += pgFormatter
     SUBDIR += pgfouine
     SUBDIR += pgloader
+    SUBDIR += pgloader3
     SUBDIR += pglogical
     SUBDIR += pgmodeler
     SUBDIR += pgpool
-    SUBDIR += pgpool-II
-    SUBDIR += pgpool-II-30
     SUBDIR += pgpool-II-33
     SUBDIR += pgpool-II-35
     SUBDIR += pgpool-II-36
-    SUBDIR += pgpoolAdmin
     SUBDIR += pgreplay
     SUBDIR += pgrouting
     SUBDIR += pgsphere
@@ -651,6 +655,8 @@
     SUBDIR += phpminiadmin
     SUBDIR += phpmyadmin
     SUBDIR += phppgadmin
+    SUBDIR += pldebugger
+    SUBDIR += plpgsql_check
     SUBDIR += postgis-jdbc
     SUBDIR += postgis20
     SUBDIR += postgis21
@@ -663,12 +669,23 @@
     SUBDIR += postgresql-libpqxx3
     SUBDIR += postgresql-mysql_fdw
     SUBDIR += postgresql-odbc
+    SUBDIR += postgresql-orafce
     SUBDIR += postgresql-plproxy
     SUBDIR += postgresql-plruby
     SUBDIR += postgresql-plv8js
     SUBDIR += postgresql-relay
     SUBDIR += postgresql-repmgr
     SUBDIR += postgresql-repmgr2
+    SUBDIR += postgresql-tds_fdw
+    SUBDIR += postgresql-zhparser
+    SUBDIR += postgresql10-client
+    SUBDIR += postgresql10-contrib
+    SUBDIR += postgresql10-docs
+    SUBDIR += postgresql10-pgtcl
+    SUBDIR += postgresql10-plperl
+    SUBDIR += postgresql10-plpython
+    SUBDIR += postgresql10-pltcl
+    SUBDIR += postgresql10-server
     SUBDIR += postgresql92-client
     SUBDIR += postgresql92-contrib
     SUBDIR += postgresql92-docs
@@ -763,7 +780,6 @@
     SUBDIR += py-mysql-connector-python2
     SUBDIR += py-mysql2pgsql
     SUBDIR += py-mysqlclient
-    SUBDIR += py-odbc
     SUBDIR += py-oops
     SUBDIR += py-oursql
     SUBDIR += py-peewee
@@ -783,6 +799,7 @@
     SUBDIR += py-pylibmc
     SUBDIR += py-pymssql
     SUBDIR += py-pymysql
+    SUBDIR += py-pyodbc
     SUBDIR += py-pypuppetdb
     SUBDIR += py-pypuppetdb03
     SUBDIR += py-pytc
@@ -797,6 +814,7 @@
     SUBDIR += py-redis
     SUBDIR += py-riak
     SUBDIR += py-rrdtool_lgpl
+    SUBDIR += py-sispy
     SUBDIR += py-south
     SUBDIR += py-sqlalchemy-migrate
     SUBDIR += py-sqlalchemy10
@@ -873,6 +891,7 @@
     SUBDIR += ruby-qdbm
     SUBDIR += ruby-tokyocabinet
     SUBDIR += ruby-xapian
+    SUBDIR += rubygem-active_model_serializers
     SUBDIR += rubygem-active_record_query_trace
     SUBDIR += rubygem-activemodel-serializers-xml
     SUBDIR += rubygem-activemodel4
@@ -923,6 +942,7 @@
     SUBDIR += rubygem-do_sqlite3
     SUBDIR += rubygem-em-redis-unified
     SUBDIR += rubygem-familia
+    SUBDIR += rubygem-flipper-active_record
     SUBDIR += rubygem-globalid
     SUBDIR += rubygem-globalid-rails5
     SUBDIR += rubygem-globalid-rails50
@@ -930,6 +950,7 @@
     SUBDIR += rubygem-hiredis
     SUBDIR += rubygem-jdbc-mysql
     SUBDIR += rubygem-leo_manager_client
+    SUBDIR += rubygem-mario-redis-lock
     SUBDIR += rubygem-memcache
     SUBDIR += rubygem-memcache-client
     SUBDIR += rubygem-mysql
@@ -995,6 +1016,7 @@
     SUBDIR += tdb
     SUBDIR += tdbc
     SUBDIR += tile38
+    SUBDIR += timescaledb
     SUBDIR += tinycdb
     SUBDIR += tokyocabinet
     SUBDIR += tokyotyrant

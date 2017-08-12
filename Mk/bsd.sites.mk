@@ -20,7 +20,7 @@
 #
 # Note: all entries should terminate with a slash.
 #
-# $FreeBSD: head/Mk/bsd.sites.mk 443400 2017-06-11 17:25:12Z rakuco $
+# $FreeBSD: head/Mk/bsd.sites.mk 447633 2017-08-09 16:39:56Z pi $
 #
 
 # Where to put distfiles that don't have any other master site
@@ -101,12 +101,9 @@ MASTER_SITE_BERLIOS+= \
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_CHEESESHOP)
-# PEP-449 Compatible MASTER_SITES
-# Removal of the PyPI Mirror Auto Discovery and Naming Scheme
-# Reference: https://www.python.org/dev/peps/pep-0449/
 MASTER_SITE_CHEESESHOP+= \
-	https://pypi.python.org/packages/%SUBDIR%/ \
-	https://files.pythonhosted.org/packages/%SUBDIR%/
+	https://files.pythonhosted.org/packages/%SUBDIR%/ \
+	https://pypi.python.org/packages/%SUBDIR%/
 .endif
 
 .if !defined(IGNORE_MASTER_SITE_COMP_SOURCES)
@@ -828,7 +825,6 @@ MASTER_SITE_MYSQL+= \
 	ftp://mirror.widexs.nl/pub/mysql/Downloads/%SUBDIR%/ \
 	ftp://mirror.switch.ch/mirror/mysql/Downloads/%SUBDIR%/ \
 	http://mysql.dp.ua/Downloads/%SUBDIR%/ \
-	http://mysql.mirrored.ca/Downloads/%SUBDIR%/ \
 	ftp://mirror.services.wisc.edu/mirrors/mysql/Downloads/%SUBDIR%/ \
 	http://mysql.mirrors.pair.com/Downloads/%SUBDIR%/ \
 	ftp://ftp.linorg.usp.br/mysql/Downloads/%SUBDIR%/ \
@@ -1237,6 +1233,13 @@ MASTER_SITE_KERNEL_ORG+= \
 	http://ftp.yandex.ru/pub/%SUBDIR%/ \
 	http://ftp.heanet.ie/pub/%SUBDIR%/ \
 	http://slackware.cs.utah.edu/pub/kernel.org/pub/%SUBDIR%/
+.endif
+
+.if !defined(IGNORE_MASTER_SITE_ZI)
+MASTER_SITE_ZI+= \
+	https://mirrors.rit.edu/zi/ \
+	https://blackened.zi0r.com/mirrors/ \
+	${MASTER_SITE_LOCAL:S/%SUBDIR%/zi/}
 .endif
 
 # Macro magic

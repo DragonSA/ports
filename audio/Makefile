@@ -1,4 +1,4 @@
-# $FreeBSD: head/audio/Makefile 442616 2017-06-05 13:00:21Z cpm $
+# $FreeBSD: head/audio/Makefile 447778 2017-08-11 17:07:11Z ultima $
 #
 
     COMMENT = Audio tools
@@ -109,6 +109,7 @@
     SUBDIR += dir2ogg
     SUBDIR += discid
     SUBDIR += dream
+    SUBDIR += drumgizmo
     SUBDIR += drumpiler
     SUBDIR += dsbmixer
     SUBDIR += dssi
@@ -280,17 +281,20 @@
     SUBDIR += gstreamer1-plugins-gme
     SUBDIR += gstreamer1-plugins-gsm
     SUBDIR += gstreamer1-plugins-jack
+    SUBDIR += gstreamer1-plugins-ladspa
     SUBDIR += gstreamer1-plugins-lame
-    SUBDIR += gstreamer1-plugins-mad
     SUBDIR += gstreamer1-plugins-modplug
     SUBDIR += gstreamer1-plugins-mpg123
+    SUBDIR += gstreamer1-plugins-musepack
     SUBDIR += gstreamer1-plugins-ogg
     SUBDIR += gstreamer1-plugins-opus
     SUBDIR += gstreamer1-plugins-pulse
     SUBDIR += gstreamer1-plugins-shout2
     SUBDIR += gstreamer1-plugins-sidplay
+    SUBDIR += gstreamer1-plugins-sndfile
     SUBDIR += gstreamer1-plugins-sndio
     SUBDIR += gstreamer1-plugins-soundtouch
+    SUBDIR += gstreamer1-plugins-spc
     SUBDIR += gstreamer1-plugins-speex
     SUBDIR += gstreamer1-plugins-taglib
     SUBDIR += gstreamer1-plugins-twolame
@@ -389,6 +393,7 @@
     SUBDIR += liblastfm
     SUBDIR += liblo
     SUBDIR += liblscp
+    SUBDIR += libltc
     SUBDIR += libmad
     SUBDIR += libmatemixer
     SUBDIR += libmikmod
@@ -624,6 +629,7 @@
     SUBDIR += py-al
     SUBDIR += py-ao
     SUBDIR += py-apetag
+    SUBDIR += py-aubio
     SUBDIR += py-cddb
     SUBDIR += py-discid
     SUBDIR += py-discogs-client
@@ -813,6 +819,7 @@
     SUBDIR += wmsmixer
     SUBDIR += workman
     SUBDIR += wxguitar
+    SUBDIR += x42-plugins-lv2
     SUBDIR += xanalyser
     SUBDIR += xcd
     SUBDIR += xcdplayer
@@ -856,6 +863,7 @@
     SUBDIR += xwave
     SUBDIR += yell
     SUBDIR += zinf
+    SUBDIR += zita-convolver
     SUBDIR += zita-resampler
     SUBDIR += zynaddsubfx
 

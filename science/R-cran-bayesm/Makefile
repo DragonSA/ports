@@ -1,9 +1,8 @@
 # Created by: Wen Heping <wenheping@gmail.com>
-# $FreeBSD: head/science/R-cran-bayesm/Makefile 443845 2017-06-18 18:09:16Z dbn $
+# $FreeBSD: head/science/R-cran-bayesm/Makefile 447537 2017-08-08 12:07:25Z wen $
 
 PORTNAME=	bayesm
-PORTREVISION=	1
-DISTVERSION=	3.0-2
+DISTVERSION=	3.1-0.1
 CATEGORIES=	science
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 

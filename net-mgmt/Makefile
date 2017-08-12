@@ -1,4 +1,4 @@
-# $FreeBSD: head/net-mgmt/Makefile 442733 2017-06-06 01:10:34Z dbaio $
+# $FreeBSD: head/net-mgmt/Makefile 446773 2017-07-27 18:24:15Z lme $
 #
 
     COMMENT = Network management tools
@@ -8,6 +8,7 @@
     SUBDIR += adcli
     SUBDIR += aggregate
     SUBDIR += aircrack-ng
+    SUBDIR += alertmanager
     SUBDIR += ap-utils
     SUBDIR += argus3
     SUBDIR += argus3-clients
@@ -19,6 +20,7 @@
     SUBDIR += bgpq
     SUBDIR += bgpq3
     SUBDIR += bgpuma
+    SUBDIR += blackbox_exporter
     SUBDIR += bpft
     SUBDIR += braa
     SUBDIR += bsnmp-jails
@@ -63,7 +65,6 @@
     SUBDIR += ehnt
     SUBDIR += etherape
     SUBDIR += ettercap
-    SUBDIR += ezradius
     SUBDIR += fastnetmon
     SUBDIR += fetchconfig
     SUBDIR += flow-extract
@@ -88,6 +89,9 @@
     SUBDIR += icingaweb2-module-cube
     SUBDIR += icingaweb2-module-director
     SUBDIR += icingaweb2-module-generictts
+    SUBDIR += icingaweb2-module-grafana
+    SUBDIR += icingaweb2-module-map
+    SUBDIR += icingaweb2-module-vsphere
     SUBDIR += icli
     SUBDIR += icmpmonitor
     SUBDIR += icmpquery
@@ -121,6 +125,7 @@
     SUBDIR += mrtg
     SUBDIR += mrtg-ping-probe
     SUBDIR += mtrace
+    SUBDIR += mysqld_exporter
     SUBDIR += nagcon
     SUBDIR += nagios
     SUBDIR += nagios-certexp-plugin
@@ -189,6 +194,7 @@
     SUBDIR += ng_ipacct
     SUBDIR += nitpicker
     SUBDIR += nrpe
+    SUBDIR += nrpe3
     SUBDIR += nrpe-ssl
     SUBDIR += nsca
     SUBDIR += nsca-client
@@ -284,6 +290,7 @@
     SUBDIR += pnp-icinga2
     SUBDIR += portmon
     SUBDIR += prometheus
+    SUBDIR += pushgateway
     SUBDIR += py-ipcalc
     SUBDIR += py-ipy
     SUBDIR += py-pyang
@@ -345,6 +352,7 @@
     SUBDIR += telegraf
     SUBDIR += tornova
     SUBDIR += torrus
+    SUBDIR += unbound_exporter
     SUBDIR += unifi5
     SUBDIR += victorops-nagios
     SUBDIR += vidalia

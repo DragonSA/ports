@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11-toolkits/Makefile 443772 2017-06-17 13:44:51Z rakuco $
+# $FreeBSD: head/x11-toolkits/Makefile 446388 2017-07-22 11:35:44Z kwm $
 #
 
     COMMENT = X11 toolkits
@@ -32,7 +32,7 @@
     SUBDIR += gnustep-gui
     SUBDIR += granite
     SUBDIR += gstreamer-plugins-pango
-    SUBDIR += gstreamer1-plugins-gtksink
+    SUBDIR += gstreamer1-plugins-gtk
     SUBDIR += gstreamer1-plugins-pango
     SUBDIR += gtk-sharp-beans
     SUBDIR += gtk-sharp20
@@ -230,7 +230,6 @@
     SUBDIR += qt5-canvas3d
     SUBDIR += qt5-charts
     SUBDIR += qt5-datavis3d
-    SUBDIR += qt5-declarative
     SUBDIR += qt5-declarative-render2d
     SUBDIR += qt5-gamepad
     SUBDIR += qt5-gui
@@ -240,6 +239,7 @@
     SUBDIR += qt5-uiplugin
     SUBDIR += qt5-virtualkeyboard
     SUBDIR += qt5-widgets
+    SUBDIR += qt5pas
     SUBDIR += qtermwidget
     SUBDIR += qwt5
     SUBDIR += qwt5-designerplugin

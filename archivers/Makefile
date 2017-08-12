@@ -1,4 +1,4 @@
-# $FreeBSD: head/archivers/Makefile 443410 2017-06-11 21:03:58Z kwm $
+# $FreeBSD: head/archivers/Makefile 447585 2017-08-09 00:44:05Z ultima $
 #
 
     COMMENT = Archivers
@@ -11,8 +11,10 @@
     SUBDIR += ark
     SUBDIR += atool
     SUBDIR += bicom
+    SUBDIR += brotli
     SUBDIR += bzip
     SUBDIR += bzip2
+    SUBDIR += c-blosc
     SUBDIR += cabextract
     SUBDIR += dact
     SUBDIR += deb2targz
@@ -198,6 +200,7 @@
     SUBDIR += rubygem-ruby-xz
     SUBDIR += rubygem-rubyzip
     SUBDIR += rubygem-rubyzip2
+    SUBDIR += rubygem-snappy
     SUBDIR += rvm
     SUBDIR += rzip
     SUBDIR += sectar

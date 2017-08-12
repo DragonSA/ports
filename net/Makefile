@@ -1,4 +1,4 @@
-# $FreeBSD: head/net/Makefile 442932 2017-06-08 14:07:31Z sunpoet $
+# $FreeBSD: head/net/Makefile 447578 2017-08-08 22:06:40Z ultima $
 #
 
     COMMENT = Networking tools
@@ -9,7 +9,6 @@
     SUBDIR += GeoIP
     SUBDIR += R-cran-twitteR
     SUBDIR += Sockets
-    SUBDIR += abills
     SUBDIR += activemq
     SUBDIR += adasockets
     SUBDIR += afpfs-ng
@@ -61,6 +60,7 @@
     SUBDIR += bounce
     SUBDIR += bsdec2-image-upload
     SUBDIR += bsdproxy
+    SUBDIR += bsdrcmds
     SUBDIR += bwi-firmware-kmod
     SUBDIR += bwn-firmware-kmod
     SUBDIR += bwping
@@ -114,6 +114,7 @@
     SUBDIR += dpdk
     SUBDIR += dpinger
     SUBDIR += drawterm
+    SUBDIR += drive
     SUBDIR += dropbox-api-command
     SUBDIR += dropbox-uploader
     SUBDIR += dshell
@@ -145,12 +146,12 @@
     SUBDIR += freediameter
     SUBDIR += freenet6
     SUBDIR += freeradius-client
-    SUBDIR += freeradius2
     SUBDIR += freeradius3
     SUBDIR += freerdp
     SUBDIR += freerdp1
     SUBDIR += freeswitch
     SUBDIR += freevrrpd
+    SUBDIR += frr
     SUBDIR += fspclient
     SUBDIR += fspd
     SUBDIR += fsplib
@@ -204,6 +205,7 @@
     SUBDIR += gssdp
     SUBDIR += gstreamer-plugins-libmms
     SUBDIR += gstreamer1-plugins-libmms
+    SUBDIR += gstreamer1-plugins-srtp
     SUBDIR += gtic
     SUBDIR += gtk-vnc
     SUBDIR += gtknetcat
@@ -444,6 +446,7 @@
     SUBDIR += ncp
     SUBDIR += ndisc6
     SUBDIR += ndpi
+    SUBDIR += ndproxy
     SUBDIR += nepenthes
     SUBDIR += nepim
     SUBDIR += net6
@@ -1166,6 +1169,8 @@
     SUBDIR += rubygem-fog-dynect
     SUBDIR += rubygem-fog-ecloud
     SUBDIR += rubygem-fog-google
+    SUBDIR += rubygem-fog-internet-archive
+    SUBDIR += rubygem-fog-joyent
     SUBDIR += rubygem-fog-local
     SUBDIR += rubygem-fog-openstack
     SUBDIR += rubygem-fog-powerdns
@@ -1183,8 +1188,10 @@
     SUBDIR += rubygem-fog-vsphere
     SUBDIR += rubygem-fog-xenserver
     SUBDIR += rubygem-geoip
+    SUBDIR += rubygem-gitaly
     SUBDIR += rubygem-gitlab_omniauth-ldap
     SUBDIR += rubygem-gitlab_omniauth-ldap1
+    SUBDIR += rubygem-grpc
     SUBDIR += rubygem-http_parser.rb
     SUBDIR += rubygem-httpauth
     SUBDIR += rubygem-ipaddress
@@ -1198,7 +1205,6 @@
     SUBDIR += rubygem-network_interface
     SUBDIR += rubygem-oauth
     SUBDIR += rubygem-oauth2
-    SUBDIR += rubygem-oauth212
     SUBDIR += rubygem-octokit
     SUBDIR += rubygem-octopress-deploy
     SUBDIR += rubygem-omniauth-auth0
@@ -1217,6 +1223,7 @@
     SUBDIR += rubygem-opennebula
     SUBDIR += rubygem-packetfu
     SUBDIR += rubygem-pcaprub
+    SUBDIR += rubygem-proxifier
     SUBDIR += rubygem-qiniu
     SUBDIR += rubygem-rabbiter
     SUBDIR += rubygem-rbvmomi
@@ -1279,7 +1286,6 @@
     SUBDIR += sippy_b2bua
     SUBDIR += siproxd
     SUBDIR += sipsak
-    SUBDIR += sixxs-aiccu
     SUBDIR += skstream
     SUBDIR += sl2tps
     SUBDIR += slurm

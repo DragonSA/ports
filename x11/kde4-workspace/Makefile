@@ -1,15 +1,15 @@
-# $FreeBSD: head/x11/kde4-workspace/Makefile 442453 2017-06-02 19:14:43Z tcberner $
+# $FreeBSD: head/x11/kde4-workspace/Makefile 447399 2017-08-05 10:58:48Z kwm $
 
 PORTNAME=	kde-workspace
 PORTVERSION=	${KDE4_WORKSPACE_VERSION}
-PORTREVISION=	6
+PORTREVISION=	8
 CATEGORIES=	x11 kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KDE Plasma Desktop
 
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
-		libck-connector.so:sysutils/consolekit \
+		libck-connector.so:sysutils/consolekit2 \
 		libpci.so:devel/libpci \
 		libhal.so:sysutils/hal \
 		libqjson.so:devel/qjson \
@@ -40,7 +40,7 @@ RUN_DEPENDS=	${KDE_PREFIX}/env/xdg-env.sh:misc/kde4-xdg-env \
 		${LOCALBASE}/etc/pam.d/kde:security/pam_kde \
 		${KDE_PREFIX}/share/apps/ksplash/Themes/Default/Theme.rc:x11-themes/kde4-base-artwork
 
-USES=		cmake:outsource compiler:c++11-lib gettext gmake jpeg kde:4 \
+USES=		cmake:outsource,noninja compiler:c++11-lib gettext gmake jpeg kde:4 \
 		pkgconfig shebangfix tar:xz
 USE_GL=		gl glu
 USE_GNOME=	glib20 libxml2

@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/Makefile 444035 2017-06-21 16:23:52Z tobik $
+# $FreeBSD: head/textproc/Makefile 447548 2017-08-08 17:21:45Z tcberner $
 #
 
     COMMENT = Text processing utilities (does not include desktop publishing)
@@ -250,15 +250,16 @@
     SUBDIR += hs-appar
     SUBDIR += hs-attoparsec
     SUBDIR += hs-attoparsec-enumerator
+    SUBDIR += hs-attoparsec-iso8601
     SUBDIR += hs-bencode
     SUBDIR += hs-blaze-html
     SUBDIR += hs-blaze-markup
     SUBDIR += hs-bytestring-csv
     SUBDIR += hs-case-insensitive
     SUBDIR += hs-cassava
-    SUBDIR += hs-citeproc-hs
     SUBDIR += hs-cmark
     SUBDIR += hs-csv
+    SUBDIR += hs-doctemplates
     SUBDIR += hs-double-conversion
     SUBDIR += hs-feed
     SUBDIR += hs-hexpat
@@ -273,24 +274,31 @@
     SUBDIR += hs-lhs2tex
     SUBDIR += hs-libxml
     SUBDIR += hs-libxml-sax
+    SUBDIR += hs-magic
     SUBDIR += hs-pandoc
     SUBDIR += hs-pandoc-citeproc
     SUBDIR += hs-pandoc-types
     SUBDIR += hs-parsec
     SUBDIR += hs-polyparse
+    SUBDIR += hs-pretty-show
     SUBDIR += hs-regex-applicative
     SUBDIR += hs-regex-base
     SUBDIR += hs-regex-compat
     SUBDIR += hs-regex-compat-tdfa
+    SUBDIR += hs-regex-pcre
     SUBDIR += hs-regex-pcre-builtin
     SUBDIR += hs-regex-posix
     SUBDIR += hs-regex-tdfa
     SUBDIR += hs-rfc5051
+    SUBDIR += hs-scanner
+    SUBDIR += hs-skylighting
     SUBDIR += hs-stringsearch
     SUBDIR += hs-tagsoup
     SUBDIR += hs-tagstream-conduit
     SUBDIR += hs-texmath
     SUBDIR += hs-uri
+    SUBDIR += hs-uri-bytestring
+    SUBDIR += hs-uri-bytestring-aeson
     SUBDIR += hs-xml
     SUBDIR += hs-xml-conduit
     SUBDIR += hs-xml-hamlet
@@ -370,6 +378,7 @@
     SUBDIR += kibana44
     SUBDIR += kibana45
     SUBDIR += kibana5
+    SUBDIR += kibana5-search-guard
     SUBDIR += kibana5-x-pack
     SUBDIR += kiss-templates
     SUBDIR += kmfl-european-latin
@@ -1451,7 +1460,9 @@
     SUBDIR += rubygem-babel-source
     SUBDIR += rubygem-babel-transpiler
     SUBDIR += rubygem-babosa
+    SUBDIR += rubygem-case_transform
     SUBDIR += rubygem-charlock_holmes
+    SUBDIR += rubygem-citrus
     SUBDIR += rubygem-cld3
     SUBDIR += rubygem-coderay
     SUBDIR += rubygem-colorator
@@ -1509,7 +1520,6 @@
     SUBDIR += rubygem-libxml-ruby
     SUBDIR += rubygem-linguistics
     SUBDIR += rubygem-liquid
-    SUBDIR += rubygem-liquid3
     SUBDIR += rubygem-loggability
     SUBDIR += rubygem-loofah
     SUBDIR += rubygem-ltsv
@@ -1551,10 +1561,12 @@
     SUBDIR += rubygem-rugments
     SUBDIR += rubygem-sanitize
     SUBDIR += rubygem-sass
+    SUBDIR += rubygem-sass-listen
     SUBDIR += rubygem-sass-rails-rails5
     SUBDIR += rubygem-sass-rails-rails50
     SUBDIR += rubygem-sass-rails5
     SUBDIR += rubygem-sass32
+    SUBDIR += rubygem-sass34
     SUBDIR += rubygem-sax-machine
     SUBDIR += rubygem-scss_lint
     SUBDIR += rubygem-shell2html
@@ -1604,6 +1616,7 @@
     SUBDIR += scr2txt
     SUBDIR += scrollkeeper
     SUBDIR += scss
+    SUBDIR += scws
     SUBDIR += sdcv
     SUBDIR += sdf
     SUBDIR += sdif

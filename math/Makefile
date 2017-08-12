@@ -1,4 +1,4 @@
-# $FreeBSD: head/math/Makefile 444131 2017-06-22 21:53:06Z stephen $
+# $FreeBSD: head/math/Makefile 447548 2017-08-08 17:21:45Z tcberner $
 #
 
     COMMENT = Mathematics
@@ -31,6 +31,7 @@
     SUBDIR += R-cran-bdsmatrix
     SUBDIR += R-cran-car
     SUBDIR += R-cran-coda
+    SUBDIR += R-cran-combinat
     SUBDIR += R-cran-deldir
     SUBDIR += R-cran-dlmodeler
     SUBDIR += R-cran-dplyr
@@ -67,6 +68,7 @@
     SUBDIR += R-cran-quantreg
     SUBDIR += R-cran-rgenoud
     SUBDIR += R-cran-sandwich
+    SUBDIR += R-cran-sf
     SUBDIR += R-cran-sm
     SUBDIR += R-cran-sp
     SUBDIR += R-cran-spdep
@@ -74,6 +76,7 @@
     SUBDIR += R-cran-stabledist
     SUBDIR += R-cran-survey
     SUBDIR += R-cran-truncnorm
+    SUBDIR += R-cran-units
     SUBDIR += R-cran-xts
     SUBDIR += R-cran-zoo
     SUBDIR += aamath
@@ -163,6 +166,7 @@
     SUBDIR += fftw3-long
     SUBDIR += fftw3-quad
     SUBDIR += fityk
+    SUBDIR += form
     SUBDIR += fpc-fftw
     SUBDIR += fpc-gmp
     SUBDIR += fpc-numlib
@@ -214,7 +218,10 @@
     SUBDIR += hs-data-lens-template
     SUBDIR += hs-distributive
     SUBDIR += hs-erf
+    SUBDIR += hs-fixed
+    SUBDIR += hs-half
     SUBDIR += hs-ieee754
+    SUBDIR += hs-integer-logarithms
     SUBDIR += hs-kan-extensions
     SUBDIR += hs-math-functions
     SUBDIR += hs-mwc-random
@@ -272,6 +279,7 @@
     SUBDIR += ltl
     SUBDIR += ltl2ba
     SUBDIR += lybniz
+    SUBDIR += mate-calc
     SUBDIR += math77
     SUBDIR += mathmod
     SUBDIR += mathomatic

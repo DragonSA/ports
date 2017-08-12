@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/Makefile 444023 2017-06-21 09:30:16Z jbeich $
+# $FreeBSD: head/www/Makefile 447548 2017-08-08 17:21:45Z tcberner $
 #
 
     COMMENT = Ports related to the World Wide Web
@@ -23,10 +23,6 @@
     SUBDIR += apache-forrest
     SUBDIR += apache-mode.el
     SUBDIR += apache22
-    SUBDIR += apache22-event-mpm
-    SUBDIR += apache22-itk-mpm
-    SUBDIR += apache22-peruser-mpm
-    SUBDIR += apache22-worker-mpm
     SUBDIR += apache24
     SUBDIR += apercu
     SUBDIR += aria2
@@ -161,6 +157,7 @@
     SUBDIR += fcgiwrap
     SUBDIR += feedjack
     SUBDIR += ffproxy
+    SUBDIR += fgallery
     SUBDIR += fira-webfont
     SUBDIR += firefox
     SUBDIR += firefox-esr
@@ -260,6 +257,7 @@
     SUBDIR += hs-happstack-server
     SUBDIR += hs-heist
     SUBDIR += hs-hjsmin
+    SUBDIR += hs-http-api-data
     SUBDIR += hs-http-client
     SUBDIR += hs-http-client-tls
     SUBDIR += hs-http-conduit
@@ -354,7 +352,6 @@
     SUBDIR += libevhtp
     SUBDIR += libgtkhtml
     SUBDIR += libhpack
-    SUBDIR += libhtp-suricata
     SUBDIR += libhubbub
     SUBDIR += libjwt
     SUBDIR += libmicrohttpd
@@ -396,9 +393,9 @@
     SUBDIR += mathjax
     SUBDIR += mathopd
     SUBDIR += mediawiki123
-    SUBDIR += mediawiki126
     SUBDIR += mediawiki127
     SUBDIR += mediawiki128
+    SUBDIR += mediawiki129
     SUBDIR += mergelog
     SUBDIR += mgstat
     SUBDIR += mhonarc
@@ -490,6 +487,7 @@
     SUBDIR += mod_rpaf2
     SUBDIR += mod_scgi
     SUBDIR += mod_security
+    SUBDIR += mod_security-devel
     SUBDIR += mod_setenvifplus
     SUBDIR += mod_spdy
     SUBDIR += mod_tidy
@@ -1035,6 +1033,7 @@
     SUBDIR += p5-HTTP-Tiny
     SUBDIR += p5-HTTP-Tiny-SPDY
     SUBDIR += p5-HTTP-WebTest
+    SUBDIR += p5-HTTP-XSCookies
     SUBDIR += p5-HTTPD-Log-Filter
     SUBDIR += p5-HTTPD-User-Manage
     SUBDIR += p5-Hijk
@@ -1105,6 +1104,7 @@
     SUBDIR += p5-Net-Plurk
     SUBDIR += p5-Net-STF-Client
     SUBDIR += p5-Net-Trac
+    SUBDIR += p5-Net-UPS
     SUBDIR += p5-Net-YAP
     SUBDIR += p5-Net-eBay
     SUBDIR += p5-Newsletter
@@ -1669,6 +1669,7 @@
     SUBDIR += py-horizon
     SUBDIR += py-hpack
     SUBDIR += py-html
+    SUBDIR += py-html5-parser
     SUBDIR += py-html5lib
     SUBDIR += py-http-parser
     SUBDIR += py-httpie
@@ -1864,6 +1865,7 @@
     SUBDIR += qt5-webchannel
     SUBDIR += qt5-webkit
     SUBDIR += qt5-websockets
+    SUBDIR += qt5-websockets-qml
     SUBDIR += quickie
     SUBDIR += qupzilla-qt4
     SUBDIR += qupzilla-qt5
@@ -1961,6 +1963,7 @@
     SUBDIR += rubygem-feed-normalizer
     SUBDIR += rubygem-feedjira
     SUBDIR += rubygem-flowdock
+    SUBDIR += rubygem-fuzzyurl
     SUBDIR += rubygem-geminabox
     SUBDIR += rubygem-gitlab-flowdock-git-hook
     SUBDIR += rubygem-gitlab-gollum-lib
@@ -2009,7 +2012,6 @@
     SUBDIR += rubygem-jquery-scrollto-rails
     SUBDIR += rubygem-jquery-turbolinks
     SUBDIR += rubygem-jquery-ui-rails-rails4
-    SUBDIR += rubygem-jquery-ui-rails5-rails4
     SUBDIR += rubygem-jruby-rack
     SUBDIR += rubygem-jsobfu
     SUBDIR += rubygem-json-jwt
@@ -2066,6 +2068,7 @@
     SUBDIR += rubygem-rack-cache
     SUBDIR += rubygem-rack-contrib
     SUBDIR += rubygem-rack-cors
+    SUBDIR += rubygem-rack-cors0
     SUBDIR += rubygem-rack-mount
     SUBDIR += rubygem-rack-openid
     SUBDIR += rubygem-rack-protection
@@ -2133,6 +2136,7 @@
     SUBDIR += rubygem-thin
     SUBDIR += rubygem-tinyatom
     SUBDIR += rubygem-tinymce-rails
+    SUBDIR += rubygem-toml-rb
     SUBDIR += rubygem-totoridipjp
     SUBDIR += rubygem-tumblr_client
     SUBDIR += rubygem-turbolinks

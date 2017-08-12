@@ -1,4 +1,4 @@
-# $FreeBSD: head/games/Makefile 443680 2017-06-16 09:20:07Z amdmi3 $
+# $FreeBSD: head/games/Makefile 447284 2017-08-03 21:44:51Z tobik $
 #
 
     COMMENT = Games and related software
@@ -72,6 +72,7 @@
     SUBDIR += awele
     SUBDIR += balazar
     SUBDIR += balazarbrothers
+    SUBDIR += ballerburg
     SUBDIR += banihstypos
     SUBDIR += barbie_seahorse_adventures
     SUBDIR += barrage
@@ -384,7 +385,6 @@
     SUBDIR += goldencheetah
     SUBDIR += golly
     SUBDIR += gomoku
-    SUBDIR += gondola
     SUBDIR += goonies
     SUBDIR += gottet
     SUBDIR += gracer
@@ -525,7 +525,6 @@
     SUBDIR += lgeneral
     SUBDIR += lianliankan
     SUBDIR += libdungeonmaker
-    SUBDIR += libgames-support
     SUBDIR += libggz
     SUBDIR += libgnome-games-support
     SUBDIR += libkdegames
@@ -621,9 +620,11 @@
     SUBDIR += monsterz
     SUBDIR += moon-buggy
     SUBDIR += moonlander
+    SUBDIR += moonlight-embedded
     SUBDIR += mopesnake
     SUBDIR += moria
     SUBDIR += motogt
+    SUBDIR += mrboom
     SUBDIR += mt_dolphin_ia
     SUBDIR += mt_gtk_client
     SUBDIR += mtaserver
@@ -865,6 +866,7 @@
     SUBDIR += rtb
     SUBDIR += rubix
     SUBDIR += rubygem-fortune_gem
+    SUBDIR += rubygem-vimgolf
     SUBDIR += sampsvr
     SUBDIR += sarien
     SUBDIR += sauerbraten
@@ -937,6 +939,7 @@
     SUBDIR += stormbaancoureur
     SUBDIR += stransball2
     SUBDIR += stratagus
+    SUBDIR += stuntrally
     SUBDIR += sudoku-sensei
     SUBDIR += sudoku_solver
     SUBDIR += sudsol

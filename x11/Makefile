@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11/Makefile 444038 2017-06-21 16:28:50Z tobik $
+# $FreeBSD: head/x11/Makefile 447586 2017-08-09 00:46:32Z ultima $
 #
 
     COMMENT = Ports to support the X window system
@@ -52,12 +52,14 @@
     SUBDIR += docker-tray
     SUBDIR += dri2proto
     SUBDIR += dri3proto
+    SUBDIR += dsbautostart
     SUBDIR += dxpc
     SUBDIR += dynamag
     SUBDIR += dzen2
     SUBDIR += eaglemode
     SUBDIR += editres
     SUBDIR += emprint
+    SUBDIR += enventor
     SUBDIR += erun
     SUBDIR += eterm
     SUBDIR += evieext
@@ -260,6 +262,7 @@
     SUBDIR += printproto
     SUBDIR += printscreen
     SUBDIR += props
+    SUBDIR += py-pyvirtualdisplay
     SUBDIR += py-qt4-opengl
     SUBDIR += py-qt5-opengl
     SUBDIR += py-xdot
