@@ -1,0 +1,17 @@
+--- src/Framework.UnitTests/project.json.orig	2017-08-03 13:42:29 UTC
++++ src/Framework.UnitTests/project.json
+@@ -1,14 +1,11 @@
+ ﻿{
+   "dependencies": {
+-    "xunit": "2.1.0",
+-    "xunit.core": "2.1.0",
+     "xunit.extensibility.core": "2.1.0",
+     "xunit.assert": "2.1.0"
+   },
+   "frameworks": {
+     "net46": {
+       "dependencies": {
+-        "xunit.runner.visualstudio": "2.1.0",
+         "System.Runtime.InteropServices.RuntimeInformation": "4.3.0"
+       }
+     },

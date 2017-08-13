@@ -1,0 +1,100 @@
+#!/usr/bin/env python
+
+import codecs
+import json
+from os import environ, execvp, getcwd, getpid, walk
+from os.path import isfile, join
+from pipes import quote
+from sys import argv, stderr
+from xml.etree import ElementTree
+
+PROJECT_JSON = "project.json"
+
+NUGET_PACKAGEDIR = environ["NUGET_PACKAGEDIR"]
+
+blacklist = [
+    "Microsoft.VisualStudio.Setup.Configuration.Interop",
+]
+
+dependencies = {
+    "System.IO.Compression": ["System.IO"],
+    "System.Collections.Immutable": ["System.Collections"],
+}
+
+facades = [
+    "System.Collections",
+    "System.IO",
+    "System.Runtime",
+]
+
+def add_nuget(args, depend):
+    nuspec = join(NUGET_PACKAGEDIR, depend, depend + ".nuspec")
+    if not isfile(nuspec):
+        return False
+    ns = { "nuspec": "http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd" }
+    dlls = [ref.get('file') for ref in ElementTree.parse(nuspec).findall('.//nuspec:references/', ns)]
+    print(dlls, nuspec)
+    dlls.append(depend + ".dll")
+    for dll in dlls:
+        dll_paths = []
+        for root, dirs, files in walk(join(NUGET_PACKAGEDIR, depend)):
+            if dll in files:
+                dll_paths.append(join(root, dll))
+        if len(dll_paths) > 1:
+            dll_paths = [p for p in dll_paths if "net4" in p]
+        if len(dll_paths) > 0:
+            args.append("/reference:%s" % dll_paths[0])
+    return True
+
+
+def add_depends(args, depends):
+    references = depends.keys() + ["System.Runtime"]
+    for depend in references:
+        if depend in blacklist:
+            continue
+        if not add_nuget(args, depend):
+            prefix = ""
+            if depend in facades:
+                prefix = "Facades/"
+            args.append("/reference:%s%s.dll" % (prefix, depend))
+        if depend in dependencies:
+            for depend in dependencies[depend]:
+                if depend not in references:
+                    references.append(depend)
+
+def debug(args, argv):
+    runner_file = "/tmp/run.sh"
+    if not isfile(runner_file):
+        runner = open(runner_file, "w")
+        runner.write("#!/bin/sh\n")
+        runner.write("rm $0\n")
+    else:
+        runner = open(runner_file, "a")
+    runner.write("cd %s\n" % getcwd())
+    runner.write("exec \"%s\" %s\n" % (argv[0], " ".join(quote(a) for a in argv[1:])))
+    runner.write("#csc %s\n" % " ".join(quote(a) for a in args))
+
+def expand(argv):
+    def parse(argv):
+        for arg in argv:
+            if arg.startswith("@"):
+                with codecs.open(arg[1:], "r", "utf-8-sig") as args:
+                    for arg in args.read().split():
+                        yield arg.rstrip('\n')
+            else:
+                yield arg
+    return list(parse(argv))
+
+def main(argv):
+    depends = {}
+    if isfile(PROJECT_JSON):
+        project_json = json.load(codecs.open(PROJECT_JSON, "r", "utf-8-sig"))
+        depends.update(project_json.setdefault("dependencies", {}))
+        depends.update(project_json["frameworks"]["net46"].setdefault("dependencies", {}))
+    args = argv[1:]
+    add_depends(args, depends)
+    debug(args, argv)
+    execvp("csc", args)
+
+if __name__ == "__main__":
+    main(expand(argv))

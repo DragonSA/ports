@@ -1,0 +1,10 @@
+--- src/Build/project.json.orig	2017-08-03 13:42:29 UTC
++++ src/Build/project.json
+@@ -2,7 +2,6 @@
+   "frameworks": {
+     "net46": {
+       "dependencies": {
+-        "Microsoft.VisualStudio.Setup.Configuration.Interop": "1.2.304-preview5",
+         "System.Collections.Immutable": "1.3.1",
+         "System.Reflection.Metadata": "1.4.1",
+         "System.IO.Compression": "4.3.0",
