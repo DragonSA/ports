@@ -1,30 +1,43 @@
-#!/bin/sh
+#!/usr/bin/env python
 
-echo "$0 $*"
+import codecs
+import json
+from os import environ, makedirs
+from os.path import dirname, isdir, isfile, join
+from sys import argv
 
-args="$*"
+NUGET_CACHE = join(environ["HOME"], ".nuget", "packages")
 
-while [ $# -gt 0 ]
-do
-    arg="$1"; shift
-    case "$arg" in
-        */project.json)
-            project_json="$arg"
-            ;;
-    esac
-done
+LOCK = {
+    "version": 2,
+    "targets": {
+        ".NETFramework,Version=v4.6": {},
+    },
+    "libraries": {},
+    "projectFileDependencyGroups": {},
+    "tools": {},
+    "projectFileToolGroups": {},
+    "packageFolders": {
+        NUGET_CACHE: {},
+    },
+}
 
-if [ -z "$project_json" ]
-then
-    echo "err: no project file specified" >&2
-    exit 1
-fi
+def main(argv):
+    for arg in argv:
+        if arg.endswith("project.json"):
+            jsonpath = arg
+    lockpath = join(dirname(jsonpath), "project.lock.json")
+    if not isfile(lockpath):
+        project_json = json.load(codecs.open(jsonpath, "r", "utf-8-sig"))
+        depends = {}
+        depends.update(project_json.setdefault("dependencies", {}))
+        depends.update(project_json["frameworks"]["net46"].setdefault("dependencies", {}))
+        for depend, version in depends.items():
+            path = join(NUGET_CACHE, depend, version)
+            if not isdir(path):
+                makedirs(path)
+        with open(lockpath, "w") as lockfile:
+            json.dump(LOCK, lockfile)
 
-WRKSRC="/home/dbn/ports/ports/devel/msbuild/work/linux-packaging-msbuild-431c7ec"
-
-project_lock_json="`dirname "$project_json" | sed "s|$WRKSRC/||"`/project.lock.json"
-
-if [ ! -f "$project_lock_json" ]
-then
-  sed -e "s|C:\\\\Users\\\\dnaylor\\\\.nuget\\\\packages|$NUGET_PACKAGEDIR|" /home/dbn/archive/work/Deloitte/dnaylor/dotnet/msbuild/$project_lock_json > "$WRKSRC/$project_lock_json"
-fi
+if __name__ == "__main__":
+    main(argv)

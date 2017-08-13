@@ -1,0 +1,11 @@
+--- targets/roslyn/project.json.orig	2017-08-13 15:50:12 UTC
++++ targets/roslyn/project.json
+@@ -15,7 +15,7 @@
+     "netcoreapp1.0": {
+       "dependencies": {
+         "Microsoft.Net.Compilers.NetCore": "1.3.2",
+-        "Microsoft.Net.Compilers.Targets.NetCore": "0.1.5-dev",
++        "Microsoft.Net.Compilers.Targets.NetCore": "0.1.5-dev"
+       },
+       "imports": [
+         "portable-net451+win81",
