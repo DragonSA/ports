@@ -1,4 +1,4 @@
---- targets/roslyn/project.json.orig	2017-08-13 15:50:12 UTC
+--- targets/roslyn/project.json.orig	2017-08-03 13:42:29 UTC
 +++ targets/roslyn/project.json
 @@ -15,7 +15,7 @@
      "netcoreapp1.0": {

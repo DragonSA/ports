@@ -2,14 +2,14 @@
 # $FreeBSD$
 
 PORTNAME=	msbuild
+DISTVERSIONPREFIX=	v
 DISTVERSION=	15.3.407.29267
 CATEGORIES=	devel
-DISTVERSIONPREFIX=	v
-DISTFILES=	mono_msbuild_d25dd923839404bd64cc63f420e75acf96fc75c4.zip:bootstrap
 MASTER_SITES=	https://github.com/Microsoft/msbuild/releases/download/mono-hosted-msbuild-v0.03/:bootstrap
+DISTFILES=	mono_msbuild_d25dd923839404bd64cc63f420e75acf96fc75c4.zip:bootstrap
 
 MAINTAINER=	mono@FreeBSD.org
-COMMENT=	
+COMMENT=	Build platform for .NET and Visual Studio
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
@@ -26,10 +26,9 @@ USES=		mono:nuget
 USE_GITHUB=	yes
 GH_ACCOUNT=	mono
 GH_PROJECT=	linux-packaging-msbuild
-GH_TAGNAME=		431c7ec
+GH_TAGNAME=	431c7ec
 
-MAKE_ENV=	NUGET_PACKAGEDIR=${NUGET_PACKAGEDIR} \
-		CscToolExe=csc CscToolPath=${FILESDIR}
+MAKE_ENV=	NUGET_PACKAGEDIR=${NUGET_PACKAGEDIR}
 
 post-extract:
 	${MKDIR} ${WRKDIR}/.nuget ${WRKSRC}/Tools/dotnetcli ${WRKSRC}/Tools/net45
@@ -45,6 +44,7 @@ do-build:
 		${SETENV} ${MAKE_ENV} ./cibuild.sh --scope Compile --target Mono --host Mono --config Release)
 
 do-install:
-	(cd ${WRKSRC}; bash cibuild.sh --scope=Test --target=Mono --host=Mono --config=Release)
+	(cd ${WRKSRC}; \
+		${SETENV} DESTDIR=${STAGEDIR} ./install-mono-prefix.sh ${PREFIX})
 
 .include <bsd.port.mk>
