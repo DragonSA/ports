@@ -3,7 +3,7 @@
 
 PORTNAME=	msbuild
 DISTVERSIONPREFIX=	v
-DISTVERSION=	15.3.407.29267
+DISTVERSION=	15.3.0.0
 CATEGORIES=	devel
 MASTER_SITES=	https://github.com/Microsoft/msbuild/releases/download/mono-hosted-msbuild-v0.03/:bootstrap
 DISTFILES=	mono_msbuild_d25dd923839404bd64cc63f420e75acf96fc75c4.zip:bootstrap
