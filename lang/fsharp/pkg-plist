@@ -19,10 +19,10 @@ lib/mono/fsharp/FSharp.Build.dll
 lib/mono/fsharp/FSharp.Build.xml
 lib/mono/fsharp/FSharp.Compiler.Interactive.Settings.dll
 lib/mono/fsharp/FSharp.Compiler.Interactive.Settings.xml
+lib/mono/fsharp/FSharp.Compiler.Private.dll
+lib/mono/fsharp/FSharp.Compiler.Private.xml
 lib/mono/fsharp/FSharp.Compiler.Server.Shared.dll
 lib/mono/fsharp/FSharp.Compiler.Server.Shared.xml
-lib/mono/fsharp/FSharp.Compiler.dll
-lib/mono/fsharp/FSharp.Compiler.xml
 lib/mono/fsharp/FSharp.Core.dll
 lib/mono/fsharp/FSharp.Core.optdata
 lib/mono/fsharp/FSharp.Core.sigdata
@@ -130,7 +130,6 @@ lib/mono/gac/FSharp.Core/4.4.0.0__b03f5f7f11d50a3a/FSharp.Core.optdata
 lib/mono/gac/FSharp.Core/4.4.0.0__b03f5f7f11d50a3a/FSharp.Core.sigdata
 lib/mono/gac/FSharp.Core/4.4.0.0__b03f5f7f11d50a3a/FSharp.Core.xml
 lib/mono/gac/FSharp.Core/4.4.1.0__b03f5f7f11d50a3a/FSharp.Core.dll
-lib/mono/gac/FSharp.Core/4.4.1.0__b03f5f7f11d50a3a/FSharp.Core.dll.mdb
 lib/mono/gac/FSharp.Core/4.4.1.0__b03f5f7f11d50a3a/FSharp.Core.optdata
 lib/mono/gac/FSharp.Core/4.4.1.0__b03f5f7f11d50a3a/FSharp.Core.sigdata
 lib/mono/gac/FSharp.Core/4.4.1.0__b03f5f7f11d50a3a/FSharp.Core.xml
