@@ -1,4 +1,4 @@
-TIMESTAMP = 1502640929
+TIMESTAMP = 1502778181
 SHA256 (mono_msbuild_d25dd923839404bd64cc63f420e75acf96fc75c4.zip) = 9e992cb8e5526024eeae1cd9dea7f32c0158c2c8d94c9a7a310a146f14eef417
 SIZE (mono_msbuild_d25dd923839404bd64cc63f420e75acf96fc75c4.zip) = 7988564
 SHA256 (newtonsoft.json.9.0.1.nupkg) = 23405c5a3814347fb952b74dec0d836b5b63832c02552e17e0b10f88ab555ee1
@@ -11,5 +11,5 @@ SHA256 (microsoft.build.utilities.core.14.3.0.nupkg) = 919a6748daa0b82cfebe29cd6
 SIZE (microsoft.build.utilities.core.14.3.0.nupkg) = 177716
 SHA256 (microsoft.net.compilers.2.0.0-rc3.nupkg) = 0040f3a68113f23b545d237dd33a516e7b757abd20a29d2fc4d6dc41c62fb056
 SIZE (microsoft.net.compilers.2.0.0-rc3.nupkg) = 6923532
-SHA256 (mono-linux-packaging-msbuild-v15.3.407.29267-431c7ec_GH0.tar.gz) = ea683fe24974eeb090a951d6ec3d86c69ca6bcd570ca7d1d94a259d8d3e00059
-SIZE (mono-linux-packaging-msbuild-v15.3.407.29267-431c7ec_GH0.tar.gz) = 14144419
+SHA256 (mono-linux-packaging-msbuild-v15.3.0.0-431c7ec_GH0.tar.gz) = ea683fe24974eeb090a951d6ec3d86c69ca6bcd570ca7d1d94a259d8d3e00059
+SIZE (mono-linux-packaging-msbuild-v15.3.0.0-431c7ec_GH0.tar.gz) = 14144419

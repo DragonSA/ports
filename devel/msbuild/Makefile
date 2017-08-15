@@ -22,7 +22,7 @@ NUGET_DEPENDS=	Newtonsoft.Json=9.0.1 \
 		Microsoft.Build.Utilities.Core=14.3.0 \
 		Microsoft.Net.Compilers=2.0.0-rc3
 
-USES=		mono:nuget
+USES=		mono:nuget python:build
 USE_GITHUB=	yes
 GH_ACCOUNT=	mono
 GH_PROJECT=	linux-packaging-msbuild
