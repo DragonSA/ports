@@ -2,9 +2,8 @@
 # $FreeBSD: head/lang/mono/Makefile 457313 2017-12-26 20:09:09Z emaste $
 
 PORTNAME=	mono
-PORTVERSION=	4.8.1.0
+PORTVERSION=	5.0.1.1
 DISTVERSIONPREFIX=	mono-
-PORTREVISION=	2
 CATEGORIES=	lang
 
 MAINTAINER=	mono@FreeBSD.org
@@ -24,6 +23,7 @@ ONLY_FOR_ARCHS=		amd64 armv6 armv7 i386 powerpc
 
 OPTIONS_DEFINE=		ACCEPTANCE_TESTS MONOLITE
 OPTIONS_DEFAULT=	MONOLITE
+
 ACCEPTANCE_TESTS_DESC=	Download and run the .Net acceptance tests
 ACCEPTANCE_TESTS_DISTFILES=nuget.31.zip:nuget31
 ACCEPTANCE_TESTS_GH_TUPLE=xamarin:benchmarker:97f618c:12/acceptance-tests/external/benchmarker \
@@ -33,22 +33,27 @@ ACCEPTANCE_TESTS_MASTER_SITES=https://dotnetci.blob.core.windows.net/roslyn/:nug
 ACCEPTANCE_TESTS_TEST_DEPENDS=bash:shells/bash \
 			referenceassemblies-pcl>=4.6:lang/referenceassemblies-pcl
 ACCEPTANCE_TESTS_VARS=	SHEBANG_FILES+=${WRKSRC}/acceptance-tests/external/roslyn/cibuild.sh
+
 MONOLITE_DESC=		Use monolite to bootstrap mcs (otherwise use installed mcs)
 MONOLITE_DISTFILES=	monolite-${MONOLITE_VERSION}-latest.tar.gz:monolite
 MONOLITE_MASTER_SITES=	http://download.mono-project.com/monolite/:monolite
+MONOLITE_VERSION=	1050001000
 
-MONOLITE_VERSION=	156
 USE_GITHUB=	yes
 GH_TUPLE=	mono:Lucene.Net.Light:85978b7:1/external/Lucene.Net.Light \
 		mono:Newtonsoft.Json:471c3e0:2/external/Newtonsoft.Json \
-		mono:NuGet.BuildTasks:04bdab5:3/external/nuget-buildtasks \
+		mono:NuGet.BuildTasks:8d30747:3/external/nuget-buildtasks \
 		mono:aspnetwebstack:e77b12e:4/external/aspnetwebstack \
 		mono:buildtools:9b6ee86:5/external/buildtools \
-		mono:cecil:2b39856:6/external/cecil \
+		mono:cecil:7801534:6/external/cecil \
 		mono:cecil:33d50b8:7/external/cecil-legacy \
+		mono:corefx:bd96ae5:17/external/corefx \
+		mono:corert:d87c966:16/external/corert \
 		mono:ikdasm:e4deabf:8/external/ikdasm \
 		mono:ikvm-fork:367864e:9/external/ikvm \
-		mono:reference-assemblies:6c77197:10/external/binary-reference-assemblies \
+		mono:linker:e4d9784:18/external/linker \
+		mono:reference-assemblies:febc100:10/external/binary-reference-assemblies \
+		mono:roslyn-binaries:0d4198b:15/external/roslyn-binaries \
 		mono:rx:b29a4b0:11/external/rx
 
 USES=		autoreconf bison compiler:c11 cpe gettext gmake iconv libtool pathfix \
@@ -68,7 +73,6 @@ MAKE_ENV=	MONO_SHARED_DIR="${WRKDIR}" \
 		TZ=UTC
 
 TEST_TARGET=	check
-TEST_WRKSRC=	${WRKSRC}/mono/tests
 
 PORTSCOUT=	limit:^\d+\.\d+\.[1-9]\d*
 
@@ -78,8 +82,8 @@ OPTIONS_SLAVE=	MONOLITE
 .endif
 
 post-extract-MONOLITE-on:
-	${MKDIR} ${WRKSRC}/mcs/class/lib
-	${MV} ${WRKDIR}/monolite-${MONOLITE_VERSION}-latest ${WRKSRC}/mcs/class/lib/monolite
+	${MKDIR} ${WRKSRC}/mcs/class/lib/monolite
+	${MV} ${WRKDIR}/monolite-${MONOLITE_VERSION}-latest ${WRKSRC}/mcs/class/lib/monolite/${MONOLITE_VERSION}
 
 post-patch:
 	${REINPLACE_CMD} -e 's|^#!/bin/bash|#!/usr/bin/env bash|g' \
