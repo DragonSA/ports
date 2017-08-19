@@ -25,19 +25,19 @@ facades = [
     "System.Collections",
     "System.IO",
     "System.Runtime",
+    "System.Runtime.InteropServices.RuntimeInformation"
 ]
 
-def add_nuget(args, depend):
-    nuspec = join(NUGET_PACKAGEDIR, depend, depend + ".nuspec")
+def add_nuget(args, depend, version):
+    nuspec = join(NUGET_PACKAGEDIR, depend, version, depend + ".nuspec")
     if not isfile(nuspec):
         return False
     ns = { "nuspec": "http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd" }
     dlls = [ref.get('file') for ref in ElementTree.parse(nuspec).findall('.//nuspec:references/', ns)]
-    print(dlls, nuspec)
     dlls.append(depend + ".dll")
     for dll in dlls:
         dll_paths = []
-        for root, dirs, files in walk(join(NUGET_PACKAGEDIR, depend)):
+        for root, dirs, files in walk(join(NUGET_PACKAGEDIR, depend, version)):
             if dll in files:
                 dll_paths.append(join(root, dll))
         if len(dll_paths) > 1:
@@ -52,7 +52,7 @@ def add_depends(args, depends):
     for depend in references:
         if depend in blacklist:
             continue
-        if not add_nuget(args, depend):
+        if depend not in depends or not add_nuget(args, depend, depends[depend]):
             prefix = ""
             if depend in facades:
                 prefix = "Facades/"
@@ -93,7 +93,7 @@ def main(argv):
         depends.update(project_json["frameworks"]["net46"].setdefault("dependencies", {}))
     args = argv[1:]
     add_depends(args, depends)
-    debug(args, argv)
+    #debug(args, argv)
     execvp("csc", args)
 
 if __name__ == "__main__":

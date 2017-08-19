@@ -35,7 +35,7 @@ post-extract:
 	${LN} -s ${NUGET_PACKAGEDIR} ${WRKDIR}/.nuget/packages
 	${MV} ${WRKDIR}/msbuild ${NUGET_PACKAGEDIR}
 	${CP} ${WRKSRC}/packages/msbuild/Microsoft.DotNet.Build.Tasks.dll \
-		${WRKSRC}/packages/Newtonsoft.Json/lib/net45/Newtonsoft.Json.dll ${WRKSRC}/Tools/net45
+		${WRKSRC}/packages/Newtonsoft.Json.9.0.1/lib/net45/Newtonsoft.Json.dll ${WRKSRC}/Tools/net45
 	${CP} ${FILESDIR}/dotnet ${WRKSRC}/Tools/dotnetcli/dotnet
 	${CP} ${FILESDIR}/csc.exe ${NUGET_PACKAGEDIR}/msbuild/
 
