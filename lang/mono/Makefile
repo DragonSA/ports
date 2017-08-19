@@ -41,6 +41,7 @@ MONOLITE_VERSION=	1050001000
 
 USE_GITHUB=	yes
 GH_TUPLE=	mono:Lucene.Net.Light:85978b7:1/external/Lucene.Net.Light \
+		mono:NUnitLite:690603b:19/external/nunit-lite \
 		mono:Newtonsoft.Json:471c3e0:2/external/Newtonsoft.Json \
 		mono:NuGet.BuildTasks:8d30747:3/external/nuget-buildtasks \
 		mono:aspnetwebstack:e77b12e:4/external/aspnetwebstack \

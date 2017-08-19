@@ -1,6 +1,6 @@
---- mono/utils/mono-proclib.c.orig	2017-05-18 19:41:08 UTC
+--- mono/utils/mono-proclib.c.orig	2017-07-20 18:10:59 UTC
 +++ mono/utils/mono-proclib.c
-@@ -126,11 +126,11 @@ mono_process_list (int *size)
+@@ -131,11 +131,11 @@ mono_process_list (int *size)
  		mib [2] = KERN_PROC_ALL;
  		mib [3] = 0;
  

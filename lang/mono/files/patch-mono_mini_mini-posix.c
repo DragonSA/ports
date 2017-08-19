@@ -1,6 +1,6 @@
---- mono/mini/mini-posix.c.orig	2017-05-18 19:41:08 UTC
+--- mono/mini/mini-posix.c.orig	2017-07-20 18:10:59 UTC
 +++ mono/mini/mini-posix.c
-@@ -587,7 +587,7 @@ clock_init (void)
+@@ -588,7 +588,7 @@ clock_init (void)
  		 * makes very little sense as we can only use nanosleep () to sleep on
  		 * real time.
  		 */

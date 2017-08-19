@@ -1,10 +1,12 @@
-TIMESTAMP = 1503125988
+TIMESTAMP = 1503129100
 SHA256 (monolite-1050001000-latest.tar.gz) = 365dc589e6d336530ef8efaa491e932c15163f449632daef6c41bed770d9fe53
 SIZE (monolite-1050001000-latest.tar.gz) = 4706589
 SHA256 (mono-mono-5.2.0.215-mono-5.2.0.215_GH0.tar.gz) = a84bd7f1b99803b0998f6959a91b67e11caf69e17560d003bacde15a31b0d7d7
 SIZE (mono-mono-5.2.0.215-mono-5.2.0.215_GH0.tar.gz) = 72027219
 SHA256 (mono-Lucene.Net.Light-85978b7_GH0.tar.gz) = 6f9cbad4083c8acf214d86a61fd39585f7d82eeec80c96fc696e07c7006e3a4d
 SIZE (mono-Lucene.Net.Light-85978b7_GH0.tar.gz) = 640188
+SHA256 (mono-NUnitLite-690603b_GH0.tar.gz) = 64aca768fbc92efa365f753c9e70e9e31b7fd80f7db7b50169fc2d9261b3d7b6
+SIZE (mono-NUnitLite-690603b_GH0.tar.gz) = 329598
 SHA256 (mono-Newtonsoft.Json-471c3e0_GH0.tar.gz) = 38b2bc9f2290f780e58fdf1504c0bbdb25a67d7d998c4ec631ecbbf9ddcb3e13
 SIZE (mono-Newtonsoft.Json-471c3e0_GH0.tar.gz) = 1528933
 SHA256 (mono-NuGet.BuildTasks-8d30747_GH0.tar.gz) = f1a89e60e083b6a2f7d3c86bff8fc37e32c33b5ae3bf19c874e73f45f03075e0

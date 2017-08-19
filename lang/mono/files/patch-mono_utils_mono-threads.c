@@ -1,6 +1,6 @@
---- mono/utils/mono-threads.c.orig	2017-05-18 19:41:08 UTC
+--- mono/utils/mono-threads.c.orig	2017-07-20 18:10:59 UTC
 +++ mono/utils/mono-threads.c
-@@ -1336,7 +1336,7 @@ mono_thread_info_sleep (guint32 ms, gboo
+@@ -1243,7 +1243,7 @@ mono_thread_info_sleep (guint32 ms, gboo
  		} while (1);
  	} else {
  		int ret;
