@@ -1,0 +1,13 @@
+--- packages/Microsoft.xunit.netcore.extensions.1.0.0-prerelease-00629-09/Microsoft.xunit.netcore.extensions.nuspec.orig	2016-07-29 17:34:06 UTC
++++ packages/Microsoft.xunit.netcore.extensions.1.0.0-prerelease-00629-09/Microsoft.xunit.netcore.extensions.nuspec
+@@ -35,5 +35,8 @@
+         <dependency id="System.Reflection.Extensions" version="4.0.1-rc3-24117-00" />
+       </group>
+     </dependencies>
++    <references>
++      <reference file="Xunit.NetCore.Extensions.dll" />
++    </references>
+   </metadata>
+-</package>
+\ No newline at end of file
++</package>
