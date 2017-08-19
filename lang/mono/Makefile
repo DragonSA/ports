@@ -2,7 +2,7 @@
 # $FreeBSD: head/lang/mono/Makefile 457313 2017-12-26 20:09:09Z emaste $
 
 PORTNAME=	mono
-PORTVERSION=	5.0.1.1
+PORTVERSION=	5.2.0.215
 DISTVERSIONPREFIX=	mono-
 CATEGORIES=	lang
 
@@ -44,16 +44,16 @@ GH_TUPLE=	mono:Lucene.Net.Light:85978b7:1/external/Lucene.Net.Light \
 		mono:Newtonsoft.Json:471c3e0:2/external/Newtonsoft.Json \
 		mono:NuGet.BuildTasks:8d30747:3/external/nuget-buildtasks \
 		mono:aspnetwebstack:e77b12e:4/external/aspnetwebstack \
-		mono:buildtools:9b6ee86:5/external/buildtools \
-		mono:cecil:7801534:6/external/cecil \
+		mono:buildtools:b5cc6e6:5/external/buildtools \
+		mono:cecil:1003fcb:6/external/cecil \
 		mono:cecil:33d50b8:7/external/cecil-legacy \
-		mono:corefx:bd96ae5:17/external/corefx \
-		mono:corert:d87c966:16/external/corert \
-		mono:ikdasm:e4deabf:8/external/ikdasm \
-		mono:ikvm-fork:367864e:9/external/ikvm \
-		mono:linker:e4d9784:18/external/linker \
-		mono:reference-assemblies:febc100:10/external/binary-reference-assemblies \
-		mono:roslyn-binaries:0d4198b:15/external/roslyn-binaries \
+		mono:corefx:78360b2:17/external/corefx \
+		mono:corert:ed6296d:16/external/corert \
+		mono:ikdasm:88b67c4:8/external/ikdasm \
+		mono:ikvm-fork:7c1e61b:9/external/ikvm \
+		mono:linker:c7450ca:18/external/linker \
+		mono:reference-assemblies:142cbeb:10/external/binary-reference-assemblies \
+		mono:roslyn-binaries:dcb0a05:15/external/roslyn-binaries \
 		mono:rx:b29a4b0:11/external/rx
 
 USES=		autoreconf bison compiler:c11 cpe gettext gmake iconv libtool pathfix \
