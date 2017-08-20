@@ -83,6 +83,7 @@ lib/mono/msbuild/15.0/bin/Roslyn/System.Xml.XPath.dll
 lib/mono/msbuild/15.0/bin/Roslyn/System.Xml.XmlDocument.dll
 lib/mono/msbuild/15.0/bin/Roslyn/VBCSCompiler.exe
 lib/mono/msbuild/15.0/bin/Roslyn/VBCSCompiler.exe.config
+lib/mono/msbuild/15.0/bin/Roslyn/csc.exe
 lib/mono/msbuild/15.0/bin/Roslyn/csc.rsp
 lib/mono/msbuild/15.0/bin/Roslyn/csi.exe
 lib/mono/msbuild/15.0/bin/Roslyn/csi.exe.config

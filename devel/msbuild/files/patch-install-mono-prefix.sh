@@ -14,7 +14,7 @@
  
  # Deploy files meant for the default $(MSBuildExtensionsPath)
  cp -r mono/ExtensionsPath/ ${DESTDIR}${XBUILD_DIR}
-@@ -54,12 +53,12 @@ cp -r mono/ExtensionsPath-ToolsVersion/ 
+@@ -54,12 +53,13 @@ cp -r mono/ExtensionsPath-ToolsVersion/ 
  mv ${DESTDIR}${MSBUILD_INSTALL_BIN_DIR}/Microsoft.Common.props ${DESTDIR}${XBUILD_DIR}/$MSBUILD_TOOLSVERSION
  mv ${DESTDIR}${MSBUILD_INSTALL_BIN_DIR}/Microsoft.VisualStudioVersion.v* ${DESTDIR}${XBUILD_DIR}/$MSBUILD_TOOLSVERSION
  
@@ -30,10 +30,11 @@
 +rm -f ${DESTDIR}${MSBUILD_INSTALL_BIN_DIR}/System.Runtime.InteropServices.RuntimeInformation.dll
 +rm -f ${DESTDIR}${MSBUILD_INSTALL_BIN_DIR}/Roslyn/System.Runtime.InteropServices.RuntimeInformation.dll
 +rm -f ${DESTDIR}${MSBUILD_INSTALL_BIN_DIR}/Roslyn/csc.exe*
++ln -s ../../../../4.5/csc.exe ${DESTDIR}${MSBUILD_INSTALL_BIN_DIR}/Roslyn/csc.exe
  
  FILES="\
      Dependency.dll \
-@@ -67,7 +66,7 @@ FILES="\
+@@ -67,7 +67,7 @@ FILES="\
      TaskWithDependency.dll \
      Xunit.NetCore.Extensions.dll"
  
