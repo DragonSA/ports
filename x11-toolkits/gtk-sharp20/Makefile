@@ -2,7 +2,7 @@
 # $FreeBSD: head/x11-toolkits/gtk-sharp20/Makefile 440759 2017-05-13 07:48:27Z dbn $
 
 PORTNAME=	gtk-sharp
-PORTVERSION=	2.12.43
+PORTVERSION=	2.12.45
 CATEGORIES=	x11-toolkits
 MASTER_SITES=	http://download.mono-project.com/sources/gtk-sharp212/
 PKGNAMESUFFIX=	20
