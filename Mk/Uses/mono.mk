@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/mono.mk 440759 2017-05-13 07:48:27Z dbn $
+# $FreeBSD$
 #
 # mono (c#) support
 #
@@ -10,11 +10,7 @@
 #
 # Arguments:
 #
-# nuget		Specifies that the port uses nuget packages.  The
-#		variables NUGET_DEPENDS needs to be set with the names,
-#		versions and optionally the port origin of the nuget
-#		packages in the format:
-#			${name}=${version}(:${PKGORIGIN})
+# nuget		Specifies that the port uses nuget packages.
 #
 #		EXTRACT_ONLY is conditionally overridden to exclude all
 #		files with a '.nupkg' extension.
@@ -29,6 +25,18 @@
 # NUGET_PACKAGEDIR	The directory in which the port expects the
 #			nuget packages to be available
 #			default: ${WRKSRC}/packages
+#
+# NUGET_FEEDS		A list of nuget feed names
+#			default: NUGET DOTNET
+#
+# ${NAME}_URL:		The base URL for the feed ${NAME}
+#			defaults:
+#				NUGET_URL=https://www.nuget.org
+#				DOTNET_URL=https://dotnet.myget.org/F/dotnet-buildtools
+#
+# ${NAME}_DEPENDS:	The list of nuget packages from feed ${NAME} in the
+#			format:
+#				${name}=${version}
 
 .if !defined(_INCLUDE_USES_MONO_MK)
 _INCLUDE_USES_MONO_MK=	yes
@@ -55,36 +63,42 @@ GACUTIL_INSTALL_PACKAGE=${GACUTIL} /i /package 1.0 /package 2.0
 
 .if ${mono_ARGS:Mnuget}
 NUGET_PACKAGEDIR?=	${WRKSRC}/packages
+NUGET_FEEDS?=		NUGET DOTNET
+NUGET_URL?=		https://www.nuget.org
+DOTNET_URL?=		https://dotnet.myget.org/F/dotnet-buildtools
 
-.  for depend in ${NUGET_DEPENDS}
+. for feed in ${NUGET_FEEDS}
+.  for depend in ${${feed}_DEPENDS}
 id=		${depend:C/=.*$//}
 version=	${depend:C/^.*=//}
-group=		nuget_${id:S/.//g:S/-//g}
+group=		nuget_${depend:S/.//g:S/-//g:S/=//g}
 nupkg=		${id:tl}.${version}.nupkg
 DISTFILES_${group}:=	${nupkg}:${group}
-MASTER_SITES_${group}:=	https://www.nuget.org/api/v2/package/${id}/${version}?dummy=/:${group}
+MASTER_SITES_${group}:=	${${feed}_URL}/api/v2/package/${id}/${version}?dummy=/:${group}
 NUGET_NUPKGS_${group}:=	${nupkg}:${depend}
 
-DISTFILES+=	${DISTFILES_nuget_${depend:C/=.*$//:S/.//g:S/-//g}}
-MASTER_SITES+=	${MASTER_SITES_nuget_${depend:C/=.*$//:S/.//g:S/-//g}}
-NUGET_NUPKGS+=	${NUGET_NUPKGS_nuget_${depend:C/=.*$//:S/.//g:S/-//g}}
+DISTFILES+=	${DISTFILES_nuget_${depend:S/.//g:S/-//g:S/=//g}}
+MASTER_SITES+=	${MASTER_SITES_nuget_${depend:S/.//g:S/-//g:S/=//g}}
+NUGET_NUPKGS+=	${NUGET_NUPKGS_nuget_${depend:S/.//g:S/-//g:S/=//g}}
 .  endfor
+. endfor
 
 EXTRACT_ONLY?=	${_DISTFILES:N*.nupkg}
 
 _USES_extract+=	600:nuget-extract
 nuget-extract:
-.  for nupkg in ${NUGET_NUPKGS}
-	@${MKDIR} ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/=/./}
-	@${RM} -f ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:C/=.*//}
-	@${LN} -s ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/=/./} ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:C/=.*//}
+. for nupkg in ${NUGET_NUPKGS}
+	@${MKDIR} ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/=/./} ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:C/=.*//}
+	@${LN} -s ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/=/./} ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:C/=.*//}/${nupkg:C/.*=//}
 	@tar -xf ${DISTDIR}/${nupkg:C/:.*$//} -C ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/=/./} \
 		-s/%2B/\+/g -s/%2B/\+/g -s/%2B/\+/g \
 		--exclude '\[Content_Types\].xml' \
 		--exclude package/ \
 		--exclude _rels/
 	@${CP} ${DISTDIR}/${nupkg:C/:.*$//} ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/=/./}/${nupkg:C/^.*://:S/=/./}.nupkg
-.  endfor
+	@openssl dgst -sha512 -binary ${DISTDIR}/${nupkg:C/:.*$//} | openssl enc -base64 | ${TR} -d "\n" \
+		> ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/=/./}/${nupkg:C/^.*://:S/=/./}.nupkg.sha512
+. endfor
 .endif
 
 makenuget: patch
