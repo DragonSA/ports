@@ -62,13 +62,22 @@ GACUTIL_INSTALL=${GACUTIL} /i
 GACUTIL_INSTALL_PACKAGE=${GACUTIL} /i /package 1.0 /package 2.0
 
 .if ${mono_ARGS:Mnuget}
+MAKE_ENV+=	NUGET_PACKAGES=${NUGET_PACKAGEDIR}
+
 NUGET_PACKAGEDIR?=	${WRKSRC}/packages
-NUGET_FEEDS?=		NUGET DOTNET
+NUGET_FEEDS+=		NUGET DOTNET
 NUGET_URL?=		https://www.nuget.org
 DOTNET_URL?=		https://dotnet.myget.org/F/dotnet-buildtools
 
 . for feed in ${NUGET_FEEDS}
-.  for depend in ${${feed}_DEPENDS}
+${feed}_DEPENDS?=
+${feed}_FILE?=		${PKGDIR}/nupkg-${feed:tl}
+.  if exists(${${feed}_FILE})
+${feed}_EXTRA!=		${CAT} ${${feed}_FILE}
+.  else
+${feed}_EXTRA=
+.  endif
+.  for depend in ${${feed}_DEPENDS} ${${feed}_EXTRA}
 id=		${depend:C/=.*$//}
 version=	${depend:C/^.*=//}
 group=		nuget_${depend:S/.//g:S/-//g:S/=//g}
@@ -99,6 +108,7 @@ nuget-extract:
 	@openssl dgst -sha512 -binary ${DISTDIR}/${nupkg:C/:.*$//} | openssl enc -base64 | ${TR} -d "\n" \
 		> ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/=/./}/${nupkg:C/^.*://:S/=/./}.nupkg.sha512
 . endfor
+	@${TOUCH} ${WRKDIR}/.nuget-sentinal
 .endif
 
 makenuget: patch
@@ -110,5 +120,14 @@ makenuget: patch
 			-e '2,$$s|^|		|g' \
 			-e '$$!s|$$| \\|g'
 
-.endif
+makenupkg:
+	for nupkg in `${FIND} . -anewer ${WRKDIR}/.nuget-sentinal -name '*.sha512' | ${SED} 's/\.sha512//g' | ${SORT}` \
+	do \
+		name="`tar -tf $${nupkg} | ${GREP} nuspec | ${SED} 's/.nuspec//g'`"; \
+		version=`${BASENAME} $$(${DIRNAME} $$nupkg)`; \
+		id="`${ECHO} $$name | ${TR} '[:upper:]' '[:lower:]'`"; \
+		${CP} $$nupkg ${DISTDIR}/$$name.$$version.nupkg; \
+		${ECHO} "$$name=$$version"; \
+	done
 
+.endif
