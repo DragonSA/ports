@@ -24,25 +24,25 @@ RUN_DEPENDS=	${LOCALBASE}/lib/libgdiplus.a:x11-toolkits/libgdiplus \
 		fsharpc:lang/fsharp
 
 # main/external/fsharpbinding/paket.dependencies
-# main/src/core/MonoDevelop.Core/packages.config
-NUGET_DEPENDS=	ExtCore=0.8.46 \
+NUGET_FEEDS=	ROSLYN APPVEYOR VSTEST TEMPLATING AZURE_APPSERVICE NUGET3 NUGET
+ROSLYN_URL=	https://dotnet.myget.org/F/roslyn/api/v3/index.json
+APPVEYOR_URL=	https://ci.appveyor.com/nuget/nugetizer3000
+VSTEST_URL=	https://dotnet.myget.org/F/vstest/
+TEMPLATING_URL=	https://dotnet.myget.org/F/templating/
+AZURE_APPSERVICE_URL=https://www.myget.org/F/azure-appservice/api/v3/index.json
+NUGET3_URL=	https://api.nuget.org/v3/index.json
+PAKET_DEPENDS=	ExtCore=0.8.46 \
 		FSharp.Compiler.CodeDom=0.9.2 \
 		FSharp.Compiler.Service=11.0.10 \
 		FSharp.Core=4.1.0.2 \
 		Fantomas=2.6.1 \
-		Microsoft.AspNet.Mvc=5.2.3 \
-		Microsoft.AspNet.Razor=3.2.3 \
-		Microsoft.AspNet.WebPages=3.2.3 \
-		Microsoft.DotNet.Common.ProjectTemplates.1.x=${TEMPLATE1_VERSION} \
-		Microsoft.DotNet.Common.ProjectTemplates.2.0=${TEMPLATE2_VERSION} \
-		Microsoft.DotNet.Test.ProjectTemplates.1.x=${TEMPLATE1_VERSION} \
-		Microsoft.DotNet.Test.ProjectTemplates.2.0=${TEMPLATE2_VERSION} \
-		Microsoft.DotNet.Web.ProjectTemplates.1.x=${TEMPLATE1_VERSION} \
-		Microsoft.DotNet.Web.ProjectTemplates.2.0=${TEMPLATE2_VERSION} \
-		NUnit=2.6.4 \
-		NUnit.Engine=3.0.1 \
-		NUnit.Runners=2.6.4 \
-		Newtonsoft.Json=9.0.1
+		Mono.Cecil=0.10.0-beta5 \
+		Newtonsoft.Json=9.0.1 \
+		StrongNamer=0.0.3 \
+		System.Collections.Immutable=1.3.1 \
+		System.Reflection.Metadata=1.4.2 \
+		System.ValueTuple=4.3.0
+PAKET_PACKAGEDIR=	${WRKSRC}/external/fsharpbinding/packages
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-release --disable-update-mimedb --disable-update-desktopdb \
@@ -65,16 +65,14 @@ USE_GNOME=	gtksharp20 gnomesharp20
 INSTALLS_ICONS=	yes
 
 INSTALL_TARGET=	install-strip
-MAKE_ENV=	DOTNET_MSBUILD_SDK_RESOLVER_SDKS_DIR=
+MAKE_ENV=	DOTNET_MSBUILD_SDK_RESOLVER_SDKS_DIR= \
+		XDG_CACHE_HOME=${WRKDIR}
 MAKE_JOBS_UNSAFE=	Build parallelization not implemented
 WRKSRC_SUBDIR=		main
 PORTSCOUT=	limit:^\d+\.\d+\.[1-9]\d*
 
 TEMPLATE1_VERSION=	1.0.0-beta2-20170629-269
 TEMPLATE2_VERSION=	1.0.0-beta2-20170727-301
-
-post-extract:
-	${LN} -Fs ${NUGET_PACKAGEDIR} ${WRKSRC}/external/fsharpbinding/packages
 
 post-patch:
 	${REINPLACE_CMD} 's/0.1.157-dev/0.1.248/g' \
@@ -83,8 +81,6 @@ post-patch:
 		${WRKSRC}/src/addins/MonoDevelop.Packaging/Templates/CrossPlatformLibrary.xpt.xml \
 		${WRKSRC}/src/addins/MonoDevelop.Packaging/Templates/PackagingProject.xpt.xml \
 		${WRKSRC}/src/addins/MonoDevelop.Packaging/packages.config
-	${LN} -Fs ${WRKSRC}/packages/System.Collections.Immutable.1.3.1 \
-		${WRKSRC}/packages/System.Collections.Immutable.1.1.37
 	${ECHO} "Release ID: ${PORTVERSION}" > ${WRKSRC}/buildinfo
 
 .include <bsd.port.mk>
