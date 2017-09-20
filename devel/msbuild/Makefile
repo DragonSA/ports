@@ -14,9 +14,12 @@ COMMENT=	Build platform for .NET and Visual Studio
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
-BUILD_DEPENDS=	bash:shells/bash
+BUILD_DEPENDS=	bash:shells/bash \
+		python:lang/python
 
-DOTNET_DEPENDS=	Microsoft.xunit.netcore.extensions=1.0.0-prerelease-00629-09
+NUGET_FEEDS=	DOTNET_BUILDTOOLS NUGET
+DOTNET_BUILDTOOLS_DEPENDS=	Microsoft.xunit.netcore.extensions=1.0.0-prerelease-00629-09
+DOTNET_BUILDTOOLS_URL=	https://dotnet.myget.org/F/dotnet-buildtools/api/v2/
 NUGET_DEPENDS=	Newtonsoft.Json=9.0.1 \
 		Microsoft.Build=14.3.0 \
 		Microsoft.Build.Framework=14.3.0 \
@@ -28,7 +31,7 @@ NUGET_DEPENDS=	Newtonsoft.Json=9.0.1 \
 		xunit.extensibility.execution=2.1.0 \
 		xunit.runner.console=2.1.0 \
 
-USES=		mono:nuget python:build
+USES=		mono:nuget
 USE_GITHUB=	yes
 GH_ACCOUNT=	mono
 GH_PROJECT=	linux-packaging-msbuild

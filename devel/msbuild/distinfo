@@ -1,4 +1,4 @@
-TIMESTAMP = 1503174302
+TIMESTAMP = 1505764911
 SHA256 (mono_msbuild_d25dd923839404bd64cc63f420e75acf96fc75c4.zip) = 9e992cb8e5526024eeae1cd9dea7f32c0158c2c8d94c9a7a310a146f14eef417
 SIZE (mono_msbuild_d25dd923839404bd64cc63f420e75acf96fc75c4.zip) = 7988564
 SHA256 (newtonsoft.json.9.0.1.nupkg) = 23405c5a3814347fb952b74dec0d836b5b63832c02552e17e0b10f88ab555ee1
@@ -23,5 +23,5 @@ SHA256 (xunit.runner.console.2.1.0.nupkg) = c9a3896b9c1e89d1d746dd06b095f19ac565
 SIZE (xunit.runner.console.2.1.0.nupkg) = 120759
 SHA256 (microsoft.xunit.netcore.extensions.1.0.0-prerelease-00629-09.nupkg) = 3303a73464e6374a2558bc06ea0827d42a4c6f0811d4e7cc41c68c2010f544aa
 SIZE (microsoft.xunit.netcore.extensions.1.0.0-prerelease-00629-09.nupkg) = 20523
-SHA256 (mono-linux-packaging-msbuild-v15.3.0.0-431c7ec_GH0.tar.gz) = ea683fe24974eeb090a951d6ec3d86c69ca6bcd570ca7d1d94a259d8d3e00059
-SIZE (mono-linux-packaging-msbuild-v15.3.0.0-431c7ec_GH0.tar.gz) = 14144419
+SHA256 (mono-linux-packaging-msbuild-v15.3.0.0-431c7ec_GH0.tar.gz) = 347380e02733d828bbcb15018c99e67cd3ba84385c8b3be82b50dd7ee1cca552
+SIZE (mono-linux-packaging-msbuild-v15.3.0.0-431c7ec_GH0.tar.gz) = 14144359
