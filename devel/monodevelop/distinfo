@@ -1,4 +1,6 @@
-TIMESTAMP = 1516811990
+TIMESTAMP = 1516811995
+SHA256 (azure-functions-cli-66a932fb.zip) = b221c815fb4b4b426af11e0625150e0c760d8626d8da66dcdd388fcc29f5c3ff
+SIZE (azure-functions-cli-66a932fb.zip) = 21713242
 SHA256 (extcore.0.8.46.nupkg) = 6220962d632c99bcc79f565ada972b948ac9e8db6e47a7cc7b08bf4357b1479e
 SIZE (extcore.0.8.46.nupkg) = 5905090
 SHA256 (fsharp.compiler.codedom.0.9.2.nupkg) = 92b9a538956775efd989517a608a366b2b926beae6be752a394f7457f77ac933

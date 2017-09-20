@@ -5,6 +5,9 @@ PORTNAME=	monodevelop
 PORTVERSION=	7.1.0.1297
 DISTVERSIONPREFIX=	${PORTNAME}-
 CATEGORIES=	devel
+MASTER_SITES=	https://dl.xamarin.com/uploads/at5p4wjtk44/:xamarin
+DISTFILES=	${AZURE_CLI:C/[^-]*-//}:xamarin
+EXTRACT_ONLY=	${_DISTFILES:N*.nupkg:N*.zip}
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	IDE for the .NET platform
@@ -44,6 +47,10 @@ PAKET_DEPENDS=	ExtCore=0.8.46 \
 		System.ValueTuple=4.3.0
 PAKET_PACKAGEDIR=	${WRKSRC}/external/fsharpbinding/packages
 
+USES=		autoreconf desktop-file-utils gettext gmake mono:nuget pathfix pkgconfig shared-mime-info ssl
+USE_GNOME=	gtksharp20 gnomesharp20
+INSTALLS_ICONS=	yes
+
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-release --disable-update-mimedb --disable-update-desktopdb \
 		--enable-maintainer-mode --enable-gnomeplatform --enable-git
@@ -60,10 +67,6 @@ GH_TUPLE=	icsharpcode:RefactoringEssentials:e67e215:1/external/RefactoringEssent
 		mono:nuget-binary:25573a8:11/external/nuget-binary \
 		mono:xwt:8d64080:12/external/xwt
 
-USES=		autoreconf desktop-file-utils gettext gmake mono:nuget pathfix pkgconfig shared-mime-info ssl
-USE_GNOME=	gtksharp20 gnomesharp20
-INSTALLS_ICONS=	yes
-
 INSTALL_TARGET=	install-strip
 MAKE_ENV=	DOTNET_MSBUILD_SDK_RESOLVER_SDKS_DIR= \
 		XDG_CACHE_HOME=${WRKDIR}
@@ -71,8 +74,13 @@ MAKE_JOBS_UNSAFE=	Build parallelization not implemented
 WRKSRC_SUBDIR=		main
 PORTSCOUT=	limit:^\d+\.\d+\.[1-9]\d*
 
-TEMPLATE1_VERSION=	1.0.0-beta2-20170629-269
-TEMPLATE2_VERSION=	1.0.0-beta2-20170727-301
+# ${WKRSRC}/src/addins/MonoDevelop.AzureFunctions/MonoDevelop.AzureFunctions.csproj
+AZURE_CLI=	81a64e48-azure-functions-cli-66a932fb.zip
+
+post-extract:
+	${MKDIR} ${WRKDIR}/MDBuild
+	${CP} ${DISTDIR}/${AZURE_CLI:C/[^-]*-//} ${WRKDIR}/MDBuild/${AZURE_CLI:S/.zip//}
+	${TOUCH} ${WRKDIR}/MDBuild/${AZURE_CLI:S/.zip//}.verified
 
 post-patch:
 	${REINPLACE_CMD} 's/0.1.157-dev/0.1.248/g' \
