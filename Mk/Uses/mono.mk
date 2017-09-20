@@ -27,16 +27,29 @@
 #			default: ${WRKSRC}/packages
 #
 # NUGET_FEEDS		A list of nuget feed names
-#			default: NUGET DOTNET
+#			default: NUGET
 #
 # ${NAME}_URL:		The base URL for the feed ${NAME}
 #			defaults:
-#				NUGET_URL=https://www.nuget.org
-#				DOTNET_URL=https://dotnet.myget.org/F/dotnet-buildtools
+#				NUGET_URL=https://www.nuget.org/api/v2/
+#
+# ${NAME}_FILE:		The file containing a list of nuget packages from
+# 			feed ${NAME} in the format:
+# 				${name}=${version}
 #
 # ${NAME}_DEPENDS:	The list of nuget packages from feed ${NAME} in the
 #			format:
 #				${name}=${version}
+#			defaults:
+#				NUGET_DEPENDS=${PAKET_DEPENDS}
+#
+# PAKET_PACKAGEDIR	The directory in which the port expects the
+# 			nuget packages (managed by paket) to be available
+#
+# PAKET_DEPENDS		The list of nuget packages from a nuget feed.  The
+# 			version used needs to be resolved (unlike how paket
+# 			works).  The format is:
+# 				${name}=${version}
 
 .if !defined(_INCLUDE_USES_MONO_MK)
 _INCLUDE_USES_MONO_MK=	yes
@@ -64,10 +77,17 @@ GACUTIL_INSTALL_PACKAGE=${GACUTIL} /i /package 1.0 /package 2.0
 .if ${mono_ARGS:Mnuget}
 MAKE_ENV+=	NUGET_PACKAGES=${NUGET_PACKAGEDIR}
 
+# TODO: add nuget as a Port, use it for makenupkg
+NUGET_EXE?=	${WRKSRC}/external/nuget-binary/nuget.exe
+
+_NUGET_PACKAGEDIR=	${WRKDIR}/.nuget/packages
 NUGET_PACKAGEDIR?=	${WRKSRC}/packages
-NUGET_FEEDS+=		NUGET DOTNET
-NUGET_URL?=		https://www.nuget.org
-DOTNET_URL?=		https://dotnet.myget.org/F/dotnet-buildtools
+NUGET_FEEDS?=		NUGET
+NUGET_URL?=		https://www.nuget.org/api/v2/
+
+PAKET_PACKAGEDIR?=
+PAKET_DEPENDS?=
+NUGET_DEPENDS?=		${PAKET_DEPENDS}
 
 . for feed in ${NUGET_FEEDS}
 ${feed}_DEPENDS?=
@@ -78,17 +98,20 @@ ${feed}_EXTRA!=		${CAT} ${${feed}_FILE}
 ${feed}_EXTRA=
 .  endif
 .  for depend in ${${feed}_DEPENDS} ${${feed}_EXTRA}
+.   if empty(_NUGET_DEPENDS:M${depend})
 id=		${depend:C/=.*$//}
 version=	${depend:C/^.*=//}
 group=		nuget_${depend:S/.//g:S/-//g:S/=//g}
 nupkg=		${id:tl}.${version}.nupkg
 DISTFILES_${group}:=	${nupkg}:${group}
-MASTER_SITES_${group}:=	${${feed}_URL}/api/v2/package/${id}/${version}?dummy=/:${group}
+MASTER_SITES_${group}:=	${${feed}_URL}package/${id}/${version}?dummy=/:${group}
 NUGET_NUPKGS_${group}:=	${nupkg}:${depend}
 
 DISTFILES+=	${DISTFILES_nuget_${depend:S/.//g:S/-//g:S/=//g}}
 MASTER_SITES+=	${MASTER_SITES_nuget_${depend:S/.//g:S/-//g:S/=//g}}
 NUGET_NUPKGS+=	${NUGET_NUPKGS_nuget_${depend:S/.//g:S/-//g:S/=//g}}
+_NUGET_DEPENDS+=	${depend}
+.   endif
 .  endfor
 . endfor
 
@@ -96,19 +119,34 @@ EXTRACT_ONLY?=	${_DISTFILES:N*.nupkg}
 
 _USES_extract+=	600:nuget-extract
 nuget-extract:
+	@${MKDIR} ${_NUGET_PACKAGEDIR} ${PAKET_PACKAGEDIR}
 . for nupkg in ${NUGET_NUPKGS}
-	@${MKDIR} ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/=/./} ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:C/=.*//}
-	@${LN} -s ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/=/./} ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:C/=.*//}/${nupkg:C/.*=//}
-	@tar -xf ${DISTDIR}/${nupkg:C/:.*$//} -C ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/=/./} \
+	@${MKDIR} ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S|=|/|}
+	@tar -xf ${DISTDIR}/${nupkg:C/:.*$//} -C ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S|=|/|} \
 		-s/%2B/\+/g -s/%2B/\+/g -s/%2B/\+/g \
 		--exclude '\[Content_Types\].xml' \
 		--exclude package/ \
 		--exclude _rels/
-	@${CP} ${DISTDIR}/${nupkg:C/:.*$//} ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/=/./}/${nupkg:C/^.*://:S/=/./}.nupkg
+	@${CP} ${DISTDIR}/${nupkg:C/:.*$//} ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S|=|/|}/${nupkg:C/^.*://:S/=/./}.nupkg
 	@openssl dgst -sha512 -binary ${DISTDIR}/${nupkg:C/:.*$//} | openssl enc -base64 | ${TR} -d "\n" \
-		> ${NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/=/./}/${nupkg:C/^.*://:S/=/./}.nupkg.sha512
+		> ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S|=|/|}/${nupkg:C/^.*://:S/=/./}.nupkg.sha512
+	@${LN} -s ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S|=|/|} ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/=/./}
+.  if ${nupkg:C/^.*://:tl} != ${nupkg:C/^.*://}
+	@${LN} -s ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S|=|/|}/${nupkg:C/^.*://:C/=.*$//}.nuspec ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S|=|/|}/${nupkg:C/^.*://:C/=.*$//:tl}.nuspec
+	@${LN} -s ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S|=|/|}/${nupkg:C/^.*://:S/=/./}.nupkg ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S|=|/|}/${nupkg:C/^.*://:S/=/./:tl}.nupkg
+	@${LN} -s ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S|=|/|}/${nupkg:C/^.*://:S/=/./}.nupkg.sha512 ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S|=|/|}/${nupkg:C/^.*://:S/=/./:tl}.nupkg.sha512
+	@${LN} -s ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S|=|/|} ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S/=/./:tl}
+	@[ -e ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:C/=.*$//:tl} ] || ${LN} -s ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:C/=.*$//} ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:C/=.*$//:tl}
+.  endif
 . endfor
+	@${LN} -s ${_NUGET_PACKAGEDIR} ${NUGET_PACKAGEDIR}
 	@${TOUCH} ${WRKDIR}/.nuget-sentinal
+
+_USES_extract+=	601:paket-extract
+paket-extract:
+. for nupkg in ${PAKET_DEPENDS}
+	@${LN} -s ${_NUGET_PACKAGEDIR}/${nupkg:S|=|/|} ${PAKET_PACKAGEDIR}/${nupkg:C/=.*$//}
+. endfor
 .endif
 
 makenuget: patch
@@ -121,13 +159,11 @@ makenuget: patch
 			-e '$$!s|$$| \\|g'
 
 makenupkg:
-	for nupkg in `${FIND} . -anewer ${WRKDIR}/.nuget-sentinal -name '*.sha512' | ${SED} 's/\.sha512//g' | ${SORT}` \
+	@for nupkg in `${FIND} ${_NUGET_PACKAGEDIR} -name '*.sha512' | ${SED} 's/\.sha512//g'`; \
 	do \
 		name="`tar -tf $${nupkg} | ${GREP} nuspec | ${SED} 's/.nuspec//g'`"; \
-		version=`${BASENAME} $$(${DIRNAME} $$nupkg)`; \
-		id="`${ECHO} $$name | ${TR} '[:upper:]' '[:lower:]'`"; \
-		${CP} $$nupkg ${DISTDIR}/$$name.$$version.nupkg; \
-		${ECHO} "$$name=$$version"; \
-	done
+		version="`${BASENAME} $$(${DIRNAME} $$nupkg)`"; \
+		${ECHO} "$$name=$${version#$$name.}"; \
+	done | ${SORT} -u
 
 .endif
