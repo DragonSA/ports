@@ -54,6 +54,7 @@ INSTALLS_ICONS=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--enable-release --disable-update-mimedb --disable-update-desktopdb \
 		--enable-maintainer-mode --enable-gnomeplatform --enable-git
+INSTALL=	/usr/bin/install
 USE_GITHUB=	yes
 GH_ACCOUNT=	mono
 GH_TUPLE=	icsharpcode:RefactoringEssentials:e67e215:1/external/RefactoringEssentials \

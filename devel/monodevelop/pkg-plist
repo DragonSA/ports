@@ -811,6 +811,12 @@ man/man1/mdtool.1.gz
 man/man1/monodevelop.1.gz
 share/appdata/monodevelop.appdata.xml
 share/applications/monodevelop.desktop
+share/icons/hicolor/16x16/apps/monodevelop.png
+share/icons/hicolor/22x22/apps/monodevelop.png
+share/icons/hicolor/24x24/apps/monodevelop.png
+share/icons/hicolor/32x32/apps/monodevelop.png
+share/icons/hicolor/48x48/apps/monodevelop.png
+share/icons/hicolor/scalable/apps/monodevelop.svg
 share/locale/ca/LC_MESSAGES/monodevelop.mo
 share/locale/cs/LC_MESSAGES/monodevelop.mo
 share/locale/da/LC_MESSAGES/monodevelop.mo
