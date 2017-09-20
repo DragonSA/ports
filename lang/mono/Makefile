@@ -37,7 +37,7 @@ ACCEPTANCE_TESTS_VARS=	SHEBANG_FILES+=${WRKSRC}/acceptance-tests/external/roslyn
 MONOLITE_DESC=		Use monolite to bootstrap mcs (otherwise use installed mcs)
 MONOLITE_DISTFILES=	monolite-${MONOLITE_VERSION}-latest.tar.gz:monolite
 MONOLITE_MASTER_SITES=	http://download.mono-project.com/monolite/:monolite
-MONOLITE_VERSION=	1050001000
+MONOLITE_VERSION=	1050200001
 
 USE_GITHUB=	yes
 GH_TUPLE=	mono:Lucene.Net.Light:85978b7:1/external/Lucene.Net.Light \
