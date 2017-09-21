@@ -159,11 +159,22 @@ makenuget: patch
 			-e '$$!s|$$| \\|g'
 
 makenupkg:
+.for feed in ${NUGET_FEEDS}
+	@[ -f ${WRKDIR}/.nupkg-${feed:tl} ] || mono ${NUGET_EXE} list -IncludeDelisted -PreRelease -Source ${${feed}_URL} | ${SED} 's/ .*//g' > ${WRKDIR}/.nupkg-${feed:tl}
+	@${RM} ${WRKDIR}/nupkg-${feed:tl}
+.endfor
 	@for nupkg in `${FIND} ${_NUGET_PACKAGEDIR} -name '*.sha512' | ${SED} 's/\.sha512//g'`; \
 	do \
 		name="`tar -tf $${nupkg} | ${GREP} nuspec | ${SED} 's/.nuspec//g'`"; \
 		version="`${BASENAME} $$(${DIRNAME} $$nupkg)`"; \
 		${ECHO} "$$name=$${version#$$name.}"; \
-	done | ${SORT} -u
-
+	done | ${SORT} -u > ${WRKDIR}/.nupkgs
+	@${CAT} ${WRKDIR}/.nupkgs | while read nupkg; do \
+		for feed in ${NUGET_FEEDS:tl}; do \
+			if ${GREP} -q "^$${nupkg%%=*}\$$" ${WRKDIR}/.nupkg-$$feed; then \
+				${ECHO} $$nupkg >> ${WRKDIR}/nupkg-$$feed; \
+				break; \
+			fi; \
+		done; \
+	done
 .endif
