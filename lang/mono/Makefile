@@ -15,7 +15,8 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 BUILD_DEPENDS=	p5-XML-Parser>=0:textproc/p5-XML-Parser \
 		bash:shells/bash
 LIB_DEPENDS=	libinotify.so:devel/libinotify
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pillow>=0:graphics/py-pillow
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pillow>=0:graphics/py-pillow \
+		ca_root_nss>=0:security/ca_root_nss
 
 BROKEN_armv6=		fails to compile: mono/arch/arm/arm-codegen.h:947:10: fatal error: 'mono/arch/arm/arm_dpimacros.h' file not found
 BROKEN_armv7=		fails to compile: mono/arch/arm/arm-codegen.h:947:10: fatal error: 'mono/arch/arm/arm_dpimacros.h' file not found
