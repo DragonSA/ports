@@ -1,4 +1,4 @@
-# $FreeBSD: head/net-mgmt/Makefile 446773 2017-07-27 18:24:15Z lme $
+# $FreeBSD: head/net-mgmt/Makefile 449905 2017-09-15 14:17:03Z pizzamig $
 #
 
     COMMENT = Network management tools
@@ -131,6 +131,7 @@
     SUBDIR += nagios-certexp-plugin
     SUBDIR += nagios-check_bacula
     SUBDIR += nagios-check_bacula5
+    SUBDIR += nagios-check_bacula9
     SUBDIR += nagios-check_clamav
     SUBDIR += nagios-check_cpu_usage
     SUBDIR += nagios-check_dhcp.pl
@@ -194,20 +195,22 @@
     SUBDIR += ng_ipacct
     SUBDIR += nitpicker
     SUBDIR += nrpe
-    SUBDIR += nrpe3
     SUBDIR += nrpe-ssl
+    SUBDIR += nrpe3
     SUBDIR += nsca
     SUBDIR += nsca-client
     SUBDIR += nsca-ng
     SUBDIR += nsca-ng-client
     SUBDIR += nsca27
     SUBDIR += nsca27-client
+    SUBDIR += nstat
     SUBDIR += nstreams
     SUBDIR += observium
     SUBDIR += ocsinventory-agent
     SUBDIR += ocsinventory-ng
     SUBDIR += omping
     SUBDIR += onionlauncher
+    SUBDIR += openbmp
     SUBDIR += openlldp
     SUBDIR += openvmps
     SUBDIR += p0f
@@ -293,6 +296,7 @@
     SUBDIR += pushgateway
     SUBDIR += py-ipcalc
     SUBDIR += py-ipy
+    SUBDIR += py-pdagent
     SUBDIR += py-pyang
     SUBDIR += py-pysmi
     SUBDIR += py-pyzabbix
@@ -381,5 +385,9 @@
     SUBDIR += zabbix32-frontend
     SUBDIR += zabbix32-proxy
     SUBDIR += zabbix32-server
+    SUBDIR += zabbix34-agent
+    SUBDIR += zabbix34-frontend
+    SUBDIR += zabbix34-proxy
+    SUBDIR += zabbix34-server
 
 .include <bsd.port.subdir.mk>

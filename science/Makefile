@@ -1,4 +1,4 @@
-# $FreeBSD: head/science/Makefile 444440 2017-06-27 03:36:03Z tota $
+# $FreeBSD: head/science/Makefile 449516 2017-09-10 07:06:04Z tota $
 #
 
     COMMENT = Scientific ports
@@ -14,6 +14,7 @@
     SUBDIR += R-cran-eco
     SUBDIR += R-cran-epicalc
     SUBDIR += R-cran-etm
+    SUBDIR += R-cran-kernlab
     SUBDIR += R-cran-snow
     SUBDIR += R-cran-som
     SUBDIR += R-cran-udunits2
@@ -165,6 +166,7 @@
     SUBDIR += py-scikit-sparse
     SUBDIR += py-scimath
     SUBDIR += py-scipy
+    SUBDIR += py-tensorflow
     SUBDIR += py-ws2300
     SUBDIR += pybrain
     SUBDIR += pycdf

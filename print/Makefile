@@ -1,4 +1,4 @@
-# $FreeBSD: head/print/Makefile 447816 2017-08-12 05:43:46Z woodsb02 $
+# $FreeBSD: head/print/Makefile 450019 2017-09-17 18:38:38Z tijl $
 #
 
     COMMENT = Desktop publishing
@@ -43,6 +43,7 @@
     SUBDIR += enscript-letter
     SUBDIR += enscript-letterdj
     SUBDIR += epson-inkjet-printer-201401w
+    SUBDIR += epson-inkjet-printer-201601w
     SUBDIR += epson-inkjet-printer-escpr
     SUBDIR += epsonepl
     SUBDIR += fig2dev
@@ -162,6 +163,7 @@
     SUBDIR += pdfcube
     SUBDIR += pdflib
     SUBDIR += pdflib-perl
+    SUBDIR += pdfstitch
     SUBDIR += pdftk
     SUBDIR += pear-File_PDF
     SUBDIR += pecl-haru

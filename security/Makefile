@@ -1,9 +1,10 @@
-# $FreeBSD: head/security/Makefile 447787 2017-08-11 18:47:20Z mmokhi $
+# $FreeBSD: head/security/Makefile 450153 2017-09-19 18:31:49Z adamw $
 #
 
     COMMENT = Security tools
 
     SUBDIR += 0d1n
+    SUBDIR += 1password-client
     SUBDIR += ADMsmb
     SUBDIR += ADMsnmp
     SUBDIR += R-cran-ROAuth
@@ -38,7 +39,6 @@
     SUBDIR += base
     SUBDIR += bcrypt
     SUBDIR += bcwipe
-    SUBDIR += bdc
     SUBDIR += bdes
     SUBDIR += bearssl
     SUBDIR += beecrypt
@@ -80,7 +80,6 @@
     SUBDIR += clamav
     SUBDIR += clamav-milter
     SUBDIR += clamav-unofficial-sigs
-    SUBDIR += clambc
     SUBDIR += clamcour
     SUBDIR += clamd-stream-client
     SUBDIR += clamfs
@@ -181,8 +180,8 @@
     SUBDIR += gnupg1
     SUBDIR += gnupg20
     SUBDIR += gnutls
-    SUBDIR += go.crypto
     SUBDIR += go-cve-dictionary
+    SUBDIR += go.crypto
     SUBDIR += goptlib
     SUBDIR += gorilla
     SUBDIR += govpn
@@ -209,6 +208,7 @@
     SUBDIR += hashcat
     SUBDIR += hashcat-legacy
     SUBDIR += heimdal
+    SUBDIR += highwayhash
     SUBDIR += hitch
     SUBDIR += hlfl
     SUBDIR += hmap
@@ -925,6 +925,7 @@
     SUBDIR += py-pow
     SUBDIR += py-pyaes
     SUBDIR += py-pyaff4
+    SUBDIR += py-pyaxo
     SUBDIR += py-pyclamd
     SUBDIR += py-pycrypto
     SUBDIR += py-pycryptodome
@@ -933,7 +934,6 @@
     SUBDIR += py-pyelliptic
     SUBDIR += py-pylibacl
     SUBDIR += py-pymacaroons-pynacl
-    SUBDIR += py-pyme
     SUBDIR += py-pynacl
     SUBDIR += py-pyotp
     SUBDIR += py-pyptlib
@@ -964,6 +964,7 @@
     SUBDIR += py-tuf
     SUBDIR += py-twistedConch
     SUBDIR += py-twofish
+    SUBDIR += py-txtorcon
     SUBDIR += py-virustotal-api
     SUBDIR += py-volatility
     SUBDIR += py-vulndb
@@ -1042,6 +1043,7 @@
     SUBDIR += rubygem-encryptor
     SUBDIR += rubygem-ezcrypto
     SUBDIR += rubygem-googleauth
+    SUBDIR += rubygem-gpgme
     SUBDIR += rubygem-gpgr
     SUBDIR += rubygem-gssapi
     SUBDIR += rubygem-hkdf

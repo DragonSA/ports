@@ -1,4 +1,4 @@
-# $FreeBSD: head/graphics/Makefile 447821 2017-08-12 10:23:06Z mandree $
+# $FreeBSD: head/graphics/Makefile 449993 2017-09-17 11:32:27Z dbaio $
 #
 
     COMMENT = Graphics tools and libraries
@@ -150,6 +150,7 @@
     SUBDIR += djvulibre
     SUBDIR += dmtx-utils
     SUBDIR += driconf
+    SUBDIR += drm-next-kmod
     SUBDIR += dspdfviewer
     SUBDIR += duhdraw
     SUBDIR += dynamechs
@@ -861,6 +862,7 @@
     SUBDIR += py-graph
     SUBDIR += py-graph-core
     SUBDIR += py-graph-dot
+    SUBDIR += py-graphviz
     SUBDIR += py-graphy
     SUBDIR += py-gvgen
     SUBDIR += py-imageio
@@ -1094,6 +1096,8 @@
     SUBDIR += xournal
     SUBDIR += xpaint
     SUBDIR += xpdf
+    SUBDIR += xpdf3
+    SUBDIR += xpdf4
     SUBDIR += xpeps
     SUBDIR += xpx
     SUBDIR += xsane

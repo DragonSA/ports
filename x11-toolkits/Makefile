@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11-toolkits/Makefile 446388 2017-07-22 11:35:44Z kwm $
+# $FreeBSD: head/x11-toolkits/Makefile 449606 2017-09-11 06:30:53Z gahr $
 #
 
     COMMENT = X11 toolkits
@@ -86,13 +86,12 @@
     SUBDIR += kf5-kconfigwidgets
     SUBDIR += kf5-kdesignerplugin
     SUBDIR += kf5-kguiaddons
+    SUBDIR += kf5-kirigami2
     SUBDIR += kf5-kitemviews
     SUBDIR += kf5-kjobwidgets
     SUBDIR += kf5-ktextwidgets
     SUBDIR += kf5-kwidgetsaddons
     SUBDIR += kf5-kxmlgui
-    SUBDIR += kirigami
-    SUBDIR += kirigami2
     SUBDIR += kproperty
     SUBDIR += lesstif
     SUBDIR += libXaw
@@ -219,7 +218,6 @@
     SUBDIR += py-wxPython28-common
     SUBDIR += py-wxPython30
     SUBDIR += py-xlib
-    SUBDIR += py33-tkinter
     SUBDIR += py34-tkinter
     SUBDIR += py35-tkinter
     SUBDIR += py36-tkinter
@@ -271,6 +269,7 @@
     SUBDIR += tk84
     SUBDIR += tk85
     SUBDIR += tk86
+    SUBDIR += tk87
     SUBDIR += tkdnd
     SUBDIR += tkshape
     SUBDIR += tktable

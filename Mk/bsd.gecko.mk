@@ -4,7 +4,7 @@
 # Date created:		12 Nov 2005
 # Whom:			Michael Johnson <ahze@FreeBSD.org>
 #
-# $FreeBSD: head/Mk/bsd.gecko.mk 445960 2017-07-15 20:32:00Z jbeich $
+# $FreeBSD: head/Mk/bsd.gecko.mk 449914 2017-09-15 18:01:17Z dumbbell $
 #
 # 4 column tabs prevent hair loss and tooth decay!
 
@@ -252,6 +252,7 @@ MOZ_OPTIONS+=	\
 		--enable-chrome-format=${MOZ_CHROME} \
 		--enable-default-toolkit=${MOZ_TOOLKIT} \
 		--enable-update-channel=${MOZ_CHANNEL} \
+		--disable-updater \
 		--enable-pie \
 		--with-pthreads
 # Configure options for install
@@ -388,10 +389,7 @@ post-patch-SNDIO-on:
 .endif
 
 .if ${PORT_OPTIONS:MRUST}
-BUILD_DEPENDS+=	rust>=1.15.1:${RUST_PORT}
-. if ${MOZILLA_VER:R:R} >= 51
-BUILD_DEPENDS+=	cargo>=0.16.0:devel/cargo
-. endif
+BUILD_DEPENDS+=	rust>=1.19.0:${RUST_PORT}
 RUST_PORT?=		lang/rust
 MOZ_OPTIONS+=	--enable-rust
 .else
@@ -475,7 +473,6 @@ CFLAGS+=	-B${LOCALBASE}/bin
 LDFLAGS+=	-B${LOCALBASE}/bin
 . endif
 .elif ${ARCH:Mpowerpc*}
-USES:=		compiler:gcc-c++11-lib ${USES:Ncompiler*c++11*}
 . if ${ARCH} == "powerpc64"
 MOZ_EXPORT+=	UNAME_m="${ARCH}"
 CFLAGS+=	-mminimal-toc

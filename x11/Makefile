@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11/Makefile 447586 2017-08-09 00:46:32Z ultima $
+# $FreeBSD: head/x11/Makefile 450057 2017-09-18 17:45:33Z kmoore $
 #
 
     COMMENT = Ports to support the X window system
@@ -8,6 +8,7 @@
     SUBDIR += 9menu
     SUBDIR += alacritty
     SUBDIR += alltray
+    SUBDIR += alttab
     SUBDIR += altyo
     SUBDIR += antimicro
     SUBDIR += appres
@@ -33,6 +34,7 @@
     SUBDIR += cinnamon-screensaver
     SUBDIR += cinnamon-session
     SUBDIR += cl-clx
+    SUBDIR += cl-clx-sbcl
     SUBDIR += compositeproto
     SUBDIR += controllermap
     SUBDIR += cool-retro-term
@@ -211,6 +213,8 @@
     SUBDIR += lsw
     SUBDIR += luit
     SUBDIR += lumina
+    SUBDIR += lumina-core
+    SUBDIR += lumina-coreutils
     SUBDIR += lupe
     SUBDIR += lxde-meta
     SUBDIR += lxhotkey
@@ -291,8 +295,10 @@
     SUBDIR += rxvt-unicode
     SUBDIR += sakura
     SUBDIR += sbxkb
+    SUBDIR += screen-message
     SUBDIR += scripts
     SUBDIR += scrnsaverproto
+    SUBDIR += sddm
     SUBDIR += sessreg
     SUBDIR += setlayout
     SUBDIR += setxkbmap

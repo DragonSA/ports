@@ -1,4 +1,4 @@
-# $FreeBSD: head/sysutils/Makefile 447760 2017-08-11 13:59:57Z cy $
+# $FreeBSD: head/sysutils/Makefile 449946 2017-09-16 07:10:37Z tcberner $
 #
 
     COMMENT = System utilities
@@ -43,6 +43,7 @@
     SUBDIR += apachetop
     SUBDIR += apcpwr
     SUBDIR += apcupsd
+    SUBDIR += aptly
     SUBDIR += arcconf
     SUBDIR += archivemount
     SUBDIR += areca-cli
@@ -78,6 +79,11 @@
     SUBDIR += bacula5-client-static
     SUBDIR += bacula5-docs
     SUBDIR += bacula5-server
+    SUBDIR += bacula9-bat
+    SUBDIR += bacula9-client
+    SUBDIR += bacula9-client-static
+    SUBDIR += bacula9-docs
+    SUBDIR += bacula9-server
     SUBDIR += baloo
     SUBDIR += baloo-widgets
     SUBDIR += bamf
@@ -185,6 +191,7 @@
     SUBDIR += consolehm
     SUBDIR += consolekit2
     SUBDIR += consul
+    SUBDIR += consul_exporter
     SUBDIR += consul-alerts
     SUBDIR += contractor
     SUBDIR += copytape
@@ -244,6 +251,7 @@
     SUBDIR += docker-compose
     SUBDIR += docker-freebsd
     SUBDIR += docker-machine
+    SUBDIR += doctl
     SUBDIR += doinkd
     SUBDIR += dolly
     SUBDIR += downtime
@@ -304,7 +312,7 @@
     SUBDIR += ffs2recov
     SUBDIR += file
     SUBDIR += filedupe
-    SUBDIR += filelight-kde4
+    SUBDIR += filelight
     SUBDIR += fileprune
     SUBDIR += fileschanged
     SUBDIR += filetype
@@ -674,6 +682,7 @@
     SUBDIR += nbosd
     SUBDIR += ncdu
     SUBDIR += ndmpd
+    SUBDIR += neofetch
     SUBDIR += nepomuk-core
     SUBDIR += nepomuk-widgets
     SUBDIR += nfcutils
@@ -856,6 +865,7 @@
     SUBDIR += puppet-lint
     SUBDIR += puppet-mode.el
     SUBDIR += puppet4
+    SUBDIR += puppet5
     SUBDIR += puppetserver
     SUBDIR += pv
     SUBDIR += pwd_unmkdb
@@ -880,6 +890,7 @@
     SUBDIR += py-freenas.cli
     SUBDIR += py-glances
     SUBDIR += py-gmailfs-fuse
+    SUBDIR += py-google-compute-engine
     SUBDIR += py-halite
     SUBDIR += py-honcho
     SUBDIR += py-iowait
@@ -962,6 +973,7 @@
     SUBDIR += rmonitor
     SUBDIR += roottail
     SUBDIR += rovclock
+    SUBDIR += rpi-firmware
     SUBDIR += rsnapshot
     SUBDIR += rsyncbackup
     SUBDIR += rsyncrypto
@@ -1129,10 +1141,11 @@
     SUBDIR += syslinux
     SUBDIR += syslog-ng
     SUBDIR += syslog-ng-incubator
+    SUBDIR += syslog-ng310
+    SUBDIR += syslog-ng311
     SUBDIR += syslog-ng36
     SUBDIR += syslog-ng37
     SUBDIR += syslog-ng39
-    SUBDIR += syslog-ng310
     SUBDIR += syslogger
     SUBDIR += sysrc
     SUBDIR += system-tools-backends
@@ -1218,6 +1231,7 @@
     SUBDIR += ufs_copy
     SUBDIR += uhidd
     SUBDIR += uif2iso
+    SUBDIR += unetbootin
     SUBDIR += unieject
     SUBDIR += uniutils
     SUBDIR += unquote
@@ -1337,6 +1351,7 @@
     SUBDIR += zfstools
     SUBDIR += zidrav
     SUBDIR += zisofs-tools
+    SUBDIR += znapzend
     SUBDIR += zogftw
     SUBDIR += zrep
     SUBDIR += zsd

@@ -1,4 +1,4 @@
-# $FreeBSD: head/games/Makefile 447284 2017-08-03 21:44:51Z tobik $
+# $FreeBSD: head/games/Makefile 450425 2017-09-23 10:43:09Z oliver $
 #
 
     COMMENT = Games and related software
@@ -32,6 +32,7 @@
     SUBDIR += agame
     SUBDIR += ags
     SUBDIR += aisleriot
+    SUBDIR += aklabeth
     SUBDIR += alephone
     SUBDIR += alephone-data
     SUBDIR += alephone-scenarios
@@ -243,7 +244,6 @@
     SUBDIR += einstein
     SUBDIR += el
     SUBDIR += el-data
-    SUBDIR += ember
     SUBDIR += emptyepsilon
     SUBDIR += endgame-singularity
     SUBDIR += endgame-singularity-music
@@ -254,6 +254,7 @@
     SUBDIR += entombed
     SUBDIR += enygma
     SUBDIR += epiar
+    SUBDIR += epiphany-game
     SUBDIR += etracer
     SUBDIR += euchre
     SUBDIR += evilfinder
@@ -408,6 +409,7 @@
     SUBDIR += gturing
     SUBDIR += gtypist
     SUBDIR += gunfudeadlands
+    SUBDIR += gzdoom
     SUBDIR += hangman
     SUBDIR += hedgewars
     SUBDIR += help_hannahs_horse
@@ -670,6 +672,7 @@
     SUBDIR += numptyphysics
     SUBDIR += numptyphysics-npcomplete
     SUBDIR += nwndata
+    SUBDIR += nxengine
     SUBDIR += odamex
     SUBDIR += oldrunner
     SUBDIR += omega
@@ -702,6 +705,7 @@
     SUBDIR += openomf
     SUBDIR += openpref
     SUBDIR += openra
+    SUBDIR += openrct2
     SUBDIR += opensfx
     SUBDIR += opensonic
     SUBDIR += openspades
@@ -755,7 +759,6 @@
     SUBDIR += pipenightdreams
     SUBDIR += pipepanic
     SUBDIR += pipewalker
-    SUBDIR += plee-the-bear
     SUBDIR += plutocracy
     SUBDIR += pmars
     SUBDIR += pmars-sdl
@@ -886,6 +889,7 @@
     SUBDIR += sdl_jewels
     SUBDIR += sdl_lopan
     SUBDIR += sdl_scavenger
+    SUBDIR += sdlpop
     SUBDIR += sdlroids
     SUBDIR += sdlsand
     SUBDIR += sea-defender
@@ -1157,7 +1161,6 @@
     SUBDIR += xrally
     SUBDIR += xrick
     SUBDIR += xrisk
-    SUBDIR += xroach
     SUBDIR += xrobots
     SUBDIR += xrot
     SUBDIR += xrubik

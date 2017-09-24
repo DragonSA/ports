@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/Makefile 447548 2017-08-08 17:21:45Z tcberner $
+# $FreeBSD: head/textproc/Makefile 449910 2017-09-15 17:32:31Z jrm $
 #
 
     COMMENT = Text processing utilities (does not include desktop publishing)
@@ -14,6 +14,7 @@
     SUBDIR += R-cran-htmltools
     SUBDIR += R-cran-markdown
     SUBDIR += R-cran-pystr
+    SUBDIR += R-cran-readr
     SUBDIR += R-cran-rmarkdown
     SUBDIR += R-cran-stringi
     SUBDIR += R-cran-stringr
@@ -377,6 +378,7 @@
     SUBDIR += kibana43
     SUBDIR += kibana44
     SUBDIR += kibana45
+    SUBDIR += kibana46
     SUBDIR += kibana5
     SUBDIR += kibana5-search-guard
     SUBDIR += kibana5-x-pack
@@ -1305,6 +1307,7 @@
     SUBDIR += py-parsimonious
     SUBDIR += py-pdfminer
     SUBDIR += py-pss
+    SUBDIR += py-pyPEG2
     SUBDIR += py-pyctpp2
     SUBDIR += py-pyelasticsearch
     SUBDIR += py-pyes
@@ -1350,6 +1353,7 @@
     SUBDIR += py-sphinxcontrib-fulltoc
     SUBDIR += py-sphinxcontrib-httpdomain
     SUBDIR += py-sphinxcontrib-programoutput
+    SUBDIR += py-sphinxcontrib-websupport
     SUBDIR += py-stemming
     SUBDIR += py-syck
     SUBDIR += py-tabletext
@@ -1386,11 +1390,13 @@
     SUBDIR += py3-asciinema
     SUBDIR += py3-chardet
     SUBDIR += py3-docutils
+    SUBDIR += py3-feedparser
     SUBDIR += py3-humanfriendly
     SUBDIR += py3-hunspell
     SUBDIR += py3-libxml2
     SUBDIR += py3-numpydoc
     SUBDIR += py3-pager
+    SUBDIR += py3-pyPEG2
     SUBDIR += py3-pygments
     SUBDIR += py3-pystemmer
     SUBDIR += py3-snowballstemmer
@@ -1504,6 +1510,7 @@
     SUBDIR += rubygem-htmlentities
     SUBDIR += rubygem-ini
     SUBDIR += rubygem-inifile
+    SUBDIR += rubygem-iso-639
     SUBDIR += rubygem-itextomml
     SUBDIR += rubygem-jekyll-assets
     SUBDIR += rubygem-jekyll-feed

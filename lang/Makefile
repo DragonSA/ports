@@ -1,4 +1,4 @@
-# $FreeBSD: head/lang/Makefile 446988 2017-07-31 17:42:33Z rene $
+# $FreeBSD: head/lang/Makefile 449196 2017-09-03 10:33:56Z rene $
 #
 
     COMMENT = Programming languages
@@ -20,7 +20,6 @@
     SUBDIR += basic256
     SUBDIR += beignet
     SUBDIR += bf2c
-    SUBDIR += bigloo
     SUBDIR += bsh
     SUBDIR += bwbasic
     SUBDIR += c
@@ -105,6 +104,7 @@
     SUBDIR += gcc6
     SUBDIR += gcc6-aux
     SUBDIR += gcc6-devel
+    SUBDIR += gcc7
     SUBDIR += gcc7-devel
     SUBDIR += gcc8-devel
     SUBDIR += gcl
@@ -284,7 +284,6 @@
     SUBDIR += python2
     SUBDIR += python27
     SUBDIR += python3
-    SUBDIR += python33
     SUBDIR += python34
     SUBDIR += python35
     SUBDIR += python36
@@ -362,7 +361,6 @@
     SUBDIR += v8-devel
     SUBDIR += vala
     SUBDIR += visualworks
-    SUBDIR += whitespace
     SUBDIR += x10
     SUBDIR += yabasic
     SUBDIR += yap

@@ -1,4 +1,4 @@
-# $FreeBSD: head/net/Makefile 447578 2017-08-08 22:06:40Z ultima $
+# $FreeBSD: head/net/Makefile 450387 2017-09-22 15:49:40Z sunpoet $
 #
 
     COMMENT = Networking tools
@@ -67,6 +67,7 @@
     SUBDIR += c3270
     SUBDIR += cagibi
     SUBDIR += ccxstream
+    SUBDIR += ceph
     SUBDIR += ceph-devel
     SUBDIR += cf
     SUBDIR += chrony
@@ -135,6 +136,7 @@
     SUBDIR += exaddos
     SUBDIR += fb
     SUBDIR += findmtu
+    SUBDIR += flower
     SUBDIR += flowgrep
     SUBDIR += fonulator
     SUBDIR += foreman-proxy
@@ -293,6 +295,7 @@
     SUBDIR += jsch
     SUBDIR += jumpgate
     SUBDIR += jwhois
+    SUBDIR += kafka
     SUBDIR += kafkacat
     SUBDIR += kamailio
     SUBDIR += kdenetwork4
@@ -946,6 +949,7 @@
     SUBDIR += pipsecd
     SUBDIR += pjsip
     SUBDIR += pjsip-extsrtp
+    SUBDIR += pkt-gen
     SUBDIR += pktanon
     SUBDIR += pload
     SUBDIR += plugdaemon
@@ -1075,6 +1079,7 @@
     SUBDIR += py-upnp-inspector
     SUBDIR += py-uritemplate
     SUBDIR += py-urllib3
+    SUBDIR += py-wmi-query
     SUBDIR += py-wolframalpha
     SUBDIR += py-xmlrpc
     SUBDIR += py-zope.proxy
@@ -1189,6 +1194,7 @@
     SUBDIR += rubygem-fog-xenserver
     SUBDIR += rubygem-geoip
     SUBDIR += rubygem-gitaly
+    SUBDIR += rubygem-gitaly-proto
     SUBDIR += rubygem-gitlab_omniauth-ldap
     SUBDIR += rubygem-gitlab_omniauth-ldap1
     SUBDIR += rubygem-grpc
@@ -1312,6 +1318,7 @@
     SUBDIR += sqtop
     SUBDIR += srelay
     SUBDIR += ss5
+    SUBDIR += sshping
     SUBDIR += ssldump
     SUBDIR += sslh
     SUBDIR += ssltunnel-client

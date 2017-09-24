@@ -1,10 +1,11 @@
-# $FreeBSD: head/www/Makefile 447548 2017-08-08 17:21:45Z tcberner $
+# $FreeBSD: head/www/Makefile 449983 2017-09-17 04:13:49Z asomers $
 #
 
     COMMENT = Ports related to the World Wide Web
 
     SUBDIR += R-cran-RgoogleMaps
     SUBDIR += R-cran-Rook
+    SUBDIR += R-cran-downloader
     SUBDIR += R-cran-htmlwidgets
     SUBDIR += R-cran-httpuv
     SUBDIR += R-cran-httr
@@ -423,6 +424,7 @@
     SUBDIR += mod_auth_mysql2
     SUBDIR += mod_auth_mysql_another
     SUBDIR += mod_auth_openid
+    SUBDIR += mod_auth_openidc
     SUBDIR += mod_auth_pam2
     SUBDIR += mod_auth_pgsql2
     SUBDIR += mod_auth_pubtkt
@@ -450,6 +452,7 @@
     SUBDIR += mod_fileiri
     SUBDIR += mod_flickr
     SUBDIR += mod_geoip2
+    SUBDIR += mod_gnutls
     SUBDIR += mod_gzip2
     SUBDIR += mod_h264_streaming
     SUBDIR += mod_hosts_access
@@ -463,6 +466,7 @@
     SUBDIR += mod_log_sql2
     SUBDIR += mod_log_sql2-dtc
     SUBDIR += mod_macro22
+    SUBDIR += mod_md-devel
     SUBDIR += mod_memcache
     SUBDIR += mod_memcache_block
     SUBDIR += mod_mono
@@ -540,6 +544,8 @@
     SUBDIR += node4
     SUBDIR += node6
     SUBDIR += nostromo
+    SUBDIR += novnc
+    SUBDIR += novnc-websockify
     SUBDIR += npapi-vlc
     SUBDIR += npapi-xine
     SUBDIR += npc
@@ -1077,6 +1083,7 @@
     SUBDIR += p5-MediaWiki-API
     SUBDIR += p5-Mobile-UserAgent
     SUBDIR += p5-ModPerl-VersionUtil
+    SUBDIR += p5-Mojo-IOLoop-ForkCall
     SUBDIR += p5-Mojo-Server-FastCGI
     SUBDIR += p5-MojoMojo
     SUBDIR += p5-MojoX-Log-Dispatch-Simple
@@ -1542,6 +1549,7 @@
     SUBDIR += py-django-babel
     SUBDIR += py-django-bitfield
     SUBDIR += py-django-bootstrap-form
+    SUBDIR += py-django-bulk-update
     SUBDIR += py-django-caching-app-plugins
     SUBDIR += py-django-classy-tags
     SUBDIR += py-django-cms
@@ -1615,7 +1623,6 @@
     SUBDIR += py-django110
     SUBDIR += py-django111
     SUBDIR += py-django18
-    SUBDIR += py-django19
     SUBDIR += py-django_compressor
     SUBDIR += py-django_openstack_auth
     SUBDIR += py-django_polymorphic
@@ -1679,6 +1686,7 @@
     SUBDIR += py-hyperlink
     SUBDIR += py-imdbpy
     SUBDIR += py-jonpy
+    SUBDIR += py-jsonfield
     SUBDIR += py-jswebkit
     SUBDIR += py-kallithea
     SUBDIR += py-libsass
@@ -1695,6 +1703,7 @@
     SUBDIR += py-pastedeploy
     SUBDIR += py-pastescript
     SUBDIR += py-pelican
+    SUBDIR += py-planet
     SUBDIR += py-plone.alterego
     SUBDIR += py-plone.app.blob
     SUBDIR += py-plone.app.caching
@@ -1787,6 +1796,7 @@
     SUBDIR += py-pysearch
     SUBDIR += py-python-digitalocean
     SUBDIR += py-pywebdav
+    SUBDIR += py-pyweblib
     SUBDIR += py-pywikibot
     SUBDIR += py-qp
     SUBDIR += py-qpy
@@ -1825,6 +1835,7 @@
     SUBDIR += py-tmdb3
     SUBDIR += py-tornado
     SUBDIR += py-trello
+    SUBDIR += py-treq
     SUBDIR += py-turbogears2
     SUBDIR += py-tvdb_api
     SUBDIR += py-twistedWeb
@@ -1858,11 +1869,11 @@
     SUBDIR += pycarddav
     SUBDIR += pydio
     SUBDIR += pyjamas
-    SUBDIR += pyweblib
     SUBDIR += qdecoder
     SUBDIR += qooxdoo
     SUBDIR += qt4-webkit
     SUBDIR += qt5-webchannel
+    SUBDIR += qt5-webengine
     SUBDIR += qt5-webkit
     SUBDIR += qt5-websockets
     SUBDIR += qt5-websockets-qml
@@ -2096,6 +2107,7 @@
     SUBDIR += rubygem-ramaze
     SUBDIR += rubygem-raphael-rails
     SUBDIR += rubygem-rdf
+    SUBDIR += rubygem-rdf-normalize
     SUBDIR += rubygem-redcloth
     SUBDIR += rubygem-redis-rack
     SUBDIR += rubygem-redis-rack1
@@ -2194,7 +2206,6 @@
     SUBDIR += sogo3-activesync
     SUBDIR += spawn-fcgi
     SUBDIR += spdylay
-    SUBDIR += speedtest-mini
     SUBDIR += spreadlogd
     SUBDIR += sqstat
     SUBDIR += squid

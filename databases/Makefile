@@ -1,4 +1,4 @@
-# $FreeBSD: head/databases/Makefile 447749 2017-08-11 09:26:25Z pi $
+# $FreeBSD: head/databases/Makefile 450158 2017-09-19 19:48:30Z bofh $
 #
 
     COMMENT = Databases and related software
@@ -33,6 +33,7 @@
     SUBDIR += cego
     SUBDIR += cegobridge
     SUBDIR += clickhouse
+    SUBDIR += cockroach
     SUBDIR += couchdb
     SUBDIR += courier-authlib-mysql
     SUBDIR += courier-authlib-pgsql
@@ -158,7 +159,6 @@
     SUBDIR += libpbl
     SUBDIR += libpqtypes
     SUBDIR += libsdb
-    SUBDIR += libzbxpgsql
     SUBDIR += libzdb
     SUBDIR += linux-c6-sqlite3
     SUBDIR += linux-c7-sqlite3
@@ -196,6 +196,7 @@
     SUBDIR += mongodb34
     SUBDIR += mongodb34-rocks
     SUBDIR += mongodb34-tools
+    SUBDIR += mroonga
     SUBDIR += mrtg-mysql-load
     SUBDIR += mtools-mongodb
     SUBDIR += mtop
@@ -556,6 +557,7 @@
     SUBDIR += pecl-pdo_user
     SUBDIR += pecl-redis
     SUBDIR += pecl-rrd
+    SUBDIR += pecl-rrd1
     SUBDIR += pecl-tokyo_tyrant
     SUBDIR += percona-pam-for-mysql
     SUBDIR += percona-toolkit
@@ -566,6 +568,7 @@
     SUBDIR += percona57-client
     SUBDIR += percona57-pam-for-mysql
     SUBDIR += percona57-server
+    SUBDIR += pgFormatter
     SUBDIR += pg_activity
     SUBDIR += pg_citus
     SUBDIR += pg_dirtyread
@@ -584,7 +587,6 @@
     SUBDIR += pgbouncer
     SUBDIR += pgdbf
     SUBDIR += pgespresso
-    SUBDIR += pgFormatter
     SUBDIR += pgfouine
     SUBDIR += pgloader
     SUBDIR += pgloader3
@@ -595,6 +597,7 @@
     SUBDIR += pgpool-II-35
     SUBDIR += pgpool-II-36
     SUBDIR += pgreplay
+    SUBDIR += pgroonga
     SUBDIR += pgrouting
     SUBDIR += pgsphere
     SUBDIR += pgtcl
@@ -662,6 +665,7 @@
     SUBDIR += postgis21
     SUBDIR += postgis22
     SUBDIR += postgis23
+    SUBDIR += postgres-xl
     SUBDIR += postgresql-cstore_fdw
     SUBDIR += postgresql-jdbc
     SUBDIR += postgresql-libpgeasy
@@ -736,8 +740,10 @@
     SUBDIR += proftpd-mod_sql_tds
     SUBDIR += puppetdb-terminus3
     SUBDIR += puppetdb-terminus4
+    SUBDIR += puppetdb-terminus5
     SUBDIR += puppetdb3
     SUBDIR += puppetdb4
+    SUBDIR += puppetdb5
     SUBDIR += pure-sql3
     SUBDIR += puredb
     SUBDIR += pxlib
@@ -774,6 +780,7 @@
     SUBDIR += py-htsql-pgsql
     SUBDIR += py-kyotocabinet
     SUBDIR += py-leveldb
+    SUBDIR += py-lmdb
     SUBDIR += py-motor
     SUBDIR += py-mycli
     SUBDIR += py-mysql-connector-python
@@ -837,8 +844,6 @@
     SUBDIR += py3-bsddb3
     SUBDIR += py3-mysqlclient
     SUBDIR += py3-psycopg2
-    SUBDIR += py33-gdbm
-    SUBDIR += py33-sqlite3
     SUBDIR += py34-gdbm
     SUBDIR += py34-sqlite3
     SUBDIR += py35-gdbm
@@ -957,6 +962,8 @@
     SUBDIR += rubygem-mysql2
     SUBDIR += rubygem-openid-redis-store
     SUBDIR += rubygem-paranoia
+    SUBDIR += rubygem-peek-mysql2
+    SUBDIR += rubygem-peek-pg
     SUBDIR += rubygem-pg
     SUBDIR += rubygem-pg_array_parser
     SUBDIR += rubygem-pghero
@@ -997,7 +1004,6 @@
     SUBDIR += sqlite2
     SUBDIR += sqlite3
     SUBDIR += sqlitebrowser
-    SUBDIR += sqlitebrowser-qt5
     SUBDIR += sqliteconvert
     SUBDIR += sqliteman
     SUBDIR += sqlitemanager
@@ -1038,6 +1044,9 @@
     SUBDIR += xapian-core10
     SUBDIR += xapian-core12
     SUBDIR += xtrabackup
+    SUBDIR += zabbix22-libzbxpgsql
+    SUBDIR += zabbix3-libzbxpgsql
+    SUBDIR += zabbix32-libzbxpgsql
     SUBDIR += zodb3
 
 .include <bsd.port.subdir.mk>
