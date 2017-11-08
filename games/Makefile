@@ -1,4 +1,4 @@
-# $FreeBSD: head/games/Makefile 450425 2017-09-23 10:43:09Z oliver $
+# $FreeBSD: head/games/Makefile 453416 2017-11-03 17:09:20Z amdmi3 $
 #
 
     COMMENT = Games and related software
@@ -180,7 +180,6 @@
     SUBDIR += crafty-open-large
     SUBDIR += crafty-open-medium
     SUBDIR += crafty-tablebase-no-pawn
-    SUBDIR += crafty-tablebase-pawn
     SUBDIR += crashtest
     SUBDIR += cre
     SUBDIR += cretan-hubris
@@ -681,6 +680,7 @@
     SUBDIR += oneko-sakura
     SUBDIR += oolite
     SUBDIR += oonsoo
+    SUBDIR += open-adventure
     SUBDIR += openalchemist
     SUBDIR += openarena
     SUBDIR += openarena-data
@@ -766,7 +766,6 @@
     SUBDIR += poker-eval
     SUBDIR += pokerth
     SUBDIR += polyglot
-    SUBDIR += polypuzzle
     SUBDIR += pongix
     SUBDIR += popstar
     SUBDIR += pouetchess
@@ -1004,6 +1003,7 @@
     SUBDIR += tt
     SUBDIR += ttraffic
     SUBDIR += ttt
+    SUBDIR += tty-solitaire
     SUBDIR += tux-aqfh
     SUBDIR += tuxfighter
     SUBDIR += tuxkart

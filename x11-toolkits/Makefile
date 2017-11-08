@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11-toolkits/Makefile 449606 2017-09-11 06:30:53Z gahr $
+# $FreeBSD: head/x11-toolkits/Makefile 453482 2017-11-04 19:48:14Z yuri $
 #
 
     COMMENT = X11 toolkits
@@ -130,6 +130,7 @@
     SUBDIR += mygui-ogre
     SUBDIR += mygui-opengl
     SUBDIR += neXtaw
+    SUBDIR += ntk
     SUBDIR += nucleo
     SUBDIR += ocaml-lablgtk2
     SUBDIR += ocaml-labltk
@@ -239,6 +240,7 @@
     SUBDIR += qt5-widgets
     SUBDIR += qt5pas
     SUBDIR += qtermwidget
+    SUBDIR += qtermwidget-l10n
     SUBDIR += qwt5
     SUBDIR += qwt5-designerplugin
     SUBDIR += qwt6

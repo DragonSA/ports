@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/Makefile 449910 2017-09-15 17:32:31Z jrm $
+# $FreeBSD: head/textproc/Makefile 453639 2017-11-06 18:51:08Z yuri $
 #
 
     COMMENT = Text processing utilities (does not include desktop publishing)
@@ -208,6 +208,7 @@
     SUBDIR += freexl
     SUBDIR += fy-aspell
     SUBDIR += fzf
+    SUBDIR += fzy
     SUBDIR += ga-aspell
     SUBDIR += gastex
     SUBDIR += gd-aspell
@@ -819,6 +820,8 @@
     SUBDIR += p5-String-ShellQuote
     SUBDIR += p5-String-ShowDiff
     SUBDIR += p5-String-Strip
+    SUBDIR += p5-String-Tagged
+    SUBDIR += p5-String-Tagged-Terminal
     SUBDIR += p5-String-ToIdentifier-EN
     SUBDIR += p5-String-Tokenizer
     SUBDIR += p5-String-Trim
@@ -1365,7 +1368,6 @@
     SUBDIR += py-transifex-client
     SUBDIR += py-translationstring
     SUBDIR += py-tvgrab
-    SUBDIR += py-twistedLore
     SUBDIR += py-ucl
     SUBDIR += py-whoosh
     SUBDIR += py-wicked
@@ -1559,7 +1561,6 @@
     SUBDIR += rubygem-rmmseg-cpp
     SUBDIR += rubygem-ronn
     SUBDIR += rubygem-rouge
-    SUBDIR += rubygem-rouge1
     SUBDIR += rubygem-rttool
     SUBDIR += rubygem-ruby-augeas
     SUBDIR += rubygem-ruby-xslt
@@ -1791,6 +1792,7 @@
     SUBDIR += xslide.el
     SUBDIR += xstream
     SUBDIR += xsv
+    SUBDIR += xsv-rs
     SUBDIR += xwindiff
     SUBDIR += xxdiff
     SUBDIR += xxdiff-scripts

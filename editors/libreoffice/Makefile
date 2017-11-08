@@ -1,8 +1,8 @@
-# $FreeBSD: head/editors/libreoffice/Makefile 449591 2017-09-10 20:55:38Z gerald $
+# $FreeBSD: head/editors/libreoffice/Makefile 453378 2017-11-02 21:12:58Z jkim $
 
 .include "${.CURDIR}/Makefile.common"
 
-PORTREVISION=	1
+PORTREVISION=	0
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${PORTVERSION}/ \
 		http://dev-www.libreoffice.org/src/:src \
 		http://dev-www.libreoffice.org/extern/:ext
@@ -103,7 +103,6 @@ USE_QT4=	# empty but required
 USE_XORG=	xaw xrandr
 USES=		autoreconf:build bison compiler:c++11-lib cpe gmake jpeg \
 		perl5 pkgconfig python shared-mime-info tar:xz
-WANT_GNOME=	yes
 
 OPTIONS_DEFINE=	CUPS GNOME GTK2 GTK3 JAVA KDE4 MMEDIA PGSQL SDK SYSTRAY \
 		TEST WEBDAV

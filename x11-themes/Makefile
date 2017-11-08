@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11-themes/Makefile 448603 2017-08-23 11:33:26Z rene $
+# $FreeBSD: head/x11-themes/Makefile 453596 2017-11-06 07:43:50Z araujo $
 #
 
     COMMENT = X11 themes
@@ -124,6 +124,7 @@
     SUBDIR += kf5-kemoticons
     SUBDIR += kf5-kiconthemes
     SUBDIR += kf5-oxygen-icons5
+    SUBDIR += lumina-themes
     SUBDIR += lxappearance
     SUBDIR += lxde-icon-theme
     SUBDIR += mate-backgrounds
@@ -161,6 +162,7 @@
     SUBDIR += qtcurve-utils
     SUBDIR += rezlooks
     SUBDIR += sawfish-themes
+    SUBDIR += sddm-freebsd-black-theme
     SUBDIR += slim-themes
     SUBDIR += thewidgetfactory
     SUBDIR += ubuntulooks

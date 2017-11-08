@@ -1,4 +1,4 @@
-# $FreeBSD: head/mail/Makefile 450348 2017-09-22 10:19:41Z rene $
+# $FreeBSD: head/mail/Makefile 452638 2017-10-22 12:23:23Z antoine $
 #
 
     COMMENT = Electronic mail utilities
@@ -527,6 +527,7 @@
     SUBDIR += proxsmtp
     SUBDIR += py-Products.MailHost
     SUBDIR += py-Products.SecureMailHost
+    SUBDIR += py-afew
     SUBDIR += py-aiosmtpd
     SUBDIR += py-apolicy
     SUBDIR += py-authres
@@ -539,10 +540,10 @@
     SUBDIR += py-milter
     SUBDIR += py-notmuch
     SUBDIR += py-ppolicy
+    SUBDIR += py-premailer
     SUBDIR += py-pymailq
     SUBDIR += py-pyspf
     SUBDIR += py-spambayes
-    SUBDIR += py-twistedMail
     SUBDIR += py-zope.sendmail
     SUBDIR += pymsgauth
     SUBDIR += pysieved
@@ -665,6 +666,7 @@
     SUBDIR += spampd
     SUBDIR += spamprobe
     SUBDIR += spamstats
+    SUBDIR += spfmilter
     SUBDIR += spfval
     SUBDIR += spmfilter
     SUBDIR += spmfilter-clamav

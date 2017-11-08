@@ -1,4 +1,4 @@
-# $FreeBSD: head/deskutils/Makefile 450057 2017-09-18 17:45:33Z kmoore $
+# $FreeBSD: head/deskutils/Makefile 453325 2017-11-01 23:03:20Z yuri $
 #
 
     COMMENT = Things that used to be on the desktop before computers were invented
@@ -92,6 +92,7 @@
     SUBDIR += gnustep-wrapper
     SUBDIR += go-for-it
     SUBDIR += gourmet
+    SUBDIR += gpicker
     SUBDIR += griffith
     SUBDIR += growl-for-linux
     SUBDIR += gruler
@@ -161,6 +162,7 @@
     SUBDIR += nemo-extensions
     SUBDIR += note
     SUBDIR += notecase
+    SUBDIR += noti
     SUBDIR += notification-daemon
     SUBDIR += notify-osd
     SUBDIR += orage
