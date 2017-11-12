@@ -47,6 +47,7 @@ post-extract:
 		${WRKSRC}/packages/Newtonsoft.Json.9.0.1/lib/net45/Newtonsoft.Json.dll ${WRKSRC}/Tools/net45
 	${CP} ${FILESDIR}/dotnet ${WRKSRC}/Tools/dotnetcli/dotnet
 	${CP} ${FILESDIR}/csc.exe ${NUGET_PACKAGEDIR}/msbuild/
+	${CHMOD} a+x ${WRKSRC}/Tools/dotnetcli/dotnet ${NUGET_PACKAGEDIR}/msbuild/csc.exe
 
 post-patch:
 	${FIND} ${WRKSRC} -name AssemblyInfo.cs | ${XARGS} ${REINPLACE_CMD} -E 's/(InternalsVisibleTo\(".*Unit[Tt]ests?), PublicKey=.*")/\1")/g'
