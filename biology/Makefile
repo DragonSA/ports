@@ -1,4 +1,4 @@
-# $FreeBSD: head/biology/Makefile 452595 2017-10-21 16:57:53Z jrm $
+# $FreeBSD: head/biology/Makefile 455857 2017-12-09 13:23:32Z jwb $
 #
 
     COMMENT = Biology
@@ -26,6 +26,7 @@
     SUBDIR += fasta3
     SUBDIR += fastdnaml
     SUBDIR += fastool
+    SUBDIR += fastqc
     SUBDIR += fasttree
     SUBDIR += fastx-toolkit
     SUBDIR += fluctuate
@@ -40,6 +41,7 @@
     SUBDIR += iqtree
     SUBDIR += jalview
     SUBDIR += jellyfish
+    SUBDIR += kallisto
     SUBDIR += lagan
     SUBDIR += lamarc
     SUBDIR += libgtextutils
@@ -71,6 +73,7 @@
     SUBDIR += p5-Bio-SCF
     SUBDIR += p5-BioPerl
     SUBDIR += p5-BioPerl-Run
+    SUBDIR += p5-TrimGalore
     SUBDIR += p5-transdecoder
     SUBDIR += paml
     SUBDIR += phrap
@@ -85,6 +88,8 @@
     SUBDIR += py-biom-format
     SUBDIR += py-biopython
     SUBDIR += py-bx-python
+    SUBDIR += py-cutadapt
+    SUBDIR += py-macs2
     SUBDIR += py-pysam
     SUBDIR += pycogent
     SUBDIR += pyfasta

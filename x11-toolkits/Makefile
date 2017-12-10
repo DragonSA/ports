@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11-toolkits/Makefile 453482 2017-11-04 19:48:14Z yuri $
+# $FreeBSD: head/x11-toolkits/Makefile 455210 2017-11-30 15:50:30Z mat $
 #
 
     COMMENT = X11 toolkits
@@ -219,9 +219,6 @@
     SUBDIR += py-wxPython28-common
     SUBDIR += py-wxPython30
     SUBDIR += py-xlib
-    SUBDIR += py34-tkinter
-    SUBDIR += py35-tkinter
-    SUBDIR += py36-tkinter
     SUBDIR += pypy-tkinter
     SUBDIR += qt4-declarative
     SUBDIR += qt4-gui
@@ -268,7 +265,6 @@
     SUBDIR += tile
     SUBDIR += tix
     SUBDIR += tk-wrapper
-    SUBDIR += tk84
     SUBDIR += tk85
     SUBDIR += tk86
     SUBDIR += tk87

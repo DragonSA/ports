@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/bsd.options.desc.mk 447745 2017-08-11 08:33:19Z mandree $
+# $FreeBSD: head/Mk/bsd.options.desc.mk 455545 2017-12-04 21:30:00Z sunpoet $
 #
 # READ BEFORE EDITING:
 # - Please keep descriptions sorted alphabetically by variable name.
@@ -42,6 +42,7 @@ BDB_DESC?=		Berkeley DB support
 BDB1_DESC?=		Berkeley DB 1.85 support
 BITTORRENT_DESC?=	BitTorrent file sharing support
 BOOST_DESC?=		Boost C++ libraries support
+BROTLI_DESC?=		Brotli compression support
 BZIP2_DESC?=		bzip2 compression support
 CACA_DESC?=		libcaca graphics library support
 CAIRO_DESC?=		Cairo graphics library support
@@ -89,6 +90,7 @@ FFMPEG_DESC?=		FFmpeg support (WMA, AIFF, AC3, APE...)
 FFTW_DESC?=		Discrete Fourier Transform support
 FINGER_DESC?=		finger(1) user information support
 FIREBIRD_DESC?=		Firebird (Interbase) database support
+FISH_DESC?=		Install programmable completions for Fish
 FLAC_DESC?=		FLAC lossless audio codec support
 FLICKR_DESC?=		Flickr support via flickcurl
 FLUIDSYNTH_DESC?=	MIDI playback support via FluidSynth

@@ -1,4 +1,4 @@
-# $FreeBSD: head/games/Makefile 453416 2017-11-03 17:09:20Z amdmi3 $
+# $FreeBSD: head/games/Makefile 455743 2017-12-07 17:17:44Z amdmi3 $
 #
 
     COMMENT = Games and related software
@@ -103,7 +103,6 @@
     SUBDIR += blokish
     SUBDIR += bloodfrontier
     SUBDIR += bluemoon
-    SUBDIR += bogged
     SUBDIR += bomber
     SUBDIR += bomberclone
     SUBDIR += bomberinstinct
@@ -432,7 +431,6 @@
     SUBDIR += icbm3d
     SUBDIR += icebreaker
     SUBDIR += iceicepenguin
-    SUBDIR += ifm
     SUBDIR += imaze
     SUBDIR += impossible_mission_puzzle
     SUBDIR += inform
@@ -536,6 +534,7 @@
     SUBDIR += libretro-cores
     SUBDIR += libshhcards
     SUBDIR += lightsoff
+    SUBDIR += lightyears
     SUBDIR += lincity
     SUBDIR += lincity-ng
     SUBDIR += linux-darwinia-demo
@@ -559,7 +558,6 @@
     SUBDIR += linux-quake3-demo
     SUBDIR += linux-quake4
     SUBDIR += linux-quake4-demo
-    SUBDIR += linux-rtcw
     SUBDIR += linux-ssamtfe
     SUBDIR += linux-ssamtse
     SUBDIR += linux-unigine-heaven
@@ -611,6 +609,7 @@
     SUBDIR += minerbold
     SUBDIR += minetest
     SUBDIR += minetest_game
+    SUBDIR += minilens
     SUBDIR += mirrormagic
     SUBDIR += miscom
     SUBDIR += mkgichessclub
@@ -694,6 +693,7 @@
     SUBDIR += openbor4432
     SUBDIR += openbubbles
     SUBDIR += opencity
+    SUBDIR += openclaw
     SUBDIR += openclonk
     SUBDIR += opengfx
     SUBDIR += openglad
@@ -922,6 +922,7 @@
     SUBDIR += solarwolf
     SUBDIR += sopwith
     SUBDIR += spacejunk
+    SUBDIR += spacezero
     SUBDIR += speak
     SUBDIR += species
     SUBDIR += spellathon
@@ -956,6 +957,7 @@
     SUBDIR += syobon
     SUBDIR += tads
     SUBDIR += taipan
+    SUBDIR += taisei
     SUBDIR += tali
     SUBDIR += tanglet
     SUBDIR += tanks-of-freedom
@@ -978,7 +980,6 @@
     SUBDIR += timeseal
     SUBDIR += tinymux
     SUBDIR += tkmoo
-    SUBDIR += tksol
     SUBDIR += tomatoes
     SUBDIR += tome4
     SUBDIR += tomenet
@@ -1001,7 +1002,6 @@
     SUBDIR += trophy
     SUBDIR += tsito
     SUBDIR += tt
-    SUBDIR += ttraffic
     SUBDIR += ttt
     SUBDIR += tty-solitaire
     SUBDIR += tux-aqfh
@@ -1154,6 +1154,7 @@
     SUBDIR += xpilot-ng-server
     SUBDIR += xpipeman
     SUBDIR += xpired
+    SUBDIR += xptools
     SUBDIR += xpuyopuyo
     SUBDIR += xpuzzletama
     SUBDIR += xpyraminx

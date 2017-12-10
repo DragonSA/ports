@@ -1,8 +1,8 @@
-# $FreeBSD: head/editors/libreoffice/Makefile 453378 2017-11-02 21:12:58Z jkim $
+# $FreeBSD: head/editors/libreoffice/Makefile 454454 2017-11-18 19:32:38Z zeising $
 
 .include "${.CURDIR}/Makefile.common"
 
-PORTREVISION=	0
+PORTREVISION=	2
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${PORTVERSION}/ \
 		http://dev-www.libreoffice.org/src/:src \
 		http://dev-www.libreoffice.org/extern/:ext

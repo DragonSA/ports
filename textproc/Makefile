@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/Makefile 453639 2017-11-06 18:51:08Z yuri $
+# $FreeBSD: head/textproc/Makefile 455210 2017-11-30 15:50:30Z mat $
 #
 
     COMMENT = Text processing utilities (does not include desktop publishing)
@@ -162,6 +162,7 @@
     SUBDIR += elasticsearch2-plugin-migration
     SUBDIR += elasticsearch2-plugin-sql
     SUBDIR += elasticsearch5
+    SUBDIR += elasticsearch5-search-guard
     SUBDIR += elasticsearch5-x-pack
     SUBDIR += elixir-earmark
     SUBDIR += elixir-ex_doc
@@ -524,7 +525,6 @@
     SUBDIR += ny-aspell
     SUBDIR += ocaml-csv
     SUBDIR += ocaml-expat
-    SUBDIR += ocaml-pxp
     SUBDIR += ocaml-text
     SUBDIR += ocaml-tyxml
     SUBDIR += odt2txt
@@ -1236,6 +1236,16 @@
     SUBDIR += php71-xmlreader
     SUBDIR += php71-xmlwriter
     SUBDIR += php71-xsl
+    SUBDIR += php72-ctype
+    SUBDIR += php72-dom
+    SUBDIR += php72-enchant
+    SUBDIR += php72-pspell
+    SUBDIR += php72-simplexml
+    SUBDIR += php72-wddx
+    SUBDIR += php72-xml
+    SUBDIR += php72-xmlreader
+    SUBDIR += php72-xmlwriter
+    SUBDIR += php72-xsl
     SUBDIR += plover
     SUBDIR += po4a
     SUBDIR += pocketreader
@@ -1256,6 +1266,7 @@
     SUBDIR += py-agate-dbf
     SUBDIR += py-agate-excel
     SUBDIR += py-alabaster
+    SUBDIR += py-asciinema
     SUBDIR += py-asv
     SUBDIR += py-autopep8
     SUBDIR += py-awesome-slugify
@@ -1304,6 +1315,7 @@
     SUBDIR += py-nltk
     SUBDIR += py-numpydoc
     SUBDIR += py-openpyxl
+    SUBDIR += py-pager
     SUBDIR += py-pandocfilters
     SUBDIR += py-paragrep
     SUBDIR += py-parsel
@@ -1387,24 +1399,6 @@
     SUBDIR += py-zope.tal
     SUBDIR += py-zpt
     SUBDIR += py2html
-    SUBDIR += py3-MarkupSafe
-    SUBDIR += py3-alabaster
-    SUBDIR += py3-asciinema
-    SUBDIR += py3-chardet
-    SUBDIR += py3-docutils
-    SUBDIR += py3-feedparser
-    SUBDIR += py3-humanfriendly
-    SUBDIR += py3-hunspell
-    SUBDIR += py3-libxml2
-    SUBDIR += py3-numpydoc
-    SUBDIR += py3-pager
-    SUBDIR += py3-pyPEG2
-    SUBDIR += py3-pygments
-    SUBDIR += py3-pystemmer
-    SUBDIR += py3-snowballstemmer
-    SUBDIR += py3-sphinx
-    SUBDIR += py3-sphinx_rtd_theme
-    SUBDIR += py3-texttable
     SUBDIR += pychm
     SUBDIR += qprint
     SUBDIR += qrcodegen
@@ -1661,7 +1655,6 @@
     SUBDIR += sq-hunspell
     SUBDIR += sr-aspell
     SUBDIR += sr-hunspell
-    SUBDIR += srilm
     SUBDIR += ss-hunspell
     SUBDIR += ssddiff
     SUBDIR += stardict-dict-fa_IR

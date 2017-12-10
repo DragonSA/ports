@@ -1,10 +1,11 @@
-# $FreeBSD: head/security/Makefile 453705 2017-11-07 21:50:50Z cs $
+# $FreeBSD: head/security/Makefile 455847 2017-12-09 11:55:44Z cpm $
 #
 
     COMMENT = Security tools
 
     SUBDIR += 0d1n
     SUBDIR += 1password-client
+    SUBDIR += 2fa
     SUBDIR += ADMsmb
     SUBDIR += ADMsnmp
     SUBDIR += R-cran-ROAuth
@@ -48,6 +49,7 @@
     SUBDIR += blindelephant
     SUBDIR += boringssl
     SUBDIR += botan110
+    SUBDIR += botan2
     SUBDIR += bro
     SUBDIR += broccoli
     SUBDIR += bruteblock
@@ -287,6 +289,7 @@
     SUBDIR += isnprober
     SUBDIR += jbrofuzz
     SUBDIR += john
+    SUBDIR += kbfs
     SUBDIR += kc
     SUBDIR += kdbx-viewer
     SUBDIR += kedpm
@@ -307,9 +310,9 @@
     SUBDIR += kpcli
     SUBDIR += kqoauth
     SUBDIR += krb5
-    SUBDIR += krb5-113
     SUBDIR += krb5-114
     SUBDIR += krb5-115
+    SUBDIR += krb5-116
     SUBDIR += krb5-appl
     SUBDIR += krb5-devel
     SUBDIR += kripp
@@ -333,6 +336,7 @@
     SUBDIR += libgnomesu
     SUBDIR += libgpg-error
     SUBDIR += libgringotts
+    SUBDIR += libhijack
     SUBDIR += libident
     SUBDIR += libkpass
     SUBDIR += libksba
@@ -413,6 +417,8 @@
     SUBDIR += ncrypt
     SUBDIR += netpgp
     SUBDIR += nettle
+    SUBDIR += nextcloud-twofactor_totp
+    SUBDIR += nextcloud-twofactor_u2f
     SUBDIR += ngrok
     SUBDIR += nikto
     SUBDIR += nist-kat
@@ -817,6 +823,10 @@
     SUBDIR += php71-hash
     SUBDIR += php71-mcrypt
     SUBDIR += php71-openssl
+    SUBDIR += php72-filter
+    SUBDIR += php72-hash
+    SUBDIR += php72-openssl
+    SUBDIR += php72-sodium
     SUBDIR += phpdeadlock
     SUBDIR += phpsecinfo
     SUBDIR += pidentd
@@ -953,7 +963,6 @@
     SUBDIR += py-python-social-auth
     SUBDIR += py-rekall
     SUBDIR += py-rekall-core
-    SUBDIR += py-rekall_gui
     SUBDIR += py-requests-kerberos
     SUBDIR += py-rsa
     SUBDIR += py-safe
@@ -963,6 +972,7 @@
     SUBDIR += py-slowaes
     SUBDIR += py-spake2
     SUBDIR += py-ssh
+    SUBDIR += py-ssh-audit
     SUBDIR += py-sslstrip
     SUBDIR += py-stem
     SUBDIR += py-stix
@@ -975,7 +985,6 @@
     SUBDIR += py-virustotal-api
     SUBDIR += py-volatility
     SUBDIR += py-vulndb
-    SUBDIR += py-xmlsec
     SUBDIR += py-yara
     SUBDIR += py-yubioath-desktop
     SUBDIR += py-zope.app.authentication
@@ -993,12 +1002,6 @@
     SUBDIR += py-zope.securitypolicy
     SUBDIR += py-zope.session
     SUBDIR += py-zxcvbn-python
-    SUBDIR += py3-certifi
-    SUBDIR += py3-cryptography
-    SUBDIR += py3-ecdsa
-    SUBDIR += py3-libnacl
-    SUBDIR += py3-openssl
-    SUBDIR += py3-pycrypto
     SUBDIR += qtkeychain-qt4
     SUBDIR += qtkeychain-qt5
     SUBDIR += quantis
@@ -1038,6 +1041,7 @@
     SUBDIR += rubygem-airbrussh
     SUBDIR += rubygem-attr_encrypted
     SUBDIR += rubygem-bcrypt
+    SUBDIR += rubygem-bcrypt_pbkdf
     SUBDIR += rubygem-bcrypt-ruby
     SUBDIR += rubygem-devise-two-factor
     SUBDIR += rubygem-devise-two-factor-rails5
@@ -1088,6 +1092,8 @@
     SUBDIR += rubygem-pyu-ruby-sasl
     SUBDIR += rubygem-rack-oauth2
     SUBDIR += rubygem-razorback-scriptNugget
+    SUBDIR += rubygem-rbnacl
+    SUBDIR += rubygem-rbnacl-libsodium
     SUBDIR += rubygem-recog
     SUBDIR += rubygem-rex-arch
     SUBDIR += rubygem-rex-bin_tools
@@ -1122,7 +1128,6 @@
     SUBDIR += rubygem-webpush
     SUBDIR += s2n
     SUBDIR += safesh
-    SUBDIR += samba-virusfilter
     SUBDIR += samhain
     SUBDIR += samhain-client
     SUBDIR += samhain-server
@@ -1232,6 +1237,7 @@
     SUBDIR += truecrypt
     SUBDIR += tsshbatch
     SUBDIR += tthsum
+    SUBDIR += u2f-devd
     SUBDIR += umit
     SUBDIR += unhide
     SUBDIR += unicornscan
@@ -1250,7 +1256,6 @@
     SUBDIR += wapiti
     SUBDIR += webfwlog
     SUBDIR += webscarab
-    SUBDIR += webshag
     SUBDIR += whatweb
     SUBDIR += wipe
     SUBDIR += wolfssl
