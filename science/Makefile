@@ -1,4 +1,4 @@
-# $FreeBSD: head/science/Makefile 455608 2017-12-05 19:15:49Z yuri $
+# $FreeBSD: head/science/Makefile 456626 2017-12-18 12:31:46Z dbn $
 #
 
     COMMENT = Scientific ports
@@ -15,6 +15,7 @@
     SUBDIR += R-cran-eco
     SUBDIR += R-cran-epicalc
     SUBDIR += R-cran-etm
+    SUBDIR += R-cran-fastICA
     SUBDIR += R-cran-kernlab
     SUBDIR += R-cran-snow
     SUBDIR += R-cran-som
