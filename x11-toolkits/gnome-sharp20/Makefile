@@ -15,15 +15,16 @@ LIB_DEPENDS=	libpopt.so:devel/popt \
 		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2
 
-GNU_CONFIGURE=	yes
+USES=		autoreconf gmake libtool mono pathfix perl5 pkgconfig shebangfix tar:bzip2
 USE_LDCONFIG=	yes
-USES=		autoreconf gettext-runtime gmake libtool mono pathfix perl5 pkgconfig shebangfix tar:bzip2
 USE_GITHUB=	yes
 USE_GNOME=	cairo gnomevfs2 gtksharp20 librsvg2 vte libgnomeprintui libgnomeui
 USE_PERL5=	run
 USE_XORG=	ice sm
-INSTALL_TARGET=	install-strip
 SHEBANG_GLOB=	*.pl
+
+GNU_CONFIGURE=	yes
+INSTALL_TARGET=	install-strip
 
 GH_ACCOUNT=	mono
 
