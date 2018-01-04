@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/Makefile 455892 2017-12-10 13:22:00Z sunpoet $
+# $FreeBSD: head/devel/Makefile 457842 2018-01-02 10:41:23Z yuri $
 #
 
     COMMENT = Development utilities
@@ -97,9 +97,7 @@
     SUBDIR += amd64-gcc
     SUBDIR += amd64-xtoolchain-gcc
     SUBDIR += android-tools-adb
-    SUBDIR += android-tools-adb-devel
     SUBDIR += android-tools-fastboot
-    SUBDIR += android-tools-fastboot-devel
     SUBDIR += android-tools-simpleperf
     SUBDIR += anjuta
     SUBDIR += antlr
@@ -308,7 +306,6 @@
     SUBDIR += clanlib
     SUBDIR += clanlib1
     SUBDIR += clanlib22
-    SUBDIR += cld
     SUBDIR += cld2
     SUBDIR += clewn
     SUBDIR += clig
@@ -820,6 +817,7 @@
     SUBDIR += go-glide
     SUBDIR += go-go.uuid
     SUBDIR += go-gocode
+    SUBDIR += go-godef
     SUBDIR += go-goregen
     SUBDIR += go-hashicorp-logutils
     SUBDIR += go-json-rest
@@ -1198,6 +1196,7 @@
     SUBDIR += icu-lx
     SUBDIR += idutils
     SUBDIR += imake
+    SUBDIR += inastemp
     SUBDIR += include-what-you-use
     SUBDIR += inifiled
     SUBDIR += inilib
@@ -1822,6 +1821,7 @@
     SUBDIR += omniNotify
     SUBDIR += omniORB
     SUBDIR += omniORB-4.1
+    SUBDIR += omnisharp-server
     SUBDIR += oniguruma
     SUBDIR += onscripter
     SUBDIR += onscripter-1byte
@@ -3093,7 +3093,6 @@
     SUBDIR += p5-POSIX-strftime-Compiler
     SUBDIR += p5-POSIX-strptime
     SUBDIR += p5-PPerl
-    SUBDIR += p5-Pthread-GetThreadId
     SUBDIR += p5-PV
     SUBDIR += p5-Package-Constants
     SUBDIR += p5-Package-DeprecationManager
@@ -3128,7 +3127,6 @@
     SUBDIR += p5-Parse-PMFile
     SUBDIR += p5-Parse-PerlConfig
     SUBDIR += p5-Parse-Pidl
-    SUBDIR += p5-Parse-Pidl44
     SUBDIR += p5-Parse-PlainConfig
     SUBDIR += p5-Parse-RecDescent
     SUBDIR += p5-Parse-Win32Registry
@@ -3184,6 +3182,7 @@
     SUBDIR += p5-Pipeline
     SUBDIR += p5-Pithub
     SUBDIR += p5-PkgConfig
+    SUBDIR += p5-PkgConfig-LibPkgConf
     SUBDIR += p5-Pod-Coverage
     SUBDIR += p5-Pod-Coverage-Moose
     SUBDIR += p5-Pod-Coverage-TrustPod
@@ -3206,6 +3205,7 @@
     SUBDIR += p5-Proc-WaitStat
     SUBDIR += p5-Project-Gantt
     SUBDIR += p5-Project-Libs
+    SUBDIR += p5-Pthread-GetThreadId
     SUBDIR += p5-Qudo
     SUBDIR += p5-RPSL-Parser
     SUBDIR += p5-RRDTool-OO
@@ -4130,7 +4130,6 @@
     SUBDIR += pure-stldict
     SUBDIR += pure-stllib
     SUBDIR += pushmi
-    SUBDIR += pwlib
     SUBDIR += py-Acquisition
     SUBDIR += py-AddOns
     SUBDIR += py-Automat
@@ -4139,6 +4138,8 @@
     SUBDIR += py-DateTime
     SUBDIR += py-DocumentTemplate
     SUBDIR += py-ExtensionClass
+    SUBDIR += py-Faker
+    SUBDIR += py-IBMQuantumExperience
     SUBDIR += py-InlineEgg
     SUBDIR += py-Jinja2
     SUBDIR += py-Jinja2-doc
@@ -4192,6 +4193,7 @@
     SUBDIR += py-Products.validation
     SUBDIR += py-PyExecJS
     SUBDIR += py-PyLD
+    SUBDIR += py-PyODE
     SUBDIR += py-RPyC
     SUBDIR += py-Record
     SUBDIR += py-SymbolType
@@ -4234,6 +4236,7 @@
     SUBDIR += py-anyjson
     SUBDIR += py-apache_conf_parser
     SUBDIR += py-apipkg
+    SUBDIR += py-apns2
     SUBDIR += py-appdirs
     SUBDIR += py-application
     SUBDIR += py-apptools
@@ -4266,9 +4269,9 @@
     SUBDIR += py-backports.csv
     SUBDIR += py-backports.functools_lru_cache
     SUBDIR += py-backports.shutil_get_terminal_size
+    SUBDIR += py-backports.tempfile
     SUBDIR += py-backports.weakref
     SUBDIR += py-backports_abc
-    SUBDIR += py-backports.tempfile
     SUBDIR += py-bandit
     SUBDIR += py-bcdoc
     SUBDIR += py-billiard
@@ -4291,6 +4294,7 @@
     SUBDIR += py-buildbot-waterfall-view
     SUBDIR += py-buildbot-worker
     SUBDIR += py-buildbot-www
+    SUBDIR += py-bullet3
     SUBDIR += py-cached-property
     SUBDIR += py-cachetools
     SUBDIR += py-calendar
@@ -4371,6 +4375,7 @@
     SUBDIR += py-delfick_error
     SUBDIR += py-deliciousapi
     SUBDIR += py-demjson
+    SUBDIR += py-deprecation
     SUBDIR += py-dexml
     SUBDIR += py-dialog
     SUBDIR += py-diazo
@@ -4392,6 +4397,7 @@
     SUBDIR += py-efilter
     SUBDIR += py-efl
     SUBDIR += py-eggtestinfo
+    SUBDIR += py-ejson
     SUBDIR += py-entrypoints
     SUBDIR += py-enum-compat
     SUBDIR += py-enum34
@@ -4405,7 +4411,6 @@
     SUBDIR += py-ezpyinline
     SUBDIR += py-fabric
     SUBDIR += py-fabric3
-    SUBDIR += py-fake-factory
     SUBDIR += py-fam
     SUBDIR += py-fasteners
     SUBDIR += py-fastentrypoints
@@ -4614,7 +4619,6 @@
     SUBDIR += py-notify
     SUBDIR += py-numba
     SUBDIR += py-ocempgui
-    SUBDIR += py-ode
     SUBDIR += py-odfpy
     SUBDIR += py-offtrac
     SUBDIR += py-olefile
@@ -4719,6 +4723,7 @@
     SUBDIR += py-pyelftools
     SUBDIR += py-pyev
     SUBDIR += py-pyface
+    SUBDIR += py-pyfcm
     SUBDIR += py-pyflakes
     SUBDIR += py-pygdbmi
     SUBDIR += py-pygit2
@@ -4972,6 +4977,7 @@
     SUBDIR += py-venusian
     SUBDIR += py-verboselogs
     SUBDIR += py-versiontools
+    SUBDIR += py-vine
     SUBDIR += py-virtualenv
     SUBDIR += py-virtualenv-clone
     SUBDIR += py-virtualenvwrapper
@@ -5181,6 +5187,7 @@
     SUBDIR += quickcheck++
     SUBDIR += quilt
     SUBDIR += racer
+    SUBDIR += racerd
     SUBDIR += radare2
     SUBDIR += ragel
     SUBDIR += raknet
@@ -5405,6 +5412,7 @@
     SUBDIR += rubygem-filesize
     SUBDIR += rubygem-flexmock
     SUBDIR += rubygem-flipper
+    SUBDIR += rubygem-flipper-active_support_cache_store
     SUBDIR += rubygem-flipper010
     SUBDIR += rubygem-fluent-logger
     SUBDIR += rubygem-fog
@@ -5447,6 +5455,7 @@
     SUBDIR += rubygem-google-api-client
     SUBDIR += rubygem-google-api-client010
     SUBDIR += rubygem-google-protobuf
+    SUBDIR += rubygem-googleapis-common-protos-types
     SUBDIR += rubygem-graf
     SUBDIR += rubygem-grape
     SUBDIR += rubygem-grape-entity
@@ -5640,6 +5649,7 @@
     SUBDIR += rubygem-rails-i18n-rails50
     SUBDIR += rubygem-rails-observers
     SUBDIR += rubygem-rainbow
+    SUBDIR += rubygem-rainbow2
     SUBDIR += rubygem-rake
     SUBDIR += rubygem-rake-compiler
     SUBDIR += rubygem-rake-compiler-dock
@@ -5668,8 +5678,8 @@
     SUBDIR += rubygem-ref
     SUBDIR += rubygem-request_store
     SUBDIR += rubygem-require_all
-    SUBDIR += rubygem-retriable
     SUBDIR += rubygem-resque
+    SUBDIR += rubygem-retriable
     SUBDIR += rubygem-retryable
     SUBDIR += rubygem-rgl
     SUBDIR += rubygem-rice
@@ -5926,8 +5936,6 @@
     SUBDIR += svn_load_dirs
     SUBDIR += svntrac
     SUBDIR += swank-clojure
-    SUBDIR += swig13
-    SUBDIR += swig20
     SUBDIR += swig30
     SUBDIR += synfig
     SUBDIR += sysconftool
@@ -6056,6 +6064,7 @@
     SUBDIR += yaml2argdata
     SUBDIR += yasm
     SUBDIR += yasm-devel
+    SUBDIR += youcompleteme
     SUBDIR += z80-asm
     SUBDIR += z80asm
     SUBDIR += z80ex

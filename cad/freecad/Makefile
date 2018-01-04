@@ -1,4 +1,4 @@
-# $FreeBSD: head/cad/freecad/Makefile 455251 2017-12-01 07:19:53Z antoine $
+# $FreeBSD: head/cad/freecad/Makefile 457914 2018-01-02 16:49:24Z tcberner $
 
 PORTNAME=	FreeCAD
 DISTVERSION=	0.17.12018
@@ -11,12 +11,11 @@ LICENSE=	LGPL20+
 LICENSE_FILE=	${WRKSRC}/COPYING
 
 BUILD_DEPENDS=	pyside-rcc:devel/pyside-tools \
-		swig:devel/swig13 \
-		${LOCALBASE}/libdata/pkgconfig/eigen3.pc:math/eigen3
+		swig3.0:devel/swig30
 LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libfreetype.so:print/freetype2 \
 		libboost_python.so:devel/boost-python-libs \
-		libpyside-python2.7.so:devel/pyside \
+		libpyside-python2.7.so:devel/pyside@${PY_FLAVOR} \
 		libCoin.so:graphics/Coin \
 		libpng.so:graphics/png \
 		libtiff.so:graphics/tiff \
@@ -29,10 +28,10 @@ LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libmed.so:french/med \
 		libshiboken-${PYTHON_VERSION}.so:devel/shiboken \
 		libhdf5.so:science/hdf5
-RUN_DEPENDS=	pivy>0:graphics/py-pivy
+RUN_DEPENDS=	pivy>0:graphics/py-pivy@${PY_FLAVOR}
 
-USES=		dos2unix compiler:c++11-lib cmake:outsource fortran jpeg \
-		python localbase
+USES=		dos2unix compiler:c++11-lib cmake:outsource eigen:3 fortran jpeg \
+		python:2.7 localbase
 USE_XORG=	ice sm x11 xext xt
 USE_GL=		gl glu
 USE_QT4=	qmake_build corelib gui moc_build network opengl rcc_build \
@@ -58,7 +57,7 @@ GH_TAGNAME=	f27617e
 OPTIONS_DEFINE=	COLLADA
 
 COLLADA_DESC=		Install pycollada for Collada files import
-COLLADA_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycollada>0:graphics/py-pycollada
+COLLADA_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycollada>0:graphics/py-pycollada@${PY_FLAVOR}
 
 DESKTOP_ENTRIES=${PORTNAME} "" "${PREFIX}/FreeCAD/data/freecad.svg" \
 		${PORTNAME} "Engineering;" false

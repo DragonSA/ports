@@ -1,4 +1,4 @@
-# $FreeBSD: head/multimedia/Makefile 455603 2017-12-05 18:53:42Z yuri $
+# $FreeBSD: head/multimedia/Makefile 456215 2017-12-13 16:00:37Z tobik $
 #
 
     COMMENT = Multimedia software
@@ -171,6 +171,7 @@
     SUBDIR += kissdx
     SUBDIR += kmplayer-kde4
     SUBDIR += kodi
+    SUBDIR += kodi-devel
     SUBDIR += kplayer-kde4
     SUBDIR += kvazaar
     SUBDIR += l-smash
@@ -210,6 +211,7 @@
     SUBDIR += libsmacker
     SUBDIR += libtheora
     SUBDIR += libtuner
+    SUBDIR += libuvc
     SUBDIR += libv4l
     SUBDIR += libva
     SUBDIR += libva-intel-driver

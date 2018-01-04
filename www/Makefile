@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/Makefile 455897 2017-12-10 13:39:34Z wen $
+# $FreeBSD: head/www/Makefile 457970 2018-01-03 15:49:41Z jrm $
 #
 
     COMMENT = Ports related to the World Wide Web
@@ -13,6 +13,7 @@
     SUBDIR += R-cran-scrapeR
     SUBDIR += R-cran-selectr
     SUBDIR += R-cran-shiny
+    SUBDIR += Stikked
     SUBDIR += UniversalFeedCreator
     SUBDIR += WebMagick
     SUBDIR += ach
@@ -400,6 +401,7 @@
     SUBDIR += mediawiki127
     SUBDIR += mediawiki128
     SUBDIR += mediawiki129
+    SUBDIR += mediawiki130
     SUBDIR += mergelog
     SUBDIR += mgstat
     SUBDIR += mhonarc
@@ -564,8 +566,6 @@
     SUBDIR += npm-node4
     SUBDIR += npm-node6
     SUBDIR += npm-node8
-    SUBDIR += npm2
-    SUBDIR += npm3
     SUBDIR += npm4
     SUBDIR += nspluginwrapper
     SUBDIR += nuvolaplayer-8tracks
@@ -1549,6 +1549,7 @@
     SUBDIR += py-buku
     SUBDIR += py-cachecontrol
     SUBDIR += py-caldav
+    SUBDIR += py-cheroot
     SUBDIR += py-cherrypy
     SUBDIR += py-cherrypy-old
     SUBDIR += py-clientform
@@ -1605,6 +1606,7 @@
     SUBDIR += py-django-mezzanine-filebrowser
     SUBDIR += py-django-mezzanine-grappelli
     SUBDIR += py-django-mptt
+    SUBDIR += py-django-netfields
     SUBDIR += py-django-openid-auth
     SUBDIR += py-django-otp
     SUBDIR += py-django-otp-yubikey
@@ -1680,7 +1682,7 @@
     SUBDIR += py-flask-uploads
     SUBDIR += py-flask-wtf
     SUBDIR += py-flexget
-    SUBDIR += py-flup
+    SUBDIR += py-flup6
     SUBDIR += py-formalchemy
     SUBDIR += py-formencode
     SUBDIR += py-frappe-bench
@@ -1715,6 +1717,7 @@
     SUBDIR += py-jsonfield
     SUBDIR += py-jswebkit
     SUBDIR += py-kallithea
+    SUBDIR += py-lesscpy
     SUBDIR += py-libsass
     SUBDIR += py-mechanize
     SUBDIR += py-meld
@@ -2033,6 +2036,8 @@
     SUBDIR += rubygem-http
     SUBDIR += rubygem-http-cookie
     SUBDIR += rubygem-http-form_data
+    SUBDIR += rubygem-http-form_data1
+    SUBDIR += rubygem-http2
     SUBDIR += rubygem-http_router
     SUBDIR += rubygem-httparty
     SUBDIR += rubygem-httpclient
@@ -2042,6 +2047,7 @@
     SUBDIR += rubygem-jekyll
     SUBDIR += rubygem-jekyll-sanity
     SUBDIR += rubygem-jekyll-watch
+    SUBDIR += rubygem-jekyll-watch1
     SUBDIR += rubygem-journey
     SUBDIR += rubygem-jquery-atwho-rails
     SUBDIR += rubygem-jquery-rails
@@ -2054,6 +2060,7 @@
     SUBDIR += rubygem-jsobfu
     SUBDIR += rubygem-json-jwt
     SUBDIR += rubygem-jwt
+    SUBDIR += rubygem-jwt1
     SUBDIR += rubygem-kaminari
     SUBDIR += rubygem-kaminari-actionview
     SUBDIR += rubygem-kaminari-actionview-rails5

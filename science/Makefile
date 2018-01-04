@@ -1,4 +1,4 @@
-# $FreeBSD: head/science/Makefile 456626 2017-12-18 12:31:46Z dbn $
+# $FreeBSD: head/science/Makefile 456763 2017-12-19 19:49:17Z yuri $
 #
 
     COMMENT = Scientific ports
@@ -6,6 +6,8 @@
     SUBDIR += 2d-rewriter
     SUBDIR += ALPSCore
     SUBDIR += InsightToolkit
+    SUBDIR += MOOSE-neural-simulator
+    SUBDIR += PETSc
     SUBDIR += R-cran-AMORE
     SUBDIR += R-cran-DCluster
     SUBDIR += R-cran-Epi
@@ -168,6 +170,7 @@
     SUBDIR += py-pupynere
     SUBDIR += py-pyaixi
     SUBDIR += py-pydicom
+    SUBDIR += py-pymol
     SUBDIR += py-pysal
     SUBDIR += py-pyteomics
     SUBDIR += py-pyteomics.biolccc

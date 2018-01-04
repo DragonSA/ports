@@ -1,4 +1,4 @@
-# $FreeBSD: head/graphics/Makefile 455411 2017-12-03 16:53:46Z yuri $
+# $FreeBSD: head/graphics/Makefile 457750 2018-01-01 01:23:15Z danilo $
 #
 
     COMMENT = Graphics tools and libraries
@@ -148,6 +148,7 @@
     SUBDIR += djview4-qt4
     SUBDIR += djvulibre
     SUBDIR += dmtx-utils
+    SUBDIR += drawpile
     SUBDIR += driconf
     SUBDIR += drm-next-kmod
     SUBDIR += dspdfviewer
@@ -482,6 +483,7 @@
     SUBDIR += lib3ds
     SUBDIR += libGLU
     SUBDIR += libGLw
+    SUBDIR += libQGLViewer
     SUBDIR += libafterimage
     SUBDIR += libart_lgpl
     SUBDIR += libboard
@@ -726,6 +728,7 @@
     SUBDIR += p5-Image-ObjectDetect
     SUBDIR += p5-Image-PBMlib
     SUBDIR += p5-Image-Pngslimmer
+    SUBDIR += p5-Image-Sane
     SUBDIR += p5-Image-Scale
     SUBDIR += p5-Image-Size
     SUBDIR += p5-Image-Size-FillFullSelect

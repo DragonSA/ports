@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/cran.mk 456619 2017-12-18 11:22:21Z dbn $
+# $FreeBSD: head/Mk/Uses/cran.mk 456667 2017-12-18 18:30:42Z antoine $
 #
 # Use the Comprehensive R Archive Network 
 #
@@ -67,9 +67,6 @@ cran-auto-plist:
 
 .if ${cran_ARGS:Mcompiles}
 _USES_install+= 755:cran-strip
-
-LIB_DEPENDS+=	libflang.so:devel/flang
-
 cran-strip:
 	${FIND} ${STAGEDIR}${PREFIX}/${R_MOD_DIR} -name '*.so' -exec ${STRIP_CMD} {} +
 .include "${PORTSDIR}/math/R/compiler.mk"
