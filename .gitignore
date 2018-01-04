@@ -1,10 +1,9 @@
-/.svn
 /distfiles
 /packages
 /*/*/Makefile.local
-/*/*/work*
+/*/*/work
+/*/*/work-*
 /INDEX-[0-9]*
-svn-commit.tmp
 *~
 *.rej
 *.orig
