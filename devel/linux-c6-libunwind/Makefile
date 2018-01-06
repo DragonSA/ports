@@ -1,0 +1,21 @@
+# Created by: Piotr Kubaj <pkubaj@anongoth.pl>
+# $FreeBSD$
+
+PORTNAME=	libunwind
+PORTVERSION=	1.1
+CATEGORIES=	devel linux
+MASTER_SITES=	EPEL/l/
+
+MAINTAINER=	emulation@FreeBSD.org
+COMMENT=	Generic stack unwinding library (Linux CentOS ${LINUX_DIST_VER})
+
+DESCR=		${PORTSDIR}/devel/libunwind/pkg-descr
+RPMVERSION=	3.el6
+USES=		linux:c6
+USE_LDCONFIG=	yes
+USE_LINUX_RPM=	yes
+SRC_DISTFILES=	
+
+OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.mk>
