@@ -1,4 +1,4 @@
-# Created by: Piotr Kubaj <pkubaj@anongoth.pl>
+# Created by: David Naylor <dbn@FreeBSD.org>
 # $FreeBSD$
 
 PORTNAME=	libunwind
