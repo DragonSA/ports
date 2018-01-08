@@ -1,0 +1,23 @@
+If you get the error message:
+
+	Failed to initialize CoreCLR, HRESULT: 0x8007001F
+
+then either the system has run out of wired memory, or does not allow
+unprivilaged wired memory.  
+
+To check if wired memory is allowed ensure the sysctl(3)
+'security.bsd.unprivileged_mlock' returns '1'.  
+
+To check used wired memory see the sysctl(3) 'vm.stats.vm.v_wire_count' and
+compare it to the maximum wired memory available with the sysctl(3)
+'vm.max_wired'.
+
+To increase the maximum available wired memory increase the sysctl(3)
+'vm.max_wired'.
+
+Telemetry
+--------------
+The .NET Core tools collect usage data in order to improve your experience. The data is anonymous and does not include command-line arguments. The data is collected by Microsoft and shared with the community.
+You can opt out of telemetry by setting a DOTNET_CLI_TELEMETRY_OPTOUT environment variable to 1 using your favorite shell.
+You can read more about .NET Core tools telemetry @ https://aka.ms/dotnet-cli-telemetry.
+
