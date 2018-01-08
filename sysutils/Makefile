@@ -567,6 +567,7 @@
     SUBDIR += linrename
     SUBDIR += linux-crashplan
     SUBDIR += linux-lttng-ust
+    SUBDIR += linux-userspace-rcu
     SUBDIR += linuxfdisk
     SUBDIR += livecd
     SUBDIR += lmmon
