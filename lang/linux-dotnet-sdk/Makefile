@@ -14,11 +14,11 @@ COMMENT=	Cross-platform .NET implementation (Software Development Kit)
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
+ONLY_FOR_ARCHS=	amd64
+
 BUILD_DEPENDS=${LOCALBASE}/bin/lzma:archivers/lzma \
 		zip:archivers/zip
 RUN_DEPENDS=	linux-dotnet-runtime>=2.0.4:lang/linux-dotnet-runtime
-
-ONLY_FOR_ARCHS=	amd64
 
 DESCR=		${.CURDIR}/../linux-dotnet-runtime/pkg-descr
 EXTRACT_AFTER_ARGS=        --no-same-owner --no-same-permissions \
