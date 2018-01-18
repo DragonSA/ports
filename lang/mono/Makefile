@@ -96,6 +96,14 @@ post-patch:
 		-e 's|^#!/bin/bash|#!/bin/sh|g'
 	${SED} 's/tarball/${PORTVERSION}/' ${WRKSRC}/mono/mini/Makefile.am.in \
 		> ${WRKSRC}/mono/mini/Makefile.am
+	${REINPLACE_CMD} -e 's|/usr/share|${PREFIX}|g' \
+		${WRKSRC}/mcs/class/corlib/System/Environment.cs \
+		${WRKSRC}/external/corefx/src/System.Runtime.Extensions/src/System/Environment.Unix.cs
+	${REINPLACE_CMD} -e 's|/usr/share/.mono|${PREFIX}/share/mono|g' \
+		${WRKSRC}/man/mono-configuration-crypto.1 \
+		${WRKSRC}/man/mono.1 \
+		${WRKSRC}/man/mozroots.1
+
 
 post-patch-ACCEPTANCE_TESTS-on:
 	${REINPLACE_CMD} -E -e 's!(~/|/tmp/)!${WRKDIR}/!g' -e '/git clean/d' \
