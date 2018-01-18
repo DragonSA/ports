@@ -12,15 +12,17 @@ COMMENT=	Open source implementation of .NET Development Framework
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
+ONLY_FOR_ARCHS=		amd64 armv6 armv7 i386 powerpc
+BROKEN_armv6=		fails to compile: mono/arch/arm/arm-codegen.h:947:10: fatal error: 'mono/arch/arm/arm_dpimacros.h' file not found
+BROKEN_armv7=		fails to compile: mono/arch/arm/arm-codegen.h:947:10: fatal error: 'mono/arch/arm/arm_dpimacros.h' file not found
+
 BUILD_DEPENDS=	p5-XML-Parser>=0:textproc/p5-XML-Parser \
 		bash:shells/bash
 LIB_DEPENDS=	libinotify.so:devel/libinotify
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pillow>=0:graphics/py-pillow@{PY_FLAVOR} \
 		ca_root_nss>=0:security/ca_root_nss
 
-BROKEN_armv6=		fails to compile: mono/arch/arm/arm-codegen.h:947:10: fatal error: 'mono/arch/arm/arm_dpimacros.h' file not found
-BROKEN_armv7=		fails to compile: mono/arch/arm/arm-codegen.h:947:10: fatal error: 'mono/arch/arm/arm_dpimacros.h' file not found
-ONLY_FOR_ARCHS=		amd64 armv6 armv7 i386 powerpc
+CONFLICTS_INSTALL=	czmq-3*
 
 OPTIONS_DEFINE=		ACCEPTANCE_TESTS MONOLITE
 OPTIONS_DEFAULT=	MONOLITE
@@ -40,6 +42,15 @@ MONOLITE_DISTFILES=	monolite-${MONOLITE_VERSION}-latest.tar.gz:monolite
 MONOLITE_MASTER_SITES=	http://download.mono-project.com/monolite/:monolite
 MONOLITE_VERSION=	1050200001
 
+USES=		autoreconf bison compiler:c11 cpe gettext gmake iconv libtool pathfix \
+		perl5 python shebangfix tar:bzip2
+USE_GNOME=	glib20
+USE_PERL5=	build
+GNU_CONFIGURE=	yes
+USE_LDCONFIG=	yes
+LLD_UNSAFE=	yes
+SHEBANG_FILES=	scripts/mono-heapviz
+
 USE_GITHUB=	yes
 GH_TUPLE=	mono:Lucene.Net.Light:85978b7:1/external/Lucene.Net.Light \
 		mono:NUnitLite:690603b:19/external/nunit-lite \
@@ -57,15 +68,6 @@ GH_TUPLE=	mono:Lucene.Net.Light:85978b7:1/external/Lucene.Net.Light \
 		mono:reference-assemblies:142cbeb:10/external/binary-reference-assemblies \
 		mono:roslyn-binaries:dcb0a05:15/external/roslyn-binaries \
 		mono:rx:b29a4b0:11/external/rx
-
-USES=		autoreconf bison compiler:c11 cpe gettext gmake iconv libtool pathfix \
-		perl5 python shebangfix tar:bzip2
-USE_GNOME=	glib20
-USE_PERL5=	build
-GNU_CONFIGURE=	yes
-USE_LDCONFIG=	yes
-LLD_UNSAFE=	yes
-SHEBANG_FILES=	scripts/mono-heapviz
 
 CONFIGURE_ARGS=	--disable-dtrace
 CONFIGURE_ENV=	ac_cv_header_sys_inotify_h=no
@@ -103,7 +105,6 @@ post-patch:
 		${WRKSRC}/man/mono-configuration-crypto.1 \
 		${WRKSRC}/man/mono.1 \
 		${WRKSRC}/man/mozroots.1
-
 
 post-patch-ACCEPTANCE_TESTS-on:
 	${REINPLACE_CMD} -E -e 's!(~/|/tmp/)!${WRKDIR}/!g' -e '/git clean/d' \
