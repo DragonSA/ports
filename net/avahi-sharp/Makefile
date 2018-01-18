@@ -1,7 +1,7 @@
 # Created by: Tom McLaughlin <tmclaugh@FreeBSD.org>
 # $FreeBSD: head/net/avahi-sharp/Makefile 412348 2016-04-01 14:16:16Z mat $
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	net dns
 PKGNAMESUFFIX=	-sharp
 

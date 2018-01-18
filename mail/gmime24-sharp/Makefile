@@ -1,7 +1,7 @@
 # Created by: Tom McLaughlin <tmclaugh@sdf.lonestar.org>
 # $FreeBSD: head/mail/gmime24-sharp/Makefile 412348 2016-04-01 14:16:16Z mat $
 
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	mail
 PKGNAMESUFFIX=	24-sharp
 

@@ -3,7 +3,7 @@
 
 PORTNAME=	gnome-keyring-sharp
 PORTVERSION=	1.0.2
-PORTREVISION=	4
+PORTREVISION=	5
 CATEGORIES=	security
 MASTER_SITES=	http://www.go-mono.com/archive/${PORTNAME}/
 
