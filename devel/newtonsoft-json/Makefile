@@ -23,7 +23,7 @@ NO_ARCH=	yes
 
 PLIST_FILES=	lib/mono/Newtonsoft.Json/Newtonsoft.Json.dll \
 		lib/mono/gac/Newtonsoft.Json/7.0.0.0__b9a188c8922137c6/Newtonsoft.Json.dll \
-		lib/mono/gac/Newtonsoft.Json/7.0.0.0__b9a188c8922137c6/Newtonsoft.Json.dll.mdb \
+		lib/mono/gac/Newtonsoft.Json/7.0.0.0__b9a188c8922137c6/Newtonsoft.Json.dll.pdb \
 		libdata/pkgconfig/Newtonsoft.Json.pc
 
 do-build:
