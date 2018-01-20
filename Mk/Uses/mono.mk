@@ -106,6 +106,7 @@ nupkg=		${id:tl}.${version}.nupkg
 DISTFILES_${group}:=	${nupkg}:${group}
 MASTER_SITES_${group}:=	${${feed}_URL}package/${id}/${version}?dummy=/:${group}
 NUGET_NUPKGS_${group}:=	${nupkg}:${depend}
+NUPKGS_${id}:=	${NUPKGS_${id}} ${version}
 
 DISTFILES+=	${DISTFILES_nuget_${depend:S/.//g:S/-//g:S/=//g}}
 MASTER_SITES+=	${MASTER_SITES_nuget_${depend:S/.//g:S/-//g:S/=//g}}
@@ -121,7 +122,12 @@ _USES_extract+=	600:nuget-extract
 nuget-extract:
 	@${MKDIR} ${_NUGET_PACKAGEDIR} ${PAKET_PACKAGEDIR}
 . for nupkg in ${NUGET_NUPKGS}
+.  if !empty(NUPKGS_${nupkg:C/^.*://:C/=.*//}:[2])
 	@${MKDIR} ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S|=|/|}
+.  else
+	@${MKDIR} ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:C/=.*//}
+	@${LN} -s ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:C/=.*//} ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S|=|/|}
+.  endif
 	@tar -xf ${DISTDIR}/${nupkg:C/:.*$//} -C ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S|=|/|} \
 		-s/%2B/\+/g -s/%2B/\+/g -s/%2B/\+/g \
 		--exclude '\[Content_Types\].xml' \
