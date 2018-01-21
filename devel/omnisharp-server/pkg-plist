@@ -18,7 +18,7 @@
 %%DATADIR%%/bin/Release/Nancy.dll
 %%DATADIR%%/bin/Release/OmniSharp.exe
 %%DATADIR%%/bin/Release/OmniSharp.exe.config
-%%DATADIR%%/bin/Release/OmniSharp.exe.pdb
+%%DATADIR%%/bin/Release/OmniSharp.pdb
 %%DATADIR%%/bin/Release/Swagger.ObjectModel.dll
 %%DATADIR%%/bin/Release/System.IO.Abstractions.dll
 %%DATADIR%%/bin/Release/config.json

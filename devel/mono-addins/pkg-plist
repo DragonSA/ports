@@ -1,4 +1,4 @@
-in/mautil
+bin/mautil
 lib/mono/gac/Mono.Addins.CecilReflector/%%VER%%.0__0738eb9f132ed756/Mono.Addins.CecilReflector.dll
 lib/mono/gac/Mono.Addins.CecilReflector/%%VER%%.0__0738eb9f132ed756/Mono.Addins.CecilReflector.pdb
 %%GTK2%%lib/mono/gac/Mono.Addins.Gui/%%VER%%.0__0738eb9f132ed756/Mono.Addins.Gui.dll
