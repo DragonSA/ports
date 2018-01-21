@@ -1,4 +1,4 @@
-# $FreeBSD: head/math/Makefile 457787 2018-01-01 17:11:44Z yuri $
+# $FreeBSD: head/math/Makefile 459245 2018-01-17 13:15:36Z jmd $
 #
 
     COMMENT = Mathematics
@@ -660,6 +660,7 @@
     SUBDIR += py-patsy
     SUBDIR += py-plastex
     SUBDIR += py-probstat
+    SUBDIR += py-pyasp
     SUBDIR += py-pybloom
     SUBDIR += py-pycosat
     SUBDIR += py-pyhull
@@ -736,6 +737,7 @@
     SUBDIR += symmetrica
     SUBDIR += tablix
     SUBDIR += taucs
+    SUBDIR += tblis
     SUBDIR += testu01
     SUBDIR += tetgen
     SUBDIR += timbl

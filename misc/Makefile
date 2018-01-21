@@ -1,4 +1,4 @@
-# $FreeBSD: head/misc/Makefile 457921 2018-01-02 20:21:34Z rakuco $
+# $FreeBSD: head/misc/Makefile 458940 2018-01-13 20:36:29Z mmokhi $
 #
 
     COMMENT = Miscellaneous utilities
@@ -38,8 +38,8 @@
     SUBDIR += chmlib
     SUBDIR += chord2html
     SUBDIR += cinnamon-translations
-    SUBDIR += clex
     SUBDIR += cldr-emoji-annotation
+    SUBDIR += clex
     SUBDIR += cloc
     SUBDIR += clpbar
     SUBDIR += cmatrix
@@ -249,8 +249,10 @@
     SUBDIR += libeatmydata
     SUBDIR += libisocodes
     SUBDIR += libkdeedu
+    SUBDIR += liblxi
     SUBDIR += libmetalink
     SUBDIR += libpostal
+    SUBDIR += libpredict
     SUBDIR += libpri
     SUBDIR += libsupertone
     SUBDIR += libutf
@@ -262,6 +264,7 @@
     SUBDIR += loop
     SUBDIR += lv
     SUBDIR += lxde-common
+    SUBDIR += lxi-tools
     SUBDIR += magicpoint
     SUBDIR += man.el
     SUBDIR += mbuffer
@@ -373,6 +376,7 @@
     SUBDIR += phraze
     SUBDIR += pinfo
     SUBDIR += pipe
+    SUBDIR += pnpids
     SUBDIR += podsleuth
     SUBDIR += posixtestsuite
     SUBDIR += proxyper
@@ -435,6 +439,7 @@
     SUBDIR += rubygem-rabbit
     SUBDIR += rubygem-vpim
     SUBDIR += rump
+    SUBDIR += rumprun
     SUBDIR += saaghar
     SUBDIR += seabios
     SUBDIR += sent
@@ -465,6 +470,7 @@
     SUBDIR += tempcontrol
     SUBDIR += termatrix
     SUBDIR += teseq
+    SUBDIR += thefuck
     SUBDIR += timediff
     SUBDIR += tkcron
     SUBDIR += tkinfo

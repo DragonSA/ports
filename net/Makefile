@@ -1,5 +1,4 @@
-
-# $FreeBSD: head/net/Makefile 457788 2018-01-01 17:47:07Z danilo $
+# $FreeBSD: head/net/Makefile 459179 2018-01-16 14:58:51Z tobik $
 #
 
     COMMENT = Networking tools
@@ -285,6 +284,9 @@
     SUBDIR += isc-dhcp43-client
     SUBDIR += isc-dhcp43-relay
     SUBDIR += isc-dhcp43-server
+    SUBDIR += isc-dhcp44-client
+    SUBDIR += isc-dhcp44-relay
+    SUBDIR += isc-dhcp44-server
     SUBDIR += istgt
     SUBDIR += jags
     SUBDIR += jakarta-commons-net
@@ -1393,8 +1395,8 @@
     SUBDIR += toonel
     SUBDIR += torsocks
     SUBDIR += traceroute
-    SUBDIR += traff
     SUBDIR += traefik
+    SUBDIR += traff
     SUBDIR += trafshow
     SUBDIR += trafshow3
     SUBDIR += tramp
@@ -1418,7 +1420,6 @@
     SUBDIR += unfs3
     SUBDIR += unison
     SUBDIR += unison-devel
-    SUBDIR += unison-nox11
     SUBDIR += unison232
     SUBDIR += unison240
     SUBDIR += unix2tcp

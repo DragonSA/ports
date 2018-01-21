@@ -1,4 +1,4 @@
-# $FreeBSD: head/deskutils/Makefile 457422 2017-12-27 20:39:02Z jrm $
+# $FreeBSD: head/deskutils/Makefile 459530 2018-01-20 17:37:21Z novel $
 #
 
     COMMENT = Things that used to be on the desktop before computers were invented
@@ -128,8 +128,8 @@
     SUBDIR += kdeplasma-addons
     SUBDIR += kruler
     SUBDIR += ksshaskpass
-    SUBDIR += launchy
     SUBDIR += latte-dock
+    SUBDIR += launchy
     SUBDIR += libopensync-plugin-vformat-devel
     SUBDIR += libstreamanalyzer
     SUBDIR += libstreams
@@ -202,7 +202,6 @@
     SUBDIR += py-pycarddav
     SUBDIR += py-pystash
     SUBDIR += py-send2trash
-    SUBDIR += py-spice-gtk
     SUBDIR += py-taskw
     SUBDIR += py-vdirsyncer
     SUBDIR += py-vobject

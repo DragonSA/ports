@@ -1,4 +1,4 @@
-# $FreeBSD: head/archivers/Makefile 457366 2017-12-27 13:17:17Z antoine $
+# $FreeBSD: head/archivers/Makefile 459130 2018-01-15 22:17:34Z yuri $
 #
 
     COMMENT = Archivers
@@ -65,6 +65,7 @@
     SUBDIR += libarchive
     SUBDIR += libcabinet
     SUBDIR += libcomprex
+    SUBDIR += libdeflate
     SUBDIR += libdynamite
     SUBDIR += liblz4
     SUBDIR += liblzxcomp
@@ -190,6 +191,8 @@
     SUBDIR += py-rjsmin
     SUBDIR += py-warctools
     SUBDIR += py-xopen
+    SUBDIR += py-zstandard
+    SUBDIR += py-zstd
     SUBDIR += qpress
     SUBDIR += quazip
     SUBDIR += quazip-qt5

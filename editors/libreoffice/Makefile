@@ -1,8 +1,8 @@
-# $FreeBSD: head/editors/libreoffice/Makefile 457068 2017-12-23 16:40:53Z tijl $
+# $FreeBSD: head/editors/libreoffice/Makefile 459315 2018-01-18 04:11:02Z jbeich $
 
 .include "${.CURDIR}/Makefile.common"
 
-PORTREVISION=	2
+PORTREVISION=	4
 MASTER_SITES=	http://download.documentfoundation.org/libreoffice/src/${PORTVERSION}/ \
 		http://dev-www.libreoffice.org/src/:src \
 		http://dev-www.libreoffice.org/extern/:ext
@@ -32,7 +32,7 @@ LIB_DEPENDS=	libapr-1.so:devel/apr1 \
 		libboost_date_time.so:devel/boost-libs \
 		libicutu.so:devel/icu \
 		liblangtag.so:devel/liblangtag \
-		liborcus-0.12.so:devel/liborcus \
+		liborcus-0.13.so:devel/liborcus \
 		libcurl.so:ftp/curl \
 		libcairo.so:graphics/cairo \
 		libgraphite2.so:graphics/graphite2 \

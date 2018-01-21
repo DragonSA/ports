@@ -1,5 +1,5 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
-# $FreeBSD: head/x11-toolkits/py-kivy/Makefile 458231 2018-01-06 07:59:20Z dbn $
+# $FreeBSD: head/x11-toolkits/py-kivy/Makefile 458236 2018-01-06 09:17:39Z antoine $
 
 PORTNAME=	kivy
 PORTVERSION=	1.10.0
@@ -21,7 +21,7 @@ TEST_DEPENDS=	nosetests-${PYTHON_VER}:devel/py-nose@${FLAVOR}
 MAKE_ENV=	KIVY_NO_CONFIG=yes KIVY_NO_FILELOG=yes USE_OPENGL_ES2=1 \
 		PYTHONPATH=${WRKSRC}
 
-USES=		display:test python:2.7+ uniquefiles:dirs
+USES=		display:test python:2.7 uniquefiles:dirs
 USE_GITHUB=	yes
 USE_GL=		egl gl glesv2
 USE_PYTHON=	autoplist concurrent cython distutils
