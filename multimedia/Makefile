@@ -1,4 +1,4 @@
-# $FreeBSD: head/multimedia/Makefile 456215 2017-12-13 16:00:37Z tobik $
+# $FreeBSD: head/multimedia/Makefile 460326 2018-01-29 19:21:21Z yuri $
 #
 
     COMMENT = Multimedia software
@@ -25,7 +25,7 @@
     SUBDIR += baka-mplayer
     SUBDIR += bino
     SUBDIR += bitstream
-    SUBDIR += bombono
+    SUBDIR += blind
     SUBDIR += bsdbktr_tvtune
     SUBDIR += camserv
     SUBDIR += ccextractor
@@ -206,7 +206,6 @@
     SUBDIR += libquvi-scripts
     SUBDIR += libquvi-scripts09
     SUBDIR += libquvi09
-    SUBDIR += librespot
     SUBDIR += librtmp
     SUBDIR += libsmacker
     SUBDIR += libtheora

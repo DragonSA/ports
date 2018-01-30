@@ -1,4 +1,4 @@
-# $FreeBSD: head/graphics/Makefile 459457 2018-01-19 18:37:39Z rene $
+# $FreeBSD: head/graphics/Makefile 460064 2018-01-26 23:54:45Z yuri $
 #
 
     COMMENT = Graphics tools and libraries
@@ -379,6 +379,7 @@
     SUBDIR += impressive
     SUBDIR += imv
     SUBDIR += inkscape
+    SUBDIR += instant-meshes
     SUBDIR += intel-backlight
     SUBDIR += intergif
     SUBDIR += inventor
@@ -918,6 +919,7 @@
     SUBDIR += py-traitsui
     SUBDIR += py-wand
     SUBDIR += py-webcolors
+    SUBDIR += py-yaswfp
     SUBDIR += pygts
     SUBDIR += pymorph
     SUBDIR += pysvg

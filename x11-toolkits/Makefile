@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11-toolkits/Makefile 458486 2018-01-08 21:59:15Z rakuco $
+# $FreeBSD: head/x11-toolkits/Makefile 460250 2018-01-29 09:27:03Z bapt $
 #
 
     COMMENT = X11 toolkits
@@ -129,6 +129,7 @@
     SUBDIR += mygui-dummy
     SUBDIR += mygui-ogre
     SUBDIR += mygui-opengl
+    SUBDIR += nanogui
     SUBDIR += neXtaw
     SUBDIR += ntk
     SUBDIR += nucleo
