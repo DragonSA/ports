@@ -1,4 +1,4 @@
-# $FreeBSD: head/editors/Makefile 458784 2018-01-11 20:29:52Z adamw $
+# $FreeBSD: head/editors/Makefile 460561 2018-02-01 07:18:26Z acm $
 #
 
     COMMENT = Editors
@@ -77,6 +77,7 @@
     SUBDIR += lazarus-lcl-gtk2
     SUBDIR += lazarus-lcl-nogui
     SUBDIR += lazarus-lcl-qt
+    SUBDIR += lazarus-lcl-qt5
     SUBDIR += lazarus-lcl-units
     SUBDIR += le
     SUBDIR += leafpad

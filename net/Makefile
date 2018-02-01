@@ -1,4 +1,4 @@
-# $FreeBSD: head/net/Makefile 460314 2018-01-29 16:17:45Z yuri $
+# $FreeBSD: head/net/Makefile 460505 2018-01-31 16:42:01Z sunpoet $
 #
 
     COMMENT = Networking tools
@@ -1377,7 +1377,6 @@
     SUBDIR += tcptestsuite
     SUBDIR += tcptrace
     SUBDIR += tcptraceroute
-    SUBDIR += tcptraceroute-devel
     SUBDIR += tcpview
     SUBDIR += tcpwatch
     SUBDIR += tcpxd
