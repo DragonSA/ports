@@ -17,7 +17,7 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 ONLY_FOR_ARCHS=	amd64
 
 USES=		linux:c7
-USE_LINUX=	curl libicu libunwind lttng-ust openssl
+USE_LINUX=	curl icu libunwind lttng-ust openssl
 
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
