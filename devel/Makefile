@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/Makefile 461188 2018-02-07 21:43:29Z amdmi3 $
+# $FreeBSD: head/devel/Makefile 461243 2018-02-08 15:11:50Z dbn $
 #
 
     COMMENT = Development utilities
@@ -361,7 +361,6 @@
     SUBDIR += cram
     SUBDIR += creduce
     SUBDIR += critcl
-    SUBDIR += cs-eric6
     SUBDIR += cscope
     SUBDIR += cscout
     SUBDIR += csmith
@@ -1214,7 +1213,6 @@
     SUBDIR += isa-l
     SUBDIR += isl
     SUBDIR += ispc
-    SUBDIR += it-eric6
     SUBDIR += itext
     SUBDIR += ivykis
     SUBDIR += iz
@@ -6013,7 +6011,6 @@
     SUBDIR += tokei
     SUBDIR += tortoisehg
     SUBDIR += tpasm
-    SUBDIR += tr-eric6
     SUBDIR += trac-bitten
     SUBDIR += tradcpp
     SUBDIR += trio
