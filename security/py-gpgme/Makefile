@@ -1,6 +1,6 @@
-# $FreeBSD: head/security/py-gpgme/Makefile 427185 2016-11-26 23:41:16Z jhale $
+# $FreeBSD: head/security/py-gpgme/Makefile 461063 2018-02-06 15:18:23Z jhale $
 
-PORTREVISION=	0
+PORTREVISION=	1
 CATEGORIES=	security python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 

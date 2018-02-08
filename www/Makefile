@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/Makefile 460558 2018-02-01 07:14:41Z acm $
+# $FreeBSD: head/www/Makefile 460678 2018-02-02 08:50:34Z olivier $
 #
 
     COMMENT = Ports related to the World Wide Web
@@ -395,6 +395,8 @@
     SUBDIR += man2web
     SUBDIR += mathjax
     SUBDIR += mathopd
+    SUBDIR += mattermost-server
+    SUBDIR += mattermost-webapp
     SUBDIR += mediawiki123
     SUBDIR += mediawiki127
     SUBDIR += mediawiki128

@@ -1,4 +1,4 @@
-# $FreeBSD: head/editors/Makefile 460561 2018-02-01 07:18:26Z acm $
+# $FreeBSD: head/editors/Makefile 460621 2018-02-01 18:03:09Z jrm $
 #
 
     COMMENT = Editors
@@ -36,7 +36,6 @@
     SUBDIR += editorconfig-core-c
     SUBDIR += emacs
     SUBDIR += emacs-devel
-    SUBDIR += emacs-nox11
     SUBDIR += encryptpad
     SUBDIR += fileobj
     SUBDIR += flim
