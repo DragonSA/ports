@@ -1,4 +1,4 @@
-# $FreeBSD: head/audio/Makefile 460952 2018-02-04 22:33:06Z yuri $
+# $FreeBSD: head/audio/Makefile 463444 2018-03-02 19:10:48Z rene $
 #
 
     COMMENT = Audio tools
@@ -25,7 +25,6 @@
     SUBDIR += alure
     SUBDIR += amarok-kde4
     SUBDIR += amb-plugins
-    SUBDIR += amp
     SUBDIR += ample
     SUBDIR += amsynth
     SUBDIR += aqualung
@@ -237,6 +236,7 @@
     SUBDIR += goobox
     SUBDIR += gqmpeg
     SUBDIR += gqradio
+    SUBDIR += gradio
     SUBDIR += gramofile
     SUBDIR += grip
     SUBDIR += gsm
@@ -353,7 +353,7 @@
     SUBDIR += jid3lib
     SUBDIR += jmusic
     SUBDIR += jokosher
-    SUBDIR += juk
+    SUBDIR += juk-kde4
     SUBDIR += juke
     SUBDIR += julius
     SUBDIR += jxm
@@ -362,9 +362,9 @@
     SUBDIR += kid3-kde4
     SUBDIR += kid3-qt4
     SUBDIR += kid3-qt5
-    SUBDIR += kio-audiocd
-    SUBDIR += kmix
-    SUBDIR += kscd
+    SUBDIR += kio-audiocd-kde4
+    SUBDIR += kmix-kde4
+    SUBDIR += kscd-kde4
     SUBDIR += ksmp3play
     SUBDIR += kstreamripper
     SUBDIR += ladspa
@@ -401,8 +401,8 @@
     SUBDIR += libgpod-sharp
     SUBDIR += libgroove
     SUBDIR += libid3tag
-    SUBDIR += libkcddb
-    SUBDIR += libkcompactdisc
+    SUBDIR += libkcddb-kde4
+    SUBDIR += libkcompactdisc-kde4
     SUBDIR += liblastfm
     SUBDIR += liblo
     SUBDIR += liblscp
@@ -418,6 +418,7 @@
     SUBDIR += libmusicbrainz3
     SUBDIR += libmusicbrainz5
     SUBDIR += libmusicxml
+    SUBDIR += libmysofa
     SUBDIR += libnjb
     SUBDIR += libnoise
     SUBDIR += libogg
@@ -509,6 +510,7 @@
     SUBDIR += mma
     SUBDIR += moc
     SUBDIR += modplugplay
+    SUBDIR += moodbar
     SUBDIR += moony-lv2
     SUBDIR += mous
     SUBDIR += mp-player
@@ -633,6 +635,7 @@
     SUBDIR += penguinsap
     SUBDIR += pianobar
     SUBDIR += picard
+    SUBDIR += picard-plugins
     SUBDIR += pithos
     SUBDIR += play
     SUBDIR += playgsf
@@ -649,6 +652,7 @@
     SUBDIR += puddletag
     SUBDIR += pulseaudio
     SUBDIR += pulseaudio-module-sndio
+    SUBDIR += py-SoundFile
     SUBDIR += py-al
     SUBDIR += py-ao
     SUBDIR += py-apetag

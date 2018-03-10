@@ -1,4 +1,4 @@
-# $FreeBSD: head/archivers/Makefile 459130 2018-01-15 22:17:34Z yuri $
+# $FreeBSD: head/archivers/Makefile 462619 2018-02-22 19:03:17Z tcberner $
 #
 
     COMMENT = Archivers
@@ -8,7 +8,7 @@
     SUBDIR += amigadepacker
     SUBDIR += arc
     SUBDIR += arj
-    SUBDIR += ark
+    SUBDIR += ark-kde4
     SUBDIR += atool
     SUBDIR += bicom
     SUBDIR += brotli
@@ -105,6 +105,7 @@
     SUBDIR += p5-Archive-Rar
     SUBDIR += p5-Archive-SimpleExtractor
     SUBDIR += p5-Archive-Tar
+    SUBDIR += p5-Archive-Tar-Wrapper
     SUBDIR += p5-Archive-Zip
     SUBDIR += p5-Compress-Bzip2
     SUBDIR += p5-Compress-LZ4

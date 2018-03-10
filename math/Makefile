@@ -1,4 +1,4 @@
-# $FreeBSD: head/math/Makefile 460848 2018-02-03 20:59:14Z yuri $
+# $FreeBSD: head/math/Makefile 463934 2018-03-09 07:05:03Z yuri $
 #
 
     COMMENT = Mathematics
@@ -36,6 +36,7 @@
     SUBDIR += R-cran-car
     SUBDIR += R-cran-coda
     SUBDIR += R-cran-combinat
+    SUBDIR += R-cran-conf.design
     SUBDIR += R-cran-ddalpha
     SUBDIR += R-cran-deldir
     SUBDIR += R-cran-dimRed
@@ -106,7 +107,7 @@
     SUBDIR += alt-ergo
     SUBDIR += amath
     SUBDIR += ambit
-    SUBDIR += analitza
+    SUBDIR += analitza-kde4
     SUBDIR += ann
     SUBDIR += apc
     SUBDIR += aribas
@@ -129,14 +130,13 @@
     SUBDIR += calc
     SUBDIR += calcoo
     SUBDIR += calctool
-    SUBDIR += cantor
+    SUBDIR += cantor-kde4
     SUBDIR += cblas
     SUBDIR += ccmath
     SUBDIR += ceres-solver
     SUBDIR += cgal
     SUBDIR += chaco
     SUBDIR += chryzodus
-    SUBDIR += clarence
     SUBDIR += clasp
     SUBDIR += clblas
     SUBDIR += clblast
@@ -263,12 +263,12 @@
     SUBDIR += jsmath-fonts
     SUBDIR += jtransforms
     SUBDIR += jts
-    SUBDIR += kalgebra
-    SUBDIR += kbruch
-    SUBDIR += kcalc
-    SUBDIR += kig
+    SUBDIR += kalgebra-kde4
+    SUBDIR += kbruch-kde4
+    SUBDIR += kcalc-kde4
+    SUBDIR += kig-kde4
     SUBDIR += kktdirect
-    SUBDIR += kmplot
+    SUBDIR += kmplot-kde4
     SUBDIR += labplot
     SUBDIR += lambda
     SUBDIR += lapack
@@ -397,7 +397,6 @@
     SUBDIR += octave-forge-nurbs
     SUBDIR += octave-forge-ocs
     SUBDIR += octave-forge-oct2mat
-    SUBDIR += octave-forge-octcdf
     SUBDIR += octave-forge-octclip
     SUBDIR += octave-forge-octproj
     SUBDIR += octave-forge-odebvp
@@ -409,7 +408,6 @@
     SUBDIR += octave-forge-parallel
     SUBDIR += octave-forge-pdb
     SUBDIR += octave-forge-plot
-    SUBDIR += octave-forge-pt_br
     SUBDIR += octave-forge-quaternion
     SUBDIR += octave-forge-queueing
     SUBDIR += octave-forge-secs1d
@@ -657,6 +655,7 @@
     SUBDIR += py-numpy
     SUBDIR += py-nzmath
     SUBDIR += py-pandas
+    SUBDIR += py-pandas-datareader
     SUBDIR += py-patsy
     SUBDIR += py-plastex
     SUBDIR += py-probstat
@@ -669,6 +668,7 @@
     SUBDIR += py-pyvtk
     SUBDIR += py-roman
     SUBDIR += py-scientific
+    SUBDIR += py-seaborn
     SUBDIR += py-statsmodels
     SUBDIR += py-svgmath
     SUBDIR += py-symeig
@@ -689,11 +689,12 @@
     SUBDIR += randlib
     SUBDIR += rapid
     SUBDIR += reduce
+    SUBDIR += reduce-psl
     SUBDIR += reed-solomon
     SUBDIR += rexx-regmath
     SUBDIR += rkward-kde4
     SUBDIR += rngstreams
-    SUBDIR += rocs
+    SUBDIR += rocs-kde4
     SUBDIR += rpcalc
     SUBDIR += rpy
     SUBDIR += rpy2
@@ -749,7 +750,6 @@
     SUBDIR += trlan
     SUBDIR += truthtable
     SUBDIR += tvmet
-    SUBDIR += ufc
     SUBDIR += ump
     SUBDIR += units
     SUBDIR += unuran

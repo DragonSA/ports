@@ -1,4 +1,4 @@
-# $FreeBSD: head/sysutils/Makefile 460532 2018-01-31 21:03:35Z tijl $
+# $FreeBSD: head/sysutils/Makefile 464060 2018-03-10 10:14:17Z eugen $
 #
 
     COMMENT = System utilities
@@ -49,6 +49,7 @@
     SUBDIR += areca-cli
     SUBDIR += ascpu
     SUBDIR += asfsm
+    SUBDIR += asmctl
     SUBDIR += asmem
     SUBDIR += asmon
     SUBDIR += asusoled
@@ -79,8 +80,8 @@
     SUBDIR += bacula9-client-static
     SUBDIR += bacula9-docs
     SUBDIR += bacula9-server
-    SUBDIR += baloo
-    SUBDIR += baloo-widgets
+    SUBDIR += baloo-kde4
+    SUBDIR += baloo-widgets-kde4
     SUBDIR += bamf
     SUBDIR += bareos-bat
     SUBDIR += bareos-client
@@ -200,6 +201,7 @@
     SUBDIR += cpuburn
     SUBDIR += cpuid
     SUBDIR += cpulimit
+    SUBDIR += cpupdate
     SUBDIR += cramfs
     SUBDIR += crashme
     SUBDIR += createrepo
@@ -371,6 +373,7 @@
     SUBDIR += fusefs-mhddfs
     SUBDIR += fusefs-mp3fs
     SUBDIR += fusefs-ntfs
+    SUBDIR += fusefs-ntfs-compression
     SUBDIR += fusefs-pod
     SUBDIR += fusefs-rar2fs
     SUBDIR += fusefs-s3fs
@@ -381,6 +384,7 @@
     SUBDIR += fusefs-sshfs
     SUBDIR += fusefs-unionfs
     SUBDIR += fusefs-wdfs
+    SUBDIR += fusefs-webdavfs
     SUBDIR += fusefs-wikipediafs
     SUBDIR += fusefs-zip
     SUBDIR += fvcool
@@ -400,6 +404,7 @@
     SUBDIR += geomWatch
     SUBDIR += getdelta
     SUBDIR += geteltorito
+    SUBDIR += getssl
     SUBDIR += gigolo
     SUBDIR += gkfreq
     SUBDIR += gkleds2
@@ -522,24 +527,24 @@
     SUBDIR += k3b-kde4
     SUBDIR += k8temp
     SUBDIR += kcm-polkit-kde
-    SUBDIR += kcron
-    SUBDIR += kdeadmin4
-    SUBDIR += kdf
+    SUBDIR += kcron-kde4
+    SUBDIR += kdeadmin-kde4
+    SUBDIR += kdf-kde4
     SUBDIR += kdirstat
     SUBDIR += keyboard-daemon
     SUBDIR += kf5-baloo
     SUBDIR += kf5-kwallet
-    SUBDIR += kfilemetadata
-    SUBDIR += kfloppy
+    SUBDIR += kfilemetadata-kde4
+    SUBDIR += kfloppy-kde4
     SUBDIR += kiconvtool
     SUBDIR += kldfind
     SUBDIR += kldpatch
     SUBDIR += knutclient-kde4
-    SUBDIR += krename-kde4
+    SUBDIR += krename
     SUBDIR += kshutdown-kde4
-    SUBDIR += ksysguardd
-    SUBDIR += ksystemlog
-    SUBDIR += kuser
+    SUBDIR += ksysguardd-kde4
+    SUBDIR += ksystemlog-kde4
+    SUBDIR += kuser-kde4
     SUBDIR += lava
     SUBDIR += lbl-cf
     SUBDIR += lbl-hf
@@ -575,12 +580,14 @@
     SUBDIR += lmmon
     SUBDIR += lmon
     SUBDIR += lnav
+    SUBDIR += lockfile-progs
     SUBDIR += log_analysis
     SUBDIR += logrotate
     SUBDIR += logstalgia
     SUBDIR += logstash
     SUBDIR += logstash-forwarder
     SUBDIR += logstash5
+    SUBDIR += logstash6
     SUBDIR += logtool
     SUBDIR += logwatch
     SUBDIR += lookat
@@ -695,8 +702,8 @@
     SUBDIR += ncdu
     SUBDIR += ndmpd
     SUBDIR += neofetch
-    SUBDIR += nepomuk-core
-    SUBDIR += nepomuk-widgets
+    SUBDIR += nepomuk-core-kde4
+    SUBDIR += nepomuk-widgets-kde4
     SUBDIR += nfcutils
     SUBDIR += nfsping
     SUBDIR += nitrogen
@@ -848,6 +855,7 @@
     SUBDIR += php71-posix
     SUBDIR += php72-fileinfo
     SUBDIR += php72-posix
+    SUBDIR += phpfpm_exporter
     SUBDIR += phybs
     SUBDIR += pick
     SUBDIR += pidof
@@ -999,7 +1007,6 @@
     SUBDIR += rtty
     SUBDIR += rubygem-backup
     SUBDIR += rubygem-bosh-gen
-    SUBDIR += rubygem-bosh_cli
     SUBDIR += rubygem-bundler
     SUBDIR += rubygem-bundler_ext
     SUBDIR += rubygem-capistrano
@@ -1073,6 +1080,7 @@
     SUBDIR += rubygem-yell
     SUBDIR += rundeck
     SUBDIR += runit
+    SUBDIR += runit-faster
     SUBDIR += runwhen
     SUBDIR += s6
     SUBDIR += s6-rc
@@ -1126,6 +1134,7 @@
     SUBDIR += smenu
     SUBDIR += smp_utils
     SUBDIR += snap
+    SUBDIR += snmp_exporter
     SUBDIR += snooze
     SUBDIR += snowlog
     SUBDIR += socket
@@ -1150,7 +1159,7 @@
     SUBDIR += swapd
     SUBDIR += swapexd
     SUBDIR += swapmon
-    SUBDIR += sweeper
+    SUBDIR += sweeper-kde4
     SUBDIR += symlinks
     SUBDIR += symon
     SUBDIR += synergy
@@ -1165,6 +1174,7 @@
     SUBDIR += syslog-ng311
     SUBDIR += syslog-ng312
     SUBDIR += syslog-ng313
+    SUBDIR += syslog-ng314
     SUBDIR += syslog-ng36
     SUBDIR += syslog-ng37
     SUBDIR += syslog-ng39
@@ -1232,6 +1242,7 @@
     SUBDIR += u-boot-olimex-a20-som-evb
     SUBDIR += u-boot-olinuxino-lime
     SUBDIR += u-boot-orangepi-one
+    SUBDIR += u-boot-orangepi-pc
     SUBDIR += u-boot-orangepi-pc2
     SUBDIR += u-boot-orangepi-plus-2e
     SUBDIR += u-boot-orangepi-zero

@@ -1,12 +1,12 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-# $FreeBSD: head/emulators/wine/Makefile 460080 2018-01-27 09:37:41Z gerald $
+# $FreeBSD: head/emulators/wine/Makefile 462264 2018-02-18 20:45:07Z gerald $
 
 PORTNAME=	wine
 DISTVERSION=	3.0
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/Source \
-		http://ibiblio.org/pub/linux/system/emulators/wine/
+		http://mirrors.ibiblio.org/wine/source/3.0/
 
 MAINTAINER?=	gerald@FreeBSD.org
 COMMENT?=	Microsoft Windows compatibility environment
@@ -108,7 +108,7 @@ X11_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 .include <bsd.port.pre.mk>
 
 # PR224863: clang 6.0.0 crashes
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1200056 && ${ARCH} == amd64
+.if ${OPSYS} == FreeBSD && ${OSVERSION} == 1200056 && ${ARCH} == amd64
 USE_GCC=	yes
 .endif
 

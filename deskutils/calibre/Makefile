@@ -1,8 +1,8 @@
 # Created by: stas
-# $FreeBSD: head/deskutils/calibre/Makefile 460003 2018-01-26 15:02:10Z madpilot $
+# $FreeBSD: head/deskutils/calibre/Makefile 464008 2018-03-09 21:04:18Z madpilot $
 
 PORTNAME=	calibre
-PORTVERSION=	3.16.0
+PORTVERSION=	3.19.0
 CATEGORIES=	deskutils python
 MASTER_SITES=	http://download.calibre-ebook.com/${PORTVERSION}/
 
@@ -48,7 +48,7 @@ RUN_DEPENDS=	xdg-open:devel/xdg-utils \
 		pdftohtml:graphics/poppler-utils
 
 USES=		desktop-file-utils gettext-runtime gnome localbase:ldflags pkgconfig \
-		python:2 pyqt:5 shared-mime-info shebangfix ssl tar:xz
+		python:2.7 pyqt:5 shared-mime-info shebangfix ssl tar:xz
 USE_RC_SUBR=	calibre
 EXTRACT_BEFORE_ARGS=	-x -s '/^calibre/~-src/' -f
 SHEBANG_GLOB=	*.sh *.py

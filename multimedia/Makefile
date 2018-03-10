@@ -1,4 +1,4 @@
-# $FreeBSD: head/multimedia/Makefile 460326 2018-01-29 19:21:21Z yuri $
+# $FreeBSD: head/multimedia/Makefile 463596 2018-03-04 19:11:34Z yuri $
 #
 
     COMMENT = Multimedia software
@@ -41,7 +41,7 @@
     SUBDIR += deforaos-player
     SUBDIR += devede
     SUBDIR += dirac
-    SUBDIR += dragon
+    SUBDIR += dragon-kde4
     SUBDIR += dtv-scan-tables
     SUBDIR += dumpmpeg
     SUBDIR += dv2jpg
@@ -157,15 +157,16 @@
     SUBDIR += gtk-youtube-viewer
     SUBDIR += gxine
     SUBDIR += handbrake
+    SUBDIR += harvid
     SUBDIR += imagination
     SUBDIR += iriverter
     SUBDIR += iso2mkv
     SUBDIR += jmref
     SUBDIR += k9copy-kde4
     SUBDIR += kaffeine
-    SUBDIR += kdemultimedia4
-    SUBDIR += kdemultimedia4-ffmpegthumbs
-    SUBDIR += kdemultimedia4-mplayerthumbs
+    SUBDIR += kdemultimedia-kde4
+    SUBDIR += kdemultimedia-ffmpegthumbs-kde4
+    SUBDIR += kdemultimedia-mplayerthumbs-kde4
     SUBDIR += kdenlive
     SUBDIR += kf5-kmediaplayer
     SUBDIR += kissdx
@@ -277,6 +278,7 @@
     SUBDIR += mythtv-frontend
     SUBDIR += naludump
     SUBDIR += nordlicht
+    SUBDIR += nostt
     SUBDIR += obs-studio
     SUBDIR += oggvideotools
     SUBDIR += ogmrip

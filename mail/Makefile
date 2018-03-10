@@ -1,4 +1,4 @@
-# $FreeBSD: head/mail/Makefile 460376 2018-01-30 09:10:30Z jrm $
+# $FreeBSD: head/mail/Makefile 463108 2018-02-27 05:01:28Z fluffy $
 #
 
     COMMENT = Electronic mail utilities
@@ -274,6 +274,8 @@
     SUBDIR += nohtml
     SUBDIR += normalizemime
     SUBDIR += notmuch
+    SUBDIR += notmuch-emacs
+    SUBDIR += notmuch-mutt
     SUBDIR += nullmailer
     SUBDIR += nullpop
     SUBDIR += offlineimap
@@ -625,6 +627,7 @@
     SUBDIR += rubygem-pony
     SUBDIR += rubygem-premailer
     SUBDIR += rubygem-premailer-rails
+    SUBDIR += rubygem-premailer-rails19
     SUBDIR += rubygem-premailer-rails-rails5
     SUBDIR += rubygem-rmail
     SUBDIR += rubygem-roadie

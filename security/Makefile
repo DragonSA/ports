@@ -1,4 +1,4 @@
-# $FreeBSD: head/security/Makefile 460506 2018-01-31 16:42:07Z sunpoet $
+# $FreeBSD: head/security/Makefile 464052 2018-03-10 08:39:50Z yuri $
 #
 
     COMMENT = Security tools
@@ -318,7 +318,7 @@
     SUBDIR += krb5-devel
     SUBDIR += kripp
     SUBDIR += kstart
-    SUBDIR += kwalletmanager
+    SUBDIR += kwalletmanager-kde4
     SUBDIR += l0pht-watch
     SUBDIR += l0phtcrack
     SUBDIR += l5
@@ -432,7 +432,6 @@
     SUBDIR += oath-toolkit
     SUBDIR += obfs4proxy-tor
     SUBDIR += obfsclient
-    SUBDIR += obfsproxy
     SUBDIR += ocaml-cryptgps
     SUBDIR += ocaml-cryptokit
     SUBDIR += ocaml-ssl
@@ -884,12 +883,25 @@
     SUBDIR += py-acme
     SUBDIR += py-acme-tiny
     SUBDIR += py-artifacts
+    SUBDIR += py-asyncssh
     SUBDIR += py-backports.ssl_match_hostname
     SUBDIR += py-bcrypt
     SUBDIR += py-borg.localrole
     SUBDIR += py-btchip-python
     SUBDIR += py-cerealizer
     SUBDIR += py-certbot
+    SUBDIR += py-certbot-apache
+    SUBDIR += py-certbot-dns-cloudflare
+    SUBDIR += py-certbot-dns-cloudxns
+    SUBDIR += py-certbot-dns-digitalocean
+    SUBDIR += py-certbot-dns-dnsimple
+    SUBDIR += py-certbot-dns-dnsmadeeasy
+    SUBDIR += py-certbot-dns-google
+    SUBDIR += py-certbot-dns-luadns
+    SUBDIR += py-certbot-dns-nsone
+    SUBDIR += py-certbot-dns-rfc2136
+    SUBDIR += py-certbot-dns-route53
+    SUBDIR += py-certbot-nginx
     SUBDIR += py-certifi
     SUBDIR += py-cpe
     SUBDIR += py-cracklib
@@ -930,8 +942,10 @@
     SUBDIR += py-mhash
     SUBDIR += py-mixbox
     SUBDIR += py-mnemonic
+    SUBDIR += py-ntlm-auth
     SUBDIR += py-oauth2client
     SUBDIR += py-oauthlib
+    SUBDIR += py-obfsproxy-tor
     SUBDIR += py-onetime
     SUBDIR += py-openssl
     SUBDIR += py-paramiko
@@ -966,9 +980,11 @@
     SUBDIR += py-pyscard
     SUBDIR += py-pysha3
     SUBDIR += py-python-gnupg
+    SUBDIR += py-python-nss
     SUBDIR += py-python-openid
     SUBDIR += py-python-registry
     SUBDIR += py-python-social-auth
+    SUBDIR += py-python3-openid
     SUBDIR += py-rekall
     SUBDIR += py-rekall-core
     SUBDIR += py-requests-kerberos
@@ -1046,8 +1062,10 @@
     SUBDIR += rkhunter
     SUBDIR += rndpassw
     SUBDIR += ruby-camellia
+    SUBDIR += rubygem-aes_key_wrap
     SUBDIR += rubygem-airbrussh
     SUBDIR += rubygem-attr_encrypted
+    SUBDIR += rubygem-attr_encrypted30
     SUBDIR += rubygem-bcrypt
     SUBDIR += rubygem-bcrypt-ruby
     SUBDIR += rubygem-bcrypt_pbkdf
@@ -1078,6 +1096,7 @@
     SUBDIR += rubygem-net-scp
     SUBDIR += rubygem-net-sftp
     SUBDIR += rubygem-net-ssh
+    SUBDIR += rubygem-net-ssh41
     SUBDIR += rubygem-net-ssh-gateway
     SUBDIR += rubygem-net-ssh-gateway1
     SUBDIR += rubygem-net-ssh-multi
@@ -1085,13 +1104,16 @@
     SUBDIR += rubygem-nexpose
     SUBDIR += rubygem-nmap-parser
     SUBDIR += rubygem-omniauth
+    SUBDIR += rubygem-omniauth14
     SUBDIR += rubygem-omniauth-bitbucket
     SUBDIR += rubygem-omniauth-cas3
     SUBDIR += rubygem-omniauth-gitlab
     SUBDIR += rubygem-omniauth-multipassword
     SUBDIR += rubygem-omniauth-oauth2-generic
     SUBDIR += rubygem-omniauth-saml
+    SUBDIR += rubygem-omniauth-saml17
     SUBDIR += rubygem-omniauth-shibboleth
+    SUBDIR += rubygem-omniauth-shibboleth12
     SUBDIR += rubygem-openssl
     SUBDIR += rubygem-openssl-ccm
     SUBDIR += rubygem-openvas-omp
@@ -1100,6 +1122,7 @@
     SUBDIR += rubygem-pundit
     SUBDIR += rubygem-pyu-ruby-sasl
     SUBDIR += rubygem-rack-oauth2
+    SUBDIR += rubygem-rack-oauth212
     SUBDIR += rubygem-razorback-scriptNugget
     SUBDIR += rubygem-rbnacl
     SUBDIR += rubygem-rbnacl-libsodium

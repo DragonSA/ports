@@ -1,12 +1,12 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-# $FreeBSD: head/emulators/wine-devel/Makefile 460858 2018-02-03 22:41:40Z gerald $
+# $FreeBSD: head/emulators/wine-devel/Makefile 463533 2018-03-03 20:48:07Z gerald $
 
 PORTNAME=	wine
-DISTVERSION=	3.1
+DISTVERSION=	3.3
 PORTEPOCH=	1
 CATEGORIES=	emulators
-MASTER_SITES=	SF/${PORTNAME}/Source \
-		http://ibiblio.org/pub/linux/system/emulators/wine/
+MASTER_SITES=	http://mirrors.ibiblio.org/wine/source/3.x/ \
+		# SF/${PORTNAME}/Source
 PKGNAMESUFFIX?=	-devel
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -18,7 +18,6 @@ LICENSE_COMB=	dual
 LICENSE_FILE=	${WRKSRC}/LICENSE
 
 ONLY_FOR_ARCHS=	amd64 i386
-STAGING_BROKEN=	Staging patchset still not available for this version
 
 BUILD_DEPENDS=	${LOCALBASE}/bin/flex:textproc/flex \
 		prelink:sysutils/prelink
@@ -56,11 +55,10 @@ PKGMESSAGE=	${WRKDIR}/pkg-message
 
 PORTDATA=	l_intl.nls wine.inf
 
-OPTIONS_DEFINE=	CUPS DOCS DOSBOX GNUTLS HAL LDAP LIBXSLT MPG123 OPENAL STAGING V4L WINEMAKER X11 GECKO MONO
+OPTIONS_DEFINE=	CUPS DOCS DOSBOX GNUTLS HAL LDAP LIBXSLT MPG123 OPENAL V4L WINEMAKER X11 GECKO MONO
 OPTIONS_DEFAULT=GNUTLS X11
 OPTIONS_SUB=	yes
 
-STAGING_DESC=	Include the Wine Staging patchset
 DOSBOX_DESC=	Use DOSBox to run MS-DOS programs
 LIBXSLT_DESC=	Use libxslt (only used by msxml3.dll)
 WINEMAKER_DESC=	Fully support winemaker (requires Perl)
@@ -111,7 +109,7 @@ X11_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 .include <bsd.port.pre.mk>
 
 # PR224863: clang 6.0.0 crashes
-.if ${OPSYS} == FreeBSD && ${OSVERSION} >= 1200056 && ${ARCH} == amd64
+.if ${OPSYS} == FreeBSD && ${OSVERSION} == 1200056 && ${ARCH} == amd64
 USE_GCC=	yes
 .endif
 

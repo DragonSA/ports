@@ -1,4 +1,4 @@
-# $FreeBSD: head/deskutils/Makefile 459753 2018-01-23 14:15:56Z tobik $
+# $FreeBSD: head/deskutils/Makefile 463444 2018-03-02 19:10:48Z rene $
 #
 
     COMMENT = Things that used to be on the desktop before computers were invented
@@ -22,7 +22,6 @@
     SUBDIR += calibre
     SUBDIR += cartotheque
     SUBDIR += cdcat
-    SUBDIR += charmap
     SUBDIR += charmtimetracker
     SUBDIR += clipit
     SUBDIR += conduit
@@ -121,14 +120,14 @@
     SUBDIR += ithought
     SUBDIR += jjclient
     SUBDIR += jlj
-    SUBDIR += kcharselect
+    SUBDIR += kcharselect-kde4
     SUBDIR += kchmviewer
     SUBDIR += kdeconnect
-    SUBDIR += kdepim4
-    SUBDIR += kdepim4-runtime
-    SUBDIR += kdepimlibs4
-    SUBDIR += kdeplasma-addons
-    SUBDIR += kruler
+    SUBDIR += kdepim-kde4
+    SUBDIR += kdepim-runtime-kde4
+    SUBDIR += kdepimlibs-kde4
+    SUBDIR += kdeplasma-addons-kde4
+    SUBDIR += kruler-kde4
     SUBDIR += ksshaskpass
     SUBDIR += latte-dock
     SUBDIR += launchy
@@ -233,7 +232,7 @@
     SUBDIR += strigidaemon
     SUBDIR += strigiutils
     SUBDIR += sugarcrm
-    SUBDIR += superkaramba
+    SUBDIR += superkaramba-kde4
     SUBDIR += surrealtodo
     SUBDIR += syncthing-gtk
     SUBDIR += systempreferences

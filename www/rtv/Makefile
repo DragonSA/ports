@@ -1,7 +1,7 @@
-# $FreeBSD: head/www/rtv/Makefile 457693 2017-12-31 14:25:36Z dbaio $
+# $FreeBSD: head/www/rtv/Makefile 464038 2018-03-10 00:29:29Z dbaio $
 
 PORTNAME=	rtv
-PORTVERSION=	1.21.0
+PORTVERSION=	1.22.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=	www
 

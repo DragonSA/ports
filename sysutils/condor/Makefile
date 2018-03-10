@@ -1,12 +1,12 @@
 # Created by: Andy Pavlo
-# $FreeBSD: head/sysutils/condor/Makefile 460452 2018-01-31 01:07:07Z jwb $
+# $FreeBSD: head/sysutils/condor/Makefile 463608 2018-03-04 22:34:22Z antoine $
 #
 # Note: Make sure there are no older versions of HTCondor installed during
 #       build.  The build system may pick up incompatible headers and libs.
 
 PORTNAME=	condor
 PORTVERSION=	8.4.9
-PORTREVISION=	7
+PORTREVISION=	8
 CATEGORIES=	sysutils net
 MASTER_SITES=	http://www.acadix.biz/Ports/distfiles/
 DISTNAME=	condor_src-${PORTVERSION}-all-all
@@ -17,16 +17,18 @@ COMMENT=	High-throughput computing on distributively owned resources
 LICENSE=	APACHE20
 LICENSE_FILE=	${WRKSRC}/LICENSE-2.0.txt
 
+BROKEN=		fails to build
+
 LIB_DEPENDS+=	libkrb5support.so:security/krb5 \
 		libpcre.so:devel/pcre \
 		libcurl.so:ftp/curl \
-		libboost_python.so:devel/boost-python-libs \
+		${PY_BOOST} \
 		libexpat.so:textproc/expat2
 
 WRKSRC=		${WRKDIR}/condor-${PORTVERSION}
 USE_LDCONFIG=	yes
 # Does not build with Python 3
-USES=		cmake cpe perl5 pgsql python:2 shebangfix ssl
+USES=		cmake cpe perl5 pgsql python:2.7 shebangfix ssl
 CPE_VENDOR=	condor_project
 SHEBANG_FILES=	src/condor_scripts/condor_qsub \
 		src/condor_gridmanager/remote_gahp \
