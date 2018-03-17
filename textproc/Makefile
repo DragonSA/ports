@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/Makefile 463464 2018-03-03 07:16:13Z ultima $
+# $FreeBSD: head/textproc/Makefile 464755 2018-03-17 05:04:48Z yuri $
 #
 
     COMMENT = Text processing utilities (does not include desktop publishing)
@@ -18,6 +18,7 @@
     SUBDIR += R-cran-rmarkdown
     SUBDIR += R-cran-stringi
     SUBDIR += R-cran-stringr
+    SUBDIR += R-cran-utf8
     SUBDIR += R-cran-xml2
     SUBDIR += R-cran-xtable
     SUBDIR += R-cran-yaml
@@ -336,6 +337,7 @@
     SUBDIR += ibus-kmfl
     SUBDIR += ibus-m17n
     SUBDIR += ibus-qt
+    SUBDIR += ibus-table
     SUBDIR += ibus-typing-booster
     SUBDIR += icdiff
     SUBDIR += id-aspell
@@ -1277,6 +1279,7 @@
     SUBDIR += py-asv
     SUBDIR += py-autopep8
     SUBDIR += py-awesome-slugify
+    SUBDIR += py-bibtexparser
     SUBDIR += py-bugzillatools
     SUBDIR += py-chardet
     SUBDIR += py-cjkwrap
@@ -1476,11 +1479,13 @@
     SUBDIR += rubygem-babosa
     SUBDIR += rubygem-case_transform
     SUBDIR += rubygem-charlock_holmes
+    SUBDIR += rubygem-chewy
     SUBDIR += rubygem-citrus
     SUBDIR += rubygem-cld3
     SUBDIR += rubygem-coderay
     SUBDIR += rubygem-colorator
     SUBDIR += rubygem-colored
+    SUBDIR += rubygem-commonmarker
     SUBDIR += rubygem-compass
     SUBDIR += rubygem-compass-core
     SUBDIR += rubygem-compass-import-once
@@ -1494,6 +1499,7 @@
     SUBDIR += rubygem-docdiff
     SUBDIR += rubygem-elasticsearch
     SUBDIR += rubygem-elasticsearch-api
+    SUBDIR += rubygem-elasticsearch-dsl
     SUBDIR += rubygem-elasticsearch-transport
     SUBDIR += rubygem-emot
     SUBDIR += rubygem-escape_utils

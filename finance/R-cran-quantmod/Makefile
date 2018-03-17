@@ -1,8 +1,9 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: head/finance/R-cran-quantmod/Makefile 463945 2018-03-09 08:58:37Z tota $
+# $FreeBSD: head/finance/R-cran-quantmod/Makefile 464084 2018-03-10 17:46:04Z gerald $
 
 PORTNAME=	quantmod
 DISTVERSION=	0.4-12
+PORTREVISION=	1
 CATEGORIES=	finance
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 

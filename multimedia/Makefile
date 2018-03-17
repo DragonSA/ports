@@ -1,4 +1,4 @@
-# $FreeBSD: head/multimedia/Makefile 463596 2018-03-04 19:11:34Z yuri $
+# $FreeBSD: head/multimedia/Makefile 464823 2018-03-17 15:11:32Z feld $
 #
 
     COMMENT = Multimedia software
@@ -312,7 +312,6 @@
     SUBDIR += playd
     SUBDIR += plexmediaserver
     SUBDIR += plexmediaserver-plexpass
-    SUBDIR += plexpy
     SUBDIR += plexwatch
     SUBDIR += podcastdl
     SUBDIR += poe
@@ -374,6 +373,7 @@
     SUBDIR += rubygem-gstreamer
     SUBDIR += rubygem-paperclip-av-transcoder
     SUBDIR += rubygem-paperclip-av-transcoder-rails50
+    SUBDIR += rubygem-streamio-ffmpeg
     SUBDIR += sabbu
     SUBDIR += schroedinger
     SUBDIR += shotcut
@@ -396,6 +396,7 @@
     SUBDIR += swfdec-gnome
     SUBDIR += syncplay
     SUBDIR += szap-s2
+    SUBDIR += tautulli
     SUBDIR += tcmplex-panteltje
     SUBDIR += tivodecode
     SUBDIR += totem

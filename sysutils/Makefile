@@ -1,4 +1,4 @@
-# $FreeBSD: head/sysutils/Makefile 464060 2018-03-10 10:14:17Z eugen $
+# $FreeBSD: head/sysutils/Makefile 464728 2018-03-16 20:36:29Z bdrewery $
 #
 
     COMMENT = System utilities
@@ -365,6 +365,7 @@
     SUBDIR += fusefs-gnome-vfs
     SUBDIR += fusefs-gstfs
     SUBDIR += fusefs-gunzip
+    SUBDIR += fusefs-hfsfuse
     SUBDIR += fusefs-httpfs
     SUBDIR += fusefs-ifuse
     SUBDIR += fusefs-libs
@@ -603,6 +604,8 @@
     SUBDIR += lxsplit
     SUBDIR += lxtask
     SUBDIR += lxterminal
+    SUBDIR += mac_nonet
+    SUBDIR += mac_rtprio
     SUBDIR += magicrescue
     SUBDIR += manck
     SUBDIR += mapchan
@@ -683,6 +686,7 @@
     SUBDIR += mountsmb2
     SUBDIR += mpiexec
     SUBDIR += mptd
+    SUBDIR += msiklm
     SUBDIR += msktutil
     SUBDIR += msyslog
     SUBDIR += mtpfs
@@ -949,7 +953,6 @@
     SUBDIR += py-tmuxp
     SUBDIR += py-uptime
     SUBDIR += py-zdaemon
-    SUBDIR += py-zfs
     SUBDIR += pydf
     SUBDIR += qchroot
     SUBDIR += qdirstat
