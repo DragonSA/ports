@@ -1,5 +1,3 @@
-%%DATADIR%%/LICENSE.txt
-%%DATADIR%%/ThirdPartyNotices.txt
 %%DATADIR%%/host/fxr/%%VERSION%%/libhostfxr.so
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/.version
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/Microsoft.CSharp.dll

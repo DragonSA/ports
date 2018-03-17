@@ -37,7 +37,7 @@ BINFILES?=	shared/Microsoft.NETCore.App/${DISTVERSION}/createdump
 .if !target(do-install)
 do-install:
 	cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}
-	${RM} ${STAGEDIR}${DATADIR}/dotnet
+	${RM} ${STAGEDIR}${DATADIR}/dotnet ${STAGEDIR}${DATADIR}/LICENSE.txt ${STAGEDIR}${DATADIR}/ThirdPartyNotices.txt
 .for bin in ${BINFILES}
 	${RM} ${STAGEDIR}${DATADIR}/${bin}
 	${INSTALL_PROGRAM} ${WRKSRC}/${bin} ${STAGEDIR}${DATADIR}/${bin}
