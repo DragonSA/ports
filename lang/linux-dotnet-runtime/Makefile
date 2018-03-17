@@ -1,7 +1,7 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME?=	dotnet-runtime
+PORTNAME=	dotnet-runtime
 DISTVERSION?=	2.0.6
 DISTVERSIONSUFFIX=	-linux-x64
 CATEGORIES=	lang
@@ -23,7 +23,7 @@ DATADIR=	${PREFIX}/share/dotnet
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
-SLAVEDIR?=	${.CURDIR}
+SLAVEDIR=	${.CURDIR}
 DISTINFO_FILE=	${SLAVEDIR}/distinfo
 PLIST=		${SLAVEDIR}/pkg-plist
 PLIST_SUB=	VERSION=${DISTVERSION}

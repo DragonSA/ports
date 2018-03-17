@@ -161,6 +161,7 @@
     SUBDIR += linux-dotnet-runtime
     SUBDIR += linux-dotnet-sdk
     SUBDIR += linux-dotnet10-runtime
+    SUBDIR += linux-dotnet11-runtime
     SUBDIR += linux-c6-tcl85
     SUBDIR += linux-c7-tcl85
     SUBDIR += linux-j
