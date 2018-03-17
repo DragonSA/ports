@@ -23,9 +23,16 @@ DATADIR=	${PREFIX}/share/dotnet
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
+SLAVEDIR?=	${.CURDIR}
+DISTINFO_FILE=	${SLAVEDIR}/distinfo
+PLIST=		${SLAVEDIR}/pkg-plist
+PLIST_SUB=	VERSION=${DISTVERSION}
+
+BINFILES?=	dotnet shared/Microsoft.NETCore.App/${DISTVERSION}/createdump
+
 do-install:
 	cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}
-.for bin in dotnet shared/Microsoft.NETCore.App/${DISTVERSION}/createdump
+.for bin in ${BINFILES}
 	${RM} ${STAGEDIR}${DATADIR}/${bin}
 	${INSTALL_PROGRAM} ${WRKSRC}/${bin} ${STAGEDIR}${DATADIR}/${bin}
 .endfor
