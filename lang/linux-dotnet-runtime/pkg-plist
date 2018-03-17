@@ -1,7 +1,5 @@
-bin/dotnet
 %%DATADIR%%/LICENSE.txt
 %%DATADIR%%/ThirdPartyNotices.txt
-%%DATADIR%%/dotnet
 %%DATADIR%%/host/fxr/%%VERSION%%/libhostfxr.so
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/.version
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/Microsoft.CSharp.dll
