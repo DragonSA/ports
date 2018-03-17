@@ -1,11 +1,11 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	dotnet-runtime
-DISTVERSION=	2.0.4
+PORTNAME?=	dotnet-runtime
+DISTVERSION?=	2.0.6
 DISTVERSIONSUFFIX=	-linux-x64
 CATEGORIES=	lang
-MASTER_SITES?=	https://download.microsoft.com/download/2/B/2/2B2854E7-7EAE-4FE9-85D2-19ACCD716F18/
+MASTER_SITES?=	https://download.microsoft.com/download/8/D/A/8DA04DA7-565B-4372-BBCE-D44C7809A467/
 PKGNAMEPREFIX=	linux-
 
 MAINTAINER=	mono@FreeBSD.org
@@ -19,15 +19,16 @@ ONLY_FOR_ARCHS=	amd64
 USES=		linux:c7
 USE_LINUX=	curl icu libunwind lttng-ust openssl
 
+DATADIR=	${PREFIX}/share/dotnet
 NO_BUILD=	yes
 NO_WRKSUBDIR=	yes
 
 do-install:
-	cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/dotnet
-.for bin in dotnet shared/Microsoft.NETCore.App/2.0.4/createdump
-	${RM} ${STAGEDIR}${PREFIX}/dotnet/${bin}
-	${INSTALL_PROGRAM} ${WRKSRC}/${bin} ${STAGEDIR}${PREFIX}/dotnet/${bin}
+	cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}
+.for bin in dotnet shared/Microsoft.NETCore.App/${DISTVERSION}/createdump
+	${RM} ${STAGEDIR}${DATADIR}/${bin}
+	${INSTALL_PROGRAM} ${WRKSRC}/${bin} ${STAGEDIR}${DATADIR}/${bin}
 .endfor
-	${LN} -s ../dotnet/dotnet ${STAGEDIR}${PREFIX}/bin/dotnet
+	${LN} -s ../share/dotnet/dotnet ${STAGEDIR}${PREFIX}/bin/dotnet
 
 .include <bsd.port.mk>
