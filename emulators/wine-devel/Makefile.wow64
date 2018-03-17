@@ -127,7 +127,7 @@ plist: stage
 		${WRKDIR}/pkg-plist > ${.CURDIR}/pkg-plist
 
 shell: patch
-	${CHROOT_CMD}
+	${CHROOT_CMD} tcsh -i
 
 .else # defined(WINE_WOW64)
 

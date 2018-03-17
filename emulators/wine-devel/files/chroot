@@ -50,4 +50,5 @@ done
 
 trap cleanup EXIT INT TERM
 
-/usr/sbin/chroot ${dp_SETENV} UNAME_m=i386 UNAME_p=i386 "$@"
+chroot_dir="$1"; shift
+/usr/sbin/chroot $chroot_dir ${dp_SETENV} UNAME_m=i386 UNAME_p=i386 "$@"
