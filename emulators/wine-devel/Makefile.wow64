@@ -31,6 +31,7 @@ CHROOT_ENV=	${SETENV} \
 			dp_PORTSDIR="${PORTSDIR}" \
 			dp_PORT_DBDIR="${PORT_DBDIR}" \
 			dp_SCRIPTSDIR="${SCRIPTSDIR}" \
+			dp_SETENV="${SETENV}" \
 			dp_UMOUNT="${UMOUNT}" \
 			dp_WRKDIR="${WRKDIR}"
 CHROOT_DIR=	/tmp/i386
