@@ -5,8 +5,8 @@ PORTNAME=	wine
 DISTVERSION=	3.4
 PORTEPOCH=	1
 CATEGORIES=	emulators
-MASTER_SITES=	http://mirrors.ibiblio.org/wine/source/3.x/ \
-		SF/${PORTNAME}/Source
+MASTER_SITES=	http://mirrors.ibiblio.org/wine/source/3.x/:DEFAULT \
+		SF/${PORTNAME}/Source:DEFAULT
 PKGNAMESUFFIX=	-devel
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
