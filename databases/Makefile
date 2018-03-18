@@ -1,4 +1,4 @@
-# $FreeBSD: head/databases/Makefile 464117 2018-03-10 23:01:48Z sunpoet $
+# $FreeBSD: head/databases/Makefile 464904 2018-03-18 12:31:13Z tobik $
 #
 
     COMMENT = Databases and related software
@@ -601,6 +601,7 @@
     SUBDIR += pgreplay
     SUBDIR += pgroonga
     SUBDIR += pgrouting
+    SUBDIR += pgsanity
     SUBDIR += pgsphere
     SUBDIR += pgtcl
     SUBDIR += pgtop

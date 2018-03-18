@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/Makefile 464755 2018-03-17 05:04:48Z yuri $
+# $FreeBSD: head/textproc/Makefile 464867 2018-03-18 03:59:42Z sunpoet $
 #
 
     COMMENT = Text processing utilities (does not include desktop publishing)
@@ -1343,6 +1343,8 @@
     SUBDIR += py-pygtail
     SUBDIR += py-pyhamcrest
     SUBDIR += py-pyhwp
+    SUBDIR += py-pylons-sphinx-themes
+    SUBDIR += py-pypandoc
     SUBDIR += py-pyphen
     SUBDIR += py-pyscss
     SUBDIR += py-pysrt

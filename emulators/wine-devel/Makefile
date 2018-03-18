@@ -1,5 +1,5 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-# $FreeBSD: head/emulators/wine-devel/Makefile 464779 2018-03-17 10:29:34Z gerald $
+# $FreeBSD: head/emulators/wine-devel/Makefile 464836 2018-03-17 17:32:40Z gerald $
 
 PORTNAME=	wine
 DISTVERSION=	3.4
@@ -55,7 +55,7 @@ PKGMESSAGE=	${WRKDIR}/pkg-message
 
 PORTDATA=	l_intl.nls wine.inf
 
-OPTIONS_DEFINE=	CUPS DOCS DOSBOX GNUTLS HAL LDAP LIBXSLT MPG123 OPENAL V4L WINEMAKER X11 GECKO MONO
+OPTIONS_DEFINE=	CUPS DOCS DOSBOX GNUTLS HAL LDAP LIBXSLT MPG123 OPENAL STAGING V4L WINEMAKER X11 GECKO MONO
 OPTIONS_DEFAULT=GNUTLS X11
 OPTIONS_SUB=	yes
 
@@ -144,7 +144,7 @@ PLIST_SUB+=		WINE32="" WINE64="@comment "
 .endif
 
 .if ${PORT_OPTIONS:MSTAGING}
-MASTER_SITES+=	https://github.com/compholio/wine-compholio-daily/archive/:cho
+MASTER_SITES+=	https://github.com/wine-staging/wine-staging/archive/:cho
 COMP_DIST=	v${DISTVERSION}.tar.gz
 DISTFILES+=	${COMP_DIST}:cho
 

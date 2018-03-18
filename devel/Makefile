@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/Makefile 464807 2018-03-17 11:48:28Z sunpoet $
+# $FreeBSD: head/devel/Makefile 464840 2018-03-17 18:32:59Z yuri $
 #
 
     COMMENT = Development utilities
@@ -4297,6 +4297,7 @@
     SUBDIR += py-bison
     SUBDIR += py-bitarray
     SUBDIR += py-bitstring
+    SUBDIR += py-black
     SUBDIR += py-blessings
     SUBDIR += py-blinker
     SUBDIR += py-blist
