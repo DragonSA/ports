@@ -1,11 +1,11 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	dotnet-sdk
-DISTVERSION=	2.1.3
+PORTNAME?=	dotnet-sdk
+DISTVERSION?=	2.1.101
 DISTVERSIONSUFFIX=	-linux-x64
 CATEGORIES=	lang
-MASTER_SITES=	https://download.microsoft.com/download/2/9/3/293BC432-348C-4D1C-B628-5AC8AB7FA162/
+MASTER_SITES?=	https://download.microsoft.com/download/D/C/F/DCFA73BE-93CE-4DA0-AB76-98972FD6E475/
 PKGNAMEPREFIX=	linux-
 
 MAINTAINER=	mono@FreeBSD.org
@@ -16,36 +16,36 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
 ONLY_FOR_ARCHS=	amd64
 
-BUILD_DEPENDS=${LOCALBASE}/bin/lzma:archivers/lzma \
+BUILD_DEPENDS=	${LOCALBASE}/bin/lzma:archivers/lzma \
 		zip:archivers/zip
-RUN_DEPENDS=	linux-dotnet-runtime>=2.0.4:lang/linux-dotnet-runtime
+RUN_DEPENDS?=	linux-dotnet-runtime>=2.0.6:lang/linux-dotnet-runtime
 
+DATADIR=	${PREFIX}/share/dotnet
 DESCR=		${.CURDIR}/../linux-dotnet-runtime/pkg-descr
-EXTRACT_AFTER_ARGS=        --no-same-owner --no-same-permissions \
-		--include LICENSE.txt --include additionalDeps --include sdk --include store
+EXTRACT_AFTER_ARGS=     --no-same-owner --no-same-permissions \
+		--include LICENSE.txt --include sdk ${EXTRACT_EXTRA_ARGS}
+EXTRACT_EXTRA_ARGS?=	--include additionalDeps --include store
 NO_WRKSUBDIR=	yes
 
-USES=		linux:c7
+USES=		linux:c7 python:build
+
+SLAVEDIR=	${.CURDIR}
+DISTINFO_FILE=	${SLAVEDIR}/distinfo
+PLIST=		${SLAVEDIR}/pkg-plist
+PLIST_SUB=	VERSION=${DISTVERSION}
 
 do-build:
-	${SETENV} \
-		dp_LN=${LN} \
-		dp_LZMA=${LOCALBASE}/bin/lzma \
-		dp_MKDIR="${MKDIR}" \
-		dp_MV=${MV} \
-		dp_RM="${RM}" \
-		dp_RMDIR=${RMDIR} \
-		dp_SCRIPTSDIR=${SCRIPTSDIR} \
-		dp_TR=${TR} \
-		dp_UNZIP=${UNZIP_NATIVE_CMD} \
-		${SH} ${FILESDIR}/extract.sh \
-			${WRKSRC}/sdk/${DISTVERSION}/nuGetPackagesArchive.lzma \
-			${WRKSRC}/sdk/NuGetFallbackFolder
-	${RM} ${WRKSRC}/sdk/${DISTVERSION}/nuGetPackagesArchive.lzma
+	${LOCALBASE}/bin/lzma d ${WRKSRC}/sdk/${DISTVERSION}/nuGetPackagesArchive.lzma \
+		${WRKSRC}/sdk/${DISTVERSION}/nuGetPackagesArchive.zip
+	${PYTHON_CMD} ${FILESDIR}/extract.py \
+		${WRKSRC}/sdk/${DISTVERSION}/nuGetPackagesArchive.zip \
+		${WRKSRC}/sdk/NuGetFallbackFolder
+	${RM} ${WRKSRC}/sdk/${DISTVERSION}/nuGetPackagesArchive.lzma \
+		${WRKSRC}/sdk/${DISTVERSION}/nuGetPackagesArchive.zip
 	${TOUCH} ${WRKSRC}/sdk/NuGetFallbackFolder/${DISTVERSION}.dotnetSentinel
 
 do-install:
-	cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${PREFIX}/dotnet
-	${RM} ${STAGEDIR}${PREFIX}/dotnet/LICENSE.txt
+	cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}
+	${RM} ${STAGEDIR}${DATADIR}/LICENSE.txt
 
 .include <bsd.port.mk>
