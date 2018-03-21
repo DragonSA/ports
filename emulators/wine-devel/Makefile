@@ -109,13 +109,6 @@ X11_LIB_DEPENDS=	libfontconfig.so:x11-fonts/fontconfig \
 			liblcms2.so:graphics/lcms2 \
 			libpng.so:graphics/png
 
-MPG123_FILES=	l3codeca.*
-OPENAL_FILES=	openal32.* x3daudio*.dll* xapofx*.dll* xaudio*.dll*
-WINE32_FILES=	*16 *16.so bin/wine libkernel.def mmcndmgr.dll *.vxd *.vxd.so w32skrnl.* wine.1.gz wow32.* winevdm.*
-WINE64_FILES=	bin/wine64
-WOW64_FILES=	mmcndmgr.dll
-X11_FILES=	glu32.dll* winex11.* %%DATADIR%%/fonts/*
-
 .if !defined(ARCH)
 ARCH!=			uname -p
 .endif
@@ -169,6 +162,12 @@ PLIST_SUB+=		WINE32="" WINE64="@comment "
 PLIST_SUB+=		WINE32="@comment " WINE64=""
 .endif
 
+.if ${ARCH} == amd64
+post-extract-WOW64-off: fix-shebang
+	cd ${WRKSRC} && ${TAR} xf ${DISTDIR}/${COMP_DIST} --strip-components 1
+	cd ${WRKSRC} && bash ./patches/patchinstall.sh --backend=patch DESTDIR=${WRKSRC} --all
+.endif
+
 pre-build${WINE_METAMODE}:
 	cd ${BUILD_WRKSRC} && ${MAKE_CMD} depend
 
@@ -182,5 +181,13 @@ post-install${WINE_METAMODE}:
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/programs/winedbg/README ${STAGEDIR}${DOCSDIR}/README.winedbg
 	${INSTALL_DATA} ${WRKSRC}/tools/winedump/README ${STAGEDIR}${DOCSDIR}/README.winedump
+
+check-wine-devel-vs-wine-staging:
+	@${GREP} %%STAGING%% pkg-plist | while read f; do \
+		f=`echo $$f | ${SED} -e 's/%%STAGING%%//'`; \
+		if [ -f "$$STAGEDIR/$$PREFIX/$$f" ]; then \
+			${PRINTF} "%s no longer contigent on %%STAGING%%?\n" "$$f"; \
+		fi \
+	done
 
 .include <bsd.port.post.mk>

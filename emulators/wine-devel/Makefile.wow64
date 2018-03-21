@@ -110,6 +110,13 @@ add-plist-wow64:
 post-clean:
 	${RM} -r ${CHROOT_DIR}
 
+MPG123_FILES=	l3codeca.*
+OPENAL_FILES=	openal32.* x3daudio*.dll* xapofx*.dll* xaudio*.dll*
+WINE32_FILES=	*16 *16.so bin/wine libkernel.def mmcndmgr.dll *.vxd *.vxd.so w32skrnl.* wine.1.gz wow32.* winevdm.*
+WINE64_FILES=	bin/wine64
+WOW64_FILES=	mmcndmgr.dll
+X11_FILES=	glu32.dll* winex11.* %%DATADIR%%/fonts/*
+
 plist: stage
 	${MAKE} makeplist > ${WRKDIR}/pkg-plist
 	${SED} -E -e '1d' \
