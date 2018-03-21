@@ -44,10 +44,10 @@ OSREL11=	11.1
 OSREL12=	12.20180307
 
 ACTUAL_DISTDIR?=${DISTDIR}
-.if defined(POUDRIERE_VERSION)
+. if defined(POUDRIERE_VERSION)
 # We are in a poudriere build and need access to the full distfiles cache
 ACTUAL_DISTDIR=	/distfiles
-.endif
+. endif
 
 . if ${.TARGETS} == makesum
 DISTFILES=	${EXTRACT_ONLY} base${OSREL10}.txz:10 base${OSREL11}.txz:11 base${OSREL12}.txz:12
@@ -134,7 +134,7 @@ plist: stage
 		${WRKDIR}/pkg-plist > ${.CURDIR}/pkg-plist
 
 shell: patch
-	${CHROOT_CMD} tcsh -i
+	${CHROOT_MAKE} shell WINE_WOW64=wine32-shell -DBATCH
 
 .else # defined(WINE_WOW64)
 
@@ -211,6 +211,11 @@ post-install-script:
 	${MKDIR} ${STAGEDIR}${DATADIR}
 	${INSTALL_SCRIPT} ${FILESDIR}/nvidia.sh ${STAGEDIR}${DATADIR}/patch-nvidia.sh
 	${ECHO_CMD} ${DATADIR:S|$(PREFIX)/||}/patch-nvidia.sh >> ${TMPPLIST}.i386
+
+.  elif ${WINE_WOW64} == wine32-shell
+
+shell:
+	tcsh -i
 
 .  endif
 . endif
