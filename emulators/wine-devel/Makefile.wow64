@@ -2,9 +2,9 @@ WINELIB32DIR=		${PREFIX}/lib32
 
 .if !defined(WINE_WOW64)
 
-EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+EXTRACT_ONLY:=	${DISTFILES:C/:.*//g}
 DISTFILES=	${EXTRACT_ONLY} ${BASE_FILE}:${OSREL:C/\..+//}
-MASTER_SITES=	https://download.freebsd.org/ftp/releases/i386/${OSREL10}-RELEASE/base.txz?dummy=/:10 \
+MASTER_SITES+=	https://download.freebsd.org/ftp/releases/i386/${OSREL10}-RELEASE/base.txz?dummy=/:10 \
 		https://download.freebsd.org/ftp/releases/i386/${OSREL11}-RELEASE/base.txz?dummy=/:11 \
 		LOCAL/dbn/i386/12.0-CURRENT/:12
 
