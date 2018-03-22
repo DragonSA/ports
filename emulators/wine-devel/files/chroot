@@ -43,7 +43,9 @@ ${dp_MOUNT_NULLFS} ${dp_PORT_DBDIR} ${dp_CHROOT_DIR}${dp_PORT_DBDIR}
 ${dp_MOUNT_NULLFS} ${dp_CURDIR} ${dp_CHROOT_DIR}/port
 ${dp_MOUNT_NULLFS} ${dp_WRKDIR} ${dp_CHROOT_DIR}/wrkdirs
 
-${dp_CP} /etc/make.conf ${dp_CHROOT_DIR}/etc/
+if [ -f /etc/make.conf ]; then
+	${dp_CP} /etc/make.conf ${dp_CHROOT_DIR}/etc/
+fi
 for var in ARCH=i386 MACHINE=i386 DISTDIR=/distfiles PORTSDIR=/usr/ports WRKDIRPREFIX=/wrkdirs STRICT_DEPENDS=; do
     ${dp_ECHO} $var >> ${dp_CHROOT_DIR}/etc/make.conf
 done
