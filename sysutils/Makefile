@@ -1,4 +1,4 @@
-# $FreeBSD: head/sysutils/Makefile 464728 2018-03-16 20:36:29Z bdrewery $
+# $FreeBSD: head/sysutils/Makefile 465148 2018-03-21 05:49:20Z cy $
 #
 
     COMMENT = System utilities
@@ -6,6 +6,7 @@
     SUBDIR += 3dm
     SUBDIR += 44bsd-more
     SUBDIR += 915resolution
+    SUBDIR += DTraceToolkit
     SUBDIR += LPRng
     SUBDIR += LPRngTool
     SUBDIR += UEFITool
@@ -146,6 +147,7 @@
     SUBDIR += cfengine-masterfiles37
     SUBDIR += cfengine-masterfiles38
     SUBDIR += cfengine-masterfiles39
+    SUBDIR += cfengine-masterfiles-devel
     SUBDIR += cfengine22
     SUBDIR += cfengine310
     SUBDIR += cfengine311
@@ -157,6 +159,7 @@
     SUBDIR += cfengine37
     SUBDIR += cfengine38
     SUBDIR += cfengine39
+    SUBDIR += cfengine-devel
     SUBDIR += chgrep
     SUBDIR += chyves
     SUBDIR += cinnamon-control-center
@@ -211,7 +214,6 @@
     SUBDIR += curly
     SUBDIR += currtime
     SUBDIR += cw
-    SUBDIR += DTraceToolkit
     SUBDIR += daa2iso
     SUBDIR += dae
     SUBDIR += daemonize
@@ -1211,6 +1213,7 @@
     SUBDIR += tmpwatch
     SUBDIR += tmux
     SUBDIR += tmux-mem-cpu-load
+    SUBDIR += tmux23
     SUBDIR += topless
     SUBDIR += torque
     SUBDIR += toshctl

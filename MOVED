@@ -1,7 +1,7 @@
 #
 # MOVED -- A list of (recently) moved or removed ports
 #
-# $FreeBSD: head/MOVED 464825 2018-03-17 15:16:01Z feld $
+# $FreeBSD: head/MOVED 465233 2018-03-21 19:51:01Z antoine $
 #
 # Each entry consists of a single line containing the following four
 # fields in the order named, separated with the pipe (`|') character:
@@ -5660,7 +5660,6 @@ devel/sgl||2014-03-16|Has expired: never progressed beyond incomplete graduate p
 palm/jpilot-db||2014-03-16|Has expired
 databases/ludia||2014-03-18|Has expired: Broken since June 2013
 lang/schemetoc||2014-03-18|Has expired: Broken since July 2013
-sysutils/cfengine-devel||2014-03-19|Has expired: Broken since June 2013
 sysutils/py-salt-cloud|sysutils/py-salt|2014-03-19|Removed:py-salt-cloud is now part of py-salt
 devel/py-pyzmq|net/py-pyzmq|2014-03-22|Move to a more suitable category with other ZeroMQ ports
 audio/p5-Xmms|multimedia/audacious|2014-03-23|Has expired: Abandonware, please consider using multimedia/audacious instead
@@ -10207,3 +10206,17 @@ www/mediawiki128|www/mediawiki130|2018-03-14|Has expired: Upstream no longer mai
 sysutils/py-zfs||2018-03-16|Not needed since ZFS 28
 net/freebsd-tftp||2018-03-16|Imported into base in FreeBSD 8.0
 multimedia/plexpy|multimedia/tautulli|2018-03-17|Project renamed due to copyright infringement
+net-im/ring-daemon||2018-03-18|Ring can't build because it depends on custom bundled versions of other packages
+net-im/ring-libclient||2018-03-18|Ring can't build because it depends on custom bundled versions of other packages
+net-im/ring-gnome||2018-03-18|Ring can't build because it depends on custom bundled versions of other packages
+astro/libkgeomap|astro/libkgeomap-kde4|2018-03-20|Make room for KDE updates
+databases/akonadi|databases/akonadi-kde4|2018-03-20|Make room for KDE updates
+graphics/code-eli||2018-03-20|Has expired: Broken for more than 6 months
+databases/pg_rman||2018-03-20|Has expired: Broken for more than 6 months
+devel/elixir-simple_bayes||2018-03-20|Has expired: Broken for more than 6 months
+devel/elixir-stemmer||2018-03-20|Has expired: Broken for more than 6 months
+benchmarks/expedite||2018-03-20|Has expired: Broken for more than 6 months
+textproc/p5-HTML-CTPP2||2018-03-20|Has expired: Broken for more than 6 months
+textproc/rubygem-compass-rails||2018-03-20|Has expired: Broken for more than 6 months
+graphics/pfscalibration||2018-03-20|Deprecated: pfs-calibration is a part of pfstools (from version 2.0)
+graphics/pfstmo||2018-03-20|Deprecated: pfstmo is a part of pfstools

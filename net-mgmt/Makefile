@@ -1,4 +1,4 @@
-# $FreeBSD: head/net-mgmt/Makefile 462685 2018-02-23 10:58:40Z lme $
+# $FreeBSD: head/net-mgmt/Makefile 465194 2018-03-21 16:54:24Z pi $
 #
 
     COMMENT = Network management tools
@@ -31,6 +31,8 @@
     SUBDIR += cacti-spine
     SUBDIR += cacti88
     SUBDIR += cacti88-spine
+    SUBDIR += carbon-relay-ng
+    SUBDIR += carbonzipper
     SUBDIR += ccnet-client
     SUBDIR += ccnet-server
     SUBDIR += cdpd
@@ -76,6 +78,7 @@
     SUBDIR += gnu-ipcalc
     SUBDIR += grepcidr
     SUBDIR += grepip
+    SUBDIR += grok_exporter
     SUBDIR += gsnmp
     SUBDIR += guifi-snpservices
     SUBDIR += hastmon

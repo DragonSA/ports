@@ -1,4 +1,4 @@
-# $FreeBSD: head/UIDs 464063 2018-03-10 10:43:21Z brnrd $
+# $FreeBSD: head/UIDs 465028 2018-03-19 20:22:29Z pi $
 # Please keep this file sorted by UID!
 # Please pick an empty slot when available and also consider base values from
 # /usr/src/etc/master.passwd
@@ -175,7 +175,7 @@ sqlgrey:*:226:226::0:0:SQLgrey Owner:/nonexistent:/usr/sbin/nologin
 _hfm:*:227:227::0:0:hfm daemon:/nonexistent:/usr/sbin/nologin
 osrm:*:228:228::0:0:osrm:/nonexistent:/usr/sbin/nologin
 # free: 229
-# free: 230
+carbon:*:230:230::0:0:osrm:/nonexistent:/usr/sbin/nologin
 # free: 231
 # free: 232
 # free: 233

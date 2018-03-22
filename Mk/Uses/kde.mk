@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/Uses/kde.mk 464265 2018-03-12 18:04:49Z tcberner $
+# $FreeBSD: head/Mk/Uses/kde.mk 465102 2018-03-20 18:03:48Z tcberner $
 #
 # Provides support for KDE and KF5-based ports.
 #
@@ -356,7 +356,7 @@ workspace_PORT=		x11/kde-workspace-kde4
 workspace_LIB=		libkworkspace.so
 
 # Non-Software Compilation components
-akonadi_PORT=		databases/akonadi
+akonadi_PORT=		databases/akonadi-kde4
 akonadi_LIB=		libakonadiprotocolinternals.so
 
 attica_PORT=		x11-toolkits/attica

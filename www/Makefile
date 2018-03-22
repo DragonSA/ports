@@ -1,4 +1,4 @@
-# $FreeBSD: head/www/Makefile 464742 2018-03-16 21:54:05Z feld $
+# $FreeBSD: head/www/Makefile 465192 2018-03-21 16:49:20Z pi $
 #
 
     COMMENT = Ports related to the World Wide Web
@@ -62,6 +62,7 @@
     SUBDIR += calamaris-devel
     SUBDIR += caldavzap
     SUBDIR += calendarserver
+    SUBDIR += carbonapi
     SUBDIR += castget
     SUBDIR += cblog
     SUBDIR += cgi-lib
@@ -1681,6 +1682,7 @@
     SUBDIR += py-gevent-websocket
     SUBDIR += py-goobook
     SUBDIR += py-google
+    SUBDIR += py-google-api-core
     SUBDIR += py-google-api-python-client
     SUBDIR += py-google-cloud-core
     SUBDIR += py-google-cloud-storage

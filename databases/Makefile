@@ -1,4 +1,4 @@
-# $FreeBSD: head/databases/Makefile 464904 2018-03-18 12:31:13Z tobik $
+# $FreeBSD: head/databases/Makefile 465105 2018-03-20 18:39:34Z rene $
 #
 
     COMMENT = Databases and related software
@@ -13,7 +13,7 @@
     SUBDIR += adminer
     SUBDIR += adodb
     SUBDIR += adodb5
-    SUBDIR += akonadi
+    SUBDIR += akonadi-kde4
     SUBDIR += animenfo-client
     SUBDIR += animenfo-client-gtk
     SUBDIR += apq
@@ -94,6 +94,7 @@
     SUBDIR += gigabase
     SUBDIR += gnats4
     SUBDIR += gnatsweb4
+    SUBDIR += go-carbon
     SUBDIR += gomdb
     SUBDIR += gosqlite3
     SUBDIR += gqlplus
@@ -578,7 +579,6 @@
     SUBDIR += pg_qualstats
     SUBDIR += pg_reorg
     SUBDIR += pg_repack
-    SUBDIR += pg_rman
     SUBDIR += pg_stat_kcache
     SUBDIR += pgaccess
     SUBDIR += pgadmin3
@@ -811,6 +811,7 @@
     SUBDIR += py-psycogreen
     SUBDIR += py-psycopg2
     SUBDIR += py-psycopg2cffi
+    SUBDIR += py-pum
     SUBDIR += py-pyPgSQL
     SUBDIR += py-pyhs
     SUBDIR += py-pylibmc
