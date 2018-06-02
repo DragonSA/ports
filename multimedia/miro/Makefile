@@ -1,9 +1,9 @@
 # Created by: Thierry Thomas <thierry@pompo.net>
-# $FreeBSD: head/multimedia/miro/Makefile 459315 2018-01-18 04:11:02Z jbeich $
+# $FreeBSD: head/multimedia/miro/Makefile 469017 2018-05-04 11:40:30Z jbeich $
 
 PORTNAME=	miro
 PORTVERSION=	6.0
-PORTREVISION=	16
+PORTREVISION=	18
 CATEGORIES=	multimedia
 MASTER_SITES=	ftp://ftp.osuosl.org/pub/pculture.org/miro/src/ \
 		http://ftp.osuosl.org/pub/pculture.org/miro/src/

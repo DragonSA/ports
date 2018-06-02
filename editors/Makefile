@@ -1,4 +1,4 @@
-# $FreeBSD: head/editors/Makefile 464761 2018-03-17 06:57:59Z lwhsu $
+# $FreeBSD: head/editors/Makefile 470882 2018-05-26 06:38:15Z tobik $
 #
 
     COMMENT = Editors
@@ -17,6 +17,7 @@
     SUBDIR += bpatch
     SUBDIR += bvi
     SUBDIR += calligra
+    SUBDIR += calligraplan
     SUBDIR += chexedit
     SUBDIR += codelite
     SUBDIR += coedit
@@ -50,6 +51,7 @@
     SUBDIR += gmanedit
     SUBDIR += gnotepad+
     SUBDIR += gobby
+    SUBDIR += gomate
     SUBDIR += gwrite
     SUBDIR += heme
     SUBDIR += hexcurse
@@ -66,18 +68,18 @@
     SUBDIR += jove
     SUBDIR += jucipp
     SUBDIR += jupp
+    SUBDIR += kakoune
+    SUBDIR += kate
     SUBDIR += kate-kde4
     SUBDIR += kate-plugin-pate-kde4
+    SUBDIR += kile
     SUBDIR += kile-kde4
     SUBDIR += klat4
     SUBDIR += komodo-edit
     SUBDIR += latexila
     SUBDIR += lazarus
-    SUBDIR += lazarus-lcl-gtk2
-    SUBDIR += lazarus-lcl-nogui
-    SUBDIR += lazarus-lcl-qt
-    SUBDIR += lazarus-lcl-qt5
-    SUBDIR += lazarus-lcl-units
+    SUBDIR += lazarus-qt4
+    SUBDIR += lazarus-qt5
     SUBDIR += le
     SUBDIR += leafpad
     SUBDIR += led

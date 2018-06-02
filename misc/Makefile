@@ -1,4 +1,4 @@
-# $FreeBSD: head/misc/Makefile 464580 2018-03-15 09:29:41Z yuri $
+# $FreeBSD: head/misc/Makefile 471339 2018-06-02 01:56:58Z yuri $
 #
 
     COMMENT = Miscellaneous utilities
@@ -12,6 +12,7 @@
     SUBDIR += amfm
     SUBDIR += ansiweather
     SUBDIR += apparix
+    SUBDIR += artikulate
     SUBDIR += artikulate-kde4
     SUBDIR += asbutton
     SUBDIR += asr-manpages
@@ -235,14 +236,21 @@
     SUBDIR += kde4-l10n-ug
     SUBDIR += kde4-l10n-wa
     SUBDIR += kde4-xdg-env
+    SUBDIR += kdeedu
+    SUBDIR += kdeedu-data
     SUBDIR += kdeedu-kde4
+    SUBDIR += kdeutils
     SUBDIR += kdeutils-kde4
     SUBDIR += kenny
     SUBDIR += kf5-purpose
+    SUBDIR += kgeography
     SUBDIR += kgeography-kde4
+    SUBDIR += klettres
     SUBDIR += klettres-kde4
     SUBDIR += krecipes-kde4
+    SUBDIR += ktouch
     SUBDIR += ktouch-kde4
+    SUBDIR += kwordquiz
     SUBDIR += kwordquiz-kde4
     SUBDIR += latex-mk
     SUBDIR += lazyread
@@ -251,6 +259,7 @@
     SUBDIR += libeatmydata
     SUBDIR += libisocodes
     SUBDIR += libkdeedu-kde4
+    SUBDIR += libkeduvocdocument
     SUBDIR += liblxi
     SUBDIR += libmetalink
     SUBDIR += libpostal
@@ -292,6 +301,9 @@
     SUBDIR += nut
     SUBDIR += ondir
     SUBDIR += opencyc
+    SUBDIR += openhab2
+    SUBDIR += openhab2-addons
+    SUBDIR += openmvg
     SUBDIR += openr2
     SUBDIR += orville-write
     SUBDIR += osinfo-db
@@ -362,6 +374,7 @@
     SUBDIR += p5-Zen-Koans
     SUBDIR += p5-asterisk-perl
     SUBDIR += pantry
+    SUBDIR += parley
     SUBDIR += parley-kde4
     SUBDIR += pastebinit
     SUBDIR += patchutils
@@ -386,10 +399,12 @@
     SUBDIR += pspresent
     SUBDIR += ptsort
     SUBDIR += pubs
+    SUBDIR += py-PyUserInput
     SUBDIR += py-YABT
     SUBDIR += py-cinder
     SUBDIR += py-colorbrewer
     SUBDIR += py-crudini
+    SUBDIR += py-emoji
     SUBDIR += py-fuzzy
     SUBDIR += py-glance
     SUBDIR += py-osd
@@ -397,10 +412,12 @@
     SUBDIR += py-pexpect
     SUBDIR += py-powerline-status
     SUBDIR += py-progressbar
+    SUBDIR += py-progressbar2
     SUBDIR += py-progressbar231
     SUBDIR += py-pyfiglet
     SUBDIR += py-pyprind
     SUBDIR += py-python-geohash
+    SUBDIR += py-python-utils
     SUBDIR += py-qt4-demo
     SUBDIR += py-qt4-doc
     SUBDIR += py-qt5-demo
@@ -434,6 +451,7 @@
     SUBDIR += rubygem-dotenv-rails-rails4
     SUBDIR += rubygem-dotenv-rails-rails5
     SUBDIR += rubygem-dotenv-rails-rails50
+    SUBDIR += rubygem-haversine_distance
     SUBDIR += rubygem-iesd
     SUBDIR += rubygem-mime-types
     SUBDIR += rubygem-mime-types-data

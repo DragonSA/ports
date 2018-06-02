@@ -1,4 +1,4 @@
-# $FreeBSD: head/net-p2p/Makefile 459646 2018-01-22 12:27:41Z vd $
+# $FreeBSD: head/net-p2p/Makefile 469847 2018-05-14 02:55:52Z knu $
 #
 
     COMMENT = Peer-to-peer network applications
@@ -12,7 +12,6 @@
     SUBDIR += bitmessage
     SUBDIR += bnbt
     SUBDIR += btpd
-    SUBDIR += btsync
     SUBDIR += couchpotato
     SUBDIR += cpuminer
     SUBDIR += createtorrent
@@ -40,9 +39,11 @@
     SUBDIR += jackett
     SUBDIR += jigdo
     SUBDIR += ktorrent
+    SUBDIR += ktorrent-kde4
     SUBDIR += libbt
     SUBDIR += liberator
     SUBDIR += libktorrent
+    SUBDIR += libktorrent-kde4
     SUBDIR += libpdtp
     SUBDIR += libswift
     SUBDIR += libtorrent
@@ -80,6 +81,7 @@
     SUBDIR += qtum
     SUBDIR += radarr
     SUBDIR += retroshare
+    SUBDIR += rslsync
     SUBDIR += rtorrent
     SUBDIR += shx
     SUBDIR += sonarr

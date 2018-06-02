@@ -1,6 +1,6 @@
 #!/bin/sh
 # MAINTAINER: portmgr@FreeBSD.org
-# $FreeBSD: head/Mk/Scripts/smart_makepatch.sh 459675 2018-01-22 16:42:44Z kevans $
+# $FreeBSD: head/Mk/Scripts/smart_makepatch.sh 471273 2018-06-01 16:20:51Z mat $
 
 # This script regenerates patches.  It conserves existing comments and
 # file names, even if the file name does not meet any current or
@@ -276,7 +276,8 @@ conserve_old_patches() {
 }
 
 install_regenerated_patches() {
-	local testdir=$(find ${DESTDIR} -empty)
+	local testdir
+	testdir=$(find ${DESTDIR} -empty)
 	if [ -z "${testdir}" ]; then
 		mkdir -p ${PATCHDIR}
 		find ${DESTDIR} -type f -exec mv {} ${PATCHDIR}/ \;

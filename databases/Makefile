@@ -1,10 +1,11 @@
-# $FreeBSD: head/databases/Makefile 465105 2018-03-20 18:39:34Z rene $
+# $FreeBSD: head/databases/Makefile 470804 2018-05-24 19:12:51Z pi $
 #
 
     COMMENT = Databases and related software
 
     SUBDIR += R-cran-DBI
     SUBDIR += R-cran-RMySQL
+    SUBDIR += R-cran-RPostgreSQL
     SUBDIR += R-cran-RSQLite
     SUBDIR += R-cran-RSQLite.extfuns
     SUBDIR += R-cran-sqldf
@@ -13,6 +14,7 @@
     SUBDIR += adminer
     SUBDIR += adodb
     SUBDIR += adodb5
+    SUBDIR += akonadi
     SUBDIR += akonadi-kde4
     SUBDIR += animenfo-client
     SUBDIR += animenfo-client-gtk
@@ -74,6 +76,7 @@
     SUBDIR += firebird25-server
     SUBDIR += flamerobin
     SUBDIR += fortytwo-bdb
+    SUBDIR += foundationdb
     SUBDIR += fpc-dblib
     SUBDIR += fpc-fpindexer
     SUBDIR += fpc-gdbm
@@ -113,6 +116,7 @@
     SUBDIR += hsqldb
     SUBDIR += influxdb
     SUBDIR += innotop
+    SUBDIR += iowow
     SUBDIR += ip4r
     SUBDIR += ipa_sdb
     SUBDIR += iplike
@@ -559,6 +563,7 @@
     SUBDIR += pecl-mongodb
     SUBDIR += pecl-pdo_user
     SUBDIR += pecl-redis
+    SUBDIR += pecl-redis3
     SUBDIR += pecl-rrd
     SUBDIR += pecl-rrd1
     SUBDIR += pecl-tokyo_tyrant
@@ -598,6 +603,7 @@
     SUBDIR += pgpool-II-33
     SUBDIR += pgpool-II-35
     SUBDIR += pgpool-II-36
+    SUBDIR += pgpool-II-37
     SUBDIR += pgreplay
     SUBDIR += pgroonga
     SUBDIR += pgrouting
@@ -786,6 +792,7 @@
     SUBDIR += py-htsql
     SUBDIR += py-htsql-mysql
     SUBDIR += py-htsql-pgsql
+    SUBDIR += py-influxdb
     SUBDIR += py-kyotocabinet
     SUBDIR += py-leveldb
     SUBDIR += py-lmdb
@@ -885,6 +892,8 @@
     SUBDIR += redigo
     SUBDIR += redis
     SUBDIR += redis-devel
+    SUBDIR += redis_exporter
+    SUBDIR += redisdesktopmanager
     SUBDIR += retcl
     SUBDIR += riak
     SUBDIR += riak2
@@ -931,6 +940,7 @@
     SUBDIR += rubygem-dbd-odbc
     SUBDIR += rubygem-dbd-pg
     SUBDIR += rubygem-dbd-sqlite3
+    SUBDIR += rubygem-dbf
     SUBDIR += rubygem-dbi
     SUBDIR += rubygem-dm-aggregates
     SUBDIR += rubygem-dm-chunked_query
@@ -955,6 +965,7 @@
     SUBDIR += rubygem-familia
     SUBDIR += rubygem-flipper-active_record
     SUBDIR += rubygem-flipper-active_record011
+    SUBDIR += rubygem-flipper-active_record013
     SUBDIR += rubygem-globalid
     SUBDIR += rubygem-globalid-rails5
     SUBDIR += rubygem-globalid-rails50
@@ -974,6 +985,7 @@
     SUBDIR += rubygem-pg
     SUBDIR += rubygem-pg_array_parser
     SUBDIR += rubygem-pg0
+    SUBDIR += rubygem-pg018
     SUBDIR += rubygem-pghero
     SUBDIR += rubygem-pghero-rails5
     SUBDIR += rubygem-pghero-rails50
@@ -987,7 +999,6 @@
     SUBDIR += rubygem-redis-namespace15
     SUBDIR += rubygem-redis3
     SUBDIR += rubygem-seed-fu
-    SUBDIR += rubygem-seed-fu236
     SUBDIR += rubygem-sqlite3
     SUBDIR += rubygem-sqlite3-ruby
     SUBDIR += rubygem-state_machines-activemodel

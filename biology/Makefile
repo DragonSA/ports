@@ -1,4 +1,4 @@
-# $FreeBSD: head/biology/Makefile 456950 2017-12-22 01:30:26Z jwb $
+# $FreeBSD: head/biology/Makefile 470582 2018-05-21 22:15:26Z jwb $
 #
 
     COMMENT = Biology
@@ -7,6 +7,7 @@
     SUBDIR += artemis
     SUBDIR += avida
     SUBDIR += babel
+    SUBDIR += bamtools
     SUBDIR += bcftools
     SUBDIR += bedtools
     SUBDIR += biococoa
@@ -18,19 +19,24 @@
     SUBDIR += cd-hit
     SUBDIR += cdbfasta
     SUBDIR += chemeq
+    SUBDIR += clustal-omega
     SUBDIR += clustalw
+    SUBDIR += clustalx
     SUBDIR += consed
     SUBDIR += crux
+    SUBDIR += ddocent
     SUBDIR += diamond
     SUBDIR += emboss
     SUBDIR += fasta
     SUBDIR += fasta3
+    SUBDIR += fastahack
     SUBDIR += fastdnaml
     SUBDIR += fastool
     SUBDIR += fastqc
     SUBDIR += fasttree
     SUBDIR += fastx-toolkit
     SUBDIR += fluctuate
+    SUBDIR += freebayes
     SUBDIR += garlic
     SUBDIR += gff2ps
     SUBDIR += gmap
@@ -38,6 +44,7 @@
     SUBDIR += grappa
     SUBDIR += hmmer
     SUBDIR += htslib
+    SUBDIR += hyphy
     SUBDIR += iolib
     SUBDIR += iqtree
     SUBDIR += jalview
@@ -77,6 +84,10 @@
     SUBDIR += p5-TrimGalore
     SUBDIR += p5-transdecoder
     SUBDIR += paml
+    SUBDIR += pbbam
+    SUBDIR += pbcopper
+    SUBDIR += pbseqan
+    SUBDIR += pear-merger
     SUBDIR += phrap
     SUBDIR += phred
     SUBDIR += phylip
@@ -95,6 +106,7 @@
     SUBDIR += pycogent
     SUBDIR += pyfasta
     SUBDIR += python-nexus
+    SUBDIR += rainbow
     SUBDIR += recombine
     SUBDIR += ruby-bio
     SUBDIR += rubygem-bio
@@ -104,17 +116,24 @@
     SUBDIR += seqan-apps
     SUBDIR += seqan1
     SUBDIR += seqio
+    SUBDIR += seqtk
     SUBDIR += seqtools
     SUBDIR += sim4
     SUBDIR += slclust
+    SUBDIR += smithwaterman
     SUBDIR += ssaha
+    SUBDIR += stacks
     SUBDIR += tRNAscan-SE
     SUBDIR += t_coffee
+    SUBDIR += tabixpp
     SUBDIR += tinker
     SUBDIR += treepuzzle
+    SUBDIR += trimadap
     SUBDIR += trimmomatic
     SUBDIR += ugene
+    SUBDIR += unanimity
     SUBDIR += vcftools
+    SUBDIR += vcflib
     SUBDIR += velvet
     SUBDIR += wise
     SUBDIR += xmolwt

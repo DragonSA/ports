@@ -1,8 +1,8 @@
 # Created by: Yi-Jheng Lin <yzlin@cs.nctu.edu.tw>
-# $FreeBSD: head/devel/py-py/Makefile 455210 2017-11-30 15:50:30Z mat $
+# $FreeBSD: head/devel/py-py/Makefile 465371 2018-03-23 16:44:57Z sunpoet $
 
 PORTNAME=	py
-PORTVERSION=	1.5.2
+PORTVERSION=	1.5.3
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}

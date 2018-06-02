@@ -1,9 +1,9 @@
 #! /bin/sh
-# $FreeBSD: head/Mk/Scripts/generate-symbols.sh 399701 2015-10-19 17:04:33Z bdrewery $
+# $FreeBSD: head/Mk/Scripts/generate-symbols.sh 471264 2018-06-01 16:20:22Z mat $
 # Maintainer: portmgr@FreeBSD.org
 
 msg() {
-        echo "====> $@"
+        echo "====> $*"
 }
 
 msg "Finding symbols"

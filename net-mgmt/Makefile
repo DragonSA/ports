@@ -1,4 +1,4 @@
-# $FreeBSD: head/net-mgmt/Makefile 465194 2018-03-21 16:54:24Z pi $
+# $FreeBSD: head/net-mgmt/Makefile 470937 2018-05-26 18:06:29Z miwi $
 #
 
     COMMENT = Network management tools
@@ -43,6 +43,7 @@
     SUBDIR += check_logfiles
     SUBDIR += check_multi
     SUBDIR += check_mysql_health
+    SUBDIR += check_ssl_cert
     SUBDIR += chillispot
     SUBDIR += choparp
     SUBDIR += cidr
@@ -177,6 +178,7 @@
     SUBDIR += nedi
     SUBDIR += nefu
     SUBDIR += net-snmp
+    SUBDIR += netbox
     SUBDIR += netdata
     SUBDIR += netdisco
     SUBDIR += netdisco-mibs
@@ -248,6 +250,7 @@
     SUBDIR += p5-Net-IP-Match-Regexp
     SUBDIR += p5-Net-IP-Match-XS
     SUBDIR += p5-Net-IP-Resolver
+    SUBDIR += p5-Net-IP-XS
     SUBDIR += p5-Net-IPAddress
     SUBDIR += p5-Net-IPv4Addr
     SUBDIR += p5-Net-IPv6Addr
@@ -267,6 +270,7 @@
     SUBDIR += p5-SNMP-Simple
     SUBDIR += p5-SNMP-Trapinfo
     SUBDIR += p5-SNMP-Util
+    SUBDIR += p5-RDR-Collector
     SUBDIR += p5-SNMP_Session
     SUBDIR += p5-Telnet-Cisco
     SUBDIR += p5-Tie-NetAddr-IP
@@ -303,14 +307,23 @@
     SUBDIR += prometheus-collectd-exporter
     SUBDIR += pushgateway
     SUBDIR += py-adal
+    SUBDIR += py-ciscoconfparse
     SUBDIR += py-dnsdiag
     SUBDIR += py-ipcalc
     SUBDIR += py-ipy
+    SUBDIR += py-junos-eznc
     SUBDIR += py-msrest
     SUBDIR += py-msrestazure
+    SUBDIR += py-napalm
+    SUBDIR += py-napalm-logs
+    SUBDIR += py-ncclient
     SUBDIR += py-pdagent
+    SUBDIR += py-pyIOSXR
+    SUBDIR += py-prometheus-client
     SUBDIR += py-pyang
+    SUBDIR += py-pyeapi
     SUBDIR += py-pynsca
+    SUBDIR += py-pynxos
     SUBDIR += py-pysmi
     SUBDIR += py-pyzabbix
     SUBDIR += py-snmp4
@@ -372,6 +385,7 @@
     SUBDIR += triton-guesttools
     SUBDIR += unbound_exporter
     SUBDIR += unifi-devel
+    SUBDIR += unifi-lts
     SUBDIR += unifi5
     SUBDIR += victorops-nagios
     SUBDIR += vidalia

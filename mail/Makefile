@@ -1,4 +1,4 @@
-# $FreeBSD: head/mail/Makefile 463108 2018-02-27 05:01:28Z fluffy $
+# $FreeBSD: head/mail/Makefile 471210 2018-05-31 14:05:05Z joneum $
 #
 
     COMMENT = Electronic mail utilities
@@ -98,6 +98,8 @@
     SUBDIR += dot-forward
     SUBDIR += dovecot
     SUBDIR += dovecot-pigeonhole
+    SUBDIR += dovecot-pigeonhole04
+    SUBDIR += dovecot22
     SUBDIR += drac
     SUBDIR += dracmail
     SUBDIR += dspam
@@ -450,6 +452,7 @@
     SUBDIR += p5-SES
     SUBDIR += p5-Sendmail-AccessDB
     SUBDIR += p5-Sendmail-Milter
+    SUBDIR += p5-Sisimai
     SUBDIR += p5-Test-Email
     SUBDIR += p5-URI-imap
     SUBDIR += p5-URI-imaps
@@ -493,6 +496,7 @@
     SUBDIR += php72-imap
     SUBDIR += phplist
     SUBDIR += phpmailer
+    SUBDIR += phpmailer6
     SUBDIR += pine-pgp-filters
     SUBDIR += pm-lib
     SUBDIR += policyd2
@@ -538,6 +542,7 @@
     SUBDIR += py-cyruslib
     SUBDIR += py-dkimpy
     SUBDIR += py-email-reply-parser
+    SUBDIR += py-flask-mail
     SUBDIR += py-flufl.bounce
     SUBDIR += py-fuglu
     SUBDIR += py-libgmail
@@ -549,6 +554,7 @@
     SUBDIR += py-pyspf
     SUBDIR += py-pyzmail
     SUBDIR += py-spambayes
+    SUBDIR += py-validate_email
     SUBDIR += py-zope.sendmail
     SUBDIR += pymsgauth
     SUBDIR += pysieved
@@ -583,6 +589,7 @@
     SUBDIR += queue-repair
     SUBDIR += rainloop
     SUBDIR += rainloop-community
+    SUBDIR += ratelimit-policyd
     SUBDIR += raysfilter
     SUBDIR += razor-agents
     SUBDIR += rbl-milter
@@ -647,7 +654,6 @@
     SUBDIR += sieve-connect
     SUBDIR += sigrot
     SUBDIR += simscan
-    SUBDIR += sisyphus
     SUBDIR += slapd-cyrus
     SUBDIR += sma
     SUBDIR += smfsav
@@ -741,7 +747,6 @@
     SUBDIR += vqadmin
     SUBDIR += vrfy
     SUBDIR += wanderlust
-    SUBDIR += wanderlust-devel
     SUBDIR += websieve
     SUBDIR += whoson
     SUBDIR += wmbiff

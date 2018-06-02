@@ -1,9 +1,8 @@
 # Created by: TAKATSU Tomonari <tota@FreeBSD.org>
-# $FreeBSD: head/devel/R-cran-bit/Makefile 464084 2018-03-10 17:46:04Z gerald $
+# $FreeBSD: head/devel/R-cran-bit/Makefile 471128 2018-05-30 10:26:32Z tota $
 
 PORTNAME=	bit
-PORTREVISION=	2
-DISTVERSION=	1.1-12
+DISTVERSION=	1.1-14
 CATEGORIES=	devel
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 

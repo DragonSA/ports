@@ -1,4 +1,4 @@
-# $FreeBSD: head/audio/Makefile 464995 2018-03-19 08:23:13Z tobik $
+# $FreeBSD: head/audio/Makefile 471088 2018-05-29 09:17:39Z yuri $
 #
 
     COMMENT = Audio tools
@@ -33,6 +33,7 @@
     SUBDIR += ardour5
     SUBDIR += ario
     SUBDIR += arss
+    SUBDIR += artyfx-lv2
     SUBDIR += ascd
     SUBDIR += asmix
     SUBDIR += asmixer
@@ -45,6 +46,7 @@
     SUBDIR += audacity
     SUBDIR += audex
     SUBDIR += audiere
+    SUBDIR += audiocd-kio
     SUBDIR += audiotag
     SUBDIR += aumix
     SUBDIR += autocd
@@ -61,7 +63,7 @@
     SUBDIR += blop-lv2
     SUBDIR += boodler
     SUBDIR += bristol
-    SUBDIR += calf
+    SUBDIR += calf-lv2
     SUBDIR += cam
     SUBDIR += cantata
     SUBDIR += caps-lv2
@@ -142,6 +144,7 @@
     SUBDIR += ezstream
     SUBDIR += faac
     SUBDIR += faad
+    SUBDIR += fabla2-lv2
     SUBDIR += fapg
     SUBDIR += faust
     SUBDIR += fcplay
@@ -355,6 +358,7 @@
     SUBDIR += jid3lib
     SUBDIR += jmusic
     SUBDIR += jokosher
+    SUBDIR += juk
     SUBDIR += juk-kde4
     SUBDIR += juke
     SUBDIR += julius
@@ -365,10 +369,12 @@
     SUBDIR += kid3-qt4
     SUBDIR += kid3-qt5
     SUBDIR += kio-audiocd-kde4
+    SUBDIR += kmix
     SUBDIR += kmix-kde4
     SUBDIR += kscd-kde4
     SUBDIR += ksmp3play
     SUBDIR += kstreamripper
+    SUBDIR += kwave
     SUBDIR += ladspa
     SUBDIR += lame
     SUBDIR += lash
@@ -403,9 +409,12 @@
     SUBDIR += libgpod-sharp
     SUBDIR += libgroove
     SUBDIR += libid3tag
+    SUBDIR += libkcddb
     SUBDIR += libkcddb-kde4
+    SUBDIR += libkcompactdisc
     SUBDIR += libkcompactdisc-kde4
     SUBDIR += liblastfm
+    SUBDIR += liblastfm-qt5
     SUBDIR += liblo
     SUBDIR += liblscp
     SUBDIR += libltc
@@ -509,6 +518,7 @@
     SUBDIR += mixer.app
     SUBDIR += mixmos
     SUBDIR += mixxx
+    SUBDIR += mixxx20
     SUBDIR += mma
     SUBDIR += moc
     SUBDIR += modplugplay
@@ -552,7 +562,6 @@
     SUBDIR += msilbc
     SUBDIR += mumble
     SUBDIR += murmur
-    SUBDIR += muse
     SUBDIR += musepack
     SUBDIR += musescore
     SUBDIR += musicbox-tag-editor
@@ -570,6 +579,7 @@
     SUBDIR += nosefart
     SUBDIR += nspmod
     SUBDIR += nuvolaplayer
+    SUBDIR += oaml
     SUBDIR += ocp
     SUBDIR += ogg2mp3
     SUBDIR += openal
@@ -639,6 +649,7 @@
     SUBDIR += picard
     SUBDIR += picard-plugins
     SUBDIR += pithos
+    SUBDIR += plasma5-plasma-pa
     SUBDIR += play
     SUBDIR += playgsf
     SUBDIR += playmidi
@@ -904,6 +915,7 @@
     SUBDIR += xwave
     SUBDIR += yell
     SUBDIR += yoshimi
+    SUBDIR += zam-plugins-lv2
     SUBDIR += zinf
     SUBDIR += zita-convolver
     SUBDIR += zita-resampler

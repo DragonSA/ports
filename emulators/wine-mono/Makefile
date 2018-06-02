@@ -1,8 +1,8 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: head/emulators/wine-mono/Makefile 436652 2017-03-21 20:48:59Z gerald $
+# $FreeBSD: head/emulators/wine-mono/Makefile 470368 2018-05-19 07:59:57Z se $
 
 PORTNAME=	wine-mono
-DISTVERSION=	4.6.4
+DISTVERSION=	4.7.1
 CATEGORIES=	emulators
 MASTER_SITES=	http://dl.winehq.org/wine/wine-mono/${DISTVERSION}/
 EXTRACT_SUFX=	.msi
@@ -16,10 +16,12 @@ LICENSE_COMB=	multi
 
 PORTSCOUT=	ignore:1	# for newer versions see emulators/wine-mono-devel
 
+CONFLICTS_INSTALL=	wine-mono-devel-[0-9]*
+
 NO_BUILD=	yes
 PLIST_SUB+=	MONO_VERSION="${DISTVERSION}"
 DATADIR=	${PREFIX}/share/wine
-PLIST_FILES=	%%DATADIR%%/mono/wine-mono-%%MONO_VERSION%%.msi
+PLIST_FILES=	${DATADIR}/mono/wine-mono-${DISTVERSION}.msi
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${DATADIR}/mono

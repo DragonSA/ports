@@ -1,10 +1,10 @@
 # Created by: Laurent Courty
-# $FreeBSD: head/graphics/qgis/Makefile 464084 2018-03-10 17:46:04Z gerald $
+# $FreeBSD: head/graphics/qgis/Makefile 468632 2018-04-29 16:19:44Z tcberner $
 
 PORTNAME=	qgis
 DISTVERSIONPREFIX=	final-
 DISTVERSION=	2_18_17
-PORTREVISION=	1
+PORTREVISION=	6
 CATEGORIES=	graphics geography
 
 MAINTAINER=	rhurlin@gwdg.de
@@ -18,8 +18,8 @@ LIB_DEPENDS=	libexpat.so:textproc/expat2 \
 		libgeos.so:graphics/geos \
 		libgsl.so:math/gsl \
 		libproj.so:graphics/proj \
-		libqca.so:devel/qca \
-		libqjson.so:devel/qjson \
+		libqca.so:devel/qca@qt4 \
+		libqjson.so:devel/qjson@qt4 \
 		libqscintilla2_qt4.so:devel/qscintilla2 \
 		libqwt.so:x11-toolkits/qwt5 \
 		libspatialindex.so:devel/spatialindex \

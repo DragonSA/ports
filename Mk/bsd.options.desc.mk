@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/bsd.options.desc.mk 460280 2018-01-29 11:28:55Z sunpoet $
+# $FreeBSD: head/Mk/bsd.options.desc.mk 467512 2018-04-16 18:33:25Z sunpoet $
 #
 # READ BEFORE EDITING:
 # - Please keep descriptions sorted alphabetically by variable name.
@@ -179,6 +179,7 @@ JAVA_DESC?=		Java platform support
 JBIG_DESC?=		JBIG image format support
 JHEAD_DESC?=		jhead EXIF manipulator support
 JPEG_DESC?=		JPEG image format support
+JPEG2000_DESC?=		JPEG 2000 support
 JSON_C_DESC?=		JSON file/format parser support via json-c
 JSON_DESC?=		JSON file/format/parser support
 KDE4_DESC?=		KDE 4 desktop environment support
@@ -509,6 +510,7 @@ VORBIS_DESC?=		Ogg Vorbis audio codec support
 VPX_DESC?=		VP8/VP9 video codec support
 WAV_DESC?=		WAV audio format support
 WAVPACK_DESC?=		WavPack lossless audio format support
+WAYLAND_DESC?=		Wayland (graphics) support
 WEBGL_DESC?=		WebGL 2D/3D graphics rendering support
 WEBKIT_DESC?=		WebKit webpage renderer support
 WEBP_DESC?=		WebP image format support

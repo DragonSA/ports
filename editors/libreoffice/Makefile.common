@@ -1,8 +1,7 @@
-# $FreeBSD: head/editors/libreoffice/Makefile.common 465240 2018-03-21 21:24:43Z brnrd $
+# $FreeBSD: head/editors/libreoffice/Makefile.common 469498 2018-05-10 03:40:37Z lwhsu $
 
 PORTNAME=	libreoffice
-PORTVERSION=	6.0.2
-PORTREVISION=	2
+PORTVERSION=	6.0.4
 CATEGORIES+=	editors
 
 MAINTAINER=	office@FreeBSD.org
@@ -11,4 +10,4 @@ LICENSE=	LGPL3+ MPL20
 LICENSE_COMB=	dual
 
 LOVERSION=	${PORTVERSION}.${RCVER}
-RCVER=		1
+RCVER=		2
