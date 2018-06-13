@@ -1,8 +1,8 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: head/finance/R-cran-tseries/Makefile 471359 2018-06-02 10:49:38Z dbn $
+# $FreeBSD: head/finance/R-cran-tseries/Makefile 472338 2018-06-13 18:59:06Z dbn $
 
 PORTNAME=	tseries
-DISTVERSION=	0.10-44
+DISTVERSION=	0.10-45
 CATEGORIES=	finance
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
