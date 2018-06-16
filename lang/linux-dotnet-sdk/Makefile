@@ -34,6 +34,9 @@ DISTINFO_FILE=	${SLAVEDIR}/distinfo
 PLIST=		${SLAVEDIR}/pkg-plist
 PLIST_SUB=	VERSION=${DISTVERSION}
 
+BINFILES?=
+SCRIPTFILES?=
+
 do-build:
 	${LOCALBASE}/bin/lzma d ${WRKSRC}/sdk/${DISTVERSION}/nuGetPackagesArchive.lzma \
 		${WRKSRC}/sdk/${DISTVERSION}/nuGetPackagesArchive.zip
@@ -46,6 +49,14 @@ do-build:
 
 do-install:
 	cd ${WRKSRC} && ${COPYTREE_SHARE} . ${STAGEDIR}${DATADIR}
+.for bin in ${BINFILES}
+	${RM} ${STAGEDIR}${DATADIR}/${bin}
+	${INSTALL_PROGRAM} ${WRKSRC}/${bin} ${STAGEDIR}${DATADIR}/${bin}
+.endfor
+.for bin in ${SCRIPTFILES}
+	${RM} ${STAGEDIR}${DATADIR}/${bin}
+	${INSTALL_SCRIPT} ${WRKSRC}/${bin} ${STAGEDIR}${DATADIR}/${bin}
+.endfor
 	${RM} ${STAGEDIR}${DATADIR}/LICENSE.txt
 
 .include <bsd.port.mk>
