@@ -2,10 +2,10 @@
 # $FreeBSD$
 
 PORTNAME?=	dotnet-sdk
-DISTVERSION?=	2.1.101
+DISTVERSION?=	2.1.300
 DISTVERSIONSUFFIX=	-linux-x64
 CATEGORIES=	lang
-MASTER_SITES?=	https://download.microsoft.com/download/D/C/F/DCFA73BE-93CE-4DA0-AB76-98972FD6E475/
+MASTER_SITES?=	https://download.microsoft.com/download/8/8/5/88544F33-836A-49A5-8B67-451C24709A8F/
 PKGNAMEPREFIX=	linux-
 
 MAINTAINER=	mono@FreeBSD.org
@@ -23,8 +23,8 @@ RUN_DEPENDS?=	linux-dotnet-runtime>=2.0.6:lang/linux-dotnet-runtime
 DATADIR=	${PREFIX}/share/dotnet
 DESCR=		${.CURDIR}/../linux-dotnet-runtime/pkg-descr
 EXTRACT_AFTER_ARGS=     --no-same-owner --no-same-permissions \
-		--include LICENSE.txt --include sdk ${EXTRACT_EXTRA_ARGS}
-EXTRACT_EXTRA_ARGS?=	--include additionalDeps --include store
+			--include LICENSE.txt --include sdk ${EXTRACT_EXTRA_ARGS}
+EXTRACT_EXTRA_ARGS?=	--include shared/Microsoft.AspNetCore.All --include shared/Microsoft.AspNetCore.App
 NO_WRKSUBDIR=	yes
 
 USES=		linux:c7 python:build
