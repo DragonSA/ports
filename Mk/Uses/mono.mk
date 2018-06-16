@@ -20,6 +20,9 @@
 # makenuget	This target will output the NUGET_DEPENDS based on the
 #		port's packages.config file.
 #
+# makenupkg	This target will create nupkg-${NAME} files based on the
+# 		port's downloaded packages in ${NUGET_PACKAGEDIR}
+#
 # Variables overrideable by the port:
 #
 # NUGET_PACKAGEDIR	The directory in which the port expects the
@@ -32,10 +35,12 @@
 # ${NAME}_URL:		The base URL for the feed ${NAME}
 #			defaults:
 #				NUGET_URL=https://www.nuget.org/api/v2/
+#				${NAME}_URL=https://dotnet.myget.org/F/${NAME:tl:S/_/-/g}/api/v2/
 #
 # ${NAME}_FILE:		The file containing a list of nuget packages from
 # 			feed ${NAME} in the format:
 # 				${name}=${version}
+# 			default: ${PKGDIR}/nupkg-${NAME:tl}
 #
 # ${NAME}_DEPENDS:	The list of nuget packages from feed ${NAME} in the
 #			format:
@@ -78,7 +83,8 @@ GACUTIL_INSTALL_PACKAGE=${GACUTIL} /i /package 1.0 /package 2.0
 MAKE_ENV+=	NUGET_PACKAGES=${NUGET_PACKAGEDIR}
 
 # TODO: add nuget as a Port, use it for makenupkg
-NUGET_EXE?=	${WRKSRC}/external/nuget-binary/nuget.exe
+NUGET_EXE?=	${WRKDIR}/nuget.exe
+NUGET_LATEST_URL?=	https://dist.nuget.org/win-x86-commandline/latest/nuget.exe
 
 _NUGET_PACKAGEDIR=	${WRKDIR}/.nuget/packages
 NUGET_PACKAGEDIR?=	${WRKSRC}/packages
@@ -92,6 +98,7 @@ NUGET_DEPENDS?=		${PAKET_DEPENDS}
 . for feed in ${NUGET_FEEDS}
 ${feed}_DEPENDS?=
 ${feed}_FILE?=		${PKGDIR}/nupkg-${feed:tl}
+${feed}_URL?=		https://dotnet.myget.org/F/${feed:tl:S/_/-/g}/api/v2/
 .  if exists(${${feed}_FILE})
 ${feed}_EXTRA!=		${CAT} ${${feed}_FILE}
 .  else
@@ -165,22 +172,30 @@ makenuget: patch
 			-e '$$!s|$$| \\|g'
 
 makenupkg:
+	@[ -f ${NUGET_EXE} ] || fetch -o ${NUGET_EXE} ${NUGET_LATEST_URL}
 .for feed in ${NUGET_FEEDS}
-	@[ -f ${WRKDIR}/.nupkg-${feed:tl} ] || mono ${NUGET_EXE} list -IncludeDelisted -PreRelease -Source ${${feed}_URL} | ${SED} 's/ .*//g' > ${WRKDIR}/.nupkg-${feed:tl}
+	@[ -f ${WRKDIR}/.nupkg-${feed:tl} -o ${feed} = NUGET ] || mono ${NUGET_EXE} list -AllVersions -IncludeDelisted -PreRelease -Source ${${feed}_URL} | ${SED} 's/ /=/g' > ${WRKDIR}/.nupkg-${feed:tl}
 	@${RM} ${WRKDIR}/nupkg-${feed:tl}
 .endfor
-	@for nupkg in `${FIND} ${_NUGET_PACKAGEDIR} -name '*.sha512' | ${SED} 's/\.sha512//g'`; \
+	@for nupkg in `${FIND} ${NUGET_PACKAGEDIR} -name '*.sha512' | ${SED} 's/\.sha512//g'`; \
 	do \
 		name="`tar -tf $${nupkg} | ${GREP} nuspec | ${SED} 's/.nuspec//g'`"; \
 		version="`${BASENAME} $$(${DIRNAME} $$nupkg)`"; \
 		${ECHO} "$$name=$${version#$$name.}"; \
 	done | ${SORT} -u > ${WRKDIR}/.nupkgs
 	@${CAT} ${WRKDIR}/.nupkgs | while read nupkg; do \
+		default=no; \
 		for feed in ${NUGET_FEEDS:tl}; do \
-			if ${GREP} -q "^$${nupkg%%=*}\$$" ${WRKDIR}/.nupkg-$$feed; then \
+			if [ $$feed = nuget ]; then \
+				default=yes; \
+			elif ${GREP} -q "^$$nupkg\$$" ${WRKDIR}/.nupkg-$$feed; then \
 				${ECHO} $$nupkg >> ${WRKDIR}/nupkg-$$feed; \
+				default=na; \
 				break; \
 			fi; \
 		done; \
+		if [ $$default = yes ]; then \
+			${ECHO} $$nupkg >> ${WRKDIR}/nupkg-nuget; \
+		fi; \
 	done
 .endif
