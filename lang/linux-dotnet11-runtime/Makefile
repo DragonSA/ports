@@ -3,8 +3,8 @@
 
 PORTNAME?=	dotnet11-runtime
 DISTNAME=	dotnet-centos-x64.${DISTVERSION}
-DISTVERSION?=	1.1.7
-MASTER_SITES=	https://download.microsoft.com/download/1/4/1/1416E22E-A1C5-48E3-81EF-AFE86CDA9C78/
+DISTVERSION?=	1.1.8
+MASTER_SITES=	https://download.microsoft.com/download/1/B/8/1B80E25B-316E-4DFB-9707-DB758681F175/
 
 BINFILES=	shared/Microsoft.NETCore.App/${DISTVERSION}/corehost shared/Microsoft.NETCore.App/${DISTVERSION}/dotnet
 
