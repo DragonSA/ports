@@ -1,0 +1,3 @@
+MicroBuild.Core.Sentinel=1.0.0
+Microsoft.NET.Test.Sdk=15.6.0-dev
+System.Threading.Tasks.Dataflow=4.5.24
