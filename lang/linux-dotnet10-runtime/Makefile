@@ -2,8 +2,8 @@
 # $FreeBSD$
 
 PORTNAME=	dotnet10-runtime
-DISTVERSION=	1.0.10
-MASTER_SITES=	https://download.microsoft.com/download/2/E/1/2E1D70C2-F74D-4024-B14D-3F30330450A8/
+DISTVERSION=	1.0.11
+MASTER_SITES=	https://download.microsoft.com/download/B/E/7/BE70BFBD-9AB4-48F8-A696-013ACA8720D5/
 
 MASTERDIR=	${.CURDIR}/../linux-dotnet11-runtime
 
