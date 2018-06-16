@@ -2,10 +2,10 @@
 # $FreeBSD$
 
 PORTNAME?=	dotnet-runtime
-DISTVERSION?=	2.0.6
+DISTVERSION?=	2.1.0
 DISTVERSIONSUFFIX=	-linux-x64
 CATEGORIES=	lang
-MASTER_SITES?=	https://download.microsoft.com/download/8/D/A/8DA04DA7-565B-4372-BBCE-D44C7809A467/
+MASTER_SITES?=	https://download.microsoft.com/download/9/1/7/917308D9-6C92-4DA5-B4B1-B4A19451E2D2/
 PKGNAMEPREFIX=	linux-
 
 MAINTAINER=	mono@FreeBSD.org

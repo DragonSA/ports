@@ -14,7 +14,6 @@
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Collections.Specialized.dll
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Collections.dll
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.ComponentModel.Annotations.dll
-%%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.ComponentModel.Composition.dll
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.ComponentModel.DataAnnotations.dll
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.ComponentModel.EventBasedAsync.dll
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.ComponentModel.Primitives.dll
@@ -42,7 +41,9 @@
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Globalization.Extensions.dll
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Globalization.Native.so
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Globalization.dll
+%%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.IO.Compression.Brotli.dll
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.IO.Compression.FileSystem.dll
+%%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.IO.Compression.Native.a
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.IO.Compression.Native.so
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.IO.Compression.ZipFile.dll
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.IO.Compression.dll
@@ -53,6 +54,7 @@
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.IO.FileSystem.dll
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.IO.IsolatedStorage.dll
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.IO.MemoryMappedFiles.dll
+%%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.IO.Pipes.AccessControl.dll
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.IO.Pipes.dll
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.IO.UnmanagedMemoryStream.dll
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.IO.dll
@@ -60,8 +62,10 @@
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Linq.Parallel.dll
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Linq.Queryable.dll
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Linq.dll
+%%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Memory.dll
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Native.a
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Native.so
+%%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Net.Http.Native.a
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Net.Http.Native.so
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Net.Http.dll
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Net.HttpListener.dll
@@ -71,6 +75,7 @@
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Net.Ping.dll
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Net.Primitives.dll
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Net.Requests.dll
+%%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Net.Security.Native.a
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Net.Security.Native.so
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Net.Security.dll
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Net.ServicePoint.dll
@@ -121,6 +126,7 @@
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Security.Cryptography.Cng.dll
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Security.Cryptography.Csp.dll
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Security.Cryptography.Encoding.dll
+%%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Security.Cryptography.Native.OpenSsl.a
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Security.Cryptography.Native.OpenSsl.so
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Security.Cryptography.OpenSsl.dll
 %%DATADIR%%/shared/Microsoft.NETCore.App/%%VERSION%%/System.Security.Cryptography.Primitives.dll
