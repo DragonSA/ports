@@ -25,7 +25,8 @@ GH_ACCOUNT=	mono
 GH_TAGNAME=	0.06
 SHEBANG_FILES=	artifacts/mono-msbuild/msbuild build.sh build/*.sh
 
-MAKE_ENV=	NUGET_PACKAGEDIR=${NUGET_PACKAGEDIR}
+MAKE_ENV=	GIT_COMMIT=3c930fa8721935cf0e381fd349f6f50cf2bc223d
+MAKE_JOBS_UNSAFE=MSBuild has not implemented concurrent builds on non Windows platforms
 ALL_TARGET=	all-mono
 TEST_TARGET=	test-mono
 
