@@ -1,0 +1,9 @@
+--- src/MSBuild/MSBuild.csproj.orig	2018-06-24 12:39:00 UTC
++++ src/MSBuild/MSBuild.csproj
+@@ -332,5 +332,5 @@
+ 
+   <!-- Import targets to create bootstrap version of MSBuild if building for full Framework and Mono.
+        For .NET Core, a separate MSBuild.Bootstrap project is used. -->
+-  <Import Project="$(RepoRoot)build\BootStrapMSBuild.targets" Condition="$(TargetFramework.StartsWith('net4')) and '$(MonoBuild)' != 'true'" />
++  <Import Project="$(RepoRoot)build\BootStrapMSBuild.targets" Condition="'$(MonoBuild)' == 'true'" />
+ </Project>
