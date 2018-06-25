@@ -1,9 +1,0 @@
---- Makefile.orig	2018-06-22 13:51:23 UTC
-+++ Makefile
-@@ -1,5 +1,5 @@
- all-mono:
--	./build.sh -host mono -configuration Release -skipTests
-+	./build.sh -host mono -configuration Release -skipTests -dotnetbuildfromsource
- 
- test-mono:
- 	./build.sh -host mono -configuration Release

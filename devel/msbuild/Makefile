@@ -23,7 +23,7 @@ USES=		mono:nuget shebangfix
 USE_GITHUB=	yes
 GH_ACCOUNT=	mono
 GH_TAGNAME=	0.06
-SHEBANG_FILES=	artifacts/mono-msbuild/msbuild build.sh build/*.sh
+SHEBANG_FILES=	*.sh artifacts/mono-msbuild/msbuild build.sh build/*.sh
 
 MAKE_ENV=	GIT_COMMIT=3c930fa8721935cf0e381fd349f6f50cf2bc223d
 MAKE_JOBS_UNSAFE=MSBuild has not implemented concurrent builds on non Windows platforms
@@ -34,8 +34,16 @@ post-extract:
 	${MKDIR} ${WRKSRC}/artifacts
 	${MV} ${WRKDIR}/msbuild ${WRKSRC}/artifacts/mono-msbuild
 
+do-build:
+	(cd ${WRKSRC}; \
+		${SETENV} ${MAKE_ENV} ./build/build.sh -host mono -configuration Release -skipTests build)
+
 do-install:
 	(cd ${WRKSRC}; \
-		${SETENV} DESTDIR=${STAGEDIR} ./install-mono-prefix.sh ${PREFIX})
+		${SETENV} ${MAKE_ENV} DESTDIR=${STAGEDIR} PATH=${WRKSRC}/artifacts/mono-msbuild:$$PATH ./install-mono-prefix.sh ${PREFIX})
+
+do-test:
+	(cd ${WRKSRC}; \
+		${SETENV} ${MAKE_ENV} ./build/build.sh -host mono -configuration Release build)
 
 .include <bsd.port.mk>
