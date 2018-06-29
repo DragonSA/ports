@@ -1,4 +1,4 @@
-TIMESTAMP = 1530286630
+TIMESTAMP = 1530287193
 SHA256 (fsharp.compiler.tools.4.1.27.nupkg) = de71f1fc7985036abc137e33220bd5c4159eea1750f3c273d10ea23d92fe7d25
 SIZE (fsharp.compiler.tools.4.1.27.nupkg) = 11484408
 SHA256 (fsharp.core.3.0.2.nupkg) = 8257c6eb51ff3725592a0c98b2694a1d511900d887f0447c9417d961067c51ed
@@ -35,5 +35,5 @@ SHA256 (system.reflection.metadata.1.4.2.nupkg) = f16413c3739d246d93790c8e93cf3e
 SIZE (system.reflection.metadata.1.4.2.nupkg) = 486695
 SHA256 (system.valuetuple.4.3.1.nupkg) = 9770fd40d3a635c377f8a5eb37f663b9d943c95743c22b5b9619a8d22d75a3d8
 SIZE (system.valuetuple.4.3.1.nupkg) = 79198
-SHA256 (fsharp-fsharp-4.1.34_GH0.tar.gz) = 11dc20d00fec02f3368cb8e069122b4fcdc9a605244a7d17dcc2241b6fb96633
-SIZE (fsharp-fsharp-4.1.34_GH0.tar.gz) = 43460980
+SHA256 (fsharp-fsharp-10.0.2_GH0.tar.gz) = 1ae5e5e842df91f9f27aafa97109d74812219bc695384c5d8f1e8fbc5991d0ce
+SIZE (fsharp-fsharp-10.0.2_GH0.tar.gz) = 45328911

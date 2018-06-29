@@ -2,7 +2,7 @@
 # $FreeBSD: head/lang/fsharp/Makefile 460430 2018-01-30 19:00:27Z dbn $
 
 PORTNAME=	fsharp
-PORTVERSION=	4.1.34
+PORTVERSION=	10.0.2
 CATEGORIES=	lang
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
@@ -10,16 +10,16 @@ MAINTAINER=	mono@FreeBSD.org
 COMMENT=	Functional and object-oriented language for the .NET platform
 
 LICENSE=	MIT
-LICENSE_FILE=	${WRKSRC}/License.txt
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	msbuild:devel/msbuild
 TEST_DEPENDS=	libgdiplus>=0:x11-toolkits/libgdiplus
 
 USE_GITHUB=	yes
 
-USES=		autoreconf gmake mono:nuget pkgconfig
-GNU_CONFIGURE=	yes
+USES=		gmake mono:nuget pkgconfig
 MAKE_JOBS_UNSAFE=	Build not parallelizable
+NUGET_LAYOUT=	legacy
 NO_ARCH=	yes
 
 do-test:
