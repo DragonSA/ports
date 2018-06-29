@@ -51,6 +51,7 @@ NUnit=2.6.4
 Newtonsoft.Json=8.0.1
 Newtonsoft.Json=8.0.3
 Newtonsoft.Json=9.0.1
+NuGet.Build.Packaging=0.2.2
 SharpSvn.1.8-x86=1.8013.3694.107
 SharpZipLib=0.86.0
 StrongNamer=0.0.3

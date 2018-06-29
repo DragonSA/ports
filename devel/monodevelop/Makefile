@@ -27,8 +27,8 @@ RUN_DEPENDS=	${LOCALBASE}/lib/libgdiplus.a:x11-toolkits/libgdiplus \
 		fsharpc:lang/fsharp
 
 # main/external/fsharpbinding/paket.dependencies
-NUGET_FEEDS=	APPVEYOR AZURE_APPSERVICE NUGET ROSLYN TEMPLATING
-APPVEYOR_URL=	https://ci.appveyor.com/nuget/nugetizer3000/api/v2/
+NUGET_FEEDS=	AZURE_APPSERVICE NUGET ROSLYN TEMPLATING
+NUGET_LAYOUT=	legacy
 AZURE_APPSERVICE_URL=https://www.myget.org/F/azure-appservice/api/v2/
 TEMPLATING_URL=	https://dotnet.myget.org/F/templating/api/v2/
 ROSLYN_URL=	https://dotnet.myget.org/F/roslyn/api/v2/

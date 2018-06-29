@@ -1,0 +1,11 @@
+--- external/mono-addins/Mono.Addins.Setup/Mono.Addins.Setup.csproj.orig	2017-06-12 13:54:17 UTC
++++ external/mono-addins/Mono.Addins.Setup/Mono.Addins.Setup.csproj
+@@ -54,7 +54,7 @@
+       <Name>Mono.Addins</Name>
+       <Private>False</Private>
+     </ProjectReference>
+-    <PackageReference Include="NuGet.Build.Packaging" Version="0.1.276" />
++    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.2" />
+   </ItemGroup>
+   <ItemGroup>
+     <Compile Include="Mono.Addins.Setup\AddinInfo.cs" />
