@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/Makefile 471321 2018-06-01 23:02:51Z sunpoet $
+# $FreeBSD: head/textproc/Makefile 473216 2018-06-24 20:06:33Z sunpoet $
 #
 
     COMMENT = Text processing utilities (does not include desktop publishing)
@@ -155,11 +155,6 @@
     SUBDIR += el-aspell
     SUBDIR += el-hyphen
     SUBDIR += elasticsearch-plugin-head
-    SUBDIR += elasticsearch2
-    SUBDIR += elasticsearch2-plugin-hq
-    SUBDIR += elasticsearch2-plugin-marvel
-    SUBDIR += elasticsearch2-plugin-migration
-    SUBDIR += elasticsearch2-plugin-sql
     SUBDIR += elasticsearch5
     SUBDIR += elasticsearch5-search-guard
     SUBDIR += elasticsearch6
@@ -531,10 +526,8 @@
     SUBDIR += ocaml-csv
     SUBDIR += ocaml-expat
     SUBDIR += ocaml-text
-    SUBDIR += ocaml-tyxml
     SUBDIR += odt2txt
     SUBDIR += openfts
-    SUBDIR += opengrm-ngram
     SUBDIR += openjade
     SUBDIR += opensched
     SUBDIR += opensp
@@ -1290,6 +1283,7 @@
     SUBDIR += py-dbfread
     SUBDIR += py-diff-match-patch
     SUBDIR += py-docutils
+    SUBDIR += py-docx2txt
     SUBDIR += py-dsv
     SUBDIR += py-duecredit
     SUBDIR += py-elasticsearch
@@ -1297,8 +1291,6 @@
     SUBDIR += py-elasticsearch5
     SUBDIR += py-elasticsearch-curator
     SUBDIR += py-elasticsearch-dsl
-    SUBDIR += py-elasticsearch-dsl-py
-    SUBDIR += py-elasticsearch2-dsl-py
     SUBDIR += py-elib.intl
     SUBDIR += py-empy
     SUBDIR += py-enchant
@@ -1309,6 +1301,7 @@
     SUBDIR += py-feedparser
     SUBDIR += py-gambit-elasticsearch
     SUBDIR += py-genshi
+    SUBDIR += py-gensim
     SUBDIR += py-gfm
     SUBDIR += py-guess-language
     SUBDIR += py-hexdump
@@ -1335,6 +1328,8 @@
     SUBDIR += py-nltk
     SUBDIR += py-numpydoc
     SUBDIR += py-openpyxl
+    SUBDIR += py-openstackdocstheme
+    SUBDIR += py-orange3-text
     SUBDIR += py-pager
     SUBDIR += py-pandocfilters
     SUBDIR += py-paragrep
@@ -1342,8 +1337,11 @@
     SUBDIR += py-parsimonious
     SUBDIR += py-parso
     SUBDIR += py-pdfminer
+    SUBDIR += py-pdfminer3k
+    SUBDIR += py-pdfrw
     SUBDIR += py-pss
     SUBDIR += py-pyPEG2
+    SUBDIR += py-pyaml
     SUBDIR += py-pyctpp2
     SUBDIR += py-pyes
     SUBDIR += py-pygments
@@ -1371,6 +1369,7 @@
     SUBDIR += py-qt5-xmlpatterns
     SUBDIR += py-rdflib
     SUBDIR += py-regex
+    SUBDIR += py-reno
     SUBDIR += py-reverend
     SUBDIR += py-rnc2rng
     SUBDIR += py-rss2gen
@@ -1392,6 +1391,7 @@
     SUBDIR += py-sphinxcontrib-bitbucket
     SUBDIR += py-sphinxcontrib-fulltoc
     SUBDIR += py-sphinxcontrib-httpdomain
+    SUBDIR += py-sphinxcontrib-newsfeed
     SUBDIR += py-sphinxcontrib-programoutput
     SUBDIR += py-sphinxcontrib-websupport
     SUBDIR += py-stemming
@@ -1414,6 +1414,7 @@
     SUBDIR += py-wordnet
     SUBDIR += py-wstools
     SUBDIR += py-wtforms
+    SUBDIR += py-xhtml2pdf
     SUBDIR += py-xlrd
     SUBDIR += py-xlsxwriter
     SUBDIR += py-xlutils
@@ -1526,6 +1527,7 @@
     SUBDIR += rubygem-github-linguist
     SUBDIR += rubygem-github-linguist53
     SUBDIR += rubygem-github-markup
+    SUBDIR += rubygem-github-markup16
     SUBDIR += rubygem-gitlab-grit
     SUBDIR += rubygem-gitlab-linguist
     SUBDIR += rubygem-gitlab-markup

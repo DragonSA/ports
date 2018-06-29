@@ -1,4 +1,4 @@
-# $FreeBSD: head/multimedia/Makefile 470583 2018-05-21 22:52:23Z swills $
+# $FreeBSD: head/multimedia/Makefile 472983 2018-06-21 16:52:09Z tcberner $
 #
 
     COMMENT = Multimedia software
@@ -42,6 +42,7 @@
     SUBDIR += cx88
     SUBDIR += deforaos-player
     SUBDIR += devede
+    SUBDIR += din
     SUBDIR += dirac
     SUBDIR += dragon
     SUBDIR += dragon-kde4
@@ -359,10 +360,6 @@
     SUBDIR += qt4-mobility
     SUBDIR += qt4-multimedia
     SUBDIR += qt5-multimedia
-    SUBDIR += qt5-phonon4
-    SUBDIR += qt5-phonon4-designerplugin
-    SUBDIR += qt5-phonon4-gstreamer
-    SUBDIR += qt5-phonon4-vlc
     SUBDIR += quark
     SUBDIR += quodlibet
     SUBDIR += quvi

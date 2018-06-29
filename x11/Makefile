@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11/Makefile 471255 2018-06-01 11:41:18Z ericbsd $
+# $FreeBSD: head/x11/Makefile 473286 2018-06-25 00:47:02Z swills $
 #
 
     COMMENT = Ports to support the X window system
@@ -62,7 +62,6 @@
     SUBDIR += eaglemode
     SUBDIR += editres
     SUBDIR += emprint
-    SUBDIR += enventor
     SUBDIR += erun
     SUBDIR += eterm
     SUBDIR += evieext
@@ -227,6 +226,7 @@
     SUBDIR += lxhotkey
     SUBDIR += lxmenu-data
     SUBDIR += lxpanel
+    SUBDIR += lxqt-globalkeys
     SUBDIR += lxqt-l10n
     SUBDIR += lxrandr
     SUBDIR += mate
@@ -367,6 +367,7 @@
     SUBDIR += wmctrl
     SUBDIR += wmdrawer
     SUBDIR += wmmatrix
+    SUBDIR += wmsystemtray
     SUBDIR += wmutils-core
     SUBDIR += wmutils-opt
     SUBDIR += wmxss

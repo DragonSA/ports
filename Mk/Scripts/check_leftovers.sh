@@ -1,5 +1,5 @@
 #! /bin/sh
-# $FreeBSD: head/Mk/Scripts/check_leftovers.sh 471266 2018-06-01 16:20:29Z mat $
+# $FreeBSD: head/Mk/Scripts/check_leftovers.sh 471992 2018-06-08 09:26:34Z mat $
 #
 # MAINTAINER: portmgr@FreeBSD.org
 #
@@ -45,11 +45,11 @@ fi
 if [ -z "${CCACHE_DIR}" ]; then
 	CCACHE_DIR=$(make -C ${portdir} -VCCACHE_DIR)
 fi
-homedirs=$(awk -F: -v users=$(make -C ${portdir} -V USERS|sed -e 's, ,|,g;/^$/d;s,^,^(,;s,$,)$,') 'users && $1 ~ users {print $9}' ${PORTSDIR}/UIDs|sort -u|sed -e "s|/usr/local|${PREFIX}|"|tr "\n" " ")
+homedirs=$(awk -F: -v users="$(make -C ${portdir} -V USERS|sed -e 's, ,|,g;/^$/d;s,^,^(,;s,$,)$,')" 'users && $1 ~ users {print $9}' ${PORTSDIR}/UIDs|sort -u|sed -e "s|/usr/local|${PREFIX}|"|tr "\n" " ")
 plistsub_sed=$(make -C ${portdir} -VPLIST_SUB_SED | /bin/sh ${PORTSDIR}/Mk/Scripts/plist_sub_sed_sort.sh)
 tmpplist=$(make -C ${portdir} -VTMPPLIST)
 
-while read modtype path extra; do
+while read -r modtype path extra; do
 	# Ignore everything from these files/directories
 	case "${path}" in
 		${CCACHE_DIR}/*|\

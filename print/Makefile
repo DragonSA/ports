@@ -1,4 +1,4 @@
-# $FreeBSD: head/print/Makefile 466875 2018-04-09 18:23:16Z tcberner $
+# $FreeBSD: head/print/Makefile 473025 2018-06-22 08:37:44Z tota $
 #
 
     COMMENT = Desktop publishing
@@ -197,6 +197,7 @@
     SUBDIR += py-pdf2
     SUBDIR += py-pollyreports
     SUBDIR += py-preppy
+    SUBDIR += py-psautohint
     SUBDIR += py-pycups
     SUBDIR += py-pyscript
     SUBDIR += py-python-ly
@@ -210,6 +211,7 @@
     SUBDIR += qpdf
     SUBDIR += qpdfview
     SUBDIR += qt5-printsupport
+    SUBDIR += R-cran-tinytex
     SUBDIR += rlpr
     SUBDIR += rprint
     SUBDIR += rtf2latex2e

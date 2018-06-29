@@ -1,9 +1,10 @@
-# $FreeBSD: head/comms/Makefile 469278 2018-05-07 08:56:24Z mr $
+# $FreeBSD: head/comms/Makefile 473274 2018-06-24 20:28:18Z yuri $
 #
 
     COMMENT = Communication utilities
 
     SUBDIR += acfax
+    SUBDIR += airspy
     SUBDIR += aldo
     SUBDIR += amtterm
     SUBDIR += anyremote
@@ -71,11 +72,8 @@
     SUBDIR += hylafax
     SUBDIR += ibp
     SUBDIR += inspectrum
-    SUBDIR += java-commapi
-    SUBDIR += java-commapi-freebsd
     SUBDIR += java-simple-serial-connector
     SUBDIR += jerm
-    SUBDIR += jsdr
     SUBDIR += kb
     SUBDIR += kermit
     SUBDIR += klog
@@ -168,7 +166,6 @@
     SUBDIR += seyon
     SUBDIR += sms_client
     SUBDIR += smstools3
-    SUBDIR += soundmodem
     SUBDIR += spandsp
     SUBDIR += splat
     SUBDIR += sredird

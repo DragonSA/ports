@@ -1,4 +1,4 @@
-# $FreeBSD: head/math/Makefile 471357 2018-06-02 10:44:02Z dbn $
+# $FreeBSD: head/math/Makefile 473488 2018-06-28 08:33:10Z yuri $
 #
 
     COMMENT = Mathematics
@@ -76,6 +76,7 @@
     SUBDIR += R-cran-numDeriv
     SUBDIR += R-cran-outliers
     SUBDIR += R-cran-pbkrtest
+    SUBDIR += R-cran-pls
     SUBDIR += R-cran-prodlim
     SUBDIR += R-cran-psych
     SUBDIR += R-cran-quadprog
@@ -152,7 +153,6 @@
     SUBDIR += clblas
     SUBDIR += clblast
     SUBDIR += clfft
-    SUBDIR += clipper
     SUBDIR += cln
     SUBDIR += cloog
     SUBDIR += clp
@@ -166,12 +166,14 @@
     SUBDIR += crlibm
     SUBDIR += cryptominisat
     SUBDIR += cvc3
+    SUBDIR += cvc4
     SUBDIR += diehard
     SUBDIR += dieharder
     SUBDIR += djbfft
     SUBDIR += drgeo
     SUBDIR += dynare
     SUBDIR += e
+    SUBDIR += ecos
     SUBDIR += edenmath
     SUBDIR += eigen2
     SUBDIR += eigen3
@@ -200,6 +202,7 @@
     SUBDIR += fpc-gmp
     SUBDIR += fpc-numlib
     SUBDIR += freemat
+    SUBDIR += fricas
     SUBDIR += fxt
     SUBDIR += g2o
     SUBDIR += galculator
@@ -691,9 +694,12 @@
     SUBDIR += py-pandas
     SUBDIR += py-pandas-datareader
     SUBDIR += py-patsy
+    SUBDIR += py-permutation
+    SUBDIR += py-petsc4py
     SUBDIR += py-piranha
     SUBDIR += py-plastex
     SUBDIR += py-probstat
+    SUBDIR += py-pyFFTW
     SUBDIR += py-pyasp
     SUBDIR += py-pybloom
     SUBDIR += py-pycosat
@@ -714,6 +720,9 @@
     SUBDIR += py-scikit-umfpack
     SUBDIR += py-seaborn
     SUBDIR += py-secp256k1
+    SUBDIR += py-simhash
+    SUBDIR += py-slepc4py
+    SUBDIR += py-spectral
     SUBDIR += py-statsmodels
     SUBDIR += py-svgmath
     SUBDIR += py-sym
@@ -762,7 +771,6 @@
     SUBDIR += sc-im
     SUBDIR += scalapack
     SUBDIR += scilab
-    SUBDIR += scilab-toolbox-sivp
     SUBDIR += scilab-toolbox-swt
     SUBDIR += sdpa
     SUBDIR += sdpara
@@ -771,6 +779,7 @@
     SUBDIR += sfst
     SUBDIR += simd-viterbi
     SUBDIR += slatec
+    SUBDIR += slepc
     SUBDIR += slgrace
     SUBDIR += snns
     SUBDIR += solitaire

@@ -1,6 +1,6 @@
 #!/bin/sh
 # MAINTAINER: portmgr@FreeBSD.org
-# $FreeBSD: head/Mk/Scripts/depends-list.sh 471265 2018-06-01 16:20:26Z mat $
+# $FreeBSD: head/Mk/Scripts/depends-list.sh 471988 2018-06-08 09:26:20Z mat $
 
 set -e
 
@@ -101,10 +101,14 @@ check_dep() {
 		# Grab any needed vars from the port.
 
 		if [ ${requires_wrkdir} -eq 1 ]; then
+			# shellcheck disable=SC2046
+			# We want word splitting here.
 			set -- $(${dp_MAKE} -C ${d} -VWRKDIR -V_UNIFIED_DEPENDS)
 			wrkdir="$1"
 			shift
 		elif [ ${recursive} -eq 1 ]; then
+			# shellcheck disable=SC2046
+			# We want word splitting here.
 			set -- $(${dp_MAKE} -C ${d} -V_UNIFIED_DEPENDS)
 		fi
 
