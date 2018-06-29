@@ -18,6 +18,7 @@ BUILD_DEPENDS=	bash:shells/bash \
 		python:lang/python
 
 NUGET_FEEDS=	DOTNET_CORE NUGET ROSLYN ROSLYN_TOOLS SYMREADER_CONVERTER
+NUGET_LAYOUT=	dotnet
 
 USES=		mono:nuget shebangfix
 USE_GITHUB=	yes
