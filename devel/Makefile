@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/Makefile 473525 2018-06-29 00:26:06Z yuri $
+# $FreeBSD: head/devel/Makefile 473618 2018-06-30 13:03:52Z farrokhi $
 #
 
     COMMENT = Development utilities
@@ -5113,6 +5113,7 @@
     SUBDIR += py-usb
     SUBDIR += py-user_agents
     SUBDIR += py-utils
+    SUBDIR += py-uvloop
     SUBDIR += py-validators
     SUBDIR += py-validictory
     SUBDIR += py-vcrpy
