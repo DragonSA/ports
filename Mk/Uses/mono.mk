@@ -31,6 +31,7 @@
 #
 # NUGET_LAYOUT		The directory layout of ${NUGET_PACKAGEDIR}:
 # 				legacy:
+# 					${NAME}
 # 					${NAME}.${VERSION}
 # 					${NAME.tl}/${VERSION}
 # 				flat:
@@ -154,7 +155,12 @@ nuget-extract:
 		> ${_NUGET_PACKAGEDIR}/${nupkg:tl:C/^.*://:S|=|/|}/${nupkg:tl:C/^.*://:S/=/./}.nupkg.sha512
 .  if ${NUGET_LAYOUT} == legacy
 	@${CP} -a ${_NUGET_PACKAGEDIR}/${nupkg:tl:C/^.*://:S|=|/|}/ ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S|=|.|}/
-.   if ${nupkg} != ${nupkg}
+	@${CP} -a ${_NUGET_PACKAGEDIR}/${nupkg:tl:C/^.*://:S|=|/|}/ ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:C|=.*||}/
+.   if ${nupkg} != ${nupkg:tl}
+	@(cd ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:C|=.*||}; \
+		${MV} ${nupkg:tl:C/^.*://:C/=.*//}.nuspec ${nupkg:C/^.*://:C/=.*//}.nuspec; \
+		${MV} ${nupkg:tl:C/^.*://:S/=/./}.nupkg ${nupkg:C/^.*://:S/=/./}.nupkg; \
+		${MV} ${nupkg:tl:C/^.*://:S/=/./}.nupkg.sha512 ${nupkg:C/^.*://:S/=/./}.nupkg.sha512)
 	@(cd ${_NUGET_PACKAGEDIR}/${nupkg:C/^.*://:S|=|.|}; \
 		${MV} ${nupkg:tl:C/^.*://:C/=.*//}.nuspec ${nupkg:C/^.*://:C/=.*//}.nuspec; \
 		${MV} ${nupkg:tl:C/^.*://:S/=/./}.nupkg ${nupkg:C/^.*://:S/=/./}.nupkg; \
