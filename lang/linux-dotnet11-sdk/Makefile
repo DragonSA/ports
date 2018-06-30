@@ -1,5 +1,5 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
-# $FreeBSD: head/lang/linux-dotnet11-sdk/Makefile 473600 2018-06-30 07:40:20Z dbn $
+# $FreeBSD: head/lang/linux-dotnet11-sdk/Makefile 473601 2018-06-30 07:49:40Z dbn $
 
 PORTNAME=	dotnet10-sdk
 DISTVERSION=	1.1.9
@@ -8,7 +8,7 @@ MASTER_SITES=	https://download.microsoft.com/download/4/0/2/4022CFC7-5061-4762-B
 
 RUN_DEPENDS=	linux-dotnet10-runtime>=0:lang/linux-dotnet10-runtime \
 		linux-dotnet11-runtime>=0:lang/linux-dotnet11-runtime \
-		bash:shell/bash
+		bash:shells/bash
 
 MASTERDIR=	${.CURDIR}/../linux-dotnet-sdk
 
