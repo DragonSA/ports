@@ -2,12 +2,9 @@
 # $FreeBSD: head/devel/monodevelop/Makefile 465694 2018-03-27 11:55:18Z antoine $
 
 PORTNAME=	monodevelop
-PORTVERSION=	7.1.0.1297
+PORTVERSION=	7.5.3.7
 DISTVERSIONPREFIX=	${PORTNAME}-
 CATEGORIES=	devel
-MASTER_SITES=	https://dl.xamarin.com/uploads/at5p4wjtk44/:xamarin
-DISTFILES=	${AZURE_CLI:C/[^-]*-//}:xamarin
-EXTRACT_ONLY=	${_DISTFILES:N*.nupkg:N*.zip}
 
 MAINTAINER=	mono@FreeBSD.org
 COMMENT=	IDE for the .NET platform
@@ -26,24 +23,29 @@ RUN_DEPENDS=	${LOCALBASE}/lib/libgdiplus.a:x11-toolkits/libgdiplus \
 		svn:devel/subversion \
 		fsharpc:lang/fsharp
 
-# main/external/fsharpbinding/paket.dependencies
-NUGET_FEEDS=	AZURE_APPSERVICE NUGET ROSLYN TEMPLATING
+# main/external/fsharpbinding/paket.lock
+NUGET_FEEDS=	AZURE_APPSERVICE NUGET ROSLYN ROSLYN_FOR_VS_FOR_MAC  TEMPLATING VS_IMPL VS_EDITOR VSSDK VSTEST
 NUGET_LAYOUT=	legacy
 AZURE_APPSERVICE_URL=https://www.myget.org/F/azure-appservice/api/v2/
-TEMPLATING_URL=	https://dotnet.myget.org/F/templating/api/v2/
-ROSLYN_URL=	https://dotnet.myget.org/F/roslyn/api/v2/
+VS_IMPL_URL=	https://vside.myget.org/F/vs-impl/api/v2/
+VS_EDITOR_URL=	https://www.myget.org/F/vs-editor/api/v2/
+VSSDK_URL=	https://vside.myget.org/F/vssdk/api/v2/
 PAKET_DEPENDS=	ExtCore=0.8.46 \
+		FAKE=4.61.1 \
 		FSharp.Compiler.CodeDom=0.9.2 \
-		FSharp.Compiler.Service=11.0.10 \
-		FSharp.Core=4.1.0.2 \
+		FSharp.Compiler.Service=17.0.1 \
+		FSharp.Core=4.3.3 \
 		Fantomas=2.6.1 \
-		Mono.Cecil=0.10.0-beta5 \
-		Newtonsoft.Json=9.0.1 \
-		StrongNamer=0.0.3 \
+		Mono.Cecil=0.10.0-beta6 \
+		Newtonsoft.Json=10.0.3 \
+		StrongNamer=0.0.6 \
 		System.Collections.Immutable=1.3.1 \
+		System.Reactive.Core=3.1.1 \
+		System.Reactive.Interfaces=3.1.1 \
+		System.Reactive.Linq=3.1.1 \
 		System.Reflection.Metadata=1.4.2 \
-		System.ValueTuple=4.3.0
-PAKET_PACKAGEDIR=	${WRKSRC}/external/fsharpbinding/packages
+		System.ValueTuple=4.4.0
+PAKET_PACKAGEDIR=${WRKSRC}/external/fsharpbinding/packages
 
 USES=		autoreconf desktop-file-utils gettext gmake mono:nuget pathfix pkgconfig shared-mime-info ssl
 USE_GNOME=	gtksharp20 gnomesharp20
@@ -55,39 +57,25 @@ CONFIGURE_ARGS=	--enable-release --disable-update-mimedb --disable-update-deskto
 INSTALL=	/usr/bin/install
 USE_GITHUB=	yes
 GH_ACCOUNT=	mono
-GH_TUPLE=	icsharpcode:RefactoringEssentials:e67e215:1/external/RefactoringEssentials \
-		mono:debugger-libs:9960de0:3/external/debugger-libs \
-		mono:guiunit:052ee0f:4/external/guiunit \
+GH_TUPLE=	icsharpcode:RefactoringEssentials:684259e:1/external/RefactoringEssentials \
+		mono:debugger-libs:094d373:3/external/debugger-libs \
+		mono:guiunit:1306b0d:4/external/guiunit \
 		mono:libgit-binary:d8b2aca:6/external/libgit-binary \
 		mono:libgit2:e8b8948:7/external/libgit2 \
 		mono:libgit2sharp:319fa36:8/external/libgit2sharp \
-		mono:mono-addins:993c9c5:9/external/mono-addins \
-		icsharpcode:NRefactory:e453674:10/external/nrefactory \
-		mono:nuget-binary:25573a8:11/external/nuget-binary \
-		mono:xwt:8d64080:12/external/xwt
+		mono:mono-addins:84fa753:9/external/mono-addins \
+		icsharpcode:NRefactory:0607a4a:10/external/nrefactory \
+		mono:nuget-binary:ebedbf8:11/external/nuget-binary \
+		mono:xwt:5a3ab51:12/external/xwt
 
 INSTALL_TARGET=	install-strip
 MAKE_ENV=	DOTNET_MSBUILD_SDK_RESOLVER_SDKS_DIR= \
 		XDG_CACHE_HOME=${WRKDIR}
-MAKE_JOBS_UNSAFE=	Build parallelization not implemented
-WRKSRC_SUBDIR=		main
+MAKE_JOBS_UNSAFE=Build parallelization not implemented
+WRKSRC_SUBDIR=	main
 PORTSCOUT=	limit:^\d+\.\d+\.[1-9]\d*
 
-# ${WKRSRC}/src/addins/MonoDevelop.AzureFunctions/MonoDevelop.AzureFunctions.csproj
-AZURE_CLI=	81a64e48-azure-functions-cli-66a932fb.zip
-
-post-extract:
-	${MKDIR} ${WRKDIR}/MDBuild
-	${CP} ${DISTDIR}/${AZURE_CLI:C/[^-]*-//} ${WRKDIR}/MDBuild/${AZURE_CLI:S/.zip//}
-	${TOUCH} ${WRKDIR}/MDBuild/${AZURE_CLI:S/.zip//}.verified
-
 post-patch:
-	${REINPLACE_CMD} 's/0.1.157-dev/0.1.248/g' \
-		${WRKSRC}/src/addins/MonoDevelop.Packaging/MonoDevelop.Packaging/DotNetProjectExtensions.cs \
-		${WRKSRC}/src/addins/MonoDevelop.Packaging/PostBuild.proj \
-		${WRKSRC}/src/addins/MonoDevelop.Packaging/Templates/CrossPlatformLibrary.xpt.xml \
-		${WRKSRC}/src/addins/MonoDevelop.Packaging/Templates/PackagingProject.xpt.xml \
-		${WRKSRC}/src/addins/MonoDevelop.Packaging/packages.config
 	${ECHO} "Release ID: ${PORTVERSION}" > ${WRKSRC}/buildinfo
 
 .include <bsd.port.mk>
