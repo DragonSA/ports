@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/Makefile 473618 2018-06-30 13:03:52Z farrokhi $
+# $FreeBSD: head/devel/Makefile 473620 2018-06-30 14:49:09Z dbn $
 #
 
     COMMENT = Development utilities
@@ -1790,6 +1790,7 @@
     SUBDIR += mpatrol
     SUBDIR += mph
     SUBDIR += mq4cpp
+    SUBDIR += msbuild
     SUBDIR += msgpack
     SUBDIR += msgpack-d
     SUBDIR += msgpuck
