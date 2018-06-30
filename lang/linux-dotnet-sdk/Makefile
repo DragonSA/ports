@@ -20,14 +20,14 @@ BUILD_DEPENDS=	${LOCALBASE}/bin/lzma:archivers/lzma \
 		zip:archivers/zip
 RUN_DEPENDS?=	linux-dotnet-runtime>=2.0.6:lang/linux-dotnet-runtime
 
+USES=		linux:c7 python:build
+
 DATADIR=	${PREFIX}/share/dotnet
 DESCR=		${.CURDIR}/../linux-dotnet-runtime/pkg-descr
 EXTRACT_AFTER_ARGS=     --no-same-owner --no-same-permissions \
 			--include LICENSE.txt --include sdk ${EXTRACT_EXTRA_ARGS}
 EXTRACT_EXTRA_ARGS?=	--include additionalDeps --include store
 NO_WRKSUBDIR=	yes
-
-USES=		linux:c7 python:build
 
 SLAVEDIR=	${.CURDIR}
 DISTINFO_FILE=	${SLAVEDIR}/distinfo

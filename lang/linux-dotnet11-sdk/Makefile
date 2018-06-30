@@ -10,13 +10,13 @@ RUN_DEPENDS=	linux-dotnet10-runtime>=0:lang/linux-dotnet10-runtime \
 		linux-dotnet11-runtime>=0:lang/linux-dotnet11-runtime \
 		bash:shell/bash
 
+MASTERDIR=	${.CURDIR}/../linux-dotnet-sdk
+
 EXTRACT_EXTRA_ARGS=
 
 BINFILES=	sdk/${DISTVERSION}/corehost
 SCRIPTFILES=	sdk/${DISTVERSION}/Roslyn/RunCsc.sh \
 		sdk/${DISTVERSION}/Roslyn/RunVbc.sh \
 		sdk/${DISTVERSION}/FSharp/RunFsc.sh
-
-MASTERDIR=	${.CURDIR}/../linux-dotnet-sdk
 
 .include "${MASTERDIR}/Makefile"

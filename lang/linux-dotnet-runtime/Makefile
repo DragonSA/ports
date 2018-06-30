@@ -14,11 +14,11 @@ COMMENT=	Cross-platform .NET implementation
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE.txt
 
+ONLY_FOR_ARCHS=	amd64
+
 .if ${PORTNAME} != dotnet-cli
 RUN_DEPENDS=	dotnet:lang/linux-dotnet-cli
 .endif
-
-ONLY_FOR_ARCHS=	amd64
 
 USES=		linux:c7
 USE_LINUX?=	curl icu libunwind lttng-ust openssl
