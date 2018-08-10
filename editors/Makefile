@@ -1,4 +1,4 @@
-# $FreeBSD: head/editors/Makefile 473396 2018-06-26 16:30:49Z lwhsu $
+# $FreeBSD: head/editors/Makefile 476569 2018-08-07 07:06:04Z acm $
 #
 
     COMMENT = Editors
@@ -33,6 +33,7 @@
     SUBDIR += dte
     SUBDIR += e3
     SUBDIR += ecce
+    SUBDIR += ecrire
     SUBDIR += edith
     SUBDIR += editorconfig-core-c
     SUBDIR += emacs
@@ -48,6 +49,7 @@
     SUBDIR += gedit
     SUBDIR += gedit-plugins
     SUBDIR += ghex
+    SUBDIR += ghostwriter
     SUBDIR += gmanedit
     SUBDIR += gnotepad+
     SUBDIR += gobby
@@ -213,6 +215,7 @@
     SUBDIR += paredit-mode.el
     SUBDIR += pdfedit
     SUBDIR += pico-alpine
+    SUBDIR += picpas
     SUBDIR += pluma
     SUBDIR += plume-creator-devel
     SUBDIR += poedit

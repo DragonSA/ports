@@ -1,4 +1,4 @@
-# $FreeBSD: head/audio/Makefile 471892 2018-06-07 00:34:18Z rene $
+# $FreeBSD: head/audio/Makefile 476294 2018-08-03 13:33:39Z rene $
 #
 
     COMMENT = Audio tools
@@ -147,6 +147,8 @@
     SUBDIR += fabla2-lv2
     SUBDIR += fapg
     SUBDIR += faust
+    SUBDIR += faust-lv2
+    SUBDIR += faustlive
     SUBDIR += fcplay
     SUBDIR += fdk-aac
     SUBDIR += fdmf
@@ -203,10 +205,10 @@
     SUBDIR += gbsplay
     SUBDIR += gervill
     SUBDIR += ghostess
+    SUBDIR += giada
     SUBDIR += gimmix
     SUBDIR += gkrellmms2
     SUBDIR += gkrellmvolume2
-    SUBDIR += glame
     SUBDIR += glurp
     SUBDIR += gmidimonitor
     SUBDIR += gmixer
@@ -364,6 +366,7 @@
     SUBDIR += julius
     SUBDIR += kexis
     SUBDIR += kid3-kde4
+    SUBDIR += kid3-kf5
     SUBDIR += kid3-qt4
     SUBDIR += kid3-qt5
     SUBDIR += kio-audiocd-kde4
@@ -424,7 +427,6 @@
     SUBDIR += libmp3splt
     SUBDIR += libmpd
     SUBDIR += libmpdclient
-    SUBDIR += libmusicbrainz3
     SUBDIR += libmusicbrainz5
     SUBDIR += libmusicxml
     SUBDIR += libmysofa
@@ -441,6 +443,7 @@
     SUBDIR += libsidplayfp
     SUBDIR += libsmf
     SUBDIR += libsndfile
+    SUBDIR += libsonic
     SUBDIR += libsoxr
     SUBDIR += libtremor
     SUBDIR += libumidi
@@ -910,6 +913,7 @@
     SUBDIR += xvmixer
     SUBDIR += xwave
     SUBDIR += yell
+    SUBDIR += ympd
     SUBDIR += yoshimi
     SUBDIR += zam-plugins-lv2
     SUBDIR += zinf

@@ -1,4 +1,4 @@
-# $FreeBSD: head/converters/Makefile 472565 2018-06-16 19:12:02Z krion $
+# $FreeBSD: head/converters/Makefile 476639 2018-08-08 12:26:27Z mat $
 #
 
     COMMENT = Character code converters
@@ -49,9 +49,9 @@
     SUBDIR += libiconv
     SUBDIR += libticonv
     SUBDIR += libutf-8
-    SUBDIR += lua51-iconv
     SUBDIR += lua-iconv
     SUBDIR += lua-json
+    SUBDIR += lua51-iconv
     SUBDIR += mimelib
     SUBDIR += mmencode
     SUBDIR += mpack
@@ -162,6 +162,7 @@
     SUBDIR += py-iconv
     SUBDIR += py-pint
     SUBDIR += py-rencode
+    SUBDIR += py-text-unidecode
     SUBDIR += py-unidecode
     SUBDIR += py-webencodings
     SUBDIR += py-zfec

@@ -1,4 +1,4 @@
-# $FreeBSD: head/cad/Makefile 471892 2018-06-07 00:34:18Z rene $
+# $FreeBSD: head/cad/Makefile 475516 2018-07-28 09:49:26Z mr $
 #
 
     COMMENT = CAD tools
@@ -47,7 +47,10 @@
     SUBDIR += kicad
     SUBDIR += kicad-devel
     SUBDIR += kicad-library
-    SUBDIR += kicad-library-devel
+    SUBDIR += kicad-library-footprints-devel
+    SUBDIR += kicad-library-packages3d-devel
+    SUBDIR += kicad-library-symbols-devel
+    SUBDIR += kicad-library-templates-devel
     SUBDIR += klayout
     SUBDIR += layouteditor
     SUBDIR += ldraw

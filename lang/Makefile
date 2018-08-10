@@ -1,4 +1,4 @@
-# $FreeBSD: head/lang/Makefile 473600 2018-06-30 07:40:20Z dbn $
+# $FreeBSD: head/lang/Makefile 476655 2018-08-08 18:45:51Z brooks $
 #
 
     COMMENT = Programming languages
@@ -23,6 +23,7 @@
     SUBDIR += bsh
     SUBDIR += bwbasic
     SUBDIR += c
+    SUBDIR += cbmbasic
     SUBDIR += ccl
     SUBDIR += cdent
     SUBDIR += ceylon
@@ -38,7 +39,6 @@
     SUBDIR += clang33
     SUBDIR += clang34
     SUBDIR += clang35
-    SUBDIR += clang38
     SUBDIR += cling
     SUBDIR += clojure
     SUBDIR += clojure-mode.el
@@ -100,7 +100,6 @@
     SUBDIR += gawk
     SUBDIR += gcc
     SUBDIR += gcc-ecj45
-    SUBDIR += gcc47
     SUBDIR += gcc48
     SUBDIR += gcc49
     SUBDIR += gcc5
@@ -109,6 +108,7 @@
     SUBDIR += gcc6-devel
     SUBDIR += gcc7
     SUBDIR += gcc7-devel
+    SUBDIR += gcc8
     SUBDIR += gcc8-devel
     SUBDIR += gcc9-devel
     SUBDIR += gforth
@@ -146,6 +146,7 @@
     SUBDIR += icon
     SUBDIR += intercal
     SUBDIR += io
+    SUBDIR += io-devel
     SUBDIR += itcl
     SUBDIR += itcl4
     SUBDIR += jakarta-commons-jelly
@@ -167,14 +168,14 @@
     SUBDIR += libobjc2
     SUBDIR += librep
     SUBDIR += libstdc++_stldoc_4.2.2
+    SUBDIR += linux-c6-tcl85
+    SUBDIR += linux-c7-tcl85
     SUBDIR += linux-dotnet-cli
     SUBDIR += linux-dotnet-runtime
     SUBDIR += linux-dotnet-sdk
     SUBDIR += linux-dotnet10-runtime
     SUBDIR += linux-dotnet11-runtime
     SUBDIR += linux-dotnet11-sdk
-    SUBDIR += linux-c6-tcl85
-    SUBDIR += linux-c7-tcl85
     SUBDIR += linux-j
     SUBDIR += lua-ada
     SUBDIR += lua51
@@ -213,6 +214,7 @@
     SUBDIR += nqc
     SUBDIR += nwcc
     SUBDIR += nx
+    SUBDIR += nyan
     SUBDIR += ocaml
     SUBDIR += ocaml-autoconf
     SUBDIR += ocaml-nox11
@@ -301,6 +303,7 @@
     SUBDIR += python34
     SUBDIR += python35
     SUBDIR += python36
+    SUBDIR += python37
     SUBDIR += qore
     SUBDIR += qscheme
     SUBDIR += qt5-qml
@@ -344,7 +347,6 @@
     SUBDIR += smlnj
     SUBDIR += snobol4
     SUBDIR += solidity
-    SUBDIR += spec.alpha
     SUBDIR += spidermonkey17
     SUBDIR += spidermonkey170
     SUBDIR += spidermonkey185

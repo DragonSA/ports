@@ -1,4 +1,4 @@
-# $FreeBSD: head/astro/Makefile 473275 2018-06-24 20:50:47Z antoine $
+# $FreeBSD: head/astro/Makefile 475344 2018-07-26 03:12:23Z yuri $
 #
 
     COMMENT = Astronomical ports
@@ -48,6 +48,7 @@
     SUBDIR += nightfall
     SUBDIR += opencpn
     SUBDIR += openuniverse
+    SUBDIR += oskar
     SUBDIR += osmosis
     SUBDIR += p5-Astro
     SUBDIR += p5-Astro-ADS
@@ -77,7 +78,6 @@
     SUBDIR += p5-Misc-Quality
     SUBDIR += p5-Starlink-AST
     SUBDIR += p5-Weather-Underground
-    SUBDIR += p5-ZConf-Weather
     SUBDIR += phoon
     SUBDIR += planets
     SUBDIR += pp3
@@ -90,6 +90,7 @@
     SUBDIR += py-metar
     SUBDIR += py-metpy
     SUBDIR += py-pymetar
+    SUBDIR += py-pysofa
     SUBDIR += py-pywapi
     SUBDIR += py-spacetrack
     SUBDIR += pyephem
@@ -103,6 +104,7 @@
     SUBDIR += saoimage
     SUBDIR += sextractor
     SUBDIR += siril
+    SUBDIR += sofa
     SUBDIR += sscalc
     SUBDIR += stardates
     SUBDIR += starplot

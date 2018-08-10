@@ -1,4 +1,4 @@
-# $FreeBSD: head/biology/Makefile 473356 2018-06-25 23:56:00Z yuri $
+# $FreeBSD: head/biology/Makefile 476639 2018-08-08 12:26:27Z mat $
 #
 
     COMMENT = Biology
@@ -22,9 +22,11 @@
     SUBDIR += clustalw
     SUBDIR += clustalx
     SUBDIR += consed
+    SUBDIR += cytoscape
     SUBDIR += ddocent
     SUBDIR += diamond
     SUBDIR += emboss
+    SUBDIR += exonerate
     SUBDIR += fasta
     SUBDIR += fasta3
     SUBDIR += fastahack
@@ -104,6 +106,7 @@
     SUBDIR += py-cutadapt
     SUBDIR += py-macs2
     SUBDIR += py-orange3-bioinformatics
+    SUBDIR += py-orange3-single-cell
     SUBDIR += py-pysam
     SUBDIR += pycogent
     SUBDIR += pyfasta
@@ -124,6 +127,7 @@
     SUBDIR += slclust
     SUBDIR += smithwaterman
     SUBDIR += stacks
+    SUBDIR += stringtie
     SUBDIR += tRNAscan-SE
     SUBDIR += t_coffee
     SUBDIR += tabixpp
@@ -133,8 +137,8 @@
     SUBDIR += trimmomatic
     SUBDIR += ugene
     SUBDIR += unanimity
-    SUBDIR += vcftools
     SUBDIR += vcflib
+    SUBDIR += vcftools
     SUBDIR += velvet
     SUBDIR += wise
     SUBDIR += xmolwt

@@ -1,4 +1,4 @@
-# $FreeBSD: head/deskutils/Makefile 473277 2018-06-24 21:22:10Z danilo $
+# $FreeBSD: head/deskutils/Makefile 476187 2018-08-01 18:04:33Z tcberner $
 #
 
     COMMENT = Things that used to be on the desktop before computers were invented
@@ -28,6 +28,7 @@
     SUBDIR += cartotheque
     SUBDIR += cdcat
     SUBDIR += charmtimetracker
+    SUBDIR += chart
     SUBDIR += clipit
     SUBDIR += conduit
     SUBDIR += conkyemail
@@ -200,9 +201,6 @@
     SUBDIR += p5-Data-ICal
     SUBDIR += p5-Data-ICal-DateTime
     SUBDIR += p5-Goo
-    SUBDIR += p5-ZConf-BGSet
-    SUBDIR += p5-ZConf-Runner
-    SUBDIR += p5-ZConf-Runner-GUI-GTK
     SUBDIR += pal
     SUBDIR += parcellite
     SUBDIR += phpcollab
@@ -314,6 +312,7 @@
     SUBDIR += xpostitPlus
     SUBDIR += xrolo
     SUBDIR += xwrits
+    SUBDIR += zanshin
     SUBDIR += zim
     SUBDIR += znotes
     SUBDIR += zorro

@@ -1,8 +1,8 @@
-# $FreeBSD: head/comms/wspr/Makefile 473009 2018-06-21 23:52:37Z linimon $
+# $FreeBSD: head/comms/wspr/Makefile 475857 2018-07-29 22:18:44Z gerald $
 
 PORTNAME=	wspr
 DISTVERSION=	${VERSION}.r${SVN_REV}
-PORTREVISION=	10
+PORTREVISION=	11
 CATEGORIES=	comms hamradio
 MASTER_SITES=	LOCAL/db
 DISTNAME=	wspr-r${SVN_REV}
@@ -13,6 +13,8 @@ COMMENT=	Weak signal for HF ham radio communication package
 LICENSE=	GPLv3
 
 BROKEN_aarch64=		fails to compile: gfortran6: unrecognized command line option '-m64'
+DEPRECATED=	replace with wsjtx upstream no longer maintained
+EXPIRATION_DATE=2018-10-01
 
 BUILD_DEPENDS=	${PYNUMPY}
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}tkinter>0:x11-toolkits/py-tkinter@${PY_FLAVOR} \

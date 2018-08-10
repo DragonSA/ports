@@ -1,4 +1,4 @@
-# $FreeBSD: head/GIDs 472578 2018-06-17 00:08:22Z eadler $
+# $FreeBSD: head/GIDs 476740 2018-08-09 12:01:51Z zi $
 # Please keep this file sorted by GID!
 # Please pick an empty slot when available and also consider base values from
 # /usr/src/etc/group
@@ -64,7 +64,7 @@ mythtv:*:119:
 pdns:*:120:
 otrs:*:121:
 zabbix:*:122:
-_ntp:*:123:
+ntpd:*:123:
 fetchmail:*:124:
 postfix:*:125:
 maildrop:*:126:
@@ -172,8 +172,8 @@ osrm:*:228:
 kismet:*:229:
 carbon:*:230:
 foundationdb:*:231:
-# free: 232
-# free: 233
+archiva:*:232:
+_ntp:*:233:
 kafka:*:234:
 openhab:*:235:
 # free: 236
@@ -417,7 +417,7 @@ minio:*:473:
 gitlab-runner:*:474:
 traefik:*:475:
 gitlab-pages:*:476:
-# free: 477
+fiche:*:477:
 prometheus:*:478:
 alertmanager:*:479:
 # free: 480

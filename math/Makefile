@@ -1,4 +1,4 @@
-# $FreeBSD: head/math/Makefile 473488 2018-06-28 08:33:10Z yuri $
+# $FreeBSD: head/math/Makefile 476639 2018-08-08 12:26:27Z mat $
 #
 
     COMMENT = Mathematics
@@ -17,7 +17,6 @@
     SUBDIR += R-cran-MCMCpack
     SUBDIR += R-cran-MSwM
     SUBDIR += R-cran-MatchIt
-    SUBDIR += R-cran-magic
     SUBDIR += R-cran-Matching
     SUBDIR += R-cran-MatrixModels
     SUBDIR += R-cran-NMF
@@ -28,8 +27,8 @@
     SUBDIR += R-cran-RcppRoll
     SUBDIR += R-cran-Rmpfr
     SUBDIR += R-cran-Rsolnp
+    SUBDIR += R-cran-SQUAREM
     SUBDIR += R-cran-SparseM
-    SUBDIR += R-cran-uroot
     SUBDIR += R-cran-VGAM
     SUBDIR += R-cran-Zelig
     SUBDIR += R-cran-assertthat
@@ -64,6 +63,7 @@
     SUBDIR += R-cran-lava
     SUBDIR += R-cran-lazyeval
     SUBDIR += R-cran-lme4
+    SUBDIR += R-cran-magic
     SUBDIR += R-cran-maxLik
     SUBDIR += R-cran-mcmc
     SUBDIR += R-cran-memisc
@@ -91,12 +91,12 @@
     SUBDIR += R-cran-sp
     SUBDIR += R-cran-spData
     SUBDIR += R-cran-spdep
-    SUBDIR += R-cran-SQUAREM
     SUBDIR += R-cran-sspir
     SUBDIR += R-cran-stabledist
     SUBDIR += R-cran-survey
     SUBDIR += R-cran-truncnorm
     SUBDIR += R-cran-units
+    SUBDIR += R-cran-uroot
     SUBDIR += R-cran-xts
     SUBDIR += R-cran-zoo
     SUBDIR += SCIP
@@ -201,7 +201,6 @@
     SUBDIR += fpc-fftw
     SUBDIR += fpc-gmp
     SUBDIR += fpc-numlib
-    SUBDIR += freemat
     SUBDIR += fricas
     SUBDIR += fxt
     SUBDIR += g2o
@@ -299,6 +298,7 @@
     SUBDIR += lapacke
     SUBDIR += laspack
     SUBDIR += ldouble
+    SUBDIR += lean
     SUBDIR += levmar
     SUBDIR += libRmath
     SUBDIR += libflame
@@ -307,6 +307,7 @@
     SUBDIR += libmissing
     SUBDIR += libocas
     SUBDIR += liborigin
+    SUBDIR += libpoly
     SUBDIR += libqalculate
     SUBDIR += libranlip
     SUBDIR += librsb
@@ -594,6 +595,7 @@
     SUBDIR += p5-Set-Window
     SUBDIR += p5-Statistics-Basic
     SUBDIR += p5-Statistics-Benford
+    SUBDIR += p5-Statistics-CaseResampling
     SUBDIR += p5-Statistics-ChiSquare
     SUBDIR += p5-Statistics-Contingency
     SUBDIR += p5-Statistics-Descriptive
@@ -680,6 +682,7 @@
     SUBDIR += py-intspan
     SUBDIR += py-keras
     SUBDIR += py-levmar
+    SUBDIR += py-libpoly
     SUBDIR += py-luminol
     SUBDIR += py-mathdom
     SUBDIR += py-matplotlib
@@ -723,6 +726,7 @@
     SUBDIR += py-simhash
     SUBDIR += py-slepc4py
     SUBDIR += py-spectral
+    SUBDIR += py-spot
     SUBDIR += py-statsmodels
     SUBDIR += py-svgmath
     SUBDIR += py-sym
@@ -734,6 +738,7 @@
     SUBDIR += py-uncertainties
     SUBDIR += py-viper
     SUBDIR += py-yt
+    SUBDIR += py-z3-solver
     SUBDIR += qalculate
     SUBDIR += qd
     SUBDIR += qhull
@@ -778,6 +783,7 @@
     SUBDIR += sfft
     SUBDIR += sfst
     SUBDIR += simd-viterbi
+    SUBDIR += singular
     SUBDIR += slatec
     SUBDIR += slepc
     SUBDIR += slgrace
@@ -790,6 +796,7 @@
     SUBDIR += speedcrunch
     SUBDIR += spooles
     SUBDIR += spooles-mpich
+    SUBDIR += spot
     SUBDIR += stp
     SUBDIR += suitesparse
     SUBDIR += sundials
@@ -818,6 +825,7 @@
     SUBDIR += vtk5
     SUBDIR += vtk5-data
     SUBDIR += vtk6
+    SUBDIR += vtk8
     SUBDIR += wcalc
     SUBDIR += wfmath
     SUBDIR += why3
@@ -835,7 +843,9 @@
     SUBDIR += xspread
     SUBDIR += xtensor
     SUBDIR += yacas
+    SUBDIR += yices
     SUBDIR += z3
+    SUBDIR += zegrapher
     SUBDIR += zimpl
 
 .include <bsd.port.subdir.mk>

@@ -1,4 +1,4 @@
-# $FreeBSD: head/emulators/Makefile 471283 2018-06-01 18:50:44Z rene $
+# $FreeBSD: head/emulators/Makefile 476314 2018-08-03 17:53:09Z antoine $
 #
 
     COMMENT = Emulators for other operating systems
@@ -132,8 +132,6 @@
     SUBDIR += rubygem-fission
     SUBDIR += simh
     SUBDIR += skyeye
-    SUBDIR += snes9express
-    SUBDIR += snes9x
     SUBDIR += snes9x-gtk
     SUBDIR += spim
     SUBDIR += stella
@@ -176,8 +174,8 @@
     SUBDIR += x49gp
     SUBDIR += xbraitenberg
     SUBDIR += xcpc
-    SUBDIR += xen
-    SUBDIR += xen-kernel
+    SUBDIR += xen-kernel411
+    SUBDIR += xen-kernel47
     SUBDIR += xhomer
     SUBDIR += xsystem35
     SUBDIR += xzx
