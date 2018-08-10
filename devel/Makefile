@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/Makefile 476822 2018-08-10 09:43:08Z dbn $
+# $FreeBSD: head/devel/Makefile 476823 2018-08-10 09:53:27Z dbn $
 #
 
     COMMENT = Development utilities
@@ -4339,6 +4339,7 @@
     SUBDIR += py-apns2
     SUBDIR += py-appdirs
     SUBDIR += py-application
+    SUBDIR += py-applicationinsights
     SUBDIR += py-apptools
     SUBDIR += py-apscheduler
     SUBDIR += py-archetypes.querywidget
