@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/Makefile 476671 2018-08-08 20:00:05Z zi $
+# $FreeBSD: head/devel/Makefile 476822 2018-08-10 09:43:08Z dbn $
 #
 
     COMMENT = Development utilities
@@ -4682,6 +4682,7 @@
     SUBDIR += py-kid
     SUBDIR += py-kitchen
     SUBDIR += py-kjbuckets
+    SUBDIR += py-knack
     SUBDIR += py-kqueue
     SUBDIR += py-krosspython-kde4
     SUBDIR += py-lazr.config
