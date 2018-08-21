@@ -2,7 +2,7 @@
 # $FreeBSD: head/devel/monodevelop/Makefile 473641 2018-06-30 20:27:03Z dbn $
 
 PORTNAME=	monodevelop
-PORTVERSION=	7.5.3.7
+PORTVERSION=	7.5.4.3
 DISTVERSIONPREFIX=	${PORTNAME}-
 CATEGORIES=	devel
 
@@ -57,6 +57,7 @@ CONFIGURE_ARGS=	--enable-release --disable-update-mimedb --disable-update-deskto
 INSTALL=	/usr/bin/install
 USE_GITHUB=	yes
 GH_ACCOUNT=	mono
+GH_TAGNAME=	6ae7318
 GH_TUPLE=	icsharpcode:RefactoringEssentials:684259e:1/external/RefactoringEssentials \
 		mono:debugger-libs:094d373:3/external/debugger-libs \
 		mono:guiunit:1306b0d:4/external/guiunit \
@@ -73,7 +74,7 @@ MAKE_ENV=	DOTNET_MSBUILD_SDK_RESOLVER_SDKS_DIR= \
 		XDG_CACHE_HOME=${WRKDIR}
 MAKE_JOBS_UNSAFE=Build parallelization not implemented
 WRKSRC_SUBDIR=	main
-PORTSCOUT=	limit:^\d+\.\d+\.[1-9]\d*
+PORTSCOUT=	limit:^\d+\.\d+\.[1-9].*
 
 post-patch:
 	${ECHO} "Release ID: ${PORTVERSION}" > ${WRKSRC}/buildinfo
