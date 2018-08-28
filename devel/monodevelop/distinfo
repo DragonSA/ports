@@ -1,4 +1,4 @@
-TIMESTAMP = 1534792977
+TIMESTAMP = 1530634255
 SHA256 (extcore.0.8.46.nupkg) = 6220962d632c99bcc79f565ada972b948ac9e8db6e47a7cc7b08bf4357b1479e
 SIZE (extcore.0.8.46.nupkg) = 5905090
 SHA256 (fake.4.61.1.nupkg) = d3bacc8cb694b64c58c20fcf04f9cc86988de3dc5fd40b205640b0ee354bb201
@@ -401,8 +401,8 @@ SHA256 (microsoft.testplatform.translationlayer.15.5.0-preview-20170919-04.nupkg
 SIZE (microsoft.testplatform.translationlayer.15.5.0-preview-20170919-04.nupkg) = 1717018
 SHA256 (microsoft.testplatform.15.5.0-preview-20170919-04.nupkg) = eff212822d069c519c36bed766fdf49d8f3ab17097e3b6d7a1f2e3be50b0a1fa
 SIZE (microsoft.testplatform.15.5.0-preview-20170919-04.nupkg) = 22781829
-SHA256 (mono-monodevelop-monodevelop-7.5.4.3-6ae7318_GH0.tar.gz) = acd4eb3f51018e33ed4e1fb16ecfeefd2006cad7ba1768c1a8baff9dd6a5b8cd
-SIZE (mono-monodevelop-monodevelop-7.5.4.3-6ae7318_GH0.tar.gz) = 16910370
+SHA256 (mono-monodevelop-monodevelop-7.5.3.7_GH0.tar.gz) = 160b4af1486a03c7a191082dbf0e58a2bccfc0565fd2e6e1d7f145faccd02f1c
+SIZE (mono-monodevelop-monodevelop-7.5.3.7_GH0.tar.gz) = 16903564
 SHA256 (icsharpcode-RefactoringEssentials-684259e_GH0.tar.gz) = fc7cd35e7f7c06e34f41577eaa65cf19a3d86c05a191950d7a3a87a586024c25
 SIZE (icsharpcode-RefactoringEssentials-684259e_GH0.tar.gz) = 2834917
 SHA256 (mono-debugger-libs-094d373_GH0.tar.gz) = 7d01debba6f434eb851d2293797f32a6117673da9de2ef1f3768655a9489e7af

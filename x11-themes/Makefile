@@ -1,15 +1,15 @@
-# $FreeBSD: head/x11-themes/Makefile 476639 2018-08-08 12:26:27Z mat $
+# $FreeBSD: head/x11-themes/Makefile 478124 2018-08-26 12:18:20Z tcberner $
 #
 
     COMMENT = X11 themes
 
+    SUBDIR += Kvantum
     SUBDIR += adapta-backgrounds
     SUBDIR += adapta-gtk-theme
     SUBDIR += adwaita-icon-theme
     SUBDIR += adwaita-qt
     SUBDIR += arc-gruvbox-theme
     SUBDIR += audacious-skins
-    SUBDIR += beastie
     SUBDIR += claws-mail-themes
     SUBDIR += clearlooks
     SUBDIR += clearlooks-metacity
@@ -155,11 +155,9 @@
     SUBDIR += plasma5-kde-gtk-config
     SUBDIR += plasma5-oxygen
     SUBDIR += plasma5-plasma-workspace-wallpapers
-    SUBDIR += qt4-style-Kvantum
     SUBDIR += qt4-style-float
     SUBDIR += qt4-style-phase
     SUBDIR += qt4-style-quantumstyle
-    SUBDIR += qt5-style-Kvantum
     SUBDIR += qt5-style-plugins
     SUBDIR += qtcurve
     SUBDIR += qtcurve-gtk2

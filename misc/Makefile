@@ -1,4 +1,4 @@
-# $FreeBSD: head/misc/Makefile 476639 2018-08-08 12:26:27Z mat $
+# $FreeBSD: head/misc/Makefile 477866 2018-08-23 10:20:14Z blackend $
 #
 
     COMMENT = Miscellaneous utilities
@@ -10,7 +10,6 @@
     SUBDIR += amanda-client
     SUBDIR += amanda-perl-wrapper
     SUBDIR += amanda-server
-    SUBDIR += amfm
     SUBDIR += ansiweather
     SUBDIR += apparix
     SUBDIR += artikulate
@@ -124,7 +123,6 @@
     SUBDIR += freebsd-doc-pl
     SUBDIR += freebsd-doc-pt
     SUBDIR += freebsd-doc-ru
-    SUBDIR += freebsd-doc-sr
     SUBDIR += freebsd-doc-tr
     SUBDIR += freebsd-doc-zh_cn
     SUBDIR += freebsd-doc-zh_tw
@@ -540,10 +538,12 @@
     SUBDIR += usbids
     SUBDIR += usbrh-libusb
     SUBDIR += utftools
+    SUBDIR += valentina
     SUBDIR += valspeak
     SUBDIR += vdmfec
     SUBDIR += vera
     SUBDIR += vifm
+    SUBDIR += visp
     SUBDIR += viz
     SUBDIR += whichman
     SUBDIR += window
@@ -567,7 +567,6 @@
     SUBDIR += xiphos
     SUBDIR += xless
     SUBDIR += xosd
-    SUBDIR += xpns
     SUBDIR += xtail
     SUBDIR += xtar
     SUBDIR += xtypo

@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11-toolkits/py-kivy/Makefile 477563 2018-08-19 09:41:01Z dbn $
+# $FreeBSD: head/x11-toolkits/py-kivy/Makefile 477599 2018-08-19 20:51:51Z antoine $
 
 PORTNAME=	kivy
 PORTVERSION=	1.10.1
@@ -22,7 +22,7 @@ TEST_DEPENDS=	nosetests-${PYTHON_VER}:devel/py-nose@${PY_FLAVOR}
 MAKE_ENV=	KIVY_NO_CONFIG=yes KIVY_NO_FILELOG=yes USE_OPENGL_ES2=1 \
 		PYTHONPATH=${WRKSRC}
 
-USES=		display:test python:2.7+ shebangfix uniquefiles:dirs
+USES=		display:test python:2.7 shebangfix uniquefiles:dirs
 USE_GL=		egl gl glesv2
 USE_PYTHON=	autoplist concurrent cython distutils
 PYDISTUTILS_BUILD_TARGET=	build_ext
