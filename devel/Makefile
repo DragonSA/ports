@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/Makefile 478270 2018-08-28 00:30:42Z meta $
+# $FreeBSD: head/devel/Makefile 479623 2018-09-12 22:54:50Z sunpoet $
 #
 
     COMMENT = Development utilities
@@ -72,6 +72,7 @@
     SUBDIR += R-cran-tibble
     SUBDIR += R-cran-tidyr
     SUBDIR += R-cran-tidyselect
+    SUBDIR += R-cran-vcd
     SUBDIR += R-cran-withr
     SUBDIR += RStudio
     SUBDIR += SpecTcl
@@ -483,6 +484,7 @@
     SUBDIR += dyncall
     SUBDIR += e00compr
     SUBDIR += e2fsprogs-libss
+    SUBDIR += eastl
     SUBDIR += easygit
     SUBDIR += easyloggingpp
     SUBDIR += eblob
@@ -799,6 +801,7 @@
     SUBDIR += global
     SUBDIR += glog
     SUBDIR += glrparser
+    SUBDIR += glslang
     SUBDIR += glui
     SUBDIR += gmake
     SUBDIR += gnatcoll
@@ -864,7 +867,6 @@
     SUBDIR += gperf
     SUBDIR += gpm
     SUBDIR += gprbuild
-    SUBDIR += gps
     SUBDIR += gpsim
     SUBDIR += gputils
     SUBDIR += gradle
@@ -1765,7 +1767,6 @@
     SUBDIR += mercurialeclipse
     SUBDIR += mergify
     SUBDIR += meson
-    SUBDIR += mico
     SUBDIR += mime
     SUBDIR += mimir
     SUBDIR += mingw32-bin-msvcrt
@@ -1885,8 +1886,6 @@
     SUBDIR += omniORB-4.1
     SUBDIR += omnisharp-server
     SUBDIR += oniguruma
-    SUBDIR += onscripter
-    SUBDIR += onscripter-1byte
     SUBDIR += oozie
     SUBDIR += open-beagle
     SUBDIR += open-usp-tukubai
@@ -4184,7 +4183,6 @@
     SUBDIR += pmd
     SUBDIR += poco
     SUBDIR += poco-ssl
-    SUBDIR += ponscripter-sekai
     SUBDIR += popt
     SUBDIR += poslib
     SUBDIR += powerpc64-binutils
@@ -4354,6 +4352,7 @@
     SUBDIR += py-aspyct
     SUBDIR += py-astor
     SUBDIR += py-astroid
+    SUBDIR += py-astroid1
     SUBDIR += py-asttokens
     SUBDIR += py-async_generator
     SUBDIR += py-async_timeout
@@ -4605,6 +4604,7 @@
     SUBDIR += py-grizzled
     SUBDIR += py-grouch
     SUBDIR += py-grpcio
+    SUBDIR += py-grpcio-gcp
     SUBDIR += py-grpcio-tools
     SUBDIR += py-gtfslib
     SUBDIR += py-gyp
@@ -4702,6 +4702,7 @@
     SUBDIR += py-libvirt
     SUBDIR += py-libzfs
     SUBDIR += py-linecache2
+    SUBDIR += py-lineedit
     SUBDIR += py-llfuse
     SUBDIR += py-llvmcpy
     SUBDIR += py-llvmlite
@@ -4846,6 +4847,7 @@
     SUBDIR += py-ply
     SUBDIR += py-podcastparser
     SUBDIR += py-polib
+    SUBDIR += py-pooch
     SUBDIR += py-positional
     SUBDIR += py-posix_ipc
     SUBDIR += py-pp
@@ -4857,6 +4859,7 @@
     SUBDIR += py-protobuf
     SUBDIR += py-protocols
     SUBDIR += py-ptable
+    SUBDIR += py-ptpython
     SUBDIR += py-ptrace
     SUBDIR += py-ptvsd
     SUBDIR += py-pudb
@@ -4930,8 +4933,10 @@
     SUBDIR += py-pytest-cov
     SUBDIR += py-pytest-django
     SUBDIR += py-pytest-flake8
+    SUBDIR += py-pytest-flakes
     SUBDIR += py-pytest-localserver
     SUBDIR += py-pytest-mock
+    SUBDIR += py-pytest-pycodestyle
     SUBDIR += py-pytest-runner
     SUBDIR += py-pytest-sugar
     SUBDIR += py-pytest-timeout
@@ -5296,6 +5301,7 @@
     SUBDIR += pydbus-common
     SUBDIR += pygobject3-common
     SUBDIR += pylint
+    SUBDIR += pylint1
     SUBDIR += pymacs
     SUBDIR += pyobfuscate
     SUBDIR += pypersrc
@@ -5397,8 +5403,6 @@
     SUBDIR += regexxer
     SUBDIR += relx
     SUBDIR += remake
-    SUBDIR += renpy
-    SUBDIR += renpy6
     SUBDIR += replay
     SUBDIR += replxx
     SUBDIR += resolv_wrapper
@@ -5407,7 +5411,6 @@
     SUBDIR += riscv64-gcc
     SUBDIR += riscv64-xtoolchain-gcc
     SUBDIR += rlog
-    SUBDIR += rlvm
     SUBDIR += rlwrap
     SUBDIR += roboctl
     SUBDIR += robodoc
@@ -5417,6 +5420,7 @@
     SUBDIR += rpm-spec-mode.el
     SUBDIR += rsvndump
     SUBDIR += rth
+    SUBDIR += rtichoke
     SUBDIR += ruby-bsearch
     SUBDIR += ruby-build
     SUBDIR += ruby-gems
@@ -5575,6 +5579,7 @@
     SUBDIR += rubygem-ditz
     SUBDIR += rubygem-diva
     SUBDIR += rubygem-docile
+    SUBDIR += rubygem-dry-inflector
     SUBDIR += rubygem-drydock
     SUBDIR += rubygem-dynflow
     SUBDIR += rubygem-edavis10-object_daddy
@@ -5806,6 +5811,7 @@
     SUBDIR += rubygem-omniauth_crowd22
     SUBDIR += rubygem-open3_backport
     SUBDIR += rubygem-open4
+    SUBDIR += rubygem-optimist
     SUBDIR += rubygem-orm_adapter
     SUBDIR += rubygem-os
     SUBDIR += rubygem-p4ruby
@@ -6003,6 +6009,7 @@
     SUBDIR += rubygem-streetaddress
     SUBDIR += rubygem-stringex
     SUBDIR += rubygem-strings
+    SUBDIR += rubygem-strings-ansi
     SUBDIR += rubygem-strong_migrations
     SUBDIR += rubygem-structured_warnings
     SUBDIR += rubygem-stud
@@ -6163,6 +6170,7 @@
     SUBDIR += spdlog
     SUBDIR += spice-protocol
     SUBDIR += spin
+    SUBDIR += spirv-tools
     SUBDIR += splint
     SUBDIR += srecord
     SUBDIR += st
@@ -6286,6 +6294,9 @@
     SUBDIR += violet
     SUBDIR += visualparadigm
     SUBDIR += vstr
+    SUBDIR += vulkan-headers
+    SUBDIR += vulkan-tools
+    SUBDIR += vulkan-validation-layers
     SUBDIR += vxlog
     SUBDIR += wand-libconfig
     SUBDIR += wandio

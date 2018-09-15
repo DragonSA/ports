@@ -1,9 +1,8 @@
 # Created by: Gerald Pfeifer <gerald@FreeBSD.org>
-# $FreeBSD: head/emulators/wine/Makefile 477609 2018-08-20 00:02:31Z gerald $
+# $FreeBSD: head/emulators/wine/Makefile 479745 2018-09-13 22:04:24Z gerald $
 
 PORTNAME=	wine
-DISTVERSION=	3.0.2
-PORTREVISION=	1
+DISTVERSION=	3.0.3
 PORTEPOCH=	1
 CATEGORIES=	emulators
 MASTER_SITES=	SF/${PORTNAME}/Source \
@@ -25,7 +24,9 @@ CONFLICTS_INSTALL=	wine-staging-[0-9]* wine-devel-[0-9]* i386-wine-[0-9]* \
 			i386-wine-staging-[0-9]* i386-wine-devel-[0-9]*
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=--verbose --disable-tests \
+CONFIGURE_ARGS+=--verbose \
+		--disable-kerberos \
+		--disable-tests \
 		--without-alsa --without-capi --without-dbus \
 		--without-gettext --without-gettextpo \
 		--without-gphoto --without-gsm --without-gstreamer \

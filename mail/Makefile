@@ -1,4 +1,4 @@
-# $FreeBSD: head/mail/Makefile 477718 2018-08-21 12:09:54Z rene $
+# $FreeBSD: head/mail/Makefile 479288 2018-09-09 13:12:57Z ohauer $
 #
 
     COMMENT = Electronic mail utilities
@@ -510,6 +510,7 @@
     SUBDIR += postfix
     SUBDIR += postfix-current
     SUBDIR += postfix-current-sasl
+    SUBDIR += postfix-ldap-sasl
     SUBDIR += postfix-logwatch
     SUBDIR += postfix-policyd-sf
     SUBDIR += postfix-policyd-spf-perl

@@ -1,4 +1,4 @@
-# $FreeBSD: head/math/Makefile 477717 2018-08-21 12:06:54Z rene $
+# $FreeBSD: head/math/Makefile 479453 2018-09-10 20:26:08Z sunpoet $
 #
 
     COMMENT = Mathematics
@@ -11,6 +11,7 @@
     SUBDIR += R-cran-ChangeAnomalyDetection
     SUBDIR += R-cran-DEoptimR
     SUBDIR += R-cran-DRR
+    SUBDIR += R-cran-DoE.base
     SUBDIR += R-cran-Formula
     SUBDIR += R-cran-KFAS
     SUBDIR += R-cran-LearnBayes
@@ -74,9 +75,12 @@
     SUBDIR += R-cran-nnls
     SUBDIR += R-cran-nortest
     SUBDIR += R-cran-numDeriv
+    SUBDIR += R-cran-numbers
     SUBDIR += R-cran-outliers
+    SUBDIR += R-cran-partitions
     SUBDIR += R-cran-pbkrtest
     SUBDIR += R-cran-pls
+    SUBDIR += R-cran-polynom
     SUBDIR += R-cran-prodlim
     SUBDIR += R-cran-psych
     SUBDIR += R-cran-quadprog
@@ -180,6 +184,7 @@
     SUBDIR += eigen2
     SUBDIR += eigen3
     SUBDIR += eispack
+    SUBDIR += elpa
     SUBDIR += emc2
     SUBDIR += ent
     SUBDIR += entropy
@@ -307,6 +312,7 @@
     SUBDIR += libmissing
     SUBDIR += libocas
     SUBDIR += liborigin
+    SUBDIR += libpgmath
     SUBDIR += libpoly
     SUBDIR += libqalculate
     SUBDIR += libranlip
@@ -337,6 +343,7 @@
     SUBDIR += mingw32-libgmp
     SUBDIR += minisat
     SUBDIR += miracl
+    SUBDIR += mkl-dnn
     SUBDIR += mlpack
     SUBDIR += moo
     SUBDIR += mosesdecoder
@@ -538,6 +545,8 @@
     SUBDIR += p5-Math-Polygon
     SUBDIR += p5-Math-Polygon-Tree
     SUBDIR += p5-Math-Polynomial-Solve
+    SUBDIR += p5-Math-Prime-Util
+    SUBDIR += p5-Math-Prime-Util-GMP
     SUBDIR += p5-Math-Prime-XS
     SUBDIR += p5-Math-ProvablePrime
     SUBDIR += p5-Math-RPN
@@ -663,6 +672,7 @@
     SUBDIR += py-bitvector
     SUBDIR += py-bottleneck
     SUBDIR += py-cdecimal
+    SUBDIR += py-chaospy
     SUBDIR += py-colormath
     SUBDIR += py-cryptominisat
     SUBDIR += py-cvxopt
@@ -717,7 +727,9 @@
     SUBDIR += py-pysym
     SUBDIR += py-pyvtk
     SUBDIR += py-random2
+    SUBDIR += py-rapi
     SUBDIR += py-roman
+    SUBDIR += py-rpy2
     SUBDIR += py-scientific
     SUBDIR += py-scikit-umfpack
     SUBDIR += py-seaborn
@@ -759,7 +771,6 @@
     SUBDIR += rocs-kde4
     SUBDIR += rpcalc
     SUBDIR += rpy
-    SUBDIR += rpy2
     SUBDIR += rubygem-algebra
     SUBDIR += rubygem-expression_parser
     SUBDIR += rubygem-fftw3
@@ -784,6 +795,7 @@
     SUBDIR += simd-viterbi
     SUBDIR += singular
     SUBDIR += slatec
+    SUBDIR += sleef
     SUBDIR += slepc
     SUBDIR += slgrace
     SUBDIR += snns

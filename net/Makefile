@@ -1,4 +1,4 @@
-# $FreeBSD: head/net/Makefile 478302 2018-08-28 11:59:46Z bapt $
+# $FreeBSD: head/net/Makefile 479697 2018-09-13 21:49:52Z sunpoet $
 #
 
     COMMENT = Networking tools
@@ -76,6 +76,7 @@
     SUBDIR += ccxstream
     SUBDIR += ceph
     SUBDIR += cf
+    SUBDIR += charm
     SUBDIR += chrony
     SUBDIR += citrix_ica
     SUBDIR += cjdns
@@ -566,6 +567,7 @@
     SUBDIR += openldap24-client
     SUBDIR += openldap24-sasl-client
     SUBDIR += openldap24-server
+    SUBDIR += openmdns
     SUBDIR += openmpi
     SUBDIR += openmpi2
     SUBDIR += openmpi3
@@ -828,6 +830,7 @@
     SUBDIR += p5-OAI-Harvester
     SUBDIR += p5-OurNet-BBS
     SUBDIR += p5-OurNet-BBSAgent
+    SUBDIR += p5-Parse-Netstat
     SUBDIR += p5-POE-Component-Client-Ident
     SUBDIR += p5-POE-Component-Client-Keepalive
     SUBDIR += p5-POE-Component-Client-Ping
@@ -1270,9 +1273,11 @@
     SUBDIR += rubygem-gitaly-proto
     SUBDIR += rubygem-gitaly-proto094
     SUBDIR += rubygem-gitlab_omniauth-ldap
-    SUBDIR += rubygem-gitlab_omniauth-ldap1
     SUBDIR += rubygem-gitlab_omniauth-ldap20
+    SUBDIR += rubygem-google-cloud-core
+    SUBDIR += rubygem-google-cloud-env
     SUBDIR += rubygem-grpc
+    SUBDIR += rubygem-hangouts-chat
     SUBDIR += rubygem-http_parser.rb
     SUBDIR += rubygem-httpauth
     SUBDIR += rubygem-ipaddress

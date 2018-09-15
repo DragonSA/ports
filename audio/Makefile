@@ -1,4 +1,4 @@
-# $FreeBSD: head/audio/Makefile 477480 2018-08-18 07:03:28Z yuri $
+# $FreeBSD: head/audio/Makefile 479691 2018-09-13 19:20:05Z ehaupt $
 #
 
     COMMENT = Audio tools
@@ -118,6 +118,7 @@
     SUBDIR += dpf-plugins-lv2
     SUBDIR += dream
     SUBDIR += drumgizmo
+    SUBDIR += drumkv1-lv2
     SUBDIR += drumpiler
     SUBDIR += drumstick
     SUBDIR += dsbmixer
@@ -147,6 +148,7 @@
     SUBDIR += faad
     SUBDIR += fabla2-lv2
     SUBDIR += fapg
+    SUBDIR += fasttracker2
     SUBDIR += faust
     SUBDIR += faust-lv2
     SUBDIR += faustlive
@@ -435,6 +437,7 @@
     SUBDIR += libnoise
     SUBDIR += libogg
     SUBDIR += liboggz
+    SUBDIR += libopenmpt
     SUBDIR += libopenspc
     SUBDIR += libsamplerate
     SUBDIR += libshairport
@@ -570,7 +573,6 @@
     SUBDIR += musicpc
     SUBDIR += musicpd
     SUBDIR += mythplugin-mythmusic
-    SUBDIR += napster
     SUBDIR += nas
     SUBDIR += ncmpc
     SUBDIR += ncmpcpp
@@ -722,6 +724,7 @@
     SUBDIR += resid
     SUBDIR += rexima
     SUBDIR += rezound
+    SUBDIR += rhvoice
     SUBDIR += rhythmbox
     SUBDIR += rio500
     SUBDIR += rioutil
@@ -781,6 +784,7 @@
     SUBDIR += soundtouch
     SUBDIR += soundtracker
     SUBDIR += sox
+    SUBDIR += spc2it
     SUBDIR += specimen
     SUBDIR += spectrogram
     SUBDIR += speex
