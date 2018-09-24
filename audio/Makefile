@@ -1,4 +1,4 @@
-# $FreeBSD: head/audio/Makefile 479691 2018-09-13 19:20:05Z ehaupt $
+# $FreeBSD: head/audio/Makefile 480439 2018-09-23 00:10:21Z yuri $
 #
 
     COMMENT = Audio tools
@@ -180,7 +180,6 @@
     SUBDIR += festvox-rab16
     SUBDIR += festvox-rab8
     SUBDIR += festvox-russian
-    SUBDIR += firefly
     SUBDIR += flac
     SUBDIR += flac123
     SUBDIR += flacon
@@ -725,6 +724,7 @@
     SUBDIR += rexima
     SUBDIR += rezound
     SUBDIR += rhvoice
+    SUBDIR += rhvoice-dictionary
     SUBDIR += rhythmbox
     SUBDIR += rio500
     SUBDIR += rioutil

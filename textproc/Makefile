@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/Makefile 479182 2018-09-07 08:32:30Z des $
+# $FreeBSD: head/textproc/Makefile 480515 2018-09-23 18:08:19Z mfechner $
 #
 
     COMMENT = Text processing utilities (does not include desktop publishing)
@@ -407,6 +407,7 @@
     SUBDIR += libcss
     SUBDIR += libcsv
     SUBDIR += libcue
+    SUBDIR += libdiff
     SUBDIR += libe-book
     SUBDIR += libebml
     SUBDIR += libepubgen
@@ -1428,6 +1429,7 @@
     SUBDIR += py-transpopy
     SUBDIR += py-tvgrab
     SUBDIR += py-ucl
+    SUBDIR += py-ufal.udpipe
     SUBDIR += py-whoosh
     SUBDIR += py-wicked
     SUBDIR += py-wordnet
@@ -1571,6 +1573,7 @@
     SUBDIR += rubygem-jekyll-sass-converter
     SUBDIR += rubygem-jekyll-sitemap
     SUBDIR += rubygem-jemoji
+    SUBDIR += rubygem-js_regex
     SUBDIR += rubygem-jsmin
     SUBDIR += rubygem-kramdown
     SUBDIR += rubygem-kwalify
@@ -1604,6 +1607,7 @@
     SUBDIR += rubygem-rdiscount
     SUBDIR += rubygem-rdtool
     SUBDIR += rubygem-redcarpet
+    SUBDIR += rubygem-regexp_parser
     SUBDIR += rubygem-representable
     SUBDIR += rubygem-reverse_markdown
     SUBDIR += rubygem-ri_cal
@@ -1768,6 +1772,7 @@
     SUBDIR += translate-toolkit
     SUBDIR += ts-hunspell
     SUBDIR += tth
+    SUBDIR += tttcmds
     SUBDIR += turboxsl
     SUBDIR += txt2html
     SUBDIR += txt2man

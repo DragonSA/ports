@@ -1,4 +1,4 @@
-# $FreeBSD: head/misc/Makefile 479008 2018-09-05 03:45:53Z swills $
+# $FreeBSD: head/misc/Makefile 480535 2018-09-23 21:43:25Z yuri $
 #
 
     COMMENT = Miscellaneous utilities
@@ -445,6 +445,7 @@
     SUBDIR += py-tqdm
     SUBDIR += py-yolk
     SUBDIR += pylize
+    SUBDIR += pyobd
     SUBDIR += qbrew
     SUBDIR += qlas
     SUBDIR += qmetro
