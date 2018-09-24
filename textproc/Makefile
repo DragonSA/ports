@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/Makefile 480549 2018-09-24 06:59:56Z dbn $
+# $FreeBSD: head/textproc/Makefile 480551 2018-09-24 07:04:15Z dbn $
 #
 
     COMMENT = Text processing utilities (does not include desktop publishing)
@@ -17,6 +17,7 @@
     SUBDIR += R-cran-openxlsx
     SUBDIR += R-cran-pystr
     SUBDIR += R-cran-readr
+    SUBDIR += R-cran-rematch
     SUBDIR += R-cran-rmarkdown
     SUBDIR += R-cran-stringi
     SUBDIR += R-cran-stringr
