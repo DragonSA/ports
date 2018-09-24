@@ -1,9 +1,10 @@
-# $FreeBSD: head/archivers/Makefile 477641 2018-08-20 09:53:59Z mm $
+# $FreeBSD: head/archivers/Makefile 480548 2018-09-24 06:28:21Z dbn $
 #
 
     COMMENT = Archivers
 
     SUBDIR += 9e
+    SUBDIR += R-cran-zip
     SUBDIR += advancecomp
     SUBDIR += amigadepacker
     SUBDIR += arc
