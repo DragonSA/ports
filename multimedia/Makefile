@@ -1,4 +1,4 @@
-# $FreeBSD: head/multimedia/Makefile 478871 2018-09-03 13:17:06Z swills $
+# $FreeBSD: head/multimedia/Makefile 482343 2018-10-18 13:31:00Z tijl $
 #
 
     COMMENT = Multimedia software
@@ -26,6 +26,7 @@
     SUBDIR += avidemux-qt4
     SUBDIR += avinfo
     SUBDIR += baka-mplayer
+    SUBDIR += bcmatroska2
     SUBDIR += bino
     SUBDIR += bitstream
     SUBDIR += blind
@@ -283,7 +284,7 @@
     SUBDIR += mpv
     SUBDIR += msdl
     SUBDIR += msopenh264
-    SUBDIR += msx264
+    SUBDIR += mswebrtc
     SUBDIR += mxflib
     SUBDIR += mythtv
     SUBDIR += mythtv-frontend
@@ -333,6 +334,7 @@
     SUBDIR += pwcbsd
     SUBDIR += pwcview
     SUBDIR += py-PySceneDetect
+    SUBDIR += py-av
     SUBDIR += py-cec
     SUBDIR += py-enzyme
     SUBDIR += py-flvlib
@@ -454,6 +456,7 @@
     SUBDIR += vid.stab
     SUBDIR += vlc
     SUBDIR += vlc-qt4
+    SUBDIR += vlc3
     SUBDIR += vtkmpeg2encode
     SUBDIR += w_scan
     SUBDIR += webcamd

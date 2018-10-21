@@ -1,4 +1,4 @@
-# $FreeBSD: head/audio/Makefile 480439 2018-09-23 00:10:21Z yuri $
+# $FreeBSD: head/audio/Makefile 482642 2018-10-21 05:38:08Z yuri $
 #
 
     COMMENT = Audio tools
@@ -315,6 +315,7 @@
     SUBDIR += gstreamer1-plugins-twolame
     SUBDIR += gstreamer1-plugins-vorbis
     SUBDIR += gstreamer1-plugins-wavpack
+    SUBDIR += gstreamer1-plugins-webrtcdsp
     SUBDIR += gtick
     SUBDIR += gtkguitune
     SUBDIR += gtkpod
@@ -438,6 +439,7 @@
     SUBDIR += liboggz
     SUBDIR += libopenmpt
     SUBDIR += libopenspc
+    SUBDIR += libopusenc
     SUBDIR += libsamplerate
     SUBDIR += libshairport
     SUBDIR += libshout
@@ -561,8 +563,6 @@
     SUBDIR += mpg321
     SUBDIR += mpiosh
     SUBDIR += mps
-    SUBDIR += msbcg729
-    SUBDIR += msilbc
     SUBDIR += mumble
     SUBDIR += murmur
     SUBDIR += musepack
@@ -731,6 +731,7 @@
     SUBDIR += ripit
     SUBDIR += ripperx
     SUBDIR += rkr-lv2
+    SUBDIR += rnnoise-nu
     SUBDIR += rosegarden
     SUBDIR += rplay
     SUBDIR += rsynth
@@ -787,6 +788,7 @@
     SUBDIR += spc2it
     SUBDIR += specimen
     SUBDIR += spectrogram
+    SUBDIR += speech-denoiser-lv2
     SUBDIR += speex
     SUBDIR += speexdsp
     SUBDIR += spek
@@ -868,6 +870,7 @@
     SUBDIR += waveplay
     SUBDIR += wavpack
     SUBDIR += wavplay
+    SUBDIR += webrtc-audio-processing
     SUBDIR += whysynth
     SUBDIR += wildmidi
     SUBDIR += wmalbum

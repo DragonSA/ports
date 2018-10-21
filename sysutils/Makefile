@@ -1,4 +1,4 @@
-# $FreeBSD: head/sysutils/Makefile 480509 2018-09-23 13:50:11Z tobik $
+# $FreeBSD: head/sysutils/Makefile 482430 2018-10-19 14:34:16Z antoine $
 #
 
     COMMENT = System utilities
@@ -42,6 +42,7 @@
     SUBDIR += ansible23
     SUBDIR += ansible24
     SUBDIR += ansible25
+    SUBDIR += ansible26
     SUBDIR += anvil
     SUBDIR += apachetop
     SUBDIR += apcpwr
@@ -296,6 +297,7 @@
     SUBDIR += dvtm
     SUBDIR += dwatch
     SUBDIR += dwatch-gource
+    SUBDIR += dwatch-json
     SUBDIR += dwatch-pwsnoop
     SUBDIR += e2fsprogs
     SUBDIR += ec2-scripts
@@ -768,6 +770,7 @@
     SUBDIR += nrg2iso
     SUBDIR += nut
     SUBDIR += nvclock
+    SUBDIR += nvme-cli
     SUBDIR += nvramtool
     SUBDIR += oak
     SUBDIR += obliterate
@@ -909,6 +912,8 @@
     SUBDIR += php71-posix
     SUBDIR += php72-fileinfo
     SUBDIR += php72-posix
+    SUBDIR += php73-fileinfo
+    SUBDIR += php73-posix
     SUBDIR += phpfpm_exporter
     SUBDIR += phybs
     SUBDIR += pick
@@ -935,6 +940,7 @@
     SUBDIR += polkit-kde
     SUBDIR += polkit-qt
     SUBDIR += pot
+    SUBDIR += potnet
     SUBDIR += powerdxx
     SUBDIR += powerman
     SUBDIR += powermon
@@ -955,8 +961,10 @@
     SUBDIR += puppet-mode.el
     SUBDIR += puppet4
     SUBDIR += puppet5
+    SUBDIR += puppet6
     SUBDIR += puppetserver
     SUBDIR += puppetserver5
+    SUBDIR += puppetserver6
     SUBDIR += pv
     SUBDIR += pwd_unmkdb
     SUBDIR += pwgen
@@ -1005,6 +1013,7 @@
     SUBDIR += py-ptyprocess
     SUBDIR += py-pytsk
     SUBDIR += py-pywatchman
+    SUBDIR += py-pyznap
     SUBDIR += py-queuelib
     SUBDIR += py-ranger
     SUBDIR += py-salt
@@ -1123,6 +1132,7 @@
     SUBDIR += rubygem-ohai8
     SUBDIR += rubygem-parallel
     SUBDIR += rubygem-puppet_forge
+    SUBDIR += rubygem-puppetserver-ca
     SUBDIR += rubygem-r10k
     SUBDIR += rubygem-rubyipmi
     SUBDIR += rubygem-serverspec
@@ -1232,6 +1242,7 @@
     SUBDIR += ssync
     SUBDIR += stalepid
     SUBDIR += stanchion
+    SUBDIR += stepsync
     SUBDIR += stmpclean
     SUBDIR += storcli
     SUBDIR += stow
@@ -1260,6 +1271,7 @@
     SUBDIR += syslog-ng314
     SUBDIR += syslog-ng315
     SUBDIR += syslog-ng317
+    SUBDIR += syslog-ng318
     SUBDIR += syslog-ng36
     SUBDIR += syslog-ng37
     SUBDIR += syslog-ng39
@@ -1298,6 +1310,7 @@
     SUBDIR += torque
     SUBDIR += toshctl
     SUBDIR += tracker
+    SUBDIR += tracker-miners
     SUBDIR += tree
     SUBDIR += tren
     SUBDIR += trueos-libqt5
@@ -1339,6 +1352,7 @@
     SUBDIR += u-boot-pandaboard
     SUBDIR += u-boot-pcduino3
     SUBDIR += u-boot-pine64
+    SUBDIR += u-boot-pinebook
     SUBDIR += u-boot-riotboard
     SUBDIR += u-boot-rpi
     SUBDIR += u-boot-rpi2

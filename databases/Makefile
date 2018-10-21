@@ -1,4 +1,4 @@
-# $FreeBSD: head/databases/Makefile 480279 2018-09-21 15:21:00Z dch $
+# $FreeBSD: head/databases/Makefile 482456 2018-10-19 21:32:08Z girgen $
 #
 
     COMMENT = Databases and related software
@@ -460,6 +460,7 @@
     SUBDIR += p5-Metadata
     SUBDIR += p5-Mojo-Pg
     SUBDIR += p5-MongoDB
+    SUBDIR += p5-Mongoose
     SUBDIR += p5-MySQL-Diff
     SUBDIR += p5-Net-Async-CassandraCQL
     SUBDIR += p5-ORLite
@@ -681,6 +682,19 @@
     SUBDIR += php72-pdo_sqlite
     SUBDIR += php72-pgsql
     SUBDIR += php72-sqlite3
+    SUBDIR += php73-dba
+    SUBDIR += php73-interbase
+    SUBDIR += php73-mysqli
+    SUBDIR += php73-odbc
+    SUBDIR += php73-pdo
+    SUBDIR += php73-pdo_dblib
+    SUBDIR += php73-pdo_firebird
+    SUBDIR += php73-pdo_mysql
+    SUBDIR += php73-pdo_odbc
+    SUBDIR += php73-pdo_pgsql
+    SUBDIR += php73-pdo_sqlite
+    SUBDIR += php73-pgsql
+    SUBDIR += php73-sqlite3
     SUBDIR += phpliteadmin
     SUBDIR += phpminiadmin
     SUBDIR += phpmyadmin
@@ -711,6 +725,14 @@
     SUBDIR += postgresql-repmgr
     SUBDIR += postgresql-tds_fdw
     SUBDIR += postgresql-zhparser
+    SUBDIR += postgresql11-client
+    SUBDIR += postgresql11-contrib
+    SUBDIR += postgresql11-docs
+    SUBDIR += postgresql11-pgtcl
+    SUBDIR += postgresql11-plperl
+    SUBDIR += postgresql11-plpython
+    SUBDIR += postgresql11-pltcl
+    SUBDIR += postgresql11-server
     SUBDIR += postgresql10-client
     SUBDIR += postgresql10-contrib
     SUBDIR += postgresql10-docs
@@ -760,10 +782,13 @@
     SUBDIR += proftpd-mod_sql_sqlite
     SUBDIR += proftpd-mod_sql_tds
     SUBDIR += pspg
+    SUBDIR += puppetdb-cli
     SUBDIR += puppetdb-terminus4
     SUBDIR += puppetdb-terminus5
+    SUBDIR += puppetdb-terminus6
     SUBDIR += puppetdb4
     SUBDIR += puppetdb5
+    SUBDIR += puppetdb6
     SUBDIR += pure-sql3
     SUBDIR += puredb
     SUBDIR += pxlib
@@ -783,6 +808,7 @@
     SUBDIR += py-bsddb
     SUBDIR += py-bsddb3
     SUBDIR += py-carbon
+    SUBDIR += py-cassandra-driver
     SUBDIR += py-cdb
     SUBDIR += py-couchdb
     SUBDIR += py-cql
@@ -1008,6 +1034,7 @@
     SUBDIR += rubygem-state_machines-activemodel
     SUBDIR += rubygem-state_machines-activerecord
     SUBDIR += rubygem-tarantool
+    SUBDIR += sequeler
     SUBDIR += sfcgal
     SUBDIR += sharedance
     SUBDIR += skytools

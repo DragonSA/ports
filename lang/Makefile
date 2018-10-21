@@ -1,4 +1,4 @@
-# $FreeBSD: head/lang/Makefile 479963 2018-09-18 00:19:31Z lwhsu $
+# $FreeBSD: head/lang/Makefile 481529 2018-10-08 09:31:09Z tz $
 #
 
     COMMENT = Programming languages
@@ -218,6 +218,7 @@
     SUBDIR += nyan
     SUBDIR += ocaml
     SUBDIR += ocaml-autoconf
+    SUBDIR += ocaml-camlidl
     SUBDIR += ocaml-nox11
     SUBDIR += ohugs
     SUBDIR += onyx
@@ -279,6 +280,8 @@
     SUBDIR += php71-extensions
     SUBDIR += php72
     SUBDIR += php72-extensions
+    SUBDIR += php73
+    SUBDIR += php73-extensions
     SUBDIR += php_doc
     SUBDIR += picoc
     SUBDIR += pocl

@@ -1,4 +1,4 @@
-# $FreeBSD: head/cad/Makefile 480119 2018-09-19 22:44:36Z 0mp $
+# $FreeBSD: head/cad/Makefile 482319 2018-10-18 00:40:18Z jrm $
 #
 
     COMMENT = CAD tools
@@ -35,7 +35,6 @@
     SUBDIR += gerbv
     SUBDIR += ghdl
     SUBDIR += gmsh
-    SUBDIR += gmsh-occ
     SUBDIR += gnucap
     SUBDIR += gplcver
     SUBDIR += gspiceui
@@ -48,9 +47,13 @@
     SUBDIR += kicad
     SUBDIR += kicad-devel
     SUBDIR += kicad-library
+    SUBDIR += kicad-library-footprints
     SUBDIR += kicad-library-footprints-devel
+    SUBDIR += kicad-library-packages3d
     SUBDIR += kicad-library-packages3d-devel
+    SUBDIR += kicad-library-symbols
     SUBDIR += kicad-library-symbols-devel
+    SUBDIR += kicad-library-templates
     SUBDIR += kicad-library-templates-devel
     SUBDIR += klayout
     SUBDIR += layouteditor
