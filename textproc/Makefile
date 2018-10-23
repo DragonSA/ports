@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/Makefile 482863 2018-10-23 18:05:36Z dbn $
+# $FreeBSD: head/textproc/Makefile 482865 2018-10-23 18:13:04Z dbn $
 #
 
     COMMENT = Text processing utilities (does not include desktop publishing)
@@ -10,6 +10,7 @@
     SUBDIR += R-cran-XML
     SUBDIR += R-cran-bibtex
     SUBDIR += R-cran-brew
+    SUBDIR += R-cran-cellranger
     SUBDIR += R-cran-formatR
     SUBDIR += R-cran-highr
     SUBDIR += R-cran-htmltools
