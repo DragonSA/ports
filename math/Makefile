@@ -1,4 +1,4 @@
-# $FreeBSD: head/math/Makefile 482731 2018-10-22 05:15:14Z yuri $
+# $FreeBSD: head/math/Makefile 482867 2018-10-23 18:25:39Z dbn $
 #
 
     COMMENT = Mathematics
@@ -56,6 +56,7 @@
     SUBDIR += R-cran-gpclib
     SUBDIR += R-cran-gss
     SUBDIR += R-cran-gtable
+    SUBDIR += R-cran-haven
     SUBDIR += R-cran-igraph
     SUBDIR += R-cran-influenceR
     SUBDIR += R-cran-inline
