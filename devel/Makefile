@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/Makefile 482862 2018-10-23 17:55:45Z dbn $
+# $FreeBSD: head/devel/Makefile 482864 2018-10-23 18:09:22Z dbn $
 #
 
     COMMENT = Development utilities
@@ -27,6 +27,7 @@
     SUBDIR += R-cran-chron
     SUBDIR += R-cran-classInt
     SUBDIR += R-cran-cli
+    SUBDIR += R-cran-covr
     SUBDIR += R-cran-crayon
     SUBDIR += R-cran-data.table
     SUBDIR += R-cran-doParallel
