@@ -1,4 +1,4 @@
-# $FreeBSD: head/sysutils/Makefile 482430 2018-10-19 14:34:16Z antoine $
+# $FreeBSD: head/sysutils/Makefile 482721 2018-10-21 19:28:54Z cmt $
 #
 
     COMMENT = System utilities
@@ -1155,6 +1155,7 @@
     SUBDIR += rubygem-vagrant-bhyve
     SUBDIR += rubygem-vagrant-mutate
     SUBDIR += rubygem-vagrant-vbguest
+    SUBDIR += rubygem-vagrant_cloud
     SUBDIR += rubygem-vmstat
     SUBDIR += rubygem-win32-file
     SUBDIR += rubygem-win32-file-security

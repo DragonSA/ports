@@ -1,4 +1,4 @@
-# $FreeBSD: head/math/Makefile 482614 2018-10-20 18:36:24Z yuri $
+# $FreeBSD: head/math/Makefile 482731 2018-10-22 05:15:14Z yuri $
 #
 
     COMMENT = Mathematics
@@ -474,6 +474,7 @@
     SUBDIR += openblas
     SUBDIR += openfst
     SUBDIR += openlibm
+    SUBDIR += openmesh
     SUBDIR += opensolaris-libm
     SUBDIR += orpie
     SUBDIR += p5-AI-DecisionTree

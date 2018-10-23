@@ -1,4 +1,4 @@
-# $FreeBSD: head/misc/Makefile 482261 2018-10-16 22:07:52Z yuri $
+# $FreeBSD: head/misc/Makefile 482716 2018-10-21 17:49:53Z yuri $
 #
 
     COMMENT = Miscellaneous utilities
@@ -418,6 +418,7 @@
     SUBDIR += py-fuzzy
     SUBDIR += py-glance
     SUBDIR += py-kartograph
+    SUBDIR += py-molequeue
     SUBDIR += py-orange3-associate
     SUBDIR += py-orange3-datafusion
     SUBDIR += py-orange3-educational

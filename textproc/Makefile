@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/Makefile 482343 2018-10-18 13:31:00Z tijl $
+# $FreeBSD: head/textproc/Makefile 482824 2018-10-23 10:14:09Z rene $
 #
 
     COMMENT = Text processing utilities (does not include desktop publishing)
@@ -248,10 +248,8 @@
     SUBDIR += hr-aspell
     SUBDIR += hs-Diff
     SUBDIR += hs-HStringTemplate
-    SUBDIR += hs-HaXml
     SUBDIR += hs-appar
     SUBDIR += hs-attoparsec
-    SUBDIR += hs-attoparsec-enumerator
     SUBDIR += hs-attoparsec-iso8601
     SUBDIR += hs-bencode
     SUBDIR += hs-blaze-html
