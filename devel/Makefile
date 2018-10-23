@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/Makefile 482824 2018-10-23 10:14:09Z rene $
+# $FreeBSD: head/devel/Makefile 482862 2018-10-23 17:55:45Z dbn $
 #
 
     COMMENT = Development utilities
@@ -69,6 +69,7 @@
     SUBDIR += R-cran-rstudioapi
     SUBDIR += R-cran-sfsmisc
     SUBDIR += R-cran-sourcetools
+    SUBDIR += R-cran-testthat
     SUBDIR += R-cran-tibble
     SUBDIR += R-cran-tidyr
     SUBDIR += R-cran-tidyselect
