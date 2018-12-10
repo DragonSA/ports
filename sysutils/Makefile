@@ -1,4 +1,4 @@
-# $FreeBSD: head/sysutils/Makefile 482721 2018-10-21 19:28:54Z cmt $
+# $FreeBSD: head/sysutils/Makefile 486677 2018-12-05 15:46:02Z rene $
 #
 
     COMMENT = System utilities
@@ -122,7 +122,6 @@
     SUBDIR += bsdhwmon
     SUBDIR += bsdinfo
     SUBDIR += bsdisks
-    SUBDIR += bsdmoted
     SUBDIR += bsdploy
     SUBDIR += bsdstats
     SUBDIR += bstack
@@ -155,6 +154,7 @@
     SUBDIR += cfengine-masterfiles310
     SUBDIR += cfengine-masterfiles311
     SUBDIR += cfengine-masterfiles312
+    SUBDIR += cfengine-masterfiles313
     SUBDIR += cfengine-masterfiles36
     SUBDIR += cfengine-masterfiles37
     SUBDIR += cfengine-masterfiles38
@@ -163,6 +163,7 @@
     SUBDIR += cfengine310
     SUBDIR += cfengine311
     SUBDIR += cfengine312
+    SUBDIR += cfengine313
     SUBDIR += cfengine32
     SUBDIR += cfengine33
     SUBDIR += cfengine34
@@ -250,6 +251,7 @@
     SUBDIR += devstat
     SUBDIR += dfc
     SUBDIR += di
+    SUBDIR += digdag
     SUBDIR += dim
     SUBDIR += dirdiff
     SUBDIR += direnv
@@ -322,7 +324,6 @@
     SUBDIR += facter
     SUBDIR += fanout
     SUBDIR += farbot
-    SUBDIR += fastest_cvsup
     SUBDIR += fatback
     SUBDIR += fcode-utils
     SUBDIR += fconfig
@@ -413,6 +414,7 @@
     SUBDIR += fusefs-wikipediafs
     SUBDIR += fusefs-zip
     SUBDIR += fvcool
+    SUBDIR += fwup
     SUBDIR += gaffitter
     SUBDIR += gai-leds
     SUBDIR += ganglia-monitor-core
@@ -521,6 +523,7 @@
     SUBDIR += intel-pcm-devel
     SUBDIR += intel-qcu
     SUBDIR += iocage
+    SUBDIR += iocage-devel
     SUBDIR += iocell
     SUBDIR += iogen
     SUBDIR += iograph
@@ -551,6 +554,7 @@
     SUBDIR += jkill
     SUBDIR += jobd
     SUBDIR += jps
+    SUBDIR += jstest-gtk
     SUBDIR += jtop
     SUBDIR += jtopen
     SUBDIR += jvmtop
@@ -906,8 +910,6 @@
     SUBDIR += phantom
     SUBDIR += php56-fileinfo
     SUBDIR += php56-posix
-    SUBDIR += php70-fileinfo
-    SUBDIR += php70-posix
     SUBDIR += php71-fileinfo
     SUBDIR += php71-posix
     SUBDIR += php72-fileinfo
@@ -973,6 +975,7 @@
     SUBDIR += py-XenAPI
     SUBDIR += py-analyzemft
     SUBDIR += py-ansible-lint
+    SUBDIR += py-ansible-runner
     SUBDIR += py-bcfg2
     SUBDIR += py-cdmi
     SUBDIR += py-consul
@@ -1000,6 +1003,7 @@
     SUBDIR += py-mqttwarn
     SUBDIR += py-nagiosplugin
     SUBDIR += py-nomad
+    SUBDIR += py-packet-python
     SUBDIR += py-pkginfo
     SUBDIR += py-ploy
     SUBDIR += py-ploy_ansible
@@ -1023,6 +1027,7 @@
     SUBDIR += py-stdiff
     SUBDIR += py-superlance
     SUBDIR += py-supervisor
+    SUBDIR += py-tarsnapper
     SUBDIR += py-tmuxp
     SUBDIR += py-uptime
     SUBDIR += py-zdaemon
@@ -1030,7 +1035,6 @@
     SUBDIR += qchroot
     SUBDIR += qdirstat
     SUBDIR += qjail
-    SUBDIR += qjail4
     SUBDIR += qlogtools
     SUBDIR += qpxtool
     SUBDIR += qsudo
@@ -1074,6 +1078,8 @@
     SUBDIR += riak-cs
     SUBDIR += rinse
     SUBDIR += rmonitor
+    SUBDIR += rocr
+    SUBDIR += roct
     SUBDIR += roottail
     SUBDIR += rovclock
     SUBDIR += rpi-firmware
@@ -1189,7 +1195,6 @@
     SUBDIR += scanbuttond
     SUBDIR += scct
     SUBDIR += schedutils
-    SUBDIR += scprotect
     SUBDIR += screen
     SUBDIR += screenfetch
     SUBDIR += screenie
@@ -1258,6 +1263,7 @@
     SUBDIR += symlinks
     SUBDIR += symon
     SUBDIR += synergy
+    SUBDIR += synergy-1
     SUBDIR += sysadm
     SUBDIR += sysadm-client
     SUBDIR += sysgather

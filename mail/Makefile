@@ -1,4 +1,4 @@
-# $FreeBSD: head/mail/Makefile 482363 2018-10-18 19:53:29Z sunpoet $
+# $FreeBSD: head/mail/Makefile 486677 2018-12-05 15:46:02Z rene $
 #
 
     COMMENT = Electronic mail utilities
@@ -488,7 +488,6 @@
     SUBDIR += pflogsumm
     SUBDIR += pfqueue
     SUBDIR += php56-imap
-    SUBDIR += php70-imap
     SUBDIR += php71-imap
     SUBDIR += php72-imap
     SUBDIR += php73-imap
@@ -537,7 +536,7 @@
     SUBDIR += py-authres
     SUBDIR += py-cyruslib
     SUBDIR += py-dkimpy
-    SUBDIR += py-email-reply-parser
+    SUBDIR += py-email_reply_parser
     SUBDIR += py-flask-mail
     SUBDIR += py-flufl.bounce
     SUBDIR += py-fuglu

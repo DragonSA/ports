@@ -1,4 +1,4 @@
-# $FreeBSD: head/misc/Makefile 482716 2018-10-21 17:49:53Z yuri $
+# $FreeBSD: head/misc/Makefile 486677 2018-12-05 15:46:02Z rene $
 #
 
     COMMENT = Miscellaneous utilities
@@ -7,6 +7,7 @@
     SUBDIR += R-cran-xfun
     SUBDIR += achievo
     SUBDIR += aclgen
+    SUBDIR += actiona
     SUBDIR += amanda-client
     SUBDIR += amanda-perl-wrapper
     SUBDIR += amanda-server
@@ -53,6 +54,7 @@
     SUBDIR += compat7x
     SUBDIR += compat8x
     SUBDIR += compat9x
+    SUBDIR += console-bridge
     SUBDIR += countrycodes
     SUBDIR += cpuid
     SUBDIR += crosspad
@@ -60,6 +62,7 @@
     SUBDIR += cryptoballot
     SUBDIR += cs
     SUBDIR += cstream
+    SUBDIR += ctm
     SUBDIR += dahdi
     SUBDIR += dahdi-kmod
     SUBDIR += dahdi-kmod26
@@ -180,6 +183,7 @@
     SUBDIR += histring
     SUBDIR += hotkeys
     SUBDIR += hulgalugha
+    SUBDIR += ignition-fuel-tools
     SUBDIR += imerge
     SUBDIR += img2xterm
     SUBDIR += ini_file_manager
@@ -194,8 +198,11 @@
     SUBDIR += kbdscan
     SUBDIR += kcd
     SUBDIR += kde-thumbnailer-chm
+    SUBDIR += kde-thumbnailer-chm-kde4
     SUBDIR += kde-thumbnailer-epub
+    SUBDIR += kde-thumbnailer-epub-kde4
     SUBDIR += kde-thumbnailer-fb2
+    SUBDIR += kde-thumbnailer-fb2-kde4
     SUBDIR += kde4-l10n
     SUBDIR += kde4-l10n-bg
     SUBDIR += kde4-l10n-bs
@@ -253,6 +260,7 @@
     SUBDIR += ktouch-kde4
     SUBDIR += kwordquiz
     SUBDIR += kwordquiz-kde4
+    SUBDIR += lastools
     SUBDIR += latex-mk
     SUBDIR += lazyread
     SUBDIR += lc
@@ -392,7 +400,6 @@
     SUBDIR += pecl-timezonedb
     SUBDIR += pfm
     SUBDIR += php56-calendar
-    SUBDIR += php70-calendar
     SUBDIR += php71-calendar
     SUBDIR += php72-calendar
     SUBDIR += php73-calendar
@@ -486,8 +493,8 @@
     SUBDIR += rubygem-rabbit
     SUBDIR += rubygem-vpim
     SUBDIR += rump
-    SUBDIR += rumprun
     SUBDIR += saaghar
+    SUBDIR += sdformat
     SUBDIR += seabios
     SUBDIR += sent
     SUBDIR += seq2
@@ -500,6 +507,7 @@
     SUBDIR += sloccount
     SUBDIR += sls
     SUBDIR += smssend
+    SUBDIR += snakemake
     SUBDIR += soapysdr
     SUBDIR += solarized
     SUBDIR += spamcalc
@@ -540,6 +548,8 @@
     SUBDIR += unicode-emoji
     SUBDIR += upclient
     SUBDIR += urbit
+    SUBDIR += urdfdom
+    SUBDIR += urdfdom-headers
     SUBDIR += urh
     SUBDIR += us-zipcodes
     SUBDIR += usbids

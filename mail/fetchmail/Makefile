@@ -1,12 +1,15 @@
 # Created by: Ville Eerola <ve@sci.fi>
-# $FreeBSD: head/mail/fetchmail/Makefile 470610 2018-05-22 13:15:13Z mat $
+# $FreeBSD: head/mail/fetchmail/Makefile 485579 2018-11-22 01:52:39Z meta $
 
 PORTNAME=	fetchmail
 PORTVERSION=	6.3.26
-PORTREVISION=	6
+PORTREVISION=	8
 CATEGORIES=	mail ipv6
 MASTER_SITES=	SF/${PORTNAME}/branch_6.3/ \
 		http://mandree.home.pages.de/${PORTNAME}/
+
+PATCH_SITES=	https://gitlab.com/fetchmail/fetchmail/commit/
+PATCHFILES=	9b8b634.patch:-p1
 
 MAINTAINER=	chalpin@cs.wisc.edu
 COMMENT=	Batch mail retrieval utility for IMAP/POP3/ETRN/ODMR

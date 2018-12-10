@@ -1,9 +1,8 @@
 # Created by: Dirk Froemberg <dirk@FreeBSD.org>
-# $FreeBSD: head/security/openssl/Makefile 479595 2018-09-12 11:36:17Z brnrd $
+# $FreeBSD: head/security/openssl/Makefile 485452 2018-11-20 17:53:09Z brnrd $
 
 PORTNAME=	openssl
-PORTVERSION=	1.0.2p
-PORTREVISION=	1
+PORTVERSION=	1.0.2q
 PORTEPOCH=	1
 CATEGORIES=	security devel
 MASTER_SITES=	http://www.openssl.org/source/ \
@@ -18,7 +17,6 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 CONFLICTS_INSTALL=	libressl-[0-9]* \
 			libressl-devel-[0-9]* \
-			openssl-devel-[0-9]* \
 			openssl111-[0-9]*
 
 OPTIONS_DEFINE=		DOCS MAN3 PADLOCK RFC3779 SHARED THREADS ZLIB

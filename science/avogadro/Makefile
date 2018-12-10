@@ -1,5 +1,5 @@
 # Created by: Troels Kofoed Jacobsen <tkjacobsen@gmail.com>
-# $FreeBSD: head/science/avogadro/Makefile 482622 2018-10-20 21:11:57Z yuri $
+# $FreeBSD: head/science/avogadro/Makefile 486467 2018-12-02 15:41:47Z rene $
 
 PORTNAME=	avogadro
 DISTVERSION=	1.2.0
@@ -11,6 +11,11 @@ COMMENT=	Advanced molecular editor and viewer
 
 LICENSE=	GPLv2+
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+DEPRECATED=		Qt4 has been EOL since december 2015
+EXPIRATION_DATE=	2019-03-15
+
+CONFLICTS_INSTALL=	libmsym
 
 BROKEN_armv6=		fails to compile: eigen2/Eigen/src/Core/Assign.h: you mixed different numeric types in 'Eigen::ei_static_assert<false>'
 BROKEN_armv7=		fails to compile: eigen2/Eigen/src/Core/Assign.h: you mixed different numeric types in 'Eigen::ei_static_assert<false>'

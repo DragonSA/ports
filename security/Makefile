@@ -1,4 +1,4 @@
-# $FreeBSD: head/security/Makefile 482824 2018-10-23 10:14:09Z rene $
+# $FreeBSD: head/security/Makefile 486677 2018-12-05 15:46:02Z rene $
 #
 
     COMMENT = Security tools
@@ -376,6 +376,7 @@
     SUBDIR += libwhisker
     SUBDIR += libyubikey
     SUBDIR += libzrtpcppcore
+    SUBDIR += linux-c6-audit-libs
     SUBDIR += linux-c6-cyrus-sasl2
     SUBDIR += linux-c6-gnutls
     SUBDIR += linux-c6-libgcrypt
@@ -384,6 +385,7 @@
     SUBDIR += linux-c6-libtasn1
     SUBDIR += linux-c6-nss
     SUBDIR += linux-c6-openssl
+    SUBDIR += linux-c6-pam
     SUBDIR += linux-c7-cyrus-sasl2
     SUBDIR += linux-c7-gnutls
     SUBDIR += linux-c7-libgcrypt
@@ -406,6 +408,7 @@
     SUBDIR += maia
     SUBDIR += mailzu
     SUBDIR += makepasswd
+    SUBDIR += maltrail
     SUBDIR += manipulate_data
     SUBDIR += masscan
     SUBDIR += matrixssl
@@ -420,6 +423,7 @@
     SUBDIR += mhash
     SUBDIR += mindterm-binary
     SUBDIR += minisign
+    SUBDIR += modsecurity3
     SUBDIR += monkeysphere
     SUBDIR += morphis
     SUBDIR += munge
@@ -464,7 +468,6 @@
     SUBDIR += openssh-askpass
     SUBDIR += openssh-portable
     SUBDIR += openssl
-    SUBDIR += openssl-devel
     SUBDIR += openssl-unsafe
     SUBDIR += openssl111
     SUBDIR += openssl_tpm_engine
@@ -488,9 +491,13 @@
     SUBDIR += ophcrack
     SUBDIR += orthrus
     SUBDIR += osiris
-    SUBDIR += ossec-hids-client
+    SUBDIR += ossec-hids
+    SUBDIR += ossec-hids-agent
+    SUBDIR += ossec-hids-agent-config
     SUBDIR += ossec-hids-local
+    SUBDIR += ossec-hids-local-config
     SUBDIR += ossec-hids-server
+    SUBDIR += ossec-hids-server-config
     SUBDIR += osslsigncode
     SUBDIR += otpw
     SUBDIR += outguess
@@ -794,6 +801,7 @@
     SUBDIR += pear-Auth_HTTP
     SUBDIR += pear-Auth_PrefManager
     SUBDIR += pear-Auth_SASL
+    SUBDIR += pear-Auth_SASL2
     SUBDIR += pear-Crypt_Blowfish
     SUBDIR += pear-Crypt_CBC
     SUBDIR += pear-Crypt_CHAP
@@ -839,10 +847,6 @@
     SUBDIR += php56-hash
     SUBDIR += php56-mcrypt
     SUBDIR += php56-openssl
-    SUBDIR += php70-filter
-    SUBDIR += php70-hash
-    SUBDIR += php70-mcrypt
-    SUBDIR += php70-openssl
     SUBDIR += php71-filter
     SUBDIR += php71-hash
     SUBDIR += php71-mcrypt
@@ -1044,6 +1048,8 @@
     SUBDIR += py-sslstrip
     SUBDIR += py-stem
     SUBDIR += py-stix
+    SUBDIR += py-stix2
+    SUBDIR += py-stix2-patterns
     SUBDIR += py-tlslite
     SUBDIR += py-trezor
     SUBDIR += py-trustedpickle
@@ -1126,6 +1132,7 @@
     SUBDIR += rubygem-encryptor
     SUBDIR += rubygem-ezcrypto
     SUBDIR += rubygem-googleauth
+    SUBDIR += rubygem-googleauth06
     SUBDIR += rubygem-gpgme
     SUBDIR += rubygem-gpgr
     SUBDIR += rubygem-gssapi
@@ -1217,6 +1224,7 @@
     SUBDIR += scanssh
     SUBDIR += scrypt
     SUBDIR += seahorse
+    SUBDIR += seal
     SUBDIR += seccure
     SUBDIR += secpanel
     SUBDIR += sectok
@@ -1325,8 +1333,8 @@
     SUBDIR += unhide
     SUBDIR += unicornscan
     SUBDIR += unssh
-    SUBDIR += vault
     SUBDIR += vanguards-tor
+    SUBDIR += vault
     SUBDIR += veracrypt
     SUBDIR += vinetto
     SUBDIR += vlock

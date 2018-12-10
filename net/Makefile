@@ -1,4 +1,4 @@
-# $FreeBSD: head/net/Makefile 482747 2018-10-22 15:34:55Z zi $
+# $FreeBSD: head/net/Makefile 486929 2018-12-08 09:24:43Z yuri $
 #
 
     COMMENT = Networking tools
@@ -34,6 +34,7 @@
     SUBDIR += asterisk-g72x
     SUBDIR += asterisk13
     SUBDIR += asterisk15
+    SUBDIR += asterisk16
     SUBDIR += avahi
     SUBDIR += avahi-app
     SUBDIR += avahi-autoipd
@@ -80,6 +81,7 @@
     SUBDIR += chrony
     SUBDIR += citrix_ica
     SUBDIR += cjdns
+    SUBDIR += clash
     SUBDIR += cloud-init
     SUBDIR += cloud-init-azure
     SUBDIR += clusterit
@@ -344,7 +346,6 @@
     SUBDIR += kmbox
     SUBDIR += kmime
     SUBDIR += knc
-    SUBDIR += knemo-kde4
     SUBDIR += kontactinterface
     SUBDIR += kpimtextedit
     SUBDIR += krdc
@@ -373,6 +374,7 @@
     SUBDIR += libdmapsharing
     SUBDIR += libdnet
     SUBDIR += libexosip2
+    SUBDIR += libfabric
     SUBDIR += libfb
     SUBDIR += libfixbuf
     SUBDIR += libgnetwork
@@ -976,7 +978,6 @@
     SUBDIR += pecl-amqp
     SUBDIR += pecl-apn
     SUBDIR += pecl-geoip
-    SUBDIR += pecl-gupnp
     SUBDIR += pecl-ip2location
     SUBDIR += pecl-mosquitto
     SUBDIR += pecl-oauth
@@ -994,10 +995,6 @@
     SUBDIR += php56-soap
     SUBDIR += php56-sockets
     SUBDIR += php56-xmlrpc
-    SUBDIR += php70-ldap
-    SUBDIR += php70-soap
-    SUBDIR += php70-sockets
-    SUBDIR += php70-xmlrpc
     SUBDIR += php71-ldap
     SUBDIR += php71-soap
     SUBDIR += php71-sockets
@@ -1024,7 +1021,6 @@
     SUBDIR += pktanon
     SUBDIR += pload
     SUBDIR += plugdaemon
-    SUBDIR += pmf
     SUBDIR += polyorb
     SUBDIR += poptop
     SUBDIR += portfwd
@@ -1185,6 +1181,7 @@
     SUBDIR += queso
     SUBDIR += quiterss
     SUBDIR += quoted
+    SUBDIR += rabbiteer
     SUBDIR += rabbitmq
     SUBDIR += rabbitmq-c
     SUBDIR += rabbitmq-c-devel
@@ -1220,6 +1217,7 @@
     SUBDIR += rfbproxy
     SUBDIR += rinetd
     SUBDIR += ripe-whois
+    SUBDIR += routinator
     SUBDIR += rp-pppoe
     SUBDIR += rsplib
     SUBDIR += rsync
@@ -1283,7 +1281,6 @@
     SUBDIR += rubygem-geoip
     SUBDIR += rubygem-gitaly
     SUBDIR += rubygem-gitaly-proto
-    SUBDIR += rubygem-gitaly-proto094
     SUBDIR += rubygem-gitlab_omniauth-ldap
     SUBDIR += rubygem-gitlab_omniauth-ldap20
     SUBDIR += rubygem-google-cloud-core
@@ -1425,7 +1422,6 @@
     SUBDIR += ssmping
     SUBDIR += ssspl
     SUBDIR += ssvnc
-    SUBDIR += stf-6rd-kmod
     SUBDIR += stone
     SUBDIR += stund
     SUBDIR += subnetcalc
@@ -1509,7 +1505,6 @@
     SUBDIR += uriparser
     SUBDIR += urlendec
     SUBDIR += usbredir
-    SUBDIR += userfw
     SUBDIR += utftpd
     SUBDIR += vblade
     SUBDIR += vde

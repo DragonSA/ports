@@ -1,11 +1,10 @@
 # Created by: Richard Hwang <rhwang@bigpanda.com>, Mikhail Teterin <mi@aldan.algebra.com>, Jun-ichiro itojun Itoh <itojun@itojun.org>
-# $FreeBSD: head/graphics/tiff/Makefile 460339 2018-01-29 21:32:58Z antoine $
+# $FreeBSD: head/graphics/tiff/Makefile 486366 2018-12-01 13:08:56Z sunpoet $
 
 PORTNAME=	tiff
-PORTVERSION=	4.0.9
-PORTREVISION=	1
+PORTVERSION=	4.0.10
 CATEGORIES=	graphics
-MASTER_SITES=	http://download.osgeo.org/libtiff/
+MASTER_SITES=	https://download.osgeo.org/libtiff/
 
 MAINTAINER=	portmgr@FreeBSD.org
 COMMENT=	Tools and library routines for working with TIFF images
@@ -23,7 +22,10 @@ USE_LDCONFIG=	yes
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-jpeg-include-dir=${LOCALBASE}/include \
 			--with-jpeg-lib-dir=${LOCALBASE}/lib \
-			--without-x
+			--without-x \
+			--disable-webp \
+			--disable-zstd
+
 INSTALL_TARGET=	install-strip
 TEST_TARGET=	check
 

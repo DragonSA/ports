@@ -1,4 +1,4 @@
-# $FreeBSD: head/graphics/Makefile 482829 2018-10-23 11:00:20Z wen $
+# $FreeBSD: head/graphics/Makefile 487117 2018-12-10 03:02:11Z jmd $
 #
 
     COMMENT = Graphics tools and libraries
@@ -9,8 +9,8 @@
     SUBDIR += GraphicsMagick
     SUBDIR += Hermes
     SUBDIR += IPA
-    SUBDIR += ImageMagick
-    SUBDIR += ImageMagick-nox11
+    SUBDIR += ImageMagick6
+    SUBDIR += ImageMagick6-nox11
     SUBDIR += ImageMagick7
     SUBDIR += ImageMagick7-nox11
     SUBDIR += O2-tools
@@ -152,11 +152,11 @@
     SUBDIR += dmtx-utils
     SUBDIR += drawpile
     SUBDIR += driconf
-    SUBDIR += drm-devel-kmod
+    SUBDIR += drm-current-kmod
+    SUBDIR += drm-fbsd11.2-kmod
+    SUBDIR += drm-fbsd12.0-kmod
     SUBDIR += drm-kmod
     SUBDIR += drm-legacy-kmod
-    SUBDIR += drm-next-kmod
-    SUBDIR += drm-stable-kmod
     SUBDIR += dspdfviewer
     SUBDIR += duhdraw
     SUBDIR += dynamechs
@@ -272,7 +272,6 @@
     SUBDIR += gimp-wavelet-decompose-plugin
     SUBDIR += gimp-wavelet-denoise-plugin
     SUBDIR += gimp-wavelet-sharpen-plugin
-    SUBDIR += gimpfx-foundry
     SUBDIR += giram
     SUBDIR += gkrellkam2
     SUBDIR += gle
@@ -342,6 +341,7 @@
     SUBDIR += gstreamer1-plugins-openjpeg
     SUBDIR += gstreamer1-plugins-png
     SUBDIR += gstreamer1-plugins-rsvg
+    SUBDIR += gstreamer1-plugins-vulkan
     SUBDIR += gstreamer1-plugins-webp
     SUBDIR += gstreamer1-plugins-zbar
     SUBDIR += gthumb
@@ -675,6 +675,7 @@
     SUBDIR += openfx-io
     SUBDIR += openfx-misc
     SUBDIR += opengl-man
+    SUBDIR += opengv
     SUBDIR += openicc-config
     SUBDIR += openimageio
     SUBDIR += openjpeg
@@ -814,6 +815,7 @@
     SUBDIR += pecl-qrencode
     SUBDIR += pecomato
     SUBDIR += pencil
+    SUBDIR += pencil2d
     SUBDIR += peps
     SUBDIR += perceptualdiff
     SUBDIR += pfstools
@@ -831,8 +833,6 @@
     SUBDIR += php5-ffmpeg
     SUBDIR += php56-exif
     SUBDIR += php56-gd
-    SUBDIR += php70-exif
-    SUBDIR += php70-gd
     SUBDIR += php71-exif
     SUBDIR += php71-gd
     SUBDIR += php72-exif
@@ -993,6 +993,7 @@
     SUBDIR += quesa
     SUBDIR += quesoglc
     SUBDIR += qxv
+    SUBDIR += radiance
     SUBDIR += radius-engine
     SUBDIR += raster3d
     SUBDIR += rawstudio
