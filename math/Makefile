@@ -1,4 +1,4 @@
-# $FreeBSD: head/math/Makefile 487136 2018-12-10 07:59:42Z yuri $
+# $FreeBSD: head/math/Makefile 487235 2018-12-11 13:02:50Z rene $
 #
 
     COMMENT = Mathematics
@@ -229,7 +229,6 @@
     SUBDIR += gambit
     SUBDIR += gap
     SUBDIR += gau2grid
-    SUBDIR += gdcalc
     SUBDIR += geg
     SUBDIR += geogebra
     SUBDIR += geogram

@@ -1,4 +1,4 @@
-# $FreeBSD: head/japanese/Makefile 471892 2018-06-07 00:34:18Z rene $
+# $FreeBSD: head/japanese/Makefile 487235 2018-12-11 13:02:50Z rene $
 #
 
     COMMENT = Japanese support
@@ -108,7 +108,6 @@
     SUBDIR += gd
     SUBDIR += gedy
     SUBDIR += gimp-help
-    SUBDIR += gjiten
     SUBDIR += groff
     SUBDIR += gskk
     SUBDIR += gsuica

@@ -1,4 +1,4 @@
-# $FreeBSD: head/audio/Makefile 486395 2018-12-02 04:01:06Z yuri $
+# $FreeBSD: head/audio/Makefile 487235 2018-12-11 13:02:50Z rene $
 #
 
     COMMENT = Audio tools
@@ -249,7 +249,6 @@
     SUBDIR += gqradio
     SUBDIR += gradio
     SUBDIR += gramofile
-    SUBDIR += grip
     SUBDIR += gsm
     SUBDIR += gsound
     SUBDIR += gstreamer-plugins-a52dec
@@ -356,7 +355,6 @@
     SUBDIR += ir-lv2
     SUBDIR += jack
     SUBDIR += jack-keyboard
-    SUBDIR += jack-rack
     SUBDIR += jack-smf-utils
     SUBDIR += jack_ghero
     SUBDIR += jack_mixer

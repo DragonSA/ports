@@ -1,4 +1,4 @@
-# $FreeBSD: head/security/Makefile 486677 2018-12-05 15:46:02Z rene $
+# $FreeBSD: head/security/Makefile 487235 2018-12-11 13:02:50Z rene $
 #
 
     COMMENT = Security tools
@@ -176,7 +176,6 @@
     SUBDIR += gcr
     SUBDIR += git-crypt
     SUBDIR += git-remote-gcrypt
-    SUBDIR += gnome-gpg
     SUBDIR += gnome-keyring
     SUBDIR += gnome-keyring-sharp
     SUBDIR += gnome-password-generator
@@ -193,7 +192,6 @@
     SUBDIR += govpn
     SUBDIR += gpa
     SUBDIR += gpasman
-    SUBDIR += gpass
     SUBDIR += gpgdir
     SUBDIR += gpgme
     SUBDIR += gpgme-cpp
@@ -343,7 +341,6 @@
     SUBDIR += libfprint
     SUBDIR += libgcrypt
     SUBDIR += libgnome-keyring
-    SUBDIR += libgnomesu
     SUBDIR += libgpg-error
     SUBDIR += libgringotts
     SUBDIR += libhijack

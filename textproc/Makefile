@@ -1,4 +1,4 @@
-# $FreeBSD: head/textproc/Makefile 487083 2018-12-09 20:26:13Z swills $
+# $FreeBSD: head/textproc/Makefile 487235 2018-12-11 13:02:50Z rene $
 #
 
     COMMENT = Text processing utilities (does not include desktop publishing)
@@ -100,6 +100,7 @@
     SUBDIR += confetti
     SUBDIR += confget
     SUBDIR += consul-template
+    SUBDIR += crex
     SUBDIR += crimson
     SUBDIR += crunch
     SUBDIR += cs-aspell
@@ -223,7 +224,6 @@
     SUBDIR += glark
     SUBDIR += gmetadom
     SUBDIR += gnome-doc-utils
-    SUBDIR += gnome-spell
     SUBDIR += gnugrep
     SUBDIR += go.text
     SUBDIR += goldendict
@@ -1676,7 +1676,6 @@
     SUBDIR += rxp
     SUBDIR += s5
     SUBDIR += sablotron
-    SUBDIR += sagasu
     SUBDIR += sansi
     SUBDIR += sarep
     SUBDIR += sary

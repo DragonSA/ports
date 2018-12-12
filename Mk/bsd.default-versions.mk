@@ -1,4 +1,4 @@
-# $FreeBSD: head/Mk/bsd.default-versions.mk 486798 2018-12-06 20:33:12Z sunpoet $
+# $FreeBSD: head/Mk/bsd.default-versions.mk 487260 2018-12-11 21:28:31Z gerald $
 #
 # MAINTAINER:	ports@FreeBSD.org
 #
@@ -45,7 +45,7 @@ FPC_DEFAULT?=		3.0.4
 # Possible values: 50, 60, 70 (to be used when non-base compiler is required)
 LLVM_DEFAULT?=		70
 # Possible values: 5, 6, 7, 8
-GCC_DEFAULT?=		7
+GCC_DEFAULT?=		8
 # Possible values: 7, 8, 9, agpl
 GHOSTSCRIPT_DEFAULT?=	agpl
 # Possible values: 1.8.4

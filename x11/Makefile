@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11/Makefile 485943 2018-11-26 14:08:20Z madpilot $
+# $FreeBSD: head/x11/Makefile 487235 2018-12-11 13:02:50Z rene $
 #
 
     COMMENT = Ports to support the X window system
@@ -27,7 +27,6 @@
     SUBDIR += blast
     SUBDIR += bmpanel2
     SUBDIR += bricons
-    SUBDIR += brightside
     SUBDIR += brisk-menu
     SUBDIR += cde
     SUBDIR += cinnamon

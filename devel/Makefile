@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/Makefile 487086 2018-12-09 20:42:40Z swills $
+# $FreeBSD: head/devel/Makefile 487268 2018-12-12 00:19:52Z wg $
 #
 
     COMMENT = Development utilities
@@ -815,7 +815,6 @@
     SUBDIR += gnome-common
     SUBDIR += gnome-js-common
     SUBDIR += gnome-vfs
-    SUBDIR += gnome-vfs-monikers
     SUBDIR += gnome-vfs-reference
     SUBDIR += gnome-vfsmm
     SUBDIR += gnu-efi
@@ -4965,6 +4964,7 @@
     SUBDIR += py-pyrepl
     SUBDIR += py-pyrfc3339
     SUBDIR += py-pyro
+    SUBDIR += py-pyrsistent
     SUBDIR += py-pyshapelib
     SUBDIR += py-pyshp
     SUBDIR += py-pysparklines

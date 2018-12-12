@@ -1,4 +1,4 @@
-# $FreeBSD: head/multimedia/Makefile 484316 2018-11-06 19:00:50Z eugen $
+# $FreeBSD: head/multimedia/Makefile 487253 2018-12-11 20:28:12Z kwm $
 #
 
     COMMENT = Multimedia software
@@ -158,6 +158,7 @@
     SUBDIR += gstreamer1-plugins-x265
     SUBDIR += gstreamer1-qt
     SUBDIR += gstreamer1-rtsp-server
+    SUBDIR += gstreamer1-transcoder
     SUBDIR += gstreamer1-vaapi
     SUBDIR += gstreamer1-validate
     SUBDIR += gstreamermm
@@ -373,7 +374,6 @@
     SUBDIR += qt4-mobility
     SUBDIR += qt4-multimedia
     SUBDIR += qt5-multimedia
-    SUBDIR += quark
     SUBDIR += quodlibet
     SUBDIR += quvi
     SUBDIR += quvi09

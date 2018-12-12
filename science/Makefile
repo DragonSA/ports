@@ -1,4 +1,4 @@
-# $FreeBSD: head/science/Makefile 486781 2018-12-06 20:30:42Z sunpoet $
+# $FreeBSD: head/science/Makefile 487235 2018-12-11 13:02:50Z rene $
 #
 
     COMMENT = Scientific ports
@@ -129,7 +129,6 @@
     SUBDIR += libsvm-python
     SUBDIR += libxc
     SUBDIR += liggghts
-    SUBDIR += linsmith
     SUBDIR += lm
     SUBDIR += luscus
     SUBDIR += madness

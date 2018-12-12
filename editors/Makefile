@@ -1,4 +1,4 @@
-# $FreeBSD: head/editors/Makefile 485407 2018-11-20 03:05:14Z acm $
+# $FreeBSD: head/editors/Makefile 487235 2018-12-11 13:02:50Z rene $
 #
 
     COMMENT = Editors
@@ -20,7 +20,6 @@
     SUBDIR += calligraplan
     SUBDIR += chexedit
     SUBDIR += codelite
-    SUBDIR += conglomerate
     SUBDIR += cooledit
     SUBDIR += cream
     SUBDIR += deforaos-editor

@@ -1,4 +1,4 @@
-# $FreeBSD: head/net/Makefile 486929 2018-12-08 09:24:43Z yuri $
+# $FreeBSD: head/net/Makefile 487279 2018-12-12 06:17:31Z lwhsu $
 #
 
     COMMENT = Networking tools
@@ -65,6 +65,7 @@
     SUBDIR += bosh-bootloader
     SUBDIR += bosh-cli
     SUBDIR += bounce
+    SUBDIR += bredbandskollen
     SUBDIR += bsdec2-image-upload
     SUBDIR += bsdproxy
     SUBDIR += bsdrcmds
@@ -173,7 +174,6 @@
     SUBDIR += fspclient
     SUBDIR += fspd
     SUBDIR += fsplib
-    SUBDIR += g2ipmsg
     SUBDIR += gdrive
     SUBDIR += geoclue
     SUBDIR += geocode-glib
@@ -211,7 +211,6 @@
     SUBDIR += gotthard
     SUBDIR += gq
     SUBDIR += graphpath
-    SUBDIR += grdesktop
     SUBDIR += grilo
     SUBDIR += grilo-plugins
     SUBDIR += grive2
@@ -382,6 +381,7 @@
     SUBDIR += libgrss
     SUBDIR += libgweather
     SUBDIR += libilbc
+    SUBDIR += libjson-rpc-cpp 
     SUBDIR += libkfbapi
     SUBDIR += libkgapi
     SUBDIR += libksieve

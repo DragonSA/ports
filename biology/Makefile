@@ -1,4 +1,4 @@
-# $FreeBSD: head/biology/Makefile 486814 2018-12-07 00:26:04Z yuri $
+# $FreeBSD: head/biology/Makefile 487239 2018-12-11 15:04:12Z jrm $
 #
 
     COMMENT = Biology
@@ -71,7 +71,6 @@
     SUBDIR += ncbi-cxx-toolkit
     SUBDIR += ncbi-toolkit
     SUBDIR += ngs-sdk
-    SUBDIR += njplot
     SUBDIR += p5-AcePerl
     SUBDIR += p5-Bio-ASN1-EntrezGene
     SUBDIR += p5-Bio-Coordinate
