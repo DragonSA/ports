@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11/Makefile 487235 2018-12-11 13:02:50Z rene $
+# $FreeBSD: head/x11/Makefile 496065 2019-03-17 14:20:23Z tcberner $
 #
 
     COMMENT = Ports to support the X window system
@@ -10,7 +10,7 @@
     SUBDIR += alacritty
     SUBDIR += alltray
     SUBDIR += alttab
-    SUBDIR += altyo
+    SUBDIR += aminal
     SUBDIR += antimicro
     SUBDIR += appres
     SUBDIR += apwal
@@ -21,6 +21,7 @@
     SUBDIR += bbdock
     SUBDIR += bbrun
     SUBDIR += beforelight
+    SUBDIR += bemenu
     SUBDIR += bgrot
     SUBDIR += bgs
     SUBDIR += bitmap
@@ -47,7 +48,6 @@
     SUBDIR += deforaos-panel
     SUBDIR += deskmenu
     SUBDIR += deskpaint
-    SUBDIR += dgs
     SUBDIR += dmenu
     SUBDIR += dmenu2
     SUBDIR += docker-tray
@@ -63,6 +63,7 @@
     SUBDIR += evilvte
     SUBDIR += fbdesk
     SUBDIR += fbpanel
+    SUBDIR += find-cursor
     SUBDIR += fireflies
     SUBDIR += florence
     SUBDIR += flruler
@@ -70,7 +71,6 @@
     SUBDIR += fpc-x11
     SUBDIR += fstobdf
     SUBDIR += gcb
-    SUBDIR += gdkxft
     SUBDIR += gdm
     SUBDIR += gmrun
     SUBDIR += gnome-clipboard-daemon
@@ -86,13 +86,12 @@
     SUBDIR += gnustep-app
     SUBDIR += gpctool
     SUBDIR += grabc
+    SUBDIR += grim
     SUBDIR += gromit
     SUBDIR += gskrab
     SUBDIR += gstreamer1-plugins-x
     SUBDIR += gstreamer1-plugins-ximagesrc
     SUBDIR += gsynaptics
-    SUBDIR += gtk-launch
-    SUBDIR += gtk-theme-switch
     SUBDIR += gtk-theme-switch2
     SUBDIR += gtkchtheme
     SUBDIR += gtkterm2
@@ -103,6 +102,7 @@
     SUBDIR += hs-X11-xft
     SUBDIR += hs-xmobar
     SUBDIR += hsetroot
+    SUBDIR += i3blocks
     SUBDIR += i3lock
     SUBDIR += i3status
     SUBDIR += iceauth
@@ -111,16 +111,10 @@
     SUBDIR += imwheel
     SUBDIR += innerspace
     SUBDIR += ipager
-    SUBDIR += kactivities
-    SUBDIR += kactivitymanagerd
+    SUBDIR += j4-dmenu-desktop
     SUBDIR += kb2mb2
     SUBDIR += kde-baseapps
-    SUBDIR += kde-baseapps-kde4
-    SUBDIR += kde-runtime-kde4
-    SUBDIR += kde-workspace-kde4
-    SUBDIR += kde4
     SUBDIR += kde5
-    SUBDIR += kdelibs-kde4
     SUBDIR += keybinder
     SUBDIR += keybinder-gtk3
     SUBDIR += keyboardcast
@@ -137,10 +131,7 @@
     SUBDIR += kf5-kwayland
     SUBDIR += kf5-kwindowsystem
     SUBDIR += kf5-plasma-framework
-    SUBDIR += kgamma-kde4
     SUBDIR += konsole
-    SUBDIR += konsole-kde4
-    SUBDIR += leechcraft
     SUBDIR += lemonbar
     SUBDIR += libICE
     SUBDIR += libSM
@@ -183,7 +174,6 @@
     SUBDIR += libgnomekbd
     SUBDIR += libgnomemm26
     SUBDIR += libinput
-    SUBDIR += libkonq-kde4
     SUBDIR += libmatekbd
     SUBDIR += liboldX
     SUBDIR += libsx
@@ -258,13 +248,10 @@
     SUBDIR += p5-X11-XCB
     SUBDIR += p5-X11-Xlib
     SUBDIR += p5-XTerm-Conf
-    SUBDIR += pantheon-terminal
     SUBDIR += pcdm
     SUBDIR += perwindowlayoutd
     SUBDIR += pipeglade
     SUBDIR += pixman
-    SUBDIR += plasma-scriptengine-python-kde4
-    SUBDIR += plasma-scriptengine-ruby-kde4
     SUBDIR += plasma5-kactivitymanagerd
     SUBDIR += plasma5-kgamma5
     SUBDIR += plasma5-kscreen
@@ -277,24 +264,21 @@
     SUBDIR += polybar
     SUBDIR += printscreen
     SUBDIR += props
+    SUBDIR += py-caffeine-ng
     SUBDIR += py-pyvirtualdisplay
-    SUBDIR += py-qt4-opengl
     SUBDIR += py-qt5-opengl
     SUBDIR += py-xcffib
     SUBDIR += py-xdot
     SUBDIR += py-xdot06
-    SUBDIR += qimageblitz
-    SUBDIR += qt4-graphicssystems-opengl
-    SUBDIR += qt4-inputmethods
     SUBDIR += qt5-qev
     SUBDIR += qt5-x11extras
     SUBDIR += qterminal
     SUBDIR += qterminal-l10n
-    SUBDIR += qxkb
     SUBDIR += radare-cutter
     SUBDIR += rendercheck
     SUBDIR += rgb
     SUBDIR += rofi
+    SUBDIR += rofi-pass
     SUBDIR += rox-wallpaper
     SUBDIR += roxbg
     SUBDIR += roxterm
@@ -317,6 +301,7 @@
     SUBDIR += slim
     SUBDIR += slock
     SUBDIR += slop
+    SUBDIR += slurp
     SUBDIR += smproxy
     SUBDIR += sselp
     SUBDIR += stalonetray
@@ -324,6 +309,8 @@
     SUBDIR += sterm
     SUBDIR += stjerm
     SUBDIR += swarp
+    SUBDIR += swayidle
+    SUBDIR += swaylock
     SUBDIR += sxhkd
     SUBDIR += sxpc
     SUBDIR += tabbed
@@ -345,6 +332,7 @@
     SUBDIR += wbar
     SUBDIR += wbarconf
     SUBDIR += wdm
+    SUBDIR += wl-clipboard
     SUBDIR += wmappl
     SUBDIR += wmblob
     SUBDIR += wmbutton
@@ -381,6 +369,7 @@
     SUBDIR += xcb-proto
     SUBDIR += xcb-util
     SUBDIR += xcb-util-cursor
+    SUBDIR += xcb-util-errors
     SUBDIR += xcb-util-image
     SUBDIR += xcb-util-keysyms
     SUBDIR += xcb-util-renderutil
@@ -400,7 +389,6 @@
     SUBDIR += xcursorgen
     SUBDIR += xcut
     SUBDIR += xdbedizzy
-    SUBDIR += xdialog
     SUBDIR += xditview
     SUBDIR += xdm
     SUBDIR += xdotool
@@ -428,7 +416,6 @@
     SUBDIR += xfindproxy
     SUBDIR += xfishtank
     SUBDIR += xforward
-    SUBDIR += xfree86_xkb_xml
     SUBDIR += xfwp
     SUBDIR += xgamma
     SUBDIR += xgc
@@ -484,7 +471,6 @@
     SUBDIR += xprintidle
     SUBDIR += xprompt
     SUBDIR += xprop
-    SUBDIR += xpyb
     SUBDIR += xrandr
     SUBDIR += xrdb
     SUBDIR += xrefresh
@@ -504,6 +490,7 @@
     SUBDIR += xsetmode
     SUBDIR += xsetpointer
     SUBDIR += xsetroot
+    SUBDIR += xsettingsd
     SUBDIR += xskyroot
     SUBDIR += xsm
     SUBDIR += xsnow
@@ -536,7 +523,6 @@
     SUBDIR += xzoom
     SUBDIR += yad
     SUBDIR += yakuake
-    SUBDIR += yakuake-kde4
     SUBDIR += yalias
     SUBDIR += yeahconsole
     SUBDIR += yelp

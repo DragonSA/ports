@@ -1,8 +1,8 @@
 # Created by: David Naylor <dbn@FreeBSD.org>
-# $FreeBSD: head/devel/py-typed-ast/Makefile 447353 2017-08-04 18:56:05Z dbn $
+# $FreeBSD: head/devel/py-typed-ast/Makefile 496454 2019-03-21 13:34:10Z amdmi3 $
 
 PORTNAME=	typed-ast
-PORTVERSION=	1.1.0
+PORTVERSION=	1.3.1
 CATEGORIES=	devel python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -18,7 +18,6 @@ USES=		python:3.3+
 USE_PYTHON=	autoplist distutils concurrent
 
 post-install:
-		${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/_ast27.so
-		${STRIP_CMD} ${STAGEDIR}${PYTHON_SITELIBDIR}/_ast3.so
+	@${STRIP_CMD} ${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/typed_ast/*.so
 
 .include <bsd.port.mk>

@@ -1,9 +1,9 @@
 # Created by: Vanilla I. Shu <vanilla@FreeBSD.org>
-# $FreeBSD: head/devel/glib20/Makefile 487272 2018-12-12 01:35:33Z gerald $
+# $FreeBSD: head/devel/glib20/Makefile 493725 2019-02-23 18:56:35Z ashish $
 
 PORTNAME=	glib
 PORTVERSION=	2.56.3
-PORTREVISION=	2
+PORTREVISION=	3
 PORTEPOCH=	1
 CATEGORIES=	devel
 MASTER_SITES=	GNOME
@@ -72,7 +72,7 @@ CONFIGURE_ARGS+=	--with-libiconv=gnu
 .endif
 
 .if ${ARCH} == powerpc64
-EXTRA_PATCHES=	${FILESDIR}/extra-arch-powerpc64
+EXTRA_PATCHES+=	${FILESDIR}/extra-arch-powerpc64
 .endif
 
 # Let glib use asm code for implementing atomic ops on i386 and amd64.

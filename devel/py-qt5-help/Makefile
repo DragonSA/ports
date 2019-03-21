@@ -1,10 +1,14 @@
-# $FreeBSD: head/devel/py-qt5-help/Makefile 485614 2018-11-22 20:18:37Z tcberner $
+# $FreeBSD: head/devel/py-qt5-help/Makefile 490472 2019-01-16 11:13:44Z tijl $
 
 PORTNAME=	help
+PORTREVISION=	1
 CATEGORIES=	devel python
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Python bindings for the Qt5 toolkit, QtHelp module
+
+BUILD_DEPENDS=	${PY_ENUM34}
+RUN_DEPENDS=	${PY_ENUM34}
 
 CONFIGURE_ARGS=	--enable QtHelp
 PYQT_DIST=	yes

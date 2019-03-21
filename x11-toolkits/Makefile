@@ -1,4 +1,4 @@
-# $FreeBSD: head/x11-toolkits/Makefile 486663 2018-12-05 10:07:28Z rene $
+# $FreeBSD: head/x11-toolkits/Makefile 495967 2019-03-16 21:55:51Z tcberner $
 #
 
     COMMENT = X11 toolkits
@@ -6,11 +6,10 @@
     SUBDIR += SoXt
     SUBDIR += Xaw3d
     SUBDIR += Xmt
-    SUBDIR += attica
-    SUBDIR += bakery
     SUBDIR += blt
     SUBDIR += bwidget
     SUBDIR += c++-gtk-utils
+    SUBDIR += ctk
     SUBDIR += diorite
     SUBDIR += flowcanvas
     SUBDIR += fltk
@@ -37,14 +36,13 @@
     SUBDIR += gtk-sharp-beans
     SUBDIR += gtk-sharp20
     SUBDIR += gtk-sharp30
-    SUBDIR += gtk12
     SUBDIR += gtk20
     SUBDIR += gtk20-reference
     SUBDIR += gtk30
     SUBDIR += gtkada
     SUBDIR += gtkada3
     SUBDIR += gtkdatabox
-    SUBDIR += gtkextra2
+    SUBDIR += gtkextra
     SUBDIR += gtkglarea2
     SUBDIR += gtkglext
     SUBDIR += gtkglextmm
@@ -56,8 +54,6 @@
     SUBDIR += gtkmm24-reference
     SUBDIR += gtkmm30
     SUBDIR += gtkmm30-reference
-    SUBDIR += gtksourceview
-    SUBDIR += gtksourceview-reference
     SUBDIR += gtksourceview2
     SUBDIR += gtksourceview2-reference
     SUBDIR += gtksourceview3
@@ -103,6 +99,7 @@
     SUBDIR += libgnomeui
     SUBDIR += libgnomeui-reference
     SUBDIR += libgnomeuimm26
+    SUBDIR += libhandy
     SUBDIR += libsexy
     SUBDIR += libsexymm
     SUBDIR += libunique3
@@ -142,7 +139,6 @@
     SUBDIR += p5-Gnome2-Canvas
     SUBDIR += p5-Gnome2-VFS
     SUBDIR += p5-Gnome2-Wnck
-    SUBDIR += p5-Gtk-Perl
     SUBDIR += p5-Gtk2
     SUBDIR += p5-Gtk2-Chmod
     SUBDIR += p5-Gtk2-Ex-Dialogs
@@ -207,7 +203,6 @@
     SUBDIR += py-gui
     SUBDIR += py-kivy
     SUBDIR += py-kiwi-gtk
-    SUBDIR += py-qt4-gui
     SUBDIR += py-qt5-gui
     SUBDIR += py-qt5-quick
     SUBDIR += py-qt5-quickwidgets
@@ -224,9 +219,6 @@
     SUBDIR += py-xlib
     SUBDIR += pypy-tkinter
     SUBDIR += qml-box2d
-    SUBDIR += qt4-declarative
-    SUBDIR += qt4-gui
-    SUBDIR += qt4pas
     SUBDIR += qt5-canvas3d
     SUBDIR += qt5-charts
     SUBDIR += qt5-datavis3d
@@ -242,8 +234,6 @@
     SUBDIR += qt5pas
     SUBDIR += qtermwidget
     SUBDIR += qtermwidget-l10n
-    SUBDIR += qwt5
-    SUBDIR += qwt5-designerplugin
     SUBDIR += qwt5-qt5
     SUBDIR += qwt6
     SUBDIR += rep-gtk2
@@ -263,7 +253,7 @@
     SUBDIR += shared-desktop-ontologies
     SUBDIR += skinlf
     SUBDIR += slingshot
-    SUBDIR += soqt
+    SUBDIR += soqt-devel
     SUBDIR += swt
     SUBDIR += swt-devel
     SUBDIR += tepl
@@ -286,7 +276,7 @@
     SUBDIR += vte
     SUBDIR += vte-reference
     SUBDIR += vte3
-    SUBDIR += wlc
+    SUBDIR += wlroots
     SUBDIR += wmapp
     SUBDIR += wxgtk28
     SUBDIR += wxgtk28-common

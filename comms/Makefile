@@ -1,4 +1,4 @@
-# $FreeBSD: head/comms/Makefile 487235 2018-12-11 13:02:50Z rene $
+# $FreeBSD: head/comms/Makefile 496351 2019-03-20 16:31:19Z yuri $
 #
 
     COMMENT = Communication utilities
@@ -10,10 +10,12 @@
     SUBDIR += anyremote
     SUBDIR += apitran
     SUBDIR += aprsd
+    SUBDIR += ath3k-firmware
     SUBDIR += atslog
     SUBDIR += bfhist
     SUBDIR += bforce-kst
     SUBDIR += birda
+    SUBDIR += bladerf
     SUBDIR += bluegps
     SUBDIR += bluez-firmware
     SUBDIR += bpl+
@@ -25,10 +27,10 @@
     SUBDIR += conserver
     SUBDIR += conserver-com
     SUBDIR += cqrlog
+    SUBDIR += cubicsdr
     SUBDIR += cutecom
     SUBDIR += cwdaemon
     SUBDIR += cwstudio
-    SUBDIR += dabstick-radio
     SUBDIR += dcf77pi
     SUBDIR += deforaos-phone
     SUBDIR += dfu-programmer
@@ -57,15 +59,12 @@
     SUBDIR += gqrx
     SUBDIR += gr-osmosdr
     SUBDIR += grig
-    SUBDIR += gscmxx
     SUBDIR += gsmlib
     SUBDIR += gstreamer1-plugins-spandsp
     SUBDIR += gtkmmorse
     SUBDIR += hackrf
-    SUBDIR += hamfax
     SUBDIR += hamlib
     SUBDIR += hcidump
-    SUBDIR += hf
     SUBDIR += hidapi
     SUBDIR += hylafax
     SUBDIR += ibp
@@ -75,7 +74,6 @@
     SUBDIR += kb
     SUBDIR += kermit
     SUBDIR += klog
-    SUBDIR += kremotecontrol-kde4
     SUBDIR += libbtbb
     SUBDIR += libconcord
     SUBDIR += libfap
@@ -89,13 +87,13 @@
     SUBDIR += libticables2
     SUBDIR += libticalcs2
     SUBDIR += libusbmuxd
-    SUBDIR += linpsk
     SUBDIR += linrad
     SUBDIR += liquid-dsp
     SUBDIR += lirc
     SUBDIR += locator
     SUBDIR += lrzsz
     SUBDIR += lysdr
+    SUBDIR += mbelib
     SUBDIR += mgetty+sendfax
     SUBDIR += minicom
     SUBDIR += mlan3
@@ -142,6 +140,7 @@
     SUBDIR += py-lirc
     SUBDIR += py-qt5-serialport
     SUBDIR += py-serial
+    SUBDIR += py-xmodem
     SUBDIR += pyla
     SUBDIR += qico
     SUBDIR += qpage
@@ -153,6 +152,7 @@
     SUBDIR += qt5-serialport
     SUBDIR += qtel
     SUBDIR += quisk
+    SUBDIR += redsea
     SUBDIR += remserial
     SUBDIR += rtl-sdr
     SUBDIR += rubygem-callsign
@@ -160,12 +160,21 @@
     SUBDIR += rubygem-serialport
     SUBDIR += rxtx
     SUBDIR += scmxx
+    SUBDIR += scrcpy
     SUBDIR += sdr-wspr
     SUBDIR += ser2net
     SUBDIR += serialoverip
     SUBDIR += seyon
     SUBDIR += sms_client
     SUBDIR += smstools3
+    SUBDIR += snap7
+    SUBDIR += soapyairspy
+    SUBDIR += soapybladerf
+    SUBDIR += soapyplutosdr
+    SUBDIR += soapyredpitaya
+    SUBDIR += soapyremote
+    SUBDIR += soapysdrhackrf
+    SUBDIR += soapyuhd
     SUBDIR += spandsp
     SUBDIR += splat
     SUBDIR += sredird
@@ -185,7 +194,6 @@
     SUBDIR += twpsk
     SUBDIR += uarduno
     SUBDIR += uartlirc
-    SUBDIR += ubertooth
     SUBDIR += uhd
     SUBDIR += uird
     SUBDIR += unixcw

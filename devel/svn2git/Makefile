@@ -1,8 +1,9 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: head/devel/svn2git/Makefile 473503 2018-06-28 17:39:53Z tcberner $
+# $FreeBSD: head/devel/svn2git/Makefile 495407 2019-03-12 01:12:42Z linimon $
 
 PORTNAME=	svn2git
 PORTVERSION=	1.0.12
+PORTREVISION=	1
 CATEGORIES=	devel kde
 
 MAINTAINER=	dbn@FreeBSD.org
@@ -17,7 +18,7 @@ RUN_DEPENDS=	git:devel/git \
 		p5-Term-ReadKey>=0:devel/p5-Term-ReadKey \
 		p5-subversion>=0:devel/p5-subversion
 
-USES=		qmake qt:5
+USES=		compiler:c++11-lang qmake qt:5
 USE_GITHUB=	yes
 USE_QT=		core
 GH_ACCOUNT=	svn-all-fast-export
@@ -26,6 +27,7 @@ OPTIONS_DEFINE=	FREEBSD_REPO
 FREEBSD_REPO_DESC=	FreeBSD-repo only mode
 
 QMAKE_ARGS=	SVN_INCLUDE=${LOCALBASE}/include/subversion-1 \
+		SVN_LIBDIR=${LOCALBASE}/lib \
 		APR_INCLUDE=${LOCALBASE}/include/apr-1
 PLIST_FILES=	bin/svn2git
 

@@ -1,10 +1,10 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: head/audio/soundkonverter/Makefile 487272 2018-12-12 01:35:33Z gerald $
+# $FreeBSD: head/audio/soundkonverter/Makefile 495961 2019-03-16 21:32:52Z tcberner $
 
 PORTNAME=	soundkonverter
 PORTVERSION=	3.0.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=	2
+PORTREVISION=	5
 CATEGORIES=	audio kde
 
 MAINTAINER=	dbn@FreeBSD.org
@@ -14,10 +14,10 @@ LICENSE=	GPLv2
 
 LIB_DEPENDS=	libtag.so:audio/taglib \
 		libcdda_paranoia.so:audio/cdparanoia \
-		libphonon4qt5.so:multimedia/phonon@qt5
+		libphonon4qt5.so:multimedia/phonon
 
 GH_ACCOUNT=	HessiJames
-USES=		cmake:outsource compiler:c++11-lang kde:5 qt:5
+USES=		cmake compiler:c++11-lang kde:5 qt:5
 USE_GITHUB=	yes
 USE_QT=		dbus concurrent core buildtools_build gui network printsupport \
 		qmake_build widgets xml

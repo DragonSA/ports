@@ -1,4 +1,4 @@
-# $FreeBSD: head/irc/Makefile 484375 2018-11-07 00:53:41Z dbaio $
+# $FreeBSD: head/irc/Makefile 493081 2019-02-16 20:03:24Z 0mp $
 #
 
     COMMENT = Internet Relay Chat utilities
@@ -8,7 +8,9 @@
     SUBDIR += bip
     SUBDIR += bitchx
     SUBDIR += bitlbee
+    SUBDIR += bitlbee-discord
     SUBDIR += bitlbee-facebook
+    SUBDIR += bitlbee-mastodon
     SUBDIR += bitlbee-steam
     SUBDIR += bnc
     SUBDIR += bopm
@@ -46,7 +48,6 @@
     SUBDIR += ircd-ru
     SUBDIR += ircproxy
     SUBDIR += ircservices
-    SUBDIR += iroffer
     SUBDIR += iroffer-dinoex
     SUBDIR += iroffer-lamm
     SUBDIR += irssi
@@ -60,7 +61,6 @@
     SUBDIR += keitairc2
     SUBDIR += konversation
     SUBDIR += kvirc
-    SUBDIR += kvirc-qt4
     SUBDIR += libircclient
     SUBDIR += lostirc
     SUBDIR += miau

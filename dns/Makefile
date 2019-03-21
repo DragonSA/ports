@@ -1,4 +1,4 @@
-# $FreeBSD: head/dns/Makefile 486632 2018-12-04 19:40:28Z swills $
+# $FreeBSD: head/dns/Makefile 494252 2019-03-01 10:10:03Z mat $
 #
 
     COMMENT = Domain Name Service tools
@@ -14,6 +14,7 @@
     SUBDIR += bind911
     SUBDIR += bind912
     SUBDIR += bind913
+    SUBDIR += bind914
     SUBDIR += bindgraph
     SUBDIR += bundy
     SUBDIR += c-ares
@@ -72,12 +73,13 @@
     SUBDIR += ez-ipupdate
     SUBDIR += fastresolve
     SUBDIR += firedns
+    SUBDIR += flamethrower
     SUBDIR += fpdns
     SUBDIR += gdnsd
     SUBDIR += gdnsd2
+    SUBDIR += gdnsd3
     SUBDIR += gen6dns
     SUBDIR += getdns
-    SUBDIR += go-geodns
     SUBDIR += hesiod
     SUBDIR += hostdb
     SUBDIR += hs-dns
@@ -91,7 +93,6 @@
     SUBDIR += kadnode
     SUBDIR += kf5-kdnssd
     SUBDIR += knot-resolver
-    SUBDIR += knot1
     SUBDIR += knot2
     SUBDIR += knot2-lib
     SUBDIR += ldapdns
@@ -114,6 +115,7 @@
     SUBDIR += namesilo_ddns
     SUBDIR += noip
     SUBDIR += nsd
+    SUBDIR += nsec3walker
     SUBDIR += nslint
     SUBDIR += nsnotifyd
     SUBDIR += nsping
@@ -172,7 +174,6 @@
     SUBDIR += p5-Stanford-DNSserver
     SUBDIR += p5-Tie-DNS
     SUBDIR += p5-URBL-Prepare
-    SUBDIR += p5-pgeodns
     SUBDIR += packetq
     SUBDIR += pdnsd
     SUBDIR += pear-File_DNS
@@ -180,7 +181,6 @@
     SUBDIR += pear-Net_DNS2
     SUBDIR += powerdns
     SUBDIR += powerdns-recursor
-    SUBDIR += powerdns-recursor40
     SUBDIR += public_suffix_list
     SUBDIR += py-adns
     SUBDIR += py-aiodns
@@ -199,6 +199,7 @@
     SUBDIR += py-publicsuffix
     SUBDIR += py-publicsuffixlist
     SUBDIR += py-py3dns
+    SUBDIR += py-pybonjour
     SUBDIR += py-pycares
     SUBDIR += py-pydnstable
     SUBDIR += py-pywdns
