@@ -1,9 +1,8 @@
 # Created by: David Naylor <naylor.b.david@gmail.com>
-# $FreeBSD: head/finance/R-cran-fGarch/Makefile 487272 2018-12-12 01:35:33Z gerald $
+# $FreeBSD: head/finance/R-cran-fGarch/Makefile 497434 2019-03-31 17:28:18Z dbn $
 
 PORTNAME=	fGarch
-DISTVERSION=	3042.83
-PORTREVISION=	2
+DISTVERSION=	3042.83.1
 CATEGORIES=	finance
 DISTNAME=	${PORTNAME}_${DISTVERSION}
 
